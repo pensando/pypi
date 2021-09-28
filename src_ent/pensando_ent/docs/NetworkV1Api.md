@@ -1,6 +1,6 @@
 # psm.NetworkV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -102,14 +102,9 @@ Create IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -122,7 +117,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -179,7 +174,7 @@ with ApiClient() as api_client:
         # Create IPAMPolicy object
         api_response = api_instance.add_ipam_policy(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_ipam_policy: %s\n" % e)
 ```
 
@@ -214,7 +209,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_ipam_policy1**
 > NetworkIPAMPolicy add_ipam_policy1(body)
@@ -224,14 +219,9 @@ Create IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -244,7 +234,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     body = NetworkIPAMPolicy(
@@ -300,7 +290,7 @@ with ApiClient() as api_client:
         # Create IPAMPolicy object
         api_response = api_instance.add_ipam_policy1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_ipam_policy1: %s\n" % e)
 ```
 
@@ -334,7 +324,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_network**
 > NetworkNetwork add_network(o_tenant, body)
@@ -344,14 +334,9 @@ Create Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -364,7 +349,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -462,7 +447,7 @@ with ApiClient() as api_client:
         # Create Network object
         api_response = api_instance.add_network(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_network: %s\n" % e)
 ```
 
@@ -497,7 +482,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_network1**
 > NetworkNetwork add_network1(body)
@@ -507,14 +492,9 @@ Create Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -527,7 +507,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     body = NetworkNetwork(
@@ -624,7 +604,7 @@ with ApiClient() as api_client:
         # Create Network object
         api_response = api_instance.add_network1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_network1: %s\n" % e)
 ```
 
@@ -658,7 +638,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_policer_profile**
 > NetworkPolicerProfile add_policer_profile(o_tenant, body)
@@ -668,14 +648,9 @@ Create PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -688,7 +663,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -744,7 +719,7 @@ with ApiClient() as api_client:
         # Create PolicerProfile object
         api_response = api_instance.add_policer_profile(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_policer_profile: %s\n" % e)
 ```
 
@@ -779,7 +754,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_policer_profile1**
 > NetworkPolicerProfile add_policer_profile1(body)
@@ -789,14 +764,9 @@ Create PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -809,7 +779,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     body = NetworkPolicerProfile(
@@ -864,7 +834,7 @@ with ApiClient() as api_client:
         # Create PolicerProfile object
         api_response = api_instance.add_policer_profile1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_policer_profile1: %s\n" % e)
 ```
 
@@ -898,7 +868,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_routing_config**
 > NetworkRoutingConfig add_routing_config(body)
@@ -908,14 +878,9 @@ Create RoutingConfig object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -928,7 +893,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     body = NetworkRoutingConfig(
@@ -1012,7 +977,7 @@ with ApiClient() as api_client:
         # Create RoutingConfig object
         api_response = api_instance.add_routing_config(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_routing_config: %s\n" % e)
 ```
 
@@ -1046,7 +1011,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_virtual_router**
 > NetworkVirtualRouter add_virtual_router(o_tenant, body)
@@ -1056,14 +1021,9 @@ Create VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1076,7 +1036,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1158,7 +1118,7 @@ with ApiClient() as api_client:
         # Create VirtualRouter object
         api_response = api_instance.add_virtual_router(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_virtual_router: %s\n" % e)
 ```
 
@@ -1193,7 +1153,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_virtual_router1**
 > NetworkVirtualRouter add_virtual_router1(body)
@@ -1203,14 +1163,9 @@ Create VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1223,7 +1178,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     body = NetworkVirtualRouter(
@@ -1304,7 +1259,7 @@ with ApiClient() as api_client:
         # Create VirtualRouter object
         api_response = api_instance.add_virtual_router1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_virtual_router1: %s\n" % e)
 ```
 
@@ -1338,7 +1293,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_virtual_router_peering_group**
 > NetworkVirtualRouterPeeringGroup add_virtual_router_peering_group(o_tenant, body)
@@ -1348,14 +1303,9 @@ Create VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1368,7 +1318,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1434,7 +1384,7 @@ with ApiClient() as api_client:
         # Create VirtualRouterPeeringGroup object
         api_response = api_instance.add_virtual_router_peering_group(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -1469,7 +1419,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_virtual_router_peering_group1**
 > NetworkVirtualRouterPeeringGroup add_virtual_router_peering_group1(body)
@@ -1479,14 +1429,9 @@ Create VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1499,7 +1444,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     body = NetworkVirtualRouterPeeringGroup(
@@ -1564,7 +1509,7 @@ with ApiClient() as api_client:
         # Create VirtualRouterPeeringGroup object
         api_response = api_instance.add_virtual_router_peering_group1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->add_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -1598,7 +1543,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ipam_policy**
 > NetworkIPAMPolicy delete_ipam_policy(o_tenant, o_name)
@@ -1608,14 +1553,9 @@ Delete IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1628,7 +1568,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1639,7 +1579,7 @@ with ApiClient() as api_client:
         # Delete IPAMPolicy object
         api_response = api_instance.delete_ipam_policy(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_ipam_policy: %s\n" % e)
 ```
 
@@ -1674,7 +1614,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ipam_policy1**
 > NetworkIPAMPolicy delete_ipam_policy1(o_name)
@@ -1684,14 +1624,9 @@ Delete IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1704,7 +1639,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1714,7 +1649,7 @@ with ApiClient() as api_client:
         # Delete IPAMPolicy object
         api_response = api_instance.delete_ipam_policy1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_ipam_policy1: %s\n" % e)
 ```
 
@@ -1748,7 +1683,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_network**
 > NetworkNetwork delete_network(o_tenant, o_name)
@@ -1758,14 +1693,9 @@ Delete Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1778,7 +1708,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1789,7 +1719,7 @@ with ApiClient() as api_client:
         # Delete Network object
         api_response = api_instance.delete_network(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_network: %s\n" % e)
 ```
 
@@ -1824,7 +1754,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_network1**
 > NetworkNetwork delete_network1(o_name)
@@ -1834,14 +1764,9 @@ Delete Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1854,7 +1779,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1864,7 +1789,7 @@ with ApiClient() as api_client:
         # Delete Network object
         api_response = api_instance.delete_network1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_network1: %s\n" % e)
 ```
 
@@ -1898,7 +1823,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_policer_profile**
 > NetworkPolicerProfile delete_policer_profile(o_tenant, o_name)
@@ -1908,14 +1833,9 @@ Delete PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1928,7 +1848,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1939,7 +1859,7 @@ with ApiClient() as api_client:
         # Delete PolicerProfile object
         api_response = api_instance.delete_policer_profile(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_policer_profile: %s\n" % e)
 ```
 
@@ -1974,7 +1894,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_policer_profile1**
 > NetworkPolicerProfile delete_policer_profile1(o_name)
@@ -1984,14 +1904,9 @@ Delete PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2004,7 +1919,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2014,7 +1929,7 @@ with ApiClient() as api_client:
         # Delete PolicerProfile object
         api_response = api_instance.delete_policer_profile1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_policer_profile1: %s\n" % e)
 ```
 
@@ -2048,7 +1963,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_routing_config**
 > NetworkRoutingConfig delete_routing_config(o_name)
@@ -2058,14 +1973,9 @@ Delete RoutingConfig object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2078,7 +1988,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2088,7 +1998,7 @@ with ApiClient() as api_client:
         # Delete RoutingConfig object
         api_response = api_instance.delete_routing_config(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_routing_config: %s\n" % e)
 ```
 
@@ -2122,7 +2032,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_virtual_router**
 > NetworkVirtualRouter delete_virtual_router(o_tenant, o_name)
@@ -2132,14 +2042,9 @@ Delete VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2152,7 +2057,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2163,7 +2068,7 @@ with ApiClient() as api_client:
         # Delete VirtualRouter object
         api_response = api_instance.delete_virtual_router(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_virtual_router: %s\n" % e)
 ```
 
@@ -2198,7 +2103,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_virtual_router1**
 > NetworkVirtualRouter delete_virtual_router1(o_name)
@@ -2208,14 +2113,9 @@ Delete VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2228,7 +2128,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2238,7 +2138,7 @@ with ApiClient() as api_client:
         # Delete VirtualRouter object
         api_response = api_instance.delete_virtual_router1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_virtual_router1: %s\n" % e)
 ```
 
@@ -2272,7 +2172,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_virtual_router_peering_group**
 > NetworkVirtualRouterPeeringGroup delete_virtual_router_peering_group(o_tenant, o_name)
@@ -2282,14 +2182,9 @@ Delete VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2302,7 +2197,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2313,7 +2208,7 @@ with ApiClient() as api_client:
         # Delete VirtualRouterPeeringGroup object
         api_response = api_instance.delete_virtual_router_peering_group(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -2348,7 +2243,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_virtual_router_peering_group1**
 > NetworkVirtualRouterPeeringGroup delete_virtual_router_peering_group1(o_name)
@@ -2358,14 +2253,9 @@ Delete VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2378,7 +2268,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2388,7 +2278,7 @@ with ApiClient() as api_client:
         # Delete VirtualRouterPeeringGroup object
         api_response = api_instance.delete_virtual_router_peering_group1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->delete_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -2422,7 +2312,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ipam_policy**
 > NetworkIPAMPolicy get_ipam_policy(o_tenant, o_name)
@@ -2432,14 +2322,9 @@ Get IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2452,7 +2337,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2481,7 +2366,7 @@ with ApiClient() as api_client:
         # Get IPAMPolicy object
         api_response = api_instance.get_ipam_policy(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_ipam_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2490,7 +2375,7 @@ with ApiClient() as api_client:
         # Get IPAMPolicy object
         api_response = api_instance.get_ipam_policy(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_ipam_policy: %s\n" % e)
 ```
 
@@ -2541,7 +2426,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ipam_policy1**
 > NetworkIPAMPolicy get_ipam_policy1(o_name)
@@ -2551,14 +2436,9 @@ Get IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2571,7 +2451,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2600,7 +2480,7 @@ with ApiClient() as api_client:
         # Get IPAMPolicy object
         api_response = api_instance.get_ipam_policy1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_ipam_policy1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2609,7 +2489,7 @@ with ApiClient() as api_client:
         # Get IPAMPolicy object
         api_response = api_instance.get_ipam_policy1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_ipam_policy1: %s\n" % e)
 ```
 
@@ -2660,7 +2540,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_network**
 > NetworkNetwork get_network(o_tenant, o_name)
@@ -2670,14 +2550,9 @@ Get Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2690,7 +2565,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2745,7 +2620,7 @@ with ApiClient() as api_client:
         # Get Network object
         api_response = api_instance.get_network(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_network: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2754,7 +2629,7 @@ with ApiClient() as api_client:
         # Get Network object
         api_response = api_instance.get_network(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, spec_ipv4_subnet=spec_ipv4_subnet, spec_ipv4_gateway=spec_ipv4_gateway, spec_ipv6_subnet=spec_ipv6_subnet, spec_ipv6_gateway=spec_ipv6_gateway, spec_vlan_id=spec_vlan_id, spec_vxlan_vni=spec_vxlan_vni, spec_virtual_router=spec_virtual_router, spec_ipam_policy=spec_ipam_policy, route_import_export_address_family=route_import_export_address_family, route_import_export_rd_auto=route_import_export_rd_auto, rd_type=rd_type, admin_value_format=admin_value_format, admin_value_value=admin_value_value, rd_assigned_value=rd_assigned_value, spec_ingress_security_policy=spec_ingress_security_policy, spec_egress_security_policy=spec_egress_security_policy, status_workloads=status_workloads, status_allocated_ipv4_addrs=status_allocated_ipv4_addrs, status_id=status_id, status_oper_state=status_oper_state, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_network: %s\n" % e)
 ```
 
@@ -2825,7 +2700,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_network1**
 > NetworkNetwork get_network1(o_name)
@@ -2835,14 +2710,9 @@ Get Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2855,7 +2725,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2910,7 +2780,7 @@ with ApiClient() as api_client:
         # Get Network object
         api_response = api_instance.get_network1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_network1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2919,7 +2789,7 @@ with ApiClient() as api_client:
         # Get Network object
         api_response = api_instance.get_network1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, spec_ipv4_subnet=spec_ipv4_subnet, spec_ipv4_gateway=spec_ipv4_gateway, spec_ipv6_subnet=spec_ipv6_subnet, spec_ipv6_gateway=spec_ipv6_gateway, spec_vlan_id=spec_vlan_id, spec_vxlan_vni=spec_vxlan_vni, spec_virtual_router=spec_virtual_router, spec_ipam_policy=spec_ipam_policy, route_import_export_address_family=route_import_export_address_family, route_import_export_rd_auto=route_import_export_rd_auto, rd_type=rd_type, admin_value_format=admin_value_format, admin_value_value=admin_value_value, rd_assigned_value=rd_assigned_value, spec_ingress_security_policy=spec_ingress_security_policy, spec_egress_security_policy=spec_egress_security_policy, status_workloads=status_workloads, status_allocated_ipv4_addrs=status_allocated_ipv4_addrs, status_id=status_id, status_oper_state=status_oper_state, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_network1: %s\n" % e)
 ```
 
@@ -2990,7 +2860,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_network_interface**
 > NetworkNetworkInterface get_network_interface(o_name)
@@ -3000,14 +2870,9 @@ Get NetworkInterface object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3020,7 +2885,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3096,7 +2961,7 @@ with ApiClient() as api_client:
         # Get NetworkInterface object
         api_response = api_instance.get_network_interface(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_network_interface: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3105,7 +2970,7 @@ with ApiClient() as api_client:
         # Get NetworkInterface object
         api_response = api_instance.get_network_interface(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_admin_status=spec_admin_status, spec_speed=spec_speed, spec_mtu=spec_mtu, pause_type=pause_type, pause_tx_pause_enabled=pause_tx_pause_enabled, pause_rx_pause_enabled=pause_rx_pause_enabled, spec_type=spec_type, spec_attach_tenant=spec_attach_tenant, spec_attach_network=spec_attach_network, spec_ip_alloc_type=spec_ip_alloc_type, ip_config_ip_address=ip_config_ip_address, ip_config_default_gw=ip_config_default_gw, ip_config_dns_servers=ip_config_dns_servers, spec_mac_address=spec_mac_address, spec_connection_tracking=spec_connection_tracking, spec_tx_policer=spec_tx_policer, spec_enable_fw_logging=spec_enable_fw_logging, spec_vnf_attached=spec_vnf_attached, status_name=status_name, status_dsc=status_dsc, status_type=status_type, status_oper_status=status_oper_status, status_primary_mac=status_primary_mac, if_host_status_host_ifname=if_host_status_host_ifname, if_host_status_device_id=if_host_status_device_id, if_host_status_mac_address=if_host_status_mac_address, if_uplink_status_link_speed=if_uplink_status_link_speed, transceiver_status_state=transceiver_status_state, transceiver_status_cable_type=transceiver_status_cable_type, transceiver_status_pid=transceiver_status_pid, ip_config_ip_address2=ip_config_ip_address2, ip_config_default_gw2=ip_config_default_gw2, ip_config_dns_servers2=ip_config_dns_servers2, lldp_neighbor_chassis_id=lldp_neighbor_chassis_id, lldp_neighbor_sys_name=lldp_neighbor_sys_name, lldp_neighbor_sys_description=lldp_neighbor_sys_description, lldp_neighbor_port_id=lldp_neighbor_port_id, lldp_neighbor_port_description=lldp_neighbor_port_description, lldp_neighbor_mgmt_address=lldp_neighbor_mgmt_address, status_mirror_sessions=status_mirror_sessions, status_cluster_node=status_cluster_node, status_dsc_id=status_dsc_id, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_network_interface: %s\n" % e)
 ```
 
@@ -3197,7 +3062,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_policer_profile**
 > NetworkPolicerProfile get_policer_profile(o_tenant, o_name)
@@ -3207,14 +3072,9 @@ Get PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3227,7 +3087,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3259,7 +3119,7 @@ with ApiClient() as api_client:
         # Get PolicerProfile object
         api_response = api_instance.get_policer_profile(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_policer_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3268,7 +3128,7 @@ with ApiClient() as api_client:
         # Get PolicerProfile object
         api_response = api_instance.get_policer_profile(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, criteria_bytes_per_second=criteria_bytes_per_second, criteria_packets_per_second=criteria_packets_per_second, criteria_burst_size=criteria_burst_size, exceed_action_policer_action=exceed_action_policer_action, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_policer_profile: %s\n" % e)
 ```
 
@@ -3322,7 +3182,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_policer_profile1**
 > NetworkPolicerProfile get_policer_profile1(o_name)
@@ -3332,14 +3192,9 @@ Get PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3352,7 +3207,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3384,7 +3239,7 @@ with ApiClient() as api_client:
         # Get PolicerProfile object
         api_response = api_instance.get_policer_profile1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_policer_profile1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3393,7 +3248,7 @@ with ApiClient() as api_client:
         # Get PolicerProfile object
         api_response = api_instance.get_policer_profile1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, criteria_bytes_per_second=criteria_bytes_per_second, criteria_packets_per_second=criteria_packets_per_second, criteria_burst_size=criteria_burst_size, exceed_action_policer_action=exceed_action_policer_action, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_policer_profile1: %s\n" % e)
 ```
 
@@ -3447,7 +3302,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_route_table**
 > NetworkRouteTable get_route_table(o_tenant, o_name)
@@ -3457,14 +3312,9 @@ Get RouteTable object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_route_table import NetworkRouteTable
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3477,7 +3327,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3497,7 +3347,7 @@ with ApiClient() as api_client:
         # Get RouteTable object
         api_response = api_instance.get_route_table(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_route_table: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3506,7 +3356,7 @@ with ApiClient() as api_client:
         # Get RouteTable object
         api_response = api_instance.get_route_table(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_route_table: %s\n" % e)
 ```
 
@@ -3550,7 +3400,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_route_table1**
 > NetworkRouteTable get_route_table1(o_name)
@@ -3560,14 +3410,9 @@ Get RouteTable object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_route_table import NetworkRouteTable
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3580,7 +3425,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3600,7 +3445,7 @@ with ApiClient() as api_client:
         # Get RouteTable object
         api_response = api_instance.get_route_table1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_route_table1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3609,7 +3454,7 @@ with ApiClient() as api_client:
         # Get RouteTable object
         api_response = api_instance.get_route_table1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_route_table1: %s\n" % e)
 ```
 
@@ -3653,7 +3498,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_routing_config**
 > NetworkRoutingConfig get_routing_config(o_name)
@@ -3663,14 +3508,9 @@ Get RoutingConfig object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3683,7 +3523,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3717,7 +3557,7 @@ with ApiClient() as api_client:
         # Get RoutingConfig object
         api_response = api_instance.get_routing_config(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_routing_config: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3726,7 +3566,7 @@ with ApiClient() as api_client:
         # Get RoutingConfig object
         api_response = api_instance.get_routing_config(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, bgp_config_router_id=bgp_config_router_id, as_number_as_number=as_number_as_number, bgp_config_keepalive_interval=bgp_config_keepalive_interval, bgp_config_holdtime=bgp_config_holdtime, bgp_config_dsc_auto_config=bgp_config_dsc_auto_config, bgp_config_suppress_default_resolution=bgp_config_suppress_default_resolution, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_routing_config: %s\n" % e)
 ```
 
@@ -3782,7 +3622,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_virtual_router**
 > NetworkVirtualRouter get_virtual_router(o_tenant, o_name)
@@ -3792,14 +3632,9 @@ Get VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3812,7 +3647,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3856,7 +3691,7 @@ with ApiClient() as api_client:
         # Get VirtualRouter object
         api_response = api_instance.get_virtual_router(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3865,7 +3700,7 @@ with ApiClient() as api_client:
         # Get VirtualRouter object
         api_response = api_instance.get_virtual_router(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, spec_router_mac_address=spec_router_mac_address, spec_vxlan_vni=spec_vxlan_vni, route_import_export_address_family=route_import_export_address_family, route_import_export_rd_auto=route_import_export_rd_auto, rd_type=rd_type, admin_value_format=admin_value_format, admin_value_value=admin_value_value, rd_assigned_value=rd_assigned_value, spec_default_ipam_policy=spec_default_ipam_policy, status_id=status_id, status_route_table=status_route_table, rd_type2=rd_type2, admin_value_format2=admin_value_format2, admin_value_value2=admin_value_value2, rd_assigned_value2=rd_assigned_value2, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router: %s\n" % e)
 ```
 
@@ -3931,7 +3766,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_virtual_router1**
 > NetworkVirtualRouter get_virtual_router1(o_name)
@@ -3941,14 +3776,9 @@ Get VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3961,7 +3791,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4005,7 +3835,7 @@ with ApiClient() as api_client:
         # Get VirtualRouter object
         api_response = api_instance.get_virtual_router1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4014,7 +3844,7 @@ with ApiClient() as api_client:
         # Get VirtualRouter object
         api_response = api_instance.get_virtual_router1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, spec_router_mac_address=spec_router_mac_address, spec_vxlan_vni=spec_vxlan_vni, route_import_export_address_family=route_import_export_address_family, route_import_export_rd_auto=route_import_export_rd_auto, rd_type=rd_type, admin_value_format=admin_value_format, admin_value_value=admin_value_value, rd_assigned_value=rd_assigned_value, spec_default_ipam_policy=spec_default_ipam_policy, status_id=status_id, status_route_table=status_route_table, rd_type2=rd_type2, admin_value_format2=admin_value_format2, admin_value_value2=admin_value_value2, rd_assigned_value2=rd_assigned_value2, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router1: %s\n" % e)
 ```
 
@@ -4080,7 +3910,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_virtual_router_peering_group**
 > NetworkVirtualRouterPeeringGroup get_virtual_router_peering_group(o_tenant, o_name)
@@ -4090,14 +3920,9 @@ Get VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4110,7 +3935,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4138,7 +3963,7 @@ with ApiClient() as api_client:
         # Get VirtualRouterPeeringGroup object
         api_response = api_instance.get_virtual_router_peering_group(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router_peering_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4147,7 +3972,7 @@ with ApiClient() as api_client:
         # Get VirtualRouterPeeringGroup object
         api_response = api_instance.get_virtual_router_peering_group(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -4197,7 +4022,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_virtual_router_peering_group1**
 > NetworkVirtualRouterPeeringGroup get_virtual_router_peering_group1(o_name)
@@ -4207,14 +4032,9 @@ Get VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4227,7 +4047,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4255,7 +4075,7 @@ with ApiClient() as api_client:
         # Get VirtualRouterPeeringGroup object
         api_response = api_instance.get_virtual_router_peering_group1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router_peering_group1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4264,7 +4084,7 @@ with ApiClient() as api_client:
         # Get VirtualRouterPeeringGroup object
         api_response = api_instance.get_virtual_router_peering_group1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->get_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -4314,7 +4134,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_ipam_policy**
 > NetworkIPAMPolicy label_ipam_policy(o_tenant, o_name, body)
@@ -4324,14 +4144,9 @@ Label IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4345,7 +4160,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4372,7 +4187,7 @@ with ApiClient() as api_client:
         # Label IPAMPolicy object
         api_response = api_instance.label_ipam_policy(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_ipam_policy: %s\n" % e)
 ```
 
@@ -4408,7 +4223,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_ipam_policy1**
 > NetworkIPAMPolicy label_ipam_policy1(o_name, body)
@@ -4418,14 +4233,9 @@ Label IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4439,7 +4249,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4465,7 +4275,7 @@ with ApiClient() as api_client:
         # Label IPAMPolicy object
         api_response = api_instance.label_ipam_policy1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_ipam_policy1: %s\n" % e)
 ```
 
@@ -4500,7 +4310,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_network**
 > NetworkNetwork label_network(o_tenant, o_name, body)
@@ -4510,14 +4320,9 @@ Label Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4531,7 +4336,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4558,7 +4363,7 @@ with ApiClient() as api_client:
         # Label Network object
         api_response = api_instance.label_network(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_network: %s\n" % e)
 ```
 
@@ -4594,7 +4399,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_network1**
 > NetworkNetwork label_network1(o_name, body)
@@ -4604,14 +4409,9 @@ Label Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4625,7 +4425,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4651,7 +4451,7 @@ with ApiClient() as api_client:
         # Label Network object
         api_response = api_instance.label_network1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_network1: %s\n" % e)
 ```
 
@@ -4686,7 +4486,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_network_interface**
 > NetworkNetworkInterface label_network_interface(o_name, body)
@@ -4696,14 +4496,9 @@ Label NetworkInterface object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4717,7 +4512,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4743,7 +4538,7 @@ with ApiClient() as api_client:
         # Label NetworkInterface object
         api_response = api_instance.label_network_interface(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_network_interface: %s\n" % e)
 ```
 
@@ -4778,7 +4573,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_policer_profile**
 > NetworkPolicerProfile label_policer_profile(o_tenant, o_name, body)
@@ -4788,14 +4583,9 @@ Label PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4809,7 +4599,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4836,7 +4626,7 @@ with ApiClient() as api_client:
         # Label PolicerProfile object
         api_response = api_instance.label_policer_profile(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_policer_profile: %s\n" % e)
 ```
 
@@ -4872,7 +4662,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_policer_profile1**
 > NetworkPolicerProfile label_policer_profile1(o_name, body)
@@ -4882,14 +4672,9 @@ Label PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4903,7 +4688,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4929,7 +4714,7 @@ with ApiClient() as api_client:
         # Label PolicerProfile object
         api_response = api_instance.label_policer_profile1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_policer_profile1: %s\n" % e)
 ```
 
@@ -4964,7 +4749,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_routing_config**
 > NetworkRoutingConfig label_routing_config(o_name, body)
@@ -4974,14 +4759,9 @@ Label RoutingConfig object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4995,7 +4775,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5021,7 +4801,7 @@ with ApiClient() as api_client:
         # Label RoutingConfig object
         api_response = api_instance.label_routing_config(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_routing_config: %s\n" % e)
 ```
 
@@ -5056,7 +4836,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_virtual_router**
 > NetworkVirtualRouter label_virtual_router(o_tenant, o_name, body)
@@ -5066,14 +4846,9 @@ Label VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5087,7 +4862,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5114,7 +4889,7 @@ with ApiClient() as api_client:
         # Label VirtualRouter object
         api_response = api_instance.label_virtual_router(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_virtual_router: %s\n" % e)
 ```
 
@@ -5150,7 +4925,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_virtual_router1**
 > NetworkVirtualRouter label_virtual_router1(o_name, body)
@@ -5160,14 +4935,9 @@ Label VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5181,7 +4951,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5207,7 +4977,7 @@ with ApiClient() as api_client:
         # Label VirtualRouter object
         api_response = api_instance.label_virtual_router1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_virtual_router1: %s\n" % e)
 ```
 
@@ -5242,7 +5012,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_virtual_router_peering_group**
 > NetworkVirtualRouterPeeringGroup label_virtual_router_peering_group(o_tenant, o_name, body)
@@ -5252,14 +5022,9 @@ Label VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5273,7 +5038,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5300,7 +5065,7 @@ with ApiClient() as api_client:
         # Label VirtualRouterPeeringGroup object
         api_response = api_instance.label_virtual_router_peering_group(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -5336,7 +5101,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_virtual_router_peering_group1**
 > NetworkVirtualRouterPeeringGroup label_virtual_router_peering_group1(o_name, body)
@@ -5346,14 +5111,9 @@ Label VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5367,7 +5127,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5393,7 +5153,7 @@ with ApiClient() as api_client:
         # Label VirtualRouterPeeringGroup object
         api_response = api_instance.label_virtual_router_peering_group1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->label_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -5428,7 +5188,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_ipam_policy**
 > NetworkIPAMPolicyList list_ipam_policy(o_tenant)
@@ -5438,14 +5198,9 @@ List IPAMPolicy objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy_list import NetworkIPAMPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5458,7 +5213,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5485,7 +5240,7 @@ with ApiClient() as api_client:
         # List IPAMPolicy objects
         api_response = api_instance.list_ipam_policy(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_ipam_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5494,7 +5249,7 @@ with ApiClient() as api_client:
         # List IPAMPolicy objects
         api_response = api_instance.list_ipam_policy(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_ipam_policy: %s\n" % e)
 ```
 
@@ -5543,7 +5298,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_ipam_policy1**
 > NetworkIPAMPolicyList list_ipam_policy1()
@@ -5553,14 +5308,9 @@ List IPAMPolicy objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy_list import NetworkIPAMPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5573,7 +5323,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5601,7 +5351,7 @@ with ApiClient() as api_client:
         # List IPAMPolicy objects
         api_response = api_instance.list_ipam_policy1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_ipam_policy1: %s\n" % e)
 ```
 
@@ -5650,7 +5400,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_network**
 > NetworkNetworkList list_network(o_tenant)
@@ -5660,14 +5410,9 @@ List Network objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network_list import NetworkNetworkList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5680,7 +5425,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5707,7 +5452,7 @@ with ApiClient() as api_client:
         # List Network objects
         api_response = api_instance.list_network(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_network: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -5716,7 +5461,7 @@ with ApiClient() as api_client:
         # List Network objects
         api_response = api_instance.list_network(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_network: %s\n" % e)
 ```
 
@@ -5765,7 +5510,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_network1**
 > NetworkNetworkList list_network1()
@@ -5775,14 +5520,9 @@ List Network objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network_list import NetworkNetworkList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5795,7 +5535,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5823,7 +5563,7 @@ with ApiClient() as api_client:
         # List Network objects
         api_response = api_instance.list_network1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_network1: %s\n" % e)
 ```
 
@@ -5872,7 +5612,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_network_interface**
 > NetworkNetworkInterfaceList list_network_interface()
@@ -5882,14 +5622,9 @@ List NetworkInterface objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network_interface_list import NetworkNetworkInterfaceList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5902,7 +5637,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5930,7 +5665,7 @@ with ApiClient() as api_client:
         # List NetworkInterface objects
         api_response = api_instance.list_network_interface(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_network_interface: %s\n" % e)
 ```
 
@@ -5979,7 +5714,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_policer_profile**
 > NetworkPolicerProfileList list_policer_profile(o_tenant)
@@ -5989,14 +5724,9 @@ List PolicerProfile objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.network_policer_profile_list import NetworkPolicerProfileList
 from pprint import pprint
@@ -6009,7 +5739,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6036,7 +5766,7 @@ with ApiClient() as api_client:
         # List PolicerProfile objects
         api_response = api_instance.list_policer_profile(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_policer_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6045,7 +5775,7 @@ with ApiClient() as api_client:
         # List PolicerProfile objects
         api_response = api_instance.list_policer_profile(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_policer_profile: %s\n" % e)
 ```
 
@@ -6094,7 +5824,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_policer_profile1**
 > NetworkPolicerProfileList list_policer_profile1()
@@ -6104,14 +5834,9 @@ List PolicerProfile objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.network_policer_profile_list import NetworkPolicerProfileList
 from pprint import pprint
@@ -6124,7 +5849,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6152,7 +5877,7 @@ with ApiClient() as api_client:
         # List PolicerProfile objects
         api_response = api_instance.list_policer_profile1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_policer_profile1: %s\n" % e)
 ```
 
@@ -6201,7 +5926,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_route_table**
 > NetworkRouteTableList list_route_table(o_tenant)
@@ -6211,14 +5936,9 @@ List RouteTable objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_route_table_list import NetworkRouteTableList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6231,7 +5951,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6258,7 +5978,7 @@ with ApiClient() as api_client:
         # List RouteTable objects
         api_response = api_instance.list_route_table(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_route_table: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6267,7 +5987,7 @@ with ApiClient() as api_client:
         # List RouteTable objects
         api_response = api_instance.list_route_table(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_route_table: %s\n" % e)
 ```
 
@@ -6316,7 +6036,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_route_table1**
 > NetworkRouteTableList list_route_table1()
@@ -6326,14 +6046,9 @@ List RouteTable objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_route_table_list import NetworkRouteTableList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6346,7 +6061,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6374,7 +6089,7 @@ with ApiClient() as api_client:
         # List RouteTable objects
         api_response = api_instance.list_route_table1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_route_table1: %s\n" % e)
 ```
 
@@ -6423,7 +6138,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_routing_config**
 > NetworkRoutingConfigList list_routing_config()
@@ -6433,14 +6148,9 @@ List RoutingConfig objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_routing_config_list import NetworkRoutingConfigList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6453,7 +6163,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6481,7 +6191,7 @@ with ApiClient() as api_client:
         # List RoutingConfig objects
         api_response = api_instance.list_routing_config(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_routing_config: %s\n" % e)
 ```
 
@@ -6530,7 +6240,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_router**
 > NetworkVirtualRouterList list_virtual_router(o_tenant)
@@ -6540,14 +6250,9 @@ List VirtualRouter objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_list import NetworkVirtualRouterList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6560,7 +6265,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6587,7 +6292,7 @@ with ApiClient() as api_client:
         # List VirtualRouter objects
         api_response = api_instance.list_virtual_router(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_virtual_router: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6596,7 +6301,7 @@ with ApiClient() as api_client:
         # List VirtualRouter objects
         api_response = api_instance.list_virtual_router(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_virtual_router: %s\n" % e)
 ```
 
@@ -6645,7 +6350,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_router1**
 > NetworkVirtualRouterList list_virtual_router1()
@@ -6655,14 +6360,9 @@ List VirtualRouter objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_list import NetworkVirtualRouterList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6675,7 +6375,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6703,7 +6403,7 @@ with ApiClient() as api_client:
         # List VirtualRouter objects
         api_response = api_instance.list_virtual_router1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_virtual_router1: %s\n" % e)
 ```
 
@@ -6752,7 +6452,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_router_peering_group**
 > NetworkVirtualRouterPeeringGroupList list_virtual_router_peering_group(o_tenant)
@@ -6762,14 +6462,9 @@ List VirtualRouterPeeringGroup objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group_list import NetworkVirtualRouterPeeringGroupList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6782,7 +6477,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6809,7 +6504,7 @@ with ApiClient() as api_client:
         # List VirtualRouterPeeringGroup objects
         api_response = api_instance.list_virtual_router_peering_group(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_virtual_router_peering_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6818,7 +6513,7 @@ with ApiClient() as api_client:
         # List VirtualRouterPeeringGroup objects
         api_response = api_instance.list_virtual_router_peering_group(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -6867,7 +6562,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_virtual_router_peering_group1**
 > NetworkVirtualRouterPeeringGroupList list_virtual_router_peering_group1()
@@ -6877,14 +6572,9 @@ List VirtualRouterPeeringGroup objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group_list import NetworkVirtualRouterPeeringGroupList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6897,7 +6587,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6925,7 +6615,7 @@ with ApiClient() as api_client:
         # List VirtualRouterPeeringGroup objects
         api_response = api_instance.list_virtual_router_peering_group1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->list_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -6974,7 +6664,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ipam_policy**
 > NetworkIPAMPolicy update_ipam_policy(o_tenant, o_name, body)
@@ -6984,14 +6674,9 @@ Update IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7004,7 +6689,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -7062,7 +6747,7 @@ with ApiClient() as api_client:
         # Update IPAMPolicy object
         api_response = api_instance.update_ipam_policy(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_ipam_policy: %s\n" % e)
 ```
 
@@ -7098,7 +6783,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ipam_policy1**
 > NetworkIPAMPolicy update_ipam_policy1(o_name, body)
@@ -7108,14 +6793,9 @@ Update IPAMPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7128,7 +6808,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -7185,7 +6865,7 @@ with ApiClient() as api_client:
         # Update IPAMPolicy object
         api_response = api_instance.update_ipam_policy1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_ipam_policy1: %s\n" % e)
 ```
 
@@ -7220,7 +6900,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_network**
 > NetworkNetwork update_network(o_tenant, o_name, body)
@@ -7230,14 +6910,9 @@ Update Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7250,7 +6925,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -7349,7 +7024,7 @@ with ApiClient() as api_client:
         # Update Network object
         api_response = api_instance.update_network(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_network: %s\n" % e)
 ```
 
@@ -7385,7 +7060,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_network1**
 > NetworkNetwork update_network1(o_name, body)
@@ -7395,14 +7070,9 @@ Update Network object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7415,7 +7085,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -7513,7 +7183,7 @@ with ApiClient() as api_client:
         # Update Network object
         api_response = api_instance.update_network1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_network1: %s\n" % e)
 ```
 
@@ -7548,7 +7218,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_network_interface**
 > NetworkNetworkInterface update_network_interface(o_name, body)
@@ -7558,14 +7228,9 @@ Update NetworkInterface object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7578,7 +7243,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -7686,7 +7351,7 @@ with ApiClient() as api_client:
         # Update NetworkInterface object
         api_response = api_instance.update_network_interface(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_network_interface: %s\n" % e)
 ```
 
@@ -7721,7 +7386,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_policer_profile**
 > NetworkPolicerProfile update_policer_profile(o_tenant, o_name, body)
@@ -7731,14 +7396,9 @@ Update PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7751,7 +7411,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -7808,7 +7468,7 @@ with ApiClient() as api_client:
         # Update PolicerProfile object
         api_response = api_instance.update_policer_profile(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_policer_profile: %s\n" % e)
 ```
 
@@ -7844,7 +7504,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_policer_profile1**
 > NetworkPolicerProfile update_policer_profile1(o_name, body)
@@ -7854,14 +7514,9 @@ Update PolicerProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7874,7 +7529,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -7930,7 +7585,7 @@ with ApiClient() as api_client:
         # Update PolicerProfile object
         api_response = api_instance.update_policer_profile1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_policer_profile1: %s\n" % e)
 ```
 
@@ -7965,7 +7620,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_routing_config**
 > NetworkRoutingConfig update_routing_config(o_name, body)
@@ -7975,14 +7630,9 @@ Update RoutingConfig object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7995,7 +7645,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -8080,7 +7730,7 @@ with ApiClient() as api_client:
         # Update RoutingConfig object
         api_response = api_instance.update_routing_config(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_routing_config: %s\n" % e)
 ```
 
@@ -8115,7 +7765,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_virtual_router**
 > NetworkVirtualRouter update_virtual_router(o_tenant, o_name, body)
@@ -8125,14 +7775,9 @@ Update VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8145,7 +7790,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -8228,7 +7873,7 @@ with ApiClient() as api_client:
         # Update VirtualRouter object
         api_response = api_instance.update_virtual_router(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_virtual_router: %s\n" % e)
 ```
 
@@ -8264,7 +7909,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_virtual_router1**
 > NetworkVirtualRouter update_virtual_router1(o_name, body)
@@ -8274,14 +7919,9 @@ Update VirtualRouter object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8294,7 +7934,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -8376,7 +8016,7 @@ with ApiClient() as api_client:
         # Update VirtualRouter object
         api_response = api_instance.update_virtual_router1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_virtual_router1: %s\n" % e)
 ```
 
@@ -8411,7 +8051,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_virtual_router_peering_group**
 > NetworkVirtualRouterPeeringGroup update_virtual_router_peering_group(o_tenant, o_name, body)
@@ -8421,14 +8061,9 @@ Update VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8441,7 +8076,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -8508,7 +8143,7 @@ with ApiClient() as api_client:
         # Update VirtualRouterPeeringGroup object
         api_response = api_instance.update_virtual_router_peering_group(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -8544,7 +8179,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_virtual_router_peering_group1**
 > NetworkVirtualRouterPeeringGroup update_virtual_router_peering_group1(o_name, body)
@@ -8554,14 +8189,9 @@ Update VirtualRouterPeeringGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8574,7 +8204,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -8640,7 +8270,7 @@ with ApiClient() as api_client:
         # Update VirtualRouterPeeringGroup object
         api_response = api_instance.update_virtual_router_peering_group1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->update_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -8675,7 +8305,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_ipam_policy**
 > NetworkAutoMsgIPAMPolicyWatchHelper watch_ipam_policy(o_tenant)
@@ -8685,14 +8315,9 @@ Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8705,7 +8330,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -8732,7 +8357,7 @@ with ApiClient() as api_client:
         # Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ipam_policy(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_ipam_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -8741,7 +8366,7 @@ with ApiClient() as api_client:
         # Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ipam_policy(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_ipam_policy: %s\n" % e)
 ```
 
@@ -8790,7 +8415,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_ipam_policy1**
 > NetworkAutoMsgIPAMPolicyWatchHelper watch_ipam_policy1()
@@ -8800,14 +8425,9 @@ Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8820,7 +8440,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -8848,7 +8468,7 @@ with ApiClient() as api_client:
         # Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ipam_policy1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_ipam_policy1: %s\n" % e)
 ```
 
@@ -8897,7 +8517,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_network**
 > NetworkAutoMsgNetworkWatchHelper watch_network(o_tenant)
@@ -8907,14 +8527,9 @@ Watch Network objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_network_watch_helper import NetworkAutoMsgNetworkWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8927,7 +8542,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -8954,7 +8569,7 @@ with ApiClient() as api_client:
         # Watch Network objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_network: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -8963,7 +8578,7 @@ with ApiClient() as api_client:
         # Watch Network objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_network: %s\n" % e)
 ```
 
@@ -9012,7 +8627,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_network1**
 > NetworkAutoMsgNetworkWatchHelper watch_network1()
@@ -9022,14 +8637,9 @@ Watch Network objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_network_watch_helper import NetworkAutoMsgNetworkWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9042,7 +8652,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -9070,7 +8680,7 @@ with ApiClient() as api_client:
         # Watch Network objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_network1: %s\n" % e)
 ```
 
@@ -9119,7 +8729,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_network_interface**
 > NetworkAutoMsgNetworkInterfaceWatchHelper watch_network_interface()
@@ -9129,14 +8739,9 @@ Watch NetworkInterface objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_network_interface_watch_helper import NetworkAutoMsgNetworkInterfaceWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9149,7 +8754,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -9177,7 +8782,7 @@ with ApiClient() as api_client:
         # Watch NetworkInterface objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network_interface(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_network_interface: %s\n" % e)
 ```
 
@@ -9226,7 +8831,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_policer_profile**
 > NetworkAutoMsgPolicerProfileWatchHelper watch_policer_profile(o_tenant)
@@ -9236,14 +8841,9 @@ Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_policer_profile_watch_helper import NetworkAutoMsgPolicerProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9256,7 +8856,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -9283,7 +8883,7 @@ with ApiClient() as api_client:
         # Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_policer_profile(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_policer_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -9292,7 +8892,7 @@ with ApiClient() as api_client:
         # Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_policer_profile(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_policer_profile: %s\n" % e)
 ```
 
@@ -9341,7 +8941,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_policer_profile1**
 > NetworkAutoMsgPolicerProfileWatchHelper watch_policer_profile1()
@@ -9351,14 +8951,9 @@ Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_policer_profile_watch_helper import NetworkAutoMsgPolicerProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9371,7 +8966,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -9399,7 +8994,7 @@ with ApiClient() as api_client:
         # Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_policer_profile1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_policer_profile1: %s\n" % e)
 ```
 
@@ -9448,7 +9043,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_route_table**
 > NetworkAutoMsgRouteTableWatchHelper watch_route_table(o_tenant)
@@ -9458,14 +9053,9 @@ Watch RouteTable objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_route_table_watch_helper import NetworkAutoMsgRouteTableWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9478,7 +9068,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -9505,7 +9095,7 @@ with ApiClient() as api_client:
         # Watch RouteTable objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_route_table(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_route_table: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -9514,7 +9104,7 @@ with ApiClient() as api_client:
         # Watch RouteTable objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_route_table(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_route_table: %s\n" % e)
 ```
 
@@ -9563,7 +9153,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_route_table1**
 > NetworkAutoMsgRouteTableWatchHelper watch_route_table1()
@@ -9573,14 +9163,9 @@ Watch RouteTable objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_route_table_watch_helper import NetworkAutoMsgRouteTableWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9593,7 +9178,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -9621,7 +9206,7 @@ with ApiClient() as api_client:
         # Watch RouteTable objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_route_table1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_route_table1: %s\n" % e)
 ```
 
@@ -9670,7 +9255,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_routing_config**
 > NetworkAutoMsgRoutingConfigWatchHelper watch_routing_config()
@@ -9680,14 +9265,9 @@ Watch RoutingConfig objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_routing_config_watch_helper import NetworkAutoMsgRoutingConfigWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9700,7 +9280,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -9728,7 +9308,7 @@ with ApiClient() as api_client:
         # Watch RoutingConfig objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_routing_config(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_routing_config: %s\n" % e)
 ```
 
@@ -9777,7 +9357,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_router**
 > NetworkAutoMsgVirtualRouterWatchHelper watch_virtual_router(o_tenant)
@@ -9787,14 +9367,9 @@ Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_watch_helper import NetworkAutoMsgVirtualRouterWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9807,7 +9382,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -9834,7 +9409,7 @@ with ApiClient() as api_client:
         # Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_virtual_router(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_virtual_router: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -9843,7 +9418,7 @@ with ApiClient() as api_client:
         # Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_virtual_router(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_virtual_router: %s\n" % e)
 ```
 
@@ -9892,7 +9467,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_router1**
 > NetworkAutoMsgVirtualRouterWatchHelper watch_virtual_router1()
@@ -9902,14 +9477,9 @@ Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_watch_helper import NetworkAutoMsgVirtualRouterWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9922,7 +9492,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -9950,7 +9520,7 @@ with ApiClient() as api_client:
         # Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_virtual_router1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_virtual_router1: %s\n" % e)
 ```
 
@@ -9999,7 +9569,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_router_peering_group**
 > NetworkAutoMsgVirtualRouterPeeringGroupWatchHelper watch_virtual_router_peering_group(o_tenant)
@@ -10009,14 +9579,9 @@ Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_peering_group_watch_helper import NetworkAutoMsgVirtualRouterPeeringGroupWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10029,7 +9594,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -10056,7 +9621,7 @@ with ApiClient() as api_client:
         # Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_virtual_router_peering_group(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_virtual_router_peering_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -10065,7 +9630,7 @@ with ApiClient() as api_client:
         # Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_virtual_router_peering_group(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_virtual_router_peering_group: %s\n" % e)
 ```
 
@@ -10114,7 +9679,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_virtual_router_peering_group1**
 > NetworkAutoMsgVirtualRouterPeeringGroupWatchHelper watch_virtual_router_peering_group1()
@@ -10124,14 +9689,9 @@ Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import network_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.network import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_peering_group_watch_helper import NetworkAutoMsgVirtualRouterPeeringGroupWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10144,7 +9704,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = network_v1_api.NetworkV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -10172,7 +9732,7 @@ with ApiClient() as api_client:
         # Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_virtual_router_peering_group1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling NetworkV1Api->watch_virtual_router_peering_group1: %s\n" % e)
 ```
 
@@ -10221,5 +9781,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.NetworkV1Api top]](#psm.NetworkV1Api) [[Back to network README]](../psm/docs/network/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

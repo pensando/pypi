@@ -1,96 +1,73 @@
-# telemetry_query
+```python
 
-This page provides working code examples for the **telemetry_query** group.
+import time
+import psm
+from pprint import pprint
+from api import telemetry_query_v1_api
+from pensando_ent.psm.model.telemetry_query_metrics_query_list import TelemetryQueryMetricsQueryList
+from pensando_ent.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_ent.psm.Configuration(
+    psm_config_path=HOME+"/.psm/config.json"
+)
+configuration.verify_ssl = False
 
-Please see each listed method (i.e API Endpoints) for working code examples.
+
+
+# Enter a context with an instance of the API client
+with psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = telemetry_query_v1_api.TelemetryQueryV1Api(api_client)
+    tenant = "tenant_example" # str | Tenant for the request. (optional)
+namespace = "namespace_example" # str | Namespace for the request. (optional)
+
+    try:
+        # telemetry metrics query
+        api_response = api_instance.get_metrics1(tenant=tenant, namespace=namespace)
+        pprint(api_response)
+    except psm.ApiException as e:
+        print("Exception when calling TelemetryQueryV1Api->get_metrics1: %s\n" % e)
+```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*TelemetryQueryV1Api* | [**get_metrics1**](../../../docs/TelemetryQueryV1Api.md#get_metrics1) | **GET** /telemetry/v1/metrics | telemetry metrics query
-*TelemetryQueryV1Api* | [**post_metrics**](../../../docs/TelemetryQueryV1Api.md#post_metrics) | **POST** /telemetry/v1/metrics | telemetry metrics query
-
-
-## README links for Model Groups
-
-[aggwatch README.md](..//aggwatch/README.md)
-
-[audit README.md](..//audit/README.md)
-
-[auth README.md](..//auth/README.md)
-
-[browser README.md](..//browser/README.md)
-
-[cluster README.md](..//cluster/README.md)
-
-[diagnostics README.md](..//diagnostics/README.md)
-
-[events README.md](..//events/README.md)
-
-[fwlog README.md](..//fwlog/README.md)
-
-[monitoring README.md](..//monitoring/README.md)
-
-[network README.md](..//network/README.md)
-
-[objstore README.md](..//objstore/README.md)
-
-[orchestration README.md](..//orchestration/README.md)
-
-[preferences README.md](..//preferences/README.md)
-
-[recoverykeys README.md](..//recoverykeys/README.md)
-
-[rollout README.md](..//rollout/README.md)
-
-[routing README.md](..//routing/README.md)
-
-[search README.md](..//search/README.md)
-
-[security README.md](..//security/README.md)
-
-[staging README.md](..//staging/README.md)
-
-[sysruntime README.md](..//sysruntime/README.md)
-
-[telemetry_query README.md](..//telemetry_query/README.md)
-
-[tokenauth README.md](..//tokenauth/README.md)
-
-[workload README.md](..//workload/README.md)
+*TelemetryQueryV1Api* | [**get_metrics1**](docs/TelemetryQueryV1Api.md#get_metrics1) | **GET** /telemetry/v1/metrics | telemetry metrics query
+*TelemetryQueryV1Api* | [**post_metrics**](docs/TelemetryQueryV1Api.md#post_metrics) | **POST** /telemetry/v1/metrics | telemetry metrics query
 
 
 ## Documentation For Models
 
- - [ApiAggWatchOptions](../../../docs/ApiAggWatchOptions.md)
- - [ApiInterface](../../../docs/ApiInterface.md)
- - [ApiInterfaceSlice](../../../docs/ApiInterfaceSlice.md)
- - [ApiKindWatchOptions](../../../docs/ApiKindWatchOptions.md)
- - [ApiListWatchOptions](../../../docs/ApiListWatchOptions.md)
- - [ApiObjectMeta](../../../docs/ApiObjectMeta.md)
- - [ApiObjectRef](../../../docs/ApiObjectRef.md)
- - [ApiStatus](../../../docs/ApiStatus.md)
- - [ApiStatusResult](../../../docs/ApiStatusResult.md)
- - [ApiTimestamp](../../../docs/ApiTimestamp.md)
- - [ApiTypeMeta](../../../docs/ApiTypeMeta.md)
- - [ApiWatchControl](../../../docs/ApiWatchControl.md)
- - [ApiWatchEvent](../../../docs/ApiWatchEvent.md)
- - [ApiWatchEventList](../../../docs/ApiWatchEventList.md)
- - [FieldsRequirement](../../../docs/FieldsRequirement.md)
- - [FieldsSelector](../../../docs/FieldsSelector.md)
- - [GoogleprotobufAny](../../../docs/GoogleprotobufAny.md)
- - [TelemetryQueryBottomSpec](../../../docs/TelemetryQueryBottomSpec.md)
- - [TelemetryQueryMetricsQueryList](../../../docs/TelemetryQueryMetricsQueryList.md)
- - [TelemetryQueryMetricsQueryResponse](../../../docs/TelemetryQueryMetricsQueryResponse.md)
- - [TelemetryQueryMetricsQueryResult](../../../docs/TelemetryQueryMetricsQueryResult.md)
- - [TelemetryQueryMetricsQuerySpec](../../../docs/TelemetryQueryMetricsQuerySpec.md)
- - [TelemetryQueryMetricsSQLQuery](../../../docs/TelemetryQueryMetricsSQLQuery.md)
- - [TelemetryQueryPaginationSpec](../../../docs/TelemetryQueryPaginationSpec.md)
- - [TelemetryQueryResultSeries](../../../docs/TelemetryQueryResultSeries.md)
- - [TelemetryQueryTopSpec](../../../docs/TelemetryQueryTopSpec.md)
+ - [ApiAggWatchOptions](docs/ApiAggWatchOptions.md)
+ - [ApiInterface](docs/ApiInterface.md)
+ - [ApiInterfaceSlice](docs/ApiInterfaceSlice.md)
+ - [ApiKindWatchOptions](docs/ApiKindWatchOptions.md)
+ - [ApiListWatchOptions](docs/ApiListWatchOptions.md)
+ - [ApiObjectMeta](docs/ApiObjectMeta.md)
+ - [ApiObjectRef](docs/ApiObjectRef.md)
+ - [ApiStatus](docs/ApiStatus.md)
+ - [ApiStatusResult](docs/ApiStatusResult.md)
+ - [ApiTimestamp](docs/ApiTimestamp.md)
+ - [ApiTypeMeta](docs/ApiTypeMeta.md)
+ - [ApiWatchControl](docs/ApiWatchControl.md)
+ - [ApiWatchEvent](docs/ApiWatchEvent.md)
+ - [ApiWatchEventList](docs/ApiWatchEventList.md)
+ - [FieldsRequirement](docs/FieldsRequirement.md)
+ - [FieldsSelector](docs/FieldsSelector.md)
+ - [GoogleprotobufAny](docs/GoogleprotobufAny.md)
+ - [TelemetryQueryBottomSpec](docs/TelemetryQueryBottomSpec.md)
+ - [TelemetryQueryMetricsQueryList](docs/TelemetryQueryMetricsQueryList.md)
+ - [TelemetryQueryMetricsQueryResponse](docs/TelemetryQueryMetricsQueryResponse.md)
+ - [TelemetryQueryMetricsQueryResult](docs/TelemetryQueryMetricsQueryResult.md)
+ - [TelemetryQueryMetricsQuerySpec](docs/TelemetryQueryMetricsQuerySpec.md)
+ - [TelemetryQueryMetricsSQLQuery](docs/TelemetryQueryMetricsSQLQuery.md)
+ - [TelemetryQueryPaginationSpec](docs/TelemetryQueryPaginationSpec.md)
+ - [TelemetryQueryResultSeries](docs/TelemetryQueryResultSeries.md)
+ - [TelemetryQueryTopSpec](docs/TelemetryQueryTopSpec.md)
 
 
 ## Documentation For Authorization

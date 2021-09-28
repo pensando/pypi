@@ -1,6 +1,6 @@
 # psm.AuthV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -78,14 +78,9 @@ Create AuthenticationPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -98,7 +93,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthAuthenticationPolicy(
@@ -214,7 +209,7 @@ with ApiClient() as api_client:
         # Create AuthenticationPolicy object
         api_response = api_instance.add_authentication_policy(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_authentication_policy: %s\n" % e)
 ```
 
@@ -248,7 +243,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_role**
 > AuthRole add_role(o_tenant, body)
@@ -258,14 +253,9 @@ Create Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -278,7 +268,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -323,7 +313,7 @@ with ApiClient() as api_client:
         # Create Role object
         api_response = api_instance.add_role(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_role: %s\n" % e)
 ```
 
@@ -358,7 +348,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_role1**
 > AuthRole add_role1(body)
@@ -368,14 +358,9 @@ Create Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -388,7 +373,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthRole(
@@ -432,7 +417,7 @@ with ApiClient() as api_client:
         # Create Role object
         api_response = api_instance.add_role1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_role1: %s\n" % e)
 ```
 
@@ -466,7 +451,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_role_binding**
 > AuthRoleBinding add_role_binding(o_tenant, body)
@@ -476,14 +461,9 @@ Create RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -496,7 +476,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -534,7 +514,7 @@ with ApiClient() as api_client:
         # Create RoleBinding object
         api_response = api_instance.add_role_binding(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_role_binding: %s\n" % e)
 ```
 
@@ -569,7 +549,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_role_binding1**
 > AuthRoleBinding add_role_binding1(body)
@@ -579,14 +559,9 @@ Create RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -599,7 +574,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthRoleBinding(
@@ -636,7 +611,7 @@ with ApiClient() as api_client:
         # Create RoleBinding object
         api_response = api_instance.add_role_binding1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_role_binding1: %s\n" % e)
 ```
 
@@ -670,7 +645,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_user**
 > AuthUser add_user(o_tenant, body)
@@ -680,14 +655,9 @@ Create User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -700,7 +670,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -763,7 +733,7 @@ with ApiClient() as api_client:
         # Create User object
         api_response = api_instance.add_user(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_user: %s\n" % e)
 ```
 
@@ -798,7 +768,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_user1**
 > AuthUser add_user1(body)
@@ -808,14 +778,9 @@ Create User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -828,7 +793,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthUser(
@@ -890,7 +855,7 @@ with ApiClient() as api_client:
         # Create User object
         api_response = api_instance.add_user1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->add_user1: %s\n" % e)
 ```
 
@@ -924,7 +889,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_role**
 > AuthRole delete_role(o_tenant, o_name)
@@ -934,14 +899,9 @@ Delete Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -954,7 +914,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -965,7 +925,7 @@ with ApiClient() as api_client:
         # Delete Role object
         api_response = api_instance.delete_role(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->delete_role: %s\n" % e)
 ```
 
@@ -1000,7 +960,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_role1**
 > AuthRole delete_role1(o_name)
@@ -1010,14 +970,9 @@ Delete Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1030,7 +985,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1040,7 +995,7 @@ with ApiClient() as api_client:
         # Delete Role object
         api_response = api_instance.delete_role1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->delete_role1: %s\n" % e)
 ```
 
@@ -1074,7 +1029,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_role_binding**
 > AuthRoleBinding delete_role_binding(o_tenant, o_name)
@@ -1084,14 +1039,9 @@ Delete RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1104,7 +1054,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1115,7 +1065,7 @@ with ApiClient() as api_client:
         # Delete RoleBinding object
         api_response = api_instance.delete_role_binding(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->delete_role_binding: %s\n" % e)
 ```
 
@@ -1150,7 +1100,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_role_binding1**
 > AuthRoleBinding delete_role_binding1(o_name)
@@ -1160,14 +1110,9 @@ Delete RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1180,7 +1125,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1190,7 +1135,7 @@ with ApiClient() as api_client:
         # Delete RoleBinding object
         api_response = api_instance.delete_role_binding1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->delete_role_binding1: %s\n" % e)
 ```
 
@@ -1224,7 +1169,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_user**
 > AuthUser delete_user(o_tenant, o_name)
@@ -1234,14 +1179,9 @@ Delete User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1254,7 +1194,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1265,7 +1205,7 @@ with ApiClient() as api_client:
         # Delete User object
         api_response = api_instance.delete_user(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->delete_user: %s\n" % e)
 ```
 
@@ -1300,7 +1240,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_user1**
 > AuthUser delete_user1(o_name)
@@ -1310,14 +1250,9 @@ Delete User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1330,7 +1265,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1340,7 +1275,7 @@ with ApiClient() as api_client:
         # Delete User object
         api_response = api_instance.delete_user1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->delete_user1: %s\n" % e)
 ```
 
@@ -1374,7 +1309,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_authentication_policy**
 > AuthAuthenticationPolicy get_authentication_policy()
@@ -1384,14 +1319,9 @@ Get AuthenticationPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1404,7 +1334,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -1430,7 +1360,7 @@ with ApiClient() as api_client:
         # Get AuthenticationPolicy object
         api_response = api_instance.get_authentication_policy(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, authenticators_authenticator_order=authenticators_authenticator_order, spec_secret=spec_secret, spec_token_expiry=spec_token_expiry)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_authentication_policy: %s\n" % e)
 ```
 
@@ -1477,7 +1407,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_role**
 > AuthRole get_role(o_tenant, o_name)
@@ -1487,14 +1417,9 @@ Get Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1507,7 +1432,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1527,7 +1452,7 @@ with ApiClient() as api_client:
         # Get Role object
         api_response = api_instance.get_role(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1536,7 +1461,7 @@ with ApiClient() as api_client:
         # Get Role object
         api_response = api_instance.get_role(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role: %s\n" % e)
 ```
 
@@ -1580,7 +1505,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_role1**
 > AuthRole get_role1(o_name)
@@ -1590,14 +1515,9 @@ Get Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1610,7 +1530,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1630,7 +1550,7 @@ with ApiClient() as api_client:
         # Get Role object
         api_response = api_instance.get_role1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1639,7 +1559,7 @@ with ApiClient() as api_client:
         # Get Role object
         api_response = api_instance.get_role1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role1: %s\n" % e)
 ```
 
@@ -1683,7 +1603,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_role_binding**
 > AuthRoleBinding get_role_binding(o_tenant, o_name)
@@ -1693,14 +1613,9 @@ Get RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1713,7 +1628,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1740,7 +1655,7 @@ with ApiClient() as api_client:
         # Get RoleBinding object
         api_response = api_instance.get_role_binding(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role_binding: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1749,7 +1664,7 @@ with ApiClient() as api_client:
         # Get RoleBinding object
         api_response = api_instance.get_role_binding(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_users=spec_users, spec_user_groups=spec_user_groups, spec_role=spec_role)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role_binding: %s\n" % e)
 ```
 
@@ -1796,7 +1711,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_role_binding1**
 > AuthRoleBinding get_role_binding1(o_name)
@@ -1806,14 +1721,9 @@ Get RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1826,7 +1736,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1853,7 +1763,7 @@ with ApiClient() as api_client:
         # Get RoleBinding object
         api_response = api_instance.get_role_binding1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role_binding1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1862,7 +1772,7 @@ with ApiClient() as api_client:
         # Get RoleBinding object
         api_response = api_instance.get_role_binding1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_users=spec_users, spec_user_groups=spec_user_groups, spec_role=spec_role)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_role_binding1: %s\n" % e)
 ```
 
@@ -1909,7 +1819,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user**
 > AuthUser get_user(o_tenant, o_name)
@@ -1919,14 +1829,9 @@ Get User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1939,7 +1844,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1974,7 +1879,7 @@ with ApiClient() as api_client:
         # Get User object
         api_response = api_instance.get_user(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1983,7 +1888,7 @@ with ApiClient() as api_client:
         # Get User object
         api_response = api_instance.get_user(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_fullname=spec_fullname, spec_email=spec_email, spec_password=spec_password, spec_type=spec_type, status_roles=status_roles, status_user_groups=status_user_groups, status_last_login=status_last_login, status_authenticators=status_authenticators, status_last_password_change=status_last_password_change)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user: %s\n" % e)
 ```
 
@@ -2036,7 +1941,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user1**
 > AuthUser get_user1(o_name)
@@ -2046,14 +1951,9 @@ Get User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2066,7 +1966,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2101,7 +2001,7 @@ with ApiClient() as api_client:
         # Get User object
         api_response = api_instance.get_user1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2110,7 +2010,7 @@ with ApiClient() as api_client:
         # Get User object
         api_response = api_instance.get_user1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_fullname=spec_fullname, spec_email=spec_email, spec_password=spec_password, spec_type=spec_type, status_roles=status_roles, status_user_groups=status_user_groups, status_last_login=status_last_login, status_authenticators=status_authenticators, status_last_password_change=status_last_password_change)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user1: %s\n" % e)
 ```
 
@@ -2163,7 +2063,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_preference**
 > AuthUserPreference get_user_preference(o_tenant, o_name)
@@ -2173,14 +2073,9 @@ Get UserPreference object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2193,7 +2088,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2214,7 +2109,7 @@ with ApiClient() as api_client:
         # Get UserPreference object
         api_response = api_instance.get_user_preference(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user_preference: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2223,7 +2118,7 @@ with ApiClient() as api_client:
         # Get UserPreference object
         api_response = api_instance.get_user_preference(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_options=spec_options)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user_preference: %s\n" % e)
 ```
 
@@ -2268,7 +2163,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_preference1**
 > AuthUserPreference get_user_preference1(o_name)
@@ -2278,14 +2173,9 @@ Get UserPreference object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2298,7 +2188,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2319,7 +2209,7 @@ with ApiClient() as api_client:
         # Get UserPreference object
         api_response = api_instance.get_user_preference1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user_preference1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2328,7 +2218,7 @@ with ApiClient() as api_client:
         # Get UserPreference object
         api_response = api_instance.get_user_preference1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_options=spec_options)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->get_user_preference1: %s\n" % e)
 ```
 
@@ -2373,7 +2263,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **is_authorized**
 > AuthUser is_authorized(o_tenant, o_name, body)
@@ -2383,14 +2273,9 @@ Review authorization for user
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_subject_access_review_request import AuthSubjectAccessReviewRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2404,7 +2289,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2445,7 +2330,7 @@ with ApiClient() as api_client:
         # Review authorization for user
         api_response = api_instance.is_authorized(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->is_authorized: %s\n" % e)
 ```
 
@@ -2481,7 +2366,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **is_authorized1**
 > AuthUser is_authorized1(o_name, body)
@@ -2491,14 +2376,9 @@ Review authorization for user
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_subject_access_review_request import AuthSubjectAccessReviewRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2512,7 +2392,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2552,7 +2432,7 @@ with ApiClient() as api_client:
         # Review authorization for user
         api_response = api_instance.is_authorized1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->is_authorized1: %s\n" % e)
 ```
 
@@ -2587,7 +2467,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_authentication_policy**
 > AuthAuthenticationPolicy label_authentication_policy(body)
@@ -2597,14 +2477,9 @@ Label AuthenticationPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2618,7 +2493,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = ApiLabel(
@@ -2643,7 +2518,7 @@ with ApiClient() as api_client:
         # Label AuthenticationPolicy object
         api_response = api_instance.label_authentication_policy(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_authentication_policy: %s\n" % e)
 ```
 
@@ -2677,7 +2552,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_role**
 > AuthRole label_role(o_tenant, o_name, body)
@@ -2687,14 +2562,9 @@ Label Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2708,7 +2578,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2735,7 +2605,7 @@ with ApiClient() as api_client:
         # Label Role object
         api_response = api_instance.label_role(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_role: %s\n" % e)
 ```
 
@@ -2771,7 +2641,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_role1**
 > AuthRole label_role1(o_name, body)
@@ -2781,14 +2651,9 @@ Label Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2802,7 +2667,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2828,7 +2693,7 @@ with ApiClient() as api_client:
         # Label Role object
         api_response = api_instance.label_role1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_role1: %s\n" % e)
 ```
 
@@ -2863,7 +2728,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_role_binding**
 > AuthRoleBinding label_role_binding(o_tenant, o_name, body)
@@ -2873,14 +2738,9 @@ Label RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2894,7 +2754,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2921,7 +2781,7 @@ with ApiClient() as api_client:
         # Label RoleBinding object
         api_response = api_instance.label_role_binding(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_role_binding: %s\n" % e)
 ```
 
@@ -2957,7 +2817,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_role_binding1**
 > AuthRoleBinding label_role_binding1(o_name, body)
@@ -2967,14 +2827,9 @@ Label RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2988,7 +2843,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3014,7 +2869,7 @@ with ApiClient() as api_client:
         # Label RoleBinding object
         api_response = api_instance.label_role_binding1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_role_binding1: %s\n" % e)
 ```
 
@@ -3049,7 +2904,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_user**
 > AuthUser label_user(o_tenant, o_name, body)
@@ -3059,14 +2914,9 @@ Label User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3080,7 +2930,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3107,7 +2957,7 @@ with ApiClient() as api_client:
         # Label User object
         api_response = api_instance.label_user(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_user: %s\n" % e)
 ```
 
@@ -3143,7 +2993,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_user1**
 > AuthUser label_user1(o_name, body)
@@ -3153,14 +3003,9 @@ Label User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3174,7 +3019,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3200,7 +3045,7 @@ with ApiClient() as api_client:
         # Label User object
         api_response = api_instance.label_user1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_user1: %s\n" % e)
 ```
 
@@ -3235,7 +3080,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_user_preference**
 > AuthUserPreference label_user_preference(o_tenant, o_name, body)
@@ -3245,14 +3090,9 @@ Label UserPreference object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3266,7 +3106,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3293,7 +3133,7 @@ with ApiClient() as api_client:
         # Label UserPreference object
         api_response = api_instance.label_user_preference(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_user_preference: %s\n" % e)
 ```
 
@@ -3329,7 +3169,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_user_preference1**
 > AuthUserPreference label_user_preference1(o_name, body)
@@ -3339,14 +3179,9 @@ Label UserPreference object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3360,7 +3195,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3386,7 +3221,7 @@ with ApiClient() as api_client:
         # Label UserPreference object
         api_response = api_instance.label_user_preference1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->label_user_preference1: %s\n" % e)
 ```
 
@@ -3421,7 +3256,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ldap_bind_check**
 > AuthAuthenticationPolicy ldap_bind_check(body)
@@ -3431,14 +3266,9 @@ Test LDAP bind operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3451,7 +3281,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthAuthenticationPolicy(
@@ -3567,7 +3397,7 @@ with ApiClient() as api_client:
         # Test LDAP bind operation
         api_response = api_instance.ldap_bind_check(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->ldap_bind_check: %s\n" % e)
 ```
 
@@ -3601,7 +3431,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ldap_connection_check**
 > AuthAuthenticationPolicy ldap_connection_check(body)
@@ -3611,14 +3441,9 @@ Test LDAP connection
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3631,7 +3456,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthAuthenticationPolicy(
@@ -3747,7 +3572,7 @@ with ApiClient() as api_client:
         # Test LDAP connection
         api_response = api_instance.ldap_connection_check(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->ldap_connection_check: %s\n" % e)
 ```
 
@@ -3781,7 +3606,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_role**
 > AuthRoleList list_role(o_tenant)
@@ -3791,14 +3616,9 @@ List Role objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_list import AuthRoleList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3811,7 +3631,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3838,7 +3658,7 @@ with ApiClient() as api_client:
         # List Role objects
         api_response = api_instance.list_role(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_role: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3847,7 +3667,7 @@ with ApiClient() as api_client:
         # List Role objects
         api_response = api_instance.list_role(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_role: %s\n" % e)
 ```
 
@@ -3896,7 +3716,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_role1**
 > AuthRoleList list_role1()
@@ -3906,14 +3726,9 @@ List Role objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_list import AuthRoleList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3926,7 +3741,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3954,7 +3769,7 @@ with ApiClient() as api_client:
         # List Role objects
         api_response = api_instance.list_role1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_role1: %s\n" % e)
 ```
 
@@ -4003,7 +3818,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_role_binding**
 > AuthRoleBindingList list_role_binding(o_tenant)
@@ -4013,14 +3828,9 @@ List RoleBinding objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.auth_role_binding_list import AuthRoleBindingList
 from pprint import pprint
@@ -4033,7 +3843,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4060,7 +3870,7 @@ with ApiClient() as api_client:
         # List RoleBinding objects
         api_response = api_instance.list_role_binding(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_role_binding: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4069,7 +3879,7 @@ with ApiClient() as api_client:
         # List RoleBinding objects
         api_response = api_instance.list_role_binding(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_role_binding: %s\n" % e)
 ```
 
@@ -4118,7 +3928,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_role_binding1**
 > AuthRoleBindingList list_role_binding1()
@@ -4128,14 +3938,9 @@ List RoleBinding objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.auth_role_binding_list import AuthRoleBindingList
 from pprint import pprint
@@ -4148,7 +3953,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -4176,7 +3981,7 @@ with ApiClient() as api_client:
         # List RoleBinding objects
         api_response = api_instance.list_role_binding1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_role_binding1: %s\n" % e)
 ```
 
@@ -4225,7 +4030,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_user**
 > AuthUserList list_user(o_tenant)
@@ -4235,14 +4040,9 @@ List User objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_list import AuthUserList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4255,7 +4055,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4282,7 +4082,7 @@ with ApiClient() as api_client:
         # List User objects
         api_response = api_instance.list_user(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_user: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4291,7 +4091,7 @@ with ApiClient() as api_client:
         # List User objects
         api_response = api_instance.list_user(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_user: %s\n" % e)
 ```
 
@@ -4340,7 +4140,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_user1**
 > AuthUserList list_user1()
@@ -4350,14 +4150,9 @@ List User objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_list import AuthUserList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4370,7 +4165,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -4398,7 +4193,7 @@ with ApiClient() as api_client:
         # List User objects
         api_response = api_instance.list_user1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->list_user1: %s\n" % e)
 ```
 
@@ -4447,7 +4242,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **password_change**
 > AuthUser password_change(o_tenant, o_name, body)
@@ -4457,14 +4252,9 @@ Change user password
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_password_change_request import AuthPasswordChangeRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4478,7 +4268,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4509,7 +4299,7 @@ with ApiClient() as api_client:
         # Change user password
         api_response = api_instance.password_change(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->password_change: %s\n" % e)
 ```
 
@@ -4545,7 +4335,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **password_change1**
 > AuthUser password_change1(o_name, body)
@@ -4555,14 +4345,9 @@ Change user password
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_password_change_request import AuthPasswordChangeRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4576,7 +4361,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4606,7 +4391,7 @@ with ApiClient() as api_client:
         # Change user password
         api_response = api_instance.password_change1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->password_change1: %s\n" % e)
 ```
 
@@ -4641,7 +4426,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **password_reset**
 > AuthUser password_reset(o_tenant, o_name, body)
@@ -4651,14 +4436,9 @@ Reset user password
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_password_reset_request import AuthPasswordResetRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4672,7 +4452,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4701,7 +4481,7 @@ with ApiClient() as api_client:
         # Reset user password
         api_response = api_instance.password_reset(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->password_reset: %s\n" % e)
 ```
 
@@ -4737,7 +4517,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **password_reset1**
 > AuthUser password_reset1(o_name, body)
@@ -4747,14 +4527,9 @@ Reset user password
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_password_reset_request import AuthPasswordResetRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4768,7 +4543,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4796,7 +4571,7 @@ with ApiClient() as api_client:
         # Reset user password
         api_response = api_instance.password_reset1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->password_reset1: %s\n" % e)
 ```
 
@@ -4831,7 +4606,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **token_secret_generate**
 > AuthAuthenticationPolicy token_secret_generate(body)
@@ -4841,14 +4616,9 @@ Generate secret for token signing
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.auth_token_secret_request import AuthTokenSecretRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4862,7 +4632,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthTokenSecretRequest(
@@ -4889,7 +4659,7 @@ with ApiClient() as api_client:
         # Generate secret for token signing
         api_response = api_instance.token_secret_generate(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->token_secret_generate: %s\n" % e)
 ```
 
@@ -4923,7 +4693,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_authentication_policy**
 > AuthAuthenticationPolicy update_authentication_policy(body)
@@ -4933,14 +4703,9 @@ Update AuthenticationPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4953,7 +4718,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     body = AuthAuthenticationPolicy(
@@ -5069,7 +4834,7 @@ with ApiClient() as api_client:
         # Update AuthenticationPolicy object
         api_response = api_instance.update_authentication_policy(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_authentication_policy: %s\n" % e)
 ```
 
@@ -5103,7 +4868,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_role**
 > AuthRole update_role(o_tenant, o_name, body)
@@ -5113,14 +4878,9 @@ Update Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5133,7 +4893,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5179,7 +4939,7 @@ with ApiClient() as api_client:
         # Update Role object
         api_response = api_instance.update_role(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_role: %s\n" % e)
 ```
 
@@ -5215,7 +4975,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_role1**
 > AuthRole update_role1(o_name, body)
@@ -5225,14 +4985,9 @@ Update Role object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5245,7 +5000,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5290,7 +5045,7 @@ with ApiClient() as api_client:
         # Update Role object
         api_response = api_instance.update_role1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_role1: %s\n" % e)
 ```
 
@@ -5325,7 +5080,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_role_binding**
 > AuthRoleBinding update_role_binding(o_tenant, o_name, body)
@@ -5335,14 +5090,9 @@ Update RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5355,7 +5105,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5394,7 +5144,7 @@ with ApiClient() as api_client:
         # Update RoleBinding object
         api_response = api_instance.update_role_binding(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_role_binding: %s\n" % e)
 ```
 
@@ -5430,7 +5180,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_role_binding1**
 > AuthRoleBinding update_role_binding1(o_name, body)
@@ -5440,14 +5190,9 @@ Update RoleBinding object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5460,7 +5205,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5498,7 +5243,7 @@ with ApiClient() as api_client:
         # Update RoleBinding object
         api_response = api_instance.update_role_binding1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_role_binding1: %s\n" % e)
 ```
 
@@ -5533,7 +5278,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_user**
 > AuthUser update_user(o_tenant, o_name, body)
@@ -5543,14 +5288,9 @@ Update User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5563,7 +5303,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5627,7 +5367,7 @@ with ApiClient() as api_client:
         # Update User object
         api_response = api_instance.update_user(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_user: %s\n" % e)
 ```
 
@@ -5663,7 +5403,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_user1**
 > AuthUser update_user1(o_name, body)
@@ -5673,14 +5413,9 @@ Update User object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5693,7 +5428,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5756,7 +5491,7 @@ with ApiClient() as api_client:
         # Update User object
         api_response = api_instance.update_user1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_user1: %s\n" % e)
 ```
 
@@ -5791,7 +5526,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_user_preference**
 > AuthUserPreference update_user_preference(o_tenant, o_name, body)
@@ -5801,14 +5536,9 @@ Update UserPreference object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5821,7 +5551,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5854,7 +5584,7 @@ with ApiClient() as api_client:
         # Update UserPreference object
         api_response = api_instance.update_user_preference(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_user_preference: %s\n" % e)
 ```
 
@@ -5890,7 +5620,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_user_preference1**
 > AuthUserPreference update_user_preference1(o_name, body)
@@ -5900,14 +5630,9 @@ Update UserPreference object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5920,7 +5645,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5952,7 +5677,7 @@ with ApiClient() as api_client:
         # Update UserPreference object
         api_response = api_instance.update_user_preference1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->update_user_preference1: %s\n" % e)
 ```
 
@@ -5987,7 +5712,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_authentication_policy**
 > AuthAutoMsgAuthenticationPolicyWatchHelper watch_authentication_policy()
@@ -5997,14 +5722,9 @@ Watch AuthenticationPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_authentication_policy_watch_helper import AuthAutoMsgAuthenticationPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6017,7 +5737,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6045,7 +5765,7 @@ with ApiClient() as api_client:
         # Watch AuthenticationPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_authentication_policy(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_authentication_policy: %s\n" % e)
 ```
 
@@ -6094,7 +5814,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_role**
 > AuthAutoMsgRoleWatchHelper watch_role(o_tenant)
@@ -6104,14 +5824,9 @@ Watch Role objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_watch_helper import AuthAutoMsgRoleWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6124,7 +5839,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6151,7 +5866,7 @@ with ApiClient() as api_client:
         # Watch Role objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_role(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_role: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6160,7 +5875,7 @@ with ApiClient() as api_client:
         # Watch Role objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_role(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_role: %s\n" % e)
 ```
 
@@ -6209,7 +5924,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_role1**
 > AuthAutoMsgRoleWatchHelper watch_role1()
@@ -6219,14 +5934,9 @@ Watch Role objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_watch_helper import AuthAutoMsgRoleWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6239,7 +5949,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6267,7 +5977,7 @@ with ApiClient() as api_client:
         # Watch Role objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_role1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_role1: %s\n" % e)
 ```
 
@@ -6316,7 +6026,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_role_binding**
 > AuthAutoMsgRoleBindingWatchHelper watch_role_binding(o_tenant)
@@ -6326,14 +6036,9 @@ Watch RoleBinding objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_binding_watch_helper import AuthAutoMsgRoleBindingWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6346,7 +6051,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6373,7 +6078,7 @@ with ApiClient() as api_client:
         # Watch RoleBinding objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_role_binding(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_role_binding: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6382,7 +6087,7 @@ with ApiClient() as api_client:
         # Watch RoleBinding objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_role_binding(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_role_binding: %s\n" % e)
 ```
 
@@ -6431,7 +6136,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_role_binding1**
 > AuthAutoMsgRoleBindingWatchHelper watch_role_binding1()
@@ -6441,14 +6146,9 @@ Watch RoleBinding objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_binding_watch_helper import AuthAutoMsgRoleBindingWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6461,7 +6161,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6489,7 +6189,7 @@ with ApiClient() as api_client:
         # Watch RoleBinding objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_role_binding1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_role_binding1: %s\n" % e)
 ```
 
@@ -6538,7 +6238,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_user**
 > AuthAutoMsgUserWatchHelper watch_user(o_tenant)
@@ -6548,14 +6248,9 @@ Watch User objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_watch_helper import AuthAutoMsgUserWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6568,7 +6263,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6595,7 +6290,7 @@ with ApiClient() as api_client:
         # Watch User objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_user(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_user: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6604,7 +6299,7 @@ with ApiClient() as api_client:
         # Watch User objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_user(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_user: %s\n" % e)
 ```
 
@@ -6653,7 +6348,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_user1**
 > AuthAutoMsgUserWatchHelper watch_user1()
@@ -6663,14 +6358,9 @@ Watch User objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_watch_helper import AuthAutoMsgUserWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6683,7 +6373,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6711,7 +6401,7 @@ with ApiClient() as api_client:
         # Watch User objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_user1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_user1: %s\n" % e)
 ```
 
@@ -6760,7 +6450,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_user_preference**
 > AuthAutoMsgUserPreferenceWatchHelper watch_user_preference(o_tenant)
@@ -6770,14 +6460,9 @@ Watch UserPreference objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_preference_watch_helper import AuthAutoMsgUserPreferenceWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6790,7 +6475,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6817,7 +6502,7 @@ with ApiClient() as api_client:
         # Watch UserPreference objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_user_preference(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_user_preference: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6826,7 +6511,7 @@ with ApiClient() as api_client:
         # Watch UserPreference objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_user_preference(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_user_preference: %s\n" % e)
 ```
 
@@ -6875,7 +6560,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_user_preference1**
 > AuthAutoMsgUserPreferenceWatchHelper watch_user_preference1()
@@ -6885,14 +6570,9 @@ Watch UserPreference objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import auth_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.auth import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_preference_watch_helper import AuthAutoMsgUserPreferenceWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6905,7 +6585,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = auth_v1_api.AuthV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6933,7 +6613,7 @@ with ApiClient() as api_client:
         # Watch UserPreference objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_user_preference1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling AuthV1Api->watch_user_preference1: %s\n" % e)
 ```
 
@@ -6982,5 +6662,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.AuthV1Api top]](#psm.AuthV1Api) [[Back to auth README]](../psm/docs/auth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

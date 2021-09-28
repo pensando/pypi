@@ -1,6 +1,6 @@
 # psm.OrchestrationV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,14 +21,9 @@ Create Orchestrator object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -41,7 +36,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     body = OrchestrationOrchestrator(
@@ -109,7 +104,7 @@ with ApiClient() as api_client:
         # Create Orchestrator object
         api_response = api_instance.add_orchestrator(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->add_orchestrator: %s\n" % e)
 ```
 
@@ -143,7 +138,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_orchestrator**
 > OrchestrationOrchestrator delete_orchestrator(o_name)
@@ -153,14 +148,9 @@ Delete Orchestrator object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -173,7 +163,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -183,7 +173,7 @@ with ApiClient() as api_client:
         # Delete Orchestrator object
         api_response = api_instance.delete_orchestrator(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->delete_orchestrator: %s\n" % e)
 ```
 
@@ -217,7 +207,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_orchestrator**
 > OrchestrationOrchestrator get_orchestrator(o_name)
@@ -227,14 +217,9 @@ Get Orchestrator object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -247,7 +232,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -287,7 +272,7 @@ with ApiClient() as api_client:
         # Get Orchestrator object
         api_response = api_instance.get_orchestrator(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->get_orchestrator: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -296,7 +281,7 @@ with ApiClient() as api_client:
         # Get Orchestrator object
         api_response = api_instance.get_orchestrator(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_type=spec_type, spec_uri=spec_uri, credentials_auth_type=credentials_auth_type, credentials_username=credentials_username, credentials_password=credentials_password, credentials_bearer_token=credentials_bearer_token, credentials_cert_data=credentials_cert_data, credentials_key_data=credentials_key_data, credentials_ca_data=credentials_ca_data, credentials_disable_server_authentication=credentials_disable_server_authentication, status_connection_status=status_connection_status, status_last_transition_time=status_last_transition_time, status_message=status_message, status_orch_id=status_orch_id, status_discovered_namespaces=status_discovered_namespaces, status_incompatible_dscs=status_incompatible_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->get_orchestrator: %s\n" % e)
 ```
 
@@ -356,7 +341,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_orchestrator**
 > OrchestrationOrchestrator label_orchestrator(o_name, body)
@@ -366,14 +351,9 @@ Label Orchestrator object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
@@ -387,7 +367,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -413,7 +393,7 @@ with ApiClient() as api_client:
         # Label Orchestrator object
         api_response = api_instance.label_orchestrator(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->label_orchestrator: %s\n" % e)
 ```
 
@@ -448,7 +428,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_orchestrator**
 > OrchestrationOrchestratorList list_orchestrator()
@@ -458,14 +438,9 @@ List Orchestrator objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.orchestration_orchestrator_list import OrchestrationOrchestratorList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -478,7 +453,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -506,7 +481,7 @@ with ApiClient() as api_client:
         # List Orchestrator objects
         api_response = api_instance.list_orchestrator(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->list_orchestrator: %s\n" % e)
 ```
 
@@ -555,7 +530,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_orchestrator**
 > OrchestrationOrchestrator update_orchestrator(o_name, body)
@@ -565,14 +540,9 @@ Update Orchestrator object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -585,7 +555,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -654,7 +624,7 @@ with ApiClient() as api_client:
         # Update Orchestrator object
         api_response = api_instance.update_orchestrator(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->update_orchestrator: %s\n" % e)
 ```
 
@@ -689,7 +659,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_orchestrator**
 > OrchestrationAutoMsgOrchestratorWatchHelper watch_orchestrator()
@@ -699,14 +669,9 @@ Watch Orchestrator objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import orchestration_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.orchestration import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import orchestration_v1_api
 from pensando_ent.psm.model.orchestration_auto_msg_orchestrator_watch_helper import OrchestrationAutoMsgOrchestratorWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -719,7 +684,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = orchestration_v1_api.OrchestrationV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -747,7 +712,7 @@ with ApiClient() as api_client:
         # Watch Orchestrator objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_orchestrator(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling OrchestrationV1Api->watch_orchestrator: %s\n" % e)
 ```
 
@@ -796,5 +761,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.OrchestrationV1Api top]](#psm.OrchestrationV1Api) [[Back to orchestration README]](../psm/docs/orchestration/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,83 +1,61 @@
-# tokenauth
+```python
 
-This page provides working code examples for the **tokenauth** group.
+import time
+import psm
+from pprint import pprint
+from api import tokenauth_v1_api
+from pensando_ent.psm.model.tokenauth_node_token_response import TokenauthNodeTokenResponse
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_ent.psm.Configuration(
+    psm_config_path=HOME+"/.psm/config.json"
+)
+configuration.verify_ssl = False
 
-Please see each listed method (i.e API Endpoints) for working code examples.
+
+
+# Enter a context with an instance of the API client
+with psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = tokenauth_v1_api.TokenauthV1Api(api_client)
+    audience = [
+        "audience_example",
+    ] # [str] | Audience represents a list of nodes the token is valid for. \"*\" indicates all nodes. (optional)
+validity_start = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ValidityStart indicates the time at which the token becomes valid. (optional)
+validity_end = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ValidityEnd indicates the time at which the token becomes invalid. (optional)
+
+    try:
+        api_response = api_instance.get_generate_node_token(audience=audience, validity_start=validity_start, validity_end=validity_end)
+        pprint(api_response)
+    except psm.ApiException as e:
+        print("Exception when calling TokenauthV1Api->get_generate_node_token: %s\n" % e)
+```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*TokenauthV1Api* | [**get_generate_node_token**](../../../docs/TokenauthV1Api.md#get_generate_node_token) | **GET** /tokenauth/v1/node | 
-
-
-## README links for Model Groups
-
-[aggwatch README.md](..//aggwatch/README.md)
-
-[audit README.md](..//audit/README.md)
-
-[auth README.md](..//auth/README.md)
-
-[browser README.md](..//browser/README.md)
-
-[cluster README.md](..//cluster/README.md)
-
-[diagnostics README.md](..//diagnostics/README.md)
-
-[events README.md](..//events/README.md)
-
-[fwlog README.md](..//fwlog/README.md)
-
-[monitoring README.md](..//monitoring/README.md)
-
-[network README.md](..//network/README.md)
-
-[objstore README.md](..//objstore/README.md)
-
-[orchestration README.md](..//orchestration/README.md)
-
-[preferences README.md](..//preferences/README.md)
-
-[recoverykeys README.md](..//recoverykeys/README.md)
-
-[rollout README.md](..//rollout/README.md)
-
-[routing README.md](..//routing/README.md)
-
-[search README.md](..//search/README.md)
-
-[security README.md](..//security/README.md)
-
-[staging README.md](..//staging/README.md)
-
-[sysruntime README.md](..//sysruntime/README.md)
-
-[telemetry_query README.md](..//telemetry_query/README.md)
-
-[tokenauth README.md](..//tokenauth/README.md)
-
-[workload README.md](..//workload/README.md)
+*TokenauthV1Api* | [**get_generate_node_token**](docs/TokenauthV1Api.md#get_generate_node_token) | **GET** /tokenauth/v1/node | 
 
 
 ## Documentation For Models
 
- - [ApiAggWatchOptions](../../../docs/ApiAggWatchOptions.md)
- - [ApiKindWatchOptions](../../../docs/ApiKindWatchOptions.md)
- - [ApiListWatchOptions](../../../docs/ApiListWatchOptions.md)
- - [ApiObjectMeta](../../../docs/ApiObjectMeta.md)
- - [ApiObjectRef](../../../docs/ApiObjectRef.md)
- - [ApiStatus](../../../docs/ApiStatus.md)
- - [ApiStatusResult](../../../docs/ApiStatusResult.md)
- - [ApiTimestamp](../../../docs/ApiTimestamp.md)
- - [ApiWatchControl](../../../docs/ApiWatchControl.md)
- - [ApiWatchEvent](../../../docs/ApiWatchEvent.md)
- - [ApiWatchEventList](../../../docs/ApiWatchEventList.md)
- - [GoogleprotobufAny](../../../docs/GoogleprotobufAny.md)
- - [TokenauthNodeTokenRequest](../../../docs/TokenauthNodeTokenRequest.md)
- - [TokenauthNodeTokenResponse](../../../docs/TokenauthNodeTokenResponse.md)
+ - [ApiAggWatchOptions](docs/ApiAggWatchOptions.md)
+ - [ApiKindWatchOptions](docs/ApiKindWatchOptions.md)
+ - [ApiListWatchOptions](docs/ApiListWatchOptions.md)
+ - [ApiObjectMeta](docs/ApiObjectMeta.md)
+ - [ApiObjectRef](docs/ApiObjectRef.md)
+ - [ApiStatus](docs/ApiStatus.md)
+ - [ApiStatusResult](docs/ApiStatusResult.md)
+ - [ApiTimestamp](docs/ApiTimestamp.md)
+ - [ApiWatchControl](docs/ApiWatchControl.md)
+ - [ApiWatchEvent](docs/ApiWatchEvent.md)
+ - [ApiWatchEventList](docs/ApiWatchEventList.md)
+ - [GoogleprotobufAny](docs/GoogleprotobufAny.md)
+ - [TokenauthNodeTokenRequest](docs/TokenauthNodeTokenRequest.md)
+ - [TokenauthNodeTokenResponse](docs/TokenauthNodeTokenResponse.md)
 
 
 ## Documentation For Authorization

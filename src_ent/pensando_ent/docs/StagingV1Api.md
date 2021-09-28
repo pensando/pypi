@@ -1,6 +1,6 @@
 # psm.StagingV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,14 +28,9 @@ Create Buffer object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -48,7 +43,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -101,7 +96,7 @@ with ApiClient() as api_client:
         # Create Buffer object
         api_response = api_instance.add_buffer(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->add_buffer: %s\n" % e)
 ```
 
@@ -136,7 +131,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_buffer1**
 > StagingBuffer add_buffer1(body)
@@ -146,14 +141,9 @@ Create Buffer object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -166,7 +156,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     body = StagingBuffer(
@@ -218,7 +208,7 @@ with ApiClient() as api_client:
         # Create Buffer object
         api_response = api_instance.add_buffer1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->add_buffer1: %s\n" % e)
 ```
 
@@ -252,7 +242,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulkedit**
 > StagingBulkEditAction bulkedit(o_tenant, o_name, body)
@@ -262,14 +252,9 @@ Create/Update/Delete multiple objects as part of a single request
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_bulk_edit_action import StagingBulkEditAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -282,7 +267,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -345,7 +330,7 @@ with ApiClient() as api_client:
         # Create/Update/Delete multiple objects as part of a single request
         api_response = api_instance.bulkedit(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->bulkedit: %s\n" % e)
 ```
 
@@ -381,7 +366,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulkedit1**
 > StagingBulkEditAction bulkedit1(o_name, body)
@@ -391,14 +376,9 @@ Create/Update/Delete multiple objects as part of a single request
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_bulk_edit_action import StagingBulkEditAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -411,7 +391,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -473,7 +453,7 @@ with ApiClient() as api_client:
         # Create/Update/Delete multiple objects as part of a single request
         api_response = api_instance.bulkedit1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->bulkedit1: %s\n" % e)
 ```
 
@@ -508,7 +488,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clear**
 > StagingClearAction clear(o_tenant, o_name, body)
@@ -518,14 +498,9 @@ Clear operations from a configuration buffer
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_clear_action import StagingClearAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -538,7 +513,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -579,7 +554,7 @@ with ApiClient() as api_client:
         # Clear operations from a configuration buffer
         api_response = api_instance.clear(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->clear: %s\n" % e)
 ```
 
@@ -615,7 +590,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **clear1**
 > StagingClearAction clear1(o_name, body)
@@ -625,14 +600,9 @@ Clear operations from a configuration buffer
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_clear_action import StagingClearAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -645,7 +615,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -685,7 +655,7 @@ with ApiClient() as api_client:
         # Clear operations from a configuration buffer
         api_response = api_instance.clear1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->clear1: %s\n" % e)
 ```
 
@@ -720,7 +690,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **commit**
 > StagingCommitAction commit(o_tenant, o_name, body)
@@ -730,14 +700,9 @@ Commit a staged configuration buffer
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_commit_action import StagingCommitAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -750,7 +715,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -784,7 +749,7 @@ with ApiClient() as api_client:
         # Commit a staged configuration buffer
         api_response = api_instance.commit(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->commit: %s\n" % e)
 ```
 
@@ -820,7 +785,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **commit1**
 > StagingCommitAction commit1(o_name, body)
@@ -830,14 +795,9 @@ Commit a staged configuration buffer
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_commit_action import StagingCommitAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -850,7 +810,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -883,7 +843,7 @@ with ApiClient() as api_client:
         # Commit a staged configuration buffer
         api_response = api_instance.commit1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->commit1: %s\n" % e)
 ```
 
@@ -918,7 +878,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_buffer**
 > StagingBuffer delete_buffer(o_tenant, o_name)
@@ -928,14 +888,9 @@ Delete Buffer object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -948,7 +903,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -959,7 +914,7 @@ with ApiClient() as api_client:
         # Delete Buffer object
         api_response = api_instance.delete_buffer(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->delete_buffer: %s\n" % e)
 ```
 
@@ -994,7 +949,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_buffer1**
 > StagingBuffer delete_buffer1(o_name)
@@ -1004,14 +959,9 @@ Delete Buffer object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1024,7 +974,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1034,7 +984,7 @@ with ApiClient() as api_client:
         # Delete Buffer object
         api_response = api_instance.delete_buffer1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->delete_buffer1: %s\n" % e)
 ```
 
@@ -1068,7 +1018,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_buffer**
 > StagingBuffer get_buffer(o_tenant, o_name)
@@ -1078,14 +1028,9 @@ Get Buffer object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1098,7 +1043,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1120,7 +1065,7 @@ with ApiClient() as api_client:
         # Get Buffer object
         api_response = api_instance.get_buffer(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->get_buffer: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1129,7 +1074,7 @@ with ApiClient() as api_client:
         # Get Buffer object
         api_response = api_instance.get_buffer(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_contact=spec_contact, status_validation_result=status_validation_result)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->get_buffer: %s\n" % e)
 ```
 
@@ -1175,7 +1120,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_buffer1**
 > StagingBuffer get_buffer1(o_name)
@@ -1185,14 +1130,9 @@ Get Buffer object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1205,7 +1145,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1227,7 +1167,7 @@ with ApiClient() as api_client:
         # Get Buffer object
         api_response = api_instance.get_buffer1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->get_buffer1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1236,7 +1176,7 @@ with ApiClient() as api_client:
         # Get Buffer object
         api_response = api_instance.get_buffer1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_contact=spec_contact, status_validation_result=status_validation_result)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->get_buffer1: %s\n" % e)
 ```
 
@@ -1282,7 +1222,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_buffer**
 > StagingBufferList list_buffer(o_tenant)
@@ -1292,14 +1232,9 @@ List Buffer objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer_list import StagingBufferList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1312,7 +1247,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1339,7 +1274,7 @@ with ApiClient() as api_client:
         # List Buffer objects
         api_response = api_instance.list_buffer(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->list_buffer: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1348,7 +1283,7 @@ with ApiClient() as api_client:
         # List Buffer objects
         api_response = api_instance.list_buffer(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->list_buffer: %s\n" % e)
 ```
 
@@ -1397,7 +1332,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_buffer1**
 > StagingBufferList list_buffer1()
@@ -1407,14 +1342,9 @@ List Buffer objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import staging_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.staging import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer_list import StagingBufferList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1427,7 +1357,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = staging_v1_api.StagingV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -1455,7 +1385,7 @@ with ApiClient() as api_client:
         # List Buffer objects
         api_response = api_instance.list_buffer1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling StagingV1Api->list_buffer1: %s\n" % e)
 ```
 
@@ -1504,5 +1434,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.StagingV1Api top]](#psm.StagingV1Api) [[Back to staging README]](../psm/docs/staging/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

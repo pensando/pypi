@@ -1,6 +1,6 @@
 # psm.ClusterV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -70,14 +70,9 @@ Create ConfigurationSnapshot object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -90,7 +85,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterConfigurationSnapshot(
@@ -128,7 +123,7 @@ with ApiClient() as api_client:
         # Create ConfigurationSnapshot object
         api_response = api_instance.add_configuration_snapshot(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->add_configuration_snapshot: %s\n" % e)
 ```
 
@@ -162,7 +157,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_dsc_profile**
 > ClusterDSCProfile add_dsc_profile(body)
@@ -172,14 +167,9 @@ Create DSCProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -192,7 +182,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterDSCProfile(
@@ -240,7 +230,7 @@ with ApiClient() as api_client:
         # Create DSCProfile object
         api_response = api_instance.add_dsc_profile(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->add_dsc_profile: %s\n" % e)
 ```
 
@@ -274,7 +264,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_host**
 > ClusterHost add_host(body)
@@ -284,14 +274,9 @@ Create Host object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -304,7 +289,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterHost(
@@ -347,7 +332,7 @@ with ApiClient() as api_client:
         # Create Host object
         api_response = api_instance.add_host(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->add_host: %s\n" % e)
 ```
 
@@ -381,7 +366,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_license**
 > ClusterLicense add_license(body)
@@ -391,14 +376,9 @@ Create License object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -411,7 +391,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterLicense(
@@ -458,7 +438,7 @@ with ApiClient() as api_client:
         # Create License object
         api_response = api_instance.add_license(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->add_license: %s\n" % e)
 ```
 
@@ -492,7 +472,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_node**
 > ClusterNode add_node(body)
@@ -502,14 +482,9 @@ Create Node object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -522,7 +497,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterNode(
@@ -565,7 +540,7 @@ with ApiClient() as api_client:
         # Create Node object
         api_response = api_instance.add_node(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->add_node: %s\n" % e)
 ```
 
@@ -599,7 +574,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_tenant**
 > ClusterTenant add_tenant(body)
@@ -609,14 +584,9 @@ Create Tenant object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -629,7 +599,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterTenant(
@@ -660,7 +630,7 @@ with ApiClient() as api_client:
         # Create Tenant object
         api_response = api_instance.add_tenant(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->add_tenant: %s\n" % e)
 ```
 
@@ -694,7 +664,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **auth_bootstrap_complete**
 > ClusterCluster auth_bootstrap_complete(body)
@@ -704,14 +674,9 @@ Mark bootstrapping as complete for the cluster
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.cluster_cluster_auth_bootstrap_request import ClusterClusterAuthBootstrapRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -725,7 +690,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterClusterAuthBootstrapRequest(
@@ -752,7 +717,7 @@ with ApiClient() as api_client:
         # Mark bootstrapping as complete for the cluster
         api_response = api_instance.auth_bootstrap_complete(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->auth_bootstrap_complete: %s\n" % e)
 ```
 
@@ -786,7 +751,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_configuration_snapshot**
 > ClusterConfigurationSnapshot delete_configuration_snapshot()
@@ -796,14 +761,9 @@ Delete ConfigurationSnapshot object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -816,7 +776,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
 
@@ -825,7 +785,7 @@ with ApiClient() as api_client:
         # Delete ConfigurationSnapshot object
         api_response = api_instance.delete_configuration_snapshot()
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->delete_configuration_snapshot: %s\n" % e)
 ```
 
@@ -856,7 +816,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_distributed_service_card**
 > ClusterDistributedServiceCard delete_distributed_service_card(o_name)
@@ -866,14 +826,9 @@ Delete DistributedServiceCard object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -886,7 +841,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -896,7 +851,7 @@ with ApiClient() as api_client:
         # Delete DistributedServiceCard object
         api_response = api_instance.delete_distributed_service_card(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->delete_distributed_service_card: %s\n" % e)
 ```
 
@@ -930,7 +885,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_dsc_profile**
 > ClusterDSCProfile delete_dsc_profile(o_name)
@@ -940,14 +895,9 @@ Delete DSCProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -960,7 +910,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -970,7 +920,7 @@ with ApiClient() as api_client:
         # Delete DSCProfile object
         api_response = api_instance.delete_dsc_profile(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->delete_dsc_profile: %s\n" % e)
 ```
 
@@ -1004,7 +954,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_host**
 > ClusterHost delete_host(o_name)
@@ -1014,14 +964,9 @@ Delete Host object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1034,7 +979,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1044,7 +989,7 @@ with ApiClient() as api_client:
         # Delete Host object
         api_response = api_instance.delete_host(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->delete_host: %s\n" % e)
 ```
 
@@ -1078,7 +1023,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_node**
 > ClusterNode delete_node(o_name)
@@ -1088,14 +1033,9 @@ Delete Node object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1108,7 +1048,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1118,7 +1058,7 @@ with ApiClient() as api_client:
         # Delete Node object
         api_response = api_instance.delete_node(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->delete_node: %s\n" % e)
 ```
 
@@ -1152,7 +1092,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_tenant**
 > ClusterTenant delete_tenant(o_name)
@@ -1162,14 +1102,9 @@ Delete Tenant object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1182,7 +1117,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1192,7 +1127,7 @@ with ApiClient() as api_client:
         # Delete Tenant object
         api_response = api_instance.delete_tenant(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->delete_tenant: %s\n" % e)
 ```
 
@@ -1226,7 +1161,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cluster**
 > ClusterCluster get_cluster()
@@ -1236,14 +1171,9 @@ Get Cluster object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1256,7 +1186,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -1300,7 +1230,7 @@ with ApiClient() as api_client:
         # Get Cluster object
         api_response = api_instance.get_cluster(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_quorum_nodes=spec_quorum_nodes, spec_virtual_ip=spec_virtual_ip, spec_ntp_servers=spec_ntp_servers, spec_auto_admit_dscs=spec_auto_admit_dscs, spec_certs=spec_certs, spec_key=spec_key, recovery_keys_psm_version=recovery_keys_psm_version, recovery_keys_private_key=recovery_keys_private_key, recovery_keys_trust_chain=recovery_keys_trust_chain, recovery_keys_trust_roots=recovery_keys_trust_roots, status_leader=status_leader, status_last_leader_transition_time=status_last_leader_transition_time, status_auth_bootstrapped=status_auth_bootstrapped, status_current_time=status_current_time, status_recovery_keys_downloaded=status_recovery_keys_downloaded)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_cluster: %s\n" % e)
 ```
 
@@ -1359,7 +1289,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_configuration_snapshot**
 > ClusterConfigurationSnapshot get_configuration_snapshot()
@@ -1369,14 +1299,9 @@ Get ConfigurationSnapshot object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1389,7 +1314,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -1413,7 +1338,7 @@ with ApiClient() as api_client:
         # Get ConfigurationSnapshot object
         api_response = api_instance.get_configuration_snapshot(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, destination_type=destination_type, last_snapshot_dest_type=last_snapshot_dest_type, last_snapshot_uri=last_snapshot_uri)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_configuration_snapshot: %s\n" % e)
 ```
 
@@ -1460,7 +1385,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_distributed_service_card**
 > ClusterDistributedServiceCard get_distributed_service_card(o_name)
@@ -1470,14 +1395,9 @@ Get DistributedServiceCard object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1490,7 +1410,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1576,7 +1496,7 @@ with ApiClient() as api_client:
         # Get DistributedServiceCard object
         api_response = api_instance.get_distributed_service_card(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_distributed_service_card: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1585,7 +1505,7 @@ with ApiClient() as api_client:
         # Get DistributedServiceCard object
         api_response = api_instance.get_distributed_service_card(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_admit=spec_admit, spec_id=spec_id, ip_config_ip_address=ip_config_ip_address, ip_config_default_gw=ip_config_default_gw, ip_config_dns_servers=ip_config_dns_servers, spec_mgmt_mode=spec_mgmt_mode, spec_network_mode=spec_network_mode, spec_mgmt_vlan=spec_mgmt_vlan, spec_controllers=spec_controllers, spec_routing_config=spec_routing_config, spec_dscprofile=spec_dscprofile, policer_tenant=policer_tenant, policer_tx_policer=policer_tx_policer, fwlog_policy_tenant=fwlog_policy_tenant, fwlog_policy_name=fwlog_policy_name, spec_enable_fw_logging=spec_enable_fw_logging, spec_enable_secure_boot=spec_enable_secure_boot, status_admission_phase=status_admission_phase, status_serial_num=status_serial_num, status_primary_mac=status_primary_mac, ip_config_ip_address2=ip_config_ip_address2, ip_config_default_gw2=ip_config_default_gw2, ip_config_dns_servers2=ip_config_dns_servers2, bios_info_vendor=bios_info_vendor, bios_info_version=bios_info_version, bios_info_fw_major_ver=bios_info_fw_major_ver, bios_info_fw_minor_ver=bios_info_fw_minor_ver, os_info_type=os_info_type, os_info_kernel_release=os_info_kernel_release, os_info_kernel_version=os_info_kernel_version, os_info_processor=os_info_processor, cpu_info_speed=cpu_info_speed, cpu_info_num_sockets=cpu_info_num_sockets, cpu_info_num_cores=cpu_info_num_cores, cpu_info_num_threads=cpu_info_num_threads, memory_info_type=memory_info_type, memory_info_size=memory_info_size, status_interfaces=status_interfaces, status_dsc_version=status_dsc_version, status_dsc_sku=status_dsc_sku, status_host=status_host, status_adm_phase_reason=status_adm_phase_reason, status_version_mismatch=status_version_mismatch, control_plane_status_last_updated_time=control_plane_status_last_updated_time, control_plane_status_message=control_plane_status_message, status_is_connected_to_psm=status_is_connected_to_psm, status_unhealthy_services=status_unhealthy_services, status_num_mac_address=status_num_mac_address, inband_ip_config_ip_address=inband_ip_config_ip_address, inband_ip_config_default_gw=inband_ip_config_default_gw, inband_ip_config_dns_servers=inband_ip_config_dns_servers, status_secure_booted=status_secure_booted, status_alom_present=status_alom_present, status_package_type=status_package_type)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_distributed_service_card: %s\n" % e)
 ```
 
@@ -1683,7 +1603,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_dsc_profile**
 > ClusterDSCProfile get_dsc_profile(o_name)
@@ -1693,14 +1613,9 @@ Get DSCProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1713,7 +1628,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1746,7 +1661,7 @@ with ApiClient() as api_client:
         # Get DSCProfile object
         api_response = api_instance.get_dsc_profile(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_dsc_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1755,7 +1670,7 @@ with ApiClient() as api_client:
         # Get DSCProfile object
         api_response = api_instance.get_dsc_profile(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_deployment_target=spec_deployment_target, spec_feature_set=spec_feature_set, interface_profile_num_pfs=interface_profile_num_pfs, interface_profile_num_vfs=interface_profile_num_vfs, spec_apply_policies_to_encapsulated_traffic=spec_apply_policies_to_encapsulated_traffic, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_dsc_profile: %s\n" % e)
 ```
 
@@ -1810,7 +1725,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_host**
 > ClusterHost get_host(o_name)
@@ -1820,14 +1735,9 @@ Get Host object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1840,7 +1750,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1866,7 +1776,7 @@ with ApiClient() as api_client:
         # Get Host object
         api_response = api_instance.get_host(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_host: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1875,7 +1785,7 @@ with ApiClient() as api_client:
         # Get Host object
         api_response = api_instance.get_host(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, status_admitted_dscs=status_admitted_dscs, status_mirror_sessions=status_mirror_sessions)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_host: %s\n" % e)
 ```
 
@@ -1921,7 +1831,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_license**
 > ClusterLicense get_license()
@@ -1931,14 +1841,9 @@ Get License object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1951,7 +1856,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -1975,7 +1880,7 @@ with ApiClient() as api_client:
         # Get License object
         api_response = api_instance.get_license(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, status_unknown=status_unknown)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_license: %s\n" % e)
 ```
 
@@ -2020,7 +1925,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_node**
 > ClusterNode get_node(o_name)
@@ -2030,14 +1935,9 @@ Get Node object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2050,7 +1950,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2073,7 +1973,7 @@ with ApiClient() as api_client:
         # Get Node object
         api_response = api_instance.get_node(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_node: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2082,7 +1982,7 @@ with ApiClient() as api_client:
         # Get Node object
         api_response = api_instance.get_node(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_routing_config=spec_routing_config, status_phase=status_phase, status_quorum=status_quorum)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_node: %s\n" % e)
 ```
 
@@ -2129,7 +2029,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snapshot_restore**
 > ClusterSnapshotRestore get_snapshot_restore()
@@ -2139,14 +2039,9 @@ Get SnapshotRestore object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2159,7 +2054,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -2185,7 +2080,7 @@ with ApiClient() as api_client:
         # Get SnapshotRestore object
         api_response = api_instance.get_snapshot_restore(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_path=spec_path, status_status=status_status, status_start_time=status_start_time, status_end_time=status_end_time, status_backup_snapshot_path=status_backup_snapshot_path)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_snapshot_restore: %s\n" % e)
 ```
 
@@ -2234,7 +2129,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_tenant**
 > ClusterTenant get_tenant(o_name)
@@ -2244,14 +2139,9 @@ Get Tenant object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2264,7 +2154,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2285,7 +2175,7 @@ with ApiClient() as api_client:
         # Get Tenant object
         api_response = api_instance.get_tenant(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_tenant: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2294,7 +2184,7 @@ with ApiClient() as api_client:
         # Get Tenant object
         api_response = api_instance.get_tenant(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_admin_user=spec_admin_user)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_tenant: %s\n" % e)
 ```
 
@@ -2339,7 +2229,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_version**
 > ClusterVersion get_version()
@@ -2349,14 +2239,9 @@ Get Version object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_version import ClusterVersion
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2369,7 +2254,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -2395,7 +2280,7 @@ with ApiClient() as api_client:
         # Get Version object
         api_response = api_instance.get_version(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_auto_rollout_dsc_version=spec_auto_rollout_dsc_version, status_build_version=status_build_version, status_vcs_commit=status_vcs_commit, status_build_date=status_build_date, status_rollout_build_version=status_rollout_build_version)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->get_version: %s\n" % e)
 ```
 
@@ -2444,7 +2329,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_cluster**
 > ClusterCluster label_cluster(body)
@@ -2454,14 +2339,9 @@ Label Cluster object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2475,7 +2355,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ApiLabel(
@@ -2500,7 +2380,7 @@ with ApiClient() as api_client:
         # Label Cluster object
         api_response = api_instance.label_cluster(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_cluster: %s\n" % e)
 ```
 
@@ -2534,7 +2414,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_configuration_snapshot**
 > ClusterConfigurationSnapshot label_configuration_snapshot(body)
@@ -2544,14 +2424,9 @@ Label ConfigurationSnapshot object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2565,7 +2440,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ApiLabel(
@@ -2590,7 +2465,7 @@ with ApiClient() as api_client:
         # Label ConfigurationSnapshot object
         api_response = api_instance.label_configuration_snapshot(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_configuration_snapshot: %s\n" % e)
 ```
 
@@ -2624,7 +2499,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_distributed_service_card**
 > ClusterDistributedServiceCard label_distributed_service_card(o_name, body)
@@ -2634,14 +2509,9 @@ Label DistributedServiceCard object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2655,7 +2525,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2681,7 +2551,7 @@ with ApiClient() as api_client:
         # Label DistributedServiceCard object
         api_response = api_instance.label_distributed_service_card(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_distributed_service_card: %s\n" % e)
 ```
 
@@ -2716,7 +2586,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_dsc_profile**
 > ClusterDSCProfile label_dsc_profile(o_name, body)
@@ -2726,14 +2596,9 @@ Label DSCProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2747,7 +2612,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2773,7 +2638,7 @@ with ApiClient() as api_client:
         # Label DSCProfile object
         api_response = api_instance.label_dsc_profile(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_dsc_profile: %s\n" % e)
 ```
 
@@ -2808,7 +2673,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_host**
 > ClusterHost label_host(o_name, body)
@@ -2818,14 +2683,9 @@ Label Host object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2839,7 +2699,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2865,7 +2725,7 @@ with ApiClient() as api_client:
         # Label Host object
         api_response = api_instance.label_host(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_host: %s\n" % e)
 ```
 
@@ -2900,7 +2760,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_license**
 > ClusterLicense label_license(body)
@@ -2910,14 +2770,9 @@ Label License object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2931,7 +2786,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ApiLabel(
@@ -2956,7 +2811,7 @@ with ApiClient() as api_client:
         # Label License object
         api_response = api_instance.label_license(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_license: %s\n" % e)
 ```
 
@@ -2990,7 +2845,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_node**
 > ClusterNode label_node(o_name, body)
@@ -3000,14 +2855,9 @@ Label Node object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3021,7 +2871,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3047,7 +2897,7 @@ with ApiClient() as api_client:
         # Label Node object
         api_response = api_instance.label_node(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_node: %s\n" % e)
 ```
 
@@ -3082,7 +2932,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_tenant**
 > ClusterTenant label_tenant(o_name, body)
@@ -3092,14 +2942,9 @@ Label Tenant object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3113,7 +2958,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3139,7 +2984,7 @@ with ApiClient() as api_client:
         # Label Tenant object
         api_response = api_instance.label_tenant(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->label_tenant: %s\n" % e)
 ```
 
@@ -3174,7 +3019,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_distributed_service_card**
 > ClusterDistributedServiceCardList list_distributed_service_card()
@@ -3184,14 +3029,9 @@ List DistributedServiceCard objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card_list import ClusterDistributedServiceCardList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3204,7 +3044,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3232,7 +3072,7 @@ with ApiClient() as api_client:
         # List DistributedServiceCard objects
         api_response = api_instance.list_distributed_service_card(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->list_distributed_service_card: %s\n" % e)
 ```
 
@@ -3281,7 +3121,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_dsc_profile**
 > ClusterDSCProfileList list_dsc_profile()
@@ -3291,14 +3131,9 @@ List DSCProfile objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile_list import ClusterDSCProfileList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3311,7 +3146,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3339,7 +3174,7 @@ with ApiClient() as api_client:
         # List DSCProfile objects
         api_response = api_instance.list_dsc_profile(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->list_dsc_profile: %s\n" % e)
 ```
 
@@ -3388,7 +3223,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_host**
 > ClusterHostList list_host()
@@ -3398,14 +3233,9 @@ List Host objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host_list import ClusterHostList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3418,7 +3248,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3446,7 +3276,7 @@ with ApiClient() as api_client:
         # List Host objects
         api_response = api_instance.list_host(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->list_host: %s\n" % e)
 ```
 
@@ -3495,7 +3325,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_node**
 > ClusterNodeList list_node()
@@ -3505,14 +3335,9 @@ List Node objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node_list import ClusterNodeList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3525,7 +3350,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3553,7 +3378,7 @@ with ApiClient() as api_client:
         # List Node objects
         api_response = api_instance.list_node(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->list_node: %s\n" % e)
 ```
 
@@ -3602,7 +3427,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_tenant**
 > ClusterTenantList list_tenant()
@@ -3612,14 +3437,9 @@ List Tenant objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant_list import ClusterTenantList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3632,7 +3452,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3660,7 +3480,7 @@ with ApiClient() as api_client:
         # List Tenant objects
         api_response = api_instance.list_tenant(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->list_tenant: %s\n" % e)
 ```
 
@@ -3709,7 +3529,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **restore**
 > ClusterSnapshotRestore restore(body)
@@ -3719,14 +3539,9 @@ Restore Configuration
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3739,7 +3554,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterSnapshotRestore(
@@ -3775,7 +3590,7 @@ with ApiClient() as api_client:
         # Restore Configuration
         api_response = api_instance.restore(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->restore: %s\n" % e)
 ```
 
@@ -3809,7 +3624,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **save**
 > ClusterConfigurationSnapshot save(body)
@@ -3819,14 +3634,9 @@ Perform a Configuation Snapshot
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.cluster_configuration_snapshot_request import ClusterConfigurationSnapshotRequest
@@ -3840,7 +3650,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterConfigurationSnapshotRequest(
@@ -3867,7 +3677,7 @@ with ApiClient() as api_client:
         # Perform a Configuation Snapshot
         api_response = api_instance.save(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->save: %s\n" % e)
 ```
 
@@ -3901,7 +3711,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_cluster**
 > ClusterCluster update_cluster(body)
@@ -3911,14 +3721,9 @@ Update Cluster object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3931,7 +3736,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterCluster(
@@ -4013,7 +3818,7 @@ with ApiClient() as api_client:
         # Update Cluster object
         api_response = api_instance.update_cluster(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_cluster: %s\n" % e)
 ```
 
@@ -4047,7 +3852,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_configuration_snapshot**
 > ClusterConfigurationSnapshot update_configuration_snapshot(body)
@@ -4057,14 +3862,9 @@ Update ConfigurationSnapshot object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4077,7 +3877,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterConfigurationSnapshot(
@@ -4115,7 +3915,7 @@ with ApiClient() as api_client:
         # Update ConfigurationSnapshot object
         api_response = api_instance.update_configuration_snapshot(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_configuration_snapshot: %s\n" % e)
 ```
 
@@ -4149,7 +3949,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_distributed_service_card**
 > ClusterDistributedServiceCard update_distributed_service_card(o_name, body)
@@ -4159,14 +3959,9 @@ Update DistributedServiceCard object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4179,7 +3974,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4326,7 +4121,7 @@ with ApiClient() as api_client:
         # Update DistributedServiceCard object
         api_response = api_instance.update_distributed_service_card(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_distributed_service_card: %s\n" % e)
 ```
 
@@ -4361,7 +4156,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_dsc_profile**
 > ClusterDSCProfile update_dsc_profile(o_name, body)
@@ -4371,14 +4166,9 @@ Update DSCProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4391,7 +4181,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4440,7 +4230,7 @@ with ApiClient() as api_client:
         # Update DSCProfile object
         api_response = api_instance.update_dsc_profile(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_dsc_profile: %s\n" % e)
 ```
 
@@ -4475,7 +4265,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_host**
 > ClusterHost update_host(o_name, body)
@@ -4485,14 +4275,9 @@ Update Host object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4505,7 +4290,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4549,7 +4334,7 @@ with ApiClient() as api_client:
         # Update Host object
         api_response = api_instance.update_host(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_host: %s\n" % e)
 ```
 
@@ -4584,7 +4369,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_license**
 > ClusterLicense update_license(body)
@@ -4594,14 +4379,9 @@ Update License object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4614,7 +4394,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterLicense(
@@ -4661,7 +4441,7 @@ with ApiClient() as api_client:
         # Update License object
         api_response = api_instance.update_license(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_license: %s\n" % e)
 ```
 
@@ -4695,7 +4475,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_node**
 > ClusterNode update_node(o_name, body)
@@ -4705,14 +4485,9 @@ Update Node object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4725,7 +4500,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4769,7 +4544,7 @@ with ApiClient() as api_client:
         # Update Node object
         api_response = api_instance.update_node(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_node: %s\n" % e)
 ```
 
@@ -4804,7 +4579,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_tenant**
 > ClusterTenant update_tenant(o_name, body)
@@ -4814,14 +4589,9 @@ Update Tenant object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4834,7 +4604,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -4866,7 +4636,7 @@ with ApiClient() as api_client:
         # Update Tenant object
         api_response = api_instance.update_tenant(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_tenant: %s\n" % e)
 ```
 
@@ -4901,7 +4671,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_tls_config**
 > ClusterCluster update_tls_config(body)
@@ -4911,14 +4681,9 @@ Update TLS Configuration for cluster
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.cluster_update_tls_config_request import ClusterUpdateTLSConfigRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4932,7 +4697,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterUpdateTLSConfigRequest(
@@ -4961,7 +4726,7 @@ with ApiClient() as api_client:
         # Update TLS Configuration for cluster
         api_response = api_instance.update_tls_config(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_tls_config: %s\n" % e)
 ```
 
@@ -4995,7 +4760,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_version**
 > ClusterVersion update_version(body)
@@ -5005,14 +4770,9 @@ Update Version object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_version import ClusterVersion
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5025,7 +4785,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     body = ClusterVersion(
@@ -5061,7 +4821,7 @@ with ApiClient() as api_client:
         # Update Version object
         api_response = api_instance.update_version(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->update_version: %s\n" % e)
 ```
 
@@ -5095,7 +4855,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_cluster**
 > ClusterAutoMsgClusterWatchHelper watch_cluster()
@@ -5105,14 +4865,9 @@ Watch Cluster objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_cluster_watch_helper import ClusterAutoMsgClusterWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5125,7 +4880,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5153,7 +4908,7 @@ with ApiClient() as api_client:
         # Watch Cluster objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_cluster(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_cluster: %s\n" % e)
 ```
 
@@ -5202,7 +4957,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_configuration_snapshot**
 > ClusterAutoMsgConfigurationSnapshotWatchHelper watch_configuration_snapshot()
@@ -5212,14 +4967,9 @@ Watch ConfigurationSnapshot objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_configuration_snapshot_watch_helper import ClusterAutoMsgConfigurationSnapshotWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5232,7 +4982,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5260,7 +5010,7 @@ with ApiClient() as api_client:
         # Watch ConfigurationSnapshot objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_configuration_snapshot(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_configuration_snapshot: %s\n" % e)
 ```
 
@@ -5309,7 +5059,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_distributed_service_card**
 > ClusterAutoMsgDistributedServiceCardWatchHelper watch_distributed_service_card()
@@ -5319,14 +5069,9 @@ Watch DistributedServiceCard objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_distributed_service_card_watch_helper import ClusterAutoMsgDistributedServiceCardWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5339,7 +5084,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5367,7 +5112,7 @@ with ApiClient() as api_client:
         # Watch DistributedServiceCard objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_distributed_service_card(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_distributed_service_card: %s\n" % e)
 ```
 
@@ -5416,7 +5161,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_dsc_profile**
 > ClusterAutoMsgDSCProfileWatchHelper watch_dsc_profile()
@@ -5426,14 +5171,9 @@ Watch DSCProfile objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_dsc_profile_watch_helper import ClusterAutoMsgDSCProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5446,7 +5186,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5474,7 +5214,7 @@ with ApiClient() as api_client:
         # Watch DSCProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_dsc_profile(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_dsc_profile: %s\n" % e)
 ```
 
@@ -5523,7 +5263,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_host**
 > ClusterAutoMsgHostWatchHelper watch_host()
@@ -5533,14 +5273,9 @@ Watch Host objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_host_watch_helper import ClusterAutoMsgHostWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5553,7 +5288,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5581,7 +5316,7 @@ with ApiClient() as api_client:
         # Watch Host objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_host(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_host: %s\n" % e)
 ```
 
@@ -5630,7 +5365,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_node**
 > ClusterAutoMsgNodeWatchHelper watch_node()
@@ -5640,14 +5375,9 @@ Watch Node objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_node_watch_helper import ClusterAutoMsgNodeWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5660,7 +5390,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5688,7 +5418,7 @@ with ApiClient() as api_client:
         # Watch Node objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_node(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_node: %s\n" % e)
 ```
 
@@ -5737,7 +5467,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_tenant**
 > ClusterAutoMsgTenantWatchHelper watch_tenant()
@@ -5747,14 +5477,9 @@ Watch Tenant objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_tenant_watch_helper import ClusterAutoMsgTenantWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5767,7 +5492,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5795,7 +5520,7 @@ with ApiClient() as api_client:
         # Watch Tenant objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_tenant(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_tenant: %s\n" % e)
 ```
 
@@ -5844,7 +5569,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_version**
 > ClusterAutoMsgVersionWatchHelper watch_version()
@@ -5854,14 +5579,9 @@ Watch Version objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm
-from pensando_ent.psm.api import cluster_v1_api
-from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm.models.cluster import *
-from pensando_ent.psm  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
+import psm
+from api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_version_watch_helper import ClusterAutoMsgVersionWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5874,7 +5594,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5902,7 +5622,7 @@ with ApiClient() as api_client:
         # Watch Version objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_version(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling ClusterV1Api->watch_version: %s\n" % e)
 ```
 
@@ -5951,5 +5671,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm.ClusterV1Api top]](#psm.ClusterV1Api) [[Back to cluster README]](../psm/docs/cluster/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

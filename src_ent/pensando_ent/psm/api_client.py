@@ -38,8 +38,9 @@ from pensando_ent.psm.model_utils import (
     none_type,
     validate_and_convert_types
 )
+
 # for binary downloads
-from pensando_ent.psm.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
+from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 
 class ApiClient(object):
     """Generic API client for OpenAPI client library builds.

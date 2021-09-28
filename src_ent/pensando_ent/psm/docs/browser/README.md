@@ -1,93 +1,79 @@
-# browser
+```python
 
-This page provides working code examples for the **browser** group.
+import time
+import psm
+from pprint import pprint
+from api import browser_v1_api
+from pensando_ent.psm.model.browser_browse_request_list import BrowserBrowseRequestList
+from pensando_ent.psm.model.browser_browse_response import BrowserBrowseResponse
+from pensando_ent.psm.model.browser_browse_response_list import BrowserBrowseResponseList
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_ent.psm.Configuration(
+    psm_config_path=HOME+"/.psm/config.json"
+)
+configuration.verify_ssl = False
 
-Please see each listed method (i.e API Endpoints) for working code examples.
+
+
+# Enter a context with an instance of the API client
+with psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = browser_v1_api.BrowserV1Api(api_client)
+    t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
+t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
+meta_name = "meta.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
+meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
+meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
+meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
+meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
+meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
+
+    try:
+        api_response = api_instance.get_query1(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
+        pprint(api_response)
+    except psm.ApiException as e:
+        print("Exception when calling BrowserV1Api->get_query1: %s\n" % e)
+```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BrowserV1Api* | [**get_query1**](../../../docs/BrowserV1Api.md#get_query1) | **GET** /configs/browser/v1/query | 
-*BrowserV1Api* | [**get_references**](../../../docs/BrowserV1Api.md#get_references) | **GET** /configs/browser/v1/dependencies/** | 
-*BrowserV1Api* | [**get_referrers**](../../../docs/BrowserV1Api.md#get_referrers) | **GET** /configs/browser/v1/dependedby/** | 
-*BrowserV1Api* | [**post_query**](../../../docs/BrowserV1Api.md#post_query) | **POST** /configs/browser/v1/query | 
-
-
-## README links for Model Groups
-
-[aggwatch README.md](..//aggwatch/README.md)
-
-[audit README.md](..//audit/README.md)
-
-[auth README.md](..//auth/README.md)
-
-[browser README.md](..//browser/README.md)
-
-[cluster README.md](..//cluster/README.md)
-
-[diagnostics README.md](..//diagnostics/README.md)
-
-[events README.md](..//events/README.md)
-
-[fwlog README.md](..//fwlog/README.md)
-
-[monitoring README.md](..//monitoring/README.md)
-
-[network README.md](..//network/README.md)
-
-[objstore README.md](..//objstore/README.md)
-
-[orchestration README.md](..//orchestration/README.md)
-
-[preferences README.md](..//preferences/README.md)
-
-[recoverykeys README.md](..//recoverykeys/README.md)
-
-[rollout README.md](..//rollout/README.md)
-
-[routing README.md](..//routing/README.md)
-
-[search README.md](..//search/README.md)
-
-[security README.md](..//security/README.md)
-
-[staging README.md](..//staging/README.md)
-
-[sysruntime README.md](..//sysruntime/README.md)
-
-[telemetry_query README.md](..//telemetry_query/README.md)
-
-[tokenauth README.md](..//tokenauth/README.md)
-
-[workload README.md](..//workload/README.md)
+*BrowserV1Api* | [**get_query1**](docs/BrowserV1Api.md#get_query1) | **GET** /configs/browser/v1/query | 
+*BrowserV1Api* | [**get_references**](docs/BrowserV1Api.md#get_references) | **GET** /configs/browser/v1/dependencies/** | 
+*BrowserV1Api* | [**get_referrers**](docs/BrowserV1Api.md#get_referrers) | **GET** /configs/browser/v1/dependedby/** | 
+*BrowserV1Api* | [**post_query**](docs/BrowserV1Api.md#post_query) | **POST** /configs/browser/v1/query | 
 
 
 ## Documentation For Models
 
- - [ApiAggWatchOptions](../../../docs/ApiAggWatchOptions.md)
- - [ApiKindWatchOptions](../../../docs/ApiKindWatchOptions.md)
- - [ApiListWatchOptions](../../../docs/ApiListWatchOptions.md)
- - [ApiObjectMeta](../../../docs/ApiObjectMeta.md)
- - [ApiObjectRef](../../../docs/ApiObjectRef.md)
- - [ApiStatus](../../../docs/ApiStatus.md)
- - [ApiStatusResult](../../../docs/ApiStatusResult.md)
- - [ApiTimestamp](../../../docs/ApiTimestamp.md)
- - [ApiTypeMeta](../../../docs/ApiTypeMeta.md)
- - [ApiWatchControl](../../../docs/ApiWatchControl.md)
- - [ApiWatchEvent](../../../docs/ApiWatchEvent.md)
- - [ApiWatchEventList](../../../docs/ApiWatchEventList.md)
- - [BrowserBrowseRequest](../../../docs/BrowserBrowseRequest.md)
- - [BrowserBrowseRequestList](../../../docs/BrowserBrowseRequestList.md)
- - [BrowserBrowseRequestObject](../../../docs/BrowserBrowseRequestObject.md)
- - [BrowserBrowseResponse](../../../docs/BrowserBrowseResponse.md)
- - [BrowserBrowseResponseList](../../../docs/BrowserBrowseResponseList.md)
- - [BrowserBrowseResponseObject](../../../docs/BrowserBrowseResponseObject.md)
- - [BrowserObject](../../../docs/BrowserObject.md)
- - [GoogleprotobufAny](../../../docs/GoogleprotobufAny.md)
- - [ObjectURIs](../../../docs/ObjectURIs.md)
+ - [ApiAggWatchOptions](docs/ApiAggWatchOptions.md)
+ - [ApiKindWatchOptions](docs/ApiKindWatchOptions.md)
+ - [ApiListWatchOptions](docs/ApiListWatchOptions.md)
+ - [ApiObjectMeta](docs/ApiObjectMeta.md)
+ - [ApiObjectRef](docs/ApiObjectRef.md)
+ - [ApiStatus](docs/ApiStatus.md)
+ - [ApiStatusResult](docs/ApiStatusResult.md)
+ - [ApiTimestamp](docs/ApiTimestamp.md)
+ - [ApiTypeMeta](docs/ApiTypeMeta.md)
+ - [ApiWatchControl](docs/ApiWatchControl.md)
+ - [ApiWatchEvent](docs/ApiWatchEvent.md)
+ - [ApiWatchEventList](docs/ApiWatchEventList.md)
+ - [BrowserBrowseRequest](docs/BrowserBrowseRequest.md)
+ - [BrowserBrowseRequestList](docs/BrowserBrowseRequestList.md)
+ - [BrowserBrowseRequestObject](docs/BrowserBrowseRequestObject.md)
+ - [BrowserBrowseResponse](docs/BrowserBrowseResponse.md)
+ - [BrowserBrowseResponseList](docs/BrowserBrowseResponseList.md)
+ - [BrowserBrowseResponseObject](docs/BrowserBrowseResponseObject.md)
+ - [BrowserObject](docs/BrowserObject.md)
+ - [GoogleprotobufAny](docs/GoogleprotobufAny.md)
+ - [ObjectURIs](docs/ObjectURIs.md)
 
 
 ## Documentation For Authorization
