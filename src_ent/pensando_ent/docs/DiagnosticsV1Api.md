@@ -1,6 +1,6 @@
 # psm.DiagnosticsV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,9 +20,14 @@ Request Diagnostics information for a module
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import diagnostics_v1_api
+import .psm
+from pensando_ent.psm.api import diagnostics_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.diagnostics import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.diagnostics_diagnostics_request import DiagnosticsDiagnosticsRequest
 from pensando_ent.psm.model.diagnostics_diagnostics_response import DiagnosticsDiagnosticsResponse
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -36,7 +41,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = diagnostics_v1_api.DiagnosticsV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -72,7 +77,7 @@ with psm.ApiClient() as api_client:
         # Request Diagnostics information for a module
         api_response = api_instance.debug(o_name, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->debug: %s\n" % e)
 ```
 
@@ -107,7 +112,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DiagnosticsV1Api top]](#psm.DiagnosticsV1Api) [[Back to diagnostics README]](../psm/docs/diagnostics/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_module**
 > DiagnosticsModule get_module(o_name)
@@ -117,9 +122,14 @@ Get Module object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import diagnostics_v1_api
+import .psm
+from pensando_ent.psm.api import diagnostics_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.diagnostics import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -132,7 +142,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = diagnostics_v1_api.DiagnosticsV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -165,7 +175,7 @@ with psm.ApiClient() as api_client:
         # Get Module object
         api_response = api_instance.get_module(o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->get_module: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -174,7 +184,7 @@ with psm.ApiClient() as api_client:
         # Get Module object
         api_response = api_instance.get_module(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_log_level=spec_log_level, spec_enable_trace=spec_enable_trace, spec_args=spec_args, status_node=status_node, status_module=status_module, status_category=status_category, status_last_start=status_last_start, status_restart_count=status_restart_count, status_last_restart_reason=status_last_restart_reason, status_service=status_service, status_mac_address=status_mac_address)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->get_module: %s\n" % e)
 ```
 
@@ -229,7 +239,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DiagnosticsV1Api top]](#psm.DiagnosticsV1Api) [[Back to diagnostics README]](../psm/docs/diagnostics/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **label_module**
 > DiagnosticsModule label_module(o_name, body)
@@ -239,9 +249,14 @@ Label Module object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import diagnostics_v1_api
+import .psm
+from pensando_ent.psm.api import diagnostics_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.diagnostics import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -255,7 +270,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = diagnostics_v1_api.DiagnosticsV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -281,7 +296,7 @@ with psm.ApiClient() as api_client:
         # Label Module object
         api_response = api_instance.label_module(o_name, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->label_module: %s\n" % e)
 ```
 
@@ -316,7 +331,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DiagnosticsV1Api top]](#psm.DiagnosticsV1Api) [[Back to diagnostics README]](../psm/docs/diagnostics/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **list_module**
 > DiagnosticsModuleList list_module()
@@ -326,9 +341,14 @@ List Module objects
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import diagnostics_v1_api
+import .psm
+from pensando_ent.psm.api import diagnostics_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.diagnostics import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.diagnostics_module_list import DiagnosticsModuleList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -341,7 +361,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = diagnostics_v1_api.DiagnosticsV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -369,7 +389,7 @@ with psm.ApiClient() as api_client:
         # List Module objects
         api_response = api_instance.list_module(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->list_module: %s\n" % e)
 ```
 
@@ -418,7 +438,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DiagnosticsV1Api top]](#psm.DiagnosticsV1Api) [[Back to diagnostics README]](../psm/docs/diagnostics/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **update_module**
 > DiagnosticsModule update_module(o_name, body)
@@ -428,9 +448,14 @@ Update Module object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import diagnostics_v1_api
+import .psm
+from pensando_ent.psm.api import diagnostics_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.diagnostics import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -443,7 +468,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = diagnostics_v1_api.DiagnosticsV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -494,7 +519,7 @@ with psm.ApiClient() as api_client:
         # Update Module object
         api_response = api_instance.update_module(o_name, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->update_module: %s\n" % e)
 ```
 
@@ -529,7 +554,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DiagnosticsV1Api top]](#psm.DiagnosticsV1Api) [[Back to diagnostics README]](../psm/docs/diagnostics/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **watch_module**
 > DiagnosticsAutoMsgModuleWatchHelper watch_module()
@@ -539,9 +564,14 @@ Watch Module objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import diagnostics_v1_api
+import .psm
+from pensando_ent.psm.api import diagnostics_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.diagnostics import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.diagnostics_auto_msg_module_watch_helper import DiagnosticsAutoMsgModuleWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -554,7 +584,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = diagnostics_v1_api.DiagnosticsV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -582,7 +612,7 @@ with psm.ApiClient() as api_client:
         # Watch Module objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_module(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DiagnosticsV1Api->watch_module: %s\n" % e)
 ```
 
@@ -631,5 +661,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DiagnosticsV1Api top]](#psm.DiagnosticsV1Api) [[Back to diagnostics README]](../psm/docs/diagnostics/README.md) [[Back to pensando_ent README]](../README.md)
 

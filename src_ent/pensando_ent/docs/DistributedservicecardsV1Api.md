@@ -1,6 +1,6 @@
 # psm.DistributedservicecardsV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,9 +15,14 @@ Active Connection Query
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import distributedservicecards_v1_api
+import .psm
+from pensando_ent.psm.api import distributedservicecards_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.sysruntime import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.sysruntime_connection_request import SysruntimeConnectionRequest
 from pensando_ent.psm.model.sysruntime_connection_status import SysruntimeConnectionStatus
 from pprint import pprint
@@ -30,7 +35,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = distributedservicecards_v1_api.DistributedservicecardsV1Api(api_client)
     dsc_name = "DSCName_example" # str | 
@@ -81,7 +86,7 @@ with psm.ApiClient() as api_client:
         # Active Connection Query
         api_response = api_instance.post_query_connection(dsc_name, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling DistributedservicecardsV1Api->post_query_connection: %s\n" % e)
 ```
 
@@ -110,5 +115,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.DistributedservicecardsV1Api top]](#psm.DistributedservicecardsV1Api) [[Back to sysruntime README]](../psm/docs/sysruntime/README.md) [[Back to pensando_ent README]](../README.md)
 

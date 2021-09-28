@@ -1,6 +1,6 @@
 # psm.ObjstoreV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,9 +27,14 @@ Create Object object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -42,7 +47,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -78,7 +83,7 @@ with psm.ApiClient() as api_client:
         # Create Object object
         api_response = api_instance.add_object(o_tenant, o_namespace, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->add_object: %s\n" % e)
 ```
 
@@ -114,7 +119,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **add_object1**
 > ObjstoreObject add_object1(o_namespace, body)
@@ -124,9 +129,14 @@ Create Object object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -139,7 +149,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_namespace = "O.Namespace_example" # str | 
@@ -174,7 +184,7 @@ with psm.ApiClient() as api_client:
         # Create Object object
         api_response = api_instance.add_object1(o_namespace, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->add_object1: %s\n" % e)
 ```
 
@@ -209,7 +219,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **delete_object**
 > ObjstoreObject delete_object(o_tenant, o_namespace, o_name)
@@ -219,9 +229,14 @@ Delete Object object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -234,7 +249,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -246,7 +261,7 @@ with psm.ApiClient() as api_client:
         # Delete Object object
         api_response = api_instance.delete_object(o_tenant, o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->delete_object: %s\n" % e)
 ```
 
@@ -282,7 +297,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **delete_object1**
 > ObjstoreObject delete_object1(o_namespace, o_name)
@@ -292,9 +307,14 @@ Delete Object object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -307,7 +327,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_namespace = "O.Namespace_example" # str | 
@@ -318,7 +338,7 @@ with psm.ApiClient() as api_client:
         # Delete Object object
         api_response = api_instance.delete_object1(o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->delete_object1: %s\n" % e)
 ```
 
@@ -353,7 +373,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_download_file**
 > ObjstoreStreamChunk get_download_file(o_tenant, o_namespace, o_name)
@@ -363,9 +383,14 @@ Download file
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -377,7 +402,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -400,7 +425,7 @@ with psm.ApiClient() as api_client:
         # Download file
         api_response = api_instance.get_download_file(o_tenant, o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_download_file: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -409,7 +434,7 @@ with psm.ApiClient() as api_client:
         # Download file
         api_response = api_instance.get_download_file(o_tenant, o_namespace, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_content_type=spec_content_type, status_size=status_size, status_digest=status_digest)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_download_file: %s\n" % e)
 ```
 
@@ -450,7 +475,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (streaming responses) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_download_file1**
 > ObjstoreStreamChunk get_download_file1(o_namespace, o_name)
@@ -460,9 +485,14 @@ Download file
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -474,7 +504,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_namespace = "O.Namespace_example" # str | 
@@ -497,7 +527,7 @@ with psm.ApiClient() as api_client:
         # Download file
         api_response = api_instance.get_download_file1(o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_download_file1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -506,7 +536,7 @@ with psm.ApiClient() as api_client:
         # Download file
         api_response = api_instance.get_download_file1(o_namespace, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_content_type=spec_content_type, status_size=status_size, status_digest=status_digest)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_download_file1: %s\n" % e)
 ```
 
@@ -547,7 +577,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (streaming responses) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_download_file_by_prefix**
 > ObjstoreStreamChunk get_download_file_by_prefix(o_tenant, o_namespace, o_name)
@@ -557,9 +587,14 @@ Download file by prefix
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -571,7 +606,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -594,7 +629,7 @@ with psm.ApiClient() as api_client:
         # Download file by prefix
         api_response = api_instance.get_download_file_by_prefix(o_tenant, o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_download_file_by_prefix: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -603,7 +638,7 @@ with psm.ApiClient() as api_client:
         # Download file by prefix
         api_response = api_instance.get_download_file_by_prefix(o_tenant, o_namespace, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_content_type=spec_content_type, status_size=status_size, status_digest=status_digest)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_download_file_by_prefix: %s\n" % e)
 ```
 
@@ -644,7 +679,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (streaming responses) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_object**
 > ObjstoreObject get_object(o_tenant, o_namespace, o_name)
@@ -654,9 +689,14 @@ Get Object object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -669,7 +709,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -692,7 +732,7 @@ with psm.ApiClient() as api_client:
         # Get Object object
         api_response = api_instance.get_object(o_tenant, o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_object: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -701,7 +741,7 @@ with psm.ApiClient() as api_client:
         # Get Object object
         api_response = api_instance.get_object(o_tenant, o_namespace, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_content_type=spec_content_type, status_size=status_size, status_digest=status_digest)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_object: %s\n" % e)
 ```
 
@@ -748,7 +788,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_object1**
 > ObjstoreObject get_object1(o_namespace, o_name)
@@ -758,9 +798,14 @@ Get Object object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -773,7 +818,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_namespace = "O.Namespace_example" # str | 
@@ -796,7 +841,7 @@ with psm.ApiClient() as api_client:
         # Get Object object
         api_response = api_instance.get_object1(o_namespace, o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_object1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -805,7 +850,7 @@ with psm.ApiClient() as api_client:
         # Get Object object
         api_response = api_instance.get_object1(o_namespace, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_content_type=spec_content_type, status_size=status_size, status_digest=status_digest)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->get_object1: %s\n" % e)
 ```
 
@@ -852,7 +897,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **list_object**
 > ObjstoreObjectList list_object(o_tenant, o_namespace)
@@ -862,9 +907,14 @@ List Object objects
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object_list import ObjstoreObjectList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -877,7 +927,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -904,7 +954,7 @@ with psm.ApiClient() as api_client:
         # List Object objects
         api_response = api_instance.list_object(o_tenant, o_namespace)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->list_object: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -913,7 +963,7 @@ with psm.ApiClient() as api_client:
         # List Object objects
         api_response = api_instance.list_object(o_tenant, o_namespace, o_name=o_name, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->list_object: %s\n" % e)
 ```
 
@@ -962,7 +1012,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **list_object1**
 > ObjstoreObjectList list_object1(o_namespace)
@@ -972,9 +1022,14 @@ List Object objects
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_object_list import ObjstoreObjectList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -987,7 +1042,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_namespace = "O.Namespace_example" # str | 
@@ -1014,7 +1069,7 @@ with psm.ApiClient() as api_client:
         # List Object objects
         api_response = api_instance.list_object1(o_namespace)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->list_object1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1023,7 +1078,7 @@ with psm.ApiClient() as api_client:
         # List Object objects
         api_response = api_instance.list_object1(o_namespace, o_name=o_name, o_tenant=o_tenant, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->list_object1: %s\n" % e)
 ```
 
@@ -1072,7 +1127,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **watch_object**
 > ObjstoreAutoMsgObjectWatchHelper watch_object(o_tenant, o_namespace)
@@ -1082,9 +1137,14 @@ Watch Object objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_auto_msg_object_watch_helper import ObjstoreAutoMsgObjectWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1097,7 +1157,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1124,7 +1184,7 @@ with psm.ApiClient() as api_client:
         # Watch Object objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_object(o_tenant, o_namespace)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->watch_object: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1133,7 +1193,7 @@ with psm.ApiClient() as api_client:
         # Watch Object objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_object(o_tenant, o_namespace, o_name=o_name, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->watch_object: %s\n" % e)
 ```
 
@@ -1182,7 +1242,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **watch_object1**
 > ObjstoreAutoMsgObjectWatchHelper watch_object1(o_namespace)
@@ -1192,9 +1252,14 @@ Watch Object objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import objstore_v1_api
+import .psm
+from pensando_ent.psm.api import objstore_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.objstore import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.objstore_auto_msg_object_watch_helper import ObjstoreAutoMsgObjectWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1207,7 +1272,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = objstore_v1_api.ObjstoreV1Api(api_client)
     o_namespace = "O.Namespace_example" # str | 
@@ -1234,7 +1299,7 @@ with psm.ApiClient() as api_client:
         # Watch Object objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_object1(o_namespace)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->watch_object1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1243,7 +1308,7 @@ with psm.ApiClient() as api_client:
         # Watch Object objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_object1(o_namespace, o_name=o_name, o_tenant=o_tenant, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling ObjstoreV1Api->watch_object1: %s\n" % e)
 ```
 
@@ -1292,5 +1357,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.ObjstoreV1Api top]](#psm.ObjstoreV1Api) [[Back to objstore README]](../psm/docs/objstore/README.md) [[Back to pensando_ent README]](../README.md)
 

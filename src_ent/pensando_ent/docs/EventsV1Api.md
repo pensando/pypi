@@ -1,6 +1,6 @@
 # psm.EventsV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,9 +17,14 @@ Get specific event
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import events_v1_api
+import .psm
+from pensando_ent.psm.api import events_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.events import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.events_event import EventsEvent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -31,7 +36,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = events_v1_api.EventsV1Api(api_client)
     uuid = "UUID_example" # str | 
@@ -41,7 +46,7 @@ with psm.ApiClient() as api_client:
         # Get specific event
         api_response = api_instance.get_get_event(uuid)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling EventsV1Api->get_get_event: %s\n" % e)
 ```
 
@@ -69,7 +74,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.EventsV1Api top]](#psm.EventsV1Api) [[Back to events README]](../psm/docs/events/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_get_events1**
 > EventsEventList get_get_events1()
@@ -79,9 +84,14 @@ No authorization required
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import events_v1_api
+import .psm
+from pensando_ent.psm.api import events_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.events import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.events_event_list import EventsEventList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -93,7 +103,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = events_v1_api.EventsV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -118,9 +128,9 @@ with psm.ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.get_get_events1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
+                api_response = api_instance.get_get_events1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling EventsV1Api->get_get_events1: %s\n" % e)
 ```
 
@@ -163,7 +173,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.EventsV1Api top]](#psm.EventsV1Api) [[Back to events README]](../psm/docs/events/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **post_get_events**
 > EventsEventList post_get_events()
@@ -173,9 +183,14 @@ No authorization required
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import events_v1_api
+import .psm
+from pensando_ent.psm.api import events_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.events import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.events_event_list import EventsEventList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -187,7 +202,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = events_v1_api.EventsV1Api(api_client)
 
@@ -195,7 +210,7 @@ with psm.ApiClient() as api_client:
     try:
         api_response = api_instance.post_get_events()
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling EventsV1Api->post_get_events: %s\n" % e)
 ```
 
@@ -220,5 +235,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.EventsV1Api top]](#psm.EventsV1Api) [[Back to events README]](../psm/docs/events/README.md) [[Back to pensando_ent README]](../README.md)
 

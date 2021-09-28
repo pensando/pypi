@@ -1,6 +1,6 @@
 # psm.RolloutV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,9 +21,14 @@ Start Rollout operation
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -36,7 +41,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     body = RolloutRollout(
@@ -130,7 +135,7 @@ with psm.ApiClient() as api_client:
         # Start Rollout operation
         api_response = api_instance.create_rollout(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->create_rollout: %s\n" % e)
 ```
 
@@ -164,7 +169,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_rollout**
 > RolloutRollout get_rollout(o_name)
@@ -174,9 +179,14 @@ Get Rollout object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -189,7 +199,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -226,7 +236,7 @@ with psm.ApiClient() as api_client:
         # Get Rollout object
         api_response = api_instance.get_rollout(o_name)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->get_rollout: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -235,7 +245,7 @@ with psm.ApiClient() as api_client:
         # Get Rollout object
         api_response = api_instance.get_rollout(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_version=spec_version, spec_scheduled_start_time=spec_scheduled_start_time, spec_scheduled_end_time=spec_scheduled_end_time, spec_strategy=spec_strategy, spec_max_parallel=spec_max_parallel, spec_max_nic_failures_before_abort=spec_max_nic_failures_before_abort, spec_suspend=spec_suspend, spec_dscs_only=spec_dscs_only, spec_dsc_must_match_constraint=spec_dsc_must_match_constraint, spec_upgrade_type=spec_upgrade_type, spec_retry=spec_retry, status_state=status_state, status_completion_percent=status_completion_percent, status_start_time=status_start_time, status_end_time=status_end_time, status_prev_version=status_prev_version, status_reason=status_reason)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->get_rollout: %s\n" % e)
 ```
 
@@ -296,7 +306,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **list_rollout**
 > RolloutRolloutList list_rollout()
@@ -306,9 +316,14 @@ List Rollout objects
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_rollout_list import RolloutRolloutList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -321,7 +336,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -349,7 +364,7 @@ with psm.ApiClient() as api_client:
         # List Rollout objects
         api_response = api_instance.list_rollout(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->list_rollout: %s\n" % e)
 ```
 
@@ -398,7 +413,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **remove_rollout**
 > RolloutRollout remove_rollout(body)
@@ -408,9 +423,14 @@ Remove a Rollout
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -423,7 +443,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     body = RolloutRollout(
@@ -517,7 +537,7 @@ with psm.ApiClient() as api_client:
         # Remove a Rollout
         api_response = api_instance.remove_rollout(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->remove_rollout: %s\n" % e)
 ```
 
@@ -551,7 +571,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **stop_rollout**
 > RolloutRollout stop_rollout(body)
@@ -561,9 +581,14 @@ Stop a Rollout operation
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -576,7 +601,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     body = RolloutRollout(
@@ -670,7 +695,7 @@ with psm.ApiClient() as api_client:
         # Stop a Rollout operation
         api_response = api_instance.stop_rollout(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->stop_rollout: %s\n" % e)
 ```
 
@@ -704,7 +729,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **update_rollout**
 > RolloutRollout update_rollout(body)
@@ -714,9 +739,14 @@ Update Rollout configuration
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -729,7 +759,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     body = RolloutRollout(
@@ -823,7 +853,7 @@ with psm.ApiClient() as api_client:
         # Update Rollout configuration
         api_response = api_instance.update_rollout(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->update_rollout: %s\n" % e)
 ```
 
@@ -857,7 +887,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **watch_rollout**
 > RolloutAutoMsgRolloutWatchHelper watch_rollout()
@@ -867,9 +897,14 @@ Watch Rollout objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import rollout_v1_api
+import .psm
+from pensando_ent.psm.api import rollout_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.rollout import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.rollout_auto_msg_rollout_watch_helper import RolloutAutoMsgRolloutWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -882,7 +917,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = rollout_v1_api.RolloutV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -910,7 +945,7 @@ with psm.ApiClient() as api_client:
         # Watch Rollout objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_rollout(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RolloutV1Api->watch_rollout: %s\n" % e)
 ```
 
@@ -959,5 +994,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RolloutV1Api top]](#psm.RolloutV1Api) [[Back to rollout README]](../psm/docs/rollout/README.md) [[Back to pensando_ent README]](../README.md)
 

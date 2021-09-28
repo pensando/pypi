@@ -1,6 +1,6 @@
 # psm.SearchV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,9 +18,14 @@ Security Policy Query
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import search_v1_api
+import .psm
+from pensando_ent.psm.api import search_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.search import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.search_policy_search_response import SearchPolicySearchResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -32,7 +37,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = search_v1_api.SearchV1Api(api_client)
     tenant = "tenant_example" # str | Tenant Name, to perform query within a Tenant's scope. The default tenant is \"default\". In the backend this field gets auto-filled & validated by apigw-hook based on user login context. (optional)
@@ -56,7 +61,7 @@ with psm.ApiClient() as api_client:
         # Security Policy Query
         api_response = api_instance.get_policy_query1(tenant=tenant, namespace=namespace, app=app, protocol=protocol, port=port, from_ip_address=from_ip_address, to_ip_address=to_ip_address, from_security_group=from_security_group, to_security_group=to_security_group, kinds=kinds, name=name, action=action)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling SearchV1Api->get_policy_query1: %s\n" % e)
 ```
 
@@ -95,7 +100,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.SearchV1Api top]](#psm.SearchV1Api) [[Back to search README]](../psm/docs/search/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_query1**
 > SearchSearchResponse get_query1()
@@ -105,9 +110,14 @@ Structured or free-form search
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import search_v1_api
+import .psm
+from pensando_ent.psm.api import search_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.search import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.search_search_response import SearchSearchResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -119,7 +129,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = search_v1_api.SearchV1Api(api_client)
     query_string = "query-string_example" # str | Simple query string This can be specified as URI parameter. For advanced query cases, Users should use specify SearchQuery and pass the SearchRequest in a GET/POST Body The max query-string length is 256 bytes. Length of string should be between 0 and 256. (optional)
@@ -145,7 +155,7 @@ with psm.ApiClient() as api_client:
         # Structured or free-form search
         api_response = api_instance.get_query1(query_string=query_string, _from=_from, max_results=max_results, sort_by=sort_by, sort_order=sort_order, mode=mode, query_categories=query_categories, query_kinds=query_kinds, tenants=tenants, aggregate=aggregate)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling SearchV1Api->get_query1: %s\n" % e)
 ```
 
@@ -182,7 +192,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.SearchV1Api top]](#psm.SearchV1Api) [[Back to search README]](../psm/docs/search/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **post_policy_query**
 > SearchPolicySearchResponse post_policy_query(body)
@@ -192,9 +202,14 @@ Security Policy Query
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import search_v1_api
+import .psm
+from pensando_ent.psm.api import search_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.search import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.search_policy_search_request import SearchPolicySearchRequest
 from pensando_ent.psm.model.search_policy_search_response import SearchPolicySearchResponse
 from pprint import pprint
@@ -207,7 +222,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = search_v1_api.SearchV1Api(api_client)
     body = SearchPolicySearchRequest(
@@ -232,7 +247,7 @@ with psm.ApiClient() as api_client:
         # Security Policy Query
         api_response = api_instance.post_policy_query(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling SearchV1Api->post_policy_query: %s\n" % e)
 ```
 
@@ -260,7 +275,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.SearchV1Api top]](#psm.SearchV1Api) [[Back to search README]](../psm/docs/search/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **post_query**
 > SearchSearchResponse post_query(body)
@@ -270,9 +285,14 @@ Structured or free-form search
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import search_v1_api
+import .psm
+from pensando_ent.psm.api import search_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.search import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.search_search_request import SearchSearchRequest
 from pensando_ent.psm.model.search_search_response import SearchSearchResponse
 from pprint import pprint
@@ -285,7 +305,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = search_v1_api.SearchV1Api(api_client)
     body = SearchSearchRequest(
@@ -341,7 +361,7 @@ with psm.ApiClient() as api_client:
         # Structured or free-form search
         api_response = api_instance.post_query(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling SearchV1Api->post_query: %s\n" % e)
 ```
 
@@ -369,5 +389,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.SearchV1Api top]](#psm.SearchV1Api) [[Back to search README]](../psm/docs/search/README.md) [[Back to pensando_ent README]](../README.md)
 

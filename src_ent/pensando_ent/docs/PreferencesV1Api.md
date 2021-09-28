@@ -1,6 +1,6 @@
 # psm.PreferencesV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,9 +22,14 @@ Get UIGlobalSettings object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -37,7 +42,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -60,7 +65,7 @@ with psm.ApiClient() as api_client:
         # Get UIGlobalSettings object
         api_response = api_instance.get_ui_global_settings(o_tenant)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->get_ui_global_settings: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -69,7 +74,7 @@ with psm.ApiClient() as api_client:
         # Get UIGlobalSettings object
         api_response = api_instance.get_ui_global_settings(o_tenant, t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_style_options=spec_style_options, idle_timeout_duration=idle_timeout_duration, idle_timeout_warning_time=idle_timeout_warning_time)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->get_ui_global_settings: %s\n" % e)
 ```
 
@@ -116,7 +121,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **get_ui_global_settings1**
 > PreferencesUIGlobalSettings get_ui_global_settings1()
@@ -126,9 +131,14 @@ Get UIGlobalSettings object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -141,7 +151,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -165,7 +175,7 @@ with psm.ApiClient() as api_client:
         # Get UIGlobalSettings object
         api_response = api_instance.get_ui_global_settings1(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_style_options=spec_style_options, idle_timeout_duration=idle_timeout_duration, idle_timeout_warning_time=idle_timeout_warning_time)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->get_ui_global_settings1: %s\n" % e)
 ```
 
@@ -212,7 +222,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **label_ui_global_settings**
 > PreferencesUIGlobalSettings label_ui_global_settings(o_tenant, body)
@@ -222,9 +232,14 @@ Label UIGlobalSettings object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -238,7 +253,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -264,7 +279,7 @@ with psm.ApiClient() as api_client:
         # Label UIGlobalSettings object
         api_response = api_instance.label_ui_global_settings(o_tenant, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->label_ui_global_settings: %s\n" % e)
 ```
 
@@ -299,7 +314,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **label_ui_global_settings1**
 > PreferencesUIGlobalSettings label_ui_global_settings1(body)
@@ -309,9 +324,14 @@ Label UIGlobalSettings object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -325,7 +345,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     body = ApiLabel(
@@ -350,7 +370,7 @@ with psm.ApiClient() as api_client:
         # Label UIGlobalSettings object
         api_response = api_instance.label_ui_global_settings1(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->label_ui_global_settings1: %s\n" % e)
 ```
 
@@ -384,7 +404,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **update_ui_global_settings**
 > PreferencesUIGlobalSettings update_ui_global_settings(o_tenant, body)
@@ -394,9 +414,14 @@ Update UIGlobalSettings object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -409,7 +434,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -445,7 +470,7 @@ with psm.ApiClient() as api_client:
         # Update UIGlobalSettings object
         api_response = api_instance.update_ui_global_settings(o_tenant, body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->update_ui_global_settings: %s\n" % e)
 ```
 
@@ -480,7 +505,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **update_ui_global_settings1**
 > PreferencesUIGlobalSettings update_ui_global_settings1(body)
@@ -490,9 +515,14 @@ Update UIGlobalSettings object
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -505,7 +535,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     body = PreferencesUIGlobalSettings(
@@ -540,7 +570,7 @@ with psm.ApiClient() as api_client:
         # Update UIGlobalSettings object
         api_response = api_instance.update_ui_global_settings1(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->update_ui_global_settings1: %s\n" % e)
 ```
 
@@ -574,7 +604,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **watch_ui_global_settings**
 > PreferencesAutoMsgUIGlobalSettingsWatchHelper watch_ui_global_settings(o_tenant)
@@ -584,9 +614,14 @@ Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_auto_msg_ui_global_settings_watch_helper import PreferencesAutoMsgUIGlobalSettingsWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -599,7 +634,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -626,7 +661,7 @@ with psm.ApiClient() as api_client:
         # Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ui_global_settings(o_tenant)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->watch_ui_global_settings: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -635,7 +670,7 @@ with psm.ApiClient() as api_client:
         # Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ui_global_settings(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->watch_ui_global_settings: %s\n" % e)
 ```
 
@@ -684,7 +719,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **watch_ui_global_settings1**
 > PreferencesAutoMsgUIGlobalSettingsWatchHelper watch_ui_global_settings1()
@@ -694,9 +729,14 @@ Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import preferences_v1_api
+import .psm
+from pensando_ent.psm.api import preferences_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.preferences import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.preferences_auto_msg_ui_global_settings_watch_helper import PreferencesAutoMsgUIGlobalSettingsWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -709,7 +749,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = preferences_v1_api.PreferencesV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -737,7 +777,7 @@ with psm.ApiClient() as api_client:
         # Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ui_global_settings1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling PreferencesV1Api->watch_ui_global_settings1: %s\n" % e)
 ```
 
@@ -786,5 +826,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.PreferencesV1Api top]](#psm.PreferencesV1Api) [[Back to preferences README]](../psm/docs/preferences/README.md) [[Back to pensando_ent README]](../README.md)
 

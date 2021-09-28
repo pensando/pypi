@@ -1,6 +1,6 @@
 # psm.TelemetryQueryV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,9 +16,14 @@ telemetry metrics query
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import telemetry_query_v1_api
+import .psm
+from pensando_ent.psm.api import telemetry_query_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.telemetry_query import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -30,7 +35,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = telemetry_query_v1_api.TelemetryQueryV1Api(api_client)
     tenant = "tenant_example" # str | Tenant for the request. (optional)
@@ -42,7 +47,7 @@ with psm.ApiClient() as api_client:
         # telemetry metrics query
         api_response = api_instance.get_metrics1(tenant=tenant, namespace=namespace)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling TelemetryQueryV1Api->get_metrics1: %s\n" % e)
 ```
 
@@ -71,7 +76,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.TelemetryQueryV1Api top]](#psm.TelemetryQueryV1Api) [[Back to telemetry_query README]](../psm/docs/telemetry_query/README.md) [[Back to pensando_ent README]](../README.md)
 
 # **post_metrics**
 > TelemetryQueryMetricsQueryResponse post_metrics(body)
@@ -81,9 +86,14 @@ telemetry metrics query
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import telemetry_query_v1_api
+import .psm
+from pensando_ent.psm.api import telemetry_query_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.telemetry_query import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.telemetry_query_metrics_query_list import TelemetryQueryMetricsQueryList
 from pensando_ent.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
 from pprint import pprint
@@ -96,7 +106,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = telemetry_query_v1_api.TelemetryQueryV1Api(api_client)
     body = TelemetryQueryMetricsQueryList(
@@ -147,7 +157,7 @@ with psm.ApiClient() as api_client:
         # telemetry metrics query
         api_response = api_instance.post_metrics(body)
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling TelemetryQueryV1Api->post_metrics: %s\n" % e)
 ```
 
@@ -175,5 +185,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.TelemetryQueryV1Api top]](#psm.TelemetryQueryV1Api) [[Back to telemetry_query README]](../psm/docs/telemetry_query/README.md) [[Back to pensando_ent README]](../README.md)
 

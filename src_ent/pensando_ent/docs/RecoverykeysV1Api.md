@@ -1,6 +1,6 @@
 # psm.RecoverykeysV1Api
 
-All URIs are relative to *http://localhost*
+All URIs are relative to `https://PSM-IP/`
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,9 +15,14 @@ Method | HTTP request | Description
 ### Example
 
 ```python
+#!/usr/bin/env python3
 import time
-import psm
-from api import recoverykeys_v1_api
+import .psm
+from pensando_ent.psm.api import recoverykeys_v1_api
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.models.recoverykeys import *
+from pensando_ent.psm  import Configuration, ApiClient, ApiException
+from dateutil.parser import parse as dateutil_parser
 from pensando_ent.psm.model.recoverykeys_recovery_keys import RecoverykeysRecoveryKeys
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -29,7 +34,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm.ApiClient() as api_client:
+with ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = recoverykeys_v1_api.RecoverykeysV1Api(api_client)
 
@@ -37,7 +42,7 @@ with psm.ApiClient() as api_client:
     try:
         api_response = api_instance.get_download_recovery_keys()
         pprint(api_response)
-    except psm.ApiException as e:
+    except ApiException as e:
         print("Exception when calling RecoverykeysV1Api->get_download_recovery_keys: %s\n" % e)
 ```
 
@@ -62,5 +67,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to psm.RecoverykeysV1Api top]](#psm.RecoverykeysV1Api) [[Back to recoverykeys README]](../psm/docs/recoverykeys/README.md) [[Back to pensando_ent README]](../README.md)
 
