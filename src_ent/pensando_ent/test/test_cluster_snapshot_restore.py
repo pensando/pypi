@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_snapshot_restore_spec import ClusterSnapshotRestoreSpec
-from pensando_ent.psm_ent.model.cluster_snapshot_restore_status import ClusterSnapshotRestoreStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_snapshot_restore_spec import ClusterSnapshotRestoreSpec
+from pensando_ent.psm.model.cluster_snapshot_restore_status import ClusterSnapshotRestoreStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterSnapshotRestoreSpec'] = ClusterSnapshotRestoreSpec
 globals()['ClusterSnapshotRestoreStatus'] = ClusterSnapshotRestoreStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_snapshot_restore import ClusterSnapshotRestore
+from pensando_ent.psm.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 
 
 class TestClusterSnapshotRestore(unittest.TestCase):

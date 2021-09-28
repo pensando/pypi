@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_lldp_neighbor import NetworkLLDPNeighbor
+import psm
+from pensando_ent.psm.psm.model.network_lldp_neighbor import NetworkLLDPNeighbor
 
 
 class TestNetworkLLDPNeighbor(unittest.TestCase):

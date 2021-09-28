@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.routing_neighbor import RoutingNeighbor
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.routing_neighbor import RoutingNeighbor
 globals()['ApiListMeta'] = ApiListMeta
 globals()['RoutingNeighbor'] = RoutingNeighbor
-from pensando_ent.psm_ent.psm_ent.model.routing_neighbor_list import RoutingNeighborList
+from pensando_ent.psm.psm.model.routing_neighbor_list import RoutingNeighborList
 
 
 class TestRoutingNeighborList(unittest.TestCase):

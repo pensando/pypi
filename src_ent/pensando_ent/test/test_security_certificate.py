@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.security_certificate_spec import SecurityCertificateSpec
-from pensando_ent.psm_ent.model.security_certificate_status import SecurityCertificateStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.security_certificate_spec import SecurityCertificateSpec
+from pensando_ent.psm.model.security_certificate_status import SecurityCertificateStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['SecurityCertificateSpec'] = SecurityCertificateSpec
 globals()['SecurityCertificateStatus'] = SecurityCertificateStatus
-from pensando_ent.psm_ent.psm_ent.model.security_certificate import SecurityCertificate
+from pensando_ent.psm.psm.model.security_certificate import SecurityCertificate
 
 
 class TestSecurityCertificate(unittest.TestCase):

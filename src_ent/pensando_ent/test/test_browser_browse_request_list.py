@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.browser_browse_request_object import BrowserBrowseRequestObject
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.browser_browse_request_object import BrowserBrowseRequestObject
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['BrowserBrowseRequestObject'] = BrowserBrowseRequestObject
-from pensando_ent.psm_ent.psm_ent.model.browser_browse_request_list import BrowserBrowseRequestList
+from pensando_ent.psm.psm.model.browser_browse_request_list import BrowserBrowseRequestList
 
 
 class TestBrowserBrowseRequestList(unittest.TestCase):

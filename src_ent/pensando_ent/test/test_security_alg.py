@@ -11,18 +11,18 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_dns import SecurityDns
-from pensando_ent.psm_ent.model.security_ftp import SecurityFtp
-from pensando_ent.psm_ent.model.security_icmp import SecurityIcmp
-from pensando_ent.psm_ent.model.security_msrpc import SecurityMsrpc
-from pensando_ent.psm_ent.model.security_sunrpc import SecuritySunrpc
+import psm
+from pensando_ent.psm.model.security_dns import SecurityDns
+from pensando_ent.psm.model.security_ftp import SecurityFtp
+from pensando_ent.psm.model.security_icmp import SecurityIcmp
+from pensando_ent.psm.model.security_msrpc import SecurityMsrpc
+from pensando_ent.psm.model.security_sunrpc import SecuritySunrpc
 globals()['SecurityDns'] = SecurityDns
 globals()['SecurityFtp'] = SecurityFtp
 globals()['SecurityIcmp'] = SecurityIcmp
 globals()['SecurityMsrpc'] = SecurityMsrpc
 globals()['SecuritySunrpc'] = SecuritySunrpc
-from pensando_ent.psm_ent.psm_ent.model.security_alg import SecurityALG
+from pensando_ent.psm.psm.model.security_alg import SecurityALG
 
 
 class TestSecurityALG(unittest.TestCase):

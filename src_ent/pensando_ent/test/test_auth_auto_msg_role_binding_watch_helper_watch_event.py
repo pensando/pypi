@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_role_binding import AuthRoleBinding
+import psm
+from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 globals()['AuthRoleBinding'] = AuthRoleBinding
-from pensando_ent.psm_ent.psm_ent.model.auth_auto_msg_role_binding_watch_helper_watch_event import AuthAutoMsgRoleBindingWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.auth_auto_msg_role_binding_watch_helper_watch_event import AuthAutoMsgRoleBindingWatchHelperWatchEvent
 
 
 class TestAuthAutoMsgRoleBindingWatchHelperWatchEvent(unittest.TestCase):

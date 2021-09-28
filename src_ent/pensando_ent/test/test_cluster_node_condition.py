@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_node_condition import ClusterNodeCondition
+import psm
+from pensando_ent.psm.psm.model.cluster_node_condition import ClusterNodeCondition
 
 
 class TestClusterNodeCondition(unittest.TestCase):

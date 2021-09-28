@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_cluster_condition import ClusterClusterCondition
-from pensando_ent.psm_ent.model.cluster_quorum_status import ClusterQuorumStatus
+import psm
+from pensando_ent.psm.model.cluster_cluster_condition import ClusterClusterCondition
+from pensando_ent.psm.model.cluster_quorum_status import ClusterQuorumStatus
 globals()['ClusterClusterCondition'] = ClusterClusterCondition
 globals()['ClusterQuorumStatus'] = ClusterQuorumStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_cluster_status import ClusterClusterStatus
+from pensando_ent.psm.psm.model.cluster_cluster_status import ClusterClusterStatus
 
 
 class TestClusterClusterStatus(unittest.TestCase):

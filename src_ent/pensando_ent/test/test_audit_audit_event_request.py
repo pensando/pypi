@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.audit_audit_event_request import AuditAuditEventRequest
+import psm
+from pensando_ent.psm.psm.model.audit_audit_event_request import AuditAuditEventRequest
 
 
 class TestAuditAuditEventRequest(unittest.TestCase):

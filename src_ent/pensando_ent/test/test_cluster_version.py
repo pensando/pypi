@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_version_spec import ClusterVersionSpec
-from pensando_ent.psm_ent.model.cluster_version_status import ClusterVersionStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_version_spec import ClusterVersionSpec
+from pensando_ent.psm.model.cluster_version_status import ClusterVersionStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterVersionSpec'] = ClusterVersionSpec
 globals()['ClusterVersionStatus'] = ClusterVersionStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_version import ClusterVersion
+from pensando_ent.psm.psm.model.cluster_version import ClusterVersion
 
 
 class TestClusterVersion(unittest.TestCase):

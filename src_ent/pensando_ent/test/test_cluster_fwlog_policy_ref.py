@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef
+import psm
+from pensando_ent.psm.psm.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef
 
 
 class TestClusterFwlogPolicyRef(unittest.TestCase):

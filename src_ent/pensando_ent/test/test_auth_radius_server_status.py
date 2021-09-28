@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_radius_server import AuthRadiusServer
+import psm
+from pensando_ent.psm.model.auth_radius_server import AuthRadiusServer
 globals()['AuthRadiusServer'] = AuthRadiusServer
-from pensando_ent.psm_ent.psm_ent.model.auth_radius_server_status import AuthRadiusServerStatus
+from pensando_ent.psm.psm.model.auth_radius_server_status import AuthRadiusServerStatus
 
 
 class TestAuthRadiusServerStatus(unittest.TestCase):

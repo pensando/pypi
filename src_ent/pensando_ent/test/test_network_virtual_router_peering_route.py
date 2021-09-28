@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_peering_route import NetworkVirtualRouterPeeringRoute
+import psm
+from pensando_ent.psm.psm.model.network_virtual_router_peering_route import NetworkVirtualRouterPeeringRoute
 
 
 class TestNetworkVirtualRouterPeeringRoute(unittest.TestCase):

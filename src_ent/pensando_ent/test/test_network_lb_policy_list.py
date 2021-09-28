@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.network_lb_policy import NetworkLbPolicy
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.network_lb_policy import NetworkLbPolicy
 globals()['ApiListMeta'] = ApiListMeta
 globals()['NetworkLbPolicy'] = NetworkLbPolicy
-from pensando_ent.psm_ent.psm_ent.model.network_lb_policy_list import NetworkLbPolicyList
+from pensando_ent.psm.psm.model.network_lb_policy_list import NetworkLbPolicyList
 
 
 class TestNetworkLbPolicyList(unittest.TestCase):

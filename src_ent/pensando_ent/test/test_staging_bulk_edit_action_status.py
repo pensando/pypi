@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.staging_item import StagingItem
-from pensando_ent.psm_ent.model.staging_validation_error import StagingValidationError
+import psm
+from pensando_ent.psm.model.staging_item import StagingItem
+from pensando_ent.psm.model.staging_validation_error import StagingValidationError
 globals()['StagingItem'] = StagingItem
 globals()['StagingValidationError'] = StagingValidationError
-from pensando_ent.psm_ent.psm_ent.model.staging_bulk_edit_action_status import StagingBulkEditActionStatus
+from pensando_ent.psm.psm.model.staging_bulk_edit_action_status import StagingBulkEditActionStatus
 
 
 class TestStagingBulkEditActionStatus(unittest.TestCase):

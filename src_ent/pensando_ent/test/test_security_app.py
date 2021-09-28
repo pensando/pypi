@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.security_app_spec import SecurityAppSpec
-from pensando_ent.psm_ent.model.security_app_status import SecurityAppStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.security_app_spec import SecurityAppSpec
+from pensando_ent.psm.model.security_app_status import SecurityAppStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['SecurityAppSpec'] = SecurityAppSpec
 globals()['SecurityAppStatus'] = SecurityAppStatus
-from pensando_ent.psm_ent.psm_ent.model.security_app import SecurityApp
+from pensando_ent.psm.psm.model.security_app import SecurityApp
 
 
 class TestSecurityApp(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
 globals()['ApiObjectMeta'] = ApiObjectMeta
-from pensando_ent.psm_ent.psm_ent.model.fwlog_fw_log import FwlogFwLog
+from pensando_ent.psm.psm.model.fwlog_fw_log import FwlogFwLog
 
 
 class TestFwlogFwLog(unittest.TestCase):

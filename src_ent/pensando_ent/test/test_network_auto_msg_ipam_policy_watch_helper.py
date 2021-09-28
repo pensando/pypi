@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_auto_msg_ipam_policy_watch_helper_watch_event import NetworkAutoMsgIPAMPolicyWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.network_auto_msg_ipam_policy_watch_helper_watch_event import NetworkAutoMsgIPAMPolicyWatchHelperWatchEvent
 globals()['NetworkAutoMsgIPAMPolicyWatchHelperWatchEvent'] = NetworkAutoMsgIPAMPolicyWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
+from pensando_ent.psm.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
 
 
 class TestNetworkAutoMsgIPAMPolicyWatchHelper(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_hw_flow_stats import SysruntimeHWFlowStats
+import psm
+from pensando_ent.psm.model.sysruntime_hw_flow_stats import SysruntimeHWFlowStats
 globals()['SysruntimeHWFlowStats'] = SysruntimeHWFlowStats
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_hw_connection_stats import SysruntimeHWConnectionStats
+from pensando_ent.psm.psm.model.sysruntime_hw_connection_stats import SysruntimeHWConnectionStats
 
 
 class TestSysruntimeHWConnectionStats(unittest.TestCase):

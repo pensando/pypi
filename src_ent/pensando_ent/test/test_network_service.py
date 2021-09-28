@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_service_spec import NetworkServiceSpec
-from pensando_ent.psm_ent.model.network_service_status import NetworkServiceStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_service_spec import NetworkServiceSpec
+from pensando_ent.psm.model.network_service_status import NetworkServiceStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkServiceSpec'] = NetworkServiceSpec
 globals()['NetworkServiceStatus'] = NetworkServiceStatus
-from pensando_ent.psm_ent.psm_ent.model.network_service import NetworkService
+from pensando_ent.psm.psm.model.network_service import NetworkService
 
 
 class TestNetworkService(unittest.TestCase):

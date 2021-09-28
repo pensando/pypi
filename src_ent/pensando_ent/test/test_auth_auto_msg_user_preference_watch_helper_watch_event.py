@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_user_preference import AuthUserPreference
+import psm
+from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 globals()['AuthUserPreference'] = AuthUserPreference
-from pensando_ent.psm_ent.psm_ent.model.auth_auto_msg_user_preference_watch_helper_watch_event import AuthAutoMsgUserPreferenceWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.auth_auto_msg_user_preference_watch_helper_watch_event import AuthAutoMsgUserPreferenceWatchHelperWatchEvent
 
 
 class TestAuthAutoMsgUserPreferenceWatchHelperWatchEvent(unittest.TestCase):

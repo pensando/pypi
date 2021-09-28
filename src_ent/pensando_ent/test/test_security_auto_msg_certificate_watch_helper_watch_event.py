@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_certificate import SecurityCertificate
+import psm
+from pensando_ent.psm.model.security_certificate import SecurityCertificate
 globals()['SecurityCertificate'] = SecurityCertificate
-from pensando_ent.psm_ent.psm_ent.model.security_auto_msg_certificate_watch_helper_watch_event import SecurityAutoMsgCertificateWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.security_auto_msg_certificate_watch_helper_watch_event import SecurityAutoMsgCertificateWatchHelperWatchEvent
 
 
 class TestSecurityAutoMsgCertificateWatchHelperWatchEvent(unittest.TestCase):

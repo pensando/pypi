@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.rollout_v1_api import RolloutV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.rollout_v1_api import RolloutV1Api  # noqa: E501
 
 
 class TestRolloutV1Api(unittest.TestCase):

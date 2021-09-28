@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_ts_result import MonitoringTsResult
+import psm
+from pensando_ent.psm.model.monitoring_ts_result import MonitoringTsResult
 globals()['MonitoringTsResult'] = MonitoringTsResult
-from pensando_ent.psm_ent.psm_ent.model.monitoring_troubleshooting_session_status import MonitoringTroubleshootingSessionStatus
+from pensando_ent.psm.psm.model.monitoring_troubleshooting_session_status import MonitoringTroubleshootingSessionStatus
 
 
 class TestMonitoringTroubleshootingSessionStatus(unittest.TestCase):

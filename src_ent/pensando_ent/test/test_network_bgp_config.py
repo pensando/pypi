@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_bgp_asn import ApiBgpAsn
-from pensando_ent.psm_ent.model.network_bgp_neighbor import NetworkBGPNeighbor
+import psm
+from pensando_ent.psm.model.api_bgp_asn import ApiBgpAsn
+from pensando_ent.psm.model.network_bgp_neighbor import NetworkBGPNeighbor
 globals()['ApiBgpAsn'] = ApiBgpAsn
 globals()['NetworkBGPNeighbor'] = NetworkBGPNeighbor
-from pensando_ent.psm_ent.psm_ent.model.network_bgp_config import NetworkBGPConfig
+from pensando_ent.psm.psm.model.network_bgp_config import NetworkBGPConfig
 
 
 class TestNetworkBGPConfig(unittest.TestCase):

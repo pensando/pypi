@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.api_object_ref import ApiObjectRef
-from pensando_ent.psm_ent.model.events_event_source import EventsEventSource
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.api_object_ref import ApiObjectRef
+from pensando_ent.psm.model.events_event_source import EventsEventSource
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ApiObjectRef'] = ApiObjectRef
 globals()['EventsEventSource'] = EventsEventSource
-from pensando_ent.psm_ent.psm_ent.model.events_event import EventsEvent
+from pensando_ent.psm.psm.model.events_event import EventsEvent
 
 
 class TestEventsEvent(unittest.TestCase):

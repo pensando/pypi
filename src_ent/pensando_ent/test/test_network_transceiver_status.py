@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_transceiver_status import NetworkTransceiverStatus
+import psm
+from pensando_ent.psm.psm.model.network_transceiver_status import NetworkTransceiverStatus
 
 
 class TestNetworkTransceiverStatus(unittest.TestCase):

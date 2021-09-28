@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.search_entry_list import SearchEntryList
+import psm
+from pensando_ent.psm.model.search_entry_list import SearchEntryList
 globals()['SearchEntryList'] = SearchEntryList
-from pensando_ent.psm_ent.psm_ent.model.search_kind_aggregation import SearchKindAggregation
+from pensando_ent.psm.psm.model.search_kind_aggregation import SearchKindAggregation
 
 
 class TestSearchKindAggregation(unittest.TestCase):

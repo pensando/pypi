@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_flow_key_icmp_info import SysruntimeFlowKeyICMPInfo
+import psm
+from pensando_ent.psm.psm.model.sysruntime_flow_key_icmp_info import SysruntimeFlowKeyICMPInfo
 
 
 class TestSysruntimeFlowKeyICMPInfo(unittest.TestCase):

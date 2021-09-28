@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_lb_policy_status import NetworkLbPolicyStatus
+import psm
+from pensando_ent.psm.psm.model.network_lb_policy_status import NetworkLbPolicyStatus
 
 
 class TestNetworkLbPolicyStatus(unittest.TestCase):

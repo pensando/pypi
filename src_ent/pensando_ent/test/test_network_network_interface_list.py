@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.network_network_interface import NetworkNetworkInterface
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 globals()['ApiListMeta'] = ApiListMeta
 globals()['NetworkNetworkInterface'] = NetworkNetworkInterface
-from pensando_ent.psm_ent.psm_ent.model.network_network_interface_list import NetworkNetworkInterfaceList
+from pensando_ent.psm.psm.model.network_network_interface_list import NetworkNetworkInterfaceList
 
 
 class TestNetworkNetworkInterfaceList(unittest.TestCase):

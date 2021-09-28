@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.security_dns import SecurityDns
+import psm
+from pensando_ent.psm.psm.model.security_dns import SecurityDns
 
 
 class TestSecurityDns(unittest.TestCase):

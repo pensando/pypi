@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.configuration_snapshot_status_config_save_status import ConfigurationSnapshotStatusConfigSaveStatus
+import psm
+from pensando_ent.psm.psm.model.configuration_snapshot_status_config_save_status import ConfigurationSnapshotStatusConfigSaveStatus
 
 
 class TestConfigurationSnapshotStatusConfigSaveStatus(unittest.TestCase):

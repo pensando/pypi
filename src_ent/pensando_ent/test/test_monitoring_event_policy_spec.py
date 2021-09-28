@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.fields_selector import FieldsSelector
-from pensando_ent.psm_ent.model.monitoring_export_config import MonitoringExportConfig
-from pensando_ent.psm_ent.model.monitoring_syslog_export_config import MonitoringSyslogExportConfig
+import psm
+from pensando_ent.psm.model.fields_selector import FieldsSelector
+from pensando_ent.psm.model.monitoring_export_config import MonitoringExportConfig
+from pensando_ent.psm.model.monitoring_syslog_export_config import MonitoringSyslogExportConfig
 globals()['FieldsSelector'] = FieldsSelector
 globals()['MonitoringExportConfig'] = MonitoringExportConfig
 globals()['MonitoringSyslogExportConfig'] = MonitoringSyslogExportConfig
-from pensando_ent.psm_ent.psm_ent.model.monitoring_event_policy_spec import MonitoringEventPolicySpec
+from pensando_ent.psm.psm.model.monitoring_event_policy_spec import MonitoringEventPolicySpec
 
 
 class TestMonitoringEventPolicySpec(unittest.TestCase):

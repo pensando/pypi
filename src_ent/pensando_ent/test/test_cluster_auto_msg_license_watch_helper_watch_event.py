@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_license import ClusterLicense
+import psm
+from pensando_ent.psm.model.cluster_license import ClusterLicense
 globals()['ClusterLicense'] = ClusterLicense
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_license_watch_helper_watch_event import ClusterAutoMsgLicenseWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_license_watch_helper_watch_event import ClusterAutoMsgLicenseWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgLicenseWatchHelperWatchEvent(unittest.TestCase):

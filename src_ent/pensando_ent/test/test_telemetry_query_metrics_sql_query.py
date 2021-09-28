@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.telemetry_query_metrics_sql_query import TelemetryQueryMetricsSQLQuery
+import psm
+from pensando_ent.psm.psm.model.telemetry_query_metrics_sql_query import TelemetryQueryMetricsSQLQuery
 
 
 class TestTelemetryQueryMetricsSQLQuery(unittest.TestCase):

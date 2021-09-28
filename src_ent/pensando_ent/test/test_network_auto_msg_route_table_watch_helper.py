@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_auto_msg_route_table_watch_helper_watch_event import NetworkAutoMsgRouteTableWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.network_auto_msg_route_table_watch_helper_watch_event import NetworkAutoMsgRouteTableWatchHelperWatchEvent
 globals()['NetworkAutoMsgRouteTableWatchHelperWatchEvent'] = NetworkAutoMsgRouteTableWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.network_auto_msg_route_table_watch_helper import NetworkAutoMsgRouteTableWatchHelper
+from pensando_ent.psm.psm.model.network_auto_msg_route_table_watch_helper import NetworkAutoMsgRouteTableWatchHelper
 
 
 class TestNetworkAutoMsgRouteTableWatchHelper(unittest.TestCase):

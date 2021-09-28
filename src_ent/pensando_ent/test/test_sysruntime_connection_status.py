@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.sysruntime_hw_connection_get_response import SysruntimeHWConnectionGetResponse
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.sysruntime_hw_connection_get_response import SysruntimeHWConnectionGetResponse
 globals()['ApiListMeta'] = ApiListMeta
 globals()['SysruntimeHWConnectionGetResponse'] = SysruntimeHWConnectionGetResponse
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_connection_status import SysruntimeConnectionStatus
+from pensando_ent.psm.psm.model.sysruntime_connection_status import SysruntimeConnectionStatus
 
 
 class TestSysruntimeConnectionStatus(unittest.TestCase):

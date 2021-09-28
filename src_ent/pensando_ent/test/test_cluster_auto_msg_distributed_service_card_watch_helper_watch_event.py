@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_distributed_service_card import ClusterDistributedServiceCard
+import psm
+from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 globals()['ClusterDistributedServiceCard'] = ClusterDistributedServiceCard
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_distributed_service_card_watch_helper_watch_event import ClusterAutoMsgDistributedServiceCardWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_distributed_service_card_watch_helper_watch_event import ClusterAutoMsgDistributedServiceCardWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgDistributedServiceCardWatchHelperWatchEvent(unittest.TestCase):

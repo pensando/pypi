@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.monitoring_email_export import MonitoringEmailExport
+import psm
+from pensando_ent.psm.psm.model.monitoring_email_export import MonitoringEmailExport
 
 
 class TestMonitoringEmailExport(unittest.TestCase):

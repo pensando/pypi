@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.auth_role_binding_spec import AuthRoleBindingSpec
+import psm
+from pensando_ent.psm.psm.model.auth_role_binding_spec import AuthRoleBindingSpec
 
 
 class TestAuthRoleBindingSpec(unittest.TestCase):

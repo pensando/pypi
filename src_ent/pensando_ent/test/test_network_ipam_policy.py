@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_ipam_policy_spec import NetworkIPAMPolicySpec
-from pensando_ent.psm_ent.model.network_ipam_policy_status import NetworkIPAMPolicyStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_ipam_policy_spec import NetworkIPAMPolicySpec
+from pensando_ent.psm.model.network_ipam_policy_status import NetworkIPAMPolicyStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkIPAMPolicySpec'] = NetworkIPAMPolicySpec
 globals()['NetworkIPAMPolicyStatus'] = NetworkIPAMPolicyStatus
-from pensando_ent.psm_ent.psm_ent.model.network_ipam_policy import NetworkIPAMPolicy
+from pensando_ent.psm.psm.model.network_ipam_policy import NetworkIPAMPolicy
 
 
 class TestNetworkIPAMPolicy(unittest.TestCase):

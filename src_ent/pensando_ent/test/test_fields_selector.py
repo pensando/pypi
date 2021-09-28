@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.fields_requirement import FieldsRequirement
+import psm
+from pensando_ent.psm.model.fields_requirement import FieldsRequirement
 globals()['FieldsRequirement'] = FieldsRequirement
-from pensando_ent.psm_ent.psm_ent.model.fields_selector import FieldsSelector
+from pensando_ent.psm.psm.model.fields_selector import FieldsSelector
 
 
 class TestFieldsSelector(unittest.TestCase):

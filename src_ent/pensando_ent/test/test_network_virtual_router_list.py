@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.network_virtual_router import NetworkVirtualRouter
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 globals()['ApiListMeta'] = ApiListMeta
 globals()['NetworkVirtualRouter'] = NetworkVirtualRouter
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_list import NetworkVirtualRouterList
+from pensando_ent.psm.psm.model.network_virtual_router_list import NetworkVirtualRouterList
 
 
 class TestNetworkVirtualRouterList(unittest.TestCase):

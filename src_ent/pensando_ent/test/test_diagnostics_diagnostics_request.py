@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.diagnostics_service_port import DiagnosticsServicePort
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.diagnostics_service_port import DiagnosticsServicePort
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['DiagnosticsServicePort'] = DiagnosticsServicePort
-from pensando_ent.psm_ent.psm_ent.model.diagnostics_diagnostics_request import DiagnosticsDiagnosticsRequest
+from pensando_ent.psm.psm.model.diagnostics_diagnostics_request import DiagnosticsDiagnosticsRequest
 
 
 class TestDiagnosticsDiagnosticsRequest(unittest.TestCase):

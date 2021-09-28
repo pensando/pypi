@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_quorum_member_condition import ClusterQuorumMemberCondition
+import psm
+from pensando_ent.psm.psm.model.cluster_quorum_member_condition import ClusterQuorumMemberCondition
 
 
 class TestClusterQuorumMemberCondition(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.cluster_license import ClusterLicense
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.cluster_license import ClusterLicense
 globals()['ApiListMeta'] = ApiListMeta
 globals()['ClusterLicense'] = ClusterLicense
-from pensando_ent.psm_ent.psm_ent.model.cluster_license_list import ClusterLicenseList
+from pensando_ent.psm.psm.model.cluster_license_list import ClusterLicenseList
 
 
 class TestClusterLicenseList(unittest.TestCase):

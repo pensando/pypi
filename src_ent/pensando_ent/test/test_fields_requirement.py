@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.fields_requirement import FieldsRequirement
+import psm
+from pensando_ent.psm.psm.model.fields_requirement import FieldsRequirement
 
 
 class TestFieldsRequirement(unittest.TestCase):

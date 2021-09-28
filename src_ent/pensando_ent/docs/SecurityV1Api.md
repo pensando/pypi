@@ -1,6 +1,6 @@
-# psm_ent.SecurityV1Api
+# psm.SecurityV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -80,27 +80,22 @@ Create App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -171,7 +166,7 @@ with ApiClient() as api_client:
         # Create App object
         api_response = api_instance.add_app(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_app: %s\n" % e)
 ```
 
@@ -206,7 +201,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_app1**
 > SecurityApp add_app1(body)
@@ -216,27 +211,22 @@ Create App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     body = SecurityApp(
@@ -306,7 +296,7 @@ with ApiClient() as api_client:
         # Create App object
         api_response = api_instance.add_app1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_app1: %s\n" % e)
 ```
 
@@ -340,7 +330,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_ip_sec_policy**
 > SecurityIPSecPolicy add_ip_sec_policy(o_tenant, body)
@@ -350,27 +340,22 @@ Create IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -452,7 +437,7 @@ with ApiClient() as api_client:
         # Create IPSecPolicy object
         api_response = api_instance.add_ip_sec_policy(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_ip_sec_policy: %s\n" % e)
 ```
 
@@ -487,7 +472,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_ip_sec_policy1**
 > SecurityIPSecPolicy add_ip_sec_policy1(body)
@@ -497,27 +482,22 @@ Create IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     body = SecurityIPSecPolicy(
@@ -598,7 +578,7 @@ with ApiClient() as api_client:
         # Create IPSecPolicy object
         api_response = api_instance.add_ip_sec_policy1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -632,7 +612,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_network_security_policy**
 > SecurityNetworkSecurityPolicy add_network_security_policy(o_tenant, body)
@@ -642,27 +622,22 @@ Create NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -747,7 +722,7 @@ with ApiClient() as api_client:
         # Create NetworkSecurityPolicy object
         api_response = api_instance.add_network_security_policy(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_network_security_policy: %s\n" % e)
 ```
 
@@ -782,7 +757,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_network_security_policy1**
 > SecurityNetworkSecurityPolicy add_network_security_policy1(body)
@@ -792,27 +767,22 @@ Create NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     body = SecurityNetworkSecurityPolicy(
@@ -896,7 +866,7 @@ with ApiClient() as api_client:
         # Create NetworkSecurityPolicy object
         api_response = api_instance.add_network_security_policy1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_network_security_policy1: %s\n" % e)
 ```
 
@@ -930,7 +900,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_security_group**
 > SecuritySecurityGroup add_security_group(o_tenant, body)
@@ -940,27 +910,22 @@ Create SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1015,7 +980,7 @@ with ApiClient() as api_client:
         # Create SecurityGroup object
         api_response = api_instance.add_security_group(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_security_group: %s\n" % e)
 ```
 
@@ -1050,7 +1015,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_security_group1**
 > SecuritySecurityGroup add_security_group1(body)
@@ -1060,27 +1025,22 @@ Create SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     body = SecuritySecurityGroup(
@@ -1134,7 +1094,7 @@ with ApiClient() as api_client:
         # Create SecurityGroup object
         api_response = api_instance.add_security_group1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->add_security_group1: %s\n" % e)
 ```
 
@@ -1168,7 +1128,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_app**
 > SecurityApp delete_app(o_tenant, o_name)
@@ -1178,27 +1138,22 @@ Delete App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1209,7 +1164,7 @@ with ApiClient() as api_client:
         # Delete App object
         api_response = api_instance.delete_app(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_app: %s\n" % e)
 ```
 
@@ -1244,7 +1199,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_app1**
 > SecurityApp delete_app1(o_name)
@@ -1254,27 +1209,22 @@ Delete App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1284,7 +1234,7 @@ with ApiClient() as api_client:
         # Delete App object
         api_response = api_instance.delete_app1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_app1: %s\n" % e)
 ```
 
@@ -1318,7 +1268,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ip_sec_policy**
 > SecurityIPSecPolicy delete_ip_sec_policy(o_tenant, o_name)
@@ -1328,27 +1278,22 @@ Delete IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1359,7 +1304,7 @@ with ApiClient() as api_client:
         # Delete IPSecPolicy object
         api_response = api_instance.delete_ip_sec_policy(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_ip_sec_policy: %s\n" % e)
 ```
 
@@ -1394,7 +1339,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ip_sec_policy1**
 > SecurityIPSecPolicy delete_ip_sec_policy1(o_name)
@@ -1404,27 +1349,22 @@ Delete IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1434,7 +1374,7 @@ with ApiClient() as api_client:
         # Delete IPSecPolicy object
         api_response = api_instance.delete_ip_sec_policy1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -1468,7 +1408,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_network_security_policy**
 > SecurityNetworkSecurityPolicy delete_network_security_policy(o_tenant, o_name)
@@ -1478,27 +1418,22 @@ Delete NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1509,7 +1444,7 @@ with ApiClient() as api_client:
         # Delete NetworkSecurityPolicy object
         api_response = api_instance.delete_network_security_policy(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_network_security_policy: %s\n" % e)
 ```
 
@@ -1544,7 +1479,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_network_security_policy1**
 > SecurityNetworkSecurityPolicy delete_network_security_policy1(o_name)
@@ -1554,27 +1489,22 @@ Delete NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1584,7 +1514,7 @@ with ApiClient() as api_client:
         # Delete NetworkSecurityPolicy object
         api_response = api_instance.delete_network_security_policy1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_network_security_policy1: %s\n" % e)
 ```
 
@@ -1618,7 +1548,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_security_group**
 > SecuritySecurityGroup delete_security_group(o_tenant, o_name)
@@ -1628,27 +1558,22 @@ Delete SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1659,7 +1584,7 @@ with ApiClient() as api_client:
         # Delete SecurityGroup object
         api_response = api_instance.delete_security_group(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_security_group: %s\n" % e)
 ```
 
@@ -1694,7 +1619,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_security_group1**
 > SecuritySecurityGroup delete_security_group1(o_name)
@@ -1704,27 +1629,22 @@ Delete SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1734,7 +1654,7 @@ with ApiClient() as api_client:
         # Delete SecurityGroup object
         api_response = api_instance.delete_security_group1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->delete_security_group1: %s\n" % e)
 ```
 
@@ -1768,7 +1688,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app**
 > SecurityApp get_app(o_tenant, o_name)
@@ -1778,27 +1698,22 @@ Get App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1831,7 +1746,7 @@ with ApiClient() as api_client:
         # Get App object
         api_response = api_instance.get_app(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_app: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1840,7 +1755,7 @@ with ApiClient() as api_client:
         # Get App object
         api_response = api_instance.get_app(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_timeout=spec_timeout, alg_type=alg_type, icmp_type=icmp_type, icmp_code=icmp_code, dns_drop_multi_question_packets=dns_drop_multi_question_packets, dns_drop_large_domain_name_packets=dns_drop_large_domain_name_packets, dns_drop_long_label_packets=dns_drop_long_label_packets, dns_max_message_length=dns_max_message_length, dns_query_response_timeout=dns_query_response_timeout, ftp_allow_mismatch_ip_address=ftp_allow_mismatch_ip_address, status_attached_policies=status_attached_policies)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_app: %s\n" % e)
 ```
 
@@ -1895,7 +1810,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app1**
 > SecurityApp get_app1(o_name)
@@ -1905,27 +1820,22 @@ Get App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1958,7 +1868,7 @@ with ApiClient() as api_client:
         # Get App object
         api_response = api_instance.get_app1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_app1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1967,7 +1877,7 @@ with ApiClient() as api_client:
         # Get App object
         api_response = api_instance.get_app1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_timeout=spec_timeout, alg_type=alg_type, icmp_type=icmp_type, icmp_code=icmp_code, dns_drop_multi_question_packets=dns_drop_multi_question_packets, dns_drop_large_domain_name_packets=dns_drop_large_domain_name_packets, dns_drop_long_label_packets=dns_drop_long_label_packets, dns_max_message_length=dns_max_message_length, dns_query_response_timeout=dns_query_response_timeout, ftp_allow_mismatch_ip_address=ftp_allow_mismatch_ip_address, status_attached_policies=status_attached_policies)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_app1: %s\n" % e)
 ```
 
@@ -2022,7 +1932,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_firewall_profile**
 > SecurityFirewallProfile get_firewall_profile(o_tenant, o_name)
@@ -2032,27 +1942,22 @@ Get FirewallProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2096,7 +2001,7 @@ with ApiClient() as api_client:
         # Get FirewallProfile object
         api_response = api_instance.get_firewall_profile(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_firewall_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2105,7 +2010,7 @@ with ApiClient() as api_client:
         # Get FirewallProfile object
         api_response = api_instance.get_firewall_profile(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_session_idle_timeout=spec_session_idle_timeout, spec_tcp_connection_setup_timeout=spec_tcp_connection_setup_timeout, spec_tcp_close_timeout=spec_tcp_close_timeout, spec_tcp_half_closed_timeout=spec_tcp_half_closed_timeout, spec_tcp_drop_timeout=spec_tcp_drop_timeout, spec_udp_drop_timeout=spec_udp_drop_timeout, spec_icmp_drop_timeout=spec_icmp_drop_timeout, spec_drop_timeout=spec_drop_timeout, spec_tcp_timeout=spec_tcp_timeout, spec_udp_timeout=spec_udp_timeout, spec_icmp_timeout=spec_icmp_timeout, spec_tcp_half_open_session_limit=spec_tcp_half_open_session_limit, spec_udp_active_session_limit=spec_udp_active_session_limit, spec_icmp_active_session_limit=spec_icmp_active_session_limit, spec_detect_app=spec_detect_app, spec_connection_tracking=spec_connection_tracking, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_firewall_profile: %s\n" % e)
 ```
 
@@ -2171,7 +2076,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_firewall_profile1**
 > SecurityFirewallProfile get_firewall_profile1(o_name)
@@ -2181,27 +2086,22 @@ Get FirewallProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2245,7 +2145,7 @@ with ApiClient() as api_client:
         # Get FirewallProfile object
         api_response = api_instance.get_firewall_profile1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_firewall_profile1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2254,7 +2154,7 @@ with ApiClient() as api_client:
         # Get FirewallProfile object
         api_response = api_instance.get_firewall_profile1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_session_idle_timeout=spec_session_idle_timeout, spec_tcp_connection_setup_timeout=spec_tcp_connection_setup_timeout, spec_tcp_close_timeout=spec_tcp_close_timeout, spec_tcp_half_closed_timeout=spec_tcp_half_closed_timeout, spec_tcp_drop_timeout=spec_tcp_drop_timeout, spec_udp_drop_timeout=spec_udp_drop_timeout, spec_icmp_drop_timeout=spec_icmp_drop_timeout, spec_drop_timeout=spec_drop_timeout, spec_tcp_timeout=spec_tcp_timeout, spec_udp_timeout=spec_udp_timeout, spec_icmp_timeout=spec_icmp_timeout, spec_tcp_half_open_session_limit=spec_tcp_half_open_session_limit, spec_udp_active_session_limit=spec_udp_active_session_limit, spec_icmp_active_session_limit=spec_icmp_active_session_limit, spec_detect_app=spec_detect_app, spec_connection_tracking=spec_connection_tracking, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_firewall_profile1: %s\n" % e)
 ```
 
@@ -2320,7 +2220,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ip_sec_policy**
 > SecurityIPSecPolicy get_ip_sec_policy(o_tenant, o_name)
@@ -2330,27 +2230,22 @@ Get IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2382,7 +2277,7 @@ with ApiClient() as api_client:
         # Get IPSecPolicy object
         api_response = api_instance.get_ip_sec_policy(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_ip_sec_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2391,7 +2286,7 @@ with ApiClient() as api_client:
         # Get IPSecPolicy object
         api_response = api_instance.get_ip_sec_policy(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, config_sa_lifetime=config_sa_lifetime, config_ike_lifetime=config_ike_lifetime, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs, status_ike_params=status_ike_params, status_esp_params=status_esp_params)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_ip_sec_policy: %s\n" % e)
 ```
 
@@ -2445,7 +2340,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ip_sec_policy1**
 > SecurityIPSecPolicy get_ip_sec_policy1(o_name)
@@ -2455,27 +2350,22 @@ Get IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2507,7 +2397,7 @@ with ApiClient() as api_client:
         # Get IPSecPolicy object
         api_response = api_instance.get_ip_sec_policy1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_ip_sec_policy1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2516,7 +2406,7 @@ with ApiClient() as api_client:
         # Get IPSecPolicy object
         api_response = api_instance.get_ip_sec_policy1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, config_sa_lifetime=config_sa_lifetime, config_ike_lifetime=config_ike_lifetime, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs, status_ike_params=status_ike_params, status_esp_params=status_esp_params)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -2570,7 +2460,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_network_security_policy**
 > SecurityNetworkSecurityPolicy get_network_security_policy(o_tenant, o_name)
@@ -2580,27 +2470,22 @@ Get NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2633,7 +2518,7 @@ with ApiClient() as api_client:
         # Get NetworkSecurityPolicy object
         api_response = api_instance.get_network_security_policy(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_network_security_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2642,7 +2527,7 @@ with ApiClient() as api_client:
         # Get NetworkSecurityPolicy object
         api_response = api_instance.get_network_security_policy(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_attach_groups=spec_attach_groups, spec_attach_tenant=spec_attach_tenant, spec_priority=spec_priority, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_network_security_policy: %s\n" % e)
 ```
 
@@ -2695,7 +2580,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_network_security_policy1**
 > SecurityNetworkSecurityPolicy get_network_security_policy1(o_name)
@@ -2705,27 +2590,22 @@ Get NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2758,7 +2638,7 @@ with ApiClient() as api_client:
         # Get NetworkSecurityPolicy object
         api_response = api_instance.get_network_security_policy1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_network_security_policy1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2767,7 +2647,7 @@ with ApiClient() as api_client:
         # Get NetworkSecurityPolicy object
         api_response = api_instance.get_network_security_policy1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_attach_groups=spec_attach_groups, spec_attach_tenant=spec_attach_tenant, spec_priority=spec_priority, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_network_security_policy1: %s\n" % e)
 ```
 
@@ -2820,7 +2700,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_security_group**
 > SecuritySecurityGroup get_security_group(o_tenant, o_name)
@@ -2830,27 +2710,22 @@ Get SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2882,7 +2757,7 @@ with ApiClient() as api_client:
         # Get SecurityGroup object
         api_response = api_instance.get_security_group(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_security_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2891,7 +2766,7 @@ with ApiClient() as api_client:
         # Get SecurityGroup object
         api_response = api_instance.get_security_group(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_service_labels=spec_service_labels, spec_match_prefixes=spec_match_prefixes, status_workloads=status_workloads, status_policies=status_policies)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_security_group: %s\n" % e)
 ```
 
@@ -2939,7 +2814,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_security_group1**
 > SecuritySecurityGroup get_security_group1(o_name)
@@ -2949,27 +2824,22 @@ Get SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3001,7 +2871,7 @@ with ApiClient() as api_client:
         # Get SecurityGroup object
         api_response = api_instance.get_security_group1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_security_group1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3010,7 +2880,7 @@ with ApiClient() as api_client:
         # Get SecurityGroup object
         api_response = api_instance.get_security_group1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_service_labels=spec_service_labels, spec_match_prefixes=spec_match_prefixes, status_workloads=status_workloads, status_policies=status_policies)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->get_security_group1: %s\n" % e)
 ```
 
@@ -3058,7 +2928,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_app**
 > SecurityApp label_app(o_tenant, o_name, body)
@@ -3068,28 +2938,23 @@ Label App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3116,7 +2981,7 @@ with ApiClient() as api_client:
         # Label App object
         api_response = api_instance.label_app(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_app: %s\n" % e)
 ```
 
@@ -3152,7 +3017,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_app1**
 > SecurityApp label_app1(o_name, body)
@@ -3162,28 +3027,23 @@ Label App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3209,7 +3069,7 @@ with ApiClient() as api_client:
         # Label App object
         api_response = api_instance.label_app1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_app1: %s\n" % e)
 ```
 
@@ -3244,7 +3104,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_firewall_profile**
 > SecurityFirewallProfile label_firewall_profile(o_tenant, o_name, body)
@@ -3254,28 +3114,23 @@ Label FirewallProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3302,7 +3157,7 @@ with ApiClient() as api_client:
         # Label FirewallProfile object
         api_response = api_instance.label_firewall_profile(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_firewall_profile: %s\n" % e)
 ```
 
@@ -3338,7 +3193,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_firewall_profile1**
 > SecurityFirewallProfile label_firewall_profile1(o_name, body)
@@ -3348,28 +3203,23 @@ Label FirewallProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3395,7 +3245,7 @@ with ApiClient() as api_client:
         # Label FirewallProfile object
         api_response = api_instance.label_firewall_profile1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_firewall_profile1: %s\n" % e)
 ```
 
@@ -3430,7 +3280,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_ip_sec_policy**
 > SecurityIPSecPolicy label_ip_sec_policy(o_tenant, o_name, body)
@@ -3440,28 +3290,23 @@ Label IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3488,7 +3333,7 @@ with ApiClient() as api_client:
         # Label IPSecPolicy object
         api_response = api_instance.label_ip_sec_policy(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_ip_sec_policy: %s\n" % e)
 ```
 
@@ -3524,7 +3369,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_ip_sec_policy1**
 > SecurityIPSecPolicy label_ip_sec_policy1(o_name, body)
@@ -3534,28 +3379,23 @@ Label IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3581,7 +3421,7 @@ with ApiClient() as api_client:
         # Label IPSecPolicy object
         api_response = api_instance.label_ip_sec_policy1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -3616,7 +3456,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_network_security_policy**
 > SecurityNetworkSecurityPolicy label_network_security_policy(o_tenant, o_name, body)
@@ -3626,28 +3466,23 @@ Label NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3674,7 +3509,7 @@ with ApiClient() as api_client:
         # Label NetworkSecurityPolicy object
         api_response = api_instance.label_network_security_policy(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_network_security_policy: %s\n" % e)
 ```
 
@@ -3710,7 +3545,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_network_security_policy1**
 > SecurityNetworkSecurityPolicy label_network_security_policy1(o_name, body)
@@ -3720,28 +3555,23 @@ Label NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3767,7 +3597,7 @@ with ApiClient() as api_client:
         # Label NetworkSecurityPolicy object
         api_response = api_instance.label_network_security_policy1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_network_security_policy1: %s\n" % e)
 ```
 
@@ -3802,7 +3632,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_security_group**
 > SecuritySecurityGroup label_security_group(o_tenant, o_name, body)
@@ -3812,28 +3642,23 @@ Label SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3860,7 +3685,7 @@ with ApiClient() as api_client:
         # Label SecurityGroup object
         api_response = api_instance.label_security_group(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_security_group: %s\n" % e)
 ```
 
@@ -3896,7 +3721,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_security_group1**
 > SecuritySecurityGroup label_security_group1(o_name, body)
@@ -3906,28 +3731,23 @@ Label SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3953,7 +3773,7 @@ with ApiClient() as api_client:
         # Label SecurityGroup object
         api_response = api_instance.label_security_group1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->label_security_group1: %s\n" % e)
 ```
 
@@ -3988,7 +3808,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_app**
 > SecurityAppList list_app(o_tenant)
@@ -3998,27 +3818,22 @@ List App objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app_list import SecurityAppList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app_list import SecurityAppList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4045,7 +3860,7 @@ with ApiClient() as api_client:
         # List App objects
         api_response = api_instance.list_app(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_app: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4054,7 +3869,7 @@ with ApiClient() as api_client:
         # List App objects
         api_response = api_instance.list_app(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_app: %s\n" % e)
 ```
 
@@ -4103,7 +3918,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_app1**
 > SecurityAppList list_app1()
@@ -4113,27 +3928,22 @@ List App objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app_list import SecurityAppList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app_list import SecurityAppList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -4161,7 +3971,7 @@ with ApiClient() as api_client:
         # List App objects
         api_response = api_instance.list_app1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_app1: %s\n" % e)
 ```
 
@@ -4210,7 +4020,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_firewall_profile**
 > SecurityFirewallProfileList list_firewall_profile(o_tenant)
@@ -4220,27 +4030,22 @@ List FirewallProfile objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_firewall_profile_list import SecurityFirewallProfileList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_firewall_profile_list import SecurityFirewallProfileList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4267,7 +4072,7 @@ with ApiClient() as api_client:
         # List FirewallProfile objects
         api_response = api_instance.list_firewall_profile(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_firewall_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4276,7 +4081,7 @@ with ApiClient() as api_client:
         # List FirewallProfile objects
         api_response = api_instance.list_firewall_profile(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_firewall_profile: %s\n" % e)
 ```
 
@@ -4325,7 +4130,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_firewall_profile1**
 > SecurityFirewallProfileList list_firewall_profile1()
@@ -4335,27 +4140,22 @@ List FirewallProfile objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_firewall_profile_list import SecurityFirewallProfileList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_firewall_profile_list import SecurityFirewallProfileList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -4383,7 +4183,7 @@ with ApiClient() as api_client:
         # List FirewallProfile objects
         api_response = api_instance.list_firewall_profile1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_firewall_profile1: %s\n" % e)
 ```
 
@@ -4432,7 +4232,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_ip_sec_policy**
 > SecurityIPSecPolicyList list_ip_sec_policy(o_tenant)
@@ -4442,27 +4242,22 @@ List IPSecPolicy objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy_list import SecurityIPSecPolicyList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy_list import SecurityIPSecPolicyList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4489,7 +4284,7 @@ with ApiClient() as api_client:
         # List IPSecPolicy objects
         api_response = api_instance.list_ip_sec_policy(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_ip_sec_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4498,7 +4293,7 @@ with ApiClient() as api_client:
         # List IPSecPolicy objects
         api_response = api_instance.list_ip_sec_policy(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_ip_sec_policy: %s\n" % e)
 ```
 
@@ -4547,7 +4342,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_ip_sec_policy1**
 > SecurityIPSecPolicyList list_ip_sec_policy1()
@@ -4557,27 +4352,22 @@ List IPSecPolicy objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy_list import SecurityIPSecPolicyList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy_list import SecurityIPSecPolicyList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -4605,7 +4395,7 @@ with ApiClient() as api_client:
         # List IPSecPolicy objects
         api_response = api_instance.list_ip_sec_policy1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -4654,7 +4444,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_network_security_policy**
 > SecurityNetworkSecurityPolicyList list_network_security_policy(o_tenant)
@@ -4664,27 +4454,22 @@ List NetworkSecurityPolicy objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4711,7 +4496,7 @@ with ApiClient() as api_client:
         # List NetworkSecurityPolicy objects
         api_response = api_instance.list_network_security_policy(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_network_security_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4720,7 +4505,7 @@ with ApiClient() as api_client:
         # List NetworkSecurityPolicy objects
         api_response = api_instance.list_network_security_policy(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_network_security_policy: %s\n" % e)
 ```
 
@@ -4769,7 +4554,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_network_security_policy1**
 > SecurityNetworkSecurityPolicyList list_network_security_policy1()
@@ -4779,27 +4564,22 @@ List NetworkSecurityPolicy objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -4827,7 +4607,7 @@ with ApiClient() as api_client:
         # List NetworkSecurityPolicy objects
         api_response = api_instance.list_network_security_policy1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_network_security_policy1: %s\n" % e)
 ```
 
@@ -4876,7 +4656,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_security_group**
 > SecuritySecurityGroupList list_security_group(o_tenant)
@@ -4886,27 +4666,22 @@ List SecurityGroup objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group_list import SecuritySecurityGroupList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group_list import SecuritySecurityGroupList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -4933,7 +4708,7 @@ with ApiClient() as api_client:
         # List SecurityGroup objects
         api_response = api_instance.list_security_group(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_security_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -4942,7 +4717,7 @@ with ApiClient() as api_client:
         # List SecurityGroup objects
         api_response = api_instance.list_security_group(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_security_group: %s\n" % e)
 ```
 
@@ -4991,7 +4766,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_security_group1**
 > SecuritySecurityGroupList list_security_group1()
@@ -5001,27 +4776,22 @@ List SecurityGroup objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group_list import SecuritySecurityGroupList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group_list import SecuritySecurityGroupList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -5049,7 +4819,7 @@ with ApiClient() as api_client:
         # List SecurityGroup objects
         api_response = api_instance.list_security_group1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->list_security_group1: %s\n" % e)
 ```
 
@@ -5098,7 +4868,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app**
 > SecurityApp update_app(o_tenant, o_name, body)
@@ -5108,27 +4878,22 @@ Update App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5200,7 +4965,7 @@ with ApiClient() as api_client:
         # Update App object
         api_response = api_instance.update_app(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_app: %s\n" % e)
 ```
 
@@ -5236,7 +5001,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app1**
 > SecurityApp update_app1(o_name, body)
@@ -5246,27 +5011,22 @@ Update App object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_app import SecurityApp
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_app import SecurityApp
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5337,7 +5097,7 @@ with ApiClient() as api_client:
         # Update App object
         api_response = api_instance.update_app1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_app1: %s\n" % e)
 ```
 
@@ -5372,7 +5132,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_firewall_profile**
 > SecurityFirewallProfile update_firewall_profile(o_tenant, o_name, body)
@@ -5382,27 +5142,22 @@ Update FirewallProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5467,7 +5222,7 @@ with ApiClient() as api_client:
         # Update FirewallProfile object
         api_response = api_instance.update_firewall_profile(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_firewall_profile: %s\n" % e)
 ```
 
@@ -5503,7 +5258,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_firewall_profile1**
 > SecurityFirewallProfile update_firewall_profile1(o_name, body)
@@ -5513,27 +5268,22 @@ Update FirewallProfile object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5597,7 +5347,7 @@ with ApiClient() as api_client:
         # Update FirewallProfile object
         api_response = api_instance.update_firewall_profile1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_firewall_profile1: %s\n" % e)
 ```
 
@@ -5632,7 +5382,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ip_sec_policy**
 > SecurityIPSecPolicy update_ip_sec_policy(o_tenant, o_name, body)
@@ -5642,27 +5392,22 @@ Update IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -5745,7 +5490,7 @@ with ApiClient() as api_client:
         # Update IPSecPolicy object
         api_response = api_instance.update_ip_sec_policy(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_ip_sec_policy: %s\n" % e)
 ```
 
@@ -5781,7 +5526,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ip_sec_policy1**
 > SecurityIPSecPolicy update_ip_sec_policy1(o_name, body)
@@ -5791,27 +5536,22 @@ Update IPSecPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -5893,7 +5633,7 @@ with ApiClient() as api_client:
         # Update IPSecPolicy object
         api_response = api_instance.update_ip_sec_policy1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -5928,7 +5668,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_network_security_policy**
 > SecurityNetworkSecurityPolicy update_network_security_policy(o_tenant, o_name, body)
@@ -5938,27 +5678,22 @@ Update NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6044,7 +5779,7 @@ with ApiClient() as api_client:
         # Update NetworkSecurityPolicy object
         api_response = api_instance.update_network_security_policy(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_network_security_policy: %s\n" % e)
 ```
 
@@ -6080,7 +5815,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_network_security_policy1**
 > SecurityNetworkSecurityPolicy update_network_security_policy1(o_name, body)
@@ -6090,27 +5825,22 @@ Update NetworkSecurityPolicy object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -6195,7 +5925,7 @@ with ApiClient() as api_client:
         # Update NetworkSecurityPolicy object
         api_response = api_instance.update_network_security_policy1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_network_security_policy1: %s\n" % e)
 ```
 
@@ -6230,7 +5960,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_security_group**
 > SecuritySecurityGroup update_security_group(o_tenant, o_name, body)
@@ -6240,27 +5970,22 @@ Update SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6316,7 +6041,7 @@ with ApiClient() as api_client:
         # Update SecurityGroup object
         api_response = api_instance.update_security_group(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_security_group: %s\n" % e)
 ```
 
@@ -6352,7 +6077,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_security_group1**
 > SecuritySecurityGroup update_security_group1(o_name, body)
@@ -6362,27 +6087,22 @@ Update SecurityGroup object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -6437,7 +6157,7 @@ with ApiClient() as api_client:
         # Update SecurityGroup object
         api_response = api_instance.update_security_group1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->update_security_group1: %s\n" % e)
 ```
 
@@ -6472,7 +6192,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_app**
 > SecurityAutoMsgAppWatchHelper watch_app(o_tenant)
@@ -6482,27 +6202,22 @@ Watch App objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_app_watch_helper import SecurityAutoMsgAppWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_app_watch_helper import SecurityAutoMsgAppWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6529,7 +6244,7 @@ with ApiClient() as api_client:
         # Watch App objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_app(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_app: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6538,7 +6253,7 @@ with ApiClient() as api_client:
         # Watch App objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_app(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_app: %s\n" % e)
 ```
 
@@ -6587,7 +6302,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_app1**
 > SecurityAutoMsgAppWatchHelper watch_app1()
@@ -6597,27 +6312,22 @@ Watch App objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_app_watch_helper import SecurityAutoMsgAppWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_app_watch_helper import SecurityAutoMsgAppWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6645,7 +6355,7 @@ with ApiClient() as api_client:
         # Watch App objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_app1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_app1: %s\n" % e)
 ```
 
@@ -6694,7 +6404,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_firewall_profile**
 > SecurityAutoMsgFirewallProfileWatchHelper watch_firewall_profile(o_tenant)
@@ -6704,27 +6414,22 @@ Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_firewall_profile_watch_helper import SecurityAutoMsgFirewallProfileWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_firewall_profile_watch_helper import SecurityAutoMsgFirewallProfileWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6751,7 +6456,7 @@ with ApiClient() as api_client:
         # Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_firewall_profile(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_firewall_profile: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6760,7 +6465,7 @@ with ApiClient() as api_client:
         # Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_firewall_profile(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_firewall_profile: %s\n" % e)
 ```
 
@@ -6809,7 +6514,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_firewall_profile1**
 > SecurityAutoMsgFirewallProfileWatchHelper watch_firewall_profile1()
@@ -6819,27 +6524,22 @@ Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_firewall_profile_watch_helper import SecurityAutoMsgFirewallProfileWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_firewall_profile_watch_helper import SecurityAutoMsgFirewallProfileWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -6867,7 +6567,7 @@ with ApiClient() as api_client:
         # Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_firewall_profile1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_firewall_profile1: %s\n" % e)
 ```
 
@@ -6916,7 +6616,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_ip_sec_policy**
 > SecurityAutoMsgIPSecPolicyWatchHelper watch_ip_sec_policy(o_tenant)
@@ -6926,27 +6626,22 @@ Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -6973,7 +6668,7 @@ with ApiClient() as api_client:
         # Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ip_sec_policy(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_ip_sec_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -6982,7 +6677,7 @@ with ApiClient() as api_client:
         # Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ip_sec_policy(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_ip_sec_policy: %s\n" % e)
 ```
 
@@ -7031,7 +6726,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_ip_sec_policy1**
 > SecurityAutoMsgIPSecPolicyWatchHelper watch_ip_sec_policy1()
@@ -7041,27 +6736,22 @@ Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -7089,7 +6779,7 @@ with ApiClient() as api_client:
         # Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_ip_sec_policy1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_ip_sec_policy1: %s\n" % e)
 ```
 
@@ -7138,7 +6828,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_network_security_policy**
 > SecurityAutoMsgNetworkSecurityPolicyWatchHelper watch_network_security_policy(o_tenant)
@@ -7148,27 +6838,22 @@ Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_status import ApiStatus
-from pensando_ent.psm_ent.model.security_auto_msg_network_security_policy_watch_helper import SecurityAutoMsgNetworkSecurityPolicyWatchHelper
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_network_security_policy_watch_helper import SecurityAutoMsgNetworkSecurityPolicyWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -7195,7 +6880,7 @@ with ApiClient() as api_client:
         # Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network_security_policy(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_network_security_policy: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -7204,7 +6889,7 @@ with ApiClient() as api_client:
         # Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network_security_policy(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_network_security_policy: %s\n" % e)
 ```
 
@@ -7253,7 +6938,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_network_security_policy1**
 > SecurityAutoMsgNetworkSecurityPolicyWatchHelper watch_network_security_policy1()
@@ -7263,27 +6948,22 @@ Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_status import ApiStatus
-from pensando_ent.psm_ent.model.security_auto_msg_network_security_policy_watch_helper import SecurityAutoMsgNetworkSecurityPolicyWatchHelper
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_network_security_policy_watch_helper import SecurityAutoMsgNetworkSecurityPolicyWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -7311,7 +6991,7 @@ with ApiClient() as api_client:
         # Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_network_security_policy1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_network_security_policy1: %s\n" % e)
 ```
 
@@ -7360,7 +7040,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_security_group**
 > SecurityAutoMsgSecurityGroupWatchHelper watch_security_group(o_tenant)
@@ -7370,27 +7050,22 @@ Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -7417,7 +7092,7 @@ with ApiClient() as api_client:
         # Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_security_group(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_security_group: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -7426,7 +7101,7 @@ with ApiClient() as api_client:
         # Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_security_group(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_security_group: %s\n" % e)
 ```
 
@@ -7475,7 +7150,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_security_group1**
 > SecurityAutoMsgSecurityGroupWatchHelper watch_security_group1()
@@ -7485,27 +7160,22 @@ Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import security_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.security import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import security_v1_api
+from pensando_ent.psm.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_v1_api.SecurityV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -7533,7 +7203,7 @@ with ApiClient() as api_client:
         # Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_security_group1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling SecurityV1Api->watch_security_group1: %s\n" % e)
 ```
 
@@ -7582,5 +7252,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.SecurityV1Api top]](#psm_ent.SecurityV1Api) [[Back to security README]](../psm_ent/docs/security/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

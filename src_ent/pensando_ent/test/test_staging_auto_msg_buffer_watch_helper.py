@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.staging_auto_msg_buffer_watch_helper_watch_event import StagingAutoMsgBufferWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.staging_auto_msg_buffer_watch_helper_watch_event import StagingAutoMsgBufferWatchHelperWatchEvent
 globals()['StagingAutoMsgBufferWatchHelperWatchEvent'] = StagingAutoMsgBufferWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.staging_auto_msg_buffer_watch_helper import StagingAutoMsgBufferWatchHelper
+from pensando_ent.psm.psm.model.staging_auto_msg_buffer_watch_helper import StagingAutoMsgBufferWatchHelper
 
 
 class TestStagingAutoMsgBufferWatchHelper(unittest.TestCase):

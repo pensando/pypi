@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.telemetry_query_bottom_spec import TelemetryQueryBottomSpec
+import psm
+from pensando_ent.psm.psm.model.telemetry_query_bottom_spec import TelemetryQueryBottomSpec
 
 
 class TestTelemetryQueryBottomSpec(unittest.TestCase):

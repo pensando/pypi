@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.cluster_version import ClusterVersion
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.cluster_version import ClusterVersion
 globals()['ApiListMeta'] = ApiListMeta
 globals()['ClusterVersion'] = ClusterVersion
-from pensando_ent.psm_ent.psm_ent.model.cluster_version_list import ClusterVersionList
+from pensando_ent.psm.psm.model.cluster_version_list import ClusterVersionList
 
 
 class TestClusterVersionList(unittest.TestCase):

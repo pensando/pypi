@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_any import ApiAny
+import psm
+from pensando_ent.psm.model.api_any import ApiAny
 globals()['ApiAny'] = ApiAny
-from pensando_ent.psm_ent.psm_ent.model.search_entry import SearchEntry
+from pensando_ent.psm.psm.model.search_entry import SearchEntry
 
 
 class TestSearchEntry(unittest.TestCase):

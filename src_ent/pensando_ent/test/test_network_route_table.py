@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_route_table_status import NetworkRouteTableStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_route_table_status import NetworkRouteTableStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkRouteTableStatus'] = NetworkRouteTableStatus
-from pensando_ent.psm_ent.psm_ent.model.network_route_table import NetworkRouteTable
+from pensando_ent.psm.psm.model.network_route_table import NetworkRouteTable
 
 
 class TestNetworkRouteTable(unittest.TestCase):

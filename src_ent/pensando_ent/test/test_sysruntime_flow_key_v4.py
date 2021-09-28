@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_flow_key_esp_info import SysruntimeFlowKeyESPInfo
-from pensando_ent.psm_ent.model.sysruntime_flow_key_icmp_info import SysruntimeFlowKeyICMPInfo
-from pensando_ent.psm_ent.model.sysruntime_flow_key_tcp_udp_info import SysruntimeFlowKeyTcpUdpInfo
+import psm
+from pensando_ent.psm.model.sysruntime_flow_key_esp_info import SysruntimeFlowKeyESPInfo
+from pensando_ent.psm.model.sysruntime_flow_key_icmp_info import SysruntimeFlowKeyICMPInfo
+from pensando_ent.psm.model.sysruntime_flow_key_tcp_udp_info import SysruntimeFlowKeyTcpUdpInfo
 globals()['SysruntimeFlowKeyESPInfo'] = SysruntimeFlowKeyESPInfo
 globals()['SysruntimeFlowKeyICMPInfo'] = SysruntimeFlowKeyICMPInfo
 globals()['SysruntimeFlowKeyTcpUdpInfo'] = SysruntimeFlowKeyTcpUdpInfo
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_flow_key_v4 import SysruntimeFlowKeyV4
+from pensando_ent.psm.psm.model.sysruntime_flow_key_v4 import SysruntimeFlowKeyV4
 
 
 class TestSysruntimeFlowKeyV4(unittest.TestCase):

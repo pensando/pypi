@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.fields_selector import FieldsSelector
-from pensando_ent.psm_ent.model.telemetry_query_bottom_spec import TelemetryQueryBottomSpec
-from pensando_ent.psm_ent.model.telemetry_query_pagination_spec import TelemetryQueryPaginationSpec
-from pensando_ent.psm_ent.model.telemetry_query_top_spec import TelemetryQueryTopSpec
+import psm
+from pensando_ent.psm.model.fields_selector import FieldsSelector
+from pensando_ent.psm.model.telemetry_query_bottom_spec import TelemetryQueryBottomSpec
+from pensando_ent.psm.model.telemetry_query_pagination_spec import TelemetryQueryPaginationSpec
+from pensando_ent.psm.model.telemetry_query_top_spec import TelemetryQueryTopSpec
 globals()['FieldsSelector'] = FieldsSelector
 globals()['TelemetryQueryBottomSpec'] = TelemetryQueryBottomSpec
 globals()['TelemetryQueryPaginationSpec'] = TelemetryQueryPaginationSpec
 globals()['TelemetryQueryTopSpec'] = TelemetryQueryTopSpec
-from pensando_ent.psm_ent.psm_ent.model.telemetry_query_metrics_query_spec import TelemetryQueryMetricsQuerySpec
+from pensando_ent.psm.psm.model.telemetry_query_metrics_query_spec import TelemetryQueryMetricsQuerySpec
 
 
 class TestTelemetryQueryMetricsQuerySpec(unittest.TestCase):

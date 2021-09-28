@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_host_status import ClusterHostStatus
+import psm
+from pensando_ent.psm.psm.model.cluster_host_status import ClusterHostStatus
 
 
 class TestClusterHostStatus(unittest.TestCase):

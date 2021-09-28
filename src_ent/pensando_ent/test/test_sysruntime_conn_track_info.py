@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_conn_track_info import SysruntimeConnTrackInfo
+import psm
+from pensando_ent.psm.psm.model.sysruntime_conn_track_info import SysruntimeConnTrackInfo
 
 
 class TestSysruntimeConnTrackInfo(unittest.TestCase):

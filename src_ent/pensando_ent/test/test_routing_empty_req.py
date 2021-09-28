@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.routing_empty_req import RoutingEmptyReq
+import psm
+from pensando_ent.psm.psm.model.routing_empty_req import RoutingEmptyReq
 
 
 class TestRoutingEmptyReq(unittest.TestCase):

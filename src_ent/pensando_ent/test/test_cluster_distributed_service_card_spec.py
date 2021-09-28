@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef
-from pensando_ent.psm_ent.model.cluster_ip_config import ClusterIPConfig
-from pensando_ent.psm_ent.model.cluster_policer_ref import ClusterPolicerRef
+import psm
+from pensando_ent.psm.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef
+from pensando_ent.psm.model.cluster_ip_config import ClusterIPConfig
+from pensando_ent.psm.model.cluster_policer_ref import ClusterPolicerRef
 globals()['ClusterFwlogPolicyRef'] = ClusterFwlogPolicyRef
 globals()['ClusterIPConfig'] = ClusterIPConfig
 globals()['ClusterPolicerRef'] = ClusterPolicerRef
-from pensando_ent.psm_ent.psm_ent.model.cluster_distributed_service_card_spec import ClusterDistributedServiceCardSpec
+from pensando_ent.psm.psm.model.cluster_distributed_service_card_spec import ClusterDistributedServiceCardSpec
 
 
 class TestClusterDistributedServiceCardSpec(unittest.TestCase):

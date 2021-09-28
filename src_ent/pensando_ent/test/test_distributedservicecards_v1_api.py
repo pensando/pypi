@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.distributedservicecards_v1_api import DistributedservicecardsV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.distributedservicecards_v1_api import DistributedservicecardsV1Api  # noqa: E501
 
 
 class TestDistributedservicecardsV1Api(unittest.TestCase):

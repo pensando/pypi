@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.health_status_peering_status import HealthStatusPeeringStatus
+import psm
+from pensando_ent.psm.model.health_status_peering_status import HealthStatusPeeringStatus
 globals()['HealthStatusPeeringStatus'] = HealthStatusPeeringStatus
-from pensando_ent.psm_ent.psm_ent.model.routing_health_status import RoutingHealthStatus
+from pensando_ent.psm.psm.model.routing_health_status import RoutingHealthStatus
 
 
 class TestRoutingHealthStatus(unittest.TestCase):

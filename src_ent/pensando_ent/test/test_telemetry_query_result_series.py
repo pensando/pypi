@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_interface_slice import ApiInterfaceSlice
+import psm
+from pensando_ent.psm.model.api_interface_slice import ApiInterfaceSlice
 globals()['ApiInterfaceSlice'] = ApiInterfaceSlice
-from pensando_ent.psm_ent.psm_ent.model.telemetry_query_result_series import TelemetryQueryResultSeries
+from pensando_ent.psm.psm.model.telemetry_query_result_series import TelemetryQueryResultSeries
 
 
 class TestTelemetryQueryResultSeries(unittest.TestCase):

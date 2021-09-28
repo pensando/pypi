@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_auto_msg_tenant_watch_helper_watch_event import ClusterAutoMsgTenantWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.cluster_auto_msg_tenant_watch_helper_watch_event import ClusterAutoMsgTenantWatchHelperWatchEvent
 globals()['ClusterAutoMsgTenantWatchHelperWatchEvent'] = ClusterAutoMsgTenantWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_tenant_watch_helper import ClusterAutoMsgTenantWatchHelper
+from pensando_ent.psm.psm.model.cluster_auto_msg_tenant_watch_helper import ClusterAutoMsgTenantWatchHelper
 
 
 class TestClusterAutoMsgTenantWatchHelper(unittest.TestCase):

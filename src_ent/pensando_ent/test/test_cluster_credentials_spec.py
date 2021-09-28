@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_key_value import ClusterKeyValue
+import psm
+from pensando_ent.psm.model.cluster_key_value import ClusterKeyValue
 globals()['ClusterKeyValue'] = ClusterKeyValue
-from pensando_ent.psm_ent.psm_ent.model.cluster_credentials_spec import ClusterCredentialsSpec
+from pensando_ent.psm.psm.model.cluster_credentials_spec import ClusterCredentialsSpec
 
 
 class TestClusterCredentialsSpec(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
 globals()['ApiObjectMeta'] = ApiObjectMeta
-from pensando_ent.psm_ent.psm_ent.model.monitoring_cancel_archive_request import MonitoringCancelArchiveRequest
+from pensando_ent.psm.psm.model.monitoring_cancel_archive_request import MonitoringCancelArchiveRequest
 
 
 class TestMonitoringCancelArchiveRequest(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.objstore_bucket import ObjstoreBucket
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.objstore_bucket import ObjstoreBucket
 globals()['ApiListMeta'] = ApiListMeta
 globals()['ObjstoreBucket'] = ObjstoreBucket
-from pensando_ent.psm_ent.psm_ent.model.objstore_bucket_list import ObjstoreBucketList
+from pensando_ent.psm.psm.model.objstore_bucket_list import ObjstoreBucketList
 
 
 class TestObjstoreBucketList(unittest.TestCase):

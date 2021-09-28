@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.objstore_bucket_spec import ObjstoreBucketSpec
-from pensando_ent.psm_ent.model.objstore_bucket_status import ObjstoreBucketStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.objstore_bucket_spec import ObjstoreBucketSpec
+from pensando_ent.psm.model.objstore_bucket_status import ObjstoreBucketStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ObjstoreBucketSpec'] = ObjstoreBucketSpec
 globals()['ObjstoreBucketStatus'] = ObjstoreBucketStatus
-from pensando_ent.psm_ent.psm_ent.model.objstore_bucket import ObjstoreBucket
+from pensando_ent.psm.psm.model.objstore_bucket import ObjstoreBucket
 
 
 class TestObjstoreBucket(unittest.TestCase):

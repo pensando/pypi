@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.diagnostics_auto_msg_module_watch_helper_watch_event import DiagnosticsAutoMsgModuleWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.diagnostics_auto_msg_module_watch_helper_watch_event import DiagnosticsAutoMsgModuleWatchHelperWatchEvent
 globals()['DiagnosticsAutoMsgModuleWatchHelperWatchEvent'] = DiagnosticsAutoMsgModuleWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.diagnostics_auto_msg_module_watch_helper import DiagnosticsAutoMsgModuleWatchHelper
+from pensando_ent.psm.psm.model.diagnostics_auto_msg_module_watch_helper import DiagnosticsAutoMsgModuleWatchHelper
 
 
 class TestDiagnosticsAutoMsgModuleWatchHelper(unittest.TestCase):

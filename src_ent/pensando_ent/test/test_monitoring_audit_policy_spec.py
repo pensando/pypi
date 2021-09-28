@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_syslog_auditor import MonitoringSyslogAuditor
+import psm
+from pensando_ent.psm.model.monitoring_syslog_auditor import MonitoringSyslogAuditor
 globals()['MonitoringSyslogAuditor'] = MonitoringSyslogAuditor
-from pensando_ent.psm_ent.psm_ent.model.monitoring_audit_policy_spec import MonitoringAuditPolicySpec
+from pensando_ent.psm.psm.model.monitoring_audit_policy_spec import MonitoringAuditPolicySpec
 
 
 class TestMonitoringAuditPolicySpec(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.security_proto_port import SecurityProtoPort
+import psm
+from pensando_ent.psm.psm.model.security_proto_port import SecurityProtoPort
 
 
 class TestSecurityProtoPort(unittest.TestCase):

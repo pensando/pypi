@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.configuration_snapshot_status_config_save_status import ConfigurationSnapshotStatusConfigSaveStatus
+import psm
+from pensando_ent.psm.model.configuration_snapshot_status_config_save_status import ConfigurationSnapshotStatusConfigSaveStatus
 globals()['ConfigurationSnapshotStatusConfigSaveStatus'] = ConfigurationSnapshotStatusConfigSaveStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_configuration_snapshot_status import ClusterConfigurationSnapshotStatus
+from pensando_ent.psm.psm.model.cluster_configuration_snapshot_status import ClusterConfigurationSnapshotStatus
 
 
 class TestClusterConfigurationSnapshotStatus(unittest.TestCase):

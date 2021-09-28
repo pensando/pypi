@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_propagation_status import SecurityPropagationStatus
-from pensando_ent.psm_ent.model.security_sg_rule_status import SecuritySGRuleStatus
+import psm
+from pensando_ent.psm.model.security_propagation_status import SecurityPropagationStatus
+from pensando_ent.psm.model.security_sg_rule_status import SecuritySGRuleStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
 globals()['SecuritySGRuleStatus'] = SecuritySGRuleStatus
-from pensando_ent.psm_ent.psm_ent.model.security_network_security_policy_status import SecurityNetworkSecurityPolicyStatus
+from pensando_ent.psm.psm.model.security_network_security_policy_status import SecurityNetworkSecurityPolicyStatus
 
 
 class TestSecurityNetworkSecurityPolicyStatus(unittest.TestCase):

@@ -1,6 +1,6 @@
-# psm_ent.FwlogV1Api
+# psm.FwlogV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,26 +19,21 @@ fwlog/v1/tenants/default/objects/<objectName>
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import fwlog_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.fwlog import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.fwlog_fw_log_list import FwlogFwLogList
+import psm
+from api import fwlog_v1_api
+from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = fwlog_v1_api.FwlogV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -65,7 +60,7 @@ with ApiClient() as api_client:
         # fwlog/v1/tenants/default/objects/<objectName>
         api_response = api_instance.get_download_fw_log_file_content(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->get_download_fw_log_file_content: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -74,7 +69,7 @@ with ApiClient() as api_client:
         # fwlog/v1/tenants/default/objects/<objectName>
         api_response = api_instance.get_download_fw_log_file_content(o_tenant, o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->get_download_fw_log_file_content: %s\n" % e)
 ```
 
@@ -117,7 +112,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.FwlogV1Api top]](#psm_ent.FwlogV1Api) [[Back to fwlog README]](../psm_ent/docs/fwlog/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_download_fw_log_file_content1**
 > FwlogFwLogList get_download_fw_log_file_content1(o_name)
@@ -127,26 +122,21 @@ fwlog/v1/tenants/default/objects/<objectName>
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import fwlog_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.fwlog import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.fwlog_fw_log_list import FwlogFwLogList
+import psm
+from api import fwlog_v1_api
+from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = fwlog_v1_api.FwlogV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -173,7 +163,7 @@ with ApiClient() as api_client:
         # fwlog/v1/tenants/default/objects/<objectName>
         api_response = api_instance.get_download_fw_log_file_content1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->get_download_fw_log_file_content1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -182,7 +172,7 @@ with ApiClient() as api_client:
         # fwlog/v1/tenants/default/objects/<objectName>
         api_response = api_instance.get_download_fw_log_file_content1(o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->get_download_fw_log_file_content1: %s\n" % e)
 ```
 
@@ -225,7 +215,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.FwlogV1Api top]](#psm_ent.FwlogV1Api) [[Back to fwlog README]](../psm_ent/docs/fwlog/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_get_logs1**
 > FwlogFwLogList get_get_logs1()
@@ -235,26 +225,21 @@ Queries firewall logs
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import fwlog_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.fwlog import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.fwlog_fw_log_list import FwlogFwLogList
+import psm
+from api import fwlog_v1_api
+from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = fwlog_v1_api.FwlogV1Api(api_client)
     source_ips = [
@@ -298,7 +283,7 @@ with ApiClient() as api_client:
         # Queries firewall logs
         api_response = api_instance.get_get_logs1(source_ips=source_ips, destination_ips=destination_ips, source_ports=source_ports, destination_ports=destination_ports, protocols=protocols, actions=actions, reporter_ids=reporter_ids, start_time=start_time, end_time=end_time, sort_order=sort_order, max_results=max_results, tenants=tenants, scroll_id=scroll_id, scroll_expiry=scroll_expiry, batch_size=batch_size, scroll_action=scroll_action, count_only=count_only, encryption_status=encryption_status)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->get_get_logs1: %s\n" % e)
 ```
 
@@ -343,7 +328,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.FwlogV1Api top]](#psm_ent.FwlogV1Api) [[Back to fwlog README]](../psm_ent/docs/fwlog/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_watch_logs**
 > FwlogFwLogList get_watch_logs()
@@ -353,26 +338,21 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import fwlog_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.fwlog import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.fwlog_fw_log_list import FwlogFwLogList
+import psm
+from api import fwlog_v1_api
+from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = fwlog_v1_api.FwlogV1Api(api_client)
     source_ips = [
@@ -413,9 +393,9 @@ with ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_watch_logs(source_ips=source_ips, destination_ips=destination_ips, source_ports=source_ports, destination_ports=destination_ports, protocols=protocols, actions=actions, reporter_ids=reporter_ids, start_time=start_time, end_time=end_time, sort_order=sort_order, max_results=max_results, tenants=tenants, scroll_id=scroll_id, scroll_expiry=scroll_expiry, batch_size=batch_size, scroll_action=scroll_action, count_only=count_only, encryption_status=encryption_status)
+        api_response = api_instance.get_watch_logs(source_ips=source_ips, destination_ips=destination_ips, source_ports=source_ports, destination_ports=destination_ports, protocols=protocols, actions=actions, reporter_ids=reporter_ids, start_time=start_time, end_time=end_time, sort_order=sort_order, max_results=max_results, tenants=tenants, scroll_id=scroll_id, scroll_expiry=scroll_expiry, batch_size=batch_size, scroll_action=scroll_action, count_only=count_only, encryption_status=encryption_status)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->get_watch_logs: %s\n" % e)
 ```
 
@@ -460,7 +440,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (streaming responses) |  -  |
 
-[[Back to psm_ent.FwlogV1Api top]](#psm_ent.FwlogV1Api) [[Back to fwlog README]](../psm_ent/docs/fwlog/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_get_logs**
 > FwlogFwLogList post_get_logs(body)
@@ -470,27 +450,22 @@ Queries firewall logs
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import fwlog_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.fwlog import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.fwlog_fw_log_list import FwlogFwLogList
-from pensando_ent.psm_ent.model.fwlog_fw_log_query import FwlogFwLogQuery
+import psm
+from api import fwlog_v1_api
+from pensando_ent.psm.model.fwlog_fw_log_query import FwlogFwLogQuery
+from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = fwlog_v1_api.FwlogV1Api(api_client)
     body = FwlogFwLogQuery(
@@ -535,7 +510,7 @@ with ApiClient() as api_client:
         # Queries firewall logs
         api_response = api_instance.post_get_logs(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling FwlogV1Api->post_get_logs: %s\n" % e)
 ```
 
@@ -563,5 +538,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.FwlogV1Api top]](#psm_ent.FwlogV1Api) [[Back to fwlog README]](../psm_ent/docs/fwlog/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_flow_spec import SysruntimeFlowSpec
+import psm
+from pensando_ent.psm.model.sysruntime_flow_spec import SysruntimeFlowSpec
 globals()['SysruntimeFlowSpec'] = SysruntimeFlowSpec
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_hw_connection_spec import SysruntimeHWConnectionSpec
+from pensando_ent.psm.psm.model.sysruntime_hw_connection_spec import SysruntimeHWConnectionSpec
 
 
 class TestSysruntimeHWConnectionSpec(unittest.TestCase):

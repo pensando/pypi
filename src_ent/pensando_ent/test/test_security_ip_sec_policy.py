@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.security_ip_sec_policy_spec import SecurityIPSecPolicySpec
-from pensando_ent.psm_ent.model.security_ip_sec_policy_status import SecurityIPSecPolicyStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.security_ip_sec_policy_spec import SecurityIPSecPolicySpec
+from pensando_ent.psm.model.security_ip_sec_policy_status import SecurityIPSecPolicyStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['SecurityIPSecPolicySpec'] = SecurityIPSecPolicySpec
 globals()['SecurityIPSecPolicyStatus'] = SecurityIPSecPolicyStatus
-from pensando_ent.psm_ent.psm_ent.model.security_ip_sec_policy import SecurityIPSecPolicy
+from pensando_ent.psm.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 
 
 class TestSecurityIPSecPolicy(unittest.TestCase):

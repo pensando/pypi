@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
+import psm
+from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 globals()['MonitoringFwlogPolicy'] = MonitoringFwlogPolicy
-from pensando_ent.psm_ent.psm_ent.model.monitoring_auto_msg_fwlog_policy_watch_helper_watch_event import MonitoringAutoMsgFwlogPolicyWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.monitoring_auto_msg_fwlog_policy_watch_helper_watch_event import MonitoringAutoMsgFwlogPolicyWatchHelperWatchEvent
 
 
 class TestMonitoringAutoMsgFwlogPolicyWatchHelperWatchEvent(unittest.TestCase):

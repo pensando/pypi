@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.search_text_requirement import SearchTextRequirement
+import psm
+from pensando_ent.psm.psm.model.search_text_requirement import SearchTextRequirement
 
 
 class TestSearchTextRequirement(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_i_psec_protocol_spec import SecurityIPsecProtocolSpec
-from pensando_ent.psm_ent.model.security_tls_protocol_spec import SecurityTLSProtocolSpec
+import psm
+from pensando_ent.psm.model.security_i_psec_protocol_spec import SecurityIPsecProtocolSpec
+from pensando_ent.psm.model.security_tls_protocol_spec import SecurityTLSProtocolSpec
 globals()['SecurityIPsecProtocolSpec'] = SecurityIPsecProtocolSpec
 globals()['SecurityTLSProtocolSpec'] = SecurityTLSProtocolSpec
-from pensando_ent.psm_ent.psm_ent.model.security_traffic_encryption_policy_spec import SecurityTrafficEncryptionPolicySpec
+from pensando_ent.psm.psm.model.security_traffic_encryption_policy_spec import SecurityTrafficEncryptionPolicySpec
 
 
 class TestSecurityTrafficEncryptionPolicySpec(unittest.TestCase):

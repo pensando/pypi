@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.orchestration_v1_api import OrchestrationV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.orchestration_v1_api import OrchestrationV1Api  # noqa: E501
 
 
 class TestOrchestrationV1Api(unittest.TestCase):

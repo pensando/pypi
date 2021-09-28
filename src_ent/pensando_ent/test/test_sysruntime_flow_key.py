@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_flow_key_l2 import SysruntimeFlowKeyL2
-from pensando_ent.psm_ent.model.sysruntime_flow_key_v4 import SysruntimeFlowKeyV4
+import psm
+from pensando_ent.psm.model.sysruntime_flow_key_l2 import SysruntimeFlowKeyL2
+from pensando_ent.psm.model.sysruntime_flow_key_v4 import SysruntimeFlowKeyV4
 globals()['SysruntimeFlowKeyL2'] = SysruntimeFlowKeyL2
 globals()['SysruntimeFlowKeyV4'] = SysruntimeFlowKeyV4
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_flow_key import SysruntimeFlowKey
+from pensando_ent.psm.psm.model.sysruntime_flow_key import SysruntimeFlowKey
 
 
 class TestSysruntimeFlowKey(unittest.TestCase):

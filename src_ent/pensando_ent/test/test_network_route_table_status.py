@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_route import NetworkRoute
+import psm
+from pensando_ent.psm.model.network_route import NetworkRoute
 globals()['NetworkRoute'] = NetworkRoute
-from pensando_ent.psm_ent.psm_ent.model.network_route_table_status import NetworkRouteTableStatus
+from pensando_ent.psm.psm.model.network_route_table_status import NetworkRouteTableStatus
 
 
 class TestNetworkRouteTableStatus(unittest.TestCase):

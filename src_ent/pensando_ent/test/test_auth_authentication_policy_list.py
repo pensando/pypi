@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.auth_authentication_policy import AuthAuthenticationPolicy
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 globals()['ApiListMeta'] = ApiListMeta
 globals()['AuthAuthenticationPolicy'] = AuthAuthenticationPolicy
-from pensando_ent.psm_ent.psm_ent.model.auth_authentication_policy_list import AuthAuthenticationPolicyList
+from pensando_ent.psm.psm.model.auth_authentication_policy_list import AuthAuthenticationPolicyList
 
 
 class TestAuthAuthenticationPolicyList(unittest.TestCase):

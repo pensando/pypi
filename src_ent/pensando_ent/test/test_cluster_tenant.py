@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_tenant_spec import ClusterTenantSpec
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_tenant_spec import ClusterTenantSpec
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterTenantSpec'] = ClusterTenantSpec
-from pensando_ent.psm_ent.psm_ent.model.cluster_tenant import ClusterTenant
+from pensando_ent.psm.psm.model.cluster_tenant import ClusterTenant
 
 
 class TestClusterTenant(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.orchestration_orchestrator import OrchestrationOrchestrator
+import psm
+from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 globals()['OrchestrationOrchestrator'] = OrchestrationOrchestrator
-from pensando_ent.psm_ent.psm_ent.model.orchestration_auto_msg_orchestrator_watch_helper_watch_event import OrchestrationAutoMsgOrchestratorWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.orchestration_auto_msg_orchestrator_watch_helper_watch_event import OrchestrationAutoMsgOrchestratorWatchHelperWatchEvent
 
 
 class TestOrchestrationAutoMsgOrchestratorWatchHelperWatchEvent(unittest.TestCase):

@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.auth_user_spec import AuthUserSpec
-from pensando_ent.psm_ent.model.auth_user_status import AuthUserStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.auth_user_spec import AuthUserSpec
+from pensando_ent.psm.model.auth_user_status import AuthUserStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['AuthUserSpec'] = AuthUserSpec
 globals()['AuthUserStatus'] = AuthUserStatus
-from pensando_ent.psm_ent.psm_ent.model.auth_user import AuthUser
+from pensando_ent.psm.psm.model.auth_user import AuthUser
 
 
 class TestAuthUser(unittest.TestCase):

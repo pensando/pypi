@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_hw_connection_spec import SysruntimeHWConnectionSpec
-from pensando_ent.psm_ent.model.sysruntime_hw_connection_stats import SysruntimeHWConnectionStats
-from pensando_ent.psm_ent.model.sysruntime_hw_connection_status import SysruntimeHWConnectionStatus
+import psm
+from pensando_ent.psm.model.sysruntime_hw_connection_spec import SysruntimeHWConnectionSpec
+from pensando_ent.psm.model.sysruntime_hw_connection_stats import SysruntimeHWConnectionStats
+from pensando_ent.psm.model.sysruntime_hw_connection_status import SysruntimeHWConnectionStatus
 globals()['SysruntimeHWConnectionSpec'] = SysruntimeHWConnectionSpec
 globals()['SysruntimeHWConnectionStats'] = SysruntimeHWConnectionStats
 globals()['SysruntimeHWConnectionStatus'] = SysruntimeHWConnectionStatus
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_hw_connection_get_response import SysruntimeHWConnectionGetResponse
+from pensando_ent.psm.psm.model.sysruntime_hw_connection_get_response import SysruntimeHWConnectionGetResponse
 
 
 class TestSysruntimeHWConnectionGetResponse(unittest.TestCase):

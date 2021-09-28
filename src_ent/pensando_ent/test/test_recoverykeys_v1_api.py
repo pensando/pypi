@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.recoverykeys_v1_api import RecoverykeysV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.recoverykeys_v1_api import RecoverykeysV1Api  # noqa: E501
 
 
 class TestRecoverykeysV1Api(unittest.TestCase):

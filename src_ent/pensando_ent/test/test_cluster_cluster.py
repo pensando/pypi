@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_cluster_spec import ClusterClusterSpec
-from pensando_ent.psm_ent.model.cluster_cluster_status import ClusterClusterStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_cluster_spec import ClusterClusterSpec
+from pensando_ent.psm.model.cluster_cluster_status import ClusterClusterStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterClusterSpec'] = ClusterClusterSpec
 globals()['ClusterClusterStatus'] = ClusterClusterStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_cluster import ClusterCluster
+from pensando_ent.psm.psm.model.cluster_cluster import ClusterCluster
 
 
 class TestClusterCluster(unittest.TestCase):

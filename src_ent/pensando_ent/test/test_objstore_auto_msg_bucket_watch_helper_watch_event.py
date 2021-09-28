@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.objstore_bucket import ObjstoreBucket
+import psm
+from pensando_ent.psm.model.objstore_bucket import ObjstoreBucket
 globals()['ObjstoreBucket'] = ObjstoreBucket
-from pensando_ent.psm_ent.psm_ent.model.objstore_auto_msg_bucket_watch_helper_watch_event import ObjstoreAutoMsgBucketWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.objstore_auto_msg_bucket_watch_helper_watch_event import ObjstoreAutoMsgBucketWatchHelperWatchEvent
 
 
 class TestObjstoreAutoMsgBucketWatchHelperWatchEvent(unittest.TestCase):

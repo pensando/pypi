@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_auto_msg_alert_watch_helper_watch_event import MonitoringAutoMsgAlertWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.monitoring_auto_msg_alert_watch_helper_watch_event import MonitoringAutoMsgAlertWatchHelperWatchEvent
 globals()['MonitoringAutoMsgAlertWatchHelperWatchEvent'] = MonitoringAutoMsgAlertWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.monitoring_auto_msg_alert_watch_helper import MonitoringAutoMsgAlertWatchHelper
+from pensando_ent.psm.psm.model.monitoring_auto_msg_alert_watch_helper import MonitoringAutoMsgAlertWatchHelper
 
 
 class TestMonitoringAutoMsgAlertWatchHelper(unittest.TestCase):

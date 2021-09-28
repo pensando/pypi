@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
 globals()['ApiObjectMeta'] = ApiObjectMeta
-from pensando_ent.psm_ent.psm_ent.model.routing_route_filter import RoutingRouteFilter
+from pensando_ent.psm.psm.model.routing_route_filter import RoutingRouteFilter
 
 
 class TestRoutingRouteFilter(unittest.TestCase):

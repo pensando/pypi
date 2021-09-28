@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_feature_status import ClusterFeatureStatus
+import psm
+from pensando_ent.psm.model.cluster_feature_status import ClusterFeatureStatus
 globals()['ClusterFeatureStatus'] = ClusterFeatureStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_license_status import ClusterLicenseStatus
+from pensando_ent.psm.psm.model.cluster_license_status import ClusterLicenseStatus
 
 
 class TestClusterLicenseStatus(unittest.TestCase):

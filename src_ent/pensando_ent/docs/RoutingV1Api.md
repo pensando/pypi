@@ -1,6 +1,6 @@
-# psm_ent.RoutingV1Api
+# psm.RoutingV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,35 +18,30 @@ Method | HTTP request | Description
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import routing_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.routing import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.routing_health import RoutingHealth
+import psm
+from api import routing_v1_api
+from pensando_ent.psm.model.routing_health import RoutingHealth
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = routing_v1_api.RoutingV1Api(api_client)
     instance = "Instance_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
-                api_response = api_instance.get_health_z(instance)
+        api_response = api_instance.get_health_z(instance)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling RoutingV1Api->get_health_z: %s\n" % e)
 ```
 
@@ -74,7 +69,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.RoutingV1Api top]](#psm_ent.RoutingV1Api) [[Back to routing README]](../psm_ent/docs/routing/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_list_neighbors**
 > RoutingNeighborList get_list_neighbors(instance)
@@ -84,26 +79,21 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import routing_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.routing import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.routing_neighbor_list import RoutingNeighborList
+import psm
+from api import routing_v1_api
+from pensando_ent.psm.model.routing_neighbor_list import RoutingNeighborList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = routing_v1_api.RoutingV1Api(api_client)
     instance = "Instance_example" # str | 
@@ -122,17 +112,17 @@ with ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-                api_response = api_instance.get_list_neighbors(instance)
+        api_response = api_instance.get_list_neighbors(instance)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling RoutingV1Api->get_list_neighbors: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_list_neighbors(instance, t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, neighbor=neighbor)
+        api_response = api_instance.get_list_neighbors(instance, t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, neighbor=neighbor)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling RoutingV1Api->get_list_neighbors: %s\n" % e)
 ```
 
@@ -172,7 +162,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.RoutingV1Api top]](#psm_ent.RoutingV1Api) [[Back to routing README]](../psm_ent/docs/routing/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_list_routes1**
 > RoutingRouteList get_list_routes1(instance)
@@ -182,26 +172,21 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import routing_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.routing import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.routing_route_list import RoutingRouteList
+import psm
+from api import routing_v1_api
+from pensando_ent.psm.model.routing_route_list import RoutingRouteList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = routing_v1_api.RoutingV1Api(api_client)
     instance = "Instance_example" # str | 
@@ -227,17 +212,17 @@ with ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-                api_response = api_instance.get_list_routes1(instance)
+        api_response = api_instance.get_list_routes1(instance)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling RoutingV1Api->get_list_routes1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_list_routes1(instance, t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, ipaddress=ipaddress, type=type, extcomm=extcomm, vnid=vnid, rtype=rtype, nhop=nhop, page_number=page_number, all_routes=all_routes)
+        api_response = api_instance.get_list_routes1(instance, t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, ipaddress=ipaddress, type=type, extcomm=extcomm, vnid=vnid, rtype=rtype, nhop=nhop, page_number=page_number, all_routes=all_routes)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling RoutingV1Api->get_list_routes1: %s\n" % e)
 ```
 
@@ -284,7 +269,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.RoutingV1Api top]](#psm_ent.RoutingV1Api) [[Back to routing README]](../psm_ent/docs/routing/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_list_routes**
 > RoutingRouteList post_list_routes(instance, body)
@@ -294,27 +279,22 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import routing_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.routing import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.routing_route_list import RoutingRouteList
-from pensando_ent.psm_ent.model.routing_route_filter import RoutingRouteFilter
+import psm
+from api import routing_v1_api
+from pensando_ent.psm.model.routing_route_list import RoutingRouteList
+from pensando_ent.psm.model.routing_route_filter import RoutingRouteFilter
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = routing_v1_api.RoutingV1Api(api_client)
     instance = "Instance_example" # str | 
@@ -348,9 +328,9 @@ with ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-                api_response = api_instance.post_list_routes(instance, body)
+        api_response = api_instance.post_list_routes(instance, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling RoutingV1Api->post_list_routes: %s\n" % e)
 ```
 
@@ -379,5 +359,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.RoutingV1Api top]](#psm_ent.RoutingV1Api) [[Back to routing README]](../psm_ent/docs/routing/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

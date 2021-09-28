@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_tech_support_request import MonitoringTechSupportRequest
+import psm
+from pensando_ent.psm.model.monitoring_tech_support_request import MonitoringTechSupportRequest
 globals()['MonitoringTechSupportRequest'] = MonitoringTechSupportRequest
-from pensando_ent.psm_ent.psm_ent.model.monitoring_auto_msg_tech_support_request_watch_helper_watch_event import MonitoringAutoMsgTechSupportRequestWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.monitoring_auto_msg_tech_support_request_watch_helper_watch_event import MonitoringAutoMsgTechSupportRequestWatchHelperWatchEvent
 
 
 class TestMonitoringAutoMsgTechSupportRequestWatchHelperWatchEvent(unittest.TestCase):

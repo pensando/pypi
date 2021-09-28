@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.preferences_idle_timeout import PreferencesIdleTimeout
+import psm
+from pensando_ent.psm.psm.model.preferences_idle_timeout import PreferencesIdleTimeout
 
 
 class TestPreferencesIdleTimeout(unittest.TestCase):

@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.search_v1_api import SearchV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.search_v1_api import SearchV1Api  # noqa: E501
 
 
 class TestSearchV1Api(unittest.TestCase):

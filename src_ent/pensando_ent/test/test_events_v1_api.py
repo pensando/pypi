@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.events_v1_api import EventsV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.events_v1_api import EventsV1Api  # noqa: E501
 
 
 class TestEventsV1Api(unittest.TestCase):

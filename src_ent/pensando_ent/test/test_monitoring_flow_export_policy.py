@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_flow_export_policy_spec import MonitoringFlowExportPolicySpec
-from pensando_ent.psm_ent.model.monitoring_flow_export_policy_status import MonitoringFlowExportPolicyStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_flow_export_policy_spec import MonitoringFlowExportPolicySpec
+from pensando_ent.psm.model.monitoring_flow_export_policy_status import MonitoringFlowExportPolicyStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringFlowExportPolicySpec'] = MonitoringFlowExportPolicySpec
 globals()['MonitoringFlowExportPolicyStatus'] = MonitoringFlowExportPolicyStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
+from pensando_ent.psm.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 
 
 class TestMonitoringFlowExportPolicy(unittest.TestCase):

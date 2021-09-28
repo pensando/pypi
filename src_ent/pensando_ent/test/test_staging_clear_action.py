@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.staging_clear_action_spec import StagingClearActionSpec
-from pensando_ent.psm_ent.model.staging_clear_action_status import StagingClearActionStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.staging_clear_action_spec import StagingClearActionSpec
+from pensando_ent.psm.model.staging_clear_action_status import StagingClearActionStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['StagingClearActionSpec'] = StagingClearActionSpec
 globals()['StagingClearActionStatus'] = StagingClearActionStatus
-from pensando_ent.psm_ent.psm_ent.model.staging_clear_action import StagingClearAction
+from pensando_ent.psm.psm.model.staging_clear_action import StagingClearAction
 
 
 class TestStagingClearAction(unittest.TestCase):

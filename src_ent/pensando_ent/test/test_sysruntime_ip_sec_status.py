@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_ip_sec_status import SysruntimeIPSecStatus
+import psm
+from pensando_ent.psm.psm.model.sysruntime_ip_sec_status import SysruntimeIPSecStatus
 
 
 class TestSysruntimeIPSecStatus(unittest.TestCase):

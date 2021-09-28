@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.security_icmp import SecurityIcmp
+import psm
+from pensando_ent.psm.psm.model.security_icmp import SecurityIcmp
 
 
 class TestSecurityIcmp(unittest.TestCase):

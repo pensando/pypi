@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.routing_health_status import RoutingHealthStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.routing_health_status import RoutingHealthStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['RoutingHealthStatus'] = RoutingHealthStatus
-from pensando_ent.psm_ent.psm_ent.model.routing_health import RoutingHealth
+from pensando_ent.psm.psm.model.routing_health import RoutingHealth
 
 
 class TestRoutingHealth(unittest.TestCase):

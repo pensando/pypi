@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_operation_status import AuthOperationStatus
+import psm
+from pensando_ent.psm.model.auth_operation_status import AuthOperationStatus
 globals()['AuthOperationStatus'] = AuthOperationStatus
-from pensando_ent.psm_ent.psm_ent.model.auth_user_status import AuthUserStatus
+from pensando_ent.psm.psm.model.auth_user_status import AuthUserStatus
 
 
 class TestAuthUserStatus(unittest.TestCase):

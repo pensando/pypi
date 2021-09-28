@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.search_policy_search_request import SearchPolicySearchRequest
+import psm
+from pensando_ent.psm.psm.model.search_policy_search_request import SearchPolicySearchRequest
 
 
 class TestSearchPolicySearchRequest(unittest.TestCase):

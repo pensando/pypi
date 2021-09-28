@@ -1,6 +1,6 @@
-# psm_ent.WorkloadV1Api
+# psm.WorkloadV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -42,27 +42,22 @@ Abort Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -154,7 +149,7 @@ with ApiClient() as api_client:
         # Abort Workload Migration operation
         api_response = api_instance.abort_migration(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->abort_migration: %s\n" % e)
 ```
 
@@ -190,7 +185,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **abort_migration1**
 > WorkloadWorkload abort_migration1(o_name, body)
@@ -200,27 +195,22 @@ Abort Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -311,7 +301,7 @@ with ApiClient() as api_client:
         # Abort Workload Migration operation
         api_response = api_instance.abort_migration1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->abort_migration1: %s\n" % e)
 ```
 
@@ -346,7 +336,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_workload**
 > WorkloadWorkload add_workload(o_tenant, body)
@@ -356,27 +346,22 @@ Create Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -467,7 +452,7 @@ with ApiClient() as api_client:
         # Create Workload object
         api_response = api_instance.add_workload(o_tenant, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->add_workload: %s\n" % e)
 ```
 
@@ -502,7 +487,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_workload1**
 > WorkloadWorkload add_workload1(body)
@@ -512,27 +497,22 @@ Create Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     body = WorkloadWorkload(
@@ -622,7 +602,7 @@ with ApiClient() as api_client:
         # Create Workload object
         api_response = api_instance.add_workload1(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->add_workload1: %s\n" % e)
 ```
 
@@ -656,7 +636,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_workload**
 > WorkloadWorkload delete_workload(o_tenant, o_name)
@@ -666,27 +646,22 @@ Delete Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -697,7 +672,7 @@ with ApiClient() as api_client:
         # Delete Workload object
         api_response = api_instance.delete_workload(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->delete_workload: %s\n" % e)
 ```
 
@@ -732,7 +707,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_workload1**
 > WorkloadWorkload delete_workload1(o_name)
@@ -742,27 +717,22 @@ Delete Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -772,7 +742,7 @@ with ApiClient() as api_client:
         # Delete Workload object
         api_response = api_instance.delete_workload1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->delete_workload1: %s\n" % e)
 ```
 
@@ -806,7 +776,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **final_sync_migration**
 > WorkloadWorkload final_sync_migration(o_tenant, o_name, body)
@@ -816,27 +786,22 @@ Initiates the final sync for the Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -928,7 +893,7 @@ with ApiClient() as api_client:
         # Initiates the final sync for the Workload Migration operation
         api_response = api_instance.final_sync_migration(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->final_sync_migration: %s\n" % e)
 ```
 
@@ -964,7 +929,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **final_sync_migration1**
 > WorkloadWorkload final_sync_migration1(o_name, body)
@@ -974,27 +939,22 @@ Initiates the final sync for the Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1085,7 +1045,7 @@ with ApiClient() as api_client:
         # Initiates the final sync for the Workload Migration operation
         api_response = api_instance.final_sync_migration1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->final_sync_migration1: %s\n" % e)
 ```
 
@@ -1120,7 +1080,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **finish_migration**
 > WorkloadWorkload finish_migration(o_tenant, o_name, body)
@@ -1130,27 +1090,22 @@ Finish Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1242,7 +1197,7 @@ with ApiClient() as api_client:
         # Finish Workload Migration operation
         api_response = api_instance.finish_migration(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->finish_migration: %s\n" % e)
 ```
 
@@ -1278,7 +1233,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **finish_migration1**
 > WorkloadWorkload finish_migration1(o_name, body)
@@ -1288,27 +1243,22 @@ Finish Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1399,7 +1349,7 @@ with ApiClient() as api_client:
         # Finish Workload Migration operation
         api_response = api_instance.finish_migration1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->finish_migration1: %s\n" % e)
 ```
 
@@ -1434,7 +1384,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_endpoint**
 > WorkloadEndpoint get_endpoint(o_tenant, o_name)
@@ -1444,27 +1394,22 @@ Get Endpoint object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_endpoint import WorkloadEndpoint
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_endpoint import WorkloadEndpoint
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1528,7 +1473,7 @@ with ApiClient() as api_client:
         # Get Endpoint object
         api_response = api_instance.get_endpoint(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_endpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1537,7 +1482,7 @@ with ApiClient() as api_client:
         # Get Endpoint object
         api_response = api_instance.get_endpoint(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_node_uuid=spec_node_uuid, spec_homing_host_addr=spec_homing_host_addr, spec_micro_segment_vlan=spec_micro_segment_vlan, spec_node_uuid_list=spec_node_uuid_list, spec_type=spec_type, status_workload_name=status_workload_name, status_network=status_network, status_homing_host_addr=status_homing_host_addr, status_homing_host_name=status_homing_host_name, status_ipv4_address=status_ipv4_address, status_ipv4_gateway=status_ipv4_gateway, status_ipv6_address=status_ipv6_address, status_ipv6_gateway=status_ipv6_gateway, status_mac_address=status_mac_address, status_node_uuid=status_node_uuid, status_endpoint_state=status_endpoint_state, status_security_groups=status_security_groups, status_micro_segment_vlan=status_micro_segment_vlan, migration_status=migration_status, status_ipv4_addresses=status_ipv4_addresses, status_ipv4_gateways=status_ipv4_gateways, status_ipv6_addresses=status_ipv6_addresses, status_ipv6_gateways=status_ipv6_gateways, status_mirror_sessions=status_mirror_sessions, status_node_uuid_list=status_node_uuid_list, status_workload_names=status_workload_names)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_endpoint: %s\n" % e)
 ```
 
@@ -1607,7 +1552,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_endpoint1**
 > WorkloadEndpoint get_endpoint1(o_name)
@@ -1617,27 +1562,22 @@ Get Endpoint object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_endpoint import WorkloadEndpoint
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_endpoint import WorkloadEndpoint
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1701,7 +1641,7 @@ with ApiClient() as api_client:
         # Get Endpoint object
         api_response = api_instance.get_endpoint1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_endpoint1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1710,7 +1650,7 @@ with ApiClient() as api_client:
         # Get Endpoint object
         api_response = api_instance.get_endpoint1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_node_uuid=spec_node_uuid, spec_homing_host_addr=spec_homing_host_addr, spec_micro_segment_vlan=spec_micro_segment_vlan, spec_node_uuid_list=spec_node_uuid_list, spec_type=spec_type, status_workload_name=status_workload_name, status_network=status_network, status_homing_host_addr=status_homing_host_addr, status_homing_host_name=status_homing_host_name, status_ipv4_address=status_ipv4_address, status_ipv4_gateway=status_ipv4_gateway, status_ipv6_address=status_ipv6_address, status_ipv6_gateway=status_ipv6_gateway, status_mac_address=status_mac_address, status_node_uuid=status_node_uuid, status_endpoint_state=status_endpoint_state, status_security_groups=status_security_groups, status_micro_segment_vlan=status_micro_segment_vlan, migration_status=migration_status, status_ipv4_addresses=status_ipv4_addresses, status_ipv4_gateways=status_ipv4_gateways, status_ipv6_addresses=status_ipv6_addresses, status_ipv6_gateways=status_ipv6_gateways, status_mirror_sessions=status_mirror_sessions, status_node_uuid_list=status_node_uuid_list, status_workload_names=status_workload_names)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_endpoint1: %s\n" % e)
 ```
 
@@ -1780,7 +1720,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_workload**
 > WorkloadWorkload get_workload(o_tenant, o_name)
@@ -1790,27 +1730,22 @@ Get Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -1848,7 +1783,7 @@ with ApiClient() as api_client:
         # Get Workload object
         api_response = api_instance.get_workload(o_tenant, o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_workload: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1857,7 +1792,7 @@ with ApiClient() as api_client:
         # Get Workload object
         api_response = api_instance.get_workload(o_tenant, o_name, t_kind=t_kind, t_api_version=t_api_version, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_host_name=spec_host_name, spec_migration_timeout=spec_migration_timeout, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs, status_host_name=status_host_name, migration_status_stage=migration_status_stage, migration_status_started_at=migration_status_started_at, migration_status_status=migration_status_status, migration_status_completed_at=migration_status_completed_at, status_mirror_sessions=status_mirror_sessions)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_workload: %s\n" % e)
 ```
 
@@ -1915,7 +1850,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_workload1**
 > WorkloadWorkload get_workload1(o_name)
@@ -1925,27 +1860,22 @@ Get Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -1983,7 +1913,7 @@ with ApiClient() as api_client:
         # Get Workload object
         api_response = api_instance.get_workload1(o_name)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_workload1: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -1992,7 +1922,7 @@ with ApiClient() as api_client:
         # Get Workload object
         api_response = api_instance.get_workload1(o_name, t_kind=t_kind, t_api_version=t_api_version, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, spec_host_name=spec_host_name, spec_migration_timeout=spec_migration_timeout, propagation_status_generation_id=propagation_status_generation_id, propagation_status_updated=propagation_status_updated, propagation_status_pending=propagation_status_pending, propagation_status_min_version=propagation_status_min_version, propagation_status_status=propagation_status_status, propagation_status_pending_dscs=propagation_status_pending_dscs, status_host_name=status_host_name, migration_status_stage=migration_status_stage, migration_status_started_at=migration_status_started_at, migration_status_status=migration_status_status, migration_status_completed_at=migration_status_completed_at, status_mirror_sessions=status_mirror_sessions)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->get_workload1: %s\n" % e)
 ```
 
@@ -2050,7 +1980,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_workload**
 > WorkloadWorkload label_workload(o_tenant, o_name, body)
@@ -2060,28 +1990,23 @@ Label Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2108,7 +2033,7 @@ with ApiClient() as api_client:
         # Label Workload object
         api_response = api_instance.label_workload(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->label_workload: %s\n" % e)
 ```
 
@@ -2144,7 +2069,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_workload1**
 > WorkloadWorkload label_workload1(o_name, body)
@@ -2154,28 +2079,23 @@ Label Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2201,7 +2121,7 @@ with ApiClient() as api_client:
         # Label Workload object
         api_response = api_instance.label_workload1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->label_workload1: %s\n" % e)
 ```
 
@@ -2236,7 +2156,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_endpoint**
 > WorkloadEndpointList list_endpoint(o_tenant)
@@ -2246,27 +2166,22 @@ List Endpoint objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_endpoint_list import WorkloadEndpointList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_endpoint_list import WorkloadEndpointList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2293,7 +2208,7 @@ with ApiClient() as api_client:
         # List Endpoint objects
         api_response = api_instance.list_endpoint(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->list_endpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2302,7 +2217,7 @@ with ApiClient() as api_client:
         # List Endpoint objects
         api_response = api_instance.list_endpoint(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->list_endpoint: %s\n" % e)
 ```
 
@@ -2351,7 +2266,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_endpoint1**
 > WorkloadEndpointList list_endpoint1()
@@ -2361,27 +2276,22 @@ List Endpoint objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_endpoint_list import WorkloadEndpointList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_endpoint_list import WorkloadEndpointList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -2409,7 +2319,7 @@ with ApiClient() as api_client:
         # List Endpoint objects
         api_response = api_instance.list_endpoint1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->list_endpoint1: %s\n" % e)
 ```
 
@@ -2458,7 +2368,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_workload**
 > WorkloadWorkloadList list_workload(o_tenant)
@@ -2468,27 +2378,22 @@ List Workload objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload_list import WorkloadWorkloadList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload_list import WorkloadWorkloadList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2515,7 +2420,7 @@ with ApiClient() as api_client:
         # List Workload objects
         api_response = api_instance.list_workload(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->list_workload: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -2524,7 +2429,7 @@ with ApiClient() as api_client:
         # List Workload objects
         api_response = api_instance.list_workload(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->list_workload: %s\n" % e)
 ```
 
@@ -2573,7 +2478,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_workload1**
 > WorkloadWorkloadList list_workload1()
@@ -2583,27 +2488,22 @@ List Workload objects
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload_list import WorkloadWorkloadList
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload_list import WorkloadWorkloadList
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -2631,7 +2531,7 @@ with ApiClient() as api_client:
         # List Workload objects
         api_response = api_instance.list_workload1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->list_workload1: %s\n" % e)
 ```
 
@@ -2680,7 +2580,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_migration**
 > WorkloadWorkload start_migration(o_tenant, o_name, body)
@@ -2690,27 +2590,22 @@ Start Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -2802,7 +2697,7 @@ with ApiClient() as api_client:
         # Start Workload Migration operation
         api_response = api_instance.start_migration(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->start_migration: %s\n" % e)
 ```
 
@@ -2838,7 +2733,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_migration1**
 > WorkloadWorkload start_migration1(o_name, body)
@@ -2848,27 +2743,22 @@ Start Workload Migration operation
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -2959,7 +2849,7 @@ with ApiClient() as api_client:
         # Start Workload Migration operation
         api_response = api_instance.start_migration1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->start_migration1: %s\n" % e)
 ```
 
@@ -2994,7 +2884,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_workload**
 > WorkloadWorkload update_workload(o_tenant, o_name, body)
@@ -3004,27 +2894,22 @@ Update Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3116,7 +3001,7 @@ with ApiClient() as api_client:
         # Update Workload object
         api_response = api_instance.update_workload(o_tenant, o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->update_workload: %s\n" % e)
 ```
 
@@ -3152,7 +3037,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_workload1**
 > WorkloadWorkload update_workload1(o_name, body)
@@ -3162,27 +3047,22 @@ Update Workload object
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.Name_example" # str | 
@@ -3273,7 +3153,7 @@ with ApiClient() as api_client:
         # Update Workload object
         api_response = api_instance.update_workload1(o_name, body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->update_workload1: %s\n" % e)
 ```
 
@@ -3308,7 +3188,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_endpoint**
 > WorkloadAutoMsgEndpointWatchHelper watch_endpoint(o_tenant)
@@ -3318,27 +3198,22 @@ Watch Endpoint objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3365,7 +3240,7 @@ with ApiClient() as api_client:
         # Watch Endpoint objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_endpoint(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->watch_endpoint: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3374,7 +3249,7 @@ with ApiClient() as api_client:
         # Watch Endpoint objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_endpoint(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->watch_endpoint: %s\n" % e)
 ```
 
@@ -3423,7 +3298,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_endpoint1**
 > WorkloadAutoMsgEndpointWatchHelper watch_endpoint1()
@@ -3433,27 +3308,22 @@ Watch Endpoint objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
+from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3481,7 +3351,7 @@ with ApiClient() as api_client:
         # Watch Endpoint objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_endpoint1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->watch_endpoint1: %s\n" % e)
 ```
 
@@ -3530,7 +3400,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_workload**
 > WorkloadAutoMsgWorkloadWatchHelper watch_workload(o_tenant)
@@ -3540,27 +3410,22 @@ Watch Workload objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.api_status import ApiStatus
+from pensando_ent.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -3587,7 +3452,7 @@ with ApiClient() as api_client:
         # Watch Workload objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_workload(o_tenant)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->watch_workload: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -3596,7 +3461,7 @@ with ApiClient() as api_client:
         # Watch Workload objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_workload(o_tenant, o_name=o_name, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->watch_workload: %s\n" % e)
 ```
 
@@ -3645,7 +3510,7 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **watch_workload1**
 > WorkloadAutoMsgWorkloadWatchHelper watch_workload1()
@@ -3655,27 +3520,22 @@ Watch Workload objects. Supports WebSockets or HTTP long poll
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import workload_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.workload import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
-from pensando_ent.psm_ent.model.api_status import ApiStatus
+import psm
+from api import workload_v1_api
+from pensando_ent.psm.model.api_status import ApiStatus
+from pensando_ent.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
@@ -3703,7 +3563,7 @@ with ApiClient() as api_client:
         # Watch Workload objects. Supports WebSockets or HTTP long poll
         api_response = api_instance.watch_workload1(o_name=o_name, o_tenant=o_tenant, o_namespace=o_namespace, o_generation_id=o_generation_id, o_resource_version=o_resource_version, o_uuid=o_uuid, o_creation_time=o_creation_time, o_mod_time=o_mod_time, o_self_link=o_self_link, label_selector=label_selector, field_selector=field_selector, field_change_selector=field_change_selector, _from=_from, max_results=max_results, sort_order=sort_order, meta_only=meta_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->watch_workload1: %s\n" % e)
 ```
 
@@ -3752,5 +3612,5 @@ No authorization required
 **500** | Internal server error |  -  |
 **501** | Request not implemented |  -  |
 
-[[Back to psm_ent.WorkloadV1Api top]](#psm_ent.WorkloadV1Api) [[Back to workload README]](../psm_ent/docs/workload/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

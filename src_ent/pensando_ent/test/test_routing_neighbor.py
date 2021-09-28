@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_bgp_neighbor import NetworkBGPNeighbor
-from pensando_ent.psm_ent.model.routing_neighbor_status import RoutingNeighborStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_bgp_neighbor import NetworkBGPNeighbor
+from pensando_ent.psm.model.routing_neighbor_status import RoutingNeighborStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkBGPNeighbor'] = NetworkBGPNeighbor
 globals()['RoutingNeighborStatus'] = RoutingNeighborStatus
-from pensando_ent.psm_ent.psm_ent.model.routing_neighbor import RoutingNeighbor
+from pensando_ent.psm.psm.model.routing_neighbor import RoutingNeighbor
 
 
 class TestRoutingNeighbor(unittest.TestCase):

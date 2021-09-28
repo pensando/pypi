@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_ref import ApiObjectRef
+import psm
+from pensando_ent.psm.model.api_object_ref import ApiObjectRef
 globals()['ApiObjectRef'] = ApiObjectRef
-from pensando_ent.psm_ent.psm_ent.model.object_uris import ObjectURIs
+from pensando_ent.psm.psm.model.object_uris import ObjectURIs
 
 
 class TestObjectURIs(unittest.TestCase):

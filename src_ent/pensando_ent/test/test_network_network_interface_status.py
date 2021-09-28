@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_network_interface_host_status import NetworkNetworkInterfaceHostStatus
-from pensando_ent.psm_ent.model.network_network_interface_uplink_status import NetworkNetworkInterfaceUplinkStatus
-from pensando_ent.psm_ent.model.security_propagation_status import SecurityPropagationStatus
+import psm
+from pensando_ent.psm.model.network_network_interface_host_status import NetworkNetworkInterfaceHostStatus
+from pensando_ent.psm.model.network_network_interface_uplink_status import NetworkNetworkInterfaceUplinkStatus
+from pensando_ent.psm.model.security_propagation_status import SecurityPropagationStatus
 globals()['NetworkNetworkInterfaceHostStatus'] = NetworkNetworkInterfaceHostStatus
 globals()['NetworkNetworkInterfaceUplinkStatus'] = NetworkNetworkInterfaceUplinkStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
-from pensando_ent.psm_ent.psm_ent.model.network_network_interface_status import NetworkNetworkInterfaceStatus
+from pensando_ent.psm.psm.model.network_network_interface_status import NetworkNetworkInterfaceStatus
 
 
 class TestNetworkNetworkInterfaceStatus(unittest.TestCase):

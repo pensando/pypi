@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.search_kind_preview import SearchKindPreview
+import psm
+from pensando_ent.psm.psm.model.search_kind_preview import SearchKindPreview
 
 
 class TestSearchKindPreview(unittest.TestCase):

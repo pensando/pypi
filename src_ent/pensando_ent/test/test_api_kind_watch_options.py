@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_watch_options import ApiListWatchOptions
+import psm
+from pensando_ent.psm.model.api_list_watch_options import ApiListWatchOptions
 globals()['ApiListWatchOptions'] = ApiListWatchOptions
-from pensando_ent.psm_ent.psm_ent.model.api_kind_watch_options import ApiKindWatchOptions
+from pensando_ent.psm.psm.model.api_kind_watch_options import ApiKindWatchOptions
 
 
 class TestApiKindWatchOptions(unittest.TestCase):

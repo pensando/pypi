@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_auto_msg_ip_sec_policy_watch_helper_watch_event import SecurityAutoMsgIPSecPolicyWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.security_auto_msg_ip_sec_policy_watch_helper_watch_event import SecurityAutoMsgIPSecPolicyWatchHelperWatchEvent
 globals()['SecurityAutoMsgIPSecPolicyWatchHelperWatchEvent'] = SecurityAutoMsgIPSecPolicyWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
+from pensando_ent.psm.psm.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
 
 
 class TestSecurityAutoMsgIPSecPolicyWatchHelper(unittest.TestCase):

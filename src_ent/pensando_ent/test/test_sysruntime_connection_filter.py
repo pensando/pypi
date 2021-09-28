@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_workload_selector import SysruntimeWorkloadSelector
+import psm
+from pensando_ent.psm.model.sysruntime_workload_selector import SysruntimeWorkloadSelector
 globals()['SysruntimeWorkloadSelector'] = SysruntimeWorkloadSelector
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_connection_filter import SysruntimeConnectionFilter
+from pensando_ent.psm.psm.model.sysruntime_connection_filter import SysruntimeConnectionFilter
 
 
 class TestSysruntimeConnectionFilter(unittest.TestCase):

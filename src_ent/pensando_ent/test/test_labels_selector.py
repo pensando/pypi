@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.labels_requirement import LabelsRequirement
+import psm
+from pensando_ent.psm.model.labels_requirement import LabelsRequirement
 globals()['LabelsRequirement'] = LabelsRequirement
-from pensando_ent.psm_ent.psm_ent.model.labels_selector import LabelsSelector
+from pensando_ent.psm.psm.model.labels_selector import LabelsSelector
 
 
 class TestLabelsSelector(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_time_window import MonitoringTimeWindow
+import psm
+from pensando_ent.psm.model.monitoring_time_window import MonitoringTimeWindow
 globals()['MonitoringTimeWindow'] = MonitoringTimeWindow
-from pensando_ent.psm_ent.psm_ent.model.monitoring_ts_result import MonitoringTsResult
+from pensando_ent.psm.psm.model.monitoring_ts_result import MonitoringTsResult
 
 
 class TestMonitoringTsResult(unittest.TestCase):

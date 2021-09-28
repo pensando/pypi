@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.workload_workload_intf_spec import WorkloadWorkloadIntfSpec
+import psm
+from pensando_ent.psm.model.workload_workload_intf_spec import WorkloadWorkloadIntfSpec
 globals()['WorkloadWorkloadIntfSpec'] = WorkloadWorkloadIntfSpec
-from pensando_ent.psm_ent.psm_ent.model.workload_workload_spec import WorkloadWorkloadSpec
+from pensando_ent.psm.psm.model.workload_workload_spec import WorkloadWorkloadSpec
 
 
 class TestWorkloadWorkloadSpec(unittest.TestCase):

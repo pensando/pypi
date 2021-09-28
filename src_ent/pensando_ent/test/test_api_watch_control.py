@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.api_watch_control import ApiWatchControl
+import psm
+from pensando_ent.psm.psm.model.api_watch_control import ApiWatchControl
 
 
 class TestApiWatchControl(unittest.TestCase):

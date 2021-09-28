@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_route_table import NetworkRouteTable
+import psm
+from pensando_ent.psm.model.network_route_table import NetworkRouteTable
 globals()['NetworkRouteTable'] = NetworkRouteTable
-from pensando_ent.psm_ent.psm_ent.model.network_auto_msg_route_table_watch_helper_watch_event import NetworkAutoMsgRouteTableWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.network_auto_msg_route_table_watch_helper_watch_event import NetworkAutoMsgRouteTableWatchHelperWatchEvent
 
 
 class TestNetworkAutoMsgRouteTableWatchHelperWatchEvent(unittest.TestCase):

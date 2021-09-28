@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.rollout_rollout_spec import RolloutRolloutSpec
-from pensando_ent.psm_ent.model.rollout_rollout_status import RolloutRolloutStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.rollout_rollout_spec import RolloutRolloutSpec
+from pensando_ent.psm.model.rollout_rollout_status import RolloutRolloutStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['RolloutRolloutSpec'] = RolloutRolloutSpec
 globals()['RolloutRolloutStatus'] = RolloutRolloutStatus
-from pensando_ent.psm_ent.psm_ent.model.rollout_rollout import RolloutRollout
+from pensando_ent.psm.psm.model.rollout_rollout import RolloutRollout
 
 
 class TestRolloutRollout(unittest.TestCase):

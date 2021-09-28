@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_tech_support_request_spec import MonitoringTechSupportRequestSpec
-from pensando_ent.psm_ent.model.monitoring_tech_support_request_status import MonitoringTechSupportRequestStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_tech_support_request_spec import MonitoringTechSupportRequestSpec
+from pensando_ent.psm.model.monitoring_tech_support_request_status import MonitoringTechSupportRequestStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringTechSupportRequestSpec'] = MonitoringTechSupportRequestSpec
 globals()['MonitoringTechSupportRequestStatus'] = MonitoringTechSupportRequestStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_tech_support_request import MonitoringTechSupportRequest
+from pensando_ent.psm.psm.model.monitoring_tech_support_request import MonitoringTechSupportRequest
 
 
 class TestMonitoringTechSupportRequest(unittest.TestCase):

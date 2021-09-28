@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_ref import ApiObjectRef
-from pensando_ent.psm_ent.model.monitoring_alert_reason import MonitoringAlertReason
-from pensando_ent.psm_ent.model.monitoring_alert_source import MonitoringAlertSource
-from pensando_ent.psm_ent.model.monitoring_audit_info import MonitoringAuditInfo
+import psm
+from pensando_ent.psm.model.api_object_ref import ApiObjectRef
+from pensando_ent.psm.model.monitoring_alert_reason import MonitoringAlertReason
+from pensando_ent.psm.model.monitoring_alert_source import MonitoringAlertSource
+from pensando_ent.psm.model.monitoring_audit_info import MonitoringAuditInfo
 globals()['ApiObjectRef'] = ApiObjectRef
 globals()['MonitoringAlertReason'] = MonitoringAlertReason
 globals()['MonitoringAlertSource'] = MonitoringAlertSource
 globals()['MonitoringAuditInfo'] = MonitoringAuditInfo
-from pensando_ent.psm_ent.psm_ent.model.monitoring_alert_status import MonitoringAlertStatus
+from pensando_ent.psm.psm.model.monitoring_alert_status import MonitoringAlertStatus
 
 
 class TestMonitoringAlertStatus(unittest.TestCase):

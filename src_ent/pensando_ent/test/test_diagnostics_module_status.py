@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.diagnostics_service_port import DiagnosticsServicePort
+import psm
+from pensando_ent.psm.model.diagnostics_service_port import DiagnosticsServicePort
 globals()['DiagnosticsServicePort'] = DiagnosticsServicePort
-from pensando_ent.psm_ent.psm_ent.model.diagnostics_module_status import DiagnosticsModuleStatus
+from pensando_ent.psm.psm.model.diagnostics_module_status import DiagnosticsModuleStatus
 
 
 class TestDiagnosticsModuleStatus(unittest.TestCase):

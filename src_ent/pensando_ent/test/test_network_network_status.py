@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_propagation_status import SecurityPropagationStatus
+import psm
+from pensando_ent.psm.model.security_propagation_status import SecurityPropagationStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
-from pensando_ent.psm_ent.psm_ent.model.network_network_status import NetworkNetworkStatus
+from pensando_ent.psm.psm.model.network_network_status import NetworkNetworkStatus
 
 
 class TestNetworkNetworkStatus(unittest.TestCase):

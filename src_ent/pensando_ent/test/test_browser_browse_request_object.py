@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.browser_browse_request_object import BrowserBrowseRequestObject
+import psm
+from pensando_ent.psm.psm.model.browser_browse_request_object import BrowserBrowseRequestObject
 
 
 class TestBrowserBrowseRequestObject(unittest.TestCase):

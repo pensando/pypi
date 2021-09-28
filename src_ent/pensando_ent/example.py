@@ -14,24 +14,24 @@ import time
 import requests
 import json
 from dateutil.parser import parse as dateutil_parser
-import psm_ent
-from psm_ent.models import *
+import psm
+from psm.models import *
 from pprint import pprint
-from psm_ent.api import *
+from psm.api import *
 from api import workload_v1_api
-from pensando_ent.psm_ent.model.api_label import ApiLabel
-from pensando_ent.psm_ent.model.api_status import ApiStatus
-from pensando_ent.psm_ent.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
-from pensando_ent.psm_ent.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
-from pensando_ent.psm_ent.model.workload_endpoint import WorkloadEndpoint
-from pensando_ent.psm_ent.model.workload_endpoint_list import WorkloadEndpointList
-from pensando_ent.psm_ent.model.workload_workload import WorkloadWorkload
-from pensando_ent.psm_ent.model.workload_workload_list import WorkloadWorkloadList
+from pensando_ent.psm.model.api_label import ApiLabel
+from pensando_ent.psm.model.api_status import ApiStatus
+from pensando_ent.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
+from pensando_ent.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
+from pensando_ent.psm.model.workload_endpoint import WorkloadEndpoint
+from pensando_ent.psm.model.workload_endpoint_list import WorkloadEndpointList
+from pensando_ent.psm.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.model.workload_workload_list import WorkloadWorkloadList
 
 HOME = os.environ["HOME"]
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
@@ -39,7 +39,7 @@ configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with psm_ent.ApiClient(configuration) as api_client:
+with psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
@@ -130,5 +130,5 @@ body = WorkloadWorkload(
         # Abort Workload Migration operation
         api_response = api_instance.abort_migration(o_tenant, o_name, body)
         pprint(api_response)
-    except psm_ent.ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->abort_migration: %s\n" % e)

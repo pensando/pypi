@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_export_config import MonitoringExportConfig
-from pensando_ent.psm_ent.model.monitoring_match_rule import MonitoringMatchRule
+import psm
+from pensando_ent.psm.model.monitoring_export_config import MonitoringExportConfig
+from pensando_ent.psm.model.monitoring_match_rule import MonitoringMatchRule
 globals()['MonitoringExportConfig'] = MonitoringExportConfig
 globals()['MonitoringMatchRule'] = MonitoringMatchRule
-from pensando_ent.psm_ent.psm_ent.model.monitoring_flow_export_policy_spec import MonitoringFlowExportPolicySpec
+from pensando_ent.psm.psm.model.monitoring_flow_export_policy_spec import MonitoringFlowExportPolicySpec
 
 
 class TestMonitoringFlowExportPolicySpec(unittest.TestCase):

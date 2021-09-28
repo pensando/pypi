@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_policer_profile import NetworkPolicerProfile
+import psm
+from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 globals()['NetworkPolicerProfile'] = NetworkPolicerProfile
-from pensando_ent.psm_ent.psm_ent.model.network_auto_msg_policer_profile_watch_helper_watch_event import NetworkAutoMsgPolicerProfileWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.network_auto_msg_policer_profile_watch_helper_watch_event import NetworkAutoMsgPolicerProfileWatchHelperWatchEvent
 
 
 class TestNetworkAutoMsgPolicerProfileWatchHelperWatchEvent(unittest.TestCase):

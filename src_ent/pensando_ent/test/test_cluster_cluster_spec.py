@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.recoverykeys_recovery_keys import RecoverykeysRecoveryKeys
+import psm
+from pensando_ent.psm.model.recoverykeys_recovery_keys import RecoverykeysRecoveryKeys
 globals()['RecoverykeysRecoveryKeys'] = RecoverykeysRecoveryKeys
-from pensando_ent.psm_ent.psm_ent.model.cluster_cluster_spec import ClusterClusterSpec
+from pensando_ent.psm.psm.model.cluster_cluster_spec import ClusterClusterSpec
 
 
 class TestClusterClusterSpec(unittest.TestCase):

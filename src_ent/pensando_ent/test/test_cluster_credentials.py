@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_credentials_spec import ClusterCredentialsSpec
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_credentials_spec import ClusterCredentialsSpec
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterCredentialsSpec'] = ClusterCredentialsSpec
-from pensando_ent.psm_ent.psm_ent.model.cluster_credentials import ClusterCredentials
+from pensando_ent.psm.psm.model.cluster_credentials import ClusterCredentials
 
 
 class TestClusterCredentials(unittest.TestCase):

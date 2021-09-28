@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_version import ClusterVersion
+import psm
+from pensando_ent.psm.model.cluster_version import ClusterVersion
 globals()['ClusterVersion'] = ClusterVersion
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_version_watch_helper_watch_event import ClusterAutoMsgVersionWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_version_watch_helper_watch_event import ClusterAutoMsgVersionWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgVersionWatchHelperWatchEvent(unittest.TestCase):

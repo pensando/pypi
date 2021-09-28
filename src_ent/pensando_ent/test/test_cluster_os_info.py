@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_os_info import ClusterOsInfo
+import psm
+from pensando_ent.psm.psm.model.cluster_os_info import ClusterOsInfo
 
 
 class TestClusterOsInfo(unittest.TestCase):

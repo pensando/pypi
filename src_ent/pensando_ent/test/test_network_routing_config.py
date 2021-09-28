@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_routing_config_spec import NetworkRoutingConfigSpec
-from pensando_ent.psm_ent.model.network_routing_config_status import NetworkRoutingConfigStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_routing_config_spec import NetworkRoutingConfigSpec
+from pensando_ent.psm.model.network_routing_config_status import NetworkRoutingConfigStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkRoutingConfigSpec'] = NetworkRoutingConfigSpec
 globals()['NetworkRoutingConfigStatus'] = NetworkRoutingConfigStatus
-from pensando_ent.psm_ent.psm_ent.model.network_routing_config import NetworkRoutingConfig
+from pensando_ent.psm.psm.model.network_routing_config import NetworkRoutingConfig
 
 
 class TestNetworkRoutingConfig(unittest.TestCase):

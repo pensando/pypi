@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.labels_selector import LabelsSelector
+import psm
+from pensando_ent.psm.model.labels_selector import LabelsSelector
 globals()['LabelsSelector'] = LabelsSelector
-from pensando_ent.psm_ent.psm_ent.model.monitoring_mirror_source import MonitoringMirrorSource
+from pensando_ent.psm.psm.model.monitoring_mirror_source import MonitoringMirrorSource
 
 
 class TestMonitoringMirrorSource(unittest.TestCase):

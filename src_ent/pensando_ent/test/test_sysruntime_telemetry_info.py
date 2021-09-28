@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_telemetry_info import SysruntimeTelemetryInfo
+import psm
+from pensando_ent.psm.psm.model.sysruntime_telemetry_info import SysruntimeTelemetryInfo
 
 
 class TestSysruntimeTelemetryInfo(unittest.TestCase):

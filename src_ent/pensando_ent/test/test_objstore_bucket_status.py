@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.objstore_bucket_status import ObjstoreBucketStatus
+import psm
+from pensando_ent.psm.psm.model.objstore_bucket_status import ObjstoreBucketStatus
 
 
 class TestObjstoreBucketStatus(unittest.TestCase):

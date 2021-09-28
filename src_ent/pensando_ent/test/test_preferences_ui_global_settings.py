@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.preferences_ui_global_settings_spec import PreferencesUIGlobalSettingsSpec
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.preferences_ui_global_settings_spec import PreferencesUIGlobalSettingsSpec
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['PreferencesUIGlobalSettingsSpec'] = PreferencesUIGlobalSettingsSpec
-from pensando_ent.psm_ent.psm_ent.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
+from pensando_ent.psm.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 
 
 class TestPreferencesUIGlobalSettings(unittest.TestCase):

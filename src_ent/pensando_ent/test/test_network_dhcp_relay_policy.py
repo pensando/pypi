@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_dhcp_server import NetworkDHCPServer
+import psm
+from pensando_ent.psm.model.network_dhcp_server import NetworkDHCPServer
 globals()['NetworkDHCPServer'] = NetworkDHCPServer
-from pensando_ent.psm_ent.psm_ent.model.network_dhcp_relay_policy import NetworkDHCPRelayPolicy
+from pensando_ent.psm.psm.model.network_dhcp_relay_policy import NetworkDHCPRelayPolicy
 
 
 class TestNetworkDHCPRelayPolicy(unittest.TestCase):

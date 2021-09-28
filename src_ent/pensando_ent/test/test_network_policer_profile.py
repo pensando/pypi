@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_policer_profile_spec import NetworkPolicerProfileSpec
-from pensando_ent.psm_ent.model.network_policer_profile_status import NetworkPolicerProfileStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_policer_profile_spec import NetworkPolicerProfileSpec
+from pensando_ent.psm.model.network_policer_profile_status import NetworkPolicerProfileStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkPolicerProfileSpec'] = NetworkPolicerProfileSpec
 globals()['NetworkPolicerProfileStatus'] = NetworkPolicerProfileStatus
-from pensando_ent.psm_ent.psm_ent.model.network_policer_profile import NetworkPolicerProfile
+from pensando_ent.psm.psm.model.network_policer_profile import NetworkPolicerProfile
 
 
 class TestNetworkPolicerProfile(unittest.TestCase):

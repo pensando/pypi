@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.search_error import SearchError
-from pensando_ent.psm_ent.model.search_rules_by_policy_name import SearchRulesByPolicyName
+import psm
+from pensando_ent.psm.model.search_error import SearchError
+from pensando_ent.psm.model.search_rules_by_policy_name import SearchRulesByPolicyName
 globals()['SearchError'] = SearchError
 globals()['SearchRulesByPolicyName'] = SearchRulesByPolicyName
-from pensando_ent.psm_ent.psm_ent.model.search_policy_search_response import SearchPolicySearchResponse
+from pensando_ent.psm.psm.model.search_policy_search_response import SearchPolicySearchResponse
 
 
 class TestSearchPolicySearchResponse(unittest.TestCase):

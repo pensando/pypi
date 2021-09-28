@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_watch_control import ApiWatchControl
-from pensando_ent.psm_ent.model.googleprotobuf_any import GoogleprotobufAny
+import psm
+from pensando_ent.psm.model.api_watch_control import ApiWatchControl
+from pensando_ent.psm.model.googleprotobuf_any import GoogleprotobufAny
 globals()['ApiWatchControl'] = ApiWatchControl
 globals()['GoogleprotobufAny'] = GoogleprotobufAny
-from pensando_ent.psm_ent.psm_ent.model.api_watch_event import ApiWatchEvent
+from pensando_ent.psm.psm.model.api_watch_event import ApiWatchEvent
 
 
 class TestApiWatchEvent(unittest.TestCase):

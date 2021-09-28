@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_bgp_config import NetworkBGPConfig
+import psm
+from pensando_ent.psm.model.network_bgp_config import NetworkBGPConfig
 globals()['NetworkBGPConfig'] = NetworkBGPConfig
-from pensando_ent.psm_ent.psm_ent.model.network_routing_config_spec import NetworkRoutingConfigSpec
+from pensando_ent.psm.psm.model.network_routing_config_spec import NetworkRoutingConfigSpec
 
 
 class TestNetworkRoutingConfigSpec(unittest.TestCase):

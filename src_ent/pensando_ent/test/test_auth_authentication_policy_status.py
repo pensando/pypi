@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_ldap_server_status import AuthLdapServerStatus
-from pensando_ent.psm_ent.model.auth_radius_server_status import AuthRadiusServerStatus
+import psm
+from pensando_ent.psm.model.auth_ldap_server_status import AuthLdapServerStatus
+from pensando_ent.psm.model.auth_radius_server_status import AuthRadiusServerStatus
 globals()['AuthLdapServerStatus'] = AuthLdapServerStatus
 globals()['AuthRadiusServerStatus'] = AuthRadiusServerStatus
-from pensando_ent.psm_ent.psm_ent.model.auth_authentication_policy_status import AuthAuthenticationPolicyStatus
+from pensando_ent.psm.psm.model.auth_authentication_policy_status import AuthAuthenticationPolicyStatus
 
 
 class TestAuthAuthenticationPolicyStatus(unittest.TestCase):

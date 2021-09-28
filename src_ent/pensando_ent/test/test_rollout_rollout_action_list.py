@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.rollout_rollout_action import RolloutRolloutAction
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.rollout_rollout_action import RolloutRolloutAction
 globals()['ApiListMeta'] = ApiListMeta
 globals()['RolloutRolloutAction'] = RolloutRolloutAction
-from pensando_ent.psm_ent.psm_ent.model.rollout_rollout_action_list import RolloutRolloutActionList
+from pensando_ent.psm.psm.model.rollout_rollout_action_list import RolloutRolloutActionList
 
 
 class TestRolloutRolloutActionList(unittest.TestCase):

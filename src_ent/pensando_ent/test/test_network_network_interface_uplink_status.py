@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_ip_config import ClusterIPConfig
-from pensando_ent.psm_ent.model.network_lldp_neighbor import NetworkLLDPNeighbor
-from pensando_ent.psm_ent.model.network_transceiver_status import NetworkTransceiverStatus
+import psm
+from pensando_ent.psm.model.cluster_ip_config import ClusterIPConfig
+from pensando_ent.psm.model.network_lldp_neighbor import NetworkLLDPNeighbor
+from pensando_ent.psm.model.network_transceiver_status import NetworkTransceiverStatus
 globals()['ClusterIPConfig'] = ClusterIPConfig
 globals()['NetworkLLDPNeighbor'] = NetworkLLDPNeighbor
 globals()['NetworkTransceiverStatus'] = NetworkTransceiverStatus
-from pensando_ent.psm_ent.psm_ent.model.network_network_interface_uplink_status import NetworkNetworkInterfaceUplinkStatus
+from pensando_ent.psm.psm.model.network_network_interface_uplink_status import NetworkNetworkInterfaceUplinkStatus
 
 
 class TestNetworkNetworkInterfaceUplinkStatus(unittest.TestCase):

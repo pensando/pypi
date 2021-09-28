@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.monitoring_mirror_start_conditions import MonitoringMirrorStartConditions
+import psm
+from pensando_ent.psm.psm.model.monitoring_mirror_start_conditions import MonitoringMirrorStartConditions
 
 
 class TestMonitoringMirrorStartConditions(unittest.TestCase):

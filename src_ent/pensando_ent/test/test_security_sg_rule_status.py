@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.security_sg_rule_status import SecuritySGRuleStatus
+import psm
+from pensando_ent.psm.psm.model.security_sg_rule_status import SecuritySGRuleStatus
 
 
 class TestSecuritySGRuleStatus(unittest.TestCase):

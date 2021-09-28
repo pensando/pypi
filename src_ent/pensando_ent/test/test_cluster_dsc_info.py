@@ -11,18 +11,18 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_bios_info import ClusterBiosInfo
-from pensando_ent.psm_ent.model.cluster_cpu_info import ClusterCPUInfo
-from pensando_ent.psm_ent.model.cluster_mem_info import ClusterMemInfo
-from pensando_ent.psm_ent.model.cluster_os_info import ClusterOsInfo
-from pensando_ent.psm_ent.model.cluster_storage_info import ClusterStorageInfo
+import psm
+from pensando_ent.psm.model.cluster_bios_info import ClusterBiosInfo
+from pensando_ent.psm.model.cluster_cpu_info import ClusterCPUInfo
+from pensando_ent.psm.model.cluster_mem_info import ClusterMemInfo
+from pensando_ent.psm.model.cluster_os_info import ClusterOsInfo
+from pensando_ent.psm.model.cluster_storage_info import ClusterStorageInfo
 globals()['ClusterBiosInfo'] = ClusterBiosInfo
 globals()['ClusterCPUInfo'] = ClusterCPUInfo
 globals()['ClusterMemInfo'] = ClusterMemInfo
 globals()['ClusterOsInfo'] = ClusterOsInfo
 globals()['ClusterStorageInfo'] = ClusterStorageInfo
-from pensando_ent.psm_ent.psm_ent.model.cluster_dsc_info import ClusterDSCInfo
+from pensando_ent.psm.psm.model.cluster_dsc_info import ClusterDSCInfo
 
 
 class TestClusterDSCInfo(unittest.TestCase):

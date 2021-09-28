@@ -11,20 +11,20 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_interface_mirror import MonitoringInterfaceMirror
-from pensando_ent.psm_ent.model.monitoring_match_rule import MonitoringMatchRule
-from pensando_ent.psm_ent.model.monitoring_mirror_collector import MonitoringMirrorCollector
-from pensando_ent.psm_ent.model.monitoring_mirror_source import MonitoringMirrorSource
-from pensando_ent.psm_ent.model.monitoring_mirror_start_conditions import MonitoringMirrorStartConditions
-from pensando_ent.psm_ent.model.monitoring_workload_mirror import MonitoringWorkloadMirror
+import psm
+from pensando_ent.psm.model.monitoring_interface_mirror import MonitoringInterfaceMirror
+from pensando_ent.psm.model.monitoring_match_rule import MonitoringMatchRule
+from pensando_ent.psm.model.monitoring_mirror_collector import MonitoringMirrorCollector
+from pensando_ent.psm.model.monitoring_mirror_source import MonitoringMirrorSource
+from pensando_ent.psm.model.monitoring_mirror_start_conditions import MonitoringMirrorStartConditions
+from pensando_ent.psm.model.monitoring_workload_mirror import MonitoringWorkloadMirror
 globals()['MonitoringInterfaceMirror'] = MonitoringInterfaceMirror
 globals()['MonitoringMatchRule'] = MonitoringMatchRule
 globals()['MonitoringMirrorCollector'] = MonitoringMirrorCollector
 globals()['MonitoringMirrorSource'] = MonitoringMirrorSource
 globals()['MonitoringMirrorStartConditions'] = MonitoringMirrorStartConditions
 globals()['MonitoringWorkloadMirror'] = MonitoringWorkloadMirror
-from pensando_ent.psm_ent.psm_ent.model.monitoring_mirror_session_spec import MonitoringMirrorSessionSpec
+from pensando_ent.psm.psm.model.monitoring_mirror_session_spec import MonitoringMirrorSessionSpec
 
 
 class TestMonitoringMirrorSessionSpec(unittest.TestCase):

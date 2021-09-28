@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.network_virtual_router_peering_group_spec import NetworkVirtualRouterPeeringGroupSpec
-from pensando_ent.psm_ent.model.network_virtual_router_peering_group_status import NetworkVirtualRouterPeeringGroupStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.network_virtual_router_peering_group_spec import NetworkVirtualRouterPeeringGroupSpec
+from pensando_ent.psm.model.network_virtual_router_peering_group_status import NetworkVirtualRouterPeeringGroupStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['NetworkVirtualRouterPeeringGroupSpec'] = NetworkVirtualRouterPeeringGroupSpec
 globals()['NetworkVirtualRouterPeeringGroupStatus'] = NetworkVirtualRouterPeeringGroupStatus
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
+from pensando_ent.psm.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 
 
 class TestNetworkVirtualRouterPeeringGroup(unittest.TestCase):

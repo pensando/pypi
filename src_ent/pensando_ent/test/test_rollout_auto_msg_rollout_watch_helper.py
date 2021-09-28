@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.rollout_auto_msg_rollout_watch_helper_watch_event import RolloutAutoMsgRolloutWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.rollout_auto_msg_rollout_watch_helper_watch_event import RolloutAutoMsgRolloutWatchHelperWatchEvent
 globals()['RolloutAutoMsgRolloutWatchHelperWatchEvent'] = RolloutAutoMsgRolloutWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.rollout_auto_msg_rollout_watch_helper import RolloutAutoMsgRolloutWatchHelper
+from pensando_ent.psm.psm.model.rollout_auto_msg_rollout_watch_helper import RolloutAutoMsgRolloutWatchHelper
 
 
 class TestRolloutAutoMsgRolloutWatchHelper(unittest.TestCase):

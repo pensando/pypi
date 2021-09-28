@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.staging_item_id import StagingItemId
+import psm
+from pensando_ent.psm.model.staging_item_id import StagingItemId
 globals()['StagingItemId'] = StagingItemId
-from pensando_ent.psm_ent.psm_ent.model.staging_clear_action_spec import StagingClearActionSpec
+from pensando_ent.psm.psm.model.staging_clear_action_spec import StagingClearActionSpec
 
 
 class TestStagingClearActionSpec(unittest.TestCase):

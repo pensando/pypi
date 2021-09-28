@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_app_proto_selector import MonitoringAppProtoSelector
-from pensando_ent.psm_ent.model.monitoring_match_selector import MonitoringMatchSelector
+import psm
+from pensando_ent.psm.model.monitoring_app_proto_selector import MonitoringAppProtoSelector
+from pensando_ent.psm.model.monitoring_match_selector import MonitoringMatchSelector
 globals()['MonitoringAppProtoSelector'] = MonitoringAppProtoSelector
 globals()['MonitoringMatchSelector'] = MonitoringMatchSelector
-from pensando_ent.psm_ent.psm_ent.model.monitoring_match_rule import MonitoringMatchRule
+from pensando_ent.psm.psm.model.monitoring_match_rule import MonitoringMatchRule
 
 
 class TestMonitoringMatchRule(unittest.TestCase):

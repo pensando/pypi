@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.cluster_snapshot_restore import ClusterSnapshotRestore
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 globals()['ApiListMeta'] = ApiListMeta
 globals()['ClusterSnapshotRestore'] = ClusterSnapshotRestore
-from pensando_ent.psm_ent.psm_ent.model.cluster_snapshot_restore_list import ClusterSnapshotRestoreList
+from pensando_ent.psm.psm.model.cluster_snapshot_restore_list import ClusterSnapshotRestoreList
 
 
 class TestClusterSnapshotRestoreList(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.auth_role_binding_spec import AuthRoleBindingSpec
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.auth_role_binding_spec import AuthRoleBindingSpec
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['AuthRoleBindingSpec'] = AuthRoleBindingSpec
-from pensando_ent.psm_ent.psm_ent.model.auth_role_binding import AuthRoleBinding
+from pensando_ent.psm.psm.model.auth_role_binding import AuthRoleBinding
 
 
 class TestAuthRoleBinding(unittest.TestCase):

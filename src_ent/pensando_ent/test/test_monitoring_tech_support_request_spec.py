@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.labels_selector import LabelsSelector
-from pensando_ent.psm_ent.model.tech_support_request_spec_node_selector_spec import TechSupportRequestSpecNodeSelectorSpec
+import psm
+from pensando_ent.psm.model.labels_selector import LabelsSelector
+from pensando_ent.psm.model.tech_support_request_spec_node_selector_spec import TechSupportRequestSpecNodeSelectorSpec
 globals()['LabelsSelector'] = LabelsSelector
 globals()['TechSupportRequestSpecNodeSelectorSpec'] = TechSupportRequestSpecNodeSelectorSpec
-from pensando_ent.psm_ent.psm_ent.model.monitoring_tech_support_request_spec import MonitoringTechSupportRequestSpec
+from pensando_ent.psm.psm.model.monitoring_tech_support_request_spec import MonitoringTechSupportRequestSpec
 
 
 class TestMonitoringTechSupportRequestSpec(unittest.TestCase):

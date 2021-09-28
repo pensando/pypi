@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_quorum_member_status import ClusterQuorumMemberStatus
+import psm
+from pensando_ent.psm.model.cluster_quorum_member_status import ClusterQuorumMemberStatus
 globals()['ClusterQuorumMemberStatus'] = ClusterQuorumMemberStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_quorum_status import ClusterQuorumStatus
+from pensando_ent.psm.psm.model.cluster_quorum_status import ClusterQuorumStatus
 
 
 class TestClusterQuorumStatus(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_snapshot_destination import ClusterSnapshotDestination
+import psm
+from pensando_ent.psm.psm.model.cluster_snapshot_destination import ClusterSnapshotDestination
 
 
 class TestClusterSnapshotDestination(unittest.TestCase):

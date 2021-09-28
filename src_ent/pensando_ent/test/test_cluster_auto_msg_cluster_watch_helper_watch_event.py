@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_cluster import ClusterCluster
+import psm
+from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 globals()['ClusterCluster'] = ClusterCluster
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_cluster_watch_helper_watch_event import ClusterAutoMsgClusterWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_cluster_watch_helper_watch_event import ClusterAutoMsgClusterWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgClusterWatchHelperWatchEvent(unittest.TestCase):

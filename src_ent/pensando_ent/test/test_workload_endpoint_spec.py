@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.workload_endpoint_spec import WorkloadEndpointSpec
+import psm
+from pensando_ent.psm.psm.model.workload_endpoint_spec import WorkloadEndpointSpec
 
 
 class TestWorkloadEndpointSpec(unittest.TestCase):

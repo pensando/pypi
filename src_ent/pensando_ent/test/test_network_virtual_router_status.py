@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_route_distinguisher import NetworkRouteDistinguisher
-from pensando_ent.psm_ent.model.security_propagation_status import SecurityPropagationStatus
+import psm
+from pensando_ent.psm.model.network_route_distinguisher import NetworkRouteDistinguisher
+from pensando_ent.psm.model.security_propagation_status import SecurityPropagationStatus
 globals()['NetworkRouteDistinguisher'] = NetworkRouteDistinguisher
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_status import NetworkVirtualRouterStatus
+from pensando_ent.psm.psm.model.network_virtual_router_status import NetworkVirtualRouterStatus
 
 
 class TestNetworkVirtualRouterStatus(unittest.TestCase):

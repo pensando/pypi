@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_configuration_snapshot_spec import ClusterConfigurationSnapshotSpec
-from pensando_ent.psm_ent.model.cluster_configuration_snapshot_status import ClusterConfigurationSnapshotStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_configuration_snapshot_spec import ClusterConfigurationSnapshotSpec
+from pensando_ent.psm.model.cluster_configuration_snapshot_status import ClusterConfigurationSnapshotStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterConfigurationSnapshotSpec'] = ClusterConfigurationSnapshotSpec
 globals()['ClusterConfigurationSnapshotStatus'] = ClusterConfigurationSnapshotStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
+from pensando_ent.psm.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 
 
 class TestClusterConfigurationSnapshot(unittest.TestCase):

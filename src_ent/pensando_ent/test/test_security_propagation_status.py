@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_dsc_status import SecurityDSCStatus
+import psm
+from pensando_ent.psm.model.security_dsc_status import SecurityDSCStatus
 globals()['SecurityDSCStatus'] = SecurityDSCStatus
-from pensando_ent.psm_ent.psm_ent.model.security_propagation_status import SecurityPropagationStatus
+from pensando_ent.psm.psm.model.security_propagation_status import SecurityPropagationStatus
 
 
 class TestSecurityPropagationStatus(unittest.TestCase):

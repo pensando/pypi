@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
+import psm
+from pensando_ent.psm.psm.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
 
 
 class TestWorkloadWorkloadMigrationStatus(unittest.TestCase):

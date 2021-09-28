@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.network_service import NetworkService
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.network_service import NetworkService
 globals()['ApiListMeta'] = ApiListMeta
 globals()['NetworkService'] = NetworkService
-from pensando_ent.psm_ent.psm_ent.model.network_service_list import NetworkServiceList
+from pensando_ent.psm.psm.model.network_service_list import NetworkServiceList
 
 
 class TestNetworkServiceList(unittest.TestCase):

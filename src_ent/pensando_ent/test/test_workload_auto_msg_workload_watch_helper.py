@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.workload_auto_msg_workload_watch_helper_watch_event import WorkloadAutoMsgWorkloadWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.workload_auto_msg_workload_watch_helper_watch_event import WorkloadAutoMsgWorkloadWatchHelperWatchEvent
 globals()['WorkloadAutoMsgWorkloadWatchHelperWatchEvent'] = WorkloadAutoMsgWorkloadWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
+from pensando_ent.psm.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
 
 
 class TestWorkloadAutoMsgWorkloadWatchHelper(unittest.TestCase):

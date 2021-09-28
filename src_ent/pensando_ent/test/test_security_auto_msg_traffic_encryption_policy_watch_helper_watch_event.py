@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_traffic_encryption_policy import SecurityTrafficEncryptionPolicy
+import psm
+from pensando_ent.psm.model.security_traffic_encryption_policy import SecurityTrafficEncryptionPolicy
 globals()['SecurityTrafficEncryptionPolicy'] = SecurityTrafficEncryptionPolicy
-from pensando_ent.psm_ent.psm_ent.model.security_auto_msg_traffic_encryption_policy_watch_helper_watch_event import SecurityAutoMsgTrafficEncryptionPolicyWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.security_auto_msg_traffic_encryption_policy_watch_helper_watch_event import SecurityAutoMsgTrafficEncryptionPolicyWatchHelperWatchEvent
 
 
 class TestSecurityAutoMsgTrafficEncryptionPolicyWatchHelperWatchEvent(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.staging_buffer import StagingBuffer
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.staging_buffer import StagingBuffer
 globals()['ApiListMeta'] = ApiListMeta
 globals()['StagingBuffer'] = StagingBuffer
-from pensando_ent.psm_ent.psm_ent.model.staging_buffer_list import StagingBufferList
+from pensando_ent.psm.psm.model.staging_buffer_list import StagingBufferList
 
 
 class TestStagingBufferList(unittest.TestCase):

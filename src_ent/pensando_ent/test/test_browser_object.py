@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.object_uris import ObjectURIs
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.object_uris import ObjectURIs
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ObjectURIs'] = ObjectURIs
-from pensando_ent.psm_ent.psm_ent.model.browser_object import BrowserObject
+from pensando_ent.psm.psm.model.browser_object import BrowserObject
 
 
 class TestBrowserObject(unittest.TestCase):

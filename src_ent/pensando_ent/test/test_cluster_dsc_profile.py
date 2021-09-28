@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_dsc_profile_spec import ClusterDSCProfileSpec
-from pensando_ent.psm_ent.model.cluster_dsc_profile_status import ClusterDSCProfileStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_dsc_profile_spec import ClusterDSCProfileSpec
+from pensando_ent.psm.model.cluster_dsc_profile_status import ClusterDSCProfileStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterDSCProfileSpec'] = ClusterDSCProfileSpec
 globals()['ClusterDSCProfileStatus'] = ClusterDSCProfileStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_dsc_profile import ClusterDSCProfile
+from pensando_ent.psm.psm.model.cluster_dsc_profile import ClusterDSCProfile
 
 
 class TestClusterDSCProfile(unittest.TestCase):

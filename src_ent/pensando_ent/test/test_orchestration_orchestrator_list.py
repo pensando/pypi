@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.orchestration_orchestrator import OrchestrationOrchestrator
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 globals()['ApiListMeta'] = ApiListMeta
 globals()['OrchestrationOrchestrator'] = OrchestrationOrchestrator
-from pensando_ent.psm_ent.psm_ent.model.orchestration_orchestrator_list import OrchestrationOrchestratorList
+from pensando_ent.psm.psm.model.orchestration_orchestrator_list import OrchestrationOrchestratorList
 
 
 class TestOrchestrationOrchestratorList(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 globals()['ApiListMeta'] = ApiListMeta
 globals()['NetworkVirtualRouterPeeringGroup'] = NetworkVirtualRouterPeeringGroup
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_peering_group_list import NetworkVirtualRouterPeeringGroupList
+from pensando_ent.psm.psm.model.network_virtual_router_peering_group_list import NetworkVirtualRouterPeeringGroupList
 
 
 class TestNetworkVirtualRouterPeeringGroupList(unittest.TestCase):

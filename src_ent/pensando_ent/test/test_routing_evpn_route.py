@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.evpn_route_evpn_type2_route import EVPNRouteEVPNType2Route
-from pensando_ent.psm_ent.model.evpn_route_evpn_type5_route import EVPNRouteEVPNType5Route
+import psm
+from pensando_ent.psm.model.evpn_route_evpn_type2_route import EVPNRouteEVPNType2Route
+from pensando_ent.psm.model.evpn_route_evpn_type5_route import EVPNRouteEVPNType5Route
 globals()['EVPNRouteEVPNType2Route'] = EVPNRouteEVPNType2Route
 globals()['EVPNRouteEVPNType5Route'] = EVPNRouteEVPNType5Route
-from pensando_ent.psm_ent.psm_ent.model.routing_evpn_route import RoutingEVPNRoute
+from pensando_ent.psm.psm.model.routing_evpn_route import RoutingEVPNRoute
 
 
 class TestRoutingEVPNRoute(unittest.TestCase):

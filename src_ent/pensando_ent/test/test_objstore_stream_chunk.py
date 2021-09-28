@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.objstore_stream_chunk import ObjstoreStreamChunk
+import psm
+from pensando_ent.psm.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 
 
 class TestObjstoreStreamChunk(unittest.TestCase):

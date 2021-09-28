@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.auth_user_preference_spec import AuthUserPreferenceSpec
+import psm
+from pensando_ent.psm.psm.model.auth_user_preference_spec import AuthUserPreferenceSpec
 
 
 class TestAuthUserPreferenceSpec(unittest.TestCase):

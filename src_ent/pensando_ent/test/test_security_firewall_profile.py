@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.security_firewall_profile_spec import SecurityFirewallProfileSpec
-from pensando_ent.psm_ent.model.security_firewall_profile_status import SecurityFirewallProfileStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.security_firewall_profile_spec import SecurityFirewallProfileSpec
+from pensando_ent.psm.model.security_firewall_profile_status import SecurityFirewallProfileStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['SecurityFirewallProfileSpec'] = SecurityFirewallProfileSpec
 globals()['SecurityFirewallProfileStatus'] = SecurityFirewallProfileStatus
-from pensando_ent.psm_ent.psm_ent.model.security_firewall_profile import SecurityFirewallProfile
+from pensando_ent.psm.psm.model.security_firewall_profile import SecurityFirewallProfile
 
 
 class TestSecurityFirewallProfile(unittest.TestCase):

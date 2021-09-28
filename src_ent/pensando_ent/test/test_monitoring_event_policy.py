@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_event_policy_spec import MonitoringEventPolicySpec
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_event_policy_spec import MonitoringEventPolicySpec
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringEventPolicySpec'] = MonitoringEventPolicySpec
-from pensando_ent.psm_ent.psm_ent.model.monitoring_event_policy import MonitoringEventPolicy
+from pensando_ent.psm.psm.model.monitoring_event_policy import MonitoringEventPolicy
 
 
 class TestMonitoringEventPolicy(unittest.TestCase):

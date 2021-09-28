@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_dsc_condition import ClusterDSCCondition
-from pensando_ent.psm_ent.model.cluster_dsc_control_plane_status import ClusterDSCControlPlaneStatus
-from pensando_ent.psm_ent.model.cluster_dsc_info import ClusterDSCInfo
-from pensando_ent.psm_ent.model.cluster_ip_config import ClusterIPConfig
+import psm
+from pensando_ent.psm.model.cluster_dsc_condition import ClusterDSCCondition
+from pensando_ent.psm.model.cluster_dsc_control_plane_status import ClusterDSCControlPlaneStatus
+from pensando_ent.psm.model.cluster_dsc_info import ClusterDSCInfo
+from pensando_ent.psm.model.cluster_ip_config import ClusterIPConfig
 globals()['ClusterDSCCondition'] = ClusterDSCCondition
 globals()['ClusterDSCControlPlaneStatus'] = ClusterDSCControlPlaneStatus
 globals()['ClusterDSCInfo'] = ClusterDSCInfo
 globals()['ClusterIPConfig'] = ClusterIPConfig
-from pensando_ent.psm_ent.psm_ent.model.cluster_distributed_service_card_status import ClusterDistributedServiceCardStatus
+from pensando_ent.psm.psm.model.cluster_distributed_service_card_status import ClusterDistributedServiceCardStatus
 
 
 class TestClusterDistributedServiceCardStatus(unittest.TestCase):

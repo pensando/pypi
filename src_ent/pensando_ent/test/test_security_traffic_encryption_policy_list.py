@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.security_traffic_encryption_policy import SecurityTrafficEncryptionPolicy
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.security_traffic_encryption_policy import SecurityTrafficEncryptionPolicy
 globals()['ApiListMeta'] = ApiListMeta
 globals()['SecurityTrafficEncryptionPolicy'] = SecurityTrafficEncryptionPolicy
-from pensando_ent.psm_ent.psm_ent.model.security_traffic_encryption_policy_list import SecurityTrafficEncryptionPolicyList
+from pensando_ent.psm.psm.model.security_traffic_encryption_policy_list import SecurityTrafficEncryptionPolicyList
 
 
 class TestSecurityTrafficEncryptionPolicyList(unittest.TestCase):

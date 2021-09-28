@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.objstore_object_spec import ObjstoreObjectSpec
+import psm
+from pensando_ent.psm.psm.model.objstore_object_spec import ObjstoreObjectSpec
 
 
 class TestObjstoreObjectSpec(unittest.TestCase):

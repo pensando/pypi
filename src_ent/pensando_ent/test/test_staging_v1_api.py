@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.staging_v1_api import StagingV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.staging_v1_api import StagingV1Api  # noqa: E501
 
 
 class TestStagingV1Api(unittest.TestCase):

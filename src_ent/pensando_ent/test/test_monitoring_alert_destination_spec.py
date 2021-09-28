@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.fields_selector import FieldsSelector
-from pensando_ent.psm_ent.model.monitoring_email_export import MonitoringEmailExport
-from pensando_ent.psm_ent.model.monitoring_snmp_export import MonitoringSNMPExport
-from pensando_ent.psm_ent.model.monitoring_syslog_export import MonitoringSyslogExport
+import psm
+from pensando_ent.psm.model.fields_selector import FieldsSelector
+from pensando_ent.psm.model.monitoring_email_export import MonitoringEmailExport
+from pensando_ent.psm.model.monitoring_snmp_export import MonitoringSNMPExport
+from pensando_ent.psm.model.monitoring_syslog_export import MonitoringSyslogExport
 globals()['FieldsSelector'] = FieldsSelector
 globals()['MonitoringEmailExport'] = MonitoringEmailExport
 globals()['MonitoringSNMPExport'] = MonitoringSNMPExport
 globals()['MonitoringSyslogExport'] = MonitoringSyslogExport
-from pensando_ent.psm_ent.psm_ent.model.monitoring_alert_destination_spec import MonitoringAlertDestinationSpec
+from pensando_ent.psm.psm.model.monitoring_alert_destination_spec import MonitoringAlertDestinationSpec
 
 
 class TestMonitoringAlertDestinationSpec(unittest.TestCase):

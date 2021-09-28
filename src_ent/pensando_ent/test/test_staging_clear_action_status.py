@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.staging_clear_action_status import StagingClearActionStatus
+import psm
+from pensando_ent.psm.psm.model.staging_clear_action_status import StagingClearActionStatus
 
 
 class TestStagingClearActionStatus(unittest.TestCase):

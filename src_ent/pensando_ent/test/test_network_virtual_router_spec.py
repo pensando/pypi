@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_rd_spec import NetworkRDSpec
+import psm
+from pensando_ent.psm.model.network_rd_spec import NetworkRDSpec
 globals()['NetworkRDSpec'] = NetworkRDSpec
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_spec import NetworkVirtualRouterSpec
+from pensando_ent.psm.psm.model.network_virtual_router_spec import NetworkVirtualRouterSpec
 
 
 class TestNetworkVirtualRouterSpec(unittest.TestCase):

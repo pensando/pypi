@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_orchestrator_info import NetworkOrchestratorInfo
-from pensando_ent.psm_ent.model.network_rd_spec import NetworkRDSpec
+import psm
+from pensando_ent.psm.model.network_orchestrator_info import NetworkOrchestratorInfo
+from pensando_ent.psm.model.network_rd_spec import NetworkRDSpec
 globals()['NetworkOrchestratorInfo'] = NetworkOrchestratorInfo
 globals()['NetworkRDSpec'] = NetworkRDSpec
-from pensando_ent.psm_ent.psm_ent.model.network_network_spec import NetworkNetworkSpec
+from pensando_ent.psm.psm.model.network_network_spec import NetworkNetworkSpec
 
 
 class TestNetworkNetworkSpec(unittest.TestCase):

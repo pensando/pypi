@@ -1,6 +1,6 @@
-# psm_ent.BrowserV1Api
+# psm.BrowserV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,26 +18,21 @@ Method | HTTP request | Description
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import browser_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.browser import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.browser_browse_response_list import BrowserBrowseResponseList
+import psm
+from api import browser_v1_api
+from pensando_ent.psm.model.browser_browse_response_list import BrowserBrowseResponseList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = browser_v1_api.BrowserV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -55,9 +50,9 @@ with ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_query1(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
+        api_response = api_instance.get_query1(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling BrowserV1Api->get_query1: %s\n" % e)
 ```
 
@@ -95,7 +90,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.BrowserV1Api top]](#psm_ent.BrowserV1Api) [[Back to browser README]](../psm_ent/docs/browser/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_references**
 > BrowserBrowseResponse get_references()
@@ -105,26 +100,21 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import browser_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.browser import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.browser_browse_response import BrowserBrowseResponse
+import psm
+from api import browser_v1_api
+from pensando_ent.psm.model.browser_browse_response import BrowserBrowseResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = browser_v1_api.BrowserV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -146,9 +136,9 @@ with ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_references(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, b_uri=b_uri, b_query_type=b_query_type, b_max_depth=b_max_depth, b_count_only=b_count_only)
+        api_response = api_instance.get_references(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, b_uri=b_uri, b_query_type=b_query_type, b_max_depth=b_max_depth, b_count_only=b_count_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling BrowserV1Api->get_references: %s\n" % e)
 ```
 
@@ -190,7 +180,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.BrowserV1Api top]](#psm_ent.BrowserV1Api) [[Back to browser README]](../psm_ent/docs/browser/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_referrers**
 > BrowserBrowseResponse get_referrers()
@@ -200,26 +190,21 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import browser_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.browser import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.browser_browse_response import BrowserBrowseResponse
+import psm
+from api import browser_v1_api
+from pensando_ent.psm.model.browser_browse_response import BrowserBrowseResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = browser_v1_api.BrowserV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
@@ -241,9 +226,9 @@ with ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_referrers(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, b_uri=b_uri, b_query_type=b_query_type, b_max_depth=b_max_depth, b_count_only=b_count_only)
+        api_response = api_instance.get_referrers(t_kind=t_kind, t_api_version=t_api_version, meta_name=meta_name, meta_tenant=meta_tenant, meta_namespace=meta_namespace, meta_generation_id=meta_generation_id, meta_resource_version=meta_resource_version, meta_uuid=meta_uuid, meta_creation_time=meta_creation_time, meta_mod_time=meta_mod_time, meta_self_link=meta_self_link, b_uri=b_uri, b_query_type=b_query_type, b_max_depth=b_max_depth, b_count_only=b_count_only)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling BrowserV1Api->get_referrers: %s\n" % e)
 ```
 
@@ -285,7 +270,7 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.BrowserV1Api top]](#psm_ent.BrowserV1Api) [[Back to browser README]](../psm_ent/docs/browser/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_query**
 > BrowserBrowseResponseList post_query(body)
@@ -295,27 +280,22 @@ No authorization required
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import browser_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.browser import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.browser_browse_request_list import BrowserBrowseRequestList
-from pensando_ent.psm_ent.model.browser_browse_response_list import BrowserBrowseResponseList
+import psm
+from api import browser_v1_api
+from pensando_ent.psm.model.browser_browse_request_list import BrowserBrowseRequestList
+from pensando_ent.psm.model.browser_browse_response_list import BrowserBrowseResponseList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = browser_v1_api.BrowserV1Api(api_client)
     body = BrowserBrowseRequestList(
@@ -347,9 +327,9 @@ with ApiClient() as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-                api_response = api_instance.post_query(body)
+        api_response = api_instance.post_query(body)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling BrowserV1Api->post_query: %s\n" % e)
 ```
 
@@ -377,5 +357,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.BrowserV1Api top]](#psm_ent.BrowserV1Api) [[Back to browser README]](../psm_ent/docs/browser/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

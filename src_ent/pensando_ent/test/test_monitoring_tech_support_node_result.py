@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.monitoring_tech_support_node_result import MonitoringTechSupportNodeResult
+import psm
+from pensando_ent.psm.psm.model.monitoring_tech_support_node_result import MonitoringTechSupportNodeResult
 
 
 class TestMonitoringTechSupportNodeResult(unittest.TestCase):

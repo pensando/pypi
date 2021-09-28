@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_propagation_status import ClusterPropagationStatus
+import psm
+from pensando_ent.psm.model.cluster_propagation_status import ClusterPropagationStatus
 globals()['ClusterPropagationStatus'] = ClusterPropagationStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_dsc_profile_status import ClusterDSCProfileStatus
+from pensando_ent.psm.psm.model.cluster_dsc_profile_status import ClusterDSCProfileStatus
 
 
 class TestClusterDSCProfileStatus(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.staging_validation_error import StagingValidationError
+import psm
+from pensando_ent.psm.psm.model.staging_validation_error import StagingValidationError
 
 
 class TestStagingValidationError(unittest.TestCase):

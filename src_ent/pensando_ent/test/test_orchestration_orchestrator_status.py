@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.orchestration_orchestrator_status import OrchestrationOrchestratorStatus
+import psm
+from pensando_ent.psm.psm.model.orchestration_orchestrator_status import OrchestrationOrchestratorStatus
 
 
 class TestOrchestrationOrchestratorStatus(unittest.TestCase):

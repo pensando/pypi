@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.cluster_cluster import ClusterCluster
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 globals()['ApiListMeta'] = ApiListMeta
 globals()['ClusterCluster'] = ClusterCluster
-from pensando_ent.psm_ent.psm_ent.model.cluster_cluster_list import ClusterClusterList
+from pensando_ent.psm.psm.model.cluster_cluster_list import ClusterClusterList
 
 
 class TestClusterClusterList(unittest.TestCase):

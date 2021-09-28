@@ -1,6 +1,6 @@
-# psm_ent.TokenauthV1Api
+# psm.TokenauthV1Api
 
-All URIs are relative to `https://PSM-IP/`
+All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,26 +15,21 @@ Method | HTTP request | Description
 ### Example
 
 ```python
-#!/usr/bin/env python3
 import time
-import .psm_ent
-from pensando_ent.psm_ent.api import tokenauth_v1_api
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.models.tokenauth import *
-from pensando_ent.psm_ent  import Configuration, ApiClient, ApiException
-from dateutil.parser import parse as dateutil_parser
-from pensando_ent.psm_ent.model.tokenauth_node_token_response import TokenauthNodeTokenResponse
+import psm
+from api import tokenauth_v1_api
+from pensando_ent.psm.model.tokenauth_node_token_response import TokenauthNodeTokenResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_ent.psm_ent.Configuration(
+configuration = pensando_ent.psm.Configuration(
     psm_config_path=HOME+"/.psm/config.json"
 )
 configuration.verify_ssl = False
 
 
 # Enter a context with an instance of the API client
-with ApiClient() as api_client:
+with psm.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = tokenauth_v1_api.TokenauthV1Api(api_client)
     audience = [
@@ -46,9 +41,9 @@ with ApiClient() as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-                api_response = api_instance.get_generate_node_token(audience=audience, validity_start=validity_start, validity_end=validity_end)
+        api_response = api_instance.get_generate_node_token(audience=audience, validity_start=validity_start, validity_end=validity_end)
         pprint(api_response)
-    except ApiException as e:
+    except psm.ApiException as e:
         print("Exception when calling TokenauthV1Api->get_generate_node_token: %s\n" % e)
 ```
 
@@ -78,5 +73,5 @@ No authorization required
 |-------------|-------------|------------------|
 **200** | (empty) |  -  |
 
-[[Back to psm_ent.TokenauthV1Api top]](#psm_ent.TokenauthV1Api) [[Back to tokenauth README]](../psm_ent/docs/tokenauth/README.md) [[Back to pensando_ent README]](../README.md)
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

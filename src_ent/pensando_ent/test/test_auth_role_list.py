@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.auth_role import AuthRole
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.auth_role import AuthRole
 globals()['ApiListMeta'] = ApiListMeta
 globals()['AuthRole'] = AuthRole
-from pensando_ent.psm_ent.psm_ent.model.auth_role_list import AuthRoleList
+from pensando_ent.psm.psm.model.auth_role_list import AuthRoleList
 
 
 class TestAuthRoleList(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.staging_item_id import StagingItemId
+import psm
+from pensando_ent.psm.psm.model.staging_item_id import StagingItemId
 
 
 class TestStagingItemId(unittest.TestCase):

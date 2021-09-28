@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.security_certificate import SecurityCertificate
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.security_certificate import SecurityCertificate
 globals()['ApiListMeta'] = ApiListMeta
 globals()['SecurityCertificate'] = SecurityCertificate
-from pensando_ent.psm_ent.psm_ent.model.security_certificate_list import SecurityCertificateList
+from pensando_ent.psm.psm.model.security_certificate_list import SecurityCertificateList
 
 
 class TestSecurityCertificateList(unittest.TestCase):

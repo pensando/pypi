@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_mirror_export_config import MonitoringMirrorExportConfig
+import psm
+from pensando_ent.psm.model.monitoring_mirror_export_config import MonitoringMirrorExportConfig
 globals()['MonitoringMirrorExportConfig'] = MonitoringMirrorExportConfig
-from pensando_ent.psm_ent.psm_ent.model.monitoring_mirror_collector import MonitoringMirrorCollector
+from pensando_ent.psm.psm.model.monitoring_mirror_collector import MonitoringMirrorCollector
 
 
 class TestMonitoringMirrorCollector(unittest.TestCase):

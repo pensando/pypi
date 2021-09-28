@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_instance_selector import MonitoringInstanceSelector
-from pensando_ent.psm_ent.model.monitoring_measurement_criteria import MonitoringMeasurementCriteria
-from pensando_ent.psm_ent.model.monitoring_metric_identifier import MonitoringMetricIdentifier
-from pensando_ent.psm_ent.model.monitoring_thresholds import MonitoringThresholds
+import psm
+from pensando_ent.psm.model.monitoring_instance_selector import MonitoringInstanceSelector
+from pensando_ent.psm.model.monitoring_measurement_criteria import MonitoringMeasurementCriteria
+from pensando_ent.psm.model.monitoring_metric_identifier import MonitoringMetricIdentifier
+from pensando_ent.psm.model.monitoring_thresholds import MonitoringThresholds
 globals()['MonitoringInstanceSelector'] = MonitoringInstanceSelector
 globals()['MonitoringMeasurementCriteria'] = MonitoringMeasurementCriteria
 globals()['MonitoringMetricIdentifier'] = MonitoringMetricIdentifier
 globals()['MonitoringThresholds'] = MonitoringThresholds
-from pensando_ent.psm_ent.psm_ent.model.monitoring_stats_alert_policy_spec import MonitoringStatsAlertPolicySpec
+from pensando_ent.psm.psm.model.monitoring_stats_alert_policy_spec import MonitoringStatsAlertPolicySpec
 
 
 class TestMonitoringStatsAlertPolicySpec(unittest.TestCase):

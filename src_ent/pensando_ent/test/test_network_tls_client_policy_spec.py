@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_tls_client_policy_spec import NetworkTLSClientPolicySpec
+import psm
+from pensando_ent.psm.psm.model.network_tls_client_policy_spec import NetworkTLSClientPolicySpec
 
 
 class TestNetworkTLSClientPolicySpec(unittest.TestCase):

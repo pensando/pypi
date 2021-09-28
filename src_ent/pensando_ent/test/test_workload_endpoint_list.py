@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.workload_endpoint import WorkloadEndpoint
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.workload_endpoint import WorkloadEndpoint
 globals()['ApiListMeta'] = ApiListMeta
 globals()['WorkloadEndpoint'] = WorkloadEndpoint
-from pensando_ent.psm_ent.psm_ent.model.workload_endpoint_list import WorkloadEndpointList
+from pensando_ent.psm.psm.model.workload_endpoint_list import WorkloadEndpointList
 
 
 class TestWorkloadEndpointList(unittest.TestCase):

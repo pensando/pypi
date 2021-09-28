@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_role import AuthRole
+import psm
+from pensando_ent.psm.model.auth_role import AuthRole
 globals()['AuthRole'] = AuthRole
-from pensando_ent.psm_ent.psm_ent.model.auth_auto_msg_role_watch_helper_watch_event import AuthAutoMsgRoleWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.auth_auto_msg_role_watch_helper_watch_event import AuthAutoMsgRoleWatchHelperWatchEvent
 
 
 class TestAuthAutoMsgRoleWatchHelperWatchEvent(unittest.TestCase):

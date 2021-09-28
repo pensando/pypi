@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.staging_commit_action_status import StagingCommitActionStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.staging_commit_action_status import StagingCommitActionStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['StagingCommitActionStatus'] = StagingCommitActionStatus
-from pensando_ent.psm_ent.psm_ent.model.staging_commit_action import StagingCommitAction
+from pensando_ent.psm.psm.model.staging_commit_action import StagingCommitAction
 
 
 class TestStagingCommitAction(unittest.TestCase):

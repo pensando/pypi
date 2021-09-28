@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_watch_event import ApiWatchEvent
+import psm
+from pensando_ent.psm.model.api_watch_event import ApiWatchEvent
 globals()['ApiWatchEvent'] = ApiWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.api_watch_event_list import ApiWatchEventList
+from pensando_ent.psm.psm.model.api_watch_event_list import ApiWatchEventList
 
 
 class TestApiWatchEventList(unittest.TestCase):

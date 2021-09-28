@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_mirror_session_spec import MonitoringMirrorSessionSpec
-from pensando_ent.psm_ent.model.monitoring_mirror_session_status import MonitoringMirrorSessionStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_mirror_session_spec import MonitoringMirrorSessionSpec
+from pensando_ent.psm.model.monitoring_mirror_session_status import MonitoringMirrorSessionStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringMirrorSessionSpec'] = MonitoringMirrorSessionSpec
 globals()['MonitoringMirrorSessionStatus'] = MonitoringMirrorSessionStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_mirror_session import MonitoringMirrorSession
+from pensando_ent.psm.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 
 
 class TestMonitoringMirrorSession(unittest.TestCase):

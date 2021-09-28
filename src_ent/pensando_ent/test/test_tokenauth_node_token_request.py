@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.tokenauth_node_token_request import TokenauthNodeTokenRequest
+import psm
+from pensando_ent.psm.psm.model.tokenauth_node_token_request import TokenauthNodeTokenRequest
 
 
 class TestTokenauthNodeTokenRequest(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_storage_device_info import ClusterStorageDeviceInfo
+import psm
+from pensando_ent.psm.model.cluster_storage_device_info import ClusterStorageDeviceInfo
 globals()['ClusterStorageDeviceInfo'] = ClusterStorageDeviceInfo
-from pensando_ent.psm_ent.psm_ent.model.cluster_storage_info import ClusterStorageInfo
+from pensando_ent.psm.psm.model.cluster_storage_info import ClusterStorageInfo
 
 
 class TestClusterStorageInfo(unittest.TestCase):

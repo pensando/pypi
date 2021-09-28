@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.preferences_idle_timeout import PreferencesIdleTimeout
+import psm
+from pensando_ent.psm.model.preferences_idle_timeout import PreferencesIdleTimeout
 globals()['PreferencesIdleTimeout'] = PreferencesIdleTimeout
-from pensando_ent.psm_ent.psm_ent.model.preferences_ui_global_settings_spec import PreferencesUIGlobalSettingsSpec
+from pensando_ent.psm.psm.model.preferences_ui_global_settings_spec import PreferencesUIGlobalSettingsSpec
 
 
 class TestPreferencesUIGlobalSettingsSpec(unittest.TestCase):

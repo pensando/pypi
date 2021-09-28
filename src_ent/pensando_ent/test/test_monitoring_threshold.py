@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.monitoring_threshold import MonitoringThreshold
+import psm
+from pensando_ent.psm.psm.model.monitoring_threshold import MonitoringThreshold
 
 
 class TestMonitoringThreshold(unittest.TestCase):

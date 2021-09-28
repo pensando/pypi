@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_peer_status import ClusterPeerStatus
+import psm
+from pensando_ent.psm.model.cluster_peer_status import ClusterPeerStatus
 globals()['ClusterPeerStatus'] = ClusterPeerStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_dsc_control_plane_status import ClusterDSCControlPlaneStatus
+from pensando_ent.psm.psm.model.cluster_dsc_control_plane_status import ClusterDSCControlPlaneStatus
 
 
 class TestClusterDSCControlPlaneStatus(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_policer_action import NetworkPolicerAction
-from pensando_ent.psm_ent.model.network_policer_criteria import NetworkPolicerCriteria
+import psm
+from pensando_ent.psm.model.network_policer_action import NetworkPolicerAction
+from pensando_ent.psm.model.network_policer_criteria import NetworkPolicerCriteria
 globals()['NetworkPolicerAction'] = NetworkPolicerAction
 globals()['NetworkPolicerCriteria'] = NetworkPolicerCriteria
-from pensando_ent.psm_ent.psm_ent.model.network_policer_profile_spec import NetworkPolicerProfileSpec
+from pensando_ent.psm.psm.model.network_policer_profile_spec import NetworkPolicerProfileSpec
 
 
 class TestNetworkPolicerProfileSpec(unittest.TestCase):

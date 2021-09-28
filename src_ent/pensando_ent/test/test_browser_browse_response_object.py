@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.browser_object import BrowserObject
+import psm
+from pensando_ent.psm.model.browser_object import BrowserObject
 globals()['BrowserObject'] = BrowserObject
-from pensando_ent.psm_ent.psm_ent.model.browser_browse_response_object import BrowserBrowseResponseObject
+from pensando_ent.psm.psm.model.browser_browse_response_object import BrowserBrowseResponseObject
 
 
 class TestBrowserBrowseResponseObject(unittest.TestCase):

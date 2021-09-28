@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_ldap_attribute_mapping import AuthLdapAttributeMapping
-from pensando_ent.psm_ent.model.auth_ldap_server import AuthLdapServer
+import psm
+from pensando_ent.psm.model.auth_ldap_attribute_mapping import AuthLdapAttributeMapping
+from pensando_ent.psm.model.auth_ldap_server import AuthLdapServer
 globals()['AuthLdapAttributeMapping'] = AuthLdapAttributeMapping
 globals()['AuthLdapServer'] = AuthLdapServer
-from pensando_ent.psm_ent.psm_ent.model.auth_ldap_domain import AuthLdapDomain
+from pensando_ent.psm.psm.model.auth_ldap_domain import AuthLdapDomain
 
 
 class TestAuthLdapDomain(unittest.TestCase):

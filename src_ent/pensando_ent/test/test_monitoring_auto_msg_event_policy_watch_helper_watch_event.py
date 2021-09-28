@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_event_policy import MonitoringEventPolicy
+import psm
+from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 globals()['MonitoringEventPolicy'] = MonitoringEventPolicy
-from pensando_ent.psm_ent.psm_ent.model.monitoring_auto_msg_event_policy_watch_helper_watch_event import MonitoringAutoMsgEventPolicyWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.monitoring_auto_msg_event_policy_watch_helper_watch_event import MonitoringAutoMsgEventPolicyWatchHelperWatchEvent
 
 
 class TestMonitoringAutoMsgEventPolicyWatchHelperWatchEvent(unittest.TestCase):

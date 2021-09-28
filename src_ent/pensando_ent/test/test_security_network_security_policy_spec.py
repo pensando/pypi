@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_sg_rule import SecuritySGRule
+import psm
+from pensando_ent.psm.model.security_sg_rule import SecuritySGRule
 globals()['SecuritySGRule'] = SecuritySGRule
-from pensando_ent.psm_ent.psm_ent.model.security_network_security_policy_spec import SecurityNetworkSecurityPolicySpec
+from pensando_ent.psm.psm.model.security_network_security_policy_spec import SecurityNetworkSecurityPolicySpec
 
 
 class TestSecurityNetworkSecurityPolicySpec(unittest.TestCase):

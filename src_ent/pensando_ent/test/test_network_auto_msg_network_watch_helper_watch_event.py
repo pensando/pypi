@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_network import NetworkNetwork
+import psm
+from pensando_ent.psm.model.network_network import NetworkNetwork
 globals()['NetworkNetwork'] = NetworkNetwork
-from pensando_ent.psm_ent.psm_ent.model.network_auto_msg_network_watch_helper_watch_event import NetworkAutoMsgNetworkWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.network_auto_msg_network_watch_helper_watch_event import NetworkAutoMsgNetworkWatchHelperWatchEvent
 
 
 class TestNetworkAutoMsgNetworkWatchHelperWatchEvent(unittest.TestCase):

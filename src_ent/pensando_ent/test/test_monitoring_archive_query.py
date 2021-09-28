@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.fields_selector import FieldsSelector
-from pensando_ent.psm_ent.model.labels_selector import LabelsSelector
-from pensando_ent.psm_ent.model.search_text_requirement import SearchTextRequirement
+import psm
+from pensando_ent.psm.model.fields_selector import FieldsSelector
+from pensando_ent.psm.model.labels_selector import LabelsSelector
+from pensando_ent.psm.model.search_text_requirement import SearchTextRequirement
 globals()['FieldsSelector'] = FieldsSelector
 globals()['LabelsSelector'] = LabelsSelector
 globals()['SearchTextRequirement'] = SearchTextRequirement
-from pensando_ent.psm_ent.psm_ent.model.monitoring_archive_query import MonitoringArchiveQuery
+from pensando_ent.psm.psm.model.monitoring_archive_query import MonitoringArchiveQuery
 
 
 class TestMonitoringArchiveQuery(unittest.TestCase):

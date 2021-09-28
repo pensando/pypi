@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.monitoring_metric_identifier import MonitoringMetricIdentifier
+import psm
+from pensando_ent.psm.psm.model.monitoring_metric_identifier import MonitoringMetricIdentifier
 
 
 class TestMonitoringMetricIdentifier(unittest.TestCase):

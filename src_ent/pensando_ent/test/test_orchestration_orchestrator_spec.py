@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_external_cred import MonitoringExternalCred
-from pensando_ent.psm_ent.model.orchestration_namespace_spec import OrchestrationNamespaceSpec
+import psm
+from pensando_ent.psm.model.monitoring_external_cred import MonitoringExternalCred
+from pensando_ent.psm.model.orchestration_namespace_spec import OrchestrationNamespaceSpec
 globals()['MonitoringExternalCred'] = MonitoringExternalCred
 globals()['OrchestrationNamespaceSpec'] = OrchestrationNamespaceSpec
-from pensando_ent.psm_ent.psm_ent.model.orchestration_orchestrator_spec import OrchestrationOrchestratorSpec
+from pensando_ent.psm.psm.model.orchestration_orchestrator_spec import OrchestrationOrchestratorSpec
 
 
 class TestOrchestrationOrchestratorSpec(unittest.TestCase):

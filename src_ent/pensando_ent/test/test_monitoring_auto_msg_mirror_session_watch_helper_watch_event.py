@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_mirror_session import MonitoringMirrorSession
+import psm
+from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 globals()['MonitoringMirrorSession'] = MonitoringMirrorSession
-from pensando_ent.psm_ent.psm_ent.model.monitoring_auto_msg_mirror_session_watch_helper_watch_event import MonitoringAutoMsgMirrorSessionWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.monitoring_auto_msg_mirror_session_watch_helper_watch_event import MonitoringAutoMsgMirrorSessionWatchHelperWatchEvent
 
 
 class TestMonitoringAutoMsgMirrorSessionWatchHelperWatchEvent(unittest.TestCase):

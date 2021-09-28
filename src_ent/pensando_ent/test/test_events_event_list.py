@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.events_event import EventsEvent
+import psm
+from pensando_ent.psm.model.events_event import EventsEvent
 globals()['EventsEvent'] = EventsEvent
-from pensando_ent.psm_ent.psm_ent.model.events_event_list import EventsEventList
+from pensando_ent.psm.psm.model.events_event_list import EventsEventList
 
 
 class TestEventsEventList(unittest.TestCase):

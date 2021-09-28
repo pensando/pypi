@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_auto_msg_version_watch_helper_watch_event import ClusterAutoMsgVersionWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.cluster_auto_msg_version_watch_helper_watch_event import ClusterAutoMsgVersionWatchHelperWatchEvent
 globals()['ClusterAutoMsgVersionWatchHelperWatchEvent'] = ClusterAutoMsgVersionWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_version_watch_helper import ClusterAutoMsgVersionWatchHelper
+from pensando_ent.psm.psm.model.cluster_auto_msg_version_watch_helper import ClusterAutoMsgVersionWatchHelper
 
 
 class TestClusterAutoMsgVersionWatchHelper(unittest.TestCase):

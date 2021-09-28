@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.recoverykeys_recovery_keys import RecoverykeysRecoveryKeys
+import psm
+from pensando_ent.psm.psm.model.recoverykeys_recovery_keys import RecoverykeysRecoveryKeys
 
 
 class TestRecoverykeysRecoveryKeys(unittest.TestCase):

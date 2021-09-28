@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.security_i_psec_protocol_spec import SecurityIPsecProtocolSpec
+import psm
+from pensando_ent.psm.psm.model.security_i_psec_protocol_spec import SecurityIPsecProtocolSpec
 
 
 class TestSecurityIPsecProtocolSpec(unittest.TestCase):

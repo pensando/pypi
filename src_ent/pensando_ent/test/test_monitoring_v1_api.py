@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.monitoring_v1_api import MonitoringV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.monitoring_v1_api import MonitoringV1Api  # noqa: E501
 
 
 class TestMonitoringV1Api(unittest.TestCase):

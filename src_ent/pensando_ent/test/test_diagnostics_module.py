@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.diagnostics_module_spec import DiagnosticsModuleSpec
-from pensando_ent.psm_ent.model.diagnostics_module_status import DiagnosticsModuleStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.diagnostics_module_spec import DiagnosticsModuleSpec
+from pensando_ent.psm.model.diagnostics_module_status import DiagnosticsModuleStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['DiagnosticsModuleSpec'] = DiagnosticsModuleSpec
 globals()['DiagnosticsModuleStatus'] = DiagnosticsModuleStatus
-from pensando_ent.psm_ent.psm_ent.model.diagnostics_module import DiagnosticsModule
+from pensando_ent.psm.psm.model.diagnostics_module import DiagnosticsModule
 
 
 class TestDiagnosticsModule(unittest.TestCase):

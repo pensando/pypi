@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.events_event_source import EventsEventSource
+import psm
+from pensando_ent.psm.psm.model.events_event_source import EventsEventSource
 
 
 class TestEventsEventSource(unittest.TestCase):

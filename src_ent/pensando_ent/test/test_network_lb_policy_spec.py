@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_health_check_spec import NetworkHealthCheckSpec
+import psm
+from pensando_ent.psm.model.network_health_check_spec import NetworkHealthCheckSpec
 globals()['NetworkHealthCheckSpec'] = NetworkHealthCheckSpec
-from pensando_ent.psm_ent.psm_ent.model.network_lb_policy_spec import NetworkLbPolicySpec
+from pensando_ent.psm.psm.model.network_lb_policy_spec import NetworkLbPolicySpec
 
 
 class TestNetworkLbPolicySpec(unittest.TestCase):

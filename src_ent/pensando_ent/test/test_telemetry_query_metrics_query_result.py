@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.telemetry_query_result_series import TelemetryQueryResultSeries
+import psm
+from pensando_ent.psm.model.telemetry_query_result_series import TelemetryQueryResultSeries
 globals()['TelemetryQueryResultSeries'] = TelemetryQueryResultSeries
-from pensando_ent.psm_ent.psm_ent.model.telemetry_query_metrics_query_result import TelemetryQueryMetricsQueryResult
+from pensando_ent.psm.psm.model.telemetry_query_metrics_query_result import TelemetryQueryMetricsQueryResult
 
 
 class TestTelemetryQueryMetricsQueryResult(unittest.TestCase):

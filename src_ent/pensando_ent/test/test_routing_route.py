@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.routing_route_status import RoutingRouteStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.routing_route_status import RoutingRouteStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['RoutingRouteStatus'] = RoutingRouteStatus
-from pensando_ent.psm_ent.psm_ent.model.routing_route import RoutingRoute
+from pensando_ent.psm.psm.model.routing_route import RoutingRoute
 
 
 class TestRoutingRoute(unittest.TestCase):

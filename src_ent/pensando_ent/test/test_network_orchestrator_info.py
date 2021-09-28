@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_orchestrator_info import NetworkOrchestratorInfo
+import psm
+from pensando_ent.psm.psm.model.network_orchestrator_info import NetworkOrchestratorInfo
 
 
 class TestNetworkOrchestratorInfo(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_ldap_server import AuthLdapServer
+import psm
+from pensando_ent.psm.model.auth_ldap_server import AuthLdapServer
 globals()['AuthLdapServer'] = AuthLdapServer
-from pensando_ent.psm_ent.psm_ent.model.auth_ldap_server_status import AuthLdapServerStatus
+from pensando_ent.psm.psm.model.auth_ldap_server_status import AuthLdapServerStatus
 
 
 class TestAuthLdapServerStatus(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_matched_requirement import MonitoringMatchedRequirement
+import psm
+from pensando_ent.psm.model.monitoring_matched_requirement import MonitoringMatchedRequirement
 globals()['MonitoringMatchedRequirement'] = MonitoringMatchedRequirement
-from pensando_ent.psm_ent.psm_ent.model.monitoring_alert_reason import MonitoringAlertReason
+from pensando_ent.psm.psm.model.monitoring_alert_reason import MonitoringAlertReason
 
 
 class TestMonitoringAlertReason(unittest.TestCase):

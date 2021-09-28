@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_dsc_profile import ClusterDSCProfile
+import psm
+from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 globals()['ClusterDSCProfile'] = ClusterDSCProfile
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_dsc_profile_watch_helper_watch_event import ClusterAutoMsgDSCProfileWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_dsc_profile_watch_helper_watch_event import ClusterAutoMsgDSCProfileWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgDSCProfileWatchHelperWatchEvent(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.fwlog_fw_log import FwlogFwLog
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.fwlog_fw_log import FwlogFwLog
 globals()['ApiListMeta'] = ApiListMeta
 globals()['FwlogFwLog'] = FwlogFwLog
-from pensando_ent.psm_ent.psm_ent.model.fwlog_fw_log_list import FwlogFwLogList
+from pensando_ent.psm.psm.model.fwlog_fw_log_list import FwlogFwLogList
 
 
 class TestFwlogFwLogList(unittest.TestCase):

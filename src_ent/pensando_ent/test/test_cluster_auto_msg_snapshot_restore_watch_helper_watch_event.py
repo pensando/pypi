@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_snapshot_restore import ClusterSnapshotRestore
+import psm
+from pensando_ent.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 globals()['ClusterSnapshotRestore'] = ClusterSnapshotRestore
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_snapshot_restore_watch_helper_watch_event import ClusterAutoMsgSnapshotRestoreWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_snapshot_restore_watch_helper_watch_event import ClusterAutoMsgSnapshotRestoreWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgSnapshotRestoreWatchHelperWatchEvent(unittest.TestCase):

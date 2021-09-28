@@ -11,16 +11,16 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.search_entry import SearchEntry
-from pensando_ent.psm_ent.model.search_error import SearchError
-from pensando_ent.psm_ent.model.search_tenant_aggregation import SearchTenantAggregation
-from pensando_ent.psm_ent.model.search_tenant_preview import SearchTenantPreview
+import psm
+from pensando_ent.psm.model.search_entry import SearchEntry
+from pensando_ent.psm.model.search_error import SearchError
+from pensando_ent.psm.model.search_tenant_aggregation import SearchTenantAggregation
+from pensando_ent.psm.model.search_tenant_preview import SearchTenantPreview
 globals()['SearchEntry'] = SearchEntry
 globals()['SearchError'] = SearchError
 globals()['SearchTenantAggregation'] = SearchTenantAggregation
 globals()['SearchTenantPreview'] = SearchTenantPreview
-from pensando_ent.psm_ent.psm_ent.model.search_search_response import SearchSearchResponse
+from pensando_ent.psm.psm.model.search_search_response import SearchSearchResponse
 
 
 class TestSearchSearchResponse(unittest.TestCase):

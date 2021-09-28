@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_auth_config import MonitoringAuthConfig
-from pensando_ent.psm_ent.model.monitoring_privacy_config import MonitoringPrivacyConfig
+import psm
+from pensando_ent.psm.model.monitoring_auth_config import MonitoringAuthConfig
+from pensando_ent.psm.model.monitoring_privacy_config import MonitoringPrivacyConfig
 globals()['MonitoringAuthConfig'] = MonitoringAuthConfig
 globals()['MonitoringPrivacyConfig'] = MonitoringPrivacyConfig
-from pensando_ent.psm_ent.psm_ent.model.monitoring_snmp_trap_server import MonitoringSNMPTrapServer
+from pensando_ent.psm.psm.model.monitoring_snmp_trap_server import MonitoringSNMPTrapServer
 
 
 class TestMonitoringSNMPTrapServer(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.auth_user_preference import AuthUserPreference
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 globals()['ApiListMeta'] = ApiListMeta
 globals()['AuthUserPreference'] = AuthUserPreference
-from pensando_ent.psm_ent.psm_ent.model.auth_user_preference_list import AuthUserPreferenceList
+from pensando_ent.psm.psm.model.auth_user_preference_list import AuthUserPreferenceList
 
 
 class TestAuthUserPreferenceList(unittest.TestCase):

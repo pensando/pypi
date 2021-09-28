@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_distributed_service_card_spec import ClusterDistributedServiceCardSpec
-from pensando_ent.psm_ent.model.cluster_distributed_service_card_status import ClusterDistributedServiceCardStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_distributed_service_card_spec import ClusterDistributedServiceCardSpec
+from pensando_ent.psm.model.cluster_distributed_service_card_status import ClusterDistributedServiceCardStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterDistributedServiceCardSpec'] = ClusterDistributedServiceCardSpec
 globals()['ClusterDistributedServiceCardStatus'] = ClusterDistributedServiceCardStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_distributed_service_card import ClusterDistributedServiceCard
+from pensando_ent.psm.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 
 
 class TestClusterDistributedServiceCard(unittest.TestCase):

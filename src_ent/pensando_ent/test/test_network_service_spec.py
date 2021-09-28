@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_tls_client_policy_spec import NetworkTLSClientPolicySpec
-from pensando_ent.psm_ent.model.network_tls_server_policy_spec import NetworkTLSServerPolicySpec
+import psm
+from pensando_ent.psm.model.network_tls_client_policy_spec import NetworkTLSClientPolicySpec
+from pensando_ent.psm.model.network_tls_server_policy_spec import NetworkTLSServerPolicySpec
 globals()['NetworkTLSClientPolicySpec'] = NetworkTLSClientPolicySpec
 globals()['NetworkTLSServerPolicySpec'] = NetworkTLSServerPolicySpec
-from pensando_ent.psm_ent.psm_ent.model.network_service_spec import NetworkServiceSpec
+from pensando_ent.psm.psm.model.network_service_spec import NetworkServiceSpec
 
 
 class TestNetworkServiceSpec(unittest.TestCase):

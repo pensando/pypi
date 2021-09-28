@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.search_error import SearchError
+import psm
+from pensando_ent.psm.psm.model.search_error import SearchError
 
 
 class TestSearchError(unittest.TestCase):

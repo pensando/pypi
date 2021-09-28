@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.labels_requirement import LabelsRequirement
+import psm
+from pensando_ent.psm.psm.model.labels_requirement import LabelsRequirement
 
 
 class TestLabelsRequirement(unittest.TestCase):

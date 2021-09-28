@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_conn_track_info import SysruntimeConnTrackInfo
-from pensando_ent.psm_ent.model.sysruntime_flow_info import SysruntimeFlowInfo
-from pensando_ent.psm_ent.model.sysruntime_telemetry_info import SysruntimeTelemetryInfo
+import psm
+from pensando_ent.psm.model.sysruntime_conn_track_info import SysruntimeConnTrackInfo
+from pensando_ent.psm.model.sysruntime_flow_info import SysruntimeFlowInfo
+from pensando_ent.psm.model.sysruntime_telemetry_info import SysruntimeTelemetryInfo
 globals()['SysruntimeConnTrackInfo'] = SysruntimeConnTrackInfo
 globals()['SysruntimeFlowInfo'] = SysruntimeFlowInfo
 globals()['SysruntimeTelemetryInfo'] = SysruntimeTelemetryInfo
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_flow_data import SysruntimeFlowData
+from pensando_ent.psm.psm.model.sysruntime_flow_data import SysruntimeFlowData
 
 
 class TestSysruntimeFlowData(unittest.TestCase):

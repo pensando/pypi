@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_any import ApiAny
+import psm
+from pensando_ent.psm.model.api_any import ApiAny
 globals()['ApiAny'] = ApiAny
-from pensando_ent.psm_ent.psm_ent.model.staging_item import StagingItem
+from pensando_ent.psm.psm.model.staging_item import StagingItem
 
 
 class TestStagingItem(unittest.TestCase):

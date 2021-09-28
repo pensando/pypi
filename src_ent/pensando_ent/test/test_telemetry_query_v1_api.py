@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.telemetry_query_v1_api import TelemetryQueryV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.telemetry_query_v1_api import TelemetryQueryV1Api  # noqa: E501
 
 
 class TestTelemetryQueryV1Api(unittest.TestCase):

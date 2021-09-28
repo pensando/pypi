@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.telemetry_query_pagination_spec import TelemetryQueryPaginationSpec
+import psm
+from pensando_ent.psm.psm.model.telemetry_query_pagination_spec import TelemetryQueryPaginationSpec
 
 
 class TestTelemetryQueryPaginationSpec(unittest.TestCase):

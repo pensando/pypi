@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_interface import ApiInterface
+import psm
+from pensando_ent.psm.model.api_interface import ApiInterface
 globals()['ApiInterface'] = ApiInterface
-from pensando_ent.psm_ent.psm_ent.model.api_interface_slice import ApiInterfaceSlice
+from pensando_ent.psm.psm.model.api_interface_slice import ApiInterfaceSlice
 
 
 class TestApiInterfaceSlice(unittest.TestCase):

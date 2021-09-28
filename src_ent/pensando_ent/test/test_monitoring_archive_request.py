@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_archive_request_spec import MonitoringArchiveRequestSpec
-from pensando_ent.psm_ent.model.monitoring_archive_request_status import MonitoringArchiveRequestStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_archive_request_spec import MonitoringArchiveRequestSpec
+from pensando_ent.psm.model.monitoring_archive_request_status import MonitoringArchiveRequestStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringArchiveRequestSpec'] = MonitoringArchiveRequestSpec
 globals()['MonitoringArchiveRequestStatus'] = MonitoringArchiveRequestStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_archive_request import MonitoringArchiveRequest
+from pensando_ent.psm.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 
 
 class TestMonitoringArchiveRequest(unittest.TestCase):

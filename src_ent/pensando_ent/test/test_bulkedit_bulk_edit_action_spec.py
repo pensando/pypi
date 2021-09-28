@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.bulkedit_bulk_edit_item import BulkeditBulkEditItem
+import psm
+from pensando_ent.psm.model.bulkedit_bulk_edit_item import BulkeditBulkEditItem
 globals()['BulkeditBulkEditItem'] = BulkeditBulkEditItem
-from pensando_ent.psm_ent.psm_ent.model.bulkedit_bulk_edit_action_spec import BulkeditBulkEditActionSpec
+from pensando_ent.psm.psm.model.bulkedit_bulk_edit_action_spec import BulkeditBulkEditActionSpec
 
 
 class TestBulkeditBulkEditActionSpec(unittest.TestCase):

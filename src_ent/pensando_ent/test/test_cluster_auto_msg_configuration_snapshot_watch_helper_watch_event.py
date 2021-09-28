@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
+import psm
+from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 globals()['ClusterConfigurationSnapshot'] = ClusterConfigurationSnapshot
-from pensando_ent.psm_ent.psm_ent.model.cluster_auto_msg_configuration_snapshot_watch_helper_watch_event import ClusterAutoMsgConfigurationSnapshotWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.cluster_auto_msg_configuration_snapshot_watch_helper_watch_event import ClusterAutoMsgConfigurationSnapshotWatchHelperWatchEvent
 
 
 class TestClusterAutoMsgConfigurationSnapshotWatchHelperWatchEvent(unittest.TestCase):

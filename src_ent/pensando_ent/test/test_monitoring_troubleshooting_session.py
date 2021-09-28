@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_troubleshooting_session_spec import MonitoringTroubleshootingSessionSpec
-from pensando_ent.psm_ent.model.monitoring_troubleshooting_session_status import MonitoringTroubleshootingSessionStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_troubleshooting_session_spec import MonitoringTroubleshootingSessionSpec
+from pensando_ent.psm.model.monitoring_troubleshooting_session_status import MonitoringTroubleshootingSessionStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringTroubleshootingSessionSpec'] = MonitoringTroubleshootingSessionSpec
 globals()['MonitoringTroubleshootingSessionStatus'] = MonitoringTroubleshootingSessionStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
+from pensando_ent.psm.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 
 
 class TestMonitoringTroubleshootingSession(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_kind_watch_options import ApiKindWatchOptions
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
+import psm
+from pensando_ent.psm.model.api_kind_watch_options import ApiKindWatchOptions
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
 globals()['ApiKindWatchOptions'] = ApiKindWatchOptions
 globals()['ApiObjectMeta'] = ApiObjectMeta
-from pensando_ent.psm_ent.psm_ent.model.api_agg_watch_options import ApiAggWatchOptions
+from pensando_ent.psm.psm.model.api_agg_watch_options import ApiAggWatchOptions
 
 
 class TestApiAggWatchOptions(unittest.TestCase):

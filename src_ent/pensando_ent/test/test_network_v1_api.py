@@ -10,8 +10,8 @@
 
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.api.network_v1_api import NetworkV1Api  # noqa: E501
+import psm
+from pensando_ent.psm.api.network_v1_api import NetworkV1Api  # noqa: E501
 
 
 class TestNetworkV1Api(unittest.TestCase):

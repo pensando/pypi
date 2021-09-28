@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.cluster_license_spec import ClusterLicenseSpec
-from pensando_ent.psm_ent.model.cluster_license_status import ClusterLicenseStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.cluster_license_spec import ClusterLicenseSpec
+from pensando_ent.psm.model.cluster_license_status import ClusterLicenseStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['ClusterLicenseSpec'] = ClusterLicenseSpec
 globals()['ClusterLicenseStatus'] = ClusterLicenseStatus
-from pensando_ent.psm_ent.psm_ent.model.cluster_license import ClusterLicense
+from pensando_ent.psm.psm.model.cluster_license import ClusterLicense
 
 
 class TestClusterLicense(unittest.TestCase):

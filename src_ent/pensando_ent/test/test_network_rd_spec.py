@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_route_distinguisher import NetworkRouteDistinguisher
+import psm
+from pensando_ent.psm.model.network_route_distinguisher import NetworkRouteDistinguisher
 globals()['NetworkRouteDistinguisher'] = NetworkRouteDistinguisher
-from pensando_ent.psm_ent.psm_ent.model.network_rd_spec import NetworkRDSpec
+from pensando_ent.psm.psm.model.network_rd_spec import NetworkRDSpec
 
 
 class TestNetworkRDSpec(unittest.TestCase):

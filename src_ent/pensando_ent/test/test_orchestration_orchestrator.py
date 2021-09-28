@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.orchestration_orchestrator_spec import OrchestrationOrchestratorSpec
-from pensando_ent.psm_ent.model.orchestration_orchestrator_status import OrchestrationOrchestratorStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.orchestration_orchestrator_spec import OrchestrationOrchestratorSpec
+from pensando_ent.psm.model.orchestration_orchestrator_status import OrchestrationOrchestratorStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['OrchestrationOrchestratorSpec'] = OrchestrationOrchestratorSpec
 globals()['OrchestrationOrchestratorStatus'] = OrchestrationOrchestratorStatus
-from pensando_ent.psm_ent.psm_ent.model.orchestration_orchestrator import OrchestrationOrchestrator
+from pensando_ent.psm.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 
 
 class TestOrchestrationOrchestrator(unittest.TestCase):

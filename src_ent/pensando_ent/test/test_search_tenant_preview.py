@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.search_category_preview import SearchCategoryPreview
+import psm
+from pensando_ent.psm.model.search_category_preview import SearchCategoryPreview
 globals()['SearchCategoryPreview'] = SearchCategoryPreview
-from pensando_ent.psm_ent.psm_ent.model.search_tenant_preview import SearchTenantPreview
+from pensando_ent.psm.psm.model.search_tenant_preview import SearchTenantPreview
 
 
 class TestSearchTenantPreview(unittest.TestCase):

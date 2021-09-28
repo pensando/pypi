@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_match_rule import MonitoringMatchRule
-from pensando_ent.psm_ent.model.monitoring_time_window import MonitoringTimeWindow
+import psm
+from pensando_ent.psm.model.monitoring_match_rule import MonitoringMatchRule
+from pensando_ent.psm.model.monitoring_time_window import MonitoringTimeWindow
 globals()['MonitoringMatchRule'] = MonitoringMatchRule
 globals()['MonitoringTimeWindow'] = MonitoringTimeWindow
-from pensando_ent.psm_ent.psm_ent.model.monitoring_troubleshooting_session_spec import MonitoringTroubleshootingSessionSpec
+from pensando_ent.psm.psm.model.monitoring_troubleshooting_session_spec import MonitoringTroubleshootingSessionSpec
 
 
 class TestMonitoringTroubleshootingSessionSpec(unittest.TestCase):

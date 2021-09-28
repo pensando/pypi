@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.security_ip_sec_config import SecurityIPSecConfig
+import psm
+from pensando_ent.psm.psm.model.security_ip_sec_config import SecurityIPSecConfig
 
 
 class TestSecurityIPSecConfig(unittest.TestCase):

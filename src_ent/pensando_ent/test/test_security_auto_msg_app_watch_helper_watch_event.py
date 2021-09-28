@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_app import SecurityApp
+import psm
+from pensando_ent.psm.model.security_app import SecurityApp
 globals()['SecurityApp'] = SecurityApp
-from pensando_ent.psm_ent.psm_ent.model.security_auto_msg_app_watch_helper_watch_event import SecurityAutoMsgAppWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.security_auto_msg_app_watch_helper_watch_event import SecurityAutoMsgAppWatchHelperWatchEvent
 
 
 class TestSecurityAutoMsgAppWatchHelperWatchEvent(unittest.TestCase):

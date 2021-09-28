@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_propagation_status import SecurityPropagationStatus
-from pensando_ent.psm_ent.model.workload_workload_intf_status import WorkloadWorkloadIntfStatus
-from pensando_ent.psm_ent.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
+import psm
+from pensando_ent.psm.model.security_propagation_status import SecurityPropagationStatus
+from pensando_ent.psm.model.workload_workload_intf_status import WorkloadWorkloadIntfStatus
+from pensando_ent.psm.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
 globals()['WorkloadWorkloadIntfStatus'] = WorkloadWorkloadIntfStatus
 globals()['WorkloadWorkloadMigrationStatus'] = WorkloadWorkloadMigrationStatus
-from pensando_ent.psm_ent.psm_ent.model.workload_workload_status import WorkloadWorkloadStatus
+from pensando_ent.psm.psm.model.workload_workload_status import WorkloadWorkloadStatus
 
 
 class TestWorkloadWorkloadStatus(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_ip_sec_config import SecurityIPSecConfig
-from pensando_ent.psm_ent.model.security_ip_sec_policy_rule import SecurityIPSecPolicyRule
+import psm
+from pensando_ent.psm.model.security_ip_sec_config import SecurityIPSecConfig
+from pensando_ent.psm.model.security_ip_sec_policy_rule import SecurityIPSecPolicyRule
 globals()['SecurityIPSecConfig'] = SecurityIPSecConfig
 globals()['SecurityIPSecPolicyRule'] = SecurityIPSecPolicyRule
-from pensando_ent.psm_ent.psm_ent.model.security_ip_sec_policy_spec import SecurityIPSecPolicySpec
+from pensando_ent.psm.psm.model.security_ip_sec_policy_spec import SecurityIPSecPolicySpec
 
 
 class TestSecurityIPSecPolicySpec(unittest.TestCase):

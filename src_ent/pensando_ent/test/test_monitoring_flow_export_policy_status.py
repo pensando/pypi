@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.monitoring_propagation_status import MonitoringPropagationStatus
+import psm
+from pensando_ent.psm.model.monitoring_propagation_status import MonitoringPropagationStatus
 globals()['MonitoringPropagationStatus'] = MonitoringPropagationStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_flow_export_policy_status import MonitoringFlowExportPolicyStatus
+from pensando_ent.psm.psm.model.monitoring_flow_export_policy_status import MonitoringFlowExportPolicyStatus
 
 
 class TestMonitoringFlowExportPolicyStatus(unittest.TestCase):

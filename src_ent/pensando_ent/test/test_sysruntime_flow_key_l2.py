@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_flow_key_l2 import SysruntimeFlowKeyL2
+import psm
+from pensando_ent.psm.psm.model.sysruntime_flow_key_l2 import SysruntimeFlowKeyL2
 
 
 class TestSysruntimeFlowKeyL2(unittest.TestCase):

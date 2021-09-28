@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.monitoring_alert_destination_spec import MonitoringAlertDestinationSpec
-from pensando_ent.psm_ent.model.monitoring_alert_destination_status import MonitoringAlertDestinationStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.monitoring_alert_destination_spec import MonitoringAlertDestinationSpec
+from pensando_ent.psm.model.monitoring_alert_destination_status import MonitoringAlertDestinationStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['MonitoringAlertDestinationSpec'] = MonitoringAlertDestinationSpec
 globals()['MonitoringAlertDestinationStatus'] = MonitoringAlertDestinationStatus
-from pensando_ent.psm_ent.psm_ent.model.monitoring_alert_destination import MonitoringAlertDestination
+from pensando_ent.psm.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 
 
 class TestMonitoringAlertDestination(unittest.TestCase):

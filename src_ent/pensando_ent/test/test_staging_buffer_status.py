@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.staging_item import StagingItem
-from pensando_ent.psm_ent.model.staging_validation_error import StagingValidationError
+import psm
+from pensando_ent.psm.model.staging_item import StagingItem
+from pensando_ent.psm.model.staging_validation_error import StagingValidationError
 globals()['StagingItem'] = StagingItem
 globals()['StagingValidationError'] = StagingValidationError
-from pensando_ent.psm_ent.psm_ent.model.staging_buffer_status import StagingBufferStatus
+from pensando_ent.psm.psm.model.staging_buffer_status import StagingBufferStatus
 
 
 class TestStagingBufferStatus(unittest.TestCase):

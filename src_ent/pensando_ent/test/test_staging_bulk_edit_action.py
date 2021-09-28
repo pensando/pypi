@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.bulkedit_bulk_edit_action_spec import BulkeditBulkEditActionSpec
-from pensando_ent.psm_ent.model.staging_bulk_edit_action_status import StagingBulkEditActionStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.bulkedit_bulk_edit_action_spec import BulkeditBulkEditActionSpec
+from pensando_ent.psm.model.staging_bulk_edit_action_status import StagingBulkEditActionStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['BulkeditBulkEditActionSpec'] = BulkeditBulkEditActionSpec
 globals()['StagingBulkEditActionStatus'] = StagingBulkEditActionStatus
-from pensando_ent.psm_ent.psm_ent.model.staging_bulk_edit_action import StagingBulkEditAction
+from pensando_ent.psm.psm.model.staging_bulk_edit_action import StagingBulkEditAction
 
 
 class TestStagingBulkEditAction(unittest.TestCase):

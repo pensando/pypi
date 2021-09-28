@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.search_entry import SearchEntry
+import psm
+from pensando_ent.psm.model.search_entry import SearchEntry
 globals()['SearchEntry'] = SearchEntry
-from pensando_ent.psm_ent.psm_ent.model.search_entry_list import SearchEntryList
+from pensando_ent.psm.psm.model.search_entry_list import SearchEntryList
 
 
 class TestSearchEntryList(unittest.TestCase):

@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.search_search_query import SearchSearchQuery
+import psm
+from pensando_ent.psm.model.search_search_query import SearchSearchQuery
 globals()['SearchSearchQuery'] = SearchSearchQuery
-from pensando_ent.psm_ent.psm_ent.model.search_search_request import SearchSearchRequest
+from pensando_ent.psm.psm.model.search_search_request import SearchSearchRequest
 
 
 class TestSearchSearchRequest(unittest.TestCase):

@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.sysruntime_flow_status import SysruntimeFlowStatus
-from pensando_ent.psm_ent.model.sysruntime_fw_status import SysruntimeFwStatus
-from pensando_ent.psm_ent.model.sysruntime_ip_sec_status import SysruntimeIPSecStatus
+import psm
+from pensando_ent.psm.model.sysruntime_flow_status import SysruntimeFlowStatus
+from pensando_ent.psm.model.sysruntime_fw_status import SysruntimeFwStatus
+from pensando_ent.psm.model.sysruntime_ip_sec_status import SysruntimeIPSecStatus
 globals()['SysruntimeFlowStatus'] = SysruntimeFlowStatus
 globals()['SysruntimeFwStatus'] = SysruntimeFwStatus
 globals()['SysruntimeIPSecStatus'] = SysruntimeIPSecStatus
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_hw_connection_status import SysruntimeHWConnectionStatus
+from pensando_ent.psm.psm.model.sysruntime_hw_connection_status import SysruntimeHWConnectionStatus
 
 
 class TestSysruntimeHWConnectionStatus(unittest.TestCase):

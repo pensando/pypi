@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.security_network_security_policy import SecurityNetworkSecurityPolicy
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 globals()['ApiListMeta'] = ApiListMeta
 globals()['SecurityNetworkSecurityPolicy'] = SecurityNetworkSecurityPolicy
-from pensando_ent.psm_ent.psm_ent.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
+from pensando_ent.psm.psm.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
 
 
 class TestSecurityNetworkSecurityPolicyList(unittest.TestCase):

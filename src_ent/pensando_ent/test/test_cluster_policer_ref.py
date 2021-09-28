@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.cluster_policer_ref import ClusterPolicerRef
+import psm
+from pensando_ent.psm.psm.model.cluster_policer_ref import ClusterPolicerRef
 
 
 class TestClusterPolicerRef(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.cluster_host import ClusterHost
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.cluster_host import ClusterHost
 globals()['ApiListMeta'] = ApiListMeta
 globals()['ClusterHost'] = ClusterHost
-from pensando_ent.psm_ent.psm_ent.model.cluster_host_list import ClusterHostList
+from pensando_ent.psm.psm.model.cluster_host_list import ClusterHostList
 
 
 class TestClusterHostList(unittest.TestCase):

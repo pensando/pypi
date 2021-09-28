@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.objstore_auto_msg_object_watch_helper_watch_event import ObjstoreAutoMsgObjectWatchHelperWatchEvent
+import psm
+from pensando_ent.psm.model.objstore_auto_msg_object_watch_helper_watch_event import ObjstoreAutoMsgObjectWatchHelperWatchEvent
 globals()['ObjstoreAutoMsgObjectWatchHelperWatchEvent'] = ObjstoreAutoMsgObjectWatchHelperWatchEvent
-from pensando_ent.psm_ent.psm_ent.model.objstore_auto_msg_object_watch_helper import ObjstoreAutoMsgObjectWatchHelper
+from pensando_ent.psm.psm.model.objstore_auto_msg_object_watch_helper import ObjstoreAutoMsgObjectWatchHelper
 
 
 class TestObjstoreAutoMsgObjectWatchHelper(unittest.TestCase):

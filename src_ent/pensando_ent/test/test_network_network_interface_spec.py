@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.cluster_ip_config import ClusterIPConfig
-from pensando_ent.psm_ent.model.network_pause_spec import NetworkPauseSpec
+import psm
+from pensando_ent.psm.model.cluster_ip_config import ClusterIPConfig
+from pensando_ent.psm.model.network_pause_spec import NetworkPauseSpec
 globals()['ClusterIPConfig'] = ClusterIPConfig
 globals()['NetworkPauseSpec'] = NetworkPauseSpec
-from pensando_ent.psm_ent.psm_ent.model.network_network_interface_spec import NetworkNetworkInterfaceSpec
+from pensando_ent.psm.psm.model.network_network_interface_spec import NetworkNetworkInterfaceSpec
 
 
 class TestNetworkNetworkInterfaceSpec(unittest.TestCase):

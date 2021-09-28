@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.workload_endpoint_migration_status import WorkloadEndpointMigrationStatus
+import psm
+from pensando_ent.psm.model.workload_endpoint_migration_status import WorkloadEndpointMigrationStatus
 globals()['WorkloadEndpointMigrationStatus'] = WorkloadEndpointMigrationStatus
-from pensando_ent.psm_ent.psm_ent.model.workload_endpoint_status import WorkloadEndpointStatus
+from pensando_ent.psm.psm.model.workload_endpoint_status import WorkloadEndpointStatus
 
 
 class TestWorkloadEndpointStatus(unittest.TestCase):

@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 globals()['ApiListMeta'] = ApiListMeta
 globals()['MonitoringTroubleshootingSession'] = MonitoringTroubleshootingSession
-from pensando_ent.psm_ent.psm_ent.model.monitoring_troubleshooting_session_list import MonitoringTroubleshootingSessionList
+from pensando_ent.psm.psm.model.monitoring_troubleshooting_session_list import MonitoringTroubleshootingSessionList
 
 
 class TestMonitoringTroubleshootingSessionList(unittest.TestCase):

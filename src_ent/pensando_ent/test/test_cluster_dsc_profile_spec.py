@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.dsc_profile_spec_interfaces import DSCProfileSpecInterfaces
+import psm
+from pensando_ent.psm.model.dsc_profile_spec_interfaces import DSCProfileSpecInterfaces
 globals()['DSCProfileSpecInterfaces'] = DSCProfileSpecInterfaces
-from pensando_ent.psm_ent.psm_ent.model.cluster_dsc_profile_spec import ClusterDSCProfileSpec
+from pensando_ent.psm.psm.model.cluster_dsc_profile_spec import ClusterDSCProfileSpec
 
 
 class TestClusterDSCProfileSpec(unittest.TestCase):

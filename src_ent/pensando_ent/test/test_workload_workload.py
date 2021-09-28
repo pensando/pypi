@@ -11,14 +11,14 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_object_meta import ApiObjectMeta
-from pensando_ent.psm_ent.model.workload_workload_spec import WorkloadWorkloadSpec
-from pensando_ent.psm_ent.model.workload_workload_status import WorkloadWorkloadStatus
+import psm
+from pensando_ent.psm.model.api_object_meta import ApiObjectMeta
+from pensando_ent.psm.model.workload_workload_spec import WorkloadWorkloadSpec
+from pensando_ent.psm.model.workload_workload_status import WorkloadWorkloadStatus
 globals()['ApiObjectMeta'] = ApiObjectMeta
 globals()['WorkloadWorkloadSpec'] = WorkloadWorkloadSpec
 globals()['WorkloadWorkloadStatus'] = WorkloadWorkloadStatus
-from pensando_ent.psm_ent.psm_ent.model.workload_workload import WorkloadWorkload
+from pensando_ent.psm.psm.model.workload_workload import WorkloadWorkload
 
 
 class TestWorkloadWorkload(unittest.TestCase):

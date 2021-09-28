@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.network_pause_spec import NetworkPauseSpec
+import psm
+from pensando_ent.psm.psm.model.network_pause_spec import NetworkPauseSpec
 
 
 class TestNetworkPauseSpec(unittest.TestCase):

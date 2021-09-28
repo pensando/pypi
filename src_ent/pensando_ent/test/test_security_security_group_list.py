@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.security_security_group import SecuritySecurityGroup
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 globals()['ApiListMeta'] = ApiListMeta
 globals()['SecuritySecurityGroup'] = SecuritySecurityGroup
-from pensando_ent.psm_ent.psm_ent.model.security_security_group_list import SecuritySecurityGroupList
+from pensando_ent.psm.psm.model.security_security_group_list import SecuritySecurityGroupList
 
 
 class TestSecuritySecurityGroupList(unittest.TestCase):

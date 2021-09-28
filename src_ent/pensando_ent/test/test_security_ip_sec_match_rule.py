@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_proto_port import SecurityProtoPort
+import psm
+from pensando_ent.psm.model.security_proto_port import SecurityProtoPort
 globals()['SecurityProtoPort'] = SecurityProtoPort
-from pensando_ent.psm_ent.psm_ent.model.security_ip_sec_match_rule import SecurityIPSecMatchRule
+from pensando_ent.psm.psm.model.security_ip_sec_match_rule import SecurityIPSecMatchRule
 
 
 class TestSecurityIPSecMatchRule(unittest.TestCase):

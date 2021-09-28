@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.monitoring_alert import MonitoringAlert
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 globals()['ApiListMeta'] = ApiListMeta
 globals()['MonitoringAlert'] = MonitoringAlert
-from pensando_ent.psm_ent.psm_ent.model.monitoring_alert_list import MonitoringAlertList
+from pensando_ent.psm.psm.model.monitoring_alert_list import MonitoringAlertList
 
 
 class TestMonitoringAlertList(unittest.TestCase):

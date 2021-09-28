@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.api_list_meta import ApiListMeta
-from pensando_ent.psm_ent.model.diagnostics_module import DiagnosticsModule
+import psm
+from pensando_ent.psm.model.api_list_meta import ApiListMeta
+from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 globals()['ApiListMeta'] = ApiListMeta
 globals()['DiagnosticsModule'] = DiagnosticsModule
-from pensando_ent.psm_ent.psm_ent.model.diagnostics_module_list import DiagnosticsModuleList
+from pensando_ent.psm.psm.model.diagnostics_module_list import DiagnosticsModuleList
 
 
 class TestDiagnosticsModuleList(unittest.TestCase):

@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.evpn_route_evpn_type2_route import EVPNRouteEVPNType2Route
+import psm
+from pensando_ent.psm.psm.model.evpn_route_evpn_type2_route import EVPNRouteEVPNType2Route
 
 
 class TestEVPNRouteEVPNType2Route(unittest.TestCase):

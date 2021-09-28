@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
+import psm
+from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 globals()['PreferencesUIGlobalSettings'] = PreferencesUIGlobalSettings
-from pensando_ent.psm_ent.psm_ent.model.preferences_auto_msg_ui_global_settings_watch_helper_watch_event import PreferencesAutoMsgUIGlobalSettingsWatchHelperWatchEvent
+from pensando_ent.psm.psm.model.preferences_auto_msg_ui_global_settings_watch_helper_watch_event import PreferencesAutoMsgUIGlobalSettingsWatchHelperWatchEvent
 
 
 class TestPreferencesAutoMsgUIGlobalSettingsWatchHelperWatchEvent(unittest.TestCase):

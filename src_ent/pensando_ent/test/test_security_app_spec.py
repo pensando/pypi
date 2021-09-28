@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.security_alg import SecurityALG
-from pensando_ent.psm_ent.model.security_proto_port import SecurityProtoPort
+import psm
+from pensando_ent.psm.model.security_alg import SecurityALG
+from pensando_ent.psm.model.security_proto_port import SecurityProtoPort
 globals()['SecurityALG'] = SecurityALG
 globals()['SecurityProtoPort'] = SecurityProtoPort
-from pensando_ent.psm_ent.psm_ent.model.security_app_spec import SecurityAppSpec
+from pensando_ent.psm.psm.model.security_app_spec import SecurityAppSpec
 
 
 class TestSecurityAppSpec(unittest.TestCase):

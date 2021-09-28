@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.auth_resource import AuthResource
+import psm
+from pensando_ent.psm.model.auth_resource import AuthResource
 globals()['AuthResource'] = AuthResource
-from pensando_ent.psm_ent.psm_ent.model.auth_operation import AuthOperation
+from pensando_ent.psm.psm.model.auth_operation import AuthOperation
 
 
 class TestAuthOperation(unittest.TestCase):

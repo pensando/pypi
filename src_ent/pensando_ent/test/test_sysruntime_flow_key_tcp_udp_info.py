@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.psm_ent.model.sysruntime_flow_key_tcp_udp_info import SysruntimeFlowKeyTcpUdpInfo
+import psm
+from pensando_ent.psm.psm.model.sysruntime_flow_key_tcp_udp_info import SysruntimeFlowKeyTcpUdpInfo
 
 
 class TestSysruntimeFlowKeyTcpUdpInfo(unittest.TestCase):

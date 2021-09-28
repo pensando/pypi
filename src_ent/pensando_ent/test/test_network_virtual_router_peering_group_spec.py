@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import psm_ent
-from pensando_ent.psm_ent.model.network_virtual_router_peering_spec import NetworkVirtualRouterPeeringSpec
+import psm
+from pensando_ent.psm.model.network_virtual_router_peering_spec import NetworkVirtualRouterPeeringSpec
 globals()['NetworkVirtualRouterPeeringSpec'] = NetworkVirtualRouterPeeringSpec
-from pensando_ent.psm_ent.psm_ent.model.network_virtual_router_peering_group_spec import NetworkVirtualRouterPeeringGroupSpec
+from pensando_ent.psm.psm.model.network_virtual_router_peering_group_spec import NetworkVirtualRouterPeeringGroupSpec
 
 
 class TestNetworkVirtualRouterPeeringGroupSpec(unittest.TestCase):
