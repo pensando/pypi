@@ -121,13 +121,13 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*RolloutV1Api* | [**create_rollout**](docs/RolloutV1Api.md#create_rollout) | **POST** /configs/rollout/v1/rollout/CreateRollout | Start Rollout operation
-*RolloutV1Api* | [**get_rollout**](docs/RolloutV1Api.md#get_rollout) | **GET** /configs/rollout/v1/rollout/{O.Name} | Get Rollout object
-*RolloutV1Api* | [**list_rollout**](docs/RolloutV1Api.md#list_rollout) | **GET** /configs/rollout/v1/rollout | List Rollout objects
-*RolloutV1Api* | [**remove_rollout**](docs/RolloutV1Api.md#remove_rollout) | **POST** /configs/rollout/v1/rollout/RemoveRollout | Remove a Rollout
-*RolloutV1Api* | [**stop_rollout**](docs/RolloutV1Api.md#stop_rollout) | **POST** /configs/rollout/v1/rollout/StopRollout | Stop a Rollout operation
-*RolloutV1Api* | [**update_rollout**](docs/RolloutV1Api.md#update_rollout) | **POST** /configs/rollout/v1/rollout/UpdateRollout | Update Rollout configuration
-*RolloutV1Api* | [**watch_rollout**](docs/RolloutV1Api.md#watch_rollout) | **GET** /configs/rollout/v1/watch/rollout | Watch Rollout objects. Supports WebSockets or HTTP long poll
+*RolloutV1Api* | [**create_rollout**](pensando_ent/docs/RolloutV1Api.md#create_rollout) | **POST** /configs/rollout/v1/rollout/CreateRollout | Start Rollout operation
+*RolloutV1Api* | [**get_rollout**](pensando_ent/docs/RolloutV1Api.md#get_rollout) | **GET** /configs/rollout/v1/rollout/{O.Name} | Get Rollout object
+*RolloutV1Api* | [**list_rollout**](pensando_ent/docs/RolloutV1Api.md#list_rollout) | **GET** /configs/rollout/v1/rollout | List Rollout objects
+*RolloutV1Api* | [**remove_rollout**](pensando_ent/docs/RolloutV1Api.md#remove_rollout) | **POST** /configs/rollout/v1/rollout/RemoveRollout | Remove a Rollout
+*RolloutV1Api* | [**stop_rollout**](pensando_ent/docs/RolloutV1Api.md#stop_rollout) | **POST** /configs/rollout/v1/rollout/StopRollout | Stop a Rollout operation
+*RolloutV1Api* | [**update_rollout**](pensando_ent/docs/RolloutV1Api.md#update_rollout) | **POST** /configs/rollout/v1/rollout/UpdateRollout | Update Rollout configuration
+*RolloutV1Api* | [**watch_rollout**](pensando_ent/docs/RolloutV1Api.md#watch_rollout) | **GET** /configs/rollout/v1/watch/rollout | Watch Rollout objects. Supports WebSockets or HTTP long poll
 
 
 ## Documentation For Models

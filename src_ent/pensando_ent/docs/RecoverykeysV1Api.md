@@ -16,8 +16,8 @@ Method | HTTP request | Description
 
 ```python
 import time
-import psm
-from api import recoverykeys_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import recoverykeys_v1_api
 from pensando_ent.psm.model.recoverykeys_recovery_keys import RecoverykeysRecoveryKeys
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

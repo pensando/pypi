@@ -36,10 +36,10 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*RoutingV1Api* | [**get_health_z**](docs/RoutingV1Api.md#get_health_z) | **GET** /routing/v1/{Instance}/health | 
-*RoutingV1Api* | [**get_list_neighbors**](docs/RoutingV1Api.md#get_list_neighbors) | **GET** /routing/v1/{Instance}/neighbors | 
-*RoutingV1Api* | [**get_list_routes1**](docs/RoutingV1Api.md#get_list_routes1) | **GET** /routing/v1/{Instance}/routes | 
-*RoutingV1Api* | [**post_list_routes**](docs/RoutingV1Api.md#post_list_routes) | **POST** /routing/v1/{Instance}/routes | 
+*RoutingV1Api* | [**get_health_z**](pensando_ent/docs/RoutingV1Api.md#get_health_z) | **GET** /routing/v1/{Instance}/health | 
+*RoutingV1Api* | [**get_list_neighbors**](pensando_ent/docs/RoutingV1Api.md#get_list_neighbors) | **GET** /routing/v1/{Instance}/neighbors | 
+*RoutingV1Api* | [**get_list_routes1**](pensando_ent/docs/RoutingV1Api.md#get_list_routes1) | **GET** /routing/v1/{Instance}/routes | 
+*RoutingV1Api* | [**post_list_routes**](pensando_ent/docs/RoutingV1Api.md#post_list_routes) | **POST** /routing/v1/{Instance}/routes | 
 
 
 ## Documentation For Models

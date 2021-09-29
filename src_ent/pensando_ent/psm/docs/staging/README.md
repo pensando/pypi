@@ -82,20 +82,20 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*StagingV1Api* | [**add_buffer**](docs/StagingV1Api.md#add_buffer) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers | Create Buffer object
-*StagingV1Api* | [**add_buffer1**](docs/StagingV1Api.md#add_buffer1) | **POST** /configs/staging/v1/buffers | Create Buffer object
-*StagingV1Api* | [**bulkedit**](docs/StagingV1Api.md#bulkedit) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name}/bulkedit | Create/Update/Delete multiple objects as part of a single request
-*StagingV1Api* | [**bulkedit1**](docs/StagingV1Api.md#bulkedit1) | **POST** /configs/staging/v1/buffers/{O.Name}/bulkedit | Create/Update/Delete multiple objects as part of a single request
-*StagingV1Api* | [**clear**](docs/StagingV1Api.md#clear) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name}/clear | Clear operations from a configuration buffer
-*StagingV1Api* | [**clear1**](docs/StagingV1Api.md#clear1) | **POST** /configs/staging/v1/buffers/{O.Name}/clear | Clear operations from a configuration buffer
-*StagingV1Api* | [**commit**](docs/StagingV1Api.md#commit) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name}/commit | Commit a staged configuration buffer
-*StagingV1Api* | [**commit1**](docs/StagingV1Api.md#commit1) | **POST** /configs/staging/v1/buffers/{O.Name}/commit | Commit a staged configuration buffer
-*StagingV1Api* | [**delete_buffer**](docs/StagingV1Api.md#delete_buffer) | **DELETE** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name} | Delete Buffer object
-*StagingV1Api* | [**delete_buffer1**](docs/StagingV1Api.md#delete_buffer1) | **DELETE** /configs/staging/v1/buffers/{O.Name} | Delete Buffer object
-*StagingV1Api* | [**get_buffer**](docs/StagingV1Api.md#get_buffer) | **GET** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name} | Get Buffer object
-*StagingV1Api* | [**get_buffer1**](docs/StagingV1Api.md#get_buffer1) | **GET** /configs/staging/v1/buffers/{O.Name} | Get Buffer object
-*StagingV1Api* | [**list_buffer**](docs/StagingV1Api.md#list_buffer) | **GET** /configs/staging/v1/tenant/{O.Tenant}/buffers | List Buffer objects
-*StagingV1Api* | [**list_buffer1**](docs/StagingV1Api.md#list_buffer1) | **GET** /configs/staging/v1/buffers | List Buffer objects
+*StagingV1Api* | [**add_buffer**](pensando_ent/docs/StagingV1Api.md#add_buffer) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers | Create Buffer object
+*StagingV1Api* | [**add_buffer1**](pensando_ent/docs/StagingV1Api.md#add_buffer1) | **POST** /configs/staging/v1/buffers | Create Buffer object
+*StagingV1Api* | [**bulkedit**](pensando_ent/docs/StagingV1Api.md#bulkedit) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name}/bulkedit | Create/Update/Delete multiple objects as part of a single request
+*StagingV1Api* | [**bulkedit1**](pensando_ent/docs/StagingV1Api.md#bulkedit1) | **POST** /configs/staging/v1/buffers/{O.Name}/bulkedit | Create/Update/Delete multiple objects as part of a single request
+*StagingV1Api* | [**clear**](pensando_ent/docs/StagingV1Api.md#clear) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name}/clear | Clear operations from a configuration buffer
+*StagingV1Api* | [**clear1**](pensando_ent/docs/StagingV1Api.md#clear1) | **POST** /configs/staging/v1/buffers/{O.Name}/clear | Clear operations from a configuration buffer
+*StagingV1Api* | [**commit**](pensando_ent/docs/StagingV1Api.md#commit) | **POST** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name}/commit | Commit a staged configuration buffer
+*StagingV1Api* | [**commit1**](pensando_ent/docs/StagingV1Api.md#commit1) | **POST** /configs/staging/v1/buffers/{O.Name}/commit | Commit a staged configuration buffer
+*StagingV1Api* | [**delete_buffer**](pensando_ent/docs/StagingV1Api.md#delete_buffer) | **DELETE** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name} | Delete Buffer object
+*StagingV1Api* | [**delete_buffer1**](pensando_ent/docs/StagingV1Api.md#delete_buffer1) | **DELETE** /configs/staging/v1/buffers/{O.Name} | Delete Buffer object
+*StagingV1Api* | [**get_buffer**](pensando_ent/docs/StagingV1Api.md#get_buffer) | **GET** /configs/staging/v1/tenant/{O.Tenant}/buffers/{O.Name} | Get Buffer object
+*StagingV1Api* | [**get_buffer1**](pensando_ent/docs/StagingV1Api.md#get_buffer1) | **GET** /configs/staging/v1/buffers/{O.Name} | Get Buffer object
+*StagingV1Api* | [**list_buffer**](pensando_ent/docs/StagingV1Api.md#list_buffer) | **GET** /configs/staging/v1/tenant/{O.Tenant}/buffers | List Buffer objects
+*StagingV1Api* | [**list_buffer1**](pensando_ent/docs/StagingV1Api.md#list_buffer1) | **GET** /configs/staging/v1/buffers | List Buffer objects
 
 
 ## Documentation For Models

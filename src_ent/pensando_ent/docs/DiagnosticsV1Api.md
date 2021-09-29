@@ -21,8 +21,8 @@ Request Diagnostics information for a module
 
 ```python
 import time
-import psm
-from api import diagnostics_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import diagnostics_v1_api
 from pensando_ent.psm.model.diagnostics_diagnostics_request import DiagnosticsDiagnosticsRequest
 from pensando_ent.psm.model.diagnostics_diagnostics_response import DiagnosticsDiagnosticsResponse
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -118,8 +118,8 @@ Get Module object
 
 ```python
 import time
-import psm
-from api import diagnostics_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import diagnostics_v1_api
 from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -240,8 +240,8 @@ Label Module object
 
 ```python
 import time
-import psm
-from api import diagnostics_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import diagnostics_v1_api
 from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -327,8 +327,8 @@ List Module objects
 
 ```python
 import time
-import psm
-from api import diagnostics_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import diagnostics_v1_api
 from pensando_ent.psm.model.diagnostics_module_list import DiagnosticsModuleList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -429,8 +429,8 @@ Update Module object
 
 ```python
 import time
-import psm
-from api import diagnostics_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import diagnostics_v1_api
 from pensando_ent.psm.model.diagnostics_module import DiagnosticsModule
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -540,8 +540,8 @@ Watch Module objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import diagnostics_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import diagnostics_v1_api
 from pensando_ent.psm.model.diagnostics_auto_msg_module_watch_helper import DiagnosticsAutoMsgModuleWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

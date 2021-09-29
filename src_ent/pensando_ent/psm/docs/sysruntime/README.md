@@ -76,7 +76,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DistributedservicecardsV1Api* | [**post_query_connection**](docs/DistributedservicecardsV1Api.md#post_query_connection) | **POST** /sysruntime/distributedservicecards/v1/{DSCName}/connections | Active Connection Query
+*DistributedservicecardsV1Api* | [**post_query_connection**](pensando_ent/docs/DistributedservicecardsV1Api.md#post_query_connection) | **POST** /sysruntime/distributedservicecards/v1/{DSCName}/connections | Active Connection Query
 
 
 ## Documentation For Models

@@ -45,10 +45,10 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BrowserV1Api* | [**get_query1**](docs/BrowserV1Api.md#get_query1) | **GET** /configs/browser/v1/query | 
-*BrowserV1Api* | [**get_references**](docs/BrowserV1Api.md#get_references) | **GET** /configs/browser/v1/dependencies/** | 
-*BrowserV1Api* | [**get_referrers**](docs/BrowserV1Api.md#get_referrers) | **GET** /configs/browser/v1/dependedby/** | 
-*BrowserV1Api* | [**post_query**](docs/BrowserV1Api.md#post_query) | **POST** /configs/browser/v1/query | 
+*BrowserV1Api* | [**get_query1**](pensando_ent/docs/BrowserV1Api.md#get_query1) | **GET** /configs/browser/v1/query | 
+*BrowserV1Api* | [**get_references**](pensando_ent/docs/BrowserV1Api.md#get_references) | **GET** /configs/browser/v1/dependencies/** | 
+*BrowserV1Api* | [**get_referrers**](pensando_ent/docs/BrowserV1Api.md#get_referrers) | **GET** /configs/browser/v1/dependedby/** | 
+*BrowserV1Api* | [**post_query**](pensando_ent/docs/BrowserV1Api.md#post_query) | **POST** /configs/browser/v1/query | 
 
 
 ## Documentation For Models

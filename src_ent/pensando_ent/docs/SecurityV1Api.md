@@ -81,8 +81,8 @@ Create App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -212,8 +212,8 @@ Create App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -341,8 +341,8 @@ Create IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -483,8 +483,8 @@ Create IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -623,8 +623,8 @@ Create NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -768,8 +768,8 @@ Create NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -911,8 +911,8 @@ Create SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1026,8 +1026,8 @@ Create SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1139,8 +1139,8 @@ Delete App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1210,8 +1210,8 @@ Delete App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1279,8 +1279,8 @@ Delete IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1350,8 +1350,8 @@ Delete IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1419,8 +1419,8 @@ Delete NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1490,8 +1490,8 @@ Delete NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1559,8 +1559,8 @@ Delete SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1630,8 +1630,8 @@ Delete SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1699,8 +1699,8 @@ Get App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1821,8 +1821,8 @@ Get App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1943,8 +1943,8 @@ Get FirewallProfile object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2087,8 +2087,8 @@ Get FirewallProfile object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2231,8 +2231,8 @@ Get IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2351,8 +2351,8 @@ Get IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2471,8 +2471,8 @@ Get NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2591,8 +2591,8 @@ Get NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2711,8 +2711,8 @@ Get SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2825,8 +2825,8 @@ Get SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2939,8 +2939,8 @@ Label App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3028,8 +3028,8 @@ Label App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3115,8 +3115,8 @@ Label FirewallProfile object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3204,8 +3204,8 @@ Label FirewallProfile object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3291,8 +3291,8 @@ Label IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3380,8 +3380,8 @@ Label IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3467,8 +3467,8 @@ Label NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3556,8 +3556,8 @@ Label NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3643,8 +3643,8 @@ Label SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3732,8 +3732,8 @@ Label SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3819,8 +3819,8 @@ List App objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app_list import SecurityAppList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3929,8 +3929,8 @@ List App objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app_list import SecurityAppList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4031,8 +4031,8 @@ List FirewallProfile objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_firewall_profile_list import SecurityFirewallProfileList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4141,8 +4141,8 @@ List FirewallProfile objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_firewall_profile_list import SecurityFirewallProfileList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4243,8 +4243,8 @@ List IPSecPolicy objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy_list import SecurityIPSecPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4353,8 +4353,8 @@ List IPSecPolicy objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy_list import SecurityIPSecPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4455,8 +4455,8 @@ List NetworkSecurityPolicy objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4565,8 +4565,8 @@ List NetworkSecurityPolicy objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy_list import SecurityNetworkSecurityPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4667,8 +4667,8 @@ List SecurityGroup objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group_list import SecuritySecurityGroupList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4777,8 +4777,8 @@ List SecurityGroup objects
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group_list import SecuritySecurityGroupList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4879,8 +4879,8 @@ Update App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5012,8 +5012,8 @@ Update App object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_app import SecurityApp
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5143,8 +5143,8 @@ Update FirewallProfile object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5269,8 +5269,8 @@ Update FirewallProfile object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_firewall_profile import SecurityFirewallProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5393,8 +5393,8 @@ Update IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5537,8 +5537,8 @@ Update IPSecPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5679,8 +5679,8 @@ Update NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5826,8 +5826,8 @@ Update NetworkSecurityPolicy object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5971,8 +5971,8 @@ Update SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6088,8 +6088,8 @@ Update SecurityGroup object
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_security_group import SecuritySecurityGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6203,8 +6203,8 @@ Watch App objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_app_watch_helper import SecurityAutoMsgAppWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6313,8 +6313,8 @@ Watch App objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_app_watch_helper import SecurityAutoMsgAppWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6415,8 +6415,8 @@ Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_firewall_profile_watch_helper import SecurityAutoMsgFirewallProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6525,8 +6525,8 @@ Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_firewall_profile_watch_helper import SecurityAutoMsgFirewallProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6627,8 +6627,8 @@ Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6737,8 +6737,8 @@ Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_ip_sec_policy_watch_helper import SecurityAutoMsgIPSecPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6839,8 +6839,8 @@ Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_network_security_policy_watch_helper import SecurityAutoMsgNetworkSecurityPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6949,8 +6949,8 @@ Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_network_security_policy_watch_helper import SecurityAutoMsgNetworkSecurityPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7051,8 +7051,8 @@ Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7161,8 +7161,8 @@ Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import security_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import security_v1_api
 from pensando_ent.psm.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

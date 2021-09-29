@@ -103,8 +103,8 @@ Create IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -220,8 +220,8 @@ Create IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -335,8 +335,8 @@ Create Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -493,8 +493,8 @@ Create Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -649,8 +649,8 @@ Create PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -765,8 +765,8 @@ Create PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -879,8 +879,8 @@ Create RoutingConfig object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1022,8 +1022,8 @@ Create VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1164,8 +1164,8 @@ Create VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1304,8 +1304,8 @@ Create VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1430,8 +1430,8 @@ Create VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1554,8 +1554,8 @@ Delete IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1625,8 +1625,8 @@ Delete IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1694,8 +1694,8 @@ Delete Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1765,8 +1765,8 @@ Delete Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1834,8 +1834,8 @@ Delete PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1905,8 +1905,8 @@ Delete PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1974,8 +1974,8 @@ Delete RoutingConfig object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2043,8 +2043,8 @@ Delete VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2114,8 +2114,8 @@ Delete VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2183,8 +2183,8 @@ Delete VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2254,8 +2254,8 @@ Delete VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2323,8 +2323,8 @@ Get IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2437,8 +2437,8 @@ Get IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2551,8 +2551,8 @@ Get Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2711,8 +2711,8 @@ Get Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2871,8 +2871,8 @@ Get NetworkInterface object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3073,8 +3073,8 @@ Get PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3193,8 +3193,8 @@ Get PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3313,8 +3313,8 @@ Get RouteTable object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_route_table import NetworkRouteTable
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3411,8 +3411,8 @@ Get RouteTable object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_route_table import NetworkRouteTable
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3509,8 +3509,8 @@ Get RoutingConfig object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3633,8 +3633,8 @@ Get VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3777,8 +3777,8 @@ Get VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3921,8 +3921,8 @@ Get VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4033,8 +4033,8 @@ Get VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4145,8 +4145,8 @@ Label IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4234,8 +4234,8 @@ Label IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4321,8 +4321,8 @@ Label Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4410,8 +4410,8 @@ Label Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4497,8 +4497,8 @@ Label NetworkInterface object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4584,8 +4584,8 @@ Label PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4673,8 +4673,8 @@ Label PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4760,8 +4760,8 @@ Label RoutingConfig object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4847,8 +4847,8 @@ Label VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4936,8 +4936,8 @@ Label VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5023,8 +5023,8 @@ Label VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5112,8 +5112,8 @@ Label VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -5199,8 +5199,8 @@ List IPAMPolicy objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy_list import NetworkIPAMPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5309,8 +5309,8 @@ List IPAMPolicy objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy_list import NetworkIPAMPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5411,8 +5411,8 @@ List Network objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network_list import NetworkNetworkList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5521,8 +5521,8 @@ List Network objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network_list import NetworkNetworkList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5623,8 +5623,8 @@ List NetworkInterface objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network_interface_list import NetworkNetworkInterfaceList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5725,8 +5725,8 @@ List PolicerProfile objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.network_policer_profile_list import NetworkPolicerProfileList
 from pprint import pprint
@@ -5835,8 +5835,8 @@ List PolicerProfile objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.network_policer_profile_list import NetworkPolicerProfileList
 from pprint import pprint
@@ -5937,8 +5937,8 @@ List RouteTable objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_route_table_list import NetworkRouteTableList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6047,8 +6047,8 @@ List RouteTable objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_route_table_list import NetworkRouteTableList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6149,8 +6149,8 @@ List RoutingConfig objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_routing_config_list import NetworkRoutingConfigList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6251,8 +6251,8 @@ List VirtualRouter objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_list import NetworkVirtualRouterList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6361,8 +6361,8 @@ List VirtualRouter objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_list import NetworkVirtualRouterList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6463,8 +6463,8 @@ List VirtualRouterPeeringGroup objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group_list import NetworkVirtualRouterPeeringGroupList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6573,8 +6573,8 @@ List VirtualRouterPeeringGroup objects
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group_list import NetworkVirtualRouterPeeringGroupList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6675,8 +6675,8 @@ Update IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6794,8 +6794,8 @@ Update IPAMPolicy object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6911,8 +6911,8 @@ Update Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7071,8 +7071,8 @@ Update Network object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network import NetworkNetwork
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7229,8 +7229,8 @@ Update NetworkInterface object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7397,8 +7397,8 @@ Update PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7515,8 +7515,8 @@ Update PolicerProfile object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_policer_profile import NetworkPolicerProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7631,8 +7631,8 @@ Update RoutingConfig object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_routing_config import NetworkRoutingConfig
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7776,8 +7776,8 @@ Update VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7920,8 +7920,8 @@ Update VirtualRouter object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router import NetworkVirtualRouter
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8062,8 +8062,8 @@ Update VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8190,8 +8190,8 @@ Update VirtualRouterPeeringGroup object
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_virtual_router_peering_group import NetworkVirtualRouterPeeringGroup
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8316,8 +8316,8 @@ Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8426,8 +8426,8 @@ Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8528,8 +8528,8 @@ Watch Network objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_network_watch_helper import NetworkAutoMsgNetworkWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8638,8 +8638,8 @@ Watch Network objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_network_watch_helper import NetworkAutoMsgNetworkWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8740,8 +8740,8 @@ Watch NetworkInterface objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_network_interface_watch_helper import NetworkAutoMsgNetworkInterfaceWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8842,8 +8842,8 @@ Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_policer_profile_watch_helper import NetworkAutoMsgPolicerProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8952,8 +8952,8 @@ Watch PolicerProfile objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_policer_profile_watch_helper import NetworkAutoMsgPolicerProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9054,8 +9054,8 @@ Watch RouteTable objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_route_table_watch_helper import NetworkAutoMsgRouteTableWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9164,8 +9164,8 @@ Watch RouteTable objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_route_table_watch_helper import NetworkAutoMsgRouteTableWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9266,8 +9266,8 @@ Watch RoutingConfig objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_routing_config_watch_helper import NetworkAutoMsgRoutingConfigWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9368,8 +9368,8 @@ Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_watch_helper import NetworkAutoMsgVirtualRouterWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9478,8 +9478,8 @@ Watch VirtualRouter objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_watch_helper import NetworkAutoMsgVirtualRouterWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9580,8 +9580,8 @@ Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_peering_group_watch_helper import NetworkAutoMsgVirtualRouterPeeringGroupWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9690,8 +9690,8 @@ Watch VirtualRouterPeeringGroup objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import network_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import network_v1_api
 from pensando_ent.psm.model.network_auto_msg_virtual_router_peering_group_watch_helper import NetworkAutoMsgVirtualRouterPeeringGroupWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

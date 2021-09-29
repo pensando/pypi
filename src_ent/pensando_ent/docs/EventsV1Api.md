@@ -18,8 +18,8 @@ Get specific event
 
 ```python
 import time
-import psm
-from api import events_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import events_v1_api
 from pensando_ent.psm.model.events_event import EventsEvent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -80,8 +80,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import events_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import events_v1_api
 from pensando_ent.psm.model.events_event_list import EventsEventList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -174,8 +174,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import events_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import events_v1_api
 from pensando_ent.psm.model.events_event_list import EventsEventList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

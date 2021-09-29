@@ -19,8 +19,8 @@ Security Policy Query
 
 ```python
 import time
-import psm
-from api import search_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import search_v1_api
 from pensando_ent.psm.model.search_policy_search_response import SearchPolicySearchResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -106,8 +106,8 @@ Structured or free-form search
 
 ```python
 import time
-import psm
-from api import search_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import search_v1_api
 from pensando_ent.psm.model.search_search_response import SearchSearchResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -193,8 +193,8 @@ Security Policy Query
 
 ```python
 import time
-import psm
-from api import search_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import search_v1_api
 from pensando_ent.psm.model.search_policy_search_request import SearchPolicySearchRequest
 from pensando_ent.psm.model.search_policy_search_response import SearchPolicySearchResponse
 from pprint import pprint
@@ -271,8 +271,8 @@ Structured or free-form search
 
 ```python
 import time
-import psm
-from api import search_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import search_v1_api
 from pensando_ent.psm.model.search_search_request import SearchSearchRequest
 from pensando_ent.psm.model.search_search_response import SearchSearchResponse
 from pprint import pprint

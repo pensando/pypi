@@ -34,7 +34,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuditV1Api* | [**get_get_event**](docs/AuditV1Api.md#get_get_event) | **GET** /audit/v1/events/{UUID} | Fetches an audit event given its uuid
+*AuditV1Api* | [**get_get_event**](pensando_ent/docs/AuditV1Api.md#get_get_event) | **GET** /audit/v1/events/{UUID} | Fetches an audit event given its uuid
 
 
 ## Documentation For Models

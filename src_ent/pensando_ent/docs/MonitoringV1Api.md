@@ -162,8 +162,8 @@ Create AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -303,8 +303,8 @@ Create AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -442,8 +442,8 @@ Create AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -553,8 +553,8 @@ Create AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -662,8 +662,8 @@ Create ArchiveRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -792,8 +792,8 @@ Create ArchiveRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -920,8 +920,8 @@ Create AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1026,8 +1026,8 @@ Create AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1130,8 +1130,8 @@ Create EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1244,8 +1244,8 @@ Create EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1356,8 +1356,8 @@ Create FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1499,8 +1499,8 @@ Create FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1640,8 +1640,8 @@ Create FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1750,8 +1750,8 @@ Create FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1858,8 +1858,8 @@ Create MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2041,8 +2041,8 @@ Create MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2222,8 +2222,8 @@ Create StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2356,8 +2356,8 @@ Create StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2488,8 +2488,8 @@ Create TechSupportRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_tech_support_request import MonitoringTechSupportRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2620,8 +2620,8 @@ Create TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2750,8 +2750,8 @@ Create TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2878,8 +2878,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_cancel_archive_request import MonitoringCancelArchiveRequest
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2968,8 +2968,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_cancel_archive_request import MonitoringCancelArchiveRequest
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3056,8 +3056,8 @@ Delete AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3127,8 +3127,8 @@ Delete AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3196,8 +3196,8 @@ Delete AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3267,8 +3267,8 @@ Delete AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3336,8 +3336,8 @@ Delete ArchiveRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3407,8 +3407,8 @@ Delete ArchiveRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3476,8 +3476,8 @@ Delete AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3545,8 +3545,8 @@ Delete AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3610,8 +3610,8 @@ Delete EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3681,8 +3681,8 @@ Delete EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3750,8 +3750,8 @@ Delete FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3821,8 +3821,8 @@ Delete FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3890,8 +3890,8 @@ Delete FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3961,8 +3961,8 @@ Delete FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4030,8 +4030,8 @@ Delete MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4101,8 +4101,8 @@ Delete MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4170,8 +4170,8 @@ Delete StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4241,8 +4241,8 @@ Delete StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4310,8 +4310,8 @@ Delete TechSupportRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_tech_support_request import MonitoringTechSupportRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4379,8 +4379,8 @@ Delete TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4450,8 +4450,8 @@ Delete TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4519,8 +4519,8 @@ Get Alert object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4651,8 +4651,8 @@ Get Alert object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4783,8 +4783,8 @@ Get AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4893,8 +4893,8 @@ Get AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5003,8 +5003,8 @@ Get AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5119,8 +5119,8 @@ Get AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5235,8 +5235,8 @@ Get ArchiveRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5349,8 +5349,8 @@ Get ArchiveRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request import MonitoringArchiveRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5463,8 +5463,8 @@ Get AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5569,8 +5569,8 @@ Get AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5667,8 +5667,8 @@ Get EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5771,8 +5771,8 @@ Get EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5875,8 +5875,8 @@ Get FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5995,8 +5995,8 @@ Get FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6115,8 +6115,8 @@ Get FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6227,8 +6227,8 @@ Get FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6339,8 +6339,8 @@ Get MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6475,8 +6475,8 @@ Get MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6611,8 +6611,8 @@ Get StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6739,8 +6739,8 @@ Get StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6867,8 +6867,8 @@ Get TechSupportRequest object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_tech_support_request import MonitoringTechSupportRequest
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6979,8 +6979,8 @@ Get TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7111,8 +7111,8 @@ Get TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -7243,8 +7243,8 @@ Label Alert object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7332,8 +7332,8 @@ Label Alert object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7419,8 +7419,8 @@ Label AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7508,8 +7508,8 @@ Label AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7595,8 +7595,8 @@ Label AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7684,8 +7684,8 @@ Label AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7771,8 +7771,8 @@ Label EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7860,8 +7860,8 @@ Label EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -7947,8 +7947,8 @@ Label FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8036,8 +8036,8 @@ Label FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8123,8 +8123,8 @@ Label FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8212,8 +8212,8 @@ Label FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8299,8 +8299,8 @@ Label MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8388,8 +8388,8 @@ Label MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8475,8 +8475,8 @@ Label StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8564,8 +8564,8 @@ Label StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8651,8 +8651,8 @@ Label TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8740,8 +8740,8 @@ Label TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -8827,8 +8827,8 @@ List Alert objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_list import MonitoringAlertList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -8937,8 +8937,8 @@ List Alert objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_list import MonitoringAlertList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9039,8 +9039,8 @@ List AlertDestination objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination_list import MonitoringAlertDestinationList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9149,8 +9149,8 @@ List AlertDestination objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination_list import MonitoringAlertDestinationList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9251,8 +9251,8 @@ List AlertPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy_list import MonitoringAlertPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9361,8 +9361,8 @@ List AlertPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy_list import MonitoringAlertPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9463,8 +9463,8 @@ List ArchiveRequest objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request_list import MonitoringArchiveRequestList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9573,8 +9573,8 @@ List ArchiveRequest objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_archive_request_list import MonitoringArchiveRequestList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9675,8 +9675,8 @@ List EventPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy_list import MonitoringEventPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9785,8 +9785,8 @@ List EventPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy_list import MonitoringEventPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9887,8 +9887,8 @@ List FlowExportPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy_list import MonitoringFlowExportPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -9997,8 +9997,8 @@ List FlowExportPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy_list import MonitoringFlowExportPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10099,8 +10099,8 @@ List FwlogPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy_list import MonitoringFwlogPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10209,8 +10209,8 @@ List FwlogPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy_list import MonitoringFwlogPolicyList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10311,8 +10311,8 @@ List MirrorSession objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session_list import MonitoringMirrorSessionList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10421,8 +10421,8 @@ List MirrorSession objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session_list import MonitoringMirrorSessionList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10523,8 +10523,8 @@ List StatsAlertPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.monitoring_stats_alert_policy_list import MonitoringStatsAlertPolicyList
 from pprint import pprint
@@ -10633,8 +10633,8 @@ List StatsAlertPolicy objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.monitoring_stats_alert_policy_list import MonitoringStatsAlertPolicyList
 from pprint import pprint
@@ -10735,8 +10735,8 @@ List TechSupportRequest objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_tech_support_request_list import MonitoringTechSupportRequestList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10837,8 +10837,8 @@ List TroubleshootingSession objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session_list import MonitoringTroubleshootingSessionList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -10947,8 +10947,8 @@ List TroubleshootingSession objects
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session_list import MonitoringTroubleshootingSessionList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11049,8 +11049,8 @@ Update Alert object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11180,8 +11180,8 @@ Update Alert object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert import MonitoringAlert
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11309,8 +11309,8 @@ Update AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11452,8 +11452,8 @@ Update AlertDestination object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_destination import MonitoringAlertDestination
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11593,8 +11593,8 @@ Update AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11706,8 +11706,8 @@ Update AlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_alert_policy import MonitoringAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11817,8 +11817,8 @@ Update AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -11923,8 +11923,8 @@ Update AuditPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_audit_policy import MonitoringAuditPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12027,8 +12027,8 @@ Update EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12143,8 +12143,8 @@ Update EventPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_event_policy import MonitoringEventPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12257,8 +12257,8 @@ Update FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12402,8 +12402,8 @@ Update FlowExportPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_flow_export_policy import MonitoringFlowExportPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12545,8 +12545,8 @@ Update FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12657,8 +12657,8 @@ Update FwlogPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_fwlog_policy import MonitoringFwlogPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12767,8 +12767,8 @@ Update MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -12952,8 +12952,8 @@ Update MirrorSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_mirror_session import MonitoringMirrorSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13135,8 +13135,8 @@ Update StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13271,8 +13271,8 @@ Update StatsAlertPolicy object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_stats_alert_policy import MonitoringStatsAlertPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13405,8 +13405,8 @@ Update TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13537,8 +13537,8 @@ Update TroubleshootingSession object
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_troubleshooting_session import MonitoringTroubleshootingSession
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13667,8 +13667,8 @@ Watch Alert objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_alert_watch_helper import MonitoringAutoMsgAlertWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13777,8 +13777,8 @@ Watch Alert objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_alert_watch_helper import MonitoringAutoMsgAlertWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13879,8 +13879,8 @@ Watch AlertDestination objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_alert_destination_watch_helper import MonitoringAutoMsgAlertDestinationWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -13989,8 +13989,8 @@ Watch AlertDestination objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_alert_destination_watch_helper import MonitoringAutoMsgAlertDestinationWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14091,8 +14091,8 @@ Watch AlertPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_alert_policy_watch_helper import MonitoringAutoMsgAlertPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14201,8 +14201,8 @@ Watch AlertPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_alert_policy_watch_helper import MonitoringAutoMsgAlertPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14303,8 +14303,8 @@ Watch ArchiveRequest objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_archive_request_watch_helper import MonitoringAutoMsgArchiveRequestWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14413,8 +14413,8 @@ Watch ArchiveRequest objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_archive_request_watch_helper import MonitoringAutoMsgArchiveRequestWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14515,8 +14515,8 @@ Watch AuditPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_audit_policy_watch_helper import MonitoringAutoMsgAuditPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14625,8 +14625,8 @@ Watch AuditPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_audit_policy_watch_helper import MonitoringAutoMsgAuditPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14727,8 +14727,8 @@ Watch EventPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_event_policy_watch_helper import MonitoringAutoMsgEventPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14837,8 +14837,8 @@ Watch EventPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_event_policy_watch_helper import MonitoringAutoMsgEventPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -14939,8 +14939,8 @@ Watch FlowExportPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_flow_export_policy_watch_helper import MonitoringAutoMsgFlowExportPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15049,8 +15049,8 @@ Watch FlowExportPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_flow_export_policy_watch_helper import MonitoringAutoMsgFlowExportPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15151,8 +15151,8 @@ Watch FwlogPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_fwlog_policy_watch_helper import MonitoringAutoMsgFwlogPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15261,8 +15261,8 @@ Watch FwlogPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_fwlog_policy_watch_helper import MonitoringAutoMsgFwlogPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15363,8 +15363,8 @@ Watch MirrorSession objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_mirror_session_watch_helper import MonitoringAutoMsgMirrorSessionWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15473,8 +15473,8 @@ Watch MirrorSession objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_mirror_session_watch_helper import MonitoringAutoMsgMirrorSessionWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15575,8 +15575,8 @@ Watch StatsAlertPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_stats_alert_policy_watch_helper import MonitoringAutoMsgStatsAlertPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15685,8 +15685,8 @@ Watch StatsAlertPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_stats_alert_policy_watch_helper import MonitoringAutoMsgStatsAlertPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -15787,8 +15787,8 @@ Watch TechSupportRequest objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import monitoring_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import monitoring_v1_api
 from pensando_ent.psm.model.monitoring_auto_msg_tech_support_request_watch_helper import MonitoringAutoMsgTechSupportRequestWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

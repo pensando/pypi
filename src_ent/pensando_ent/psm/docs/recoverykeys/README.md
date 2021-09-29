@@ -32,7 +32,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*RecoverykeysV1Api* | [**get_download_recovery_keys**](docs/RecoverykeysV1Api.md#get_download_recovery_keys) | **GET** /sysruntime/v1/cluster/recoverykeys | 
+*RecoverykeysV1Api* | [**get_download_recovery_keys**](pensando_ent/docs/RecoverykeysV1Api.md#get_download_recovery_keys) | **GET** /sysruntime/v1/cluster/recoverykeys | 
 
 
 ## Documentation For Models

@@ -28,8 +28,8 @@ Create Object object
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -125,8 +125,8 @@ Create Object object
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -220,8 +220,8 @@ Delete Object object
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -293,8 +293,8 @@ Delete Object object
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -364,8 +364,8 @@ Download file
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -461,8 +461,8 @@ Download file
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -558,8 +558,8 @@ Download file by prefix
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_stream_chunk import ObjstoreStreamChunk
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -655,8 +655,8 @@ Get Object object
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -759,8 +759,8 @@ Get Object object
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object import ObjstoreObject
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -863,8 +863,8 @@ List Object objects
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object_list import ObjstoreObjectList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -973,8 +973,8 @@ List Object objects
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_object_list import ObjstoreObjectList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1083,8 +1083,8 @@ Watch Object objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_auto_msg_object_watch_helper import ObjstoreAutoMsgObjectWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1193,8 +1193,8 @@ Watch Object objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import objstore_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import objstore_v1_api
 from pensando_ent.psm.model.objstore_auto_msg_object_watch_helper import ObjstoreAutoMsgObjectWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

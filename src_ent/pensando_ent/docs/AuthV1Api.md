@@ -79,8 +79,8 @@ Create AuthenticationPolicy object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -254,8 +254,8 @@ Create Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -359,8 +359,8 @@ Create Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -462,8 +462,8 @@ Create RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -560,8 +560,8 @@ Create RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -656,8 +656,8 @@ Create User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -779,8 +779,8 @@ Create User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -900,8 +900,8 @@ Delete Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -971,8 +971,8 @@ Delete Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1040,8 +1040,8 @@ Delete RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1111,8 +1111,8 @@ Delete RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1180,8 +1180,8 @@ Delete User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1251,8 +1251,8 @@ Delete User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1320,8 +1320,8 @@ Get AuthenticationPolicy object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1418,8 +1418,8 @@ Get Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1516,8 +1516,8 @@ Get Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1614,8 +1614,8 @@ Get RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1722,8 +1722,8 @@ Get RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1830,8 +1830,8 @@ Get User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1952,8 +1952,8 @@ Get User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2074,8 +2074,8 @@ Get UserPreference object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2174,8 +2174,8 @@ Get UserPreference object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2274,8 +2274,8 @@ Review authorization for user
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_subject_access_review_request import AuthSubjectAccessReviewRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2377,8 +2377,8 @@ Review authorization for user
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_subject_access_review_request import AuthSubjectAccessReviewRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2478,8 +2478,8 @@ Label AuthenticationPolicy object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2563,8 +2563,8 @@ Label Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2652,8 +2652,8 @@ Label Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2739,8 +2739,8 @@ Label RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2828,8 +2828,8 @@ Label RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2915,8 +2915,8 @@ Label User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3004,8 +3004,8 @@ Label User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3091,8 +3091,8 @@ Label UserPreference object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3180,8 +3180,8 @@ Label UserPreference object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3267,8 +3267,8 @@ Test LDAP bind operation
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3442,8 +3442,8 @@ Test LDAP connection
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3617,8 +3617,8 @@ List Role objects
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_list import AuthRoleList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3727,8 +3727,8 @@ List Role objects
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_list import AuthRoleList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3829,8 +3829,8 @@ List RoleBinding objects
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.auth_role_binding_list import AuthRoleBindingList
 from pprint import pprint
@@ -3939,8 +3939,8 @@ List RoleBinding objects
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.auth_role_binding_list import AuthRoleBindingList
 from pprint import pprint
@@ -4041,8 +4041,8 @@ List User objects
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_list import AuthUserList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4151,8 +4151,8 @@ List User objects
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_list import AuthUserList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4253,8 +4253,8 @@ Change user password
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_password_change_request import AuthPasswordChangeRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4346,8 +4346,8 @@ Change user password
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_password_change_request import AuthPasswordChangeRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4437,8 +4437,8 @@ Reset user password
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_password_reset_request import AuthPasswordResetRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4528,8 +4528,8 @@ Reset user password
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_password_reset_request import AuthPasswordResetRequest
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4617,8 +4617,8 @@ Generate secret for token signing
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.auth_token_secret_request import AuthTokenSecretRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4704,8 +4704,8 @@ Update AuthenticationPolicy object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_authentication_policy import AuthAuthenticationPolicy
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4879,8 +4879,8 @@ Update Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4986,8 +4986,8 @@ Update Role object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role import AuthRole
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5091,8 +5091,8 @@ Update RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5191,8 +5191,8 @@ Update RoleBinding object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_role_binding import AuthRoleBinding
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5289,8 +5289,8 @@ Update User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5414,8 +5414,8 @@ Update User object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user import AuthUser
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5537,8 +5537,8 @@ Update UserPreference object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5631,8 +5631,8 @@ Update UserPreference object
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_user_preference import AuthUserPreference
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5723,8 +5723,8 @@ Watch AuthenticationPolicy objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_authentication_policy_watch_helper import AuthAutoMsgAuthenticationPolicyWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5825,8 +5825,8 @@ Watch Role objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_watch_helper import AuthAutoMsgRoleWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5935,8 +5935,8 @@ Watch Role objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_watch_helper import AuthAutoMsgRoleWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6037,8 +6037,8 @@ Watch RoleBinding objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_binding_watch_helper import AuthAutoMsgRoleBindingWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6147,8 +6147,8 @@ Watch RoleBinding objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_role_binding_watch_helper import AuthAutoMsgRoleBindingWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6249,8 +6249,8 @@ Watch User objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_watch_helper import AuthAutoMsgUserWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6359,8 +6359,8 @@ Watch User objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_watch_helper import AuthAutoMsgUserWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6461,8 +6461,8 @@ Watch UserPreference objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_preference_watch_helper import AuthAutoMsgUserPreferenceWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -6571,8 +6571,8 @@ Watch UserPreference objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import auth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import auth_v1_api
 from pensando_ent.psm.model.auth_auto_msg_user_preference_watch_helper import AuthAutoMsgUserPreferenceWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

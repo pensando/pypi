@@ -96,13 +96,13 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OrchestrationV1Api* | [**add_orchestrator**](docs/OrchestrationV1Api.md#add_orchestrator) | **POST** /configs/orchestration/v1/orchestrator | Create Orchestrator object
-*OrchestrationV1Api* | [**delete_orchestrator**](docs/OrchestrationV1Api.md#delete_orchestrator) | **DELETE** /configs/orchestration/v1/orchestrator/{O.Name} | Delete Orchestrator object
-*OrchestrationV1Api* | [**get_orchestrator**](docs/OrchestrationV1Api.md#get_orchestrator) | **GET** /configs/orchestration/v1/orchestrator/{O.Name} | Get Orchestrator object
-*OrchestrationV1Api* | [**label_orchestrator**](docs/OrchestrationV1Api.md#label_orchestrator) | **POST** /configs/orchestration/v1/orchestrator/{O.Name}/label | Label Orchestrator object
-*OrchestrationV1Api* | [**list_orchestrator**](docs/OrchestrationV1Api.md#list_orchestrator) | **GET** /configs/orchestration/v1/orchestrator | List Orchestrator objects
-*OrchestrationV1Api* | [**update_orchestrator**](docs/OrchestrationV1Api.md#update_orchestrator) | **PUT** /configs/orchestration/v1/orchestrator/{O.Name} | Update Orchestrator object
-*OrchestrationV1Api* | [**watch_orchestrator**](docs/OrchestrationV1Api.md#watch_orchestrator) | **GET** /configs/orchestration/v1/watch/orchestrator | Watch Orchestrator objects. Supports WebSockets or HTTP long poll
+*OrchestrationV1Api* | [**add_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#add_orchestrator) | **POST** /configs/orchestration/v1/orchestrator | Create Orchestrator object
+*OrchestrationV1Api* | [**delete_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#delete_orchestrator) | **DELETE** /configs/orchestration/v1/orchestrator/{O.Name} | Delete Orchestrator object
+*OrchestrationV1Api* | [**get_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#get_orchestrator) | **GET** /configs/orchestration/v1/orchestrator/{O.Name} | Get Orchestrator object
+*OrchestrationV1Api* | [**label_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#label_orchestrator) | **POST** /configs/orchestration/v1/orchestrator/{O.Name}/label | Label Orchestrator object
+*OrchestrationV1Api* | [**list_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#list_orchestrator) | **GET** /configs/orchestration/v1/orchestrator | List Orchestrator objects
+*OrchestrationV1Api* | [**update_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#update_orchestrator) | **PUT** /configs/orchestration/v1/orchestrator/{O.Name} | Update Orchestrator object
+*OrchestrationV1Api* | [**watch_orchestrator**](pensando_ent/docs/OrchestrationV1Api.md#watch_orchestrator) | **GET** /configs/orchestration/v1/watch/orchestrator | Watch Orchestrator objects. Supports WebSockets or HTTP long poll
 
 
 ## Documentation For Models

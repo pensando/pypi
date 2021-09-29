@@ -29,8 +29,8 @@ Create Buffer object
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -142,8 +142,8 @@ Create Buffer object
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -253,8 +253,8 @@ Create/Update/Delete multiple objects as part of a single request
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_bulk_edit_action import StagingBulkEditAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -377,8 +377,8 @@ Create/Update/Delete multiple objects as part of a single request
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_bulk_edit_action import StagingBulkEditAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -499,8 +499,8 @@ Clear operations from a configuration buffer
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_clear_action import StagingClearAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -601,8 +601,8 @@ Clear operations from a configuration buffer
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_clear_action import StagingClearAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -701,8 +701,8 @@ Commit a staged configuration buffer
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_commit_action import StagingCommitAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -796,8 +796,8 @@ Commit a staged configuration buffer
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_commit_action import StagingCommitAction
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -889,8 +889,8 @@ Delete Buffer object
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -960,8 +960,8 @@ Delete Buffer object
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1029,8 +1029,8 @@ Get Buffer object
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1131,8 +1131,8 @@ Get Buffer object
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer import StagingBuffer
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1233,8 +1233,8 @@ List Buffer objects
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer_list import StagingBufferList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1343,8 +1343,8 @@ List Buffer objects
 
 ```python
 import time
-import psm
-from api import staging_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import staging_v1_api
 from pensando_ent.psm.model.staging_buffer_list import StagingBufferList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

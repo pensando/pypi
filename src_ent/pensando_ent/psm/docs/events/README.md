@@ -35,9 +35,9 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*EventsV1Api* | [**get_get_event**](docs/EventsV1Api.md#get_get_event) | **GET** /events/v1/events/{UUID} | Get specific event
-*EventsV1Api* | [**get_get_events1**](docs/EventsV1Api.md#get_get_events1) | **GET** /events/v1/events | 
-*EventsV1Api* | [**post_get_events**](docs/EventsV1Api.md#post_get_events) | **POST** /events/v1/events | 
+*EventsV1Api* | [**get_get_event**](pensando_ent/docs/EventsV1Api.md#get_get_event) | **GET** /events/v1/events/{UUID} | Get specific event
+*EventsV1Api* | [**get_get_events1**](pensando_ent/docs/EventsV1Api.md#get_get_events1) | **GET** /events/v1/events | 
+*EventsV1Api* | [**post_get_events**](pensando_ent/docs/EventsV1Api.md#post_get_events) | **POST** /events/v1/events | 
 
 
 ## Documentation For Models

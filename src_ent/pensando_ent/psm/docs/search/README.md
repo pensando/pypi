@@ -50,10 +50,10 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SearchV1Api* | [**get_policy_query1**](docs/SearchV1Api.md#get_policy_query1) | **GET** /search/v1/policy-query | Security Policy Query
-*SearchV1Api* | [**get_query1**](docs/SearchV1Api.md#get_query1) | **GET** /search/v1/query | Structured or free-form search
-*SearchV1Api* | [**post_policy_query**](docs/SearchV1Api.md#post_policy_query) | **POST** /search/v1/policy-query | Security Policy Query
-*SearchV1Api* | [**post_query**](docs/SearchV1Api.md#post_query) | **POST** /search/v1/query | Structured or free-form search
+*SearchV1Api* | [**get_policy_query1**](pensando_ent/docs/SearchV1Api.md#get_policy_query1) | **GET** /search/v1/policy-query | Security Policy Query
+*SearchV1Api* | [**get_query1**](pensando_ent/docs/SearchV1Api.md#get_query1) | **GET** /search/v1/query | Structured or free-form search
+*SearchV1Api* | [**post_policy_query**](pensando_ent/docs/SearchV1Api.md#post_policy_query) | **POST** /search/v1/policy-query | Security Policy Query
+*SearchV1Api* | [**post_query**](pensando_ent/docs/SearchV1Api.md#post_query) | **POST** /search/v1/query | Structured or free-form search
 
 
 ## Documentation For Models

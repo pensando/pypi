@@ -37,7 +37,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*TokenauthV1Api* | [**get_generate_node_token**](docs/TokenauthV1Api.md#get_generate_node_token) | **GET** /tokenauth/v1/node | 
+*TokenauthV1Api* | [**get_generate_node_token**](pensando_ent/docs/TokenauthV1Api.md#get_generate_node_token) | **GET** /tokenauth/v1/node | 
 
 
 ## Documentation For Models

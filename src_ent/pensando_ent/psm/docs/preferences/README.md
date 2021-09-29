@@ -50,14 +50,14 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*PreferencesV1Api* | [**get_ui_global_settings**](docs/PreferencesV1Api.md#get_ui_global_settings) | **GET** /configs/preferences/v1/tenant/{O.Tenant}/uiglobalsettings | Get UIGlobalSettings object
-*PreferencesV1Api* | [**get_ui_global_settings1**](docs/PreferencesV1Api.md#get_ui_global_settings1) | **GET** /configs/preferences/v1/uiglobalsettings | Get UIGlobalSettings object
-*PreferencesV1Api* | [**label_ui_global_settings**](docs/PreferencesV1Api.md#label_ui_global_settings) | **POST** /configs/preferences/v1/tenant/{O.Tenant}/uiglobalsettings/label | Label UIGlobalSettings object
-*PreferencesV1Api* | [**label_ui_global_settings1**](docs/PreferencesV1Api.md#label_ui_global_settings1) | **POST** /configs/preferences/v1/uiglobalsettings/label | Label UIGlobalSettings object
-*PreferencesV1Api* | [**update_ui_global_settings**](docs/PreferencesV1Api.md#update_ui_global_settings) | **PUT** /configs/preferences/v1/tenant/{O.Tenant}/uiglobalsettings | Update UIGlobalSettings object
-*PreferencesV1Api* | [**update_ui_global_settings1**](docs/PreferencesV1Api.md#update_ui_global_settings1) | **PUT** /configs/preferences/v1/uiglobalsettings | Update UIGlobalSettings object
-*PreferencesV1Api* | [**watch_ui_global_settings**](docs/PreferencesV1Api.md#watch_ui_global_settings) | **GET** /configs/preferences/v1/watch/tenant/{O.Tenant}/uiglobalsettings | Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
-*PreferencesV1Api* | [**watch_ui_global_settings1**](docs/PreferencesV1Api.md#watch_ui_global_settings1) | **GET** /configs/preferences/v1/watch/uiglobalsettings | Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
+*PreferencesV1Api* | [**get_ui_global_settings**](pensando_ent/docs/PreferencesV1Api.md#get_ui_global_settings) | **GET** /configs/preferences/v1/tenant/{O.Tenant}/uiglobalsettings | Get UIGlobalSettings object
+*PreferencesV1Api* | [**get_ui_global_settings1**](pensando_ent/docs/PreferencesV1Api.md#get_ui_global_settings1) | **GET** /configs/preferences/v1/uiglobalsettings | Get UIGlobalSettings object
+*PreferencesV1Api* | [**label_ui_global_settings**](pensando_ent/docs/PreferencesV1Api.md#label_ui_global_settings) | **POST** /configs/preferences/v1/tenant/{O.Tenant}/uiglobalsettings/label | Label UIGlobalSettings object
+*PreferencesV1Api* | [**label_ui_global_settings1**](pensando_ent/docs/PreferencesV1Api.md#label_ui_global_settings1) | **POST** /configs/preferences/v1/uiglobalsettings/label | Label UIGlobalSettings object
+*PreferencesV1Api* | [**update_ui_global_settings**](pensando_ent/docs/PreferencesV1Api.md#update_ui_global_settings) | **PUT** /configs/preferences/v1/tenant/{O.Tenant}/uiglobalsettings | Update UIGlobalSettings object
+*PreferencesV1Api* | [**update_ui_global_settings1**](pensando_ent/docs/PreferencesV1Api.md#update_ui_global_settings1) | **PUT** /configs/preferences/v1/uiglobalsettings | Update UIGlobalSettings object
+*PreferencesV1Api* | [**watch_ui_global_settings**](pensando_ent/docs/PreferencesV1Api.md#watch_ui_global_settings) | **GET** /configs/preferences/v1/watch/tenant/{O.Tenant}/uiglobalsettings | Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
+*PreferencesV1Api* | [**watch_ui_global_settings1**](pensando_ent/docs/PreferencesV1Api.md#watch_ui_global_settings1) | **GET** /configs/preferences/v1/watch/uiglobalsettings | Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
 
 
 ## Documentation For Models

@@ -52,11 +52,11 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*FwlogV1Api* | [**get_download_fw_log_file_content**](docs/FwlogV1Api.md#get_download_fw_log_file_content) | **GET** /fwlog/v1/tenants/{O.Tenant}/objects/{O.Name} | fwlog/v1/tenants/default/objects/&lt;objectName&gt;
-*FwlogV1Api* | [**get_download_fw_log_file_content1**](docs/FwlogV1Api.md#get_download_fw_log_file_content1) | **GET** /fwlog/v1/objects/{O.Name} | fwlog/v1/tenants/default/objects/&lt;objectName&gt;
-*FwlogV1Api* | [**get_get_logs1**](docs/FwlogV1Api.md#get_get_logs1) | **GET** /fwlog/v1/query | Queries firewall logs
-*FwlogV1Api* | [**get_watch_logs**](docs/FwlogV1Api.md#get_watch_logs) | **GET** /fwlog/v1/watch/query | 
-*FwlogV1Api* | [**post_get_logs**](docs/FwlogV1Api.md#post_get_logs) | **POST** /fwlog/v1/query | Queries firewall logs
+*FwlogV1Api* | [**get_download_fw_log_file_content**](pensando_ent/docs/FwlogV1Api.md#get_download_fw_log_file_content) | **GET** /fwlog/v1/tenants/{O.Tenant}/objects/{O.Name} | fwlog/v1/tenants/default/objects/&lt;objectName&gt;
+*FwlogV1Api* | [**get_download_fw_log_file_content1**](pensando_ent/docs/FwlogV1Api.md#get_download_fw_log_file_content1) | **GET** /fwlog/v1/objects/{O.Name} | fwlog/v1/tenants/default/objects/&lt;objectName&gt;
+*FwlogV1Api* | [**get_get_logs1**](pensando_ent/docs/FwlogV1Api.md#get_get_logs1) | **GET** /fwlog/v1/query | Queries firewall logs
+*FwlogV1Api* | [**get_watch_logs**](pensando_ent/docs/FwlogV1Api.md#get_watch_logs) | **GET** /fwlog/v1/watch/query | 
+*FwlogV1Api* | [**post_get_logs**](pensando_ent/docs/FwlogV1Api.md#post_get_logs) | **POST** /fwlog/v1/query | Queries firewall logs
 
 
 ## Documentation For Models

@@ -16,8 +16,8 @@ Method | HTTP request | Description
 
 ```python
 import time
-import psm
-from api import tokenauth_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import tokenauth_v1_api
 from pensando_ent.psm.model.tokenauth_node_token_response import TokenauthNodeTokenResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

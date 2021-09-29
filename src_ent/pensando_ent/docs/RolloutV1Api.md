@@ -22,8 +22,8 @@ Start Rollout operation
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -175,8 +175,8 @@ Get Rollout object
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -307,8 +307,8 @@ List Rollout objects
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_rollout_list import RolloutRolloutList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -409,8 +409,8 @@ Remove a Rollout
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -562,8 +562,8 @@ Stop a Rollout operation
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -715,8 +715,8 @@ Update Rollout configuration
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_rollout import RolloutRollout
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -868,8 +868,8 @@ Watch Rollout objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import rollout_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import rollout_v1_api
 from pensando_ent.psm.model.rollout_auto_msg_rollout_watch_helper import RolloutAutoMsgRolloutWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

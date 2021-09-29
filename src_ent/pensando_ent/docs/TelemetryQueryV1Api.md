@@ -17,8 +17,8 @@ telemetry metrics query
 
 ```python
 import time
-import psm
-from api import telemetry_query_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import telemetry_query_v1_api
 from pensando_ent.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -82,8 +82,8 @@ telemetry metrics query
 
 ```python
 import time
-import psm
-from api import telemetry_query_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import telemetry_query_v1_api
 from pensando_ent.psm.model.telemetry_query_metrics_query_list import TelemetryQueryMetricsQueryList
 from pensando_ent.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
 from pprint import pprint

@@ -71,8 +71,8 @@ Create ConfigurationSnapshot object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -168,8 +168,8 @@ Create DSCProfile object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -275,8 +275,8 @@ Create Host object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -377,8 +377,8 @@ Create License object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -483,8 +483,8 @@ Create Node object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -585,8 +585,8 @@ Create Tenant object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -675,8 +675,8 @@ Mark bootstrapping as complete for the cluster
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.cluster_cluster_auth_bootstrap_request import ClusterClusterAuthBootstrapRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -762,8 +762,8 @@ Delete ConfigurationSnapshot object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -827,8 +827,8 @@ Delete DistributedServiceCard object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -896,8 +896,8 @@ Delete DSCProfile object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -965,8 +965,8 @@ Delete Host object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1034,8 +1034,8 @@ Delete Node object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1103,8 +1103,8 @@ Delete Tenant object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1172,8 +1172,8 @@ Get Cluster object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1300,8 +1300,8 @@ Get ConfigurationSnapshot object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1396,8 +1396,8 @@ Get DistributedServiceCard object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1614,8 +1614,8 @@ Get DSCProfile object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1736,8 +1736,8 @@ Get Host object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1842,8 +1842,8 @@ Get License object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1936,8 +1936,8 @@ Get Node object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2040,8 +2040,8 @@ Get SnapshotRestore object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2140,8 +2140,8 @@ Get Tenant object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2240,8 +2240,8 @@ Get Version object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_version import ClusterVersion
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2340,8 +2340,8 @@ Label Cluster object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2425,8 +2425,8 @@ Label ConfigurationSnapshot object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2510,8 +2510,8 @@ Label DistributedServiceCard object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2597,8 +2597,8 @@ Label DSCProfile object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2684,8 +2684,8 @@ Label Host object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2771,8 +2771,8 @@ Label License object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2856,8 +2856,8 @@ Label Node object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2943,8 +2943,8 @@ Label Tenant object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -3030,8 +3030,8 @@ List DistributedServiceCard objects
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card_list import ClusterDistributedServiceCardList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3132,8 +3132,8 @@ List DSCProfile objects
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile_list import ClusterDSCProfileList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3234,8 +3234,8 @@ List Host objects
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host_list import ClusterHostList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3336,8 +3336,8 @@ List Node objects
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node_list import ClusterNodeList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3438,8 +3438,8 @@ List Tenant objects
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant_list import ClusterTenantList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3540,8 +3540,8 @@ Restore Configuration
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3635,8 +3635,8 @@ Perform a Configuation Snapshot
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.cluster_configuration_snapshot_request import ClusterConfigurationSnapshotRequest
@@ -3722,8 +3722,8 @@ Update Cluster object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3863,8 +3863,8 @@ Update ConfigurationSnapshot object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_configuration_snapshot import ClusterConfigurationSnapshot
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3960,8 +3960,8 @@ Update DistributedServiceCard object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4167,8 +4167,8 @@ Update DSCProfile object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4276,8 +4276,8 @@ Update Host object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_host import ClusterHost
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4380,8 +4380,8 @@ Update License object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_license import ClusterLicense
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4486,8 +4486,8 @@ Update Node object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_node import ClusterNode
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4590,8 +4590,8 @@ Update Tenant object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_tenant import ClusterTenant
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4682,8 +4682,8 @@ Update TLS Configuration for cluster
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_cluster import ClusterCluster
 from pensando_ent.psm.model.cluster_update_tls_config_request import ClusterUpdateTLSConfigRequest
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -4771,8 +4771,8 @@ Update Version object
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_version import ClusterVersion
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4866,8 +4866,8 @@ Watch Cluster objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_cluster_watch_helper import ClusterAutoMsgClusterWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -4968,8 +4968,8 @@ Watch ConfigurationSnapshot objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_configuration_snapshot_watch_helper import ClusterAutoMsgConfigurationSnapshotWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5070,8 +5070,8 @@ Watch DistributedServiceCard objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_distributed_service_card_watch_helper import ClusterAutoMsgDistributedServiceCardWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5172,8 +5172,8 @@ Watch DSCProfile objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_dsc_profile_watch_helper import ClusterAutoMsgDSCProfileWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5274,8 +5274,8 @@ Watch Host objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_host_watch_helper import ClusterAutoMsgHostWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5376,8 +5376,8 @@ Watch Node objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_node_watch_helper import ClusterAutoMsgNodeWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5478,8 +5478,8 @@ Watch Tenant objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_tenant_watch_helper import ClusterAutoMsgTenantWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -5580,8 +5580,8 @@ Watch Version objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import cluster_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import cluster_v1_api
 from pensando_ent.psm.model.cluster_auto_msg_version_watch_helper import ClusterAutoMsgVersionWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

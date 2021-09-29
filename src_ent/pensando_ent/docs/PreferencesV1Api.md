@@ -23,8 +23,8 @@ Get UIGlobalSettings object
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -127,8 +127,8 @@ Get UIGlobalSettings object
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -223,8 +223,8 @@ Label UIGlobalSettings object
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -310,8 +310,8 @@ Label UIGlobalSettings object
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -395,8 +395,8 @@ Update UIGlobalSettings object
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -491,8 +491,8 @@ Update UIGlobalSettings object
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_ui_global_settings import PreferencesUIGlobalSettings
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -585,8 +585,8 @@ Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_auto_msg_ui_global_settings_watch_helper import PreferencesAutoMsgUIGlobalSettingsWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -695,8 +695,8 @@ Watch UIGlobalSettings objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import preferences_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import preferences_v1_api
 from pensando_ent.psm.model.preferences_auto_msg_ui_global_settings_watch_helper import PreferencesAutoMsgUIGlobalSettingsWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

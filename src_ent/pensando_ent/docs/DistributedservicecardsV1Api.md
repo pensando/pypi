@@ -16,8 +16,8 @@ Active Connection Query
 
 ```python
 import time
-import psm
-from api import distributedservicecards_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import distributedservicecards_v1_api
 from pensando_ent.psm.model.sysruntime_connection_request import SysruntimeConnectionRequest
 from pensando_ent.psm.model.sysruntime_connection_status import SysruntimeConnectionStatus
 from pprint import pprint

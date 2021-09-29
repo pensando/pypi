@@ -22,8 +22,8 @@ Create Orchestrator object
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -149,8 +149,8 @@ Delete Orchestrator object
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -218,8 +218,8 @@ Get Orchestrator object
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -352,8 +352,8 @@ Label Orchestrator object
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
@@ -439,8 +439,8 @@ List Orchestrator objects
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.orchestration_orchestrator_list import OrchestrationOrchestratorList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -541,8 +541,8 @@ Update Orchestrator object
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.orchestration_orchestrator import OrchestrationOrchestrator
 from pprint import pprint
@@ -670,8 +670,8 @@ Watch Orchestrator objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import orchestration_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import orchestration_v1_api
 from pensando_ent.psm.model.orchestration_auto_msg_orchestrator_watch_helper import OrchestrationAutoMsgOrchestratorWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint

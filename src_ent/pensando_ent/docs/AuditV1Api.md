@@ -16,8 +16,8 @@ Fetches an audit event given its uuid
 
 ```python
 import time
-import psm
-from api import audit_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import audit_v1_api
 from pensando_ent.psm.model.audit_audit_event import AuditAuditEvent
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost

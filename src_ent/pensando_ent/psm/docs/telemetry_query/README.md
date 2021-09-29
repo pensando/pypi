@@ -36,8 +36,8 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*TelemetryQueryV1Api* | [**get_metrics1**](docs/TelemetryQueryV1Api.md#get_metrics1) | **GET** /telemetry/v1/metrics | telemetry metrics query
-*TelemetryQueryV1Api* | [**post_metrics**](docs/TelemetryQueryV1Api.md#post_metrics) | **POST** /telemetry/v1/metrics | telemetry metrics query
+*TelemetryQueryV1Api* | [**get_metrics1**](pensando_ent/docs/TelemetryQueryV1Api.md#get_metrics1) | **GET** /telemetry/v1/metrics | telemetry metrics query
+*TelemetryQueryV1Api* | [**post_metrics**](pensando_ent/docs/TelemetryQueryV1Api.md#post_metrics) | **POST** /telemetry/v1/metrics | telemetry metrics query
 
 
 ## Documentation For Models

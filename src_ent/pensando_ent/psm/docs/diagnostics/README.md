@@ -66,12 +66,12 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DiagnosticsV1Api* | [**debug**](docs/DiagnosticsV1Api.md#debug) | **POST** /configs/diagnostics/v1/modules/{O.Name}/Debug | Request Diagnostics information for a module
-*DiagnosticsV1Api* | [**get_module**](docs/DiagnosticsV1Api.md#get_module) | **GET** /configs/diagnostics/v1/modules/{O.Name} | Get Module object
-*DiagnosticsV1Api* | [**label_module**](docs/DiagnosticsV1Api.md#label_module) | **POST** /configs/diagnostics/v1/modules/{O.Name}/label | Label Module object
-*DiagnosticsV1Api* | [**list_module**](docs/DiagnosticsV1Api.md#list_module) | **GET** /configs/diagnostics/v1/modules | List Module objects
-*DiagnosticsV1Api* | [**update_module**](docs/DiagnosticsV1Api.md#update_module) | **PUT** /configs/diagnostics/v1/modules/{O.Name} | Update Module object
-*DiagnosticsV1Api* | [**watch_module**](docs/DiagnosticsV1Api.md#watch_module) | **GET** /configs/diagnostics/v1/watch/modules | Watch Module objects. Supports WebSockets or HTTP long poll
+*DiagnosticsV1Api* | [**debug**](pensando_ent/docs/DiagnosticsV1Api.md#debug) | **POST** /configs/diagnostics/v1/modules/{O.Name}/Debug | Request Diagnostics information for a module
+*DiagnosticsV1Api* | [**get_module**](pensando_ent/docs/DiagnosticsV1Api.md#get_module) | **GET** /configs/diagnostics/v1/modules/{O.Name} | Get Module object
+*DiagnosticsV1Api* | [**label_module**](pensando_ent/docs/DiagnosticsV1Api.md#label_module) | **POST** /configs/diagnostics/v1/modules/{O.Name}/label | Label Module object
+*DiagnosticsV1Api* | [**list_module**](pensando_ent/docs/DiagnosticsV1Api.md#list_module) | **GET** /configs/diagnostics/v1/modules | List Module objects
+*DiagnosticsV1Api* | [**update_module**](pensando_ent/docs/DiagnosticsV1Api.md#update_module) | **PUT** /configs/diagnostics/v1/modules/{O.Name} | Update Module object
+*DiagnosticsV1Api* | [**watch_module**](pensando_ent/docs/DiagnosticsV1Api.md#watch_module) | **GET** /configs/diagnostics/v1/watch/modules | Watch Module objects. Supports WebSockets or HTTP long poll
 
 
 ## Documentation For Models

@@ -20,8 +20,8 @@ fwlog/v1/tenants/default/objects/<objectName>
 
 ```python
 import time
-import psm
-from api import fwlog_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import fwlog_v1_api
 from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -123,8 +123,8 @@ fwlog/v1/tenants/default/objects/<objectName>
 
 ```python
 import time
-import psm
-from api import fwlog_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import fwlog_v1_api
 from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -226,8 +226,8 @@ Queries firewall logs
 
 ```python
 import time
-import psm
-from api import fwlog_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import fwlog_v1_api
 from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -339,8 +339,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import fwlog_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import fwlog_v1_api
 from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -451,8 +451,8 @@ Queries firewall logs
 
 ```python
 import time
-import psm
-from api import fwlog_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import fwlog_v1_api
 from pensando_ent.psm.model.fwlog_fw_log_query import FwlogFwLogQuery
 from pensando_ent.psm.model.fwlog_fw_log_list import FwlogFwLogList
 from pprint import pprint

@@ -43,8 +43,8 @@ Abort Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -196,8 +196,8 @@ Abort Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -347,8 +347,8 @@ Create Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -498,8 +498,8 @@ Create Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -647,8 +647,8 @@ Delete Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -718,8 +718,8 @@ Delete Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -787,8 +787,8 @@ Initiates the final sync for the Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -940,8 +940,8 @@ Initiates the final sync for the Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1091,8 +1091,8 @@ Finish Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1244,8 +1244,8 @@ Finish Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1395,8 +1395,8 @@ Get Endpoint object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_endpoint import WorkloadEndpoint
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1563,8 +1563,8 @@ Get Endpoint object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_endpoint import WorkloadEndpoint
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1731,8 +1731,8 @@ Get Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1861,8 +1861,8 @@ Get Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -1991,8 +1991,8 @@ Label Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2080,8 +2080,8 @@ Label Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_label import ApiLabel
 from pensando_ent.psm.model.api_status import ApiStatus
@@ -2167,8 +2167,8 @@ List Endpoint objects
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_endpoint_list import WorkloadEndpointList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2277,8 +2277,8 @@ List Endpoint objects
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_endpoint_list import WorkloadEndpointList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2379,8 +2379,8 @@ List Workload objects
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload_list import WorkloadWorkloadList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2489,8 +2489,8 @@ List Workload objects
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload_list import WorkloadWorkloadList
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2591,8 +2591,8 @@ Start Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2744,8 +2744,8 @@ Start Workload Migration operation
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -2895,8 +2895,8 @@ Update Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3048,8 +3048,8 @@ Update Workload object
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_workload import WorkloadWorkload
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3199,8 +3199,8 @@ Watch Endpoint objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3309,8 +3309,8 @@ Watch Endpoint objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
 from pensando_ent.psm.model.api_status import ApiStatus
 from pprint import pprint
@@ -3411,8 +3411,8 @@ Watch Workload objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
 from pprint import pprint
@@ -3521,8 +3521,8 @@ Watch Workload objects. Supports WebSockets or HTTP long poll
 
 ```python
 import time
-import psm
-from api import workload_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import workload_v1_api
 from pensando_ent.psm.model.api_status import ApiStatus
 from pensando_ent.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
 from pprint import pprint

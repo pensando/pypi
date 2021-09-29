@@ -19,8 +19,8 @@ Method | HTTP request | Description
 
 ```python
 import time
-import psm
-from api import routing_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import routing_v1_api
 from pensando_ent.psm.model.routing_health import RoutingHealth
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -80,8 +80,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import routing_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import routing_v1_api
 from pensando_ent.psm.model.routing_neighbor_list import RoutingNeighborList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -173,8 +173,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import routing_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import routing_v1_api
 from pensando_ent.psm.model.routing_route_list import RoutingRouteList
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -280,8 +280,8 @@ No authorization required
 
 ```python
 import time
-import psm
-from api import routing_v1_api
+import pensando_ent.psm
+from pensando_ent.psm.api import routing_v1_api
 from pensando_ent.psm.model.routing_route_list import RoutingRouteList
 from pensando_ent.psm.model.routing_route_filter import RoutingRouteFilter
 from pprint import pprint
