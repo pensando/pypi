@@ -1,4 +1,4 @@
-# Pensando Python Bindings
+# Pensando PSM Python Bindings
 This repo contains the code-generated language bindings for the Pensando Policy and Services Manager (PSM).
 For the Cloud pipeline bindings, please start [here](src_cloud/pensando_cloud/README.md)
 For the Enterprise pipeline bindings, please start [here](src_end/pensando_ent/README.md)
