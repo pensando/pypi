@@ -50,7 +50,7 @@ Status: Object Specific Status Schema
 ```
 
 Example:
-![]((schema_example1.png)
+![](schema_example1.png)
 
 
 ## Object Scope
