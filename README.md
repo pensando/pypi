@@ -18,7 +18,7 @@ The Pensando PSM is the central management component of the Pensando Distributed
 It provides a programmable, secure microservice-based infrastructure to control global policies and distributed services in a data center, such as Network, Security and  Storage services.
 The PSM platform consists of an odd number of quorum controller nodes (e.g. 3, 5, 7) that provide consistent services to thousands of physical devices utilizing Pensando Distributed Services Cards (DSCs).  
 The following figure is an architectural diagram of the PSM platform. 
-![](PSM_Architecture)
+![](PSM_Architecture.png)
 
 PSM nodes run as virtual appliances, deployed as OVA or QCOW2 images.  
 However, the physical nodes hosting the VMs should run on separate physical servers for greater fault tolerance. 
@@ -50,7 +50,7 @@ Status: Object Specific Status Schema
 ```
 
 Example:
-![]((schema_example1)
+![]((schema_example1.png)
 
 
 ## Object Scope
@@ -89,7 +89,7 @@ the programmer must follow any `add/update` operation with a corresponding `get/
 * The `generation-id` field in `propagation-status` has the same value as the `generation-id` in the object’s `meta` section.
 
 Below is an example of ensuring that propagation is complete:
-![](propagation)
+![](propagation.png)
 
 
 
