@@ -89,7 +89,7 @@ the programmer must follow any `add/update` operation with a corresponding `get/
 * The `generation-id` field in `propagation-status` has the same value as the `generation-id` in the object’s `meta` section.
 
 Below is an example of ensuring that propagation is complete:
-![](propagation.png)
+![](propagation)
 
 
 
