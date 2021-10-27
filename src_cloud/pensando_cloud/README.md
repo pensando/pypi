@@ -1,33 +1,6 @@
-# pensando_cloud
+## PSM objects for cloud distribution
 
-The Pensando Python SDK is code generated from the PSM Schema.
-Please do not fork/modify any of this code directly.
-For any problems, please visit  [https://github.com/pensando/psm-tools/issues](https://github.com/pensando/psm-tools/issues)
-
-
-## Requirements.
-
-Python >= 3.6
-
-## Installation 
-
-To install from `PyPi`, you can install using:
-
-```sh
-pip install pensando-cloud
-```
-
-To install from the source repository, you can install directly using:
-
-```sh
-pip install git+https://github.com/pensando/pypi.git/#egg=pensando-cloud\&subdirectory=src_cloud
-```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
-
-
-## Getting Started
-
-For top-level README's for each PSM group, please see the following:
+To learn more about the PSM API Structure please follow [this](../../docs/PSMAPI.md) link. PSM API objects are groupled in various categories as described below
 
 [aggwatch README](psm/docs/aggwatch/README.md)
 
@@ -68,5 +41,3 @@ For top-level README's for each PSM group, please see the following:
 [tokenauth README](psm/docs/tokenauth/README.md)
 
 [workload README](psm/docs/workload/README.md)
-
-
