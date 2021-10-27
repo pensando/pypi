@@ -43,7 +43,7 @@ response = api_instance.get_cluster()
 More apps [here](https://github.com/pensando/psm-tools/tree/main/pyclient/apps) using python apis.
 
 ## Learn more about PSM API
-* Concepts: [API structure](docs/PSMAPU.md) or in PSM installation at `https://<PSM IP Address>/docs`
+* Concepts: [API structure](docs/PSMAPI.md) or in PSM installation at `https://<PSM IP Address>/docs`
 * PSM API specification: Swagger schema at `https://<PSM IP Address>/generated/swaggeruri.html`
 * PSM GUI `Admin` menu, allows `Enable Live Capture` to see the the APIs used when an operation is performed in PSM GUI
 
