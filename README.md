@@ -40,7 +40,7 @@ response = api_instance.get_cluster()
 [...]
 ```
 
-More apps [here](https://github.com/pensando/psm-tools/tree/main/pyclient/apps) using python apis.
+More apps [here](https://github.com/pensando/psm-tools/tree/main/client/python/examples) using python apis.
 
 ## Learn more about PSM API
 * Concepts: [API structure](docs/PSMAPI.md) or in PSM installation at `https://<PSM IP Address>/docs`
