@@ -153,7 +153,6 @@ Class | Method | HTTP request | Description
  - [NetworkLbPolicySpec](../../../docs/NetworkLbPolicySpec.md)
  - [NetworkLbPolicyStatus](../../../docs/NetworkLbPolicyStatus.md)
  - [NetworkNetwork](../../../docs/NetworkNetwork.md)
- - [NetworkNetworkFirewallProfile](../../../docs/NetworkNetworkFirewallProfile.md)
  - [NetworkNetworkInterface](../../../docs/NetworkNetworkInterface.md)
  - [NetworkNetworkInterfaceHostStatus](../../../docs/NetworkNetworkInterfaceHostStatus.md)
  - [NetworkNetworkInterfaceList](../../../docs/NetworkNetworkInterfaceList.md)

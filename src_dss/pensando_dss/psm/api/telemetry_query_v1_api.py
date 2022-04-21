@@ -53,7 +53,6 @@ class TelemetryQueryV1Api(object):
 
             Keyword Args:
                 tenant (str): Tenant for the request.. [optional]
-                namespace (str): Namespace for the request.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -112,7 +111,6 @@ class TelemetryQueryV1Api(object):
             params_map={
                 'all': [
                     'tenant',
-                    'namespace',
                 ],
                 'required': [],
                 'nullable': [
@@ -130,16 +128,12 @@ class TelemetryQueryV1Api(object):
                 'openapi_types': {
                     'tenant':
                         (str,),
-                    'namespace':
-                        (str,),
                 },
                 'attribute_map': {
                     'tenant': 'tenant',
-                    'namespace': 'namespace',
                 },
                 'location_map': {
                     'tenant': 'query',
-                    'namespace': 'query',
                 },
                 'collection_format_map': {
                 }

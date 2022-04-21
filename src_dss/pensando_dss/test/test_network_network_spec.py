@@ -13,11 +13,9 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.network_ipam_config import NetworkIPAMConfig
-from pensando_dss.psm.model.network_network_firewall_profile import NetworkNetworkFirewallProfile
 from pensando_dss.psm.model.network_orchestrator_info import NetworkOrchestratorInfo
 from pensando_dss.psm.model.network_rd_spec import NetworkRDSpec
 globals()['NetworkIPAMConfig'] = NetworkIPAMConfig
-globals()['NetworkNetworkFirewallProfile'] = NetworkNetworkFirewallProfile
 globals()['NetworkOrchestratorInfo'] = NetworkOrchestratorInfo
 globals()['NetworkRDSpec'] = NetworkRDSpec
 from pensando_dss.psm.psm.model.network_network_spec import NetworkNetworkSpec

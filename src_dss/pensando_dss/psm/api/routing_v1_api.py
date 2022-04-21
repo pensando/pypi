@@ -174,16 +174,7 @@ class RoutingV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 neighbor (str): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
@@ -246,16 +237,7 @@ class RoutingV1Api(object):
                 'all': [
                     'instance',
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'neighbor',
                 ],
                 'required': [
@@ -278,57 +260,21 @@ class RoutingV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'neighbor':
                         (str,),
                 },
                 'attribute_map': {
                     'instance': 'Instance',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'neighbor': 'neighbor',
                 },
                 'location_map': {
                     'instance': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'neighbor': 'query',
                 },
                 'collection_format_map': {
@@ -362,24 +308,9 @@ class RoutingV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 ipaddress (str): [optional]
-                type (str): [optional]
-                extcomm (str): [optional]
-                vnid (str): [optional]
-                rtype (str): [optional]
-                nhop (str): [optional]
                 page_number (int): [optional]
-                all_routes (bool): Fetch all routes rather than just the best routes selected by BGP.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -441,24 +372,9 @@ class RoutingV1Api(object):
                 'all': [
                     'instance',
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'ipaddress',
-                    'type',
-                    'extcomm',
-                    'vnid',
-                    'rtype',
-                    'nhop',
                     'page_number',
-                    'all_routes',
                 ],
                 'required': [
                     'instance',
@@ -480,86 +396,26 @@ class RoutingV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'ipaddress':
-                        (str,),
-                    'type':
-                        (str,),
-                    'extcomm':
-                        (str,),
-                    'vnid':
-                        (str,),
-                    'rtype':
-                        (str,),
-                    'nhop':
                         (str,),
                     'page_number':
                         (int,),
-                    'all_routes':
-                        (bool,),
                 },
                 'attribute_map': {
                     'instance': 'Instance',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'ipaddress': 'ipaddress',
-                    'type': 'type',
-                    'extcomm': 'extcomm',
-                    'vnid': 'vnid',
-                    'rtype': 'rtype',
-                    'nhop': 'nhop',
                     'page_number': 'page-number',
-                    'all_routes': 'all-routes',
                 },
                 'location_map': {
                     'instance': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'ipaddress': 'query',
-                    'type': 'query',
-                    'extcomm': 'query',
-                    'vnid': 'query',
-                    'rtype': 'query',
-                    'nhop': 'query',
                     'page_number': 'query',
-                    'all_routes': 'query',
                 },
                 'collection_format_map': {
                 }

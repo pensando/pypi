@@ -50,4 +50,3 @@ PSM API objects are groupled in various categories as described below:
 
 [workload README](psm/docs/workload/README.md)
 
-

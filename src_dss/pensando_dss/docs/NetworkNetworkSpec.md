@@ -5,7 +5,6 @@ spec part of network object.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **egress_security_policy** | **[str]** | Security Policy to apply in the egress direction. | [optional] 
-**firewall_profile** | [**NetworkNetworkFirewallProfile**](NetworkNetworkFirewallProfile.md) |  | [optional] 
 **ingress_security_policy** | **[str]** | Security Policy to apply in the ingress direction. | [optional] 
 **ipam_config** | [**NetworkIPAMConfig**](NetworkIPAMConfig.md) |  | [optional] 
 **ipam_policy** | **str** | Relay Configuration if any. | [optional] 

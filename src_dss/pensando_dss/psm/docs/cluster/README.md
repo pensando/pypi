@@ -140,6 +140,7 @@ Class | Method | HTTP request | Description
  - [ClusterDistributedServiceCardList](../../../docs/ClusterDistributedServiceCardList.md)
  - [ClusterDistributedServiceCardSpec](../../../docs/ClusterDistributedServiceCardSpec.md)
  - [ClusterDistributedServiceCardStatus](../../../docs/ClusterDistributedServiceCardStatus.md)
+ - [ClusterFault](../../../docs/ClusterFault.md)
  - [ClusterFeature](../../../docs/ClusterFeature.md)
  - [ClusterFeatureStatus](../../../docs/ClusterFeatureStatus.md)
  - [ClusterFwlogPolicyRef](../../../docs/ClusterFwlogPolicyRef.md)

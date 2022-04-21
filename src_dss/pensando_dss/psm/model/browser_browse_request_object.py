@@ -83,6 +83,7 @@ class BrowserBrowseRequestObject(ModelNormal):
         """
         return {
             'count_only': (bool,),  # noqa: E501
+            'kind_filters': ([str],),  # noqa: E501
             'max_depth': (int,),  # noqa: E501
             'query_type': (str,),  # noqa: E501
             'uri': (str,),  # noqa: E501
@@ -95,6 +96,7 @@ class BrowserBrowseRequestObject(ModelNormal):
 
     attribute_map = {
         'count_only': 'count-only',  # noqa: E501
+        'kind_filters': 'kind-filters',  # noqa: E501
         'max_depth': 'max-depth',  # noqa: E501
         'query_type': 'query-type',  # noqa: E501
         'uri': 'uri',  # noqa: E501
@@ -147,6 +149,7 @@ class BrowserBrowseRequestObject(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             count_only (bool): When CountOnly is set the response only contains counts and not the actual objects.. [optional]  # noqa: E501
+            kind_filters ([str]): KindFilters Specify the kind types to match/filter (for links only) on when returning the response.. [optional]  # noqa: E501
             max_depth (int): Max-Depth specifies how deep the query should explore. By default depth is set to 1 which means immediate relations 0 means to maximum depth.. [optional] if omitted the server will use the default value of 1  # noqa: E501
             query_type (str): QueryType is the direction of the query.. [optional] if omitted the server will use the default value of "dependencies"  # noqa: E501
             uri (str): URI is the root node from where to query. Length of string should be between 2 and 512.. [optional]  # noqa: E501

@@ -5,6 +5,7 @@ Distributed service switch (DSS) information.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dsms** | [**[ClusterDSM]**](ClusterDSM.md) | Distributed service module information. | [optional] 
+**fault_info** | [**ClusterFault**](ClusterFault.md) |  | [optional] 
 **host_name** | **str** | Hostname of the switch. | [optional] 
 **version** | **str** | switch software version. | [optional] 
 

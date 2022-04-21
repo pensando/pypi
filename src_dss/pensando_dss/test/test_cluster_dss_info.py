@@ -13,7 +13,9 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.cluster_dsm import ClusterDSM
+from pensando_dss.psm.model.cluster_fault import ClusterFault
 globals()['ClusterDSM'] = ClusterDSM
+globals()['ClusterFault'] = ClusterFault
 from pensando_dss.psm.psm.model.cluster_dss_info import ClusterDSSInfo
 
 

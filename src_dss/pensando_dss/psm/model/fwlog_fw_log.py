@@ -105,12 +105,10 @@ class FwlogFwLog(ModelNormal):
             'icmp_code': (int,),  # noqa: E501
             'icmp_id': (int,),  # noqa: E501
             'icmp_type': (int,),  # noqa: E501
-            'inbound_if': (str,),  # noqa: E501
             'ipsec_protected': (bool,),  # noqa: E501
             'ipsec_rule_id': (str,),  # noqa: E501
             'kind': (str,),  # noqa: E501
             'meta': (ApiObjectMeta,),  # noqa: E501
-            'outbound_if': (str,),  # noqa: E501
             'packets_received': (str,),  # noqa: E501
             'packets_sent': (str,),  # noqa: E501
             'policy_name': (str,),  # noqa: E501
@@ -118,6 +116,7 @@ class FwlogFwLog(ModelNormal):
             'reporter_id': (str,),  # noqa: E501
             'rule_id': (str,),  # noqa: E501
             'rule_name': (str,),  # noqa: E501
+            'security_policy_id': (str,),  # noqa: E501
             'session_id': (str,),  # noqa: E501
             'source_ip': (str,),  # noqa: E501
             'source_port': (int,),  # noqa: E501
@@ -146,12 +145,10 @@ class FwlogFwLog(ModelNormal):
         'icmp_code': 'icmp-code',  # noqa: E501
         'icmp_id': 'icmp-id',  # noqa: E501
         'icmp_type': 'icmp-type',  # noqa: E501
-        'inbound_if': 'inbound-if',  # noqa: E501
         'ipsec_protected': 'ipsec-protected',  # noqa: E501
         'ipsec_rule_id': 'ipsec-rule-id',  # noqa: E501
         'kind': 'kind',  # noqa: E501
         'meta': 'meta',  # noqa: E501
-        'outbound_if': 'outbound-if',  # noqa: E501
         'packets_received': 'packets-received',  # noqa: E501
         'packets_sent': 'packets-sent',  # noqa: E501
         'policy_name': 'policy-name',  # noqa: E501
@@ -159,6 +156,7 @@ class FwlogFwLog(ModelNormal):
         'reporter_id': 'reporter-id',  # noqa: E501
         'rule_id': 'rule-id',  # noqa: E501
         'rule_name': 'rule-name',  # noqa: E501
+        'security_policy_id': 'security-policy-id',  # noqa: E501
         'session_id': 'session-id',  # noqa: E501
         'source_ip': 'source-ip',  # noqa: E501
         'source_port': 'source-port',  # noqa: E501
@@ -227,12 +225,10 @@ class FwlogFwLog(ModelNormal):
             icmp_code (int): icmp code.. [optional]  # noqa: E501
             icmp_id (int): icmp ID.. [optional]  # noqa: E501
             icmp_type (int): icmp type.. [optional]  # noqa: E501
-            inbound_if (str): Inbound interface represents the interface on which the session entered the DSC/DSS.. [optional]  # noqa: E501
             ipsec_protected (bool): If IPsec protected.. [optional]  # noqa: E501
             ipsec_rule_id (str): IPsec policy rule ID.. [optional]  # noqa: E501
             kind (str): [optional]  # noqa: E501
             meta (ApiObjectMeta): [optional]  # noqa: E501
-            outbound_if (str): Outbound interface represents the interface on which the session exited the DSC/DSS.. [optional]  # noqa: E501
             packets_received (str): Packets received represents the number of packets received at the source from the destination.. [optional]  # noqa: E501
             packets_sent (str): Packets sent represents the number of packets sent from the source to the destination.. [optional]  # noqa: E501
             policy_name (str): policy name.. [optional]  # noqa: E501
@@ -240,6 +236,7 @@ class FwlogFwLog(ModelNormal):
             reporter_id (str): Reporter ID.. [optional]  # noqa: E501
             rule_id (str): Rule ID.. [optional]  # noqa: E501
             rule_name (str): Rule Name represents the name of the firewall rule that was hit by this session.. [optional]  # noqa: E501
+            security_policy_id (str): SecurityPolicyID represents the UUID of the security policy.. [optional]  # noqa: E501
             session_id (str): Session ID.. [optional]  # noqa: E501
             source_ip (str): Source IP,.. [optional]  # noqa: E501
             source_port (int): Source Port.. [optional]  # noqa: E501

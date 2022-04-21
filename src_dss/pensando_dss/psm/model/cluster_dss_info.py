@@ -30,7 +30,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.cluster_dsm import ClusterDSM
+    from pensando_dss.psm.model.cluster_fault import ClusterFault
     globals()['ClusterDSM'] = ClusterDSM
+    globals()['ClusterFault'] = ClusterFault
 
 
 class ClusterDSSInfo(ModelNormal):
@@ -80,6 +82,7 @@ class ClusterDSSInfo(ModelNormal):
         lazy_import()
         return {
             'dsms': ([ClusterDSM],),  # noqa: E501
+            'fault_info': (ClusterFault,),  # noqa: E501
             'host_name': (str,),  # noqa: E501
             'version': (str,),  # noqa: E501
         }
@@ -91,6 +94,7 @@ class ClusterDSSInfo(ModelNormal):
 
     attribute_map = {
         'dsms': 'dsms',  # noqa: E501
+        'fault_info': 'fault-info',  # noqa: E501
         'host_name': 'host-name',  # noqa: E501
         'version': 'version',  # noqa: E501
     }
@@ -142,6 +146,7 @@ class ClusterDSSInfo(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             dsms ([ClusterDSM]): Distributed service module information.. [optional]  # noqa: E501
+            fault_info (ClusterFault): [optional]  # noqa: E501
             host_name (str): Hostname of the switch.. [optional]  # noqa: E501
             version (str): switch software version.. [optional]  # noqa: E501
         """

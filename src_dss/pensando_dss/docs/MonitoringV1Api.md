@@ -3021,7 +3021,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancel**
-> MonitoringArchiveRequest cancel(o_tenant, o_name, body)
+> MonitoringArchiveRequest cancel(o_tenant, body)
 
 
 
@@ -3054,7 +3054,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringCancelArchiveRequest(
         api_version="api_version_example",
         kind="kind_example",
@@ -3076,7 +3075,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.cancel(o_tenant, o_name, body)
+        api_response = api_instance.cancel(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->cancel: %s\n" % e)
@@ -3088,7 +3087,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringCancelArchiveRequest**](MonitoringCancelArchiveRequest.md)|  |
 
 ### Return type
@@ -3213,7 +3211,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_alert_destination**
-> MonitoringAlertDestination delete_alert_destination(o_tenant, o_name)
+> MonitoringAlertDestination delete_alert_destination(o_tenant)
 
 Delete AlertDestination object
 
@@ -3245,12 +3243,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete AlertDestination object
-        api_response = api_instance.delete_alert_destination(o_tenant, o_name)
+        api_response = api_instance.delete_alert_destination(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_alert_destination: %s\n" % e)
@@ -3262,7 +3259,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -3367,7 +3363,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_alert_policy**
-> MonitoringAlertPolicy delete_alert_policy(o_tenant, o_name)
+> MonitoringAlertPolicy delete_alert_policy(o_tenant)
 
 Delete AlertPolicy object
 
@@ -3399,12 +3395,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete AlertPolicy object
-        api_response = api_instance.delete_alert_policy(o_tenant, o_name)
+        api_response = api_instance.delete_alert_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_alert_policy: %s\n" % e)
@@ -3416,7 +3411,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -3521,7 +3515,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_archive_request**
-> MonitoringArchiveRequest delete_archive_request(o_tenant, o_name)
+> MonitoringArchiveRequest delete_archive_request(o_tenant)
 
 Delete ArchiveRequest object
 
@@ -3553,12 +3547,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete ArchiveRequest object
-        api_response = api_instance.delete_archive_request(o_tenant, o_name)
+        api_response = api_instance.delete_archive_request(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_archive_request: %s\n" % e)
@@ -3570,7 +3563,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -3823,7 +3815,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_event_policy**
-> MonitoringEventPolicy delete_event_policy(o_tenant, o_name)
+> MonitoringEventPolicy delete_event_policy(o_tenant)
 
 Delete EventPolicy object
 
@@ -3855,12 +3847,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete EventPolicy object
-        api_response = api_instance.delete_event_policy(o_tenant, o_name)
+        api_response = api_instance.delete_event_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_event_policy: %s\n" % e)
@@ -3872,7 +3863,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -3977,7 +3967,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_flow_export_policy**
-> MonitoringFlowExportPolicy delete_flow_export_policy(o_tenant, o_name)
+> MonitoringFlowExportPolicy delete_flow_export_policy(o_tenant)
 
 Delete FlowExportPolicy object
 
@@ -4009,12 +3999,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete FlowExportPolicy object
-        api_response = api_instance.delete_flow_export_policy(o_tenant, o_name)
+        api_response = api_instance.delete_flow_export_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_flow_export_policy: %s\n" % e)
@@ -4026,7 +4015,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -4131,7 +4119,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_fwlog_policy**
-> MonitoringFwlogPolicy delete_fwlog_policy(o_tenant, o_name)
+> MonitoringFwlogPolicy delete_fwlog_policy(o_tenant)
 
 Delete FwlogPolicy object
 
@@ -4163,12 +4151,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete FwlogPolicy object
-        api_response = api_instance.delete_fwlog_policy(o_tenant, o_name)
+        api_response = api_instance.delete_fwlog_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_fwlog_policy: %s\n" % e)
@@ -4180,7 +4167,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -4285,7 +4271,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_mirror_session**
-> MonitoringMirrorSession delete_mirror_session(o_tenant, o_name)
+> MonitoringMirrorSession delete_mirror_session(o_tenant)
 
 Delete MirrorSession object
 
@@ -4317,12 +4303,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete MirrorSession object
-        api_response = api_instance.delete_mirror_session(o_tenant, o_name)
+        api_response = api_instance.delete_mirror_session(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_mirror_session: %s\n" % e)
@@ -4334,7 +4319,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -4439,7 +4423,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_stats_alert_policy**
-> MonitoringStatsAlertPolicy delete_stats_alert_policy(o_tenant, o_name)
+> MonitoringStatsAlertPolicy delete_stats_alert_policy(o_tenant)
 
 Delete StatsAlertPolicy object
 
@@ -4471,12 +4455,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete StatsAlertPolicy object
-        api_response = api_instance.delete_stats_alert_policy(o_tenant, o_name)
+        api_response = api_instance.delete_stats_alert_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_stats_alert_policy: %s\n" % e)
@@ -4488,7 +4471,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -4669,7 +4651,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_troubleshooting_session**
-> MonitoringTroubleshootingSession delete_troubleshooting_session(o_tenant, o_name)
+> MonitoringTroubleshootingSession delete_troubleshooting_session(o_tenant)
 
 Delete TroubleshootingSession object
 
@@ -4701,12 +4683,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete TroubleshootingSession object
-        api_response = api_instance.delete_troubleshooting_session(o_tenant, o_name)
+        api_response = api_instance.delete_troubleshooting_session(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->delete_troubleshooting_session: %s\n" % e)
@@ -4718,7 +4699,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
 
 ### Return type
 
@@ -4823,7 +4803,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert**
-> MonitoringAlert get_alert(o_tenant, o_name)
+> MonitoringAlert get_alert(o_tenant)
 
 Get Alert object
 
@@ -4855,38 +4835,14 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     spec_state = "spec.state_example" # str |  (optional)
-    status_severity = "status.severity_example" # str | Severity of an alert. (optional)
-    source_component = "source.component_example" # str |  (optional)
-    source_node_name = "source.node-name_example" # str |  (optional)
-    status_event_uri = "status.event-uri_example" # str | Event that triggered the alert. (optional)
-    object_ref_tenant = "object-ref.tenant_example" # str | Tenant of the object. (optional)
-    object_ref_namespace = "object-ref.namespace_example" # str | Namespace of the object, for scoped objects. (optional)
-    object_ref_kind = "object-ref.kind_example" # str | Kind represents the type of the API object. (optional)
-    object_ref_name = "object-ref.name_example" # str | Name of the object, unique within a Namespace for scoped objects. (optional)
-    object_ref_uri = "object-ref.uri_example" # str | URI is a link to accessing the referenced object. (optional)
-    status_message = "status.message_example" # str | Message from the alert rule that triggered the alert. (optional)
-    reason_alert_policy_id = "reason.alert-policy-id_example" # str | Alert Policy ID that matched. (optional)
-    acknowledged_user = "acknowledged.user_example" # str | Name of the user performed some action. (optional)
-    acknowledged_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Time at which the action was performed. (optional)
-    resolved_user = "resolved.user_example" # str | Name of the user performed some action. (optional)
-    resolved_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Time at which the action was performed. (optional)
-    status_total_hits = 1 # int | TotalHits on this alert, If there is an exisiting alert for the condition, we do not re-create the alert instead we update this counter. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get Alert object
-        api_response = api_instance.get_alert(o_tenant, o_name)
+        api_response = api_instance.get_alert(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_alert: %s\n" % e)
@@ -4898,33 +4854,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **spec_state** | **str**|  | [optional]
- **status_severity** | **str**| Severity of an alert. | [optional]
- **source_component** | **str**|  | [optional]
- **source_node_name** | **str**|  | [optional]
- **status_event_uri** | **str**| Event that triggered the alert. | [optional]
- **object_ref_tenant** | **str**| Tenant of the object. | [optional]
- **object_ref_namespace** | **str**| Namespace of the object, for scoped objects. | [optional]
- **object_ref_kind** | **str**| Kind represents the type of the API object. | [optional]
- **object_ref_name** | **str**| Name of the object, unique within a Namespace for scoped objects. | [optional]
- **object_ref_uri** | **str**| URI is a link to accessing the referenced object. | [optional]
- **status_message** | **str**| Message from the alert rule that triggered the alert. | [optional]
- **reason_alert_policy_id** | **str**| Alert Policy ID that matched. | [optional]
- **acknowledged_user** | **str**| Name of the user performed some action. | [optional]
- **acknowledged_time** | **datetime**| Time at which the action was performed. | [optional]
- **resolved_user** | **str**| Name of the user performed some action. | [optional]
- **resolved_time** | **datetime**| Time at which the action was performed. | [optional]
- **status_total_hits** | **int**| TotalHits on this alert, If there is an exisiting alert for the condition, we do not re-create the alert instead we update this counter. | [optional]
 
 ### Return type
 
@@ -4986,32 +4918,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     spec_state = "spec.state_example" # str |  (optional)
-    status_severity = "status.severity_example" # str | Severity of an alert. (optional)
-    source_component = "source.component_example" # str |  (optional)
-    source_node_name = "source.node-name_example" # str |  (optional)
-    status_event_uri = "status.event-uri_example" # str | Event that triggered the alert. (optional)
-    object_ref_tenant = "object-ref.tenant_example" # str | Tenant of the object. (optional)
-    object_ref_namespace = "object-ref.namespace_example" # str | Namespace of the object, for scoped objects. (optional)
-    object_ref_kind = "object-ref.kind_example" # str | Kind represents the type of the API object. (optional)
-    object_ref_name = "object-ref.name_example" # str | Name of the object, unique within a Namespace for scoped objects. (optional)
-    object_ref_uri = "object-ref.uri_example" # str | URI is a link to accessing the referenced object. (optional)
-    status_message = "status.message_example" # str | Message from the alert rule that triggered the alert. (optional)
-    reason_alert_policy_id = "reason.alert-policy-id_example" # str | Alert Policy ID that matched. (optional)
-    acknowledged_user = "acknowledged.user_example" # str | Name of the user performed some action. (optional)
-    acknowledged_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Time at which the action was performed. (optional)
-    resolved_user = "resolved.user_example" # str | Name of the user performed some action. (optional)
-    resolved_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Time at which the action was performed. (optional)
-    status_total_hits = 1 # int | TotalHits on this alert, If there is an exisiting alert for the condition, we do not re-create the alert instead we update this counter. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5029,32 +4937,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **spec_state** | **str**|  | [optional]
- **status_severity** | **str**| Severity of an alert. | [optional]
- **source_component** | **str**|  | [optional]
- **source_node_name** | **str**|  | [optional]
- **status_event_uri** | **str**| Event that triggered the alert. | [optional]
- **object_ref_tenant** | **str**| Tenant of the object. | [optional]
- **object_ref_namespace** | **str**| Namespace of the object, for scoped objects. | [optional]
- **object_ref_kind** | **str**| Kind represents the type of the API object. | [optional]
- **object_ref_name** | **str**| Name of the object, unique within a Namespace for scoped objects. | [optional]
- **object_ref_uri** | **str**| URI is a link to accessing the referenced object. | [optional]
- **status_message** | **str**| Message from the alert rule that triggered the alert. | [optional]
- **reason_alert_policy_id** | **str**| Alert Policy ID that matched. | [optional]
- **acknowledged_user** | **str**| Name of the user performed some action. | [optional]
- **acknowledged_time** | **datetime**| Time at which the action was performed. | [optional]
- **resolved_user** | **str**| Name of the user performed some action. | [optional]
- **resolved_time** | **datetime**| Time at which the action was performed. | [optional]
- **status_total_hits** | **int**| TotalHits on this alert, If there is an exisiting alert for the condition, we do not re-create the alert instead we update this counter. | [optional]
 
 ### Return type
 
@@ -5083,7 +4967,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_destination**
-> MonitoringAlertDestination get_alert_destination(o_tenant, o_name)
+> MonitoringAlertDestination get_alert_destination(o_tenant)
 
 Get AlertDestination object
 
@@ -5115,28 +4999,16 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     email_export_email_list = [
         "email-export.email-list_example",
     ] # [str] | TODO:  format, config, SMTP config. (optional)
-    syslog_export_format = "syslog-export.format_example" # str | event export format, SYSLOG_BSD default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
-    status_total_notifications_sent = 1 # int | total number of notifications sent using this notification mechanism. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get AlertDestination object
-        api_response = api_instance.get_alert_destination(o_tenant, o_name)
+        api_response = api_instance.get_alert_destination(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_alert_destination: %s\n" % e)
@@ -5148,21 +5020,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **email_export_email_list** | **[str]**| TODO:  format, config, SMTP config. | [optional]
- **syslog_export_format** | **str**| event export format, SYSLOG_BSD default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
- **status_total_notifications_sent** | **int**| total number of notifications sent using this notification mechanism. | [optional]
 
 ### Return type
 
@@ -5224,22 +5084,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     email_export_email_list = [
         "email-export.email-list_example",
     ] # [str] | TODO:  format, config, SMTP config. (optional)
-    syslog_export_format = "syslog-export.format_example" # str | event export format, SYSLOG_BSD default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
-    status_total_notifications_sent = 1 # int | total number of notifications sent using this notification mechanism. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5257,20 +5105,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **email_export_email_list** | **[str]**| TODO:  format, config, SMTP config. | [optional]
- **syslog_export_format** | **str**| event export format, SYSLOG_BSD default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
- **status_total_notifications_sent** | **int**| total number of notifications sent using this notification mechanism. | [optional]
 
 ### Return type
 
@@ -5299,7 +5135,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_policy**
-> MonitoringAlertPolicy get_alert_policy(o_tenant, o_name)
+> MonitoringAlertPolicy get_alert_policy(o_tenant)
 
 Get AlertPolicy object
 
@@ -5331,31 +5167,16 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_resource = "spec.resource_example" # str | Resource type - target resource to run this policy. e.g. Network, Endpoint - object based alert policy Event - event based alert policy EndpointMetrics - metric based alert policy based on the resource type, the policy gets interpreted. (optional)
-    spec_severity = "spec.severity_example" # str | Severity to be set for an alert that gets triggered from this rule. (optional)
-    spec_message = "spec.message_example" # str | Message to be used while generating the alert. (optional)
-    spec_enable = True # bool | User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. (optional)
     spec_destinations = [
         "spec.destinations_example",
     ] # [str] | name of the alert destinations to be used to send out notification when an alert gets generated. (optional)
-    status_total_hits = 1 # int | Total hits on this policy. (optional)
-    status_open_alerts = 1 # int | Open alerts based on this policy. (optional)
-    status_acknowledged_alerts = 1 # int | Acknowledged alerts based on this policy. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get AlertPolicy object
-        api_response = api_instance.get_alert_policy(o_tenant, o_name)
+        api_response = api_instance.get_alert_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_alert_policy: %s\n" % e)
@@ -5367,24 +5188,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_resource** | **str**| Resource type - target resource to run this policy. e.g. Network, Endpoint - object based alert policy Event - event based alert policy EndpointMetrics - metric based alert policy based on the resource type, the policy gets interpreted. | [optional]
- **spec_severity** | **str**| Severity to be set for an alert that gets triggered from this rule. | [optional]
- **spec_message** | **str**| Message to be used while generating the alert. | [optional]
- **spec_enable** | **bool**| User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. | [optional]
  **spec_destinations** | **[str]**| name of the alert destinations to be used to send out notification when an alert gets generated. | [optional]
- **status_total_hits** | **int**| Total hits on this policy. | [optional]
- **status_open_alerts** | **int**| Open alerts based on this policy. | [optional]
- **status_acknowledged_alerts** | **int**| Acknowledged alerts based on this policy. | [optional]
 
 ### Return type
 
@@ -5446,25 +5252,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_resource = "spec.resource_example" # str | Resource type - target resource to run this policy. e.g. Network, Endpoint - object based alert policy Event - event based alert policy EndpointMetrics - metric based alert policy based on the resource type, the policy gets interpreted. (optional)
-    spec_severity = "spec.severity_example" # str | Severity to be set for an alert that gets triggered from this rule. (optional)
-    spec_message = "spec.message_example" # str | Message to be used while generating the alert. (optional)
-    spec_enable = True # bool | User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. (optional)
     spec_destinations = [
         "spec.destinations_example",
     ] # [str] | name of the alert destinations to be used to send out notification when an alert gets generated. (optional)
-    status_total_hits = 1 # int | Total hits on this policy. (optional)
-    status_open_alerts = 1 # int | Open alerts based on this policy. (optional)
-    status_acknowledged_alerts = 1 # int | Acknowledged alerts based on this policy. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5482,23 +5273,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_resource** | **str**| Resource type - target resource to run this policy. e.g. Network, Endpoint - object based alert policy Event - event based alert policy EndpointMetrics - metric based alert policy based on the resource type, the policy gets interpreted. | [optional]
- **spec_severity** | **str**| Severity to be set for an alert that gets triggered from this rule. | [optional]
- **spec_message** | **str**| Message to be used while generating the alert. | [optional]
- **spec_enable** | **bool**| User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. | [optional]
  **spec_destinations** | **[str]**| name of the alert destinations to be used to send out notification when an alert gets generated. | [optional]
- **status_total_hits** | **int**| Total hits on this policy. | [optional]
- **status_open_alerts** | **int**| Open alerts based on this policy. | [optional]
- **status_acknowledged_alerts** | **int**| Acknowledged alerts based on this policy. | [optional]
 
 ### Return type
 
@@ -5527,7 +5303,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_archive_request**
-> MonitoringArchiveRequest get_archive_request(o_tenant, o_name)
+> MonitoringArchiveRequest get_archive_request(o_tenant)
 
 Get ArchiveRequest object
 
@@ -5559,30 +5335,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     spec_type = "spec.type_example" # str |  (optional)
-    query_start_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | StartTime selects all logs with timestamp greater than the StartTime, example 2018-10-18T00:12:00Z. (optional)
-    query_end_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z. (optional)
     query_tenants = [
         "query.tenants_example",
     ] # [str] | OR of tenants within the scope of which archive needs to be performed. If not specified, it will be set to tenant of the logged in user. Also users in non default tenant can archive logs in their tenant scope only. (optional)
-    status_status = "status.status_example" # str |  (optional)
-    status_reason = "status.reason_example" # str |  (optional)
-    status_uri = "status.uri_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get ArchiveRequest object
-        api_response = api_instance.get_archive_request(o_tenant, o_name)
+        api_response = api_instance.get_archive_request(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_archive_request: %s\n" % e)
@@ -5594,23 +5357,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **spec_type** | **str**|  | [optional]
- **query_start_time** | **datetime**| StartTime selects all logs with timestamp greater than the StartTime, example 2018-10-18T00:12:00Z. | [optional]
- **query_end_time** | **datetime**| EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z. | [optional]
  **query_tenants** | **[str]**| OR of tenants within the scope of which archive needs to be performed. If not specified, it will be set to tenant of the logged in user. Also users in non default tenant can archive logs in their tenant scope only. | [optional]
- **status_status** | **str**|  | [optional]
- **status_reason** | **str**|  | [optional]
- **status_uri** | **str**|  | [optional]
 
 ### Return type
 
@@ -5672,24 +5422,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     spec_type = "spec.type_example" # str |  (optional)
-    query_start_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | StartTime selects all logs with timestamp greater than the StartTime, example 2018-10-18T00:12:00Z. (optional)
-    query_end_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z. (optional)
     query_tenants = [
         "query.tenants_example",
     ] # [str] | OR of tenants within the scope of which archive needs to be performed. If not specified, it will be set to tenant of the logged in user. Also users in non default tenant can archive logs in their tenant scope only. (optional)
-    status_status = "status.status_example" # str |  (optional)
-    status_reason = "status.reason_example" # str |  (optional)
-    status_uri = "status.uri_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5707,22 +5444,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **spec_type** | **str**|  | [optional]
- **query_start_time** | **datetime**| StartTime selects all logs with timestamp greater than the StartTime, example 2018-10-18T00:12:00Z. | [optional]
- **query_end_time** | **datetime**| EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z. | [optional]
  **query_tenants** | **[str]**| OR of tenants within the scope of which archive needs to be performed. If not specified, it will be set to tenant of the logged in user. Also users in non default tenant can archive logs in their tenant scope only. | [optional]
- **status_status** | **str**|  | [optional]
- **status_reason** | **str**|  | [optional]
- **status_uri** | **str**|  | [optional]
 
 ### Return type
 
@@ -5784,19 +5508,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_name = "meta.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    syslog_auditor_enabled = True # bool | flag to enable sending audit events to syslog. (optional)
-    syslog_auditor_format = "syslog-auditor.format_example" # str | audit event export format, SYSLOG_BSD default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5814,19 +5526,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **syslog_auditor_enabled** | **bool**| flag to enable sending audit events to syslog. | [optional]
- **syslog_auditor_format** | **str**| audit event export format, SYSLOG_BSD default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
 
 ### Return type
 
@@ -5887,20 +5587,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_name = "meta.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    syslog_auditor_enabled = True # bool | flag to enable sending audit events to syslog. (optional)
-    syslog_auditor_format = "syslog-auditor.format_example" # str | audit event export format, SYSLOG_BSD default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5917,20 +5604,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **syslog_auditor_enabled** | **bool**| flag to enable sending audit events to syslog. | [optional]
- **syslog_auditor_format** | **str**| audit event export format, SYSLOG_BSD default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
 
 ### Return type
 
@@ -5959,7 +5633,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_policy**
-> MonitoringEventPolicy get_event_policy(o_tenant, o_name)
+> MonitoringEventPolicy get_event_policy(o_tenant)
 
 Get EventPolicy object
 
@@ -5991,24 +5665,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_format = "spec.format_example" # str | event export format, SYSLOG_BSD default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get EventPolicy object
-        api_response = api_instance.get_event_policy(o_tenant, o_name)
+        api_response = api_instance.get_event_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_event_policy: %s\n" % e)
@@ -6020,19 +5683,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_format** | **str**| event export format, SYSLOG_BSD default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
 
 ### Return type
 
@@ -6094,18 +5746,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_format = "spec.format_example" # str | event export format, SYSLOG_BSD default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -6123,18 +5764,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_format** | **str**| event export format, SYSLOG_BSD default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
 
 ### Return type
 
@@ -6163,7 +5793,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_flow_export_policy**
-> MonitoringFlowExportPolicy get_flow_export_policy(o_tenant, o_name)
+> MonitoringFlowExportPolicy get_flow_export_policy(o_tenant)
 
 Get FlowExportPolicy object
 
@@ -6195,35 +5825,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_vrf_name = "spec.vrf-name_example" # str | VrfName specifies the name of the VRF that the current flow export Policy belongs to. (optional)
-    spec_interval = "spec.interval_example" # str | Interval defines how often to push the records to an external collector The value is specified as a string format, '10s', '20m'. Should be a valid time duration between 1s and 24h0m0s. (optional)
-    spec_template_interval = "spec.template-interval_example" # str | TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, '1m', '10m'. Should be a valid time duration between 1m0s and 30m0s. (optional)
     spec_format = "spec.format_example" # str |  (optional)
-    spec_disabled = True # bool | Enable/disable flow export. (optional)
-    propagation_status_generation_id = "propagation-status.generation-id_example" # str | The Generation ID this status is for. (optional)
-    propagation_status_updated = 1 # int | The number of Naples that this version has already been pushed to. (optional)
-    propagation_status_pending = 1 # int | Number of Naples pending. If this is 0 it can be assumed that everything is up to date. (optional)
-    propagation_status_min_version = "propagation-status.min-version_example" # str | The Version running on the slowest DSC. (optional)
-    propagation_status_status = "propagation-status.status_example" # str | Textual description of propagation status. (optional)
     propagation_status_pending_dscs = [
         "propagation-status.pending-dscs_example",
     ] # [str] | list of DSCs where propagation did not complete. (optional)
-    status_state = "status.state_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get FlowExportPolicy object
-        api_response = api_instance.get_flow_export_policy(o_tenant, o_name)
+        api_response = api_instance.get_flow_export_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_flow_export_policy: %s\n" % e)
@@ -6235,28 +5847,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_vrf_name** | **str**| VrfName specifies the name of the VRF that the current flow export Policy belongs to. | [optional]
- **spec_interval** | **str**| Interval defines how often to push the records to an external collector The value is specified as a string format, &#39;10s&#39;, &#39;20m&#39;. Should be a valid time duration between 1s and 24h0m0s. | [optional]
- **spec_template_interval** | **str**| TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, &#39;1m&#39;, &#39;10m&#39;. Should be a valid time duration between 1m0s and 30m0s. | [optional]
  **spec_format** | **str**|  | [optional]
- **spec_disabled** | **bool**| Enable/disable flow export. | [optional]
- **propagation_status_generation_id** | **str**| The Generation ID this status is for. | [optional]
- **propagation_status_updated** | **int**| The number of Naples that this version has already been pushed to. | [optional]
- **propagation_status_pending** | **int**| Number of Naples pending. If this is 0 it can be assumed that everything is up to date. | [optional]
- **propagation_status_min_version** | **str**| The Version running on the slowest DSC. | [optional]
- **propagation_status_status** | **str**| Textual description of propagation status. | [optional]
  **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
- **status_state** | **str**|  | [optional]
 
 ### Return type
 
@@ -6318,29 +5912,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_vrf_name = "spec.vrf-name_example" # str | VrfName specifies the name of the VRF that the current flow export Policy belongs to. (optional)
-    spec_interval = "spec.interval_example" # str | Interval defines how often to push the records to an external collector The value is specified as a string format, '10s', '20m'. Should be a valid time duration between 1s and 24h0m0s. (optional)
-    spec_template_interval = "spec.template-interval_example" # str | TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, '1m', '10m'. Should be a valid time duration between 1m0s and 30m0s. (optional)
     spec_format = "spec.format_example" # str |  (optional)
-    spec_disabled = True # bool | Enable/disable flow export. (optional)
-    propagation_status_generation_id = "propagation-status.generation-id_example" # str | The Generation ID this status is for. (optional)
-    propagation_status_updated = 1 # int | The number of Naples that this version has already been pushed to. (optional)
-    propagation_status_pending = 1 # int | Number of Naples pending. If this is 0 it can be assumed that everything is up to date. (optional)
-    propagation_status_min_version = "propagation-status.min-version_example" # str | The Version running on the slowest DSC. (optional)
-    propagation_status_status = "propagation-status.status_example" # str | Textual description of propagation status. (optional)
     propagation_status_pending_dscs = [
         "propagation-status.pending-dscs_example",
     ] # [str] | list of DSCs where propagation did not complete. (optional)
-    status_state = "status.state_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -6358,27 +5934,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_vrf_name** | **str**| VrfName specifies the name of the VRF that the current flow export Policy belongs to. | [optional]
- **spec_interval** | **str**| Interval defines how often to push the records to an external collector The value is specified as a string format, &#39;10s&#39;, &#39;20m&#39;. Should be a valid time duration between 1s and 24h0m0s. | [optional]
- **spec_template_interval** | **str**| TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, &#39;1m&#39;, &#39;10m&#39;. Should be a valid time duration between 1m0s and 30m0s. | [optional]
  **spec_format** | **str**|  | [optional]
- **spec_disabled** | **bool**| Enable/disable flow export. | [optional]
- **propagation_status_generation_id** | **str**| The Generation ID this status is for. | [optional]
- **propagation_status_updated** | **int**| The number of Naples that this version has already been pushed to. | [optional]
- **propagation_status_pending** | **int**| Number of Naples pending. If this is 0 it can be assumed that everything is up to date. | [optional]
- **propagation_status_min_version** | **str**| The Version running on the slowest DSC. | [optional]
- **propagation_status_status** | **str**| Textual description of propagation status. | [optional]
  **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
- **status_state** | **str**|  | [optional]
 
 ### Return type
 
@@ -6407,7 +5965,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_fwlog_policy**
-> MonitoringFwlogPolicy get_fwlog_policy(o_tenant, o_name)
+> MonitoringFwlogPolicy get_fwlog_policy(o_tenant)
 
 Get FwlogPolicy object
 
@@ -6439,29 +5997,16 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_vrf_name = "spec.vrf-name_example" # str | VrfName specifies the name of the VRF that the current Firewall Log Policy belongs to. (optional)
-    spec_format = "spec.format_example" # str | fwlog format, SYSLOG_BSD default. (optional)
     spec_filter = [
         "spec.filter_example",
     ] # [str] | filter firewall logs, FWLOG_ALL default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
-    psm_target_enable = True # bool | Enable is for enabling the log export. Its default value is false. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get FwlogPolicy object
-        api_response = api_instance.get_fwlog_policy(o_tenant, o_name)
+        api_response = api_instance.get_fwlog_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_fwlog_policy: %s\n" % e)
@@ -6473,22 +6018,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_vrf_name** | **str**| VrfName specifies the name of the VRF that the current Firewall Log Policy belongs to. | [optional]
- **spec_format** | **str**| fwlog format, SYSLOG_BSD default. | [optional]
  **spec_filter** | **[str]**| filter firewall logs, FWLOG_ALL default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
- **psm_target_enable** | **bool**| Enable is for enabling the log export. Its default value is false. | [optional]
 
 ### Return type
 
@@ -6550,23 +6082,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_vrf_name = "spec.vrf-name_example" # str | VrfName specifies the name of the VRF that the current Firewall Log Policy belongs to. (optional)
-    spec_format = "spec.format_example" # str | fwlog format, SYSLOG_BSD default. (optional)
     spec_filter = [
         "spec.filter_example",
     ] # [str] | filter firewall logs, FWLOG_ALL default. (optional)
-    config_facility_override = "config.facility-override_example" # str | override default facility with this in exported logs. (optional)
-    config_prefix = "config.prefix_example" # str | add prefix in exported logs. (optional)
-    psm_target_enable = True # bool | Enable is for enabling the log export. Its default value is false. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -6584,21 +6103,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_vrf_name** | **str**| VrfName specifies the name of the VRF that the current Firewall Log Policy belongs to. | [optional]
- **spec_format** | **str**| fwlog format, SYSLOG_BSD default. | [optional]
  **spec_filter** | **[str]**| filter firewall logs, FWLOG_ALL default. | [optional]
- **config_facility_override** | **str**| override default facility with this in exported logs. | [optional]
- **config_prefix** | **str**| add prefix in exported logs. | [optional]
- **psm_target_enable** | **bool**| Enable is for enabling the log export. Its default value is false. | [optional]
 
 ### Return type
 
@@ -6627,7 +6133,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_mirror_session**
-> MonitoringMirrorSession get_mirror_session(o_tenant, o_name)
+> MonitoringMirrorSession get_mirror_session(o_tenant)
 
 Get MirrorSession object
 
@@ -6659,34 +6165,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_packet_size = 1 # int | PacketSize: Max size of a mirrored packet, packet size is not checked by default. Value should be between 64 and 2048. (optional)
     start_condition_schedule_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
     spec_packet_filters = [
         "spec.packet-filters_example",
     ] # [str] |  (optional)
     interfaces_direction = "interfaces.direction_example" # str |  (optional)
-    spec_span_id = 1 # int | Value should be between 1 and 1023. (optional)
-    workloads_direction = "workloads.direction_example" # str | rx is towards the workload and tx is from workload. (optional)
-    source_target_type = "source.target-type_example" # str |  (optional)
-    source_direction = "source.direction_example" # str | rx is towards the Source and tx is from Source. (optional)
-    spec_disabled = True # bool | Enable/disable mirroring. (optional)
-    status_schedule_state = "status.schedule-state_example" # str |  (optional)
-    status_started_at = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    propagation_status_generation_id = "propagation-status.generation-id_example" # str | The Generation ID this status is for. (optional)
-    propagation_status_updated = 1 # int | The number of Naples that this version has already been pushed to. (optional)
-    propagation_status_pending = 1 # int | Number of Naples pending. If this is 0 it can be assumed that everything is up to date. (optional)
-    propagation_status_min_version = "propagation-status.min-version_example" # str | The Version running on the slowest DSC. (optional)
-    propagation_status_status = "propagation-status.status_example" # str | Textual description of propagation status. (optional)
     propagation_status_pending_dscs = [
         "propagation-status.pending-dscs_example",
     ] # [str] | list of DSCs where propagation did not complete. (optional)
@@ -6694,7 +6179,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Get MirrorSession object
-        api_response = api_instance.get_mirror_session(o_tenant, o_name)
+        api_response = api_instance.get_mirror_session(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_mirror_session: %s\n" % e)
@@ -6706,32 +6191,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_packet_size** | **int**| PacketSize: Max size of a mirrored packet, packet size is not checked by default. Value should be between 64 and 2048. | [optional]
  **start_condition_schedule_time** | **datetime**|  | [optional]
  **spec_packet_filters** | **[str]**|  | [optional]
  **interfaces_direction** | **str**|  | [optional]
- **spec_span_id** | **int**| Value should be between 1 and 1023. | [optional]
- **workloads_direction** | **str**| rx is towards the workload and tx is from workload. | [optional]
- **source_target_type** | **str**|  | [optional]
- **source_direction** | **str**| rx is towards the Source and tx is from Source. | [optional]
- **spec_disabled** | **bool**| Enable/disable mirroring. | [optional]
- **status_schedule_state** | **str**|  | [optional]
- **status_started_at** | **datetime**|  | [optional]
- **propagation_status_generation_id** | **str**| The Generation ID this status is for. | [optional]
- **propagation_status_updated** | **int**| The number of Naples that this version has already been pushed to. | [optional]
- **propagation_status_pending** | **int**| Number of Naples pending. If this is 0 it can be assumed that everything is up to date. | [optional]
- **propagation_status_min_version** | **str**| The Version running on the slowest DSC. | [optional]
- **propagation_status_status** | **str**| Textual description of propagation status. | [optional]
  **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
 
 ### Return type
@@ -6794,33 +6258,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    spec_packet_size = 1 # int | PacketSize: Max size of a mirrored packet, packet size is not checked by default. Value should be between 64 and 2048. (optional)
     start_condition_schedule_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
     spec_packet_filters = [
         "spec.packet-filters_example",
     ] # [str] |  (optional)
     interfaces_direction = "interfaces.direction_example" # str |  (optional)
-    spec_span_id = 1 # int | Value should be between 1 and 1023. (optional)
-    workloads_direction = "workloads.direction_example" # str | rx is towards the workload and tx is from workload. (optional)
-    source_target_type = "source.target-type_example" # str |  (optional)
-    source_direction = "source.direction_example" # str | rx is towards the Source and tx is from Source. (optional)
-    spec_disabled = True # bool | Enable/disable mirroring. (optional)
-    status_schedule_state = "status.schedule-state_example" # str |  (optional)
-    status_started_at = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime |  (optional)
-    propagation_status_generation_id = "propagation-status.generation-id_example" # str | The Generation ID this status is for. (optional)
-    propagation_status_updated = 1 # int | The number of Naples that this version has already been pushed to. (optional)
-    propagation_status_pending = 1 # int | Number of Naples pending. If this is 0 it can be assumed that everything is up to date. (optional)
-    propagation_status_min_version = "propagation-status.min-version_example" # str | The Version running on the slowest DSC. (optional)
-    propagation_status_status = "propagation-status.status_example" # str | Textual description of propagation status. (optional)
     propagation_status_pending_dscs = [
         "propagation-status.pending-dscs_example",
     ] # [str] | list of DSCs where propagation did not complete. (optional)
@@ -6841,31 +6284,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **spec_packet_size** | **int**| PacketSize: Max size of a mirrored packet, packet size is not checked by default. Value should be between 64 and 2048. | [optional]
  **start_condition_schedule_time** | **datetime**|  | [optional]
  **spec_packet_filters** | **[str]**|  | [optional]
  **interfaces_direction** | **str**|  | [optional]
- **spec_span_id** | **int**| Value should be between 1 and 1023. | [optional]
- **workloads_direction** | **str**| rx is towards the workload and tx is from workload. | [optional]
- **source_target_type** | **str**|  | [optional]
- **source_direction** | **str**| rx is towards the Source and tx is from Source. | [optional]
- **spec_disabled** | **bool**| Enable/disable mirroring. | [optional]
- **status_schedule_state** | **str**|  | [optional]
- **status_started_at** | **datetime**|  | [optional]
- **propagation_status_generation_id** | **str**| The Generation ID this status is for. | [optional]
- **propagation_status_updated** | **int**| The number of Naples that this version has already been pushed to. | [optional]
- **propagation_status_pending** | **int**| Number of Naples pending. If this is 0 it can be assumed that everything is up to date. | [optional]
- **propagation_status_min_version** | **str**| The Version running on the slowest DSC. | [optional]
- **propagation_status_status** | **str**| Textual description of propagation status. | [optional]
  **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
 
 ### Return type
@@ -6895,7 +6317,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_stats_alert_policy**
-> MonitoringStatsAlertPolicy get_stats_alert_policy(o_tenant, o_name)
+> MonitoringStatsAlertPolicy get_stats_alert_policy(o_tenant)
 
 Get StatsAlertPolicy object
 
@@ -6927,38 +6349,16 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    metric_group = "metric.group_example" # str | Metric group - e.g. ftestats, flowstats, etc. (optional)
-    metric_kind = "metric.kind_example" # str | Sub-category within the group e.g. MaxSessionThresholdDrops, FlowMissPackets. (optional)
-    metric_field_name = "metric.field-name_example" # str | Field belonging to the kind e.g. ConnectionsPerSecond. This is the attribute that will be monitored and alerts will be created/resolved based on the thresholds. (optional)
-    measurement_criteria_window = "measurement-criteria.window_example" # str | The length of time the metric will be monitored/observed before running the values against thresholds for alert creation/resolution. ui-hint: Allowed values - 5m, 10m, 30m, 1h. (optional)
-    measurement_criteria_function = "measurement-criteria.function_example" # str | Aggregate function to be applied on the metric values that were monitored over a window/interval. (optional)
-    thresholds_operator = "thresholds.operator_example" # str | Operator to be applied when comparing metric values against the threshold values. (optional)
-    spec_enable = True # bool | User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. (optional)
     spec_destinations = [
         "spec.destinations_example",
     ] # [str] | name of the alert destinations to be used to send out notification when an alert gets generated. (optional)
-    instance_selector_kind = "instance-selector.kind_example" # str | Kind of the instances to be selected using names/label. (optional)
-    instance_selector_names = [
-        "instance-selector.names_example",
-    ] # [str] | List of names/reporter IDs. (optional)
-    status_total_hits = 1 # int | Total hits on this policy. (optional)
-    status_open_alerts = 1 # int | Open alerts based on this policy. (optional)
-    status_acknowledged_alerts = 1 # int | Acknowledged alerts based on this policy. (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get StatsAlertPolicy object
-        api_response = api_instance.get_stats_alert_policy(o_tenant, o_name)
+        api_response = api_instance.get_stats_alert_policy(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_stats_alert_policy: %s\n" % e)
@@ -6970,29 +6370,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **metric_group** | **str**| Metric group - e.g. ftestats, flowstats, etc. | [optional]
- **metric_kind** | **str**| Sub-category within the group e.g. MaxSessionThresholdDrops, FlowMissPackets. | [optional]
- **metric_field_name** | **str**| Field belonging to the kind e.g. ConnectionsPerSecond. This is the attribute that will be monitored and alerts will be created/resolved based on the thresholds. | [optional]
- **measurement_criteria_window** | **str**| The length of time the metric will be monitored/observed before running the values against thresholds for alert creation/resolution. ui-hint: Allowed values - 5m, 10m, 30m, 1h. | [optional]
- **measurement_criteria_function** | **str**| Aggregate function to be applied on the metric values that were monitored over a window/interval. | [optional]
- **thresholds_operator** | **str**| Operator to be applied when comparing metric values against the threshold values. | [optional]
- **spec_enable** | **bool**| User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. | [optional]
  **spec_destinations** | **[str]**| name of the alert destinations to be used to send out notification when an alert gets generated. | [optional]
- **instance_selector_kind** | **str**| Kind of the instances to be selected using names/label. | [optional]
- **instance_selector_names** | **[str]**| List of names/reporter IDs. | [optional]
- **status_total_hits** | **int**| Total hits on this policy. | [optional]
- **status_open_alerts** | **int**| Open alerts based on this policy. | [optional]
- **status_acknowledged_alerts** | **int**| Acknowledged alerts based on this policy. | [optional]
 
 ### Return type
 
@@ -7054,32 +6434,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    metric_group = "metric.group_example" # str | Metric group - e.g. ftestats, flowstats, etc. (optional)
-    metric_kind = "metric.kind_example" # str | Sub-category within the group e.g. MaxSessionThresholdDrops, FlowMissPackets. (optional)
-    metric_field_name = "metric.field-name_example" # str | Field belonging to the kind e.g. ConnectionsPerSecond. This is the attribute that will be monitored and alerts will be created/resolved based on the thresholds. (optional)
-    measurement_criteria_window = "measurement-criteria.window_example" # str | The length of time the metric will be monitored/observed before running the values against thresholds for alert creation/resolution. ui-hint: Allowed values - 5m, 10m, 30m, 1h. (optional)
-    measurement_criteria_function = "measurement-criteria.function_example" # str | Aggregate function to be applied on the metric values that were monitored over a window/interval. (optional)
-    thresholds_operator = "thresholds.operator_example" # str | Operator to be applied when comparing metric values against the threshold values. (optional)
-    spec_enable = True # bool | User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. (optional)
     spec_destinations = [
         "spec.destinations_example",
     ] # [str] | name of the alert destinations to be used to send out notification when an alert gets generated. (optional)
-    instance_selector_kind = "instance-selector.kind_example" # str | Kind of the instances to be selected using names/label. (optional)
-    instance_selector_names = [
-        "instance-selector.names_example",
-    ] # [str] | List of names/reporter IDs. (optional)
-    status_total_hits = 1 # int | Total hits on this policy. (optional)
-    status_open_alerts = 1 # int | Open alerts based on this policy. (optional)
-    status_acknowledged_alerts = 1 # int | Acknowledged alerts based on this policy. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -7097,28 +6455,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **metric_group** | **str**| Metric group - e.g. ftestats, flowstats, etc. | [optional]
- **metric_kind** | **str**| Sub-category within the group e.g. MaxSessionThresholdDrops, FlowMissPackets. | [optional]
- **metric_field_name** | **str**| Field belonging to the kind e.g. ConnectionsPerSecond. This is the attribute that will be monitored and alerts will be created/resolved based on the thresholds. | [optional]
- **measurement_criteria_window** | **str**| The length of time the metric will be monitored/observed before running the values against thresholds for alert creation/resolution. ui-hint: Allowed values - 5m, 10m, 30m, 1h. | [optional]
- **measurement_criteria_function** | **str**| Aggregate function to be applied on the metric values that were monitored over a window/interval. | [optional]
- **thresholds_operator** | **str**| Operator to be applied when comparing metric values against the threshold values. | [optional]
- **spec_enable** | **bool**| User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is. | [optional]
  **spec_destinations** | **[str]**| name of the alert destinations to be used to send out notification when an alert gets generated. | [optional]
- **instance_selector_kind** | **str**| Kind of the instances to be selected using names/label. | [optional]
- **instance_selector_names** | **[str]**| List of names/reporter IDs. | [optional]
- **status_total_hits** | **int**| Total hits on this policy. | [optional]
- **status_open_alerts** | **int**| Open alerts based on this policy. | [optional]
- **status_acknowledged_alerts** | **int**| Acknowledged alerts based on this policy. | [optional]
 
 ### Return type
 
@@ -7180,23 +6518,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     node_selector_names = [
         "node-selector.names_example",
     ] # [str] |  (optional)
-    spec_verbosity = 1 # int | Verbosity defines the verbosity level. (optional)
-    spec_skip_cores = True # bool | SkipCores if set to true skips the core files when collecting techsupport. (optional)
     status_instance_id = "status.instance-id_example" # str |  (optional)
-    status_status = "status.status_example" # str |  (optional)
-    status_reason = "status.reason_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -7214,21 +6540,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **node_selector_names** | **[str]**|  | [optional]
- **spec_verbosity** | **int**| Verbosity defines the verbosity level. | [optional]
- **spec_skip_cores** | **bool**| SkipCores if set to true skips the core files when collecting techsupport. | [optional]
  **status_instance_id** | **str**|  | [optional]
- **status_status** | **str**|  | [optional]
- **status_reason** | **str**|  | [optional]
 
 ### Return type
 
@@ -7257,7 +6571,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_troubleshooting_session**
-> MonitoringTroubleshootingSession get_troubleshooting_session(o_tenant, o_name)
+> MonitoringTroubleshootingSession get_troubleshooting_session(o_tenant)
 
 Get TroubleshootingSession object
 
@@ -7289,44 +6603,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     source_ip_addresses = [
         "source.ip-addresses_example",
     ] # [str] | IP address list, example [\"10.1.1.10\",\"10.1.1.15\"]. (optional)
-    source_mac_addresses = [
-        "source.mac-addresses_example",
-    ] # [str] | List of MacAddresses - \"aabb.ccdd.eeff\", \"0001.0203.0405\". Should be a valid MAC address. (optional)
-    destination_ip_addresses = [
-        "destination.ip-addresses_example",
-    ] # [str] | IP address list, example [\"10.1.1.10\",\"10.1.1.15\"]. (optional)
-    destination_mac_addresses = [
-        "destination.mac-addresses_example",
-    ] # [str] | List of MacAddresses - \"aabb.ccdd.eeff\", \"0001.0203.0405\". Should be a valid MAC address. (optional)
-    app_protocol_selectors_proto_ports = [
-        "app-protocol-selectors.proto-ports_example",
-    ] # [str] | ports - Includes protocol name and port Eg [\"tcp/1234\", \"udp\"]. Should be a valid layer 3 or layer 4 protocol and port range. any is also allowed. (optional)
-    app_protocol_selectors_applications = [
-        "app-protocol-selectors.applications_example",
-    ] # [str] | Apps - E.g. [\"Redis\"]. (optional)
-    time_window_start_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Start/Stop Time - when start time is not specified, it implies start NOW. (optional)
-    time_window_stop_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Stop time - when not specified, default will be used. (optional)
     spec_repeat_every = "spec.repeat-every_example" # str |  (optional)
-    spec_enable_mirroring = True # bool | If packet capture is enabled, a mirror-session will be internally created. (optional)
-    status_state = "status.state_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Get TroubleshootingSession object
-        api_response = api_instance.get_troubleshooting_session(o_tenant, o_name)
+        api_response = api_instance.get_troubleshooting_session(o_tenant)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->get_troubleshooting_session: %s\n" % e)
@@ -7338,27 +6625,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **source_ip_addresses** | **[str]**| IP address list, example [\&quot;10.1.1.10\&quot;,\&quot;10.1.1.15\&quot;]. | [optional]
- **source_mac_addresses** | **[str]**| List of MacAddresses - \&quot;aabb.ccdd.eeff\&quot;, \&quot;0001.0203.0405\&quot;. Should be a valid MAC address. | [optional]
- **destination_ip_addresses** | **[str]**| IP address list, example [\&quot;10.1.1.10\&quot;,\&quot;10.1.1.15\&quot;]. | [optional]
- **destination_mac_addresses** | **[str]**| List of MacAddresses - \&quot;aabb.ccdd.eeff\&quot;, \&quot;0001.0203.0405\&quot;. Should be a valid MAC address. | [optional]
- **app_protocol_selectors_proto_ports** | **[str]**| ports - Includes protocol name and port Eg [\&quot;tcp/1234\&quot;, \&quot;udp\&quot;]. Should be a valid layer 3 or layer 4 protocol and port range. any is also allowed. | [optional]
- **app_protocol_selectors_applications** | **[str]**| Apps - E.g. [\&quot;Redis\&quot;]. | [optional]
- **time_window_start_time** | **datetime**| Start/Stop Time - when start time is not specified, it implies start NOW. | [optional]
- **time_window_stop_time** | **datetime**| Stop time - when not specified, default will be used. | [optional]
  **spec_repeat_every** | **str**|  | [optional]
- **spec_enable_mirroring** | **bool**| If packet capture is enabled, a mirror-session will be internally created. | [optional]
- **status_state** | **str**|  | [optional]
 
 ### Return type
 
@@ -7420,38 +6690,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    t_api_version = "T.api-version_example" # str | APIVersion defines the version of the API object. This can only be set by the server. (optional)
-    meta_tenant = "meta.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    meta_namespace = "meta.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    meta_generation_id = "meta.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    meta_resource_version = "meta.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    meta_uuid = "meta.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    meta_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    meta_self_link = "meta.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
     source_ip_addresses = [
         "source.ip-addresses_example",
     ] # [str] | IP address list, example [\"10.1.1.10\",\"10.1.1.15\"]. (optional)
-    source_mac_addresses = [
-        "source.mac-addresses_example",
-    ] # [str] | List of MacAddresses - \"aabb.ccdd.eeff\", \"0001.0203.0405\". Should be a valid MAC address. (optional)
-    destination_ip_addresses = [
-        "destination.ip-addresses_example",
-    ] # [str] | IP address list, example [\"10.1.1.10\",\"10.1.1.15\"]. (optional)
-    destination_mac_addresses = [
-        "destination.mac-addresses_example",
-    ] # [str] | List of MacAddresses - \"aabb.ccdd.eeff\", \"0001.0203.0405\". Should be a valid MAC address. (optional)
-    app_protocol_selectors_proto_ports = [
-        "app-protocol-selectors.proto-ports_example",
-    ] # [str] | ports - Includes protocol name and port Eg [\"tcp/1234\", \"udp\"]. Should be a valid layer 3 or layer 4 protocol and port range. any is also allowed. (optional)
-    app_protocol_selectors_applications = [
-        "app-protocol-selectors.applications_example",
-    ] # [str] | Apps - E.g. [\"Redis\"]. (optional)
-    time_window_start_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Start/Stop Time - when start time is not specified, it implies start NOW. (optional)
-    time_window_stop_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | Stop time - when not specified, default will be used. (optional)
     spec_repeat_every = "spec.repeat-every_example" # str |  (optional)
-    spec_enable_mirroring = True # bool | If packet capture is enabled, a mirror-session will be internally created. (optional)
-    status_state = "status.state_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -7469,26 +6712,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **t_api_version** | **str**| APIVersion defines the version of the API object. This can only be set by the server. | [optional]
- **meta_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **meta_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **meta_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **meta_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **meta_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **meta_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
  **source_ip_addresses** | **[str]**| IP address list, example [\&quot;10.1.1.10\&quot;,\&quot;10.1.1.15\&quot;]. | [optional]
- **source_mac_addresses** | **[str]**| List of MacAddresses - \&quot;aabb.ccdd.eeff\&quot;, \&quot;0001.0203.0405\&quot;. Should be a valid MAC address. | [optional]
- **destination_ip_addresses** | **[str]**| IP address list, example [\&quot;10.1.1.10\&quot;,\&quot;10.1.1.15\&quot;]. | [optional]
- **destination_mac_addresses** | **[str]**| List of MacAddresses - \&quot;aabb.ccdd.eeff\&quot;, \&quot;0001.0203.0405\&quot;. Should be a valid MAC address. | [optional]
- **app_protocol_selectors_proto_ports** | **[str]**| ports - Includes protocol name and port Eg [\&quot;tcp/1234\&quot;, \&quot;udp\&quot;]. Should be a valid layer 3 or layer 4 protocol and port range. any is also allowed. | [optional]
- **app_protocol_selectors_applications** | **[str]**| Apps - E.g. [\&quot;Redis\&quot;]. | [optional]
- **time_window_start_time** | **datetime**| Start/Stop Time - when start time is not specified, it implies start NOW. | [optional]
- **time_window_stop_time** | **datetime**| Stop time - when not specified, default will be used. | [optional]
  **spec_repeat_every** | **str**|  | [optional]
- **spec_enable_mirroring** | **bool**| If packet capture is enabled, a mirror-session will be internally created. | [optional]
- **status_state** | **str**|  | [optional]
 
 ### Return type
 
@@ -7517,7 +6743,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_alert**
-> MonitoringAlert label_alert(o_tenant, o_name, body)
+> MonitoringAlert label_alert(o_tenant, body)
 
 Label Alert object
 
@@ -7550,7 +6776,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -7571,7 +6796,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label Alert object
-        api_response = api_instance.label_alert(o_tenant, o_name, body)
+        api_response = api_instance.label_alert(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_alert: %s\n" % e)
@@ -7583,7 +6808,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -7707,7 +6931,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_alert_destination**
-> MonitoringAlertDestination label_alert_destination(o_tenant, o_name, body)
+> MonitoringAlertDestination label_alert_destination(o_tenant, body)
 
 Label AlertDestination object
 
@@ -7740,7 +6964,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -7761,7 +6984,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label AlertDestination object
-        api_response = api_instance.label_alert_destination(o_tenant, o_name, body)
+        api_response = api_instance.label_alert_destination(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_alert_destination: %s\n" % e)
@@ -7773,7 +6996,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -7897,7 +7119,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_alert_policy**
-> MonitoringAlertPolicy label_alert_policy(o_tenant, o_name, body)
+> MonitoringAlertPolicy label_alert_policy(o_tenant, body)
 
 Label AlertPolicy object
 
@@ -7930,7 +7152,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -7951,7 +7172,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label AlertPolicy object
-        api_response = api_instance.label_alert_policy(o_tenant, o_name, body)
+        api_response = api_instance.label_alert_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_alert_policy: %s\n" % e)
@@ -7963,7 +7184,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -8087,7 +7307,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_event_policy**
-> MonitoringEventPolicy label_event_policy(o_tenant, o_name, body)
+> MonitoringEventPolicy label_event_policy(o_tenant, body)
 
 Label EventPolicy object
 
@@ -8120,7 +7340,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -8141,7 +7360,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label EventPolicy object
-        api_response = api_instance.label_event_policy(o_tenant, o_name, body)
+        api_response = api_instance.label_event_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_event_policy: %s\n" % e)
@@ -8153,7 +7372,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -8277,7 +7495,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_flow_export_policy**
-> MonitoringFlowExportPolicy label_flow_export_policy(o_tenant, o_name, body)
+> MonitoringFlowExportPolicy label_flow_export_policy(o_tenant, body)
 
 Label FlowExportPolicy object
 
@@ -8310,7 +7528,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -8331,7 +7548,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label FlowExportPolicy object
-        api_response = api_instance.label_flow_export_policy(o_tenant, o_name, body)
+        api_response = api_instance.label_flow_export_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_flow_export_policy: %s\n" % e)
@@ -8343,7 +7560,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -8467,7 +7683,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_fwlog_policy**
-> MonitoringFwlogPolicy label_fwlog_policy(o_tenant, o_name, body)
+> MonitoringFwlogPolicy label_fwlog_policy(o_tenant, body)
 
 Label FwlogPolicy object
 
@@ -8500,7 +7716,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -8521,7 +7736,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label FwlogPolicy object
-        api_response = api_instance.label_fwlog_policy(o_tenant, o_name, body)
+        api_response = api_instance.label_fwlog_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_fwlog_policy: %s\n" % e)
@@ -8533,7 +7748,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -8657,7 +7871,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_mirror_session**
-> MonitoringMirrorSession label_mirror_session(o_tenant, o_name, body)
+> MonitoringMirrorSession label_mirror_session(o_tenant, body)
 
 Label MirrorSession object
 
@@ -8690,7 +7904,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -8711,7 +7924,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label MirrorSession object
-        api_response = api_instance.label_mirror_session(o_tenant, o_name, body)
+        api_response = api_instance.label_mirror_session(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_mirror_session: %s\n" % e)
@@ -8723,7 +7936,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -8847,7 +8059,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_stats_alert_policy**
-> MonitoringStatsAlertPolicy label_stats_alert_policy(o_tenant, o_name, body)
+> MonitoringStatsAlertPolicy label_stats_alert_policy(o_tenant, body)
 
 Label StatsAlertPolicy object
 
@@ -8880,7 +8092,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -8901,7 +8112,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label StatsAlertPolicy object
-        api_response = api_instance.label_stats_alert_policy(o_tenant, o_name, body)
+        api_response = api_instance.label_stats_alert_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_stats_alert_policy: %s\n" % e)
@@ -8913,7 +8124,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -9037,7 +8247,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **label_troubleshooting_session**
-> MonitoringTroubleshootingSession label_troubleshooting_session(o_tenant, o_name, body)
+> MonitoringTroubleshootingSession label_troubleshooting_session(o_tenant, body)
 
 Label TroubleshootingSession object
 
@@ -9070,7 +8280,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -9091,7 +8300,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Label TroubleshootingSession object
-        api_response = api_instance.label_troubleshooting_session(o_tenant, o_name, body)
+        api_response = api_instance.label_troubleshooting_session(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->label_troubleshooting_session: %s\n" % e)
@@ -9103,7 +8312,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**ApiLabel**](ApiLabel.md)|  |
 
 ### Return type
@@ -9260,22 +8468,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9293,20 +8489,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -9367,23 +8551,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9400,21 +8571,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -9476,22 +8634,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9509,20 +8655,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -9583,23 +8717,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9616,21 +8737,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -9692,22 +8800,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9725,20 +8821,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -9799,23 +8883,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9832,21 +8903,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -9908,22 +8966,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -9941,20 +8987,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10015,23 +9049,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10048,21 +9069,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10124,22 +9132,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10157,20 +9153,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10231,23 +9215,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10264,21 +9235,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10340,22 +9298,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10373,20 +9319,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10447,23 +9381,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10480,21 +9401,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10556,22 +9464,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10589,20 +9485,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10663,23 +9547,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10696,21 +9567,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10772,22 +9630,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10805,20 +9651,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10879,23 +9713,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -10912,21 +9733,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -10988,22 +9796,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11021,20 +9817,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -11095,23 +9879,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11128,21 +9899,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -11203,23 +9961,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11236,21 +9981,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -11312,22 +10044,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11345,20 +10065,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -11419,23 +10127,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11452,21 +10147,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -11495,7 +10177,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_alert**
-> MonitoringAlert update_alert(o_tenant, o_name, body)
+> MonitoringAlert update_alert(o_tenant, body)
 
 Update Alert object
 
@@ -11527,7 +10209,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringAlert(
         api_version="api_version_example",
         kind="kind_example",
@@ -11591,7 +10272,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update Alert object
-        api_response = api_instance.update_alert(o_tenant, o_name, body)
+        api_response = api_instance.update_alert(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_alert: %s\n" % e)
@@ -11603,7 +10284,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringAlert**](MonitoringAlert.md)|  |
 
 ### Return type
@@ -11769,7 +10449,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_alert_destination**
-> MonitoringAlertDestination update_alert_destination(o_tenant, o_name, body)
+> MonitoringAlertDestination update_alert_destination(o_tenant, body)
 
 Update AlertDestination object
 
@@ -11801,7 +10481,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringAlertDestination(
         api_version="api_version_example",
         kind="kind_example",
@@ -11877,7 +10556,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update AlertDestination object
-        api_response = api_instance.update_alert_destination(o_tenant, o_name, body)
+        api_response = api_instance.update_alert_destination(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_alert_destination: %s\n" % e)
@@ -11889,7 +10568,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringAlertDestination**](MonitoringAlertDestination.md)|  |
 
 ### Return type
@@ -12067,7 +10745,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_alert_policy**
-> MonitoringAlertPolicy update_alert_policy(o_tenant, o_name, body)
+> MonitoringAlertPolicy update_alert_policy(o_tenant, body)
 
 Update AlertPolicy object
 
@@ -12099,7 +10777,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringAlertPolicy(
         api_version="api_version_example",
         kind="kind_example",
@@ -12145,7 +10822,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update AlertPolicy object
-        api_response = api_instance.update_alert_policy(o_tenant, o_name, body)
+        api_response = api_instance.update_alert_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_alert_policy: %s\n" % e)
@@ -12157,7 +10834,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringAlertPolicy**](MonitoringAlertPolicy.md)|  |
 
 ### Return type
@@ -12529,7 +11205,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_event_policy**
-> MonitoringEventPolicy update_event_policy(o_tenant, o_name, body)
+> MonitoringEventPolicy update_event_policy(o_tenant, body)
 
 Update EventPolicy object
 
@@ -12561,7 +11237,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringEventPolicy(
         api_version="api_version_example",
         kind="kind_example",
@@ -12610,7 +11285,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update EventPolicy object
-        api_response = api_instance.update_event_policy(o_tenant, o_name, body)
+        api_response = api_instance.update_event_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_event_policy: %s\n" % e)
@@ -12622,7 +11297,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringEventPolicy**](MonitoringEventPolicy.md)|  |
 
 ### Return type
@@ -12773,7 +11447,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_flow_export_policy**
-> MonitoringFlowExportPolicy update_flow_export_policy(o_tenant, o_name, body)
+> MonitoringFlowExportPolicy update_flow_export_policy(o_tenant, body)
 
 Update FlowExportPolicy object
 
@@ -12805,7 +11479,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringFlowExportPolicy(
         api_version="api_version_example",
         kind="kind_example",
@@ -12885,7 +11558,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update FlowExportPolicy object
-        api_response = api_instance.update_flow_export_policy(o_tenant, o_name, body)
+        api_response = api_instance.update_flow_export_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_flow_export_policy: %s\n" % e)
@@ -12897,7 +11570,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringFlowExportPolicy**](MonitoringFlowExportPolicy.md)|  |
 
 ### Return type
@@ -13079,7 +11751,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_fwlog_policy**
-> MonitoringFwlogPolicy update_fwlog_policy(o_tenant, o_name, body)
+> MonitoringFwlogPolicy update_fwlog_policy(o_tenant, body)
 
 Update FwlogPolicy object
 
@@ -13111,7 +11783,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringFwlogPolicy(
         api_version="api_version_example",
         kind="kind_example",
@@ -13156,7 +11827,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update FwlogPolicy object
-        api_response = api_instance.update_fwlog_policy(o_tenant, o_name, body)
+        api_response = api_instance.update_fwlog_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_fwlog_policy: %s\n" % e)
@@ -13168,7 +11839,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringFwlogPolicy**](MonitoringFwlogPolicy.md)|  |
 
 ### Return type
@@ -13315,7 +11985,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_mirror_session**
-> MonitoringMirrorSession update_mirror_session(o_tenant, o_name, body)
+> MonitoringMirrorSession update_mirror_session(o_tenant, body)
 
 Update MirrorSession object
 
@@ -13347,7 +12017,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringMirrorSession(
         api_version="api_version_example",
         kind="kind_example",
@@ -13465,7 +12134,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update MirrorSession object
-        api_response = api_instance.update_mirror_session(o_tenant, o_name, body)
+        api_response = api_instance.update_mirror_session(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_mirror_session: %s\n" % e)
@@ -13477,7 +12146,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringMirrorSession**](MonitoringMirrorSession.md)|  |
 
 ### Return type
@@ -13697,7 +12365,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_stats_alert_policy**
-> MonitoringStatsAlertPolicy update_stats_alert_policy(o_tenant, o_name, body)
+> MonitoringStatsAlertPolicy update_stats_alert_policy(o_tenant, body)
 
 Update StatsAlertPolicy object
 
@@ -13729,7 +12397,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringStatsAlertPolicy(
         api_version="api_version_example",
         kind="kind_example",
@@ -13798,7 +12465,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update StatsAlertPolicy object
-        api_response = api_instance.update_stats_alert_policy(o_tenant, o_name, body)
+        api_response = api_instance.update_stats_alert_policy(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_stats_alert_policy: %s\n" % e)
@@ -13810,7 +12477,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringStatsAlertPolicy**](MonitoringStatsAlertPolicy.md)|  |
 
 ### Return type
@@ -13981,7 +12647,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_troubleshooting_session**
-> MonitoringTroubleshootingSession update_troubleshooting_session(o_tenant, o_name, body)
+> MonitoringTroubleshootingSession update_troubleshooting_session(o_tenant, body)
 
 Update TroubleshootingSession object
 
@@ -14013,7 +12679,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.Name_example" # str | 
     body = MonitoringTroubleshootingSession(
         api_version="api_version_example",
         kind="kind_example",
@@ -14078,7 +12743,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Update TroubleshootingSession object
-        api_response = api_instance.update_troubleshooting_session(o_tenant, o_name, body)
+        api_response = api_instance.update_troubleshooting_session(o_tenant, body)
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling MonitoringV1Api->update_troubleshooting_session: %s\n" % e)
@@ -14090,7 +12755,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
- **o_name** | **str**|  |
  **body** | [**MonitoringTroubleshootingSession**](MonitoringTroubleshootingSession.md)|  |
 
 ### Return type
@@ -14290,22 +12954,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14323,20 +12975,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -14397,23 +13037,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14430,21 +13057,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -14506,22 +13120,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14539,20 +13141,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -14613,23 +13203,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14646,21 +13223,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -14722,22 +13286,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14755,20 +13307,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -14829,23 +13369,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14862,21 +13389,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -14938,22 +13452,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -14971,20 +13473,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15045,23 +13535,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15078,21 +13555,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15154,22 +13618,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15187,20 +13639,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15261,23 +13701,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15294,21 +13721,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15370,22 +13784,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15403,20 +13805,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15477,23 +13867,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15510,21 +13887,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15586,22 +13950,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15619,20 +13971,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15693,23 +14033,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15726,21 +14053,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15802,22 +14116,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15835,20 +14137,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -15909,23 +14199,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -15942,21 +14219,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -16018,22 +14282,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -16051,20 +14303,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -16125,23 +14365,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -16158,21 +14385,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -16234,22 +14448,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -16267,20 +14469,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_tenant** | **str**|  |
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -16341,23 +14531,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -16374,21 +14551,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 
@@ -16449,23 +14613,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = monitoring_v1_api.MonitoringV1Api(api_client)
     o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_tenant = "O.tenant_example" # str | Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. (optional)
-    o_namespace = "O.namespace_example" # str | Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_generation_id = "O.generation-id_example" # str | GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. (optional)
-    o_resource_version = "O.resource-version_example" # str | Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. (optional)
-    o_uuid = "O.uuid_example" # str | UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. (optional)
     o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    o_mod_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. (optional)
-    o_self_link = "O.self-link_example" # str | SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user. (optional)
-    label_selector = "label-selector_example" # str | LabelSelector to select on labels in list or watch results. (optional)
-    field_selector = "field-selector_example" # str | FieldSelector to select on field values in list or watch results. (optional)
     field_change_selector = [
         "field-change-selector_example",
     ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-    _from = 1 # int | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination. (optional)
-    max_results = 1 # int | MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. (optional)
-    sort_order = "sort-order_example" # str | order to sort List results in. (optional)
-    meta_only = True # bool | If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -16482,21 +14633,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_tenant** | **str**| Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48. | [optional]
- **o_namespace** | **str**| Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_generation_id** | **str**| GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional]
- **o_resource_version** | **str**| Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user. | [optional]
- **o_uuid** | **str**| UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user. | [optional]
  **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **o_mod_time** | **datetime**| ModTime is the Last Modification time of the object. System generated and updated, not updatable by user. | [optional]
- **o_self_link** | **str**| SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \&quot;/v1/tenants/tenants/tenant2\&quot; System generated and updated, not updatable by user. | [optional]
- **label_selector** | **str**| LabelSelector to select on labels in list or watch results. | [optional]
- **field_selector** | **str**| FieldSelector to select on field values in list or watch results. | [optional]
  **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
- **_from** | **int**| From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional]
- **max_results** | **int**| MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination. | [optional]
- **sort_order** | **str**| order to sort List results in. | [optional]
- **meta_only** | **bool**| If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default. | [optional]
 
 ### Return type
 

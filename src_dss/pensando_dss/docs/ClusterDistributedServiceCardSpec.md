@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **admit** | **bool** | Admit allows a DistributedServiceCard to join the cluster. | [optional] 
 **controllers** | **[str]** | Controllers contains the list of remote controllers IP addresses or hostnames. | [optional] 
 **dscprofile** | **str** |  | [optional] 
-**enable_fw_logging** | **bool** | EnableFwLogging enables flow logging on the device. | [optional] 
 **enable_secure_boot** | **bool** | EnableSecureBoot a true value indicates, set lifecycle fuse to enable secure boot. | [optional]  if omitted the server will use the default value of False
 **fwlog_policy** | [**ClusterFwlogPolicyRef**](ClusterFwlogPolicyRef.md) |  | [optional] 
 **id** | **str** | ID is used as a user friendly identifier in logs/events. | [optional] 

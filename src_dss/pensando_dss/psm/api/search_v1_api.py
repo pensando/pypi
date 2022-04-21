@@ -55,17 +55,7 @@ class SearchV1Api(object):
 
             Keyword Args:
                 tenant (str): Tenant Name, to perform query within a Tenant's scope. The default tenant is \"default\". In the backend this field gets auto-filled & validated by apigw-hook based on user login context.. [optional]
-                namespace (str): Namespace is optional. If provided policy-search will be limited to the specified namespace.. [optional]
-                app (str): App specification,  predefined apps and alg config.. [optional]
-                protocol (str): Protocol eg: tcp, udp, icmp.. [optional]
-                port (str): TCP or UDP Port number.. [optional]
-                from_ip_address (str): Inbound ip-address, use any to refer to all ipaddresses eg: 10.1.1.1, any.. [optional]
-                to_ip_address (str): Outbound ip-address, use any to refer to all ipaddresses eg: 20.1.1.1, any.. [optional]
-                from_security_group (str): Inbound security group.. [optional]
-                to_security_group (str): Outbound security group.. [optional]
                 kinds ([str]): Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy.. [optional]
-                name (str): Name is optional. If provided policy-search will be limited to the specified policy of the given name on the given kind. If empty, then all the policies of the given kind will be searched.. [optional]
-                action (str): Action, e.g. PERMIT, DENY or REJECT/CLEAR, PROTECT_PERMISSIVE or PROTECT_STRICT.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -124,17 +114,7 @@ class SearchV1Api(object):
             params_map={
                 'all': [
                     'tenant',
-                    'namespace',
-                    'app',
-                    'protocol',
-                    'port',
-                    'from_ip_address',
-                    'to_ip_address',
-                    'from_security_group',
-                    'to_security_group',
                     'kinds',
-                    'name',
-                    'action',
                 ],
                 'required': [],
                 'nullable': [
@@ -152,56 +132,16 @@ class SearchV1Api(object):
                 'openapi_types': {
                     'tenant':
                         (str,),
-                    'namespace':
-                        (str,),
-                    'app':
-                        (str,),
-                    'protocol':
-                        (str,),
-                    'port':
-                        (str,),
-                    'from_ip_address':
-                        (str,),
-                    'to_ip_address':
-                        (str,),
-                    'from_security_group':
-                        (str,),
-                    'to_security_group':
-                        (str,),
                     'kinds':
                         ([str],),
-                    'name':
-                        (str,),
-                    'action':
-                        (str,),
                 },
                 'attribute_map': {
                     'tenant': 'tenant',
-                    'namespace': 'namespace',
-                    'app': 'app',
-                    'protocol': 'protocol',
-                    'port': 'port',
-                    'from_ip_address': 'from-ip-address',
-                    'to_ip_address': 'to-ip-address',
-                    'from_security_group': 'from-security-group',
-                    'to_security_group': 'to-security-group',
                     'kinds': 'kinds',
-                    'name': 'name',
-                    'action': 'action',
                 },
                 'location_map': {
                     'tenant': 'query',
-                    'namespace': 'query',
-                    'app': 'query',
-                    'protocol': 'query',
-                    'port': 'query',
-                    'from_ip_address': 'query',
-                    'to_ip_address': 'query',
-                    'from_security_group': 'query',
-                    'to_security_group': 'query',
                     'kinds': 'query',
-                    'name': 'query',
-                    'action': 'query',
                 },
                 'collection_format_map': {
                     'kinds': 'csv',
@@ -233,14 +173,7 @@ class SearchV1Api(object):
             Keyword Args:
                 query_string (str): Simple query string This can be specified as URI parameter. For advanced query cases, Users should use specify SearchQuery and pass the SearchRequest in a GET/POST Body The max query-string length is 256 bytes. Length of string should be between 0 and 256.. [optional]
                 _from (int): From represents the start offset (zero based), used in paginated search requests The results returned would be in the range [From ... From+MaxResults-1] This can be specified as URI parameter. Default value is 0 and valid range is 0..8192. Value should be between 0 and 8192.. [optional]
-                max_results (int): MaxResults is the max-count of search results This can be specified as URI parameter. Default value is 50 and valid range is 0..8192. Value should be between 0 and 8192.. [optional]
-                sort_by (str): SortyBy is an optional parameter and contains the field name to be sorted by, For eg: \"meta.name\" This can be specified as URI parameter. Length of string should be between 0 and 256.. [optional]
-                sort_order (str): SortOrder is an optional parameter and contains whether to sort ascending or descending This can be specified as URI parameter.. [optional]
-                mode (str): Query Mode.. [optional]
                 query_categories ([str]): OR of Categories to be matched, AND and Exclude are not supported for this type The max category string length is 64 bytes. Length of string should be between 0 and 64.. [optional]
-                query_kinds ([str]): OR of Kinds to be matched, AND and Exclude are not supported for this type. Should be a valid object Kind.. [optional]
-                tenants ([str]): OR of tenants within the scope of which search needs to be performed. If not specified, it will be set to tenant of the logged in user.. [optional]
-                aggregate (bool): Indicates whether to perform aggregation on the search results or not.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -300,14 +233,7 @@ class SearchV1Api(object):
                 'all': [
                     'query_string',
                     '_from',
-                    'max_results',
-                    'sort_by',
-                    'sort_order',
-                    'mode',
                     'query_categories',
-                    'query_kinds',
-                    'tenants',
-                    'aggregate',
                 ],
                 'required': [],
                 'nullable': [
@@ -327,51 +253,21 @@ class SearchV1Api(object):
                         (str,),
                     '_from':
                         (int,),
-                    'max_results':
-                        (int,),
-                    'sort_by':
-                        (str,),
-                    'sort_order':
-                        (str,),
-                    'mode':
-                        (str,),
                     'query_categories':
                         ([str],),
-                    'query_kinds':
-                        ([str],),
-                    'tenants':
-                        ([str],),
-                    'aggregate':
-                        (bool,),
                 },
                 'attribute_map': {
                     'query_string': 'query-string',
                     '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_by': 'sort-by',
-                    'sort_order': 'sort-order',
-                    'mode': 'mode',
                     'query_categories': 'query.categories',
-                    'query_kinds': 'query.kinds',
-                    'tenants': 'tenants',
-                    'aggregate': 'aggregate',
                 },
                 'location_map': {
                     'query_string': 'query',
                     '_from': 'query',
-                    'max_results': 'query',
-                    'sort_by': 'query',
-                    'sort_order': 'query',
-                    'mode': 'query',
                     'query_categories': 'query',
-                    'query_kinds': 'query',
-                    'tenants': 'query',
-                    'aggregate': 'query',
                 },
                 'collection_format_map': {
                     'query_categories': 'csv',
-                    'query_kinds': 'csv',
-                    'tenants': 'csv',
                 }
             },
             headers_map={

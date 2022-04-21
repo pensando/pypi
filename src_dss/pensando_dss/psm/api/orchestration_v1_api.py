@@ -292,31 +292,10 @@ class OrchestrationV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_type (str): Type of orchestrator.. [optional]
-                spec_uri (str): URI of the orchestrator. Length of string should be at least 1.. [optional]
-                credentials_auth_type (str): AuthType is the authentication type used in this config.. [optional]
-                credentials_username (str): UserName is the login id to be used towards the external entity.. [optional]
-                credentials_password (str): Password is one time specified, not visibile on read operations Only valid when UserName is defined.. [optional]
-                credentials_bearer_token (str): External entity supports bearer tokens for authentication and authorization Token refresh is not supported using OAuth2.. [optional]
-                credentials_cert_data (str): CertData holds PEM-encoded bytes (typically read from a client certificate file).. [optional]
-                credentials_key_data (str): KeyData holds PEM-encoded bytes (typically read from a client certificate key file).. [optional]
-                credentials_ca_data (str): CaData holds PEM-encoded bytes (typically read from a root certificates bundle). CaData is used by client to autheticate external server. This is applicable to all authentication methods.. [optional]
-                credentials_disable_server_authentication (bool): DisableServerAuthentication flag can be used when a client does not want to authenticate a server.. [optional]
                 status_connection_status (str): [optional]
                 status_last_transition_time (datetime): [optional]
-                status_message (str): [optional]
-                status_orch_id (int): [optional]
                 status_discovered_namespaces ([str]): [optional]
-                status_incompatible_dscs ([str]): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -378,31 +357,10 @@ class OrchestrationV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_type',
-                    'spec_uri',
-                    'credentials_auth_type',
-                    'credentials_username',
-                    'credentials_password',
-                    'credentials_bearer_token',
-                    'credentials_cert_data',
-                    'credentials_key_data',
-                    'credentials_ca_data',
-                    'credentials_disable_server_authentication',
                     'status_connection_status',
                     'status_last_transition_time',
-                    'status_message',
-                    'status_orch_id',
                     'status_discovered_namespaces',
-                    'status_incompatible_dscs',
                 ],
                 'required': [
                     'o_name',
@@ -424,118 +382,33 @@ class OrchestrationV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_type':
-                        (str,),
-                    'spec_uri':
-                        (str,),
-                    'credentials_auth_type':
-                        (str,),
-                    'credentials_username':
-                        (str,),
-                    'credentials_password':
-                        (str,),
-                    'credentials_bearer_token':
-                        (str,),
-                    'credentials_cert_data':
-                        (str,),
-                    'credentials_key_data':
-                        (str,),
-                    'credentials_ca_data':
-                        (str,),
-                    'credentials_disable_server_authentication':
-                        (bool,),
                     'status_connection_status':
                         (str,),
                     'status_last_transition_time':
                         (datetime,),
-                    'status_message':
-                        (str,),
-                    'status_orch_id':
-                        (int,),
                     'status_discovered_namespaces':
-                        ([str],),
-                    'status_incompatible_dscs':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_type': 'spec.type',
-                    'spec_uri': 'spec.uri',
-                    'credentials_auth_type': 'credentials.auth-type',
-                    'credentials_username': 'credentials.username',
-                    'credentials_password': 'credentials.password',
-                    'credentials_bearer_token': 'credentials.bearer-token',
-                    'credentials_cert_data': 'credentials.cert-data',
-                    'credentials_key_data': 'credentials.key-data',
-                    'credentials_ca_data': 'credentials.ca-data',
-                    'credentials_disable_server_authentication': 'credentials.disable-server-authentication',
                     'status_connection_status': 'status.connection-status',
                     'status_last_transition_time': 'status.last-transition-time',
-                    'status_message': 'status.message',
-                    'status_orch_id': 'status.orch-id',
                     'status_discovered_namespaces': 'status.discovered-namespaces',
-                    'status_incompatible_dscs': 'status.incompatible-dscs',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_type': 'query',
-                    'spec_uri': 'query',
-                    'credentials_auth_type': 'query',
-                    'credentials_username': 'query',
-                    'credentials_password': 'query',
-                    'credentials_bearer_token': 'query',
-                    'credentials_cert_data': 'query',
-                    'credentials_key_data': 'query',
-                    'credentials_ca_data': 'query',
-                    'credentials_disable_server_authentication': 'query',
                     'status_connection_status': 'query',
                     'status_last_transition_time': 'query',
-                    'status_message': 'query',
-                    'status_orch_id': 'query',
                     'status_discovered_namespaces': 'query',
-                    'status_incompatible_dscs': 'query',
                 },
                 'collection_format_map': {
                     'status_discovered_namespaces': 'csv',
-                    'status_incompatible_dscs': 'csv',
                 }
             },
             headers_map={
@@ -690,21 +563,8 @@ class OrchestrationV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -763,21 +623,8 @@ class OrchestrationV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -795,72 +642,20 @@ class OrchestrationV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -1018,21 +813,8 @@ class OrchestrationV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1091,21 +873,8 @@ class OrchestrationV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -1123,72 +892,20 @@ class OrchestrationV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',

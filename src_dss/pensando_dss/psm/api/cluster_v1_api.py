@@ -1584,31 +1584,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 spec_quorum_nodes ([str]): QuorumNodes contains the list of hostnames for nodes configured to be quorum nodes in the cluster.. [optional]
-                spec_virtual_ip (str): VirtualIP is the IP address for managing the cluster. It will be hosted by the winner of election between quorum nodes.. [optional]
-                spec_ntp_servers ([str]): NTPServers contains the list of NTP servers for the cluster.. [optional]
-                spec_auto_admit_dscs (bool): AutoAdmitDSCs when enabled auto-admits DSCs that are validated into Venice Cluster. When it is disabled, DSCs validated by CMD are set to Pending state and it requires Manual approval to be admitted into the cluster.. [optional]
-                spec_certs (str): Certs is the pem encoded certificate bundle used for API Gateway TLS.. [optional]
-                spec_key (str): Key is the pem encoded private key used for API Gateway TLS. We support RSA or ECDSA.. [optional]
-                recovery_keys_psm_version (str): PsmVersion is the version of the PSM SW corresponding to the recovery keys.. [optional]
-                recovery_keys_private_key (str): PrivateKey is the private key generated at cluster bootstrap.. [optional]
-                recovery_keys_trust_chain ([str]): TrustChain is the chain of intermediate certificates that are needed to establish the validity of the public key.. [optional]
-                recovery_keys_trust_roots ([str]): TrustRoot is the certificate of an entity used as a root CA.. [optional]
-                status_leader (str): Leader contains the node name of the cluster leader.. [optional]
-                status_last_leader_transition_time (datetime): LastLeaderTransitionTime is when the leadership changed last time.. [optional]
-                status_auth_bootstrapped (bool): AuthBootstrapped indicates whether the Cluster has Completed BootStrap of Auth.. [optional]
-                status_current_time (datetime): CurrentTime is current time of a cluster.. [optional]
-                status_recovery_keys_downloaded (bool): RecoveryKeysDownloaded indicates whether keys have been downloaded since the cluster has been bootstrapped.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1667,31 +1644,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'spec_quorum_nodes',
-                    'spec_virtual_ip',
-                    'spec_ntp_servers',
-                    'spec_auto_admit_dscs',
-                    'spec_certs',
-                    'spec_key',
-                    'recovery_keys_psm_version',
-                    'recovery_keys_private_key',
-                    'recovery_keys_trust_chain',
-                    'recovery_keys_trust_roots',
-                    'status_leader',
-                    'status_last_leader_transition_time',
-                    'status_auth_bootstrapped',
-                    'status_current_time',
-                    'status_recovery_keys_downloaded',
                 ],
                 'required': [],
                 'nullable': [
@@ -1709,118 +1663,23 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'spec_quorum_nodes':
                         ([str],),
-                    'spec_virtual_ip':
-                        (str,),
-                    'spec_ntp_servers':
-                        ([str],),
-                    'spec_auto_admit_dscs':
-                        (bool,),
-                    'spec_certs':
-                        (str,),
-                    'spec_key':
-                        (str,),
-                    'recovery_keys_psm_version':
-                        (str,),
-                    'recovery_keys_private_key':
-                        (str,),
-                    'recovery_keys_trust_chain':
-                        ([str],),
-                    'recovery_keys_trust_roots':
-                        ([str],),
-                    'status_leader':
-                        (str,),
-                    'status_last_leader_transition_time':
-                        (datetime,),
-                    'status_auth_bootstrapped':
-                        (bool,),
-                    'status_current_time':
-                        (datetime,),
-                    'status_recovery_keys_downloaded':
-                        (bool,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'spec_quorum_nodes': 'spec.quorum-nodes',
-                    'spec_virtual_ip': 'spec.virtual-ip',
-                    'spec_ntp_servers': 'spec.ntp-servers',
-                    'spec_auto_admit_dscs': 'spec.auto-admit-dscs',
-                    'spec_certs': 'spec.certs',
-                    'spec_key': 'spec.key',
-                    'recovery_keys_psm_version': 'recovery-keys.psm-version',
-                    'recovery_keys_private_key': 'recovery-keys.private-key',
-                    'recovery_keys_trust_chain': 'recovery-keys.trust-chain',
-                    'recovery_keys_trust_roots': 'recovery-keys.trust-roots',
-                    'status_leader': 'status.leader',
-                    'status_last_leader_transition_time': 'status.last-leader-transition-time',
-                    'status_auth_bootstrapped': 'status.auth-bootstrapped',
-                    'status_current_time': 'status.current-time',
-                    'status_recovery_keys_downloaded': 'status.recovery-keys-downloaded',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'spec_quorum_nodes': 'query',
-                    'spec_virtual_ip': 'query',
-                    'spec_ntp_servers': 'query',
-                    'spec_auto_admit_dscs': 'query',
-                    'spec_certs': 'query',
-                    'spec_key': 'query',
-                    'recovery_keys_psm_version': 'query',
-                    'recovery_keys_private_key': 'query',
-                    'recovery_keys_trust_chain': 'query',
-                    'recovery_keys_trust_roots': 'query',
-                    'status_leader': 'query',
-                    'status_last_leader_transition_time': 'query',
-                    'status_auth_bootstrapped': 'query',
-                    'status_current_time': 'query',
-                    'status_recovery_keys_downloaded': 'query',
                 },
                 'collection_format_map': {
                     'spec_quorum_nodes': 'csv',
-                    'spec_ntp_servers': 'csv',
-                    'recovery_keys_trust_chain': 'csv',
-                    'recovery_keys_trust_roots': 'csv',
                 }
             },
             headers_map={
@@ -1848,17 +1707,7 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                search_options_enable_fwlog_search (bool): EnableFwlogSearch when enabled peforms reverse indexing of fwlogs getting ingested into PSM. The reverse indexed logs can be queried using the fwlog query/search API.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1917,17 +1766,7 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'search_options_enable_fwlog_search',
                 ],
                 'required': [],
                 'nullable': [
@@ -1945,56 +1784,16 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'search_options_enable_fwlog_search':
-                        (bool,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'search_options_enable_fwlog_search': 'search-options.enable-fwlog-search',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'search_options_enable_fwlog_search': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2024,19 +1823,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 destination_type (str): [optional]
-                last_snapshot_dest_type (str): [optional]
-                last_snapshot_uri (str): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2095,19 +1883,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'destination_type',
-                    'last_snapshot_dest_type',
-                    'last_snapshot_uri',
                 ],
                 'required': [],
                 'nullable': [
@@ -2125,64 +1902,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'destination_type':
-                        (str,),
-                    'last_snapshot_dest_type':
-                        (str,),
-                    'last_snapshot_uri':
                         (str,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'destination_type': 'destination.Type',
-                    'last_snapshot_dest_type': 'last-snapshot.dest-type',
-                    'last_snapshot_uri': 'last-snapshot.uri',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'destination_type': 'query',
-                    'last_snapshot_dest_type': 'query',
-                    'last_snapshot_uri': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2215,71 +1948,9 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_admit (bool): Admit allows a DistributedServiceCard to join the cluster.. [optional]
-                spec_id (str): ID is used as a user friendly identifier in logs/events.. [optional]
-                ip_config_ip_address (str): IPAddress contains the Management IP address of the DistributedServiceCard in CIDR format. Should be a valid v4 or v6 CIDR block.. [optional]
-                ip_config_default_gw (str): DefaultGW contains the default gateway's IP address. Should be a valid v4 or v6 IP address.. [optional]
                 ip_config_dns_servers ([str]): DNSServers contains a list of DNS Servers that can be used on DistributedServiceCard.. [optional]
-                spec_mgmt_mode (str): MgmtMode defines the management mode of the DistributedServiceCard.. [optional]
-                spec_network_mode (str): MgmtMode defines the management mode of the DistributedServiceCard.. [optional]
-                spec_mgmt_vlan (int): MgmtVlan defines the vlan to be used in network managed mode. The default of 0 means we use untagged-vlan for doing inband management. Value should be between 0 and 4095.. [optional]
-                spec_controllers ([str]): Controllers contains the list of remote controllers IP addresses or hostnames.. [optional]
-                spec_routing_config (str): RoutingConfig is the routing configuration for the underlay routed network that this DSC participates in.. [optional]
                 spec_dscprofile (str): [optional]
-                policer_tenant (str): Tenant is the tenant to which policerprofile belongs to.. [optional]
-                policer_tx_policer (str): TxPolicer is the name of the policerprofile to be applied in Tx direction.. [optional]
-                fwlog_policy_tenant (str): Tenant of FwlogPolicy.. [optional]
-                fwlog_policy_name (str): Name of FwlogPolicy.. [optional]
-                spec_enable_fw_logging (bool): EnableFwLogging enables flow logging on the device.. [optional]
-                spec_enable_secure_boot (bool): EnableSecureBoot a true value indicates, set lifecycle fuse to enable secure boot.. [optional]
-                status_admission_phase (str): Current admission phase of the DistributedServiceCard. When auto-admission is enabled, AdmissionPhase will be set to NIC_ADMITTED by CMD for validated NICs. When auto-admission is not enabled, AdmissionPhase will be set to NIC_PENDING by CMD for validated NICs since it requires manual approval. To admit the NIC as a part of manual admission, user is expected to set Spec.Admit to true for the NICs that are in NIC_PENDING state. Note : Whitelist mode is not supported yet.. [optional]
-                status_serial_num (str): Serial number.. [optional]
-                status_primary_mac (str): PrimaryMAC is the MAC address of the primary PF exposed by DistributedServiceCard. Should be a valid MAC address.. [optional]
-                ip_config_ip_address2 (str): IPAddress contains the Management IP address of the DistributedServiceCard in CIDR format. Should be a valid v4 or v6 CIDR block.. [optional]
-                ip_config_default_gw2 (str): DefaultGW contains the default gateway's IP address. Should be a valid v4 or v6 IP address.. [optional]
-                ip_config_dns_servers2 ([str]): DNSServers contains a list of DNS Servers that can be used on DistributedServiceCard.. [optional]
-                bios_info_vendor (str): Vendor name.. [optional]
-                bios_info_version (str): BIOS version.. [optional]
-                bios_info_fw_major_ver (str): Firmware major release info.. [optional]
-                bios_info_fw_minor_ver (str): Firmware minor release info.. [optional]
-                os_info_type (str): OS Name Eg: GNU/Linux.. [optional]
-                os_info_kernel_release (str): Kernel release Eg: 3.10.0-514.10.2.el7.x86_64.. [optional]
-                os_info_kernel_version (str): Kernel version Eg: #1 SMP Fri Mar 3 00:04:05 UTC 2017.. [optional]
-                os_info_processor (str): Processor Info Eg: x86_64.. [optional]
-                cpu_info_speed (str): CPU speed per core, eg: 2099998101.. [optional]
-                cpu_info_num_sockets (int): Number of CPU sockets, eg: 2, 4.. [optional]
-                cpu_info_num_cores (int): Number of physical CPU cores per socket, eg: 36.. [optional]
-                cpu_info_num_threads (int): Number of threads per core, eg: 2.. [optional]
-                memory_info_type (str): Type.. [optional]
-                memory_info_size (str): Memory size in bytes, eg: 274760318976.. [optional]
-                status_interfaces ([str]): Network Interfaces.. [optional]
-                status_dsc_version (str): DSC Version.. [optional]
-                status_dsc_sku (str): DSC SKU.. [optional]
-                status_host (str): The name of the host this DistributedServiceCard is plugged into.. [optional]
-                status_adm_phase_reason (str): The reason why the DistributedServiceCard is not in ADMITTED state.. [optional]
-                status_version_mismatch (bool): Set to true if venice and dsc versions are incompatible.. [optional]
-                control_plane_status_last_updated_time (str): The last time the control plane was updated.. [optional]
-                control_plane_status_message (str): A message indicating details about the control plane status.. [optional]
-                status_is_connected_to_psm (bool): IsConnectedToPSM is set to true if connected to PSM.. [optional]
-                status_unhealthy_services ([str]): Lists the unhealthy services of a distributed service card.. [optional]
-                status_num_mac_address (int): NumMacAddress has the number of mac addresses that is available on this DSC. Value should be between 0 and 256.. [optional]
-                inband_ip_config_ip_address (str): IPAddress contains the Management IP address of the DistributedServiceCard in CIDR format. Should be a valid v4 or v6 CIDR block.. [optional]
-                inband_ip_config_default_gw (str): DefaultGW contains the default gateway's IP address. Should be a valid v4 or v6 IP address.. [optional]
-                inband_ip_config_dns_servers ([str]): DNSServers contains a list of DNS Servers that can be used on DistributedServiceCard.. [optional]
-                status_secure_booted (bool): SecureBooted a true value indicates, secure boot is enabled.. [optional]
-                status_alom_present (bool): ALOMPresent true value indicates ALOM cable is present.. [optional]
-                status_package_type (str): Type of DSC.. [optional]
-                dss_info_host_name (str): Hostname of the switch.. [optional]
-                dss_info_version (str): switch software version.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2341,71 +2012,9 @@ class ClusterV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_admit',
-                    'spec_id',
-                    'ip_config_ip_address',
-                    'ip_config_default_gw',
                     'ip_config_dns_servers',
-                    'spec_mgmt_mode',
-                    'spec_network_mode',
-                    'spec_mgmt_vlan',
-                    'spec_controllers',
-                    'spec_routing_config',
                     'spec_dscprofile',
-                    'policer_tenant',
-                    'policer_tx_policer',
-                    'fwlog_policy_tenant',
-                    'fwlog_policy_name',
-                    'spec_enable_fw_logging',
-                    'spec_enable_secure_boot',
-                    'status_admission_phase',
-                    'status_serial_num',
-                    'status_primary_mac',
-                    'ip_config_ip_address2',
-                    'ip_config_default_gw2',
-                    'ip_config_dns_servers2',
-                    'bios_info_vendor',
-                    'bios_info_version',
-                    'bios_info_fw_major_ver',
-                    'bios_info_fw_minor_ver',
-                    'os_info_type',
-                    'os_info_kernel_release',
-                    'os_info_kernel_version',
-                    'os_info_processor',
-                    'cpu_info_speed',
-                    'cpu_info_num_sockets',
-                    'cpu_info_num_cores',
-                    'cpu_info_num_threads',
-                    'memory_info_type',
-                    'memory_info_size',
-                    'status_interfaces',
-                    'status_dsc_version',
-                    'status_dsc_sku',
-                    'status_host',
-                    'status_adm_phase_reason',
-                    'status_version_mismatch',
-                    'control_plane_status_last_updated_time',
-                    'control_plane_status_message',
-                    'status_is_connected_to_psm',
-                    'status_unhealthy_services',
-                    'status_num_mac_address',
-                    'inband_ip_config_ip_address',
-                    'inband_ip_config_default_gw',
-                    'inband_ip_config_dns_servers',
-                    'status_secure_booted',
-                    'status_alom_present',
-                    'status_package_type',
-                    'dss_info_host_name',
-                    'dss_info_version',
                 ],
                 'required': [
                     'o_name',
@@ -2427,282 +2036,29 @@ class ClusterV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_admit':
-                        (bool,),
-                    'spec_id':
-                        (str,),
-                    'ip_config_ip_address':
-                        (str,),
-                    'ip_config_default_gw':
-                        (str,),
                     'ip_config_dns_servers':
                         ([str],),
-                    'spec_mgmt_mode':
-                        (str,),
-                    'spec_network_mode':
-                        (str,),
-                    'spec_mgmt_vlan':
-                        (int,),
-                    'spec_controllers':
-                        ([str],),
-                    'spec_routing_config':
-                        (str,),
                     'spec_dscprofile':
-                        (str,),
-                    'policer_tenant':
-                        (str,),
-                    'policer_tx_policer':
-                        (str,),
-                    'fwlog_policy_tenant':
-                        (str,),
-                    'fwlog_policy_name':
-                        (str,),
-                    'spec_enable_fw_logging':
-                        (bool,),
-                    'spec_enable_secure_boot':
-                        (bool,),
-                    'status_admission_phase':
-                        (str,),
-                    'status_serial_num':
-                        (str,),
-                    'status_primary_mac':
-                        (str,),
-                    'ip_config_ip_address2':
-                        (str,),
-                    'ip_config_default_gw2':
-                        (str,),
-                    'ip_config_dns_servers2':
-                        ([str],),
-                    'bios_info_vendor':
-                        (str,),
-                    'bios_info_version':
-                        (str,),
-                    'bios_info_fw_major_ver':
-                        (str,),
-                    'bios_info_fw_minor_ver':
-                        (str,),
-                    'os_info_type':
-                        (str,),
-                    'os_info_kernel_release':
-                        (str,),
-                    'os_info_kernel_version':
-                        (str,),
-                    'os_info_processor':
-                        (str,),
-                    'cpu_info_speed':
-                        (str,),
-                    'cpu_info_num_sockets':
-                        (int,),
-                    'cpu_info_num_cores':
-                        (int,),
-                    'cpu_info_num_threads':
-                        (int,),
-                    'memory_info_type':
-                        (str,),
-                    'memory_info_size':
-                        (str,),
-                    'status_interfaces':
-                        ([str],),
-                    'status_dsc_version':
-                        (str,),
-                    'status_dsc_sku':
-                        (str,),
-                    'status_host':
-                        (str,),
-                    'status_adm_phase_reason':
-                        (str,),
-                    'status_version_mismatch':
-                        (bool,),
-                    'control_plane_status_last_updated_time':
-                        (str,),
-                    'control_plane_status_message':
-                        (str,),
-                    'status_is_connected_to_psm':
-                        (bool,),
-                    'status_unhealthy_services':
-                        ([str],),
-                    'status_num_mac_address':
-                        (int,),
-                    'inband_ip_config_ip_address':
-                        (str,),
-                    'inband_ip_config_default_gw':
-                        (str,),
-                    'inband_ip_config_dns_servers':
-                        ([str],),
-                    'status_secure_booted':
-                        (bool,),
-                    'status_alom_present':
-                        (bool,),
-                    'status_package_type':
-                        (str,),
-                    'dss_info_host_name':
-                        (str,),
-                    'dss_info_version':
                         (str,),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_admit': 'spec.admit',
-                    'spec_id': 'spec.id',
-                    'ip_config_ip_address': 'ip-config.ip-address',
-                    'ip_config_default_gw': 'ip-config.default-gw',
                     'ip_config_dns_servers': 'ip-config.dns-servers',
-                    'spec_mgmt_mode': 'spec.mgmt-mode',
-                    'spec_network_mode': 'spec.network-mode',
-                    'spec_mgmt_vlan': 'spec.mgmt-vlan',
-                    'spec_controllers': 'spec.controllers',
-                    'spec_routing_config': 'spec.routing-config',
                     'spec_dscprofile': 'spec.dscprofile',
-                    'policer_tenant': 'policer.tenant',
-                    'policer_tx_policer': 'policer.tx-policer',
-                    'fwlog_policy_tenant': 'fwlog-policy.tenant',
-                    'fwlog_policy_name': 'fwlog-policy.name',
-                    'spec_enable_fw_logging': 'spec.enable-fw-logging',
-                    'spec_enable_secure_boot': 'spec.enable-secure-boot',
-                    'status_admission_phase': 'status.admission-phase',
-                    'status_serial_num': 'status.serial-num',
-                    'status_primary_mac': 'status.primary-mac',
-                    'ip_config_ip_address2': 'ip-config.ip-address',
-                    'ip_config_default_gw2': 'ip-config.default-gw',
-                    'ip_config_dns_servers2': 'ip-config.dns-servers',
-                    'bios_info_vendor': 'bios-info.vendor',
-                    'bios_info_version': 'bios-info.version',
-                    'bios_info_fw_major_ver': 'bios-info.fw-major-ver',
-                    'bios_info_fw_minor_ver': 'bios-info.fw-minor-ver',
-                    'os_info_type': 'os-info.type',
-                    'os_info_kernel_release': 'os-info.kernel-release',
-                    'os_info_kernel_version': 'os-info.kernel-version',
-                    'os_info_processor': 'os-info.processor',
-                    'cpu_info_speed': 'cpu-info.speed',
-                    'cpu_info_num_sockets': 'cpu-info.num-sockets',
-                    'cpu_info_num_cores': 'cpu-info.num-cores',
-                    'cpu_info_num_threads': 'cpu-info.num-threads',
-                    'memory_info_type': 'memory-info.type',
-                    'memory_info_size': 'memory-info.size',
-                    'status_interfaces': 'status.interfaces',
-                    'status_dsc_version': 'status.DSCVersion',
-                    'status_dsc_sku': 'status.DSCSku',
-                    'status_host': 'status.host',
-                    'status_adm_phase_reason': 'status.adm-phase-reason',
-                    'status_version_mismatch': 'status.version-mismatch',
-                    'control_plane_status_last_updated_time': 'control-plane-status.last-updated-time',
-                    'control_plane_status_message': 'control-plane-status.message',
-                    'status_is_connected_to_psm': 'status.is-connected-to-psm',
-                    'status_unhealthy_services': 'status.unhealthy-services',
-                    'status_num_mac_address': 'status.num-mac-address',
-                    'inband_ip_config_ip_address': 'inband-ip-config.ip-address',
-                    'inband_ip_config_default_gw': 'inband-ip-config.default-gw',
-                    'inband_ip_config_dns_servers': 'inband-ip-config.dns-servers',
-                    'status_secure_booted': 'status.secure-booted',
-                    'status_alom_present': 'status.alom-present',
-                    'status_package_type': 'status.package-type',
-                    'dss_info_host_name': 'dss-info.host-name',
-                    'dss_info_version': 'dss-info.version',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_admit': 'query',
-                    'spec_id': 'query',
-                    'ip_config_ip_address': 'query',
-                    'ip_config_default_gw': 'query',
                     'ip_config_dns_servers': 'query',
-                    'spec_mgmt_mode': 'query',
-                    'spec_network_mode': 'query',
-                    'spec_mgmt_vlan': 'query',
-                    'spec_controllers': 'query',
-                    'spec_routing_config': 'query',
                     'spec_dscprofile': 'query',
-                    'policer_tenant': 'query',
-                    'policer_tx_policer': 'query',
-                    'fwlog_policy_tenant': 'query',
-                    'fwlog_policy_name': 'query',
-                    'spec_enable_fw_logging': 'query',
-                    'spec_enable_secure_boot': 'query',
-                    'status_admission_phase': 'query',
-                    'status_serial_num': 'query',
-                    'status_primary_mac': 'query',
-                    'ip_config_ip_address2': 'query',
-                    'ip_config_default_gw2': 'query',
-                    'ip_config_dns_servers2': 'query',
-                    'bios_info_vendor': 'query',
-                    'bios_info_version': 'query',
-                    'bios_info_fw_major_ver': 'query',
-                    'bios_info_fw_minor_ver': 'query',
-                    'os_info_type': 'query',
-                    'os_info_kernel_release': 'query',
-                    'os_info_kernel_version': 'query',
-                    'os_info_processor': 'query',
-                    'cpu_info_speed': 'query',
-                    'cpu_info_num_sockets': 'query',
-                    'cpu_info_num_cores': 'query',
-                    'cpu_info_num_threads': 'query',
-                    'memory_info_type': 'query',
-                    'memory_info_size': 'query',
-                    'status_interfaces': 'query',
-                    'status_dsc_version': 'query',
-                    'status_dsc_sku': 'query',
-                    'status_host': 'query',
-                    'status_adm_phase_reason': 'query',
-                    'status_version_mismatch': 'query',
-                    'control_plane_status_last_updated_time': 'query',
-                    'control_plane_status_message': 'query',
-                    'status_is_connected_to_psm': 'query',
-                    'status_unhealthy_services': 'query',
-                    'status_num_mac_address': 'query',
-                    'inband_ip_config_ip_address': 'query',
-                    'inband_ip_config_default_gw': 'query',
-                    'inband_ip_config_dns_servers': 'query',
-                    'status_secure_booted': 'query',
-                    'status_alom_present': 'query',
-                    'status_package_type': 'query',
-                    'dss_info_host_name': 'query',
-                    'dss_info_version': 'query',
                 },
                 'collection_format_map': {
                     'ip_config_dns_servers': 'csv',
-                    'spec_controllers': 'csv',
-                    'ip_config_dns_servers2': 'csv',
-                    'status_interfaces': 'csv',
-                    'status_unhealthy_services': 'csv',
-                    'inband_ip_config_dns_servers': 'csv',
                 }
             },
             headers_map={
@@ -2733,25 +2089,9 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 spec_deployment_target (str): [optional]
-                spec_feature_set (str): [optional]
                 interface_profile_num_pfs (int): [optional]
-                interface_profile_num_vfs (int): [optional]
-                spec_apply_policies_to_encapsulated_traffic (str): [optional]
-                propagation_status_generation_id (str): The Generation ID this status is for.. [optional]
-                propagation_status_updated (int): The number of Naples that this version has already been pushed to.. [optional]
-                propagation_status_pending (int): Number of Naples pending. If this is 0 it can be assumed that everything is up to date.. [optional]
-                propagation_status_min_version (str): The Version running on the slowest Naples.. [optional]
-                propagation_status_status (str): Textual description of propagation status.. [optional]
                 propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
@@ -2814,25 +2154,9 @@ class ClusterV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'spec_deployment_target',
-                    'spec_feature_set',
                     'interface_profile_num_pfs',
-                    'interface_profile_num_vfs',
-                    'spec_apply_policies_to_encapsulated_traffic',
-                    'propagation_status_generation_id',
-                    'propagation_status_updated',
-                    'propagation_status_pending',
-                    'propagation_status_min_version',
-                    'propagation_status_status',
                     'propagation_status_pending_dscs',
                 ],
                 'required': [
@@ -2855,93 +2179,29 @@ class ClusterV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'spec_deployment_target':
-                        (str,),
-                    'spec_feature_set':
                         (str,),
                     'interface_profile_num_pfs':
                         (int,),
-                    'interface_profile_num_vfs':
-                        (int,),
-                    'spec_apply_policies_to_encapsulated_traffic':
-                        (str,),
-                    'propagation_status_generation_id':
-                        (str,),
-                    'propagation_status_updated':
-                        (int,),
-                    'propagation_status_pending':
-                        (int,),
-                    'propagation_status_min_version':
-                        (str,),
-                    'propagation_status_status':
-                        (str,),
                     'propagation_status_pending_dscs':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'spec_deployment_target': 'spec.deployment-target',
-                    'spec_feature_set': 'spec.feature-set',
                     'interface_profile_num_pfs': 'interface-profile.num-pfs',
-                    'interface_profile_num_vfs': 'interface-profile.num-vfs',
-                    'spec_apply_policies_to_encapsulated_traffic': 'spec.apply-policies-to-encapsulated-traffic',
-                    'propagation_status_generation_id': 'propagation-status.generation-id',
-                    'propagation_status_updated': 'propagation-status.updated',
-                    'propagation_status_pending': 'propagation-status.pending',
-                    'propagation_status_min_version': 'propagation-status.min-version',
-                    'propagation_status_status': 'propagation-status.status',
                     'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'spec_deployment_target': 'query',
-                    'spec_feature_set': 'query',
                     'interface_profile_num_pfs': 'query',
-                    'interface_profile_num_vfs': 'query',
-                    'spec_apply_policies_to_encapsulated_traffic': 'query',
-                    'propagation_status_generation_id': 'query',
-                    'propagation_status_updated': 'query',
-                    'propagation_status_pending': 'query',
-                    'propagation_status_min_version': 'query',
-                    'propagation_status_status': 'query',
                     'propagation_status_pending_dscs': 'query',
                 },
                 'collection_format_map': {
@@ -2976,17 +2236,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 status_admitted_dscs ([str]): AdmittedDSCs contains a list of admitted DistributedServiceCards that are on this host.. [optional]
-                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this host.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3048,17 +2299,8 @@ class ClusterV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'status_admitted_dscs',
-                    'status_mirror_sessions',
                 ],
                 'required': [
                     'o_name',
@@ -3080,62 +2322,25 @@ class ClusterV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'status_admitted_dscs':
-                        ([str],),
-                    'status_mirror_sessions':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'status_admitted_dscs': 'status.admitted-dscs',
-                    'status_mirror_sessions': 'status.mirror-sessions',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'status_admitted_dscs': 'query',
-                    'status_mirror_sessions': 'query',
                 },
                 'collection_format_map': {
                     'status_admitted_dscs': 'csv',
-                    'status_mirror_sessions': 'csv',
                 }
             },
             headers_map={
@@ -3163,16 +2368,7 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 status_unknown ([str]): Licenses that are not understood by the current running version of software.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
@@ -3232,16 +2428,7 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'status_unknown',
                 ],
                 'required': [],
@@ -3260,55 +2447,19 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'status_unknown':
                         ([str],),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'status_unknown': 'status.unknown',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'status_unknown': 'query',
                 },
                 'collection_format_map': {
@@ -3343,18 +2494,7 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_routing_config (str): RoutingConfig the routing configuration.. [optional]
-                status_phase (str): Current lifecycle phase of the node.. [optional]
-                status_quorum (bool): Quorum node or not.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3416,18 +2556,7 @@ class ClusterV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_routing_config',
-                    'status_phase',
-                    'status_quorum',
                 ],
                 'required': [
                     'o_name',
@@ -3449,62 +2578,18 @@ class ClusterV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_routing_config':
-                        (str,),
-                    'status_phase':
-                        (str,),
-                    'status_quorum':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_routing_config': 'spec.routing-config',
-                    'status_phase': 'status.phase',
-                    'status_quorum': 'status.quorum',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_routing_config': 'query',
-                    'status_phase': 'query',
-                    'status_quorum': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -3534,21 +2619,9 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 spec_path (str): [optional]
-                status_status (str): [optional]
                 status_start_time (datetime): [optional]
-                status_end_time (datetime): [optional]
-                status_backup_snapshot_path (str): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3607,21 +2680,9 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                     'spec_path',
-                    'status_status',
                     'status_start_time',
-                    'status_end_time',
-                    'status_backup_snapshot_path',
                 ],
                 'required': [],
                 'nullable': [
@@ -3639,72 +2700,24 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                     'spec_path':
-                        (str,),
-                    'status_status':
                         (str,),
                     'status_start_time':
                         (datetime,),
-                    'status_end_time':
-                        (datetime,),
-                    'status_backup_snapshot_path':
-                        (str,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                     'spec_path': 'spec.path',
-                    'status_status': 'status.status',
                     'status_start_time': 'status.start-time',
-                    'status_end_time': 'status.end-time',
-                    'status_backup_snapshot_path': 'status.backup-snapshot-path',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                     'spec_path': 'query',
-                    'status_status': 'query',
                     'status_start_time': 'query',
-                    'status_end_time': 'query',
-                    'status_backup_snapshot_path': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -3737,16 +2750,7 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_admin_user (str): Tenant admin user.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3808,16 +2812,7 @@ class ClusterV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_admin_user',
                 ],
                 'required': [
                     'o_name',
@@ -3839,54 +2834,18 @@ class ClusterV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_admin_user':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_admin_user': 'spec.admin-user',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_admin_user': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -3916,21 +2875,7 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_auto_rollout_dsc_version (str): AutoRolloutDSCVersion indicates the version DSCs will be automatically upgraded upon admission. Empty value indicates no auto-rollout.. [optional]
-                status_build_version (str): Human friendly build version.. [optional]
-                status_vcs_commit (str): Representation of ommit in version control system - e.g: hash in git.. [optional]
-                status_build_date (str): Date and Time at which the source code was built.. [optional]
-                status_rollout_build_version (str): RolloutBuildVersion shows in progress rollout version.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3989,21 +2934,7 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_auto_rollout_dsc_version',
-                    'status_build_version',
-                    'status_vcs_commit',
-                    'status_build_date',
-                    'status_rollout_build_version',
                 ],
                 'required': [],
                 'nullable': [
@@ -4021,72 +2952,16 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_auto_rollout_dsc_version':
-                        (str,),
-                    'status_build_version':
-                        (str,),
-                    'status_vcs_commit':
-                        (str,),
-                    'status_build_date':
-                        (str,),
-                    'status_rollout_build_version':
-                        (str,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_auto_rollout_dsc_version': 'spec.auto-rollout-dsc-version',
-                    'status_build_version': 'status.build-version',
-                    'status_vcs_commit': 'status.vcs-commit',
-                    'status_build_date': 'status.build-date',
-                    'status_rollout_build_version': 'status.rollout-build-version',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_auto_rollout_dsc_version': 'query',
-                    'status_build_version': 'query',
-                    'status_vcs_commit': 'query',
-                    'status_build_date': 'query',
-                    'status_rollout_build_version': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -5219,21 +4094,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5292,21 +4154,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -5324,72 +4173,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -5420,21 +4217,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5493,21 +4277,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -5525,72 +4296,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -5621,21 +4340,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5694,21 +4400,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -5726,72 +4419,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -5822,21 +4463,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -5895,21 +4523,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -5927,72 +4542,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -6023,21 +4586,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6096,21 +4646,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -6128,72 +4665,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -7795,21 +6280,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7868,21 +6340,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -7900,72 +6359,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -7996,21 +6403,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8069,21 +6463,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -8101,72 +6482,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -8197,21 +6526,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8270,21 +6586,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -8302,72 +6605,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -8398,21 +6649,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8471,21 +6709,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -8503,72 +6728,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -8599,21 +6772,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8672,21 +6832,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -8704,72 +6851,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -8800,21 +6895,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -8873,21 +6955,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -8905,72 +6974,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -9001,21 +7018,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -9074,21 +7078,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -9106,72 +7097,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -9202,21 +7141,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -9275,21 +7201,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -9307,72 +7220,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -9403,21 +7264,8 @@ class ClusterV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -9476,21 +7324,8 @@ class ClusterV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -9508,72 +7343,20 @@ class ClusterV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',

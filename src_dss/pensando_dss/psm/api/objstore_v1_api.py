@@ -44,7 +44,6 @@ class ObjstoreV1Api(object):
         def __add_object(
             self,
             o_tenant,
-            o_namespace,
             body,
             **kwargs
         ):
@@ -53,12 +52,11 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.add_object(o_tenant, o_namespace, body, async_req=True)
+            >>> thread = api.add_object(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
                 body (ObjstoreObject):
 
             Keyword Args:
@@ -108,8 +106,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -126,12 +122,10 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
                     'body',
                 ],
                 'nullable': [
@@ -149,18 +143,14 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
                     'body':
                         (ObjstoreObject,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -308,8 +298,6 @@ class ObjstoreV1Api(object):
         def __delete_object(
             self,
             o_tenant,
-            o_namespace,
-            o_name,
             **kwargs
         ):
             """Delete Object object  # noqa: E501
@@ -317,13 +305,11 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.delete_object(o_tenant, o_namespace, o_name, async_req=True)
+            >>> thread = api.delete_object(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 _return_http_data_only (bool): response data without head status
@@ -372,10 +358,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.delete_object = _Endpoint(
@@ -390,13 +372,9 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -413,20 +391,12 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_name':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
-                    'o_name': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -444,7 +414,6 @@ class ObjstoreV1Api(object):
         def __delete_object1(
             self,
             o_namespace,
-            o_name,
             **kwargs
         ):
             """Delete Object object  # noqa: E501
@@ -452,12 +421,11 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.delete_object1(o_namespace, o_name, async_req=True)
+            >>> thread = api.delete_object1(o_namespace, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 _return_http_data_only (bool): response data without head status
@@ -506,8 +474,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_namespace'] = \
                 o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.delete_object1 = _Endpoint(
@@ -522,11 +488,9 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_namespace',
-                    'o_name',
                 ],
                 'required': [
                     'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -543,16 +507,12 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_namespace':
                         (str,),
-                    'o_name':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_namespace': 'path',
-                    'o_name': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -570,8 +530,6 @@ class ObjstoreV1Api(object):
         def __get_download_file(
             self,
             o_tenant,
-            o_namespace,
-            o_name,
             **kwargs
         ):
             """Download file  # noqa: E501
@@ -579,26 +537,15 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_download_file(o_tenant, o_namespace, o_name, async_req=True)
+            >>> thread = api.get_download_file(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_content_type (str): Content-Type for the stored object. Can either be specified when uploading. or the backend guesses one if possible.. [optional]
-                status_size (str): Size is the total size of the object.. [optional]
-                status_digest (str): Digest is a hash digest of the object content.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -645,10 +592,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_download_file = _Endpoint(
@@ -663,24 +606,11 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_content_type',
-                    'status_size',
-                    'status_digest',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -697,64 +627,20 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_content_type':
-                        (str,),
-                    'status_size':
-                        (str,),
-                    'status_digest':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_content_type': 'spec.content-type',
-                    'status_size': 'status.size',
-                    'status_digest': 'status.digest',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_content_type': 'query',
-                    'status_size': 'query',
-                    'status_digest': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -772,7 +658,6 @@ class ObjstoreV1Api(object):
         def __get_download_file1(
             self,
             o_namespace,
-            o_name,
             **kwargs
         ):
             """Download file  # noqa: E501
@@ -780,26 +665,15 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_download_file1(o_namespace, o_name, async_req=True)
+            >>> thread = api.get_download_file1(o_namespace, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_content_type (str): Content-Type for the stored object. Can either be specified when uploading. or the backend guesses one if possible.. [optional]
-                status_size (str): Size is the total size of the object.. [optional]
-                status_digest (str): Digest is a hash digest of the object content.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -846,8 +720,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_namespace'] = \
                 o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_download_file1 = _Endpoint(
@@ -862,23 +734,11 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_namespace',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_content_type',
-                    'status_size',
-                    'status_digest',
                 ],
                 'required': [
                     'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -895,64 +755,20 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_namespace':
                         (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_content_type':
-                        (str,),
-                    'status_size':
-                        (str,),
-                    'status_digest':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_content_type': 'spec.content-type',
-                    'status_size': 'status.size',
-                    'status_digest': 'status.digest',
                 },
                 'location_map': {
                     'o_namespace': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_content_type': 'query',
-                    'status_size': 'query',
-                    'status_digest': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -970,8 +786,6 @@ class ObjstoreV1Api(object):
         def __get_download_file_by_prefix(
             self,
             o_tenant,
-            o_namespace,
-            o_name,
             **kwargs
         ):
             """Download file by prefix  # noqa: E501
@@ -979,26 +793,15 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_download_file_by_prefix(o_tenant, o_namespace, o_name, async_req=True)
+            >>> thread = api.get_download_file_by_prefix(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_content_type (str): Content-Type for the stored object. Can either be specified when uploading. or the backend guesses one if possible.. [optional]
-                status_size (str): Size is the total size of the object.. [optional]
-                status_digest (str): Digest is a hash digest of the object content.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1045,10 +848,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_download_file_by_prefix = _Endpoint(
@@ -1063,24 +862,11 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_content_type',
-                    'status_size',
-                    'status_digest',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -1097,64 +883,20 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_content_type':
-                        (str,),
-                    'status_size':
-                        (str,),
-                    'status_digest':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_content_type': 'spec.content-type',
-                    'status_size': 'status.size',
-                    'status_digest': 'status.digest',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_content_type': 'query',
-                    'status_size': 'query',
-                    'status_digest': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1172,8 +914,6 @@ class ObjstoreV1Api(object):
         def __get_object(
             self,
             o_tenant,
-            o_namespace,
-            o_name,
             **kwargs
         ):
             """Get Object object  # noqa: E501
@@ -1181,26 +921,15 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_object(o_tenant, o_namespace, o_name, async_req=True)
+            >>> thread = api.get_object(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_content_type (str): Content-Type for the stored object. Can either be specified when uploading. or the backend guesses one if possible.. [optional]
-                status_size (str): Size is the total size of the object.. [optional]
-                status_digest (str): Digest is a hash digest of the object content.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1247,10 +976,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_object = _Endpoint(
@@ -1265,24 +990,11 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_content_type',
-                    'status_size',
-                    'status_digest',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -1299,64 +1011,20 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_content_type':
-                        (str,),
-                    'status_size':
-                        (str,),
-                    'status_digest':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_content_type': 'spec.content-type',
-                    'status_size': 'status.size',
-                    'status_digest': 'status.digest',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_content_type': 'query',
-                    'status_size': 'query',
-                    'status_digest': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1374,7 +1042,6 @@ class ObjstoreV1Api(object):
         def __get_object1(
             self,
             o_namespace,
-            o_name,
             **kwargs
         ):
             """Get Object object  # noqa: E501
@@ -1382,26 +1049,15 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_object1(o_namespace, o_name, async_req=True)
+            >>> thread = api.get_object1(o_namespace, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_namespace (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_content_type (str): Content-Type for the stored object. Can either be specified when uploading. or the backend guesses one if possible.. [optional]
-                status_size (str): Size is the total size of the object.. [optional]
-                status_digest (str): Digest is a hash digest of the object content.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1448,8 +1104,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_namespace'] = \
                 o_namespace
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_object1 = _Endpoint(
@@ -1464,23 +1118,11 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_namespace',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_content_type',
-                    'status_size',
-                    'status_digest',
                 ],
                 'required': [
                     'o_namespace',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -1497,64 +1139,20 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_namespace':
                         (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_content_type':
-                        (str,),
-                    'status_size':
-                        (str,),
-                    'status_digest':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_namespace': 'O.Namespace',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_content_type': 'spec.content-type',
-                    'status_size': 'status.size',
-                    'status_digest': 'status.digest',
                 },
                 'location_map': {
                     'o_namespace': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_content_type': 'query',
-                    'status_size': 'query',
-                    'status_digest': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -1572,7 +1170,6 @@ class ObjstoreV1Api(object):
         def __list_object(
             self,
             o_tenant,
-            o_namespace,
             **kwargs
         ):
             """List Object objects  # noqa: E501
@@ -1580,28 +1177,16 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.list_object(o_tenant, o_namespace, async_req=True)
+            >>> thread = api.list_object(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1648,8 +1233,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
             return self.call_with_http_info(**kwargs)
 
         self.list_object = _Endpoint(
@@ -1664,25 +1247,12 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
                     'o_name',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
                 ],
                 'nullable': [
                 ],
@@ -1699,72 +1269,24 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
                     'o_name':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
                         (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
                     'o_name': 'O.name',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
                     'o_name': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -1798,20 +1320,8 @@ class ObjstoreV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1873,20 +1383,8 @@ class ObjstoreV1Api(object):
                 'all': [
                     'o_namespace',
                     'o_name',
-                    'o_tenant',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_namespace',
@@ -1908,70 +1406,22 @@ class ObjstoreV1Api(object):
                         (str,),
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_namespace': 'O.Namespace',
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_namespace': 'path',
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -1990,7 +1440,6 @@ class ObjstoreV1Api(object):
         def __watch_object(
             self,
             o_tenant,
-            o_namespace,
             **kwargs
         ):
             """Watch Object objects. Supports WebSockets or HTTP long poll  # noqa: E501
@@ -1998,28 +1447,16 @@ class ObjstoreV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.watch_object(o_tenant, o_namespace, async_req=True)
+            >>> thread = api.watch_object(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_namespace (str):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2066,8 +1503,6 @@ class ObjstoreV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_namespace'] = \
-                o_namespace
             return self.call_with_http_info(**kwargs)
 
         self.watch_object = _Endpoint(
@@ -2082,25 +1517,12 @@ class ObjstoreV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_namespace',
                     'o_name',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_namespace',
                 ],
                 'nullable': [
                 ],
@@ -2117,72 +1539,24 @@ class ObjstoreV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_namespace':
-                        (str,),
                     'o_name':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
                         (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_namespace': 'O.Namespace',
                     'o_name': 'O.name',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_namespace': 'path',
                     'o_name': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -2216,20 +1590,8 @@ class ObjstoreV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2291,20 +1653,8 @@ class ObjstoreV1Api(object):
                 'all': [
                     'o_namespace',
                     'o_name',
-                    'o_tenant',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_namespace',
@@ -2326,70 +1676,22 @@ class ObjstoreV1Api(object):
                         (str,),
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_namespace': 'O.Namespace',
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_namespace': 'path',
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',

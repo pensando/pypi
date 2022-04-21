@@ -90,6 +90,7 @@ class BrowserBrowseRequest(ModelNormal):
             'api_version': (str,),  # noqa: E501
             'count_only': (bool,),  # noqa: E501
             'kind': (str,),  # noqa: E501
+            'kind_filters': ([str],),  # noqa: E501
             'max_depth': (int,),  # noqa: E501
             'meta': (ApiObjectMeta,),  # noqa: E501
             'query_type': (str,),  # noqa: E501
@@ -105,6 +106,7 @@ class BrowserBrowseRequest(ModelNormal):
         'api_version': 'api-version',  # noqa: E501
         'count_only': 'count-only',  # noqa: E501
         'kind': 'kind',  # noqa: E501
+        'kind_filters': 'kind-filters',  # noqa: E501
         'max_depth': 'max-depth',  # noqa: E501
         'meta': 'meta',  # noqa: E501
         'query_type': 'query-type',  # noqa: E501
@@ -160,6 +162,7 @@ class BrowserBrowseRequest(ModelNormal):
             api_version (str): [optional]  # noqa: E501
             count_only (bool): [optional]  # noqa: E501
             kind (str): [optional]  # noqa: E501
+            kind_filters ([str]): [optional]  # noqa: E501
             max_depth (int): [optional] if omitted the server will use the default value of 1  # noqa: E501
             meta (ApiObjectMeta): [optional]  # noqa: E501
             query_type (str): [optional] if omitted the server will use the default value of "dependencies"  # noqa: E501

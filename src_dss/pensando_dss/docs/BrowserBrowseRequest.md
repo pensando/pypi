@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **api_version** | **str** |  | [optional] 
 **count_only** | **bool** |  | [optional] 
 **kind** | **str** |  | [optional] 
+**kind_filters** | **[str]** |  | [optional] 
 **max_depth** | **int** |  | [optional]  if omitted the server will use the default value of 1
 **meta** | [**ApiObjectMeta**](ApiObjectMeta.md) |  | [optional] 
 **query_type** | **str** |  | [optional]  if omitted the server will use the default value of "dependencies"

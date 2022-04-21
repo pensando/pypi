@@ -40,7 +40,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = telemetry_query_v1_api.TelemetryQueryV1Api(api_client)
     tenant = "tenant_example" # str | Tenant for the request. (optional)
-    namespace = "namespace_example" # str | Namespace for the request. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -57,7 +56,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant** | **str**| Tenant for the request. | [optional]
- **namespace** | **str**| Namespace for the request. | [optional]
 
 ### Return type
 

@@ -175,32 +175,8 @@ class RolloutV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_version (str): New Version of the image to rollout to.. [optional]
-                spec_scheduled_start_time (datetime): Time, if specified, at which the rollout is supposed to start. (example:\"2002-10-02T15:00:00.05Z\").. [optional]
-                spec_scheduled_end_time (datetime): ScheduledEndTime, if specified, after which the rollout is supposed to stop, if not completed by that time Typically represents the end of Maintenance window. (example:\"2002-10-02T15:00:00.05Z\").. [optional]
                 spec_strategy (str): [optional]
-                spec_max_parallel (int): MaxParallel is the maximum number of nodes getting updated at any time This setting is applicable only to DistributedServiceCards. Controller nodes are always upgraded one after another.. [optional]
-                spec_max_nic_failures_before_abort (int): After these many failures are observed during DSC upgrade, the rollout process stops This setting applies to DSCs only. The controller nodes are rollout first and any failure there stops the rollout of DistributedServiceCards.. [optional]
-                spec_suspend (bool): When Set to true, the current rollout is suspended. Existing Nodes/Services/DistributedServiceCards in the middle of rollout continue rollout execution but any Nodes/Services/DistributedServiceCards which has not started Rollout will not be scheduled one.. [optional]
-                spec_dscs_only (bool): Dont upgrade Controller but only upgrade DistributedServiceCards.. [optional]
-                spec_dsc_must_match_constraint (bool): When DSCMustMatchConstraint is true, Any DSC which does not match OrderConstraints does not go through rollout.. [optional]
-                spec_upgrade_type (str): [optional]
-                spec_retry (bool): If enabled, will retry rollout of failed naples within the maintenance window upto a max of 5 times.. [optional]
-                status_state (str): [optional]
-                status_completion_percent (int): Heuristic value of percentage completion of the rollout.. [optional]
-                status_start_time (datetime): Start time of Rollout.. [optional]
-                status_end_time (datetime): End time of Rollout.. [optional]
-                status_prev_version (str): Version of the cluster before the start of rollout.. [optional]
-                status_reason (str): details the reason for overall Failure or Suspend.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -262,32 +238,8 @@ class RolloutV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_version',
-                    'spec_scheduled_start_time',
-                    'spec_scheduled_end_time',
                     'spec_strategy',
-                    'spec_max_parallel',
-                    'spec_max_nic_failures_before_abort',
-                    'spec_suspend',
-                    'spec_dscs_only',
-                    'spec_dsc_must_match_constraint',
-                    'spec_upgrade_type',
-                    'spec_retry',
-                    'status_state',
-                    'status_completion_percent',
-                    'status_start_time',
-                    'status_end_time',
-                    'status_prev_version',
-                    'status_reason',
                 ],
                 'required': [
                     'o_name',
@@ -309,118 +261,22 @@ class RolloutV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_version':
-                        (str,),
-                    'spec_scheduled_start_time':
-                        (datetime,),
-                    'spec_scheduled_end_time':
-                        (datetime,),
                     'spec_strategy':
-                        (str,),
-                    'spec_max_parallel':
-                        (int,),
-                    'spec_max_nic_failures_before_abort':
-                        (int,),
-                    'spec_suspend':
-                        (bool,),
-                    'spec_dscs_only':
-                        (bool,),
-                    'spec_dsc_must_match_constraint':
-                        (bool,),
-                    'spec_upgrade_type':
-                        (str,),
-                    'spec_retry':
-                        (bool,),
-                    'status_state':
-                        (str,),
-                    'status_completion_percent':
-                        (int,),
-                    'status_start_time':
-                        (datetime,),
-                    'status_end_time':
-                        (datetime,),
-                    'status_prev_version':
-                        (str,),
-                    'status_reason':
                         (str,),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_version': 'spec.version',
-                    'spec_scheduled_start_time': 'spec.scheduled-start-time',
-                    'spec_scheduled_end_time': 'spec.scheduled-end-time',
                     'spec_strategy': 'spec.strategy',
-                    'spec_max_parallel': 'spec.max-parallel',
-                    'spec_max_nic_failures_before_abort': 'spec.max-nic-failures-before-abort',
-                    'spec_suspend': 'spec.suspend',
-                    'spec_dscs_only': 'spec.dscs-only',
-                    'spec_dsc_must_match_constraint': 'spec.dsc-must-match-constraint',
-                    'spec_upgrade_type': 'spec.upgrade-type',
-                    'spec_retry': 'spec.retry',
-                    'status_state': 'status.state',
-                    'status_completion_percent': 'status.completion-percent',
-                    'status_start_time': 'status.start-time',
-                    'status_end_time': 'status.end-time',
-                    'status_prev_version': 'status.prev-version',
-                    'status_reason': 'status.reason',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_version': 'query',
-                    'spec_scheduled_start_time': 'query',
-                    'spec_scheduled_end_time': 'query',
                     'spec_strategy': 'query',
-                    'spec_max_parallel': 'query',
-                    'spec_max_nic_failures_before_abort': 'query',
-                    'spec_suspend': 'query',
-                    'spec_dscs_only': 'query',
-                    'spec_dsc_must_match_constraint': 'query',
-                    'spec_upgrade_type': 'query',
-                    'spec_retry': 'query',
-                    'status_state': 'query',
-                    'status_completion_percent': 'query',
-                    'status_start_time': 'query',
-                    'status_end_time': 'query',
-                    'status_prev_version': 'query',
-                    'status_reason': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -450,21 +306,8 @@ class RolloutV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -523,21 +366,8 @@ class RolloutV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -555,72 +385,20 @@ class RolloutV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -1002,21 +780,8 @@ class RolloutV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1075,21 +840,8 @@ class RolloutV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -1107,72 +859,20 @@ class RolloutV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',

@@ -42,7 +42,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         "audience_example",
     ] # [str] | Audience represents a list of nodes the token is valid for. \"*\" indicates all nodes. (optional)
     validity_start = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ValidityStart indicates the time at which the token becomes valid. (optional)
-    validity_end = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | ValidityEnd indicates the time at which the token becomes invalid. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -59,7 +58,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **audience** | **[str]**| Audience represents a list of nodes the token is valid for. \&quot;*\&quot; indicates all nodes. | [optional]
  **validity_start** | **datetime**| ValidityStart indicates the time at which the token becomes valid. | [optional]
- **validity_end** | **datetime**| ValidityEnd indicates the time at which the token becomes invalid. | [optional]
 
 ### Return type
 

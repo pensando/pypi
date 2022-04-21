@@ -98,7 +98,6 @@ class ClusterDistributedServiceCardSpec(ModelNormal):
             'admit': (bool,),  # noqa: E501
             'controllers': ([str],),  # noqa: E501
             'dscprofile': (str,),  # noqa: E501
-            'enable_fw_logging': (bool,),  # noqa: E501
             'enable_secure_boot': (bool,),  # noqa: E501
             'fwlog_policy': (ClusterFwlogPolicyRef,),  # noqa: E501
             'id': (str,),  # noqa: E501
@@ -119,7 +118,6 @@ class ClusterDistributedServiceCardSpec(ModelNormal):
         'admit': 'admit',  # noqa: E501
         'controllers': 'controllers',  # noqa: E501
         'dscprofile': 'dscprofile',  # noqa: E501
-        'enable_fw_logging': 'enable-fw-logging',  # noqa: E501
         'enable_secure_boot': 'enable-secure-boot',  # noqa: E501
         'fwlog_policy': 'fwlog-policy',  # noqa: E501
         'id': 'id',  # noqa: E501
@@ -180,7 +178,6 @@ class ClusterDistributedServiceCardSpec(ModelNormal):
             admit (bool): Admit allows a DistributedServiceCard to join the cluster.. [optional]  # noqa: E501
             controllers ([str]): Controllers contains the list of remote controllers IP addresses or hostnames.. [optional]  # noqa: E501
             dscprofile (str): [optional]  # noqa: E501
-            enable_fw_logging (bool): EnableFwLogging enables flow logging on the device.. [optional]  # noqa: E501
             enable_secure_boot (bool): EnableSecureBoot a true value indicates, set lifecycle fuse to enable secure boot.. [optional] if omitted the server will use the default value of False  # noqa: E501
             fwlog_policy (ClusterFwlogPolicyRef): [optional]  # noqa: E501
             id (str): ID is used as a user friendly identifier in logs/events.. [optional]  # noqa: E501

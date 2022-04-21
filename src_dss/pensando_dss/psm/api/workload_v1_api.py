@@ -47,7 +47,6 @@ class WorkloadV1Api(object):
         def __abort_migration(
             self,
             o_tenant,
-            o_name,
             body,
             **kwargs
         ):
@@ -56,12 +55,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.abort_migration(o_tenant, o_name, body, async_req=True)
+            >>> thread = api.abort_migration(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
                 body (WorkloadWorkload):
 
             Keyword Args:
@@ -111,8 +109,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -129,12 +125,10 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'nullable': [
@@ -152,18 +146,14 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     'body':
                         (WorkloadWorkload,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -555,7 +545,6 @@ class WorkloadV1Api(object):
         def __delete_workload(
             self,
             o_tenant,
-            o_name,
             **kwargs
         ):
             """Delete Workload object  # noqa: E501
@@ -563,12 +552,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.delete_workload(o_tenant, o_name, async_req=True)
+            >>> thread = api.delete_workload(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
 
             Keyword Args:
                 _return_http_data_only (bool): response data without head status
@@ -617,8 +605,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.delete_workload = _Endpoint(
@@ -633,11 +619,9 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -654,16 +638,12 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -797,7 +777,6 @@ class WorkloadV1Api(object):
         def __final_sync_migration(
             self,
             o_tenant,
-            o_name,
             body,
             **kwargs
         ):
@@ -806,12 +785,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.final_sync_migration(o_tenant, o_name, body, async_req=True)
+            >>> thread = api.final_sync_migration(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
                 body (WorkloadWorkload):
 
             Keyword Args:
@@ -861,8 +839,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -879,12 +855,10 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'nullable': [
@@ -902,18 +876,14 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     'body':
                         (WorkloadWorkload,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -1061,7 +1031,6 @@ class WorkloadV1Api(object):
         def __finish_migration(
             self,
             o_tenant,
-            o_name,
             body,
             **kwargs
         ):
@@ -1070,12 +1039,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.finish_migration(o_tenant, o_name, body, async_req=True)
+            >>> thread = api.finish_migration(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
                 body (WorkloadWorkload):
 
             Keyword Args:
@@ -1125,8 +1093,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -1143,12 +1109,10 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'nullable': [
@@ -1166,18 +1130,14 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     'body':
                         (WorkloadWorkload,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -1325,7 +1285,6 @@ class WorkloadV1Api(object):
         def __get_endpoint(
             self,
             o_tenant,
-            o_name,
             **kwargs
         ):
             """Get Endpoint object  # noqa: E501
@@ -1333,49 +1292,16 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_endpoint(o_tenant, o_name, async_req=True)
+            >>> thread = api.get_endpoint(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_node_uuid (str): The DSC Name or MAC where the endpoint should reside.. [optional]
-                spec_homing_host_addr (str): IP of the DSC where this endpoint exists.. [optional]
-                spec_micro_segment_vlan (int): MicroSegmentVlan to be assigned to the endpoint.. [optional]
                 spec_node_uuid_list ([str]): NodeUUIDList has the list of DSCs where a EP is supposed to go to.. [optional]
-                spec_type (str): Type is the type of Endpoint that is being created - L2 or L3.. [optional]
-                status_workload_name (str): VM or container name.. [optional]
-                status_network (str): network this endpoint belogs to.. [optional]
-                status_homing_host_addr (str): host address of the host where this endpoint exists.. [optional]
-                status_homing_host_name (str): host name of the host where this endpoint exists.. [optional]
-                status_ipv4_address (str): IPv4 address of the endpoint.. [optional]
-                status_ipv4_gateway (str): IPv4 gateway for the endpoint.. [optional]
-                status_ipv6_address (str): IPv6 address for the endpoint.. [optional]
-                status_ipv6_gateway (str): IPv6 gateway.. [optional]
-                status_mac_address (str): Mac address of the endpoint. Should be a valid MAC address.. [optional]
-                status_node_uuid (str): homing host's UUID.. [optional]
-                status_endpoint_state (str): endpoint FSM state.. [optional]
-                status_security_groups ([str]): security groups.. [optional]
-                status_micro_segment_vlan (int): micro-segment VLAN.. [optional]
-                migration_status (str): Status of migration.. [optional]
-                status_ipv4_addresses ([str]): IPv4 addresses of the endpoint.. [optional]
-                status_ipv4_gateways ([str]): IPv4 gateways for the endpoint.. [optional]
-                status_ipv6_addresses ([str]): IPv6 addresses for the endpoint.. [optional]
-                status_ipv6_gateways ([str]): IPv6 gateways.. [optional]
-                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this endpoint.. [optional]
-                status_node_uuid_list ([str]): NodeUUIDList has the list of DSCs where a EP is supposed to go to.. [optional]
-                status_workload_names ([str]): WorkloadNames associated with endpoint.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1422,8 +1348,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_endpoint = _Endpoint(
@@ -1438,46 +1362,12 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_node_uuid',
-                    'spec_homing_host_addr',
-                    'spec_micro_segment_vlan',
                     'spec_node_uuid_list',
-                    'spec_type',
-                    'status_workload_name',
-                    'status_network',
-                    'status_homing_host_addr',
-                    'status_homing_host_name',
-                    'status_ipv4_address',
-                    'status_ipv4_gateway',
-                    'status_ipv6_address',
-                    'status_ipv6_gateway',
-                    'status_mac_address',
-                    'status_node_uuid',
-                    'status_endpoint_state',
-                    'status_security_groups',
-                    'status_micro_segment_vlan',
-                    'migration_status',
-                    'status_ipv4_addresses',
-                    'status_ipv4_gateways',
-                    'status_ipv6_addresses',
-                    'status_ipv6_gateways',
-                    'status_mirror_sessions',
-                    'status_node_uuid_list',
-                    'status_workload_names',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -1494,167 +1384,27 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_node_uuid':
-                        (str,),
-                    'spec_homing_host_addr':
-                        (str,),
-                    'spec_micro_segment_vlan':
-                        (int,),
                     'spec_node_uuid_list':
-                        ([str],),
-                    'spec_type':
-                        (str,),
-                    'status_workload_name':
-                        (str,),
-                    'status_network':
-                        (str,),
-                    'status_homing_host_addr':
-                        (str,),
-                    'status_homing_host_name':
-                        (str,),
-                    'status_ipv4_address':
-                        (str,),
-                    'status_ipv4_gateway':
-                        (str,),
-                    'status_ipv6_address':
-                        (str,),
-                    'status_ipv6_gateway':
-                        (str,),
-                    'status_mac_address':
-                        (str,),
-                    'status_node_uuid':
-                        (str,),
-                    'status_endpoint_state':
-                        (str,),
-                    'status_security_groups':
-                        ([str],),
-                    'status_micro_segment_vlan':
-                        (int,),
-                    'migration_status':
-                        (str,),
-                    'status_ipv4_addresses':
-                        ([str],),
-                    'status_ipv4_gateways':
-                        ([str],),
-                    'status_ipv6_addresses':
-                        ([str],),
-                    'status_ipv6_gateways':
-                        ([str],),
-                    'status_mirror_sessions':
-                        ([str],),
-                    'status_node_uuid_list':
-                        ([str],),
-                    'status_workload_names':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_node_uuid': 'spec.node-uuid',
-                    'spec_homing_host_addr': 'spec.homing-host-addr',
-                    'spec_micro_segment_vlan': 'spec.micro-segment-vlan',
                     'spec_node_uuid_list': 'spec.node-uuid-list',
-                    'spec_type': 'spec.type',
-                    'status_workload_name': 'status.workload-name',
-                    'status_network': 'status.network',
-                    'status_homing_host_addr': 'status.homing-host-addr',
-                    'status_homing_host_name': 'status.homing-host-name',
-                    'status_ipv4_address': 'status.ipv4-address',
-                    'status_ipv4_gateway': 'status.ipv4-gateway',
-                    'status_ipv6_address': 'status.ipv6-address',
-                    'status_ipv6_gateway': 'status.ipv6-gateway',
-                    'status_mac_address': 'status.mac-address',
-                    'status_node_uuid': 'status.node-uuid',
-                    'status_endpoint_state': 'status.EndpointState',
-                    'status_security_groups': 'status.SecurityGroups',
-                    'status_micro_segment_vlan': 'status.micro-segment-vlan',
-                    'migration_status': 'migration.status',
-                    'status_ipv4_addresses': 'status.ipv4-addresses',
-                    'status_ipv4_gateways': 'status.ipv4-gateways',
-                    'status_ipv6_addresses': 'status.ipv6-addresses',
-                    'status_ipv6_gateways': 'status.ipv6-gateways',
-                    'status_mirror_sessions': 'status.mirror-sessions',
-                    'status_node_uuid_list': 'status.node-uuid-list',
-                    'status_workload_names': 'status.workload-names',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_node_uuid': 'query',
-                    'spec_homing_host_addr': 'query',
-                    'spec_micro_segment_vlan': 'query',
                     'spec_node_uuid_list': 'query',
-                    'spec_type': 'query',
-                    'status_workload_name': 'query',
-                    'status_network': 'query',
-                    'status_homing_host_addr': 'query',
-                    'status_homing_host_name': 'query',
-                    'status_ipv4_address': 'query',
-                    'status_ipv4_gateway': 'query',
-                    'status_ipv6_address': 'query',
-                    'status_ipv6_gateway': 'query',
-                    'status_mac_address': 'query',
-                    'status_node_uuid': 'query',
-                    'status_endpoint_state': 'query',
-                    'status_security_groups': 'query',
-                    'status_micro_segment_vlan': 'query',
-                    'migration_status': 'query',
-                    'status_ipv4_addresses': 'query',
-                    'status_ipv4_gateways': 'query',
-                    'status_ipv6_addresses': 'query',
-                    'status_ipv6_gateways': 'query',
-                    'status_mirror_sessions': 'query',
-                    'status_node_uuid_list': 'query',
-                    'status_workload_names': 'query',
                 },
                 'collection_format_map': {
                     'spec_node_uuid_list': 'csv',
-                    'status_security_groups': 'csv',
-                    'status_ipv4_addresses': 'csv',
-                    'status_ipv4_gateways': 'csv',
-                    'status_ipv6_addresses': 'csv',
-                    'status_ipv6_gateways': 'csv',
-                    'status_mirror_sessions': 'csv',
-                    'status_node_uuid_list': 'csv',
-                    'status_workload_names': 'csv',
                 }
             },
             headers_map={
@@ -1685,41 +1435,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_node_uuid (str): The DSC Name or MAC where the endpoint should reside.. [optional]
-                spec_homing_host_addr (str): IP of the DSC where this endpoint exists.. [optional]
-                spec_micro_segment_vlan (int): MicroSegmentVlan to be assigned to the endpoint.. [optional]
                 spec_node_uuid_list ([str]): NodeUUIDList has the list of DSCs where a EP is supposed to go to.. [optional]
-                spec_type (str): Type is the type of Endpoint that is being created - L2 or L3.. [optional]
-                status_workload_name (str): VM or container name.. [optional]
-                status_network (str): network this endpoint belogs to.. [optional]
-                status_homing_host_addr (str): host address of the host where this endpoint exists.. [optional]
-                status_homing_host_name (str): host name of the host where this endpoint exists.. [optional]
-                status_ipv4_address (str): IPv4 address of the endpoint.. [optional]
-                status_ipv4_gateway (str): IPv4 gateway for the endpoint.. [optional]
-                status_ipv6_address (str): IPv6 address for the endpoint.. [optional]
-                status_ipv6_gateway (str): IPv6 gateway.. [optional]
-                status_mac_address (str): Mac address of the endpoint. Should be a valid MAC address.. [optional]
-                status_node_uuid (str): homing host's UUID.. [optional]
-                status_endpoint_state (str): endpoint FSM state.. [optional]
-                status_security_groups ([str]): security groups.. [optional]
-                status_micro_segment_vlan (int): micro-segment VLAN.. [optional]
-                migration_status (str): Status of migration.. [optional]
-                status_ipv4_addresses ([str]): IPv4 addresses of the endpoint.. [optional]
-                status_ipv4_gateways ([str]): IPv4 gateways for the endpoint.. [optional]
-                status_ipv6_addresses ([str]): IPv6 addresses for the endpoint.. [optional]
-                status_ipv6_gateways ([str]): IPv6 gateways.. [optional]
-                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this endpoint.. [optional]
-                status_node_uuid_list ([str]): NodeUUIDList has the list of DSCs where a EP is supposed to go to.. [optional]
-                status_workload_names ([str]): WorkloadNames associated with endpoint.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1781,41 +1498,8 @@ class WorkloadV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_node_uuid',
-                    'spec_homing_host_addr',
-                    'spec_micro_segment_vlan',
                     'spec_node_uuid_list',
-                    'spec_type',
-                    'status_workload_name',
-                    'status_network',
-                    'status_homing_host_addr',
-                    'status_homing_host_name',
-                    'status_ipv4_address',
-                    'status_ipv4_gateway',
-                    'status_ipv6_address',
-                    'status_ipv6_gateway',
-                    'status_mac_address',
-                    'status_node_uuid',
-                    'status_endpoint_state',
-                    'status_security_groups',
-                    'status_micro_segment_vlan',
-                    'migration_status',
-                    'status_ipv4_addresses',
-                    'status_ipv4_gateways',
-                    'status_ipv6_addresses',
-                    'status_ipv6_gateways',
-                    'status_mirror_sessions',
-                    'status_node_uuid_list',
-                    'status_workload_names',
                 ],
                 'required': [
                     'o_name',
@@ -1837,165 +1521,25 @@ class WorkloadV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_node_uuid':
-                        (str,),
-                    'spec_homing_host_addr':
-                        (str,),
-                    'spec_micro_segment_vlan':
-                        (int,),
                     'spec_node_uuid_list':
-                        ([str],),
-                    'spec_type':
-                        (str,),
-                    'status_workload_name':
-                        (str,),
-                    'status_network':
-                        (str,),
-                    'status_homing_host_addr':
-                        (str,),
-                    'status_homing_host_name':
-                        (str,),
-                    'status_ipv4_address':
-                        (str,),
-                    'status_ipv4_gateway':
-                        (str,),
-                    'status_ipv6_address':
-                        (str,),
-                    'status_ipv6_gateway':
-                        (str,),
-                    'status_mac_address':
-                        (str,),
-                    'status_node_uuid':
-                        (str,),
-                    'status_endpoint_state':
-                        (str,),
-                    'status_security_groups':
-                        ([str],),
-                    'status_micro_segment_vlan':
-                        (int,),
-                    'migration_status':
-                        (str,),
-                    'status_ipv4_addresses':
-                        ([str],),
-                    'status_ipv4_gateways':
-                        ([str],),
-                    'status_ipv6_addresses':
-                        ([str],),
-                    'status_ipv6_gateways':
-                        ([str],),
-                    'status_mirror_sessions':
-                        ([str],),
-                    'status_node_uuid_list':
-                        ([str],),
-                    'status_workload_names':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_node_uuid': 'spec.node-uuid',
-                    'spec_homing_host_addr': 'spec.homing-host-addr',
-                    'spec_micro_segment_vlan': 'spec.micro-segment-vlan',
                     'spec_node_uuid_list': 'spec.node-uuid-list',
-                    'spec_type': 'spec.type',
-                    'status_workload_name': 'status.workload-name',
-                    'status_network': 'status.network',
-                    'status_homing_host_addr': 'status.homing-host-addr',
-                    'status_homing_host_name': 'status.homing-host-name',
-                    'status_ipv4_address': 'status.ipv4-address',
-                    'status_ipv4_gateway': 'status.ipv4-gateway',
-                    'status_ipv6_address': 'status.ipv6-address',
-                    'status_ipv6_gateway': 'status.ipv6-gateway',
-                    'status_mac_address': 'status.mac-address',
-                    'status_node_uuid': 'status.node-uuid',
-                    'status_endpoint_state': 'status.EndpointState',
-                    'status_security_groups': 'status.SecurityGroups',
-                    'status_micro_segment_vlan': 'status.micro-segment-vlan',
-                    'migration_status': 'migration.status',
-                    'status_ipv4_addresses': 'status.ipv4-addresses',
-                    'status_ipv4_gateways': 'status.ipv4-gateways',
-                    'status_ipv6_addresses': 'status.ipv6-addresses',
-                    'status_ipv6_gateways': 'status.ipv6-gateways',
-                    'status_mirror_sessions': 'status.mirror-sessions',
-                    'status_node_uuid_list': 'status.node-uuid-list',
-                    'status_workload_names': 'status.workload-names',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_node_uuid': 'query',
-                    'spec_homing_host_addr': 'query',
-                    'spec_micro_segment_vlan': 'query',
                     'spec_node_uuid_list': 'query',
-                    'spec_type': 'query',
-                    'status_workload_name': 'query',
-                    'status_network': 'query',
-                    'status_homing_host_addr': 'query',
-                    'status_homing_host_name': 'query',
-                    'status_ipv4_address': 'query',
-                    'status_ipv4_gateway': 'query',
-                    'status_ipv6_address': 'query',
-                    'status_ipv6_gateway': 'query',
-                    'status_mac_address': 'query',
-                    'status_node_uuid': 'query',
-                    'status_endpoint_state': 'query',
-                    'status_security_groups': 'query',
-                    'status_micro_segment_vlan': 'query',
-                    'migration_status': 'query',
-                    'status_ipv4_addresses': 'query',
-                    'status_ipv4_gateways': 'query',
-                    'status_ipv6_addresses': 'query',
-                    'status_ipv6_gateways': 'query',
-                    'status_mirror_sessions': 'query',
-                    'status_node_uuid_list': 'query',
-                    'status_workload_names': 'query',
                 },
                 'collection_format_map': {
                     'spec_node_uuid_list': 'csv',
-                    'status_security_groups': 'csv',
-                    'status_ipv4_addresses': 'csv',
-                    'status_ipv4_gateways': 'csv',
-                    'status_ipv6_addresses': 'csv',
-                    'status_ipv6_gateways': 'csv',
-                    'status_mirror_sessions': 'csv',
-                    'status_node_uuid_list': 'csv',
-                    'status_workload_names': 'csv',
                 }
             },
             headers_map={
@@ -2011,7 +1555,6 @@ class WorkloadV1Api(object):
         def __get_workload(
             self,
             o_tenant,
-            o_name,
             **kwargs
         ):
             """Get Workload object  # noqa: E501
@@ -2019,37 +1562,16 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.get_workload(o_tenant, o_name, async_req=True)
+            >>> thread = api.get_workload(o_tenant, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_host_name (str): Hostname of the server where the workload should be running.. [optional]
-                spec_migration_timeout (str): Should be a valid time duration.. [optional]
-                propagation_status_generation_id (str): The Generation ID this status is for.. [optional]
-                propagation_status_updated (int): The number of Naples that this version has already been pushed to.. [optional]
-                propagation_status_pending (int): Number of Naples pending. If this is 0 it can be assumed that everything is up to date.. [optional]
-                propagation_status_min_version (str): The Version running on the slowest Naples.. [optional]
-                propagation_status_status (str): Textual description of propagation status.. [optional]
                 propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
-                status_host_name (str): Hostname of the server where the workload is currently running.. [optional]
-                migration_status_stage (str): Controller's migration stage.. [optional]
-                migration_status_started_at (datetime): migration start time.. [optional]
-                migration_status_status (str): The status from the dataplane performing migration.. [optional]
-                migration_status_completed_at (datetime): migration completion time.. [optional]
-                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this workload.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2096,8 +1618,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             return self.call_with_http_info(**kwargs)
 
         self.get_workload = _Endpoint(
@@ -2112,34 +1632,12 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_host_name',
-                    'spec_migration_timeout',
-                    'propagation_status_generation_id',
-                    'propagation_status_updated',
-                    'propagation_status_pending',
-                    'propagation_status_min_version',
-                    'propagation_status_status',
                     'propagation_status_pending_dscs',
-                    'status_host_name',
-                    'migration_status_stage',
-                    'migration_status_started_at',
-                    'migration_status_status',
-                    'migration_status_completed_at',
-                    'status_mirror_sessions',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                 ],
                 'nullable': [
                 ],
@@ -2156,112 +1654,27 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     't_kind':
-                        (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_host_name':
-                        (str,),
-                    'spec_migration_timeout':
-                        (str,),
-                    'propagation_status_generation_id':
-                        (str,),
-                    'propagation_status_updated':
-                        (int,),
-                    'propagation_status_pending':
-                        (int,),
-                    'propagation_status_min_version':
-                        (str,),
-                    'propagation_status_status':
-                        (str,),
                     'propagation_status_pending_dscs':
-                        ([str],),
-                    'status_host_name':
-                        (str,),
-                    'migration_status_stage':
-                        (str,),
-                    'migration_status_started_at':
-                        (datetime,),
-                    'migration_status_status':
-                        (str,),
-                    'migration_status_completed_at':
-                        (datetime,),
-                    'status_mirror_sessions':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_host_name': 'spec.host-name',
-                    'spec_migration_timeout': 'spec.migration-timeout',
-                    'propagation_status_generation_id': 'propagation-status.generation-id',
-                    'propagation_status_updated': 'propagation-status.updated',
-                    'propagation_status_pending': 'propagation-status.pending',
-                    'propagation_status_min_version': 'propagation-status.min-version',
-                    'propagation_status_status': 'propagation-status.status',
                     'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
-                    'status_host_name': 'status.host-name',
-                    'migration_status_stage': 'migration-status.stage',
-                    'migration_status_started_at': 'migration-status.started-at',
-                    'migration_status_status': 'migration-status.status',
-                    'migration_status_completed_at': 'migration-status.completed-at',
-                    'status_mirror_sessions': 'status.mirror-sessions',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_host_name': 'query',
-                    'spec_migration_timeout': 'query',
-                    'propagation_status_generation_id': 'query',
-                    'propagation_status_updated': 'query',
-                    'propagation_status_pending': 'query',
-                    'propagation_status_min_version': 'query',
-                    'propagation_status_status': 'query',
                     'propagation_status_pending_dscs': 'query',
-                    'status_host_name': 'query',
-                    'migration_status_stage': 'query',
-                    'migration_status_started_at': 'query',
-                    'migration_status_status': 'query',
-                    'migration_status_completed_at': 'query',
-                    'status_mirror_sessions': 'query',
                 },
                 'collection_format_map': {
                     'propagation_status_pending_dscs': 'csv',
-                    'status_mirror_sessions': 'csv',
                 }
             },
             headers_map={
@@ -2292,29 +1705,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                spec_host_name (str): Hostname of the server where the workload should be running.. [optional]
-                spec_migration_timeout (str): Should be a valid time duration.. [optional]
-                propagation_status_generation_id (str): The Generation ID this status is for.. [optional]
-                propagation_status_updated (int): The number of Naples that this version has already been pushed to.. [optional]
-                propagation_status_pending (int): Number of Naples pending. If this is 0 it can be assumed that everything is up to date.. [optional]
-                propagation_status_min_version (str): The Version running on the slowest Naples.. [optional]
-                propagation_status_status (str): Textual description of propagation status.. [optional]
                 propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
-                status_host_name (str): Hostname of the server where the workload is currently running.. [optional]
-                migration_status_stage (str): Controller's migration stage.. [optional]
-                migration_status_started_at (datetime): migration start time.. [optional]
-                migration_status_status (str): The status from the dataplane performing migration.. [optional]
-                migration_status_completed_at (datetime): migration completion time.. [optional]
-                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this workload.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2376,29 +1768,8 @@ class WorkloadV1Api(object):
                 'all': [
                     'o_name',
                     't_kind',
-                    't_api_version',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'spec_host_name',
-                    'spec_migration_timeout',
-                    'propagation_status_generation_id',
-                    'propagation_status_updated',
-                    'propagation_status_pending',
-                    'propagation_status_min_version',
-                    'propagation_status_status',
                     'propagation_status_pending_dscs',
-                    'status_host_name',
-                    'migration_status_stage',
-                    'migration_status_started_at',
-                    'migration_status_status',
-                    'migration_status_completed_at',
-                    'status_mirror_sessions',
                 ],
                 'required': [
                     'o_name',
@@ -2420,110 +1791,25 @@ class WorkloadV1Api(object):
                         (str,),
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'spec_host_name':
-                        (str,),
-                    'spec_migration_timeout':
-                        (str,),
-                    'propagation_status_generation_id':
-                        (str,),
-                    'propagation_status_updated':
-                        (int,),
-                    'propagation_status_pending':
-                        (int,),
-                    'propagation_status_min_version':
-                        (str,),
-                    'propagation_status_status':
-                        (str,),
                     'propagation_status_pending_dscs':
-                        ([str],),
-                    'status_host_name':
-                        (str,),
-                    'migration_status_stage':
-                        (str,),
-                    'migration_status_started_at':
-                        (datetime,),
-                    'migration_status_status':
-                        (str,),
-                    'migration_status_completed_at':
-                        (datetime,),
-                    'status_mirror_sessions':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'spec_host_name': 'spec.host-name',
-                    'spec_migration_timeout': 'spec.migration-timeout',
-                    'propagation_status_generation_id': 'propagation-status.generation-id',
-                    'propagation_status_updated': 'propagation-status.updated',
-                    'propagation_status_pending': 'propagation-status.pending',
-                    'propagation_status_min_version': 'propagation-status.min-version',
-                    'propagation_status_status': 'propagation-status.status',
                     'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
-                    'status_host_name': 'status.host-name',
-                    'migration_status_stage': 'migration-status.stage',
-                    'migration_status_started_at': 'migration-status.started-at',
-                    'migration_status_status': 'migration-status.status',
-                    'migration_status_completed_at': 'migration-status.completed-at',
-                    'status_mirror_sessions': 'status.mirror-sessions',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'spec_host_name': 'query',
-                    'spec_migration_timeout': 'query',
-                    'propagation_status_generation_id': 'query',
-                    'propagation_status_updated': 'query',
-                    'propagation_status_pending': 'query',
-                    'propagation_status_min_version': 'query',
-                    'propagation_status_status': 'query',
                     'propagation_status_pending_dscs': 'query',
-                    'status_host_name': 'query',
-                    'migration_status_stage': 'query',
-                    'migration_status_started_at': 'query',
-                    'migration_status_status': 'query',
-                    'migration_status_completed_at': 'query',
-                    'status_mirror_sessions': 'query',
                 },
                 'collection_format_map': {
                     'propagation_status_pending_dscs': 'csv',
-                    'status_mirror_sessions': 'csv',
                 }
             },
             headers_map={
@@ -2539,7 +1825,6 @@ class WorkloadV1Api(object):
         def __label_workload(
             self,
             o_tenant,
-            o_name,
             body,
             **kwargs
         ):
@@ -2548,12 +1833,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.label_workload(o_tenant, o_name, body, async_req=True)
+            >>> thread = api.label_workload(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
                 body (ApiLabel):
 
             Keyword Args:
@@ -2603,8 +1887,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -2621,12 +1903,10 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'nullable': [
@@ -2644,18 +1924,14 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     'body':
                         (ApiLabel,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -2818,20 +2094,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2893,20 +2157,8 @@ class WorkloadV1Api(object):
                 'all': [
                     'o_tenant',
                     'o_name',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_tenant',
@@ -2928,70 +2180,22 @@ class WorkloadV1Api(object):
                         (str,),
                     'o_name':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     'o_name': 'O.name',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     'o_name': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -3022,21 +2226,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3095,21 +2286,8 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -3127,72 +2305,20 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -3226,20 +2352,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3301,20 +2415,8 @@ class WorkloadV1Api(object):
                 'all': [
                     'o_tenant',
                     'o_name',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_tenant',
@@ -3336,70 +2438,22 @@ class WorkloadV1Api(object):
                         (str,),
                     'o_name':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     'o_name': 'O.name',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     'o_name': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -3430,21 +2484,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3503,21 +2544,8 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -3535,72 +2563,20 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -3619,7 +2595,6 @@ class WorkloadV1Api(object):
         def __start_migration(
             self,
             o_tenant,
-            o_name,
             body,
             **kwargs
         ):
@@ -3628,12 +2603,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.start_migration(o_tenant, o_name, body, async_req=True)
+            >>> thread = api.start_migration(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
                 body (WorkloadWorkload):
 
             Keyword Args:
@@ -3683,8 +2657,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -3701,12 +2673,10 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'nullable': [
@@ -3724,18 +2694,14 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     'body':
                         (WorkloadWorkload,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -3883,7 +2849,6 @@ class WorkloadV1Api(object):
         def __update_workload(
             self,
             o_tenant,
-            o_name,
             body,
             **kwargs
         ):
@@ -3892,12 +2857,11 @@ class WorkloadV1Api(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.update_workload(o_tenant, o_name, body, async_req=True)
+            >>> thread = api.update_workload(o_tenant, body, async_req=True)
             >>> result = thread.get()
 
             Args:
                 o_tenant (str):
-                o_name (str):
                 body (WorkloadWorkload):
 
             Keyword Args:
@@ -3947,8 +2911,6 @@ class WorkloadV1Api(object):
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['o_tenant'] = \
                 o_tenant
-            kwargs['o_name'] = \
-                o_name
             kwargs['body'] = \
                 body
             return self.call_with_http_info(**kwargs)
@@ -3965,12 +2927,10 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'required': [
                     'o_tenant',
-                    'o_name',
                     'body',
                 ],
                 'nullable': [
@@ -3988,18 +2948,14 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_tenant':
                         (str,),
-                    'o_name':
-                        (str,),
                     'body':
                         (WorkloadWorkload,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
-                    'o_name': 'O.Name',
                 },
                 'location_map': {
                     'o_tenant': 'path',
-                    'o_name': 'path',
                     'body': 'body',
                 },
                 'collection_format_map': {
@@ -4162,20 +3118,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4237,20 +3181,8 @@ class WorkloadV1Api(object):
                 'all': [
                     'o_tenant',
                     'o_name',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_tenant',
@@ -4272,70 +3204,22 @@ class WorkloadV1Api(object):
                         (str,),
                     'o_name':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     'o_name': 'O.name',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     'o_name': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -4366,21 +3250,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4439,21 +3310,8 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -4471,72 +3329,20 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -4570,20 +3376,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4645,20 +3439,8 @@ class WorkloadV1Api(object):
                 'all': [
                     'o_tenant',
                     'o_name',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [
                     'o_tenant',
@@ -4680,70 +3462,22 @@ class WorkloadV1Api(object):
                         (str,),
                     'o_name':
                         (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     'o_name': 'O.name',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     'o_name': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',
@@ -4774,21 +3508,8 @@ class WorkloadV1Api(object):
 
             Keyword Args:
                 o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                o_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                o_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                o_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                o_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                o_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                o_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                label_selector (str): LabelSelector to select on labels in list or watch results.. [optional]
-                field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]
                 field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
-                _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]
-                max_results (int): MaxResults is the maximum number of results to be returned as part of the response, per page If MaxResults is more than the maximum number of results per page supported by the server, the server will return an err If MaxResults is 0, the server will return all the results without pagination.. [optional]
-                sort_order (str): order to sort List results in.. [optional]
-                meta_only (bool): If MetaOnly is set to true, the watch event notification that matches the watch criteria will not contain the full object. It will only contain the information about the object that changed, i.e. which object and what changed. MetaOnly is not set by default.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4847,21 +3568,8 @@ class WorkloadV1Api(object):
             params_map={
                 'all': [
                     'o_name',
-                    'o_tenant',
-                    'o_namespace',
-                    'o_generation_id',
-                    'o_resource_version',
-                    'o_uuid',
                     'o_creation_time',
-                    'o_mod_time',
-                    'o_self_link',
-                    'label_selector',
-                    'field_selector',
                     'field_change_selector',
-                    '_from',
-                    'max_results',
-                    'sort_order',
-                    'meta_only',
                 ],
                 'required': [],
                 'nullable': [
@@ -4879,72 +3587,20 @@ class WorkloadV1Api(object):
                 'openapi_types': {
                     'o_name':
                         (str,),
-                    'o_tenant':
-                        (str,),
-                    'o_namespace':
-                        (str,),
-                    'o_generation_id':
-                        (str,),
-                    'o_resource_version':
-                        (str,),
-                    'o_uuid':
-                        (str,),
                     'o_creation_time':
                         (datetime,),
-                    'o_mod_time':
-                        (datetime,),
-                    'o_self_link':
-                        (str,),
-                    'label_selector':
-                        (str,),
-                    'field_selector':
-                        (str,),
                     'field_change_selector':
                         ([str],),
-                    '_from':
-                        (int,),
-                    'max_results':
-                        (int,),
-                    'sort_order':
-                        (str,),
-                    'meta_only':
-                        (bool,),
                 },
                 'attribute_map': {
                     'o_name': 'O.name',
-                    'o_tenant': 'O.tenant',
-                    'o_namespace': 'O.namespace',
-                    'o_generation_id': 'O.generation-id',
-                    'o_resource_version': 'O.resource-version',
-                    'o_uuid': 'O.uuid',
                     'o_creation_time': 'O.creation-time',
-                    'o_mod_time': 'O.mod-time',
-                    'o_self_link': 'O.self-link',
-                    'label_selector': 'label-selector',
-                    'field_selector': 'field-selector',
                     'field_change_selector': 'field-change-selector',
-                    '_from': 'from',
-                    'max_results': 'max-results',
-                    'sort_order': 'sort-order',
-                    'meta_only': 'meta-only',
                 },
                 'location_map': {
                     'o_name': 'query',
-                    'o_tenant': 'query',
-                    'o_namespace': 'query',
-                    'o_generation_id': 'query',
-                    'o_resource_version': 'query',
-                    'o_uuid': 'query',
                     'o_creation_time': 'query',
-                    'o_mod_time': 'query',
-                    'o_self_link': 'query',
-                    'label_selector': 'query',
-                    'field_selector': 'query',
                     'field_change_selector': 'query',
-                    '_from': 'query',
-                    'max_results': 'query',
-                    'sort_order': 'query',
-                    'meta_only': 'query',
                 },
                 'collection_format_map': {
                     'field_change_selector': 'csv',

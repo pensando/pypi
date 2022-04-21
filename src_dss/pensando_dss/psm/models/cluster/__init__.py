@@ -80,6 +80,7 @@ from pensando_dss.psm.model.cluster_distributed_service_card_id import ClusterDi
 from pensando_dss.psm.model.cluster_distributed_service_card_list import ClusterDistributedServiceCardList
 from pensando_dss.psm.model.cluster_distributed_service_card_spec import ClusterDistributedServiceCardSpec
 from pensando_dss.psm.model.cluster_distributed_service_card_status import ClusterDistributedServiceCardStatus
+from pensando_dss.psm.model.cluster_fault import ClusterFault
 from pensando_dss.psm.model.cluster_feature import ClusterFeature
 from pensando_dss.psm.model.cluster_feature_status import ClusterFeatureStatus
 from pensando_dss.psm.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef

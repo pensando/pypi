@@ -42,19 +42,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = search_v1_api.SearchV1Api(api_client)
     tenant = "tenant_example" # str | Tenant Name, to perform query within a Tenant's scope. The default tenant is \"default\". In the backend this field gets auto-filled & validated by apigw-hook based on user login context. (optional)
-    namespace = "namespace_example" # str | Namespace is optional. If provided policy-search will be limited to the specified namespace. (optional)
-    app = "app_example" # str | App specification,  predefined apps and alg config. (optional)
-    protocol = "protocol_example" # str | Protocol eg: tcp, udp, icmp. (optional)
-    port = "port_example" # str | TCP or UDP Port number. (optional)
-    from_ip_address = "from-ip-address_example" # str | Inbound ip-address, use any to refer to all ipaddresses eg: 10.1.1.1, any. (optional)
-    to_ip_address = "to-ip-address_example" # str | Outbound ip-address, use any to refer to all ipaddresses eg: 20.1.1.1, any. (optional)
-    from_security_group = "from-security-group_example" # str | Inbound security group. (optional)
-    to_security_group = "to-security-group_example" # str | Outbound security group. (optional)
     kinds = [
         "kinds_example",
     ] # [str] | Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy. (optional)
-    name = "name_example" # str | Name is optional. If provided policy-search will be limited to the specified policy of the given name on the given kind. If empty, then all the policies of the given kind will be searched. (optional)
-    action = "action_example" # str | Action, e.g. PERMIT, DENY or REJECT/CLEAR, PROTECT_PERMISSIVE or PROTECT_STRICT. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -71,17 +61,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant** | **str**| Tenant Name, to perform query within a Tenant&#39;s scope. The default tenant is \&quot;default\&quot;. In the backend this field gets auto-filled &amp; validated by apigw-hook based on user login context. | [optional]
- **namespace** | **str**| Namespace is optional. If provided policy-search will be limited to the specified namespace. | [optional]
- **app** | **str**| App specification,  predefined apps and alg config. | [optional]
- **protocol** | **str**| Protocol eg: tcp, udp, icmp. | [optional]
- **port** | **str**| TCP or UDP Port number. | [optional]
- **from_ip_address** | **str**| Inbound ip-address, use any to refer to all ipaddresses eg: 10.1.1.1, any. | [optional]
- **to_ip_address** | **str**| Outbound ip-address, use any to refer to all ipaddresses eg: 20.1.1.1, any. | [optional]
- **from_security_group** | **str**| Inbound security group. | [optional]
- **to_security_group** | **str**| Outbound security group. | [optional]
  **kinds** | **[str]**| Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy. | [optional]
- **name** | **str**| Name is optional. If provided policy-search will be limited to the specified policy of the given name on the given kind. If empty, then all the policies of the given kind will be searched. | [optional]
- **action** | **str**| Action, e.g. PERMIT, DENY or REJECT/CLEAR, PROTECT_PERMISSIVE or PROTECT_STRICT. | [optional]
 
 ### Return type
 
@@ -136,20 +116,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = search_v1_api.SearchV1Api(api_client)
     query_string = "query-string_example" # str | Simple query string This can be specified as URI parameter. For advanced query cases, Users should use specify SearchQuery and pass the SearchRequest in a GET/POST Body The max query-string length is 256 bytes. Length of string should be between 0 and 256. (optional)
     _from = 1 # int | From represents the start offset (zero based), used in paginated search requests The results returned would be in the range [From ... From+MaxResults-1] This can be specified as URI parameter. Default value is 0 and valid range is 0..8192. Value should be between 0 and 8192. (optional)
-    max_results = 1 # int | MaxResults is the max-count of search results This can be specified as URI parameter. Default value is 50 and valid range is 0..8192. Value should be between 0 and 8192. (optional)
-    sort_by = "sort-by_example" # str | SortyBy is an optional parameter and contains the field name to be sorted by, For eg: \"meta.name\" This can be specified as URI parameter. Length of string should be between 0 and 256. (optional)
-    sort_order = "sort-order_example" # str | SortOrder is an optional parameter and contains whether to sort ascending or descending This can be specified as URI parameter. (optional)
-    mode = "mode_example" # str | Query Mode. (optional)
     query_categories = [
         "query.categories_example",
     ] # [str] | OR of Categories to be matched, AND and Exclude are not supported for this type The max category string length is 64 bytes. Length of string should be between 0 and 64. (optional)
-    query_kinds = [
-        "query.kinds_example",
-    ] # [str] | OR of Kinds to be matched, AND and Exclude are not supported for this type. Should be a valid object Kind. (optional)
-    tenants = [
-        "tenants_example",
-    ] # [str] | OR of tenants within the scope of which search needs to be performed. If not specified, it will be set to tenant of the logged in user. (optional)
-    aggregate = True # bool | Indicates whether to perform aggregation on the search results or not. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -167,14 +136,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query_string** | **str**| Simple query string This can be specified as URI parameter. For advanced query cases, Users should use specify SearchQuery and pass the SearchRequest in a GET/POST Body The max query-string length is 256 bytes. Length of string should be between 0 and 256. | [optional]
  **_from** | **int**| From represents the start offset (zero based), used in paginated search requests The results returned would be in the range [From ... From+MaxResults-1] This can be specified as URI parameter. Default value is 0 and valid range is 0..8192. Value should be between 0 and 8192. | [optional]
- **max_results** | **int**| MaxResults is the max-count of search results This can be specified as URI parameter. Default value is 50 and valid range is 0..8192. Value should be between 0 and 8192. | [optional]
- **sort_by** | **str**| SortyBy is an optional parameter and contains the field name to be sorted by, For eg: \&quot;meta.name\&quot; This can be specified as URI parameter. Length of string should be between 0 and 256. | [optional]
- **sort_order** | **str**| SortOrder is an optional parameter and contains whether to sort ascending or descending This can be specified as URI parameter. | [optional]
- **mode** | **str**| Query Mode. | [optional]
  **query_categories** | **[str]**| OR of Categories to be matched, AND and Exclude are not supported for this type The max category string length is 64 bytes. Length of string should be between 0 and 64. | [optional]
- **query_kinds** | **[str]**| OR of Kinds to be matched, AND and Exclude are not supported for this type. Should be a valid object Kind. | [optional]
- **tenants** | **[str]**| OR of tenants within the scope of which search needs to be performed. If not specified, it will be set to tenant of the logged in user. | [optional]
- **aggregate** | **bool**| Indicates whether to perform aggregation on the search results or not. | [optional]
 
 ### Return type
 

@@ -65,7 +65,6 @@ from pensando_dss.psm.model.network_lb_policy_list import NetworkLbPolicyList
 from pensando_dss.psm.model.network_lb_policy_spec import NetworkLbPolicySpec
 from pensando_dss.psm.model.network_lb_policy_status import NetworkLbPolicyStatus
 from pensando_dss.psm.model.network_network import NetworkNetwork
-from pensando_dss.psm.model.network_network_firewall_profile import NetworkNetworkFirewallProfile
 from pensando_dss.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_dss.psm.model.network_network_interface_host_status import NetworkNetworkInterfaceHostStatus
 from pensando_dss.psm.model.network_network_interface_list import NetworkNetworkInterfaceList

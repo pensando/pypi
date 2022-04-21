@@ -43,7 +43,6 @@ with psm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = workload_v1_api.WorkloadV1Api(api_client)
     o_tenant = "O.Tenant_example" # str | 
-o_name = "O.Name_example" # str | 
 body = WorkloadWorkload(
         api_version="api_version_example",
         kind="kind_example",
@@ -128,7 +127,7 @@ body = WorkloadWorkload(
 
     try:
         # Abort Workload Migration operation
-        api_response = api_instance.abort_migration(o_tenant, o_name, body)
+        api_response = api_instance.abort_migration(o_tenant, body)
         pprint(api_response)
     except psm.ApiException as e:
         print("Exception when calling WorkloadV1Api->abort_migration: %s\n" % e)

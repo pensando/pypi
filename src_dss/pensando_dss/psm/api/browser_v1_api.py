@@ -54,16 +54,7 @@ class BrowserV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -122,16 +113,7 @@ class BrowserV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
                 ],
                 'required': [],
                 'nullable': [
@@ -149,52 +131,16 @@ class BrowserV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -224,20 +170,8 @@ class BrowserV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                b_uri (str): URI is the root node from where to query. Length of string should be between 2 and 512.. [optional]
-                b_query_type (str): QueryType is the direction of the query.. [optional]
-                b_max_depth (int): Max-Depth specifies how deep the query should explore. By default depth is set to 1 which means immediate relations 0 means to maximum depth.. [optional]
-                b_count_only (bool): When CountOnly is set the response only contains counts and not the actual objects.. [optional]
+                b_kind_filters ([str]): KindFilters Specify the kind types to match/filter (for links only) on when returning the response.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -296,20 +230,8 @@ class BrowserV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'b_uri',
-                    'b_query_type',
-                    'b_max_depth',
-                    'b_count_only',
+                    'b_kind_filters',
                 ],
                 'required': [],
                 'nullable': [
@@ -327,70 +249,23 @@ class BrowserV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'b_uri':
-                        (str,),
-                    'b_query_type':
-                        (str,),
-                    'b_max_depth':
-                        (int,),
-                    'b_count_only':
-                        (bool,),
+                    'b_kind_filters':
+                        ([str],),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'b_uri': 'B.uri',
-                    'b_query_type': 'B.query-type',
-                    'b_max_depth': 'B.max-depth',
-                    'b_count_only': 'B.count-only',
+                    'b_kind_filters': 'B.kind-filters',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'b_uri': 'query',
-                    'b_query_type': 'query',
-                    'b_max_depth': 'query',
-                    'b_count_only': 'query',
+                    'b_kind_filters': 'query',
                 },
                 'collection_format_map': {
+                    'b_kind_filters': 'csv',
                 }
             },
             headers_map={
@@ -418,20 +293,8 @@ class BrowserV1Api(object):
 
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
-                t_api_version (str): APIVersion defines the version of the API object. This can only be set by the server.. [optional]
-                meta_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_tenant (str): Tenant to which the object belongs to. This can be automatically filled in many cases based on the tenant the user, who created the object, belongs to. Must be alpha-numerics. Length of string should be between 1 and 48.. [optional]
-                meta_namespace (str): Namespace of the object, for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
-                meta_generation_id (str): GenerationID is the generation Id for the object. This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]
-                meta_resource_version (str): Resource version in the object store. This is updated anytime there is any change to the object. System generated and updated, not updatable by user.. [optional]
-                meta_uuid (str): UUID is the unique identifier for the object. This is generated on creation of the object. System generated, not updatable by user.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_mod_time (datetime): ModTime is the Last Modification time of the object. System generated and updated, not updatable by user.. [optional]
-                meta_self_link (str): SelfLink is a link for accessing this object. When the object is served from the API-GW it is the URI path. Example: - \"/v1/tenants/tenants/tenant2\" System generated and updated, not updatable by user.. [optional]
-                b_uri (str): URI is the root node from where to query. Length of string should be between 2 and 512.. [optional]
-                b_query_type (str): QueryType is the direction of the query.. [optional]
-                b_max_depth (int): Max-Depth specifies how deep the query should explore. By default depth is set to 1 which means immediate relations 0 means to maximum depth.. [optional]
-                b_count_only (bool): When CountOnly is set the response only contains counts and not the actual objects.. [optional]
+                b_kind_filters ([str]): KindFilters Specify the kind types to match/filter (for links only) on when returning the response.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -490,20 +353,8 @@ class BrowserV1Api(object):
             params_map={
                 'all': [
                     't_kind',
-                    't_api_version',
-                    'meta_name',
-                    'meta_tenant',
-                    'meta_namespace',
-                    'meta_generation_id',
-                    'meta_resource_version',
-                    'meta_uuid',
                     'meta_creation_time',
-                    'meta_mod_time',
-                    'meta_self_link',
-                    'b_uri',
-                    'b_query_type',
-                    'b_max_depth',
-                    'b_count_only',
+                    'b_kind_filters',
                 ],
                 'required': [],
                 'nullable': [
@@ -521,70 +372,23 @@ class BrowserV1Api(object):
                 'openapi_types': {
                     't_kind':
                         (str,),
-                    't_api_version':
-                        (str,),
-                    'meta_name':
-                        (str,),
-                    'meta_tenant':
-                        (str,),
-                    'meta_namespace':
-                        (str,),
-                    'meta_generation_id':
-                        (str,),
-                    'meta_resource_version':
-                        (str,),
-                    'meta_uuid':
-                        (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'meta_mod_time':
-                        (datetime,),
-                    'meta_self_link':
-                        (str,),
-                    'b_uri':
-                        (str,),
-                    'b_query_type':
-                        (str,),
-                    'b_max_depth':
-                        (int,),
-                    'b_count_only':
-                        (bool,),
+                    'b_kind_filters':
+                        ([str],),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
-                    't_api_version': 'T.api-version',
-                    'meta_name': 'meta.name',
-                    'meta_tenant': 'meta.tenant',
-                    'meta_namespace': 'meta.namespace',
-                    'meta_generation_id': 'meta.generation-id',
-                    'meta_resource_version': 'meta.resource-version',
-                    'meta_uuid': 'meta.uuid',
                     'meta_creation_time': 'meta.creation-time',
-                    'meta_mod_time': 'meta.mod-time',
-                    'meta_self_link': 'meta.self-link',
-                    'b_uri': 'B.uri',
-                    'b_query_type': 'B.query-type',
-                    'b_max_depth': 'B.max-depth',
-                    'b_count_only': 'B.count-only',
+                    'b_kind_filters': 'B.kind-filters',
                 },
                 'location_map': {
                     't_kind': 'query',
-                    't_api_version': 'query',
-                    'meta_name': 'query',
-                    'meta_tenant': 'query',
-                    'meta_namespace': 'query',
-                    'meta_generation_id': 'query',
-                    'meta_resource_version': 'query',
-                    'meta_uuid': 'query',
                     'meta_creation_time': 'query',
-                    'meta_mod_time': 'query',
-                    'meta_self_link': 'query',
-                    'b_uri': 'query',
-                    'b_query_type': 'query',
-                    'b_max_depth': 'query',
-                    'b_count_only': 'query',
+                    'b_kind_filters': 'query',
                 },
                 'collection_format_map': {
+                    'b_kind_filters': 'csv',
                 }
             },
             headers_map={

@@ -53,7 +53,6 @@ class TokenauthV1Api(object):
             Keyword Args:
                 audience ([str]): Audience represents a list of nodes the token is valid for. \"*\" indicates all nodes.. [optional]
                 validity_start (datetime): ValidityStart indicates the time at which the token becomes valid.. [optional]
-                validity_end (datetime): ValidityEnd indicates the time at which the token becomes invalid.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -113,7 +112,6 @@ class TokenauthV1Api(object):
                 'all': [
                     'audience',
                     'validity_start',
-                    'validity_end',
                 ],
                 'required': [],
                 'nullable': [
@@ -133,18 +131,14 @@ class TokenauthV1Api(object):
                         ([str],),
                     'validity_start':
                         (datetime,),
-                    'validity_end':
-                        (datetime,),
                 },
                 'attribute_map': {
                     'audience': 'audience',
                     'validity_start': 'validity-start',
-                    'validity_end': 'validity-end',
                 },
                 'location_map': {
                     'audience': 'query',
                     'validity_start': 'query',
-                    'validity_end': 'query',
                 },
                 'collection_format_map': {
                     'audience': 'csv',
