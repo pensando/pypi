@@ -1,7 +1,7 @@
-# Pensando PSM API Overview
-The Pensando PSM is the central management component of the Pensando Distributed Services Platform. 
+# AMD Pensando PSM API Overview
+The AMD Pensando PSM is the central management component of the AMD Pensando Distributed Services Platform. 
 It provides a programmable, secure microservice-based infrastructure to control global policies and distributed services in a data center, such as Network, Security and  Storage services.
-The PSM platform consists of an odd number of quorum controller nodes (e.g. 3, 5, 7) that provide consistent services to thousands of physical devices utilizing Pensando Distributed Services Cards (DSCs).  
+The PSM platform consists of an odd number of quorum controller nodes (e.g. 3, 5, 7) that provide consistent services to thousands of physical devices utilizing AMD Pensando Distributed Services Cards (DSCs).  
 The following figure is an architectural diagram of the PSM platform. 
 ![](../img/PSM_Architecture.png)
 
