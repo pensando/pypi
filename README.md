@@ -1,5 +1,5 @@
 # AMD Pensando PSM Python Bindings
-This repo contains the python language bindings for the REST APIs exposed by Pensando Policy and Services Manager (PSM). Client bindings differ and thus reflect the functions in various PSM distributions:
+This repo contains the python language bindings for the REST APIs exposed by AMD Pensando Policy and Services Manager (PSM). Client bindings differ and thus reflect the functions in various PSM distributions:
 * [Cloud Distribution](src_cloud/pensando_cloud/README.md)
 * [Enterprise Distribution](src_ent/pensando_ent/README.md)
 * [Distributed Services Switch Distribution](src_dss/pensando_dss/README.md)
@@ -48,7 +48,7 @@ More apps [here](https://github.com/pensando/psm-tools/tree/main/client/python/e
 * PSM GUI `Admin` menu, allows `Enable Live Capture` to see the the APIs used when an operation is performed in PSM GUI
 
 ## Contributing
-The Pensando Python SDK is auto generated from the PSM swagger spec. Please do not fork/modify any code in this repository, instead head over to [https://github.com/pensando/psm-tools](https://github.com/pensando/psm-tools) to generate the appropriate code.
+The AMD Pensando Python SDK is auto generated from the PSM swagger spec. Please do not fork/modify any code in this repository, instead head over to [https://github.com/pensando/psm-tools](https://github.com/pensando/psm-tools) to generate the appropriate code.
 
 ## Issues
 Please submit an issue at [https://github.com/pensando/psm-tools/issues](https://github.com/pensando/psm-tools/issues) if you find a bug or want to request an enhancement.
