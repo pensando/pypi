@@ -1,4 +1,4 @@
-# Pensando PSM Python Bindings
+# AMD Pensando PSM Python Bindings
 This repo contains the python language bindings for the REST APIs exposed by Pensando Policy and Services Manager (PSM). Client bindings differ and thus reflect the functions in various PSM distributions:
 * [Cloud Distribution](src_cloud/pensando_cloud/README.md)
 * [Enterprise Distribution](src_ent/pensando_ent/README.md)
