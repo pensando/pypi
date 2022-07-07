@@ -1,8 +1,8 @@
 # AMD Pensando PSM Python Bindings
 This repo contains the python language bindings for the REST APIs exposed by AMD Pensando Policy and Services Manager (PSM). Client bindings differ and thus reflect the functions in various PSM distributions:
+* [Distributed Services Switch Distribution](src_dss/pensando_dss/README.md)
 * [Cloud Distribution](src_cloud/pensando_cloud/README.md)
 * [Enterprise Distribution](src_ent/pensando_ent/README.md)
-* [Distributed Services Switch Distribution](src_dss/pensando_dss/README.md)
 
 ## Getting started
 
