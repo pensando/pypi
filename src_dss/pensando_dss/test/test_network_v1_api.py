@@ -72,6 +72,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_add_static_bindings(self):
+        """Test case for add_static_bindings
+
+        Add static bindings  # noqa: E501
+        """
+        pass
+
+    def test_add_static_bindings1(self):
+        """Test case for add_static_bindings1
+
+        Add static bindings  # noqa: E501
+        """
+        pass
+
     def test_add_virtual_router(self):
         """Test case for add_virtual_router
 

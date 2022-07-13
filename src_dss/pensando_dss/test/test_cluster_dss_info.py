@@ -14,8 +14,12 @@ import unittest
 import psm
 from pensando_dss.psm.model.cluster_dsm import ClusterDSM
 from pensando_dss.psm.model.cluster_fault import ClusterFault
+from pensando_dss.psm.model.cluster_neighbor_port_info import ClusterNeighborPortInfo
+from pensando_dss.psm.model.cluster_peer import ClusterPeer
 globals()['ClusterDSM'] = ClusterDSM
 globals()['ClusterFault'] = ClusterFault
+globals()['ClusterNeighborPortInfo'] = ClusterNeighborPortInfo
+globals()['ClusterPeer'] = ClusterPeer
 from pensando_dss.psm.psm.model.cluster_dss_info import ClusterDSSInfo
 
 

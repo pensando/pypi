@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **migration_status** | [**WorkloadWorkloadMigrationStatus**](WorkloadWorkloadMigrationStatus.md) |  | [optional] 
 **mirror_sessions** | **[str]** | MirrorSessions list of mirror sessions enabled on this workload. | [optional] 
 **propagation_status** | [**SecurityPropagationStatus**](SecurityPropagationStatus.md) |  | [optional] 
+**workload_groups** | **[str]** | WorkloadGroups list of workload groups associated with this workload. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,6 +6,8 @@ All URIs are relative to *https://PSM-IP-addr*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ClusterV1Api* | [**add_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#add_configuration_snapshot) | **POST** /configs/cluster/v1/config-snapshot | Create ConfigurationSnapshot object
+*ClusterV1Api* | [**add_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#add_distributed_service_card) | **POST** /configs/cluster/v1/distributedservicecards | Create DistributedServiceCard object
+*ClusterV1Api* | [**add_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#add_distributed_service_entity) | **POST** /configs/cluster/v1/distributedserviceentities | Create DistributedServiceEntity object
 *ClusterV1Api* | [**add_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#add_dsc_profile) | **POST** /configs/cluster/v1/dscprofiles | Create DSCProfile object
 *ClusterV1Api* | [**add_host**](../../../../pensando_dss/docs/ClusterV1Api.md#add_host) | **POST** /configs/cluster/v1/hosts | Create Host object
 *ClusterV1Api* | [**add_license**](../../../../pensando_dss/docs/ClusterV1Api.md#add_license) | **POST** /configs/cluster/v1/licenses | Create License object
@@ -14,6 +16,7 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**auth_bootstrap_complete**](../../../../pensando_dss/docs/ClusterV1Api.md#auth_bootstrap_complete) | **POST** /configs/cluster/v1/cluster/AuthBootstrapComplete | Mark bootstrapping as complete for the cluster
 *ClusterV1Api* | [**delete_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_configuration_snapshot) | **DELETE** /configs/cluster/v1/config-snapshot | Delete ConfigurationSnapshot object
 *ClusterV1Api* | [**delete_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_distributed_service_card) | **DELETE** /configs/cluster/v1/distributedservicecards/{O.Name} | Delete DistributedServiceCard object
+*ClusterV1Api* | [**delete_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_distributed_service_entity) | **DELETE** /configs/cluster/v1/distributedserviceentities/{O.Name} | Delete DistributedServiceEntity object
 *ClusterV1Api* | [**delete_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_dsc_profile) | **DELETE** /configs/cluster/v1/dscprofiles/{O.Name} | Delete DSCProfile object
 *ClusterV1Api* | [**delete_host**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_host) | **DELETE** /configs/cluster/v1/hosts/{O.Name} | Delete Host object
 *ClusterV1Api* | [**delete_node**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_node) | **DELETE** /configs/cluster/v1/nodes/{O.Name} | Delete Node object
@@ -22,6 +25,7 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**get_cluster_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#get_cluster_profile) | **GET** /configs/cluster/v1/clusterprofile | Get ClusterProfile object
 *ClusterV1Api* | [**get_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#get_configuration_snapshot) | **GET** /configs/cluster/v1/config-snapshot | Get ConfigurationSnapshot object
 *ClusterV1Api* | [**get_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#get_distributed_service_card) | **GET** /configs/cluster/v1/distributedservicecards/{O.Name} | Get DistributedServiceCard object
+*ClusterV1Api* | [**get_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#get_distributed_service_entity) | **GET** /configs/cluster/v1/distributedserviceentities/{O.Name} | Get DistributedServiceEntity object
 *ClusterV1Api* | [**get_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#get_dsc_profile) | **GET** /configs/cluster/v1/dscprofiles/{O.Name} | Get DSCProfile object
 *ClusterV1Api* | [**get_host**](../../../../pensando_dss/docs/ClusterV1Api.md#get_host) | **GET** /configs/cluster/v1/hosts/{O.Name} | Get Host object
 *ClusterV1Api* | [**get_license**](../../../../pensando_dss/docs/ClusterV1Api.md#get_license) | **GET** /configs/cluster/v1/licenses | Get License object
@@ -33,12 +37,14 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**label_cluster_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#label_cluster_profile) | **POST** /configs/cluster/v1/clusterprofile/label | Label ClusterProfile object
 *ClusterV1Api* | [**label_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#label_configuration_snapshot) | **POST** /configs/cluster/v1/config-snapshot/label | Label ConfigurationSnapshot object
 *ClusterV1Api* | [**label_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#label_distributed_service_card) | **POST** /configs/cluster/v1/distributedservicecards/{O.Name}/label | Label DistributedServiceCard object
+*ClusterV1Api* | [**label_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#label_distributed_service_entity) | **POST** /configs/cluster/v1/distributedserviceentities/{O.Name}/label | Label DistributedServiceEntity object
 *ClusterV1Api* | [**label_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#label_dsc_profile) | **POST** /configs/cluster/v1/dscprofiles/{O.Name}/label | Label DSCProfile object
 *ClusterV1Api* | [**label_host**](../../../../pensando_dss/docs/ClusterV1Api.md#label_host) | **POST** /configs/cluster/v1/hosts/{O.Name}/label | Label Host object
 *ClusterV1Api* | [**label_license**](../../../../pensando_dss/docs/ClusterV1Api.md#label_license) | **POST** /configs/cluster/v1/licenses/label | Label License object
 *ClusterV1Api* | [**label_node**](../../../../pensando_dss/docs/ClusterV1Api.md#label_node) | **POST** /configs/cluster/v1/nodes/{O.Name}/label | Label Node object
 *ClusterV1Api* | [**label_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#label_tenant) | **POST** /configs/cluster/v1/tenants/{O.Name}/label | Label Tenant object
 *ClusterV1Api* | [**list_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#list_distributed_service_card) | **GET** /configs/cluster/v1/distributedservicecards | List DistributedServiceCard objects
+*ClusterV1Api* | [**list_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#list_distributed_service_entity) | **GET** /configs/cluster/v1/distributedserviceentities | List DistributedServiceEntity objects
 *ClusterV1Api* | [**list_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#list_dsc_profile) | **GET** /configs/cluster/v1/dscprofiles | List DSCProfile objects
 *ClusterV1Api* | [**list_host**](../../../../pensando_dss/docs/ClusterV1Api.md#list_host) | **GET** /configs/cluster/v1/hosts | List Host objects
 *ClusterV1Api* | [**list_node**](../../../../pensando_dss/docs/ClusterV1Api.md#list_node) | **GET** /configs/cluster/v1/nodes | List Node objects
@@ -49,6 +55,7 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**update_cluster_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#update_cluster_profile) | **PUT** /configs/cluster/v1/clusterprofile | Update ClusterProfile object
 *ClusterV1Api* | [**update_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#update_configuration_snapshot) | **PUT** /configs/cluster/v1/config-snapshot | Update ConfigurationSnapshot object
 *ClusterV1Api* | [**update_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#update_distributed_service_card) | **PUT** /configs/cluster/v1/distributedservicecards/{O.Name} | Update DistributedServiceCard object
+*ClusterV1Api* | [**update_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#update_distributed_service_entity) | **PUT** /configs/cluster/v1/distributedserviceentities/{O.Name} | Update DistributedServiceEntity object
 *ClusterV1Api* | [**update_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#update_dsc_profile) | **PUT** /configs/cluster/v1/dscprofiles/{O.Name} | Update DSCProfile object
 *ClusterV1Api* | [**update_host**](../../../../pensando_dss/docs/ClusterV1Api.md#update_host) | **PUT** /configs/cluster/v1/hosts/{O.Name} | Update Host object
 *ClusterV1Api* | [**update_license**](../../../../pensando_dss/docs/ClusterV1Api.md#update_license) | **PUT** /configs/cluster/v1/licenses | Update License object
@@ -60,6 +67,7 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**watch_cluster_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_cluster_profile) | **GET** /configs/cluster/v1/watch/clusterprofile | Watch ClusterProfile objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_configuration_snapshot) | **GET** /configs/cluster/v1/watch/config-snapshot | Watch ConfigurationSnapshot objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_distributed_service_card) | **GET** /configs/cluster/v1/watch/distributedservicecards | Watch DistributedServiceCard objects. Supports WebSockets or HTTP long poll
+*ClusterV1Api* | [**watch_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_distributed_service_entity) | **GET** /configs/cluster/v1/watch/distributedserviceentities | Watch DistributedServiceEntity objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_dsc_profile) | **GET** /configs/cluster/v1/watch/dscprofiles | Watch DSCProfile objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_host**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_host) | **GET** /configs/cluster/v1/watch/hosts | Watch Host objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_node**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_node) | **GET** /configs/cluster/v1/watch/nodes | Watch Node objects. Supports WebSockets or HTTP long poll
@@ -95,6 +103,8 @@ Class | Method | HTTP request | Description
  - [ClusterAutoMsgDSCProfileWatchHelperWatchEvent](../../../docs/ClusterAutoMsgDSCProfileWatchHelperWatchEvent.md)
  - [ClusterAutoMsgDistributedServiceCardWatchHelper](../../../docs/ClusterAutoMsgDistributedServiceCardWatchHelper.md)
  - [ClusterAutoMsgDistributedServiceCardWatchHelperWatchEvent](../../../docs/ClusterAutoMsgDistributedServiceCardWatchHelperWatchEvent.md)
+ - [ClusterAutoMsgDistributedServiceEntityWatchHelper](../../../docs/ClusterAutoMsgDistributedServiceEntityWatchHelper.md)
+ - [ClusterAutoMsgDistributedServiceEntityWatchHelperWatchEvent](../../../docs/ClusterAutoMsgDistributedServiceEntityWatchHelperWatchEvent.md)
  - [ClusterAutoMsgHostWatchHelper](../../../docs/ClusterAutoMsgHostWatchHelper.md)
  - [ClusterAutoMsgHostWatchHelperWatchEvent](../../../docs/ClusterAutoMsgHostWatchHelperWatchEvent.md)
  - [ClusterAutoMsgLicenseWatchHelper](../../../docs/ClusterAutoMsgLicenseWatchHelper.md)
@@ -140,9 +150,14 @@ Class | Method | HTTP request | Description
  - [ClusterDistributedServiceCardList](../../../docs/ClusterDistributedServiceCardList.md)
  - [ClusterDistributedServiceCardSpec](../../../docs/ClusterDistributedServiceCardSpec.md)
  - [ClusterDistributedServiceCardStatus](../../../docs/ClusterDistributedServiceCardStatus.md)
+ - [ClusterDistributedServiceEntity](../../../docs/ClusterDistributedServiceEntity.md)
+ - [ClusterDistributedServiceEntityList](../../../docs/ClusterDistributedServiceEntityList.md)
+ - [ClusterDistributedServiceEntitySpec](../../../docs/ClusterDistributedServiceEntitySpec.md)
+ - [ClusterDistributedServiceEntityStatus](../../../docs/ClusterDistributedServiceEntityStatus.md)
  - [ClusterFault](../../../docs/ClusterFault.md)
  - [ClusterFeature](../../../docs/ClusterFeature.md)
  - [ClusterFeatureStatus](../../../docs/ClusterFeatureStatus.md)
+ - [ClusterFlowExportPolicyRef](../../../docs/ClusterFlowExportPolicyRef.md)
  - [ClusterFwlogPolicyRef](../../../docs/ClusterFwlogPolicyRef.md)
  - [ClusterHost](../../../docs/ClusterHost.md)
  - [ClusterHostList](../../../docs/ClusterHostList.md)
@@ -155,13 +170,17 @@ Class | Method | HTTP request | Description
  - [ClusterLicenseSpec](../../../docs/ClusterLicenseSpec.md)
  - [ClusterLicenseStatus](../../../docs/ClusterLicenseStatus.md)
  - [ClusterMemInfo](../../../docs/ClusterMemInfo.md)
+ - [ClusterNeighborPortInfo](../../../docs/ClusterNeighborPortInfo.md)
  - [ClusterNode](../../../docs/ClusterNode.md)
  - [ClusterNodeCondition](../../../docs/ClusterNodeCondition.md)
  - [ClusterNodeList](../../../docs/ClusterNodeList.md)
  - [ClusterNodeSpec](../../../docs/ClusterNodeSpec.md)
  - [ClusterNodeStatus](../../../docs/ClusterNodeStatus.md)
  - [ClusterOsInfo](../../../docs/ClusterOsInfo.md)
+ - [ClusterOverlayForwarding](../../../docs/ClusterOverlayForwarding.md)
+ - [ClusterPeer](../../../docs/ClusterPeer.md)
  - [ClusterPeerStatus](../../../docs/ClusterPeerStatus.md)
+ - [ClusterPnicInfo](../../../docs/ClusterPnicInfo.md)
  - [ClusterPolicerRef](../../../docs/ClusterPolicerRef.md)
  - [ClusterPropagationStatus](../../../docs/ClusterPropagationStatus.md)
  - [ClusterQuorumMemberCondition](../../../docs/ClusterQuorumMemberCondition.md)

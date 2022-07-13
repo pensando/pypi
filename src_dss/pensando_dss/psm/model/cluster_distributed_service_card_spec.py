@@ -29,9 +29,11 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.cluster_flow_export_policy_ref import ClusterFlowExportPolicyRef
     from pensando_dss.psm.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef
     from pensando_dss.psm.model.cluster_ip_config import ClusterIPConfig
     from pensando_dss.psm.model.cluster_policer_ref import ClusterPolicerRef
+    globals()['ClusterFlowExportPolicyRef'] = ClusterFlowExportPolicyRef
     globals()['ClusterFwlogPolicyRef'] = ClusterFwlogPolicyRef
     globals()['ClusterIPConfig'] = ClusterIPConfig
     globals()['ClusterPolicerRef'] = ClusterPolicerRef
@@ -99,6 +101,7 @@ class ClusterDistributedServiceCardSpec(ModelNormal):
             'controllers': ([str],),  # noqa: E501
             'dscprofile': (str,),  # noqa: E501
             'enable_secure_boot': (bool,),  # noqa: E501
+            'flow_export_policy': ([ClusterFlowExportPolicyRef],),  # noqa: E501
             'fwlog_policy': (ClusterFwlogPolicyRef,),  # noqa: E501
             'id': (str,),  # noqa: E501
             'ip_config': (ClusterIPConfig,),  # noqa: E501
@@ -119,6 +122,7 @@ class ClusterDistributedServiceCardSpec(ModelNormal):
         'controllers': 'controllers',  # noqa: E501
         'dscprofile': 'dscprofile',  # noqa: E501
         'enable_secure_boot': 'enable-secure-boot',  # noqa: E501
+        'flow_export_policy': 'flow-export-policy',  # noqa: E501
         'fwlog_policy': 'fwlog-policy',  # noqa: E501
         'id': 'id',  # noqa: E501
         'ip_config': 'ip-config',  # noqa: E501
@@ -179,6 +183,7 @@ class ClusterDistributedServiceCardSpec(ModelNormal):
             controllers ([str]): Controllers contains the list of remote controllers IP addresses or hostnames.. [optional]  # noqa: E501
             dscprofile (str): [optional]  # noqa: E501
             enable_secure_boot (bool): EnableSecureBoot a true value indicates, set lifecycle fuse to enable secure boot.. [optional] if omitted the server will use the default value of False  # noqa: E501
+            flow_export_policy ([ClusterFlowExportPolicyRef]): FlowExportPolicy is the configuration for flow export policy.. [optional]  # noqa: E501
             fwlog_policy (ClusterFwlogPolicyRef): [optional]  # noqa: E501
             id (str): ID is used as a user friendly identifier in logs/events.. [optional]  # noqa: E501
             ip_config (ClusterIPConfig): [optional]  # noqa: E501

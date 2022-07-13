@@ -194,7 +194,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         action="action_example",
         app="app_example",
         from_ip_address="from_ip_address_example",
-        from_security_group="from_security_group_example",
+        from_workload_group="from_workload_group_example",
         kinds=[
             "kinds_example",
         ],
@@ -204,7 +204,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         protocol="protocol_example",
         tenant="default",
         to_ip_address="to_ip_address_example",
-        to_security_group="to_security_group_example",
+        to_workload_group="to_workload_group_example",
     ) # SearchPolicySearchRequest | 
 
     # example passing only required values which don't have defaults set

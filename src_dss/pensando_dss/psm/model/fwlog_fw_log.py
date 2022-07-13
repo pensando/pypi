@@ -114,6 +114,7 @@ class FwlogFwLog(ModelNormal):
             'policy_name': (str,),  # noqa: E501
             'protocol': (str,),  # noqa: E501
             'reporter_id': (str,),  # noqa: E501
+            'reporter_name': (str,),  # noqa: E501
             'rule_id': (str,),  # noqa: E501
             'rule_name': (str,),  # noqa: E501
             'security_policy_id': (str,),  # noqa: E501
@@ -154,6 +155,7 @@ class FwlogFwLog(ModelNormal):
         'policy_name': 'policy-name',  # noqa: E501
         'protocol': 'protocol',  # noqa: E501
         'reporter_id': 'reporter-id',  # noqa: E501
+        'reporter_name': 'reporter-name',  # noqa: E501
         'rule_id': 'rule-id',  # noqa: E501
         'rule_name': 'rule-name',  # noqa: E501
         'security_policy_id': 'security-policy-id',  # noqa: E501
@@ -234,6 +236,7 @@ class FwlogFwLog(ModelNormal):
             policy_name (str): policy name.. [optional]  # noqa: E501
             protocol (str): Protocol,.. [optional]  # noqa: E501
             reporter_id (str): Reporter ID.. [optional]  # noqa: E501
+            reporter_name (str): ReporterName represents the name or hostname of the DSM that generated the log.. [optional]  # noqa: E501
             rule_id (str): Rule ID.. [optional]  # noqa: E501
             rule_name (str): Rule Name represents the name of the firewall rule that was hit by this session.. [optional]  # noqa: E501
             security_policy_id (str): SecurityPolicyID represents the UUID of the security policy.. [optional]  # noqa: E501

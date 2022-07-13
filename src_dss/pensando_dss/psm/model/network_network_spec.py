@@ -29,10 +29,10 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from pensando_dss.psm.model.network_ipam_config import NetworkIPAMConfig
+    from pensando_dss.psm.model.network_network_firewall_profile import NetworkNetworkFirewallProfile
     from pensando_dss.psm.model.network_orchestrator_info import NetworkOrchestratorInfo
     from pensando_dss.psm.model.network_rd_spec import NetworkRDSpec
-    globals()['NetworkIPAMConfig'] = NetworkIPAMConfig
+    globals()['NetworkNetworkFirewallProfile'] = NetworkNetworkFirewallProfile
     globals()['NetworkOrchestratorInfo'] = NetworkOrchestratorInfo
     globals()['NetworkRDSpec'] = NetworkRDSpec
 
@@ -96,8 +96,8 @@ class NetworkNetworkSpec(ModelNormal):
         lazy_import()
         return {
             'egress_security_policy': ([str],),  # noqa: E501
+            'firewall_profile': (NetworkNetworkFirewallProfile,),  # noqa: E501
             'ingress_security_policy': ([str],),  # noqa: E501
-            'ipam_config': (NetworkIPAMConfig,),  # noqa: E501
             'ipam_policy': (str,),  # noqa: E501
             'ipv4_gateway': (str,),  # noqa: E501
             'ipv4_subnet': (str,),  # noqa: E501
@@ -118,8 +118,8 @@ class NetworkNetworkSpec(ModelNormal):
 
     attribute_map = {
         'egress_security_policy': 'egress-security-policy',  # noqa: E501
+        'firewall_profile': 'firewall-profile',  # noqa: E501
         'ingress_security_policy': 'ingress-security-policy',  # noqa: E501
-        'ipam_config': 'ipam-config',  # noqa: E501
         'ipam_policy': 'ipam-policy',  # noqa: E501
         'ipv4_gateway': 'ipv4-gateway',  # noqa: E501
         'ipv4_subnet': 'ipv4-subnet',  # noqa: E501
@@ -180,8 +180,8 @@ class NetworkNetworkSpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             egress_security_policy ([str]): Security Policy to apply in the egress direction.. [optional]  # noqa: E501
+            firewall_profile (NetworkNetworkFirewallProfile): [optional]  # noqa: E501
             ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]  # noqa: E501
-            ipam_config (NetworkIPAMConfig): [optional]  # noqa: E501
             ipam_policy (str): Relay Configuration if any.. [optional]  # noqa: E501
             ipv4_gateway (str): IPv4 gateway for this subnet. Should be a valid v4 or v6 IP address.. [optional]  # noqa: E501
             ipv4_subnet (str): IPv4 subnet CIDR. Should be a valid v4 or v6 CIDR block.. [optional]  # noqa: E501

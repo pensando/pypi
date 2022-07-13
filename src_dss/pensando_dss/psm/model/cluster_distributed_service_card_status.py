@@ -120,6 +120,7 @@ class ClusterDistributedServiceCardStatus(ModelNormal):
             'package_type': (str,),  # noqa: E501
             'primary_mac': (str,),  # noqa: E501
             'secure_booted': (bool,),  # noqa: E501
+            'security_policy_rule_scale_profile': (str,),  # noqa: E501
             'serial_num': (str,),  # noqa: E501
             'system_info': (ClusterDSCInfo,),  # noqa: E501
             'unhealthy_services': ([str],),  # noqa: E501
@@ -149,6 +150,7 @@ class ClusterDistributedServiceCardStatus(ModelNormal):
         'package_type': 'package-type',  # noqa: E501
         'primary_mac': 'primary-mac',  # noqa: E501
         'secure_booted': 'secure-booted',  # noqa: E501
+        'security_policy_rule_scale_profile': 'security-policy-rule-scale-profile',  # noqa: E501
         'serial_num': 'serial-num',  # noqa: E501
         'system_info': 'system-info',  # noqa: E501
         'unhealthy_services': 'unhealthy-services',  # noqa: E501
@@ -218,6 +220,7 @@ class ClusterDistributedServiceCardStatus(ModelNormal):
             package_type (str): Type of DSC.. [optional] if omitted the server will use the default value of "dsc"  # noqa: E501
             primary_mac (str): PrimaryMAC is the MAC address of the primary PF exposed by DistributedServiceCard. Should be a valid MAC address.. [optional]  # noqa: E501
             secure_booted (bool): SecureBooted a true value indicates, secure boot is enabled.. [optional]  # noqa: E501
+            security_policy_rule_scale_profile (str): SecurityPolicyRuleScaleProfile is the active security policy rule scale profile in the DSE.. [optional]  # noqa: E501
             serial_num (str): Serial number.. [optional]  # noqa: E501
             system_info (ClusterDSCInfo): [optional]  # noqa: E501
             unhealthy_services ([str]): Lists the unhealthy services of a distributed service card.. [optional]  # noqa: E501

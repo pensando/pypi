@@ -90,6 +90,7 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
         """
         return {
             'completed_at': (datetime,),  # noqa: E501
+            'migration_id': (str,),  # noqa: E501
             'stage': (str,),  # noqa: E501
             'started_at': (datetime,),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -102,6 +103,7 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
 
     attribute_map = {
         'completed_at': 'completed-at',  # noqa: E501
+        'migration_id': 'migration-id',  # noqa: E501
         'stage': 'stage',  # noqa: E501
         'started_at': 'started-at',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -154,6 +156,7 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             completed_at (datetime): migration completion time.. [optional]  # noqa: E501
+            migration_id (str): ID of the endpoints migration object.. [optional]  # noqa: E501
             stage (str): Controller's migration stage.. [optional] if omitted the server will use the default value of "migration-none"  # noqa: E501
             started_at (datetime): migration start time.. [optional]  # noqa: E501
             status (str): The status from the dataplane performing migration.. [optional] if omitted the server will use the default value of "none"  # noqa: E501

@@ -88,6 +88,7 @@ class WorkloadWorkloadStatus(ModelNormal):
             'migration_status': (WorkloadWorkloadMigrationStatus,),  # noqa: E501
             'mirror_sessions': ([str],),  # noqa: E501
             'propagation_status': (SecurityPropagationStatus,),  # noqa: E501
+            'workload_groups': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -101,6 +102,7 @@ class WorkloadWorkloadStatus(ModelNormal):
         'migration_status': 'migration-status',  # noqa: E501
         'mirror_sessions': 'mirror-sessions',  # noqa: E501
         'propagation_status': 'propagation-status',  # noqa: E501
+        'workload_groups': 'workload-groups',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -154,6 +156,7 @@ class WorkloadWorkloadStatus(ModelNormal):
             migration_status (WorkloadWorkloadMigrationStatus): [optional]  # noqa: E501
             mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this workload.. [optional]  # noqa: E501
             propagation_status (SecurityPropagationStatus): [optional]  # noqa: E501
+            workload_groups ([str]): WorkloadGroups list of workload groups associated with this workload.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

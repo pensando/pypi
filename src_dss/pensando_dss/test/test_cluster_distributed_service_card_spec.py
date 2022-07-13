@@ -12,9 +12,11 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.cluster_flow_export_policy_ref import ClusterFlowExportPolicyRef
 from pensando_dss.psm.model.cluster_fwlog_policy_ref import ClusterFwlogPolicyRef
 from pensando_dss.psm.model.cluster_ip_config import ClusterIPConfig
 from pensando_dss.psm.model.cluster_policer_ref import ClusterPolicerRef
+globals()['ClusterFlowExportPolicyRef'] = ClusterFlowExportPolicyRef
 globals()['ClusterFwlogPolicyRef'] = ClusterFwlogPolicyRef
 globals()['ClusterIPConfig'] = ClusterIPConfig
 globals()['ClusterPolicerRef'] = ClusterPolicerRef

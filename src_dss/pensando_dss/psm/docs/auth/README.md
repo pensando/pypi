@@ -51,6 +51,8 @@ Class | Method | HTTP request | Description
 *AuthV1Api* | [**password_reset**](../../../../pensando_dss/docs/AuthV1Api.md#password_reset) | **POST** /configs/auth/v1/tenant/{O.Tenant}/users/{O.Name}/PasswordReset | Reset user password
 *AuthV1Api* | [**password_reset1**](../../../../pensando_dss/docs/AuthV1Api.md#password_reset1) | **POST** /configs/auth/v1/users/{O.Name}/PasswordReset | Reset user password
 *AuthV1Api* | [**token_secret_generate**](../../../../pensando_dss/docs/AuthV1Api.md#token_secret_generate) | **POST** /configs/auth/v1/authn-policy/TokenSecretGenerate | Generate secret for token signing
+*AuthV1Api* | [**unlock**](../../../../pensando_dss/docs/AuthV1Api.md#unlock) | **POST** /configs/auth/v1/tenant/{O.Tenant}/users/{O.Name}/Unlock | Unlock user
+*AuthV1Api* | [**unlock1**](../../../../pensando_dss/docs/AuthV1Api.md#unlock1) | **POST** /configs/auth/v1/users/{O.Name}/Unlock | Unlock user
 *AuthV1Api* | [**update_authentication_policy**](../../../../pensando_dss/docs/AuthV1Api.md#update_authentication_policy) | **PUT** /configs/auth/v1/authn-policy | Update AuthenticationPolicy object
 *AuthV1Api* | [**update_role**](../../../../pensando_dss/docs/AuthV1Api.md#update_role) | **PUT** /configs/auth/v1/tenant/{O.Tenant}/roles/{O.Name} | Update Role object
 *AuthV1Api* | [**update_role1**](../../../../pensando_dss/docs/AuthV1Api.md#update_role1) | **PUT** /configs/auth/v1/roles/{O.Name} | Update Role object
@@ -107,6 +109,7 @@ Class | Method | HTTP request | Description
  - [AuthLdapDomain](../../../docs/AuthLdapDomain.md)
  - [AuthLdapServer](../../../docs/AuthLdapServer.md)
  - [AuthLdapServerStatus](../../../docs/AuthLdapServerStatus.md)
+ - [AuthLocal](../../../docs/AuthLocal.md)
  - [AuthOperation](../../../docs/AuthOperation.md)
  - [AuthOperationStatus](../../../docs/AuthOperationStatus.md)
  - [AuthPasswordChangeRequest](../../../docs/AuthPasswordChangeRequest.md)
@@ -133,6 +136,7 @@ Class | Method | HTTP request | Description
  - [AuthUserPreferenceSpec](../../../docs/AuthUserPreferenceSpec.md)
  - [AuthUserSpec](../../../docs/AuthUserSpec.md)
  - [AuthUserStatus](../../../docs/AuthUserStatus.md)
+ - [AuthUserUnlockRequest](../../../docs/AuthUserUnlockRequest.md)
  - [GoogleprotobufAny](../../../docs/GoogleprotobufAny.md)
 
 

@@ -79,7 +79,6 @@ class SecurityNetworkSecurityPolicySpec(ModelNormal):
         """
         lazy_import()
         return {
-            'attach_groups': ([str],),  # noqa: E501
             'attach_tenant': (bool,),  # noqa: E501
             'priority': (int,),  # noqa: E501
             'rules': ([SecuritySGRule],),  # noqa: E501
@@ -91,7 +90,6 @@ class SecurityNetworkSecurityPolicySpec(ModelNormal):
 
 
     attribute_map = {
-        'attach_groups': 'attach-groups',  # noqa: E501
         'attach_tenant': 'attach-tenant',  # noqa: E501
         'priority': 'priority',  # noqa: E501
         'rules': 'rules',  # noqa: E501
@@ -143,8 +141,7 @@ class SecurityNetworkSecurityPolicySpec(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            attach_groups ([str]): list of security groups this policy is attached to.. [optional]  # noqa: E501
-            attach_tenant (bool): specifies if the set of rules need to be attached globally to a tenant.. [optional]  # noqa: E501
+            attach_tenant (bool): specifies if the set of rules need to be attached globally to a tenant.. [optional] if omitted the server will use the default value of True  # noqa: E501
             priority (int): Policy priority. If not specified, it will be assigned automatically in increments of 1000.. [optional]  # noqa: E501
             rules ([SecuritySGRule]): list of rules.. [optional]  # noqa: E501
         """

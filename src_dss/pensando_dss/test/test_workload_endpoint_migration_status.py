@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.workload_migration_source import WorkloadMigrationSource
+globals()['WorkloadMigrationSource'] = WorkloadMigrationSource
 from pensando_dss.psm.psm.model.workload_endpoint_migration_status import WorkloadEndpointMigrationStatus
 
 

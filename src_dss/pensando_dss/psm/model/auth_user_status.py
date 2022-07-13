@@ -81,8 +81,11 @@ class AuthUserStatus(ModelNormal):
         return {
             'access_review': ([AuthOperationStatus],),  # noqa: E501
             'authenticators': ([str],),  # noqa: E501
+            'failed_login_attempts': (int,),  # noqa: E501
+            'first_failed_login': (datetime,),  # noqa: E501
             'last_login': (datetime,),  # noqa: E501
             'last_password_change': (datetime,),  # noqa: E501
+            'locked': (bool,),  # noqa: E501
             'roles': ([str],),  # noqa: E501
             'user_groups': ([str],),  # noqa: E501
         }
@@ -95,8 +98,11 @@ class AuthUserStatus(ModelNormal):
     attribute_map = {
         'access_review': 'access-review',  # noqa: E501
         'authenticators': 'authenticators',  # noqa: E501
+        'failed_login_attempts': 'failed-login-attempts',  # noqa: E501
+        'first_failed_login': 'first-failed-login',  # noqa: E501
         'last_login': 'last-login',  # noqa: E501
         'last_password_change': 'last-password-change',  # noqa: E501
+        'locked': 'locked',  # noqa: E501
         'roles': 'roles',  # noqa: E501
         'user_groups': 'user-groups',  # noqa: E501
     }
@@ -149,8 +155,11 @@ class AuthUserStatus(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             access_review ([AuthOperationStatus]): Authorization information about requested operations.. [optional]  # noqa: E501
             authenticators ([str]): Authenticators used for last successful login.. [optional]  # noqa: E501
+            failed_login_attempts (int): Count of failed login attempts.. [optional]  # noqa: E501
+            first_failed_login (datetime): First failed login attempt timestamp.. [optional]  # noqa: E501
             last_login (datetime): Last login time.. [optional]  # noqa: E501
             last_password_change (datetime): Last password change time for local user.. [optional]  # noqa: E501
+            locked (bool): Flag to indicate if user is locked.. [optional]  # noqa: E501
             roles ([str]): Roles assigned to user.. [optional]  # noqa: E501
             user_groups ([str]): Groups that external user belongs to.. [optional]  # noqa: E501
         """

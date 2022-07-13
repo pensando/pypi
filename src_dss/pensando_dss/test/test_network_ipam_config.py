@@ -12,7 +12,13 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.network_bootstrap_ipam_options import NetworkBootstrapIPAMOptions
+from pensando_dss.psm.model.network_ipam_binding import NetworkIPAMBinding
+from pensando_dss.psm.model.network_ipam_options import NetworkIPAMOptions
 from pensando_dss.psm.model.network_ipam_pool_info import NetworkIPAMPoolInfo
+globals()['NetworkBootstrapIPAMOptions'] = NetworkBootstrapIPAMOptions
+globals()['NetworkIPAMBinding'] = NetworkIPAMBinding
+globals()['NetworkIPAMOptions'] = NetworkIPAMOptions
 globals()['NetworkIPAMPoolInfo'] = NetworkIPAMPoolInfo
 from pensando_dss.psm.psm.model.network_ipam_config import NetworkIPAMConfig
 

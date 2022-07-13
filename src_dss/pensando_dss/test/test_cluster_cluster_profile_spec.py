@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.cluster_overlay_forwarding import ClusterOverlayForwarding
 from pensando_dss.psm.model.cluster_search_options import ClusterSearchOptions
+globals()['ClusterOverlayForwarding'] = ClusterOverlayForwarding
 globals()['ClusterSearchOptions'] = ClusterSearchOptions
 from pensando_dss.psm.psm.model.cluster_cluster_profile_spec import ClusterClusterProfileSpec
 

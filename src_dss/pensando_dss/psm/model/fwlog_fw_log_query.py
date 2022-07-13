@@ -99,6 +99,7 @@ class FwlogFwLogQuery(ModelNormal):
             'encryption_status': (str,),  # noqa: E501
             'end_time': (datetime,),  # noqa: E501
             'max_results': (int,),  # noqa: E501
+            'policy_names': ([str],),  # noqa: E501
             'protocols': ([str],),  # noqa: E501
             'reporter_ids': ([str],),  # noqa: E501
             'scroll_action': (str,),  # noqa: E501
@@ -109,6 +110,7 @@ class FwlogFwLogQuery(ModelNormal):
             'source_ports': ([int],),  # noqa: E501
             'start_time': (datetime,),  # noqa: E501
             'tenants': ([str],),  # noqa: E501
+            'vlans': ([str],),  # noqa: E501
             'vpc_names': ([str],),  # noqa: E501
         }
 
@@ -126,6 +128,7 @@ class FwlogFwLogQuery(ModelNormal):
         'encryption_status': 'encryption-status',  # noqa: E501
         'end_time': 'end-time',  # noqa: E501
         'max_results': 'max-results',  # noqa: E501
+        'policy_names': 'policy-names',  # noqa: E501
         'protocols': 'protocols',  # noqa: E501
         'reporter_ids': 'reporter-ids',  # noqa: E501
         'scroll_action': 'scroll-action',  # noqa: E501
@@ -136,6 +139,7 @@ class FwlogFwLogQuery(ModelNormal):
         'source_ports': 'source-ports',  # noqa: E501
         'start_time': 'start-time',  # noqa: E501
         'tenants': 'tenants',  # noqa: E501
+        'vlans': 'vlans',  # noqa: E501
         'vpc_names': 'vpc-names',  # noqa: E501
     }
 
@@ -193,6 +197,7 @@ class FwlogFwLogQuery(ModelNormal):
             encryption_status (str): if set, search logs that match the specified encryption status.. [optional] if omitted the server will use the default value of "all"  # noqa: E501
             end_time (datetime): EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z.. [optional]  # noqa: E501
             max_results (int): MaxResults is the max-count of search results Default value is 50 and valid range is 0..8192. Value should be between 0 and 8192.. [optional] if omitted the server will use the default value of 50  # noqa: E501
+            policy_names ([str]): OR of policy names to be matched. Only one policy name is allowed.. [optional]  # noqa: E501
             protocols ([str]): OR of protocols to be matched. Only one protocol can be specified and can only be specified if either source IP or destination IP is present.. [optional]  # noqa: E501
             reporter_ids ([str]): OR of reporter names to be matched. Only one reporter ID can be specified.. [optional]  # noqa: E501
             scroll_action (str): ScrollAction specifies actions related to scroll if its duration needs to be extended or scroll needs to be deleted.. [optional] if omitted the server will use the default value of "none"  # noqa: E501
@@ -203,6 +208,7 @@ class FwlogFwLogQuery(ModelNormal):
             source_ports ([int]): OR of source ports to be matched. Only one port can be specified and if present, source IP must also be specified. Value should be between 0 and 65535.. [optional]  # noqa: E501
             start_time (datetime): StartTime selects all logs with timestamp greater than the StartTime, example 2018-10-18T00:12:00Z.. [optional]  # noqa: E501
             tenants ([str]): OR of tenants within the scope of which search needs to be performed. If not specified, it will be set to tenant of the logged in user. Also users in non default tenant can search fwlogs in their tenant scope only.. [optional]  # noqa: E501
+            vlans ([str]): OR of vlan ids to be matched. Only one vlan id is allowed.. [optional]  # noqa: E501
             vpc_names ([str]): OR of vpc names to be matched. Only one vpc name is allowed.. [optional]  # noqa: E501
         """
 

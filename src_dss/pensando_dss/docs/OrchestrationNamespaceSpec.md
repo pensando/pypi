@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **mode** | **str** |  | [optional]  if omitted the server will use the default value of "managed"
 **monitored_spec** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** | MonitoredNamespaceSpec contains namespace specific configuration. | [optional] 
 **name** | **str** | Length of string should be at least 1. | [optional] 
+**smartservicemonitored_spec** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** | SmartServiceMonitoredNamespaceSpec contains namespace specific configuration. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

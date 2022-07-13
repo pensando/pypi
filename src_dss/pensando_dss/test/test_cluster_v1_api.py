@@ -30,6 +30,20 @@ class TestClusterV1Api(unittest.TestCase):
         """
         pass
 
+    def test_add_distributed_service_card(self):
+        """Test case for add_distributed_service_card
+
+        Create DistributedServiceCard object  # noqa: E501
+        """
+        pass
+
+    def test_add_distributed_service_entity(self):
+        """Test case for add_distributed_service_entity
+
+        Create DistributedServiceEntity object  # noqa: E501
+        """
+        pass
+
     def test_add_dsc_profile(self):
         """Test case for add_dsc_profile
 
@@ -86,6 +100,13 @@ class TestClusterV1Api(unittest.TestCase):
         """
         pass
 
+    def test_delete_distributed_service_entity(self):
+        """Test case for delete_distributed_service_entity
+
+        Delete DistributedServiceEntity object  # noqa: E501
+        """
+        pass
+
     def test_delete_dsc_profile(self):
         """Test case for delete_dsc_profile
 
@@ -139,6 +160,13 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for get_distributed_service_card
 
         Get DistributedServiceCard object  # noqa: E501
+        """
+        pass
+
+    def test_get_distributed_service_entity(self):
+        """Test case for get_distributed_service_entity
+
+        Get DistributedServiceEntity object  # noqa: E501
         """
         pass
 
@@ -219,6 +247,13 @@ class TestClusterV1Api(unittest.TestCase):
         """
         pass
 
+    def test_label_distributed_service_entity(self):
+        """Test case for label_distributed_service_entity
+
+        Label DistributedServiceEntity object  # noqa: E501
+        """
+        pass
+
     def test_label_dsc_profile(self):
         """Test case for label_dsc_profile
 
@@ -258,6 +293,13 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for list_distributed_service_card
 
         List DistributedServiceCard objects  # noqa: E501
+        """
+        pass
+
+    def test_list_distributed_service_entity(self):
+        """Test case for list_distributed_service_entity
+
+        List DistributedServiceEntity objects  # noqa: E501
         """
         pass
 
@@ -328,6 +370,13 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for update_distributed_service_card
 
         Update DistributedServiceCard object  # noqa: E501
+        """
+        pass
+
+    def test_update_distributed_service_entity(self):
+        """Test case for update_distributed_service_entity
+
+        Update DistributedServiceEntity object  # noqa: E501
         """
         pass
 
@@ -405,6 +454,13 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for watch_distributed_service_card
 
         Watch DistributedServiceCard objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_distributed_service_entity(self):
+        """Test case for watch_distributed_service_entity
+
+        Watch DistributedServiceEntity objects. Supports WebSockets or HTTP long poll  # noqa: E501
         """
         pass
 

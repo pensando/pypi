@@ -29,7 +29,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.cluster_overlay_forwarding import ClusterOverlayForwarding
     from pensando_dss.psm.model.cluster_search_options import ClusterSearchOptions
+    globals()['ClusterOverlayForwarding'] = ClusterOverlayForwarding
     globals()['ClusterSearchOptions'] = ClusterSearchOptions
 
 
@@ -58,6 +60,11 @@ class ClusterClusterProfileSpec(ModelNormal):
     """
 
     allowed_values = {
+        ('security_policy_rule_scale_template',): {
+            'NONE': "NONE",
+            'MAX_RULES_6K': "MAX_RULES_6K",
+            'MAX_RULES_24K': "MAX_RULES_24K",
+        },
     }
 
     validations = {
@@ -79,7 +86,9 @@ class ClusterClusterProfileSpec(ModelNormal):
         """
         lazy_import()
         return {
+            'overlay_forwarding': (ClusterOverlayForwarding,),  # noqa: E501
             'search_options': (ClusterSearchOptions,),  # noqa: E501
+            'security_policy_rule_scale_template': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -88,7 +97,9 @@ class ClusterClusterProfileSpec(ModelNormal):
 
 
     attribute_map = {
+        'overlay_forwarding': 'overlay-forwarding',  # noqa: E501
         'search_options': 'search-options',  # noqa: E501
+        'security_policy_rule_scale_template': 'security-policy-rule-scale-template',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -137,7 +148,9 @@ class ClusterClusterProfileSpec(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            overlay_forwarding (ClusterOverlayForwarding): [optional]  # noqa: E501
             search_options (ClusterSearchOptions): [optional]  # noqa: E501
+            security_policy_rule_scale_template (str): SecurityPolicyRuleScaleTemplate provides options to configure security policy and rule scale for the cluster.. [optional] if omitted the server will use the default value of "NONE"  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

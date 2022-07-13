@@ -31,8 +31,12 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 def lazy_import():
     from pensando_dss.psm.model.cluster_dsm import ClusterDSM
     from pensando_dss.psm.model.cluster_fault import ClusterFault
+    from pensando_dss.psm.model.cluster_neighbor_port_info import ClusterNeighborPortInfo
+    from pensando_dss.psm.model.cluster_peer import ClusterPeer
     globals()['ClusterDSM'] = ClusterDSM
     globals()['ClusterFault'] = ClusterFault
+    globals()['ClusterNeighborPortInfo'] = ClusterNeighborPortInfo
+    globals()['ClusterPeer'] = ClusterPeer
 
 
 class ClusterDSSInfo(ModelNormal):
@@ -83,7 +87,9 @@ class ClusterDSSInfo(ModelNormal):
         return {
             'dsms': ([ClusterDSM],),  # noqa: E501
             'fault_info': (ClusterFault,),  # noqa: E501
+            'ha_peer': (ClusterPeer,),  # noqa: E501
             'host_name': (str,),  # noqa: E501
+            'link_info': ([ClusterNeighborPortInfo],),  # noqa: E501
             'version': (str,),  # noqa: E501
         }
 
@@ -95,7 +101,9 @@ class ClusterDSSInfo(ModelNormal):
     attribute_map = {
         'dsms': 'dsms',  # noqa: E501
         'fault_info': 'fault-info',  # noqa: E501
+        'ha_peer': 'ha-peer',  # noqa: E501
         'host_name': 'host-name',  # noqa: E501
+        'link_info': 'link-info',  # noqa: E501
         'version': 'version',  # noqa: E501
     }
 
@@ -147,7 +155,9 @@ class ClusterDSSInfo(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             dsms ([ClusterDSM]): Distributed service module information.. [optional]  # noqa: E501
             fault_info (ClusterFault): [optional]  # noqa: E501
+            ha_peer (ClusterPeer): [optional]  # noqa: E501
             host_name (str): Hostname of the switch.. [optional]  # noqa: E501
+            link_info ([ClusterNeighborPortInfo]): Information of the remote port mac amd local port of a link.. [optional]  # noqa: E501
             version (str): switch software version.. [optional]  # noqa: E501
         """
 

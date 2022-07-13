@@ -135,7 +135,7 @@ class SecurityProtoPort(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             ports (str): TCP or UDP port number(s): comma separate port numbers, or dash separate port range.. [optional]  # noqa: E501
-            protocol (str): protocol is ip (v4/v6) protocol name/number; names can be: tcp, udp, icmp, gre, esp, ah.. [optional]  # noqa: E501
+            protocol (str): protocol is ip (v4/v6) protocol name/number; names can be: tcp, udp, icmp.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

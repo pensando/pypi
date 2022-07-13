@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.network_security_policy_status import NetworkSecurityPolicyStatus
 from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+globals()['NetworkSecurityPolicyStatus'] = NetworkSecurityPolicyStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
 from pensando_dss.psm.psm.model.network_network_status import NetworkNetworkStatus
 

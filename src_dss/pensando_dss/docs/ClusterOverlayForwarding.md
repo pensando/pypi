@@ -1,0 +1,10 @@
+# ClusterOverlayForwarding
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**symmetric_irb** | **str** |  | [optional]  if omitted the server will use the default value of "notset"
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

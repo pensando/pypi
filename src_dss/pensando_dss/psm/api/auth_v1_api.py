@@ -41,6 +41,7 @@ from pensando_dss.psm.model.auth_token_secret_request import AuthTokenSecretRequ
 from pensando_dss.psm.model.auth_user import AuthUser
 from pensando_dss.psm.model.auth_user_list import AuthUserList
 from pensando_dss.psm.model.auth_user_preference import AuthUserPreference
+from pensando_dss.psm.model.auth_user_unlock_request import AuthUserUnlockRequest
 
 
 class AuthV1Api(object):
@@ -5829,6 +5830,260 @@ class AuthV1Api(object):
             },
             api_client=api_client,
             callable=__token_secret_generate
+        )
+
+        def __unlock(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Unlock user  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.unlock(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (AuthUserUnlockRequest):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                AuthUser
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.unlock = _Endpoint(
+            settings={
+                'response_type': (AuthUser,),
+                'auth': [],
+                'endpoint_path': '/configs/auth/v1/tenant/{O.Tenant}/users/{O.Name}/Unlock',
+                'operation_id': 'unlock',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (AuthUserUnlockRequest,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__unlock
+        )
+
+        def __unlock1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Unlock user  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.unlock1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (AuthUserUnlockRequest):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                AuthUser
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.unlock1 = _Endpoint(
+            settings={
+                'response_type': (AuthUser,),
+                'auth': [],
+                'endpoint_path': '/configs/auth/v1/users/{O.Name}/Unlock',
+                'operation_id': 'unlock1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (AuthUserUnlockRequest,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__unlock1
         )
 
         def __update_authentication_policy(

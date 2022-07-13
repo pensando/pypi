@@ -30,8 +30,10 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.auth_ldap import AuthLdap
+    from pensando_dss.psm.model.auth_local import AuthLocal
     from pensando_dss.psm.model.auth_radius import AuthRadius
     globals()['AuthLdap'] = AuthLdap
+    globals()['AuthLocal'] = AuthLocal
     globals()['AuthRadius'] = AuthRadius
 
 
@@ -83,7 +85,7 @@ class AuthAuthenticators(ModelNormal):
         return {
             'authenticator_order': ([str],),  # noqa: E501
             'ldap': (AuthLdap,),  # noqa: E501
-            'local': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'local': (AuthLocal,),  # noqa: E501
             'radius': (AuthRadius,),  # noqa: E501
         }
 
@@ -147,7 +149,7 @@ class AuthAuthenticators(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             authenticator_order ([str]): Order in which authenticators are applied. If an authenticator returns success, others are skipped.. [optional]  # noqa: E501
             ldap (AuthLdap): [optional]  # noqa: E501
-            local ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            local (AuthLocal): [optional]  # noqa: E501
             radius (AuthRadius): [optional]  # noqa: E501
         """
 

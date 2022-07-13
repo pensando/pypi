@@ -29,7 +29,13 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.network_bootstrap_ipam_options import NetworkBootstrapIPAMOptions
+    from pensando_dss.psm.model.network_ipam_binding import NetworkIPAMBinding
+    from pensando_dss.psm.model.network_ipam_options import NetworkIPAMOptions
     from pensando_dss.psm.model.network_ipam_pool_info import NetworkIPAMPoolInfo
+    globals()['NetworkBootstrapIPAMOptions'] = NetworkBootstrapIPAMOptions
+    globals()['NetworkIPAMBinding'] = NetworkIPAMBinding
+    globals()['NetworkIPAMOptions'] = NetworkIPAMOptions
     globals()['NetworkIPAMPoolInfo'] = NetworkIPAMPoolInfo
 
 
@@ -79,7 +85,10 @@ class NetworkIPAMConfig(ModelNormal):
         """
         lazy_import()
         return {
+            'bootstrap_ipam_options': (NetworkBootstrapIPAMOptions,),  # noqa: E501
+            'ipam_options': (NetworkIPAMOptions,),  # noqa: E501
             'ipv4_ipam_pool': ([NetworkIPAMPoolInfo],),  # noqa: E501
+            'ipv4_static_bindings': ([NetworkIPAMBinding],),  # noqa: E501
         }
 
     @cached_property
@@ -88,7 +97,10 @@ class NetworkIPAMConfig(ModelNormal):
 
 
     attribute_map = {
+        'bootstrap_ipam_options': 'bootstrap-ipam-options',  # noqa: E501
+        'ipam_options': 'ipam-options',  # noqa: E501
         'ipv4_ipam_pool': 'ipv4-ipam-pool',  # noqa: E501
+        'ipv4_static_bindings': 'ipv4-static-bindings',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -137,7 +149,10 @@ class NetworkIPAMConfig(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            bootstrap_ipam_options (NetworkBootstrapIPAMOptions): [optional]  # noqa: E501
+            ipam_options (NetworkIPAMOptions): [optional]  # noqa: E501
             ipv4_ipam_pool ([NetworkIPAMPoolInfo]): [optional]  # noqa: E501
+            ipv4_static_bindings ([NetworkIPAMBinding]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

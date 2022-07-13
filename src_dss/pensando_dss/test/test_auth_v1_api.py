@@ -345,6 +345,20 @@ class TestAuthV1Api(unittest.TestCase):
         """
         pass
 
+    def test_unlock(self):
+        """Test case for unlock
+
+        Unlock user  # noqa: E501
+        """
+        pass
+
+    def test_unlock1(self):
+        """Test case for unlock1
+
+        Unlock user  # noqa: E501
+        """
+        pass
+
     def test_update_authentication_policy(self):
         """Test case for update_authentication_policy
 

@@ -5,6 +5,8 @@ All URIs are relative to *https://PSM-IP-addr*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_configuration_snapshot**](ClusterV1Api.md#add_configuration_snapshot) | **POST** /configs/cluster/v1/config-snapshot | Create ConfigurationSnapshot object
+[**add_distributed_service_card**](ClusterV1Api.md#add_distributed_service_card) | **POST** /configs/cluster/v1/distributedservicecards | Create DistributedServiceCard object
+[**add_distributed_service_entity**](ClusterV1Api.md#add_distributed_service_entity) | **POST** /configs/cluster/v1/distributedserviceentities | Create DistributedServiceEntity object
 [**add_dsc_profile**](ClusterV1Api.md#add_dsc_profile) | **POST** /configs/cluster/v1/dscprofiles | Create DSCProfile object
 [**add_host**](ClusterV1Api.md#add_host) | **POST** /configs/cluster/v1/hosts | Create Host object
 [**add_license**](ClusterV1Api.md#add_license) | **POST** /configs/cluster/v1/licenses | Create License object
@@ -13,6 +15,7 @@ Method | HTTP request | Description
 [**auth_bootstrap_complete**](ClusterV1Api.md#auth_bootstrap_complete) | **POST** /configs/cluster/v1/cluster/AuthBootstrapComplete | Mark bootstrapping as complete for the cluster
 [**delete_configuration_snapshot**](ClusterV1Api.md#delete_configuration_snapshot) | **DELETE** /configs/cluster/v1/config-snapshot | Delete ConfigurationSnapshot object
 [**delete_distributed_service_card**](ClusterV1Api.md#delete_distributed_service_card) | **DELETE** /configs/cluster/v1/distributedservicecards/{O.Name} | Delete DistributedServiceCard object
+[**delete_distributed_service_entity**](ClusterV1Api.md#delete_distributed_service_entity) | **DELETE** /configs/cluster/v1/distributedserviceentities/{O.Name} | Delete DistributedServiceEntity object
 [**delete_dsc_profile**](ClusterV1Api.md#delete_dsc_profile) | **DELETE** /configs/cluster/v1/dscprofiles/{O.Name} | Delete DSCProfile object
 [**delete_host**](ClusterV1Api.md#delete_host) | **DELETE** /configs/cluster/v1/hosts/{O.Name} | Delete Host object
 [**delete_node**](ClusterV1Api.md#delete_node) | **DELETE** /configs/cluster/v1/nodes/{O.Name} | Delete Node object
@@ -21,6 +24,7 @@ Method | HTTP request | Description
 [**get_cluster_profile**](ClusterV1Api.md#get_cluster_profile) | **GET** /configs/cluster/v1/clusterprofile | Get ClusterProfile object
 [**get_configuration_snapshot**](ClusterV1Api.md#get_configuration_snapshot) | **GET** /configs/cluster/v1/config-snapshot | Get ConfigurationSnapshot object
 [**get_distributed_service_card**](ClusterV1Api.md#get_distributed_service_card) | **GET** /configs/cluster/v1/distributedservicecards/{O.Name} | Get DistributedServiceCard object
+[**get_distributed_service_entity**](ClusterV1Api.md#get_distributed_service_entity) | **GET** /configs/cluster/v1/distributedserviceentities/{O.Name} | Get DistributedServiceEntity object
 [**get_dsc_profile**](ClusterV1Api.md#get_dsc_profile) | **GET** /configs/cluster/v1/dscprofiles/{O.Name} | Get DSCProfile object
 [**get_host**](ClusterV1Api.md#get_host) | **GET** /configs/cluster/v1/hosts/{O.Name} | Get Host object
 [**get_license**](ClusterV1Api.md#get_license) | **GET** /configs/cluster/v1/licenses | Get License object
@@ -32,12 +36,14 @@ Method | HTTP request | Description
 [**label_cluster_profile**](ClusterV1Api.md#label_cluster_profile) | **POST** /configs/cluster/v1/clusterprofile/label | Label ClusterProfile object
 [**label_configuration_snapshot**](ClusterV1Api.md#label_configuration_snapshot) | **POST** /configs/cluster/v1/config-snapshot/label | Label ConfigurationSnapshot object
 [**label_distributed_service_card**](ClusterV1Api.md#label_distributed_service_card) | **POST** /configs/cluster/v1/distributedservicecards/{O.Name}/label | Label DistributedServiceCard object
+[**label_distributed_service_entity**](ClusterV1Api.md#label_distributed_service_entity) | **POST** /configs/cluster/v1/distributedserviceentities/{O.Name}/label | Label DistributedServiceEntity object
 [**label_dsc_profile**](ClusterV1Api.md#label_dsc_profile) | **POST** /configs/cluster/v1/dscprofiles/{O.Name}/label | Label DSCProfile object
 [**label_host**](ClusterV1Api.md#label_host) | **POST** /configs/cluster/v1/hosts/{O.Name}/label | Label Host object
 [**label_license**](ClusterV1Api.md#label_license) | **POST** /configs/cluster/v1/licenses/label | Label License object
 [**label_node**](ClusterV1Api.md#label_node) | **POST** /configs/cluster/v1/nodes/{O.Name}/label | Label Node object
 [**label_tenant**](ClusterV1Api.md#label_tenant) | **POST** /configs/cluster/v1/tenants/{O.Name}/label | Label Tenant object
 [**list_distributed_service_card**](ClusterV1Api.md#list_distributed_service_card) | **GET** /configs/cluster/v1/distributedservicecards | List DistributedServiceCard objects
+[**list_distributed_service_entity**](ClusterV1Api.md#list_distributed_service_entity) | **GET** /configs/cluster/v1/distributedserviceentities | List DistributedServiceEntity objects
 [**list_dsc_profile**](ClusterV1Api.md#list_dsc_profile) | **GET** /configs/cluster/v1/dscprofiles | List DSCProfile objects
 [**list_host**](ClusterV1Api.md#list_host) | **GET** /configs/cluster/v1/hosts | List Host objects
 [**list_node**](ClusterV1Api.md#list_node) | **GET** /configs/cluster/v1/nodes | List Node objects
@@ -48,6 +54,7 @@ Method | HTTP request | Description
 [**update_cluster_profile**](ClusterV1Api.md#update_cluster_profile) | **PUT** /configs/cluster/v1/clusterprofile | Update ClusterProfile object
 [**update_configuration_snapshot**](ClusterV1Api.md#update_configuration_snapshot) | **PUT** /configs/cluster/v1/config-snapshot | Update ConfigurationSnapshot object
 [**update_distributed_service_card**](ClusterV1Api.md#update_distributed_service_card) | **PUT** /configs/cluster/v1/distributedservicecards/{O.Name} | Update DistributedServiceCard object
+[**update_distributed_service_entity**](ClusterV1Api.md#update_distributed_service_entity) | **PUT** /configs/cluster/v1/distributedserviceentities/{O.Name} | Update DistributedServiceEntity object
 [**update_dsc_profile**](ClusterV1Api.md#update_dsc_profile) | **PUT** /configs/cluster/v1/dscprofiles/{O.Name} | Update DSCProfile object
 [**update_host**](ClusterV1Api.md#update_host) | **PUT** /configs/cluster/v1/hosts/{O.Name} | Update Host object
 [**update_license**](ClusterV1Api.md#update_license) | **PUT** /configs/cluster/v1/licenses | Update License object
@@ -59,6 +66,7 @@ Method | HTTP request | Description
 [**watch_cluster_profile**](ClusterV1Api.md#watch_cluster_profile) | **GET** /configs/cluster/v1/watch/clusterprofile | Watch ClusterProfile objects. Supports WebSockets or HTTP long poll
 [**watch_configuration_snapshot**](ClusterV1Api.md#watch_configuration_snapshot) | **GET** /configs/cluster/v1/watch/config-snapshot | Watch ConfigurationSnapshot objects. Supports WebSockets or HTTP long poll
 [**watch_distributed_service_card**](ClusterV1Api.md#watch_distributed_service_card) | **GET** /configs/cluster/v1/watch/distributedservicecards | Watch DistributedServiceCard objects. Supports WebSockets or HTTP long poll
+[**watch_distributed_service_entity**](ClusterV1Api.md#watch_distributed_service_entity) | **GET** /configs/cluster/v1/watch/distributedserviceentities | Watch DistributedServiceEntity objects. Supports WebSockets or HTTP long poll
 [**watch_dsc_profile**](ClusterV1Api.md#watch_dsc_profile) | **GET** /configs/cluster/v1/watch/dscprofiles | Watch DSCProfile objects. Supports WebSockets or HTTP long poll
 [**watch_host**](ClusterV1Api.md#watch_host) | **GET** /configs/cluster/v1/watch/hosts | Watch Host objects. Supports WebSockets or HTTP long poll
 [**watch_node**](ClusterV1Api.md#watch_node) | **GET** /configs/cluster/v1/watch/nodes | Watch Node objects. Supports WebSockets or HTTP long poll
@@ -147,6 +155,504 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterConfigurationSnapshot**](ClusterConfigurationSnapshot.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_distributed_service_card**
+> ClusterDistributedServiceCard add_distributed_service_card(body)
+
+Create DistributedServiceCard object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    body = ClusterDistributedServiceCard(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterDistributedServiceCardSpec(
+            admit=True,
+            controllers=[
+                "controllers_example",
+            ],
+            dscprofile="dscprofile_example",
+            enable_secure_boot=False,
+            flow_export_policy=[
+                ClusterFlowExportPolicyRef(
+                    name="name_example",
+                    tenant="default",
+                ),
+            ],
+            fwlog_policy=ClusterFwlogPolicyRef(
+                name="name_example",
+                tenant="default",
+            ),
+            id="id_example",
+            ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[
+                    "dns_servers_example",
+                ],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            mgmt_mode="host",
+            mgmt_vlan=0,
+            network_mode="oob",
+            policer=ClusterPolicerRef(
+                tenant="default",
+                tx_policer="tx_policer_example",
+            ),
+            routing_config="routing_config_example",
+        ),
+        status=ClusterDistributedServiceCardStatus(
+            dsc_sku="dsc_sku_example",
+            dsc_version="dsc_version_example",
+            adm_phase_reason="adm_phase_reason_example",
+            admission_phase="unknown",
+            alom_present=True,
+            conditions=[
+                ClusterDSCCondition(
+                    last_transition_time="last_transition_time_example",
+                    message="message_example",
+                    reason="reason_example",
+                    status="unknown",
+                    type="healthy",
+                ),
+            ],
+            control_plane_status=ClusterDSCControlPlaneStatus(
+                bgp_status=[
+                    ClusterPeerStatus(
+                        address_families=[
+                            "address_families_example",
+                        ],
+                        peer_address="peer_address_example",
+                        remote_asn=1,
+                        state="state_example",
+                    ),
+                ],
+                last_updated_time="last_updated_time_example",
+                message="message_example",
+            ),
+            dss_info=ClusterDSSInfo(
+                dsms=[
+                    ClusterDSM(
+                        mac_address="mac_address_example",
+                        unit_id=1,
+                    ),
+                ],
+                fault_info=ClusterFault(
+                    description="description_example",
+                    last_occured_time="last_occured_time_example",
+                    mitigation="system-reboot",
+                    severity="info",
+                ),
+                ha_peer=ClusterPeer(
+                    ip_config=ClusterIPConfig(
+                        default_gw="10.1.1.1, ff02::5 ",
+                        dns_servers=[],
+                        ip_address="10.1.1.1/24, ff02::5/32 ",
+                    ),
+                    mac_address="mac_address_example",
+                ),
+                host_name="host_name_example",
+                link_info=[
+                    ClusterNeighborPortInfo(
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        remote_mac="remote_mac_example",
+                    ),
+                ],
+                version="version_example",
+            ),
+            host="host_example",
+            inband_ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            interfaces=[
+                "interfaces_example",
+            ],
+            ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            is_connected_to_psm=True,
+            num_mac_address=24,
+            package_type="dsc",
+            primary_mac="aabb.ccdd.0000, aabb.ccdd.0000, aabb.ccdd.0000",
+            secure_booted=True,
+            security_policy_rule_scale_profile="security_policy_rule_scale_profile_example",
+            serial_num="serial_num_example",
+            system_info=ClusterDSCInfo(
+                bios_info=ClusterBiosInfo(
+                    fw_major_ver="fw_major_ver_example",
+                    fw_minor_ver="fw_minor_ver_example",
+                    vendor="vendor_example",
+                    version="version_example",
+                ),
+                cpu_info=ClusterCPUInfo(
+                    num_cores=1,
+                    num_sockets=1,
+                    num_threads=1,
+                    speed="speed_example",
+                ),
+                memory_info=ClusterMemInfo(
+                    size="size_example",
+                    type="unknown",
+                ),
+                os_info=ClusterOsInfo(
+                    kernel_release="kernel_release_example",
+                    kernel_version="kernel_version_example",
+                    processor="processor_example",
+                    type="type_example",
+                ),
+                storage_info=ClusterStorageInfo(
+                    devices=[
+                        ClusterStorageDeviceInfo(
+                            capacity="capacity_example",
+                            percent_life_used_a=1,
+                            percent_life_used_b=1,
+                            serial_num="serial_num_example",
+                            type="type_example",
+                            vendor="vendor_example",
+                        ),
+                    ],
+                ),
+            ),
+            unhealthy_services=[
+                "unhealthy_services_example",
+            ],
+            version_mismatch=True,
+        ),
+    ) # ClusterDistributedServiceCard | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create DistributedServiceCard object
+        api_response = api_instance.add_distributed_service_card(body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->add_distributed_service_card: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ClusterDistributedServiceCard**](ClusterDistributedServiceCard.md)|  |
+
+### Return type
+
+[**ClusterDistributedServiceCard**](ClusterDistributedServiceCard.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_distributed_service_entity**
+> ClusterDistributedServiceEntity add_distributed_service_entity(body)
+
+Create DistributedServiceEntity object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_distributed_service_entity import ClusterDistributedServiceEntity
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    body = ClusterDistributedServiceEntity(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterDistributedServiceEntitySpec(
+            admit=True,
+            controllers=[
+                "controllers_example",
+            ],
+            dscprofile="dscprofile_example",
+            enable_secure_boot=False,
+            flow_export_policy=[
+                ClusterFlowExportPolicyRef(
+                    name="name_example",
+                    tenant="default",
+                ),
+            ],
+            fwlog_policy=ClusterFwlogPolicyRef(
+                name="name_example",
+                tenant="default",
+            ),
+            id="id_example",
+            ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[
+                    "dns_servers_example",
+                ],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            mgmt_mode="host",
+            mgmt_vlan=0,
+            network_mode="oob",
+            policer=ClusterPolicerRef(
+                tenant="default",
+                tx_policer="tx_policer_example",
+            ),
+            routing_config="routing_config_example",
+        ),
+        status=ClusterDistributedServiceEntityStatus(
+            dsc_sku="dsc_sku_example",
+            dsc_version="dsc_version_example",
+            adm_phase_reason="adm_phase_reason_example",
+            admission_phase="unknown",
+            alom_present=True,
+            conditions=[
+                ClusterDSCCondition(
+                    last_transition_time="last_transition_time_example",
+                    message="message_example",
+                    reason="reason_example",
+                    status="unknown",
+                    type="healthy",
+                ),
+            ],
+            control_plane_status=ClusterDSCControlPlaneStatus(
+                bgp_status=[
+                    ClusterPeerStatus(
+                        address_families=[
+                            "address_families_example",
+                        ],
+                        peer_address="peer_address_example",
+                        remote_asn=1,
+                        state="state_example",
+                    ),
+                ],
+                last_updated_time="last_updated_time_example",
+                message="message_example",
+            ),
+            dss_info=ClusterDSSInfo(
+                dsms=[
+                    ClusterDSM(
+                        mac_address="mac_address_example",
+                        unit_id=1,
+                    ),
+                ],
+                fault_info=ClusterFault(
+                    description="description_example",
+                    last_occured_time="last_occured_time_example",
+                    mitigation="system-reboot",
+                    severity="info",
+                ),
+                ha_peer=ClusterPeer(
+                    ip_config=ClusterIPConfig(
+                        default_gw="10.1.1.1, ff02::5 ",
+                        dns_servers=[],
+                        ip_address="10.1.1.1/24, ff02::5/32 ",
+                    ),
+                    mac_address="mac_address_example",
+                ),
+                host_name="host_name_example",
+                link_info=[
+                    ClusterNeighborPortInfo(
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        remote_mac="remote_mac_example",
+                    ),
+                ],
+                version="version_example",
+            ),
+            host="host_example",
+            inband_ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            interfaces=[
+                "interfaces_example",
+            ],
+            ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            is_connected_to_psm=True,
+            num_mac_address=24,
+            package_type="dsc",
+            primary_mac="aabb.ccdd.0000, aabb.ccdd.0000, aabb.ccdd.0000",
+            secure_booted=True,
+            security_policy_rule_scale_profile="security_policy_rule_scale_profile_example",
+            serial_num="serial_num_example",
+            system_info=ClusterDSCInfo(
+                bios_info=ClusterBiosInfo(
+                    fw_major_ver="fw_major_ver_example",
+                    fw_minor_ver="fw_minor_ver_example",
+                    vendor="vendor_example",
+                    version="version_example",
+                ),
+                cpu_info=ClusterCPUInfo(
+                    num_cores=1,
+                    num_sockets=1,
+                    num_threads=1,
+                    speed="speed_example",
+                ),
+                memory_info=ClusterMemInfo(
+                    size="size_example",
+                    type="unknown",
+                ),
+                os_info=ClusterOsInfo(
+                    kernel_release="kernel_release_example",
+                    kernel_version="kernel_version_example",
+                    processor="processor_example",
+                    type="type_example",
+                ),
+                storage_info=ClusterStorageInfo(
+                    devices=[
+                        ClusterStorageDeviceInfo(
+                            capacity="capacity_example",
+                            percent_life_used_a=1,
+                            percent_life_used_b=1,
+                            serial_num="serial_num_example",
+                            type="type_example",
+                            vendor="vendor_example",
+                        ),
+                    ],
+                ),
+            ),
+            unhealthy_services=[
+                "unhealthy_services_example",
+            ],
+            version_mismatch=True,
+        ),
+    ) # ClusterDistributedServiceEntity | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create DistributedServiceEntity object
+        api_response = api_instance.add_distributed_service_entity(body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->add_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)|  |
+
+### Return type
+
+[**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)
 
 ### Authorization
 
@@ -338,6 +844,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ClusterDistributedServiceCardID(
                     id="id_example",
                     mac_address="aabb.ccdd.0000, aabb.ccdd.0000, aabb.ccdd.0000",
+                ),
+            ],
+            pnic_info=[
+                ClusterPnicInfo(
+                    mac_address="mac_address_example",
+                    name="name_example",
                 ),
             ],
         ),
@@ -954,6 +1466,82 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_distributed_service_entity**
+> ClusterDistributedServiceEntity delete_distributed_service_entity(o_name)
+
+Delete DistributedServiceEntity object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_distributed_service_entity import ClusterDistributedServiceEntity
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete DistributedServiceEntity object
+        api_response = api_instance.delete_distributed_service_entity(o_name)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->delete_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+
+### Return type
+
+[**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_dsc_profile**
 > ClusterDSCProfile delete_dsc_profile(o_name)
 
@@ -1374,6 +1962,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     api_instance = cluster_v1_api.ClusterV1Api(api_client)
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    overlay_forwarding_symmetric_irb = "overlay-forwarding.symmetric-irb_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1391,6 +1980,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **overlay_forwarding_symmetric_irb** | **str**|  | [optional]
 
 ### Return type
 
@@ -1561,6 +2151,98 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterDistributedServiceCard**](ClusterDistributedServiceCard.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_distributed_service_entity**
+> ClusterDistributedServiceEntity get_distributed_service_entity(o_name)
+
+Get DistributedServiceEntity object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_distributed_service_entity import ClusterDistributedServiceEntity
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
+    meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    spec_admit = True # bool |  (optional)
+    spec_id = "spec.id_example" # str |  (optional)
+    ip_config_dns_servers = [
+        "ip-config.dns-servers_example",
+    ] # [str] | DNSServers contains a list of DNS Servers that can be used on DistributedServiceCard. (optional)
+    spec_controllers = [
+        "spec.controllers_example",
+    ] # [str] |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get DistributedServiceEntity object
+        api_response = api_instance.get_distributed_service_entity(o_name)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->get_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **t_kind** | **str**| Kind represents the type of the API object. | [optional]
+ **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **spec_admit** | **bool**|  | [optional]
+ **spec_id** | **str**|  | [optional]
+ **ip_config_dns_servers** | **[str]**| DNSServers contains a list of DNS Servers that can be used on DistributedServiceCard. | [optional]
+ **spec_controllers** | **[str]**|  | [optional]
+
+### Return type
+
+[**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)
 
 ### Authorization
 
@@ -2528,6 +3210,100 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **label_distributed_service_entity**
+> ClusterDistributedServiceEntity label_distributed_service_entity(o_name, body)
+
+Label DistributedServiceEntity object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.api_label import ApiLabel
+from pensando_dss.psm.model.cluster_distributed_service_entity import ClusterDistributedServiceEntity
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    body = ApiLabel(
+        api_version="api_version_example",
+        creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        generation_id="generation_id_example",
+        kind="kind_example",
+        labels={
+            "key": "key_example",
+        },
+        mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        namespace="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        resource_version="resource_version_example",
+        self_link="self_link_example",
+        tenant="C",
+        uuid="uuid_example",
+    ) # ApiLabel | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Label DistributedServiceEntity object
+        api_response = api_instance.label_distributed_service_entity(o_name, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->label_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **body** | [**ApiLabel**](ApiLabel.md)|  |
+
+### Return type
+
+[**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **label_dsc_profile**
 > ClusterDSCProfile label_dsc_profile(o_name, body)
 
@@ -3055,6 +3831,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterDistributedServiceCardList**](ClusterDistributedServiceCardList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_distributed_service_entity**
+> ClusterDistributedServiceEntityList list_distributed_service_entity()
+
+List DistributedServiceEntity objects
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_distributed_service_entity_list import ClusterDistributedServiceEntityList
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    field_change_selector = [
+        "field-change-selector_example",
+    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # List DistributedServiceEntity objects
+        api_response = api_instance.list_distributed_service_entity()
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->list_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
+ **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
+
+### Return type
+
+[**ClusterDistributedServiceEntityList**](ClusterDistributedServiceEntityList.md)
 
 ### Authorization
 
@@ -3653,6 +4511,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=ClusterClusterSpec(
             auto_admit_dscs=True,
+            bootstrap_ipam_policy="bootstrap_ipam_policy_example",
             certs="certs_example",
             key="key_example",
             ntp_servers=[
@@ -3800,9 +4659,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=ClusterClusterProfileSpec(
+            overlay_forwarding=ClusterOverlayForwarding(
+                symmetric_irb="notset",
+            ),
             search_options=ClusterSearchOptions(
                 enable_fwlog_search=True,
             ),
+            security_policy_rule_scale_template="NONE",
         ),
         status={},
     ) # ClusterClusterProfile | 
@@ -4010,6 +4873,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             dscprofile="dscprofile_example",
             enable_secure_boot=False,
+            flow_export_policy=[
+                ClusterFlowExportPolicyRef(
+                    name="name_example",
+                    tenant="default",
+                ),
+            ],
             fwlog_policy=ClusterFwlogPolicyRef(
                 name="name_example",
                 tenant="default",
@@ -4073,7 +4942,22 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mitigation="system-reboot",
                     severity="info",
                 ),
+                ha_peer=ClusterPeer(
+                    ip_config=ClusterIPConfig(
+                        default_gw="10.1.1.1, ff02::5 ",
+                        dns_servers=[],
+                        ip_address="10.1.1.1/24, ff02::5/32 ",
+                    ),
+                    mac_address="mac_address_example",
+                ),
                 host_name="host_name_example",
+                link_info=[
+                    ClusterNeighborPortInfo(
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        remote_mac="remote_mac_example",
+                    ),
+                ],
                 version="version_example",
             ),
             host="host_example",
@@ -4095,6 +4979,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             package_type="dsc",
             primary_mac="aabb.ccdd.0000, aabb.ccdd.0000, aabb.ccdd.0000",
             secure_booted=True,
+            security_policy_rule_scale_profile="security_policy_rule_scale_profile_example",
             serial_num="serial_num_example",
             system_info=ClusterDSCInfo(
                 bios_info=ClusterBiosInfo(
@@ -4159,6 +5044,257 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterDistributedServiceCard**](ClusterDistributedServiceCard.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_distributed_service_entity**
+> ClusterDistributedServiceEntity update_distributed_service_entity(o_name, body)
+
+Update DistributedServiceEntity object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_distributed_service_entity import ClusterDistributedServiceEntity
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    body = ClusterDistributedServiceEntity(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterDistributedServiceEntitySpec(
+            admit=True,
+            controllers=[
+                "controllers_example",
+            ],
+            dscprofile="dscprofile_example",
+            enable_secure_boot=False,
+            flow_export_policy=[
+                ClusterFlowExportPolicyRef(
+                    name="name_example",
+                    tenant="default",
+                ),
+            ],
+            fwlog_policy=ClusterFwlogPolicyRef(
+                name="name_example",
+                tenant="default",
+            ),
+            id="id_example",
+            ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[
+                    "dns_servers_example",
+                ],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            mgmt_mode="host",
+            mgmt_vlan=0,
+            network_mode="oob",
+            policer=ClusterPolicerRef(
+                tenant="default",
+                tx_policer="tx_policer_example",
+            ),
+            routing_config="routing_config_example",
+        ),
+        status=ClusterDistributedServiceEntityStatus(
+            dsc_sku="dsc_sku_example",
+            dsc_version="dsc_version_example",
+            adm_phase_reason="adm_phase_reason_example",
+            admission_phase="unknown",
+            alom_present=True,
+            conditions=[
+                ClusterDSCCondition(
+                    last_transition_time="last_transition_time_example",
+                    message="message_example",
+                    reason="reason_example",
+                    status="unknown",
+                    type="healthy",
+                ),
+            ],
+            control_plane_status=ClusterDSCControlPlaneStatus(
+                bgp_status=[
+                    ClusterPeerStatus(
+                        address_families=[
+                            "address_families_example",
+                        ],
+                        peer_address="peer_address_example",
+                        remote_asn=1,
+                        state="state_example",
+                    ),
+                ],
+                last_updated_time="last_updated_time_example",
+                message="message_example",
+            ),
+            dss_info=ClusterDSSInfo(
+                dsms=[
+                    ClusterDSM(
+                        mac_address="mac_address_example",
+                        unit_id=1,
+                    ),
+                ],
+                fault_info=ClusterFault(
+                    description="description_example",
+                    last_occured_time="last_occured_time_example",
+                    mitigation="system-reboot",
+                    severity="info",
+                ),
+                ha_peer=ClusterPeer(
+                    ip_config=ClusterIPConfig(
+                        default_gw="10.1.1.1, ff02::5 ",
+                        dns_servers=[],
+                        ip_address="10.1.1.1/24, ff02::5/32 ",
+                    ),
+                    mac_address="mac_address_example",
+                ),
+                host_name="host_name_example",
+                link_info=[
+                    ClusterNeighborPortInfo(
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        remote_mac="remote_mac_example",
+                    ),
+                ],
+                version="version_example",
+            ),
+            host="host_example",
+            inband_ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            interfaces=[
+                "interfaces_example",
+            ],
+            ip_config=ClusterIPConfig(
+                default_gw="10.1.1.1, ff02::5 ",
+                dns_servers=[],
+                ip_address="10.1.1.1/24, ff02::5/32 ",
+            ),
+            is_connected_to_psm=True,
+            num_mac_address=24,
+            package_type="dsc",
+            primary_mac="aabb.ccdd.0000, aabb.ccdd.0000, aabb.ccdd.0000",
+            secure_booted=True,
+            security_policy_rule_scale_profile="security_policy_rule_scale_profile_example",
+            serial_num="serial_num_example",
+            system_info=ClusterDSCInfo(
+                bios_info=ClusterBiosInfo(
+                    fw_major_ver="fw_major_ver_example",
+                    fw_minor_ver="fw_minor_ver_example",
+                    vendor="vendor_example",
+                    version="version_example",
+                ),
+                cpu_info=ClusterCPUInfo(
+                    num_cores=1,
+                    num_sockets=1,
+                    num_threads=1,
+                    speed="speed_example",
+                ),
+                memory_info=ClusterMemInfo(
+                    size="size_example",
+                    type="unknown",
+                ),
+                os_info=ClusterOsInfo(
+                    kernel_release="kernel_release_example",
+                    kernel_version="kernel_version_example",
+                    processor="processor_example",
+                    type="type_example",
+                ),
+                storage_info=ClusterStorageInfo(
+                    devices=[
+                        ClusterStorageDeviceInfo(
+                            capacity="capacity_example",
+                            percent_life_used_a=1,
+                            percent_life_used_b=1,
+                            serial_num="serial_num_example",
+                            type="type_example",
+                            vendor="vendor_example",
+                        ),
+                    ],
+                ),
+            ),
+            unhealthy_services=[
+                "unhealthy_services_example",
+            ],
+            version_mismatch=True,
+        ),
+    ) # ClusterDistributedServiceEntity | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update DistributedServiceEntity object
+        api_response = api_instance.update_distributed_service_entity(o_name, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->update_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **body** | [**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)|  |
+
+### Return type
+
+[**ClusterDistributedServiceEntity**](ClusterDistributedServiceEntity.md)
 
 ### Authorization
 
@@ -4353,6 +5489,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ClusterDistributedServiceCardID(
                     id="id_example",
                     mac_address="aabb.ccdd.0000, aabb.ccdd.0000, aabb.ccdd.0000",
+                ),
+            ],
+            pnic_info=[
+                ClusterPnicInfo(
+                    mac_address="mac_address_example",
+                    name="name_example",
                 ),
             ],
         ),
@@ -5235,6 +6377,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterAutoMsgDistributedServiceCardWatchHelper**](ClusterAutoMsgDistributedServiceCardWatchHelper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (streaming responses) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **watch_distributed_service_entity**
+> ClusterAutoMsgDistributedServiceEntityWatchHelper watch_distributed_service_entity()
+
+Watch DistributedServiceEntity objects. Supports WebSockets or HTTP long poll
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_auto_msg_distributed_service_entity_watch_helper import ClusterAutoMsgDistributedServiceEntityWatchHelper
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    field_change_selector = [
+        "field-change-selector_example",
+    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Watch DistributedServiceEntity objects. Supports WebSockets or HTTP long poll
+        api_response = api_instance.watch_distributed_service_entity()
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->watch_distributed_service_entity: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
+ **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
+
+### Return type
+
+[**ClusterAutoMsgDistributedServiceEntityWatchHelper**](ClusterAutoMsgDistributedServiceEntityWatchHelper.md)
 
 ### Authorization
 

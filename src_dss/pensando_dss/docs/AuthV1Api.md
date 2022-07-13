@@ -50,6 +50,8 @@ Method | HTTP request | Description
 [**password_reset**](AuthV1Api.md#password_reset) | **POST** /configs/auth/v1/tenant/{O.Tenant}/users/{O.Name}/PasswordReset | Reset user password
 [**password_reset1**](AuthV1Api.md#password_reset1) | **POST** /configs/auth/v1/users/{O.Name}/PasswordReset | Reset user password
 [**token_secret_generate**](AuthV1Api.md#token_secret_generate) | **POST** /configs/auth/v1/authn-policy/TokenSecretGenerate | Generate secret for token signing
+[**unlock**](AuthV1Api.md#unlock) | **POST** /configs/auth/v1/tenant/{O.Tenant}/users/{O.Name}/Unlock | Unlock user
+[**unlock1**](AuthV1Api.md#unlock1) | **POST** /configs/auth/v1/users/{O.Name}/Unlock | Unlock user
 [**update_authentication_policy**](AuthV1Api.md#update_authentication_policy) | **PUT** /configs/auth/v1/authn-policy | Update AuthenticationPolicy object
 [**update_role**](AuthV1Api.md#update_role) | **PUT** /configs/auth/v1/tenant/{O.Tenant}/roles/{O.Name} | Update Role object
 [**update_role1**](AuthV1Api.md#update_role1) | **PUT** /configs/auth/v1/roles/{O.Name} | Update Role object
@@ -154,7 +156,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         ),
                     ],
                 ),
-                local={},
+                local=AuthLocal(
+                    allowed_failed_login_attempts=10,
+                    failed_login_attempts_duration="60s",
+                    password_length=9,
+                ),
                 radius=AuthRadius(
                     domains=[
                         AuthRadiusDomain(
@@ -758,8 +764,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             authenticators=[
                 "authenticators_example",
             ],
+            failed_login_attempts=1,
+            first_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_password_change=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            locked=True,
             roles=[
                 "roles_example",
             ],
@@ -887,8 +896,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             authenticators=[
                 "authenticators_example",
             ],
+            failed_login_attempts=1,
+            first_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_password_change=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            locked=True,
             roles=[
                 "roles_example",
             ],
@@ -3290,7 +3302,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         ),
                     ],
                 ),
-                local={},
+                local=AuthLocal(
+                    allowed_failed_login_attempts=10,
+                    failed_login_attempts_duration="60s",
+                    password_length=9,
+                ),
                 radius=AuthRadius(
                     domains=[
                         AuthRadiusDomain(
@@ -3472,7 +3488,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         ),
                     ],
                 ),
-                local={},
+                local=AuthLocal(
+                    allowed_failed_login_attempts=10,
+                    failed_login_attempts_duration="60s",
+                    password_length=9,
+                ),
                 radius=AuthRadius(
                     domains=[
                         AuthRadiusDomain(
@@ -4550,6 +4570,198 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **unlock**
+> AuthUser unlock(o_tenant, body)
+
+Unlock user
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import auth_v1_api
+from pensando_dss.psm.models.auth import *
+from pensando_dss.psm.model.auth_user import AuthUser
+from pensando_dss.psm.model.auth_user_unlock_request import AuthUserUnlockRequest
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = auth_v1_api.AuthV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    body = AuthUserUnlockRequest(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+    ) # AuthUserUnlockRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Unlock user
+        api_response = api_instance.unlock(o_tenant, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling AuthV1Api->unlock: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **body** | [**AuthUserUnlockRequest**](AuthUserUnlockRequest.md)|  |
+
+### Return type
+
+[**AuthUser**](AuthUser.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **unlock1**
+> AuthUser unlock1(o_name, body)
+
+Unlock user
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import auth_v1_api
+from pensando_dss.psm.models.auth import *
+from pensando_dss.psm.model.auth_user import AuthUser
+from pensando_dss.psm.model.auth_user_unlock_request import AuthUserUnlockRequest
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = auth_v1_api.AuthV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    body = AuthUserUnlockRequest(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+    ) # AuthUserUnlockRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Unlock user
+        api_response = api_instance.unlock1(o_name, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling AuthV1Api->unlock1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **body** | [**AuthUserUnlockRequest**](AuthUserUnlockRequest.md)|  |
+
+### Return type
+
+[**AuthUser**](AuthUser.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_authentication_policy**
 > AuthAuthenticationPolicy update_authentication_policy(body)
 
@@ -4634,7 +4846,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         ),
                     ],
                 ),
-                local={},
+                local=AuthLocal(
+                    allowed_failed_login_attempts=10,
+                    failed_login_attempts_duration="60s",
+                    password_length=9,
+                ),
                 radius=AuthRadius(
                     domains=[
                         AuthRadiusDomain(
@@ -5242,8 +5458,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             authenticators=[
                 "authenticators_example",
             ],
+            failed_login_attempts=1,
+            first_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_password_change=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            locked=True,
             roles=[
                 "roles_example",
             ],
@@ -5372,8 +5591,11 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             authenticators=[
                 "authenticators_example",
             ],
+            failed_login_attempts=1,
+            first_failed_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_login=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_password_change=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            locked=True,
             roles=[
                 "roles_example",
             ],

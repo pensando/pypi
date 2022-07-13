@@ -61,6 +61,7 @@ class OrchestrationNamespaceSpec(ModelNormal):
         ('mode',): {
             'MANAGED': "managed",
             'MONITORED': "monitored",
+            'SMARTSERVICEMONITORED': "smartservicemonitored",
         },
     }
 
@@ -90,6 +91,7 @@ class OrchestrationNamespaceSpec(ModelNormal):
             'mode': (str,),  # noqa: E501
             'monitored_spec': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
             'name': (str,),  # noqa: E501
+            'smartservicemonitored_spec': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
         }
 
     @cached_property
@@ -102,6 +104,7 @@ class OrchestrationNamespaceSpec(ModelNormal):
         'mode': 'mode',  # noqa: E501
         'monitored_spec': 'monitored-spec',  # noqa: E501
         'name': 'name',  # noqa: E501
+        'smartservicemonitored_spec': 'smartservicemonitored-spec',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -154,6 +157,7 @@ class OrchestrationNamespaceSpec(ModelNormal):
             mode (str): [optional] if omitted the server will use the default value of "managed"  # noqa: E501
             monitored_spec ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): MonitoredNamespaceSpec contains namespace specific configuration.. [optional]  # noqa: E501
             name (str): Length of string should be at least 1.. [optional]  # noqa: E501
+            smartservicemonitored_spec ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): SmartServiceMonitoredNamespaceSpec contains namespace specific configuration.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

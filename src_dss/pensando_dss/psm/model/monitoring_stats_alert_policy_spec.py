@@ -89,6 +89,7 @@ class MonitoringStatsAlertPolicySpec(ModelNormal):
             'enable': (bool,),  # noqa: E501
             'instance_selector': (MonitoringInstanceSelector,),  # noqa: E501
             'measurement_criteria': (MonitoringMeasurementCriteria,),  # noqa: E501
+            'message_template': (str,),  # noqa: E501
             'metric': (MonitoringMetricIdentifier,),  # noqa: E501
             'thresholds': (MonitoringThresholds,),  # noqa: E501
         }
@@ -103,6 +104,7 @@ class MonitoringStatsAlertPolicySpec(ModelNormal):
         'enable': 'enable',  # noqa: E501
         'instance_selector': 'instance-selector',  # noqa: E501
         'measurement_criteria': 'measurement-criteria',  # noqa: E501
+        'message_template': 'message-template',  # noqa: E501
         'metric': 'metric',  # noqa: E501
         'thresholds': 'thresholds',  # noqa: E501
     }
@@ -157,6 +159,7 @@ class MonitoringStatsAlertPolicySpec(ModelNormal):
             enable (bool): User can disable the policy by setting this field. Disabled policies will not generate any more alerts but the outstanding ones will remain as is.. [optional] if omitted the server will use the default value of True  # noqa: E501
             instance_selector (MonitoringInstanceSelector): [optional]  # noqa: E501
             measurement_criteria (MonitoringMeasurementCriteria): [optional]  # noqa: E501
+            message_template (str): Template that is used for constructing the alert message template can refer fields form the policy like {{.Spec.Metric.Kind}}, {{.Spec.Metric.FieldName}} or from the metric table like {{.reporterID}}, {{.name}} only scalar fields from the policy can be referred, repeated fields, or maps cannot be referred on the template.. [optional]  # noqa: E501
             metric (MonitoringMetricIdentifier): [optional]  # noqa: E501
             thresholds (MonitoringThresholds): [optional]  # noqa: E501
         """

@@ -5,6 +5,7 @@ ClusterSpec contains the configuration of the cluster.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **auto_admit_dscs** | **bool** | AutoAdmitDSCs when enabled auto-admits DSCs that are validated into Venice Cluster. When it is disabled, DSCs validated by CMD are set to Pending state and it requires Manual approval to be admitted into the cluster. | [optional] 
+**bootstrap_ipam_policy** | **str** | BootstrapIPAMPolicy is the ipam policy to configure the DSCs for bootstrap. | [optional] 
 **certs** | **str** | Certs is the pem encoded certificate bundle used for API Gateway TLS. | [optional] 
 **key** | **str** | Key is the pem encoded private key used for API Gateway TLS. We support RSA or ECDSA. | [optional] 
 **ntp_servers** | **[str]** | NTPServers contains the list of NTP servers for the cluster. | [optional] 

@@ -51,6 +51,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """
         pass
 
+    def test_add_workload_group(self):
+        """Test case for add_workload_group
+
+        Create WorkloadGroup object  # noqa: E501
+        """
+        pass
+
+    def test_add_workload_group1(self):
+        """Test case for add_workload_group1
+
+        Create WorkloadGroup object  # noqa: E501
+        """
+        pass
+
     def test_delete_workload(self):
         """Test case for delete_workload
 
@@ -62,6 +76,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """Test case for delete_workload1
 
         Delete Workload object  # noqa: E501
+        """
+        pass
+
+    def test_delete_workload_group(self):
+        """Test case for delete_workload_group
+
+        Delete WorkloadGroup object  # noqa: E501
+        """
+        pass
+
+    def test_delete_workload_group1(self):
+        """Test case for delete_workload_group1
+
+        Delete WorkloadGroup object  # noqa: E501
         """
         pass
 
@@ -121,6 +149,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """
         pass
 
+    def test_get_workload_group(self):
+        """Test case for get_workload_group
+
+        Get WorkloadGroup object  # noqa: E501
+        """
+        pass
+
+    def test_get_workload_group1(self):
+        """Test case for get_workload_group1
+
+        Get WorkloadGroup object  # noqa: E501
+        """
+        pass
+
     def test_label_workload(self):
         """Test case for label_workload
 
@@ -132,6 +174,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """Test case for label_workload1
 
         Label Workload object  # noqa: E501
+        """
+        pass
+
+    def test_label_workload_group(self):
+        """Test case for label_workload_group
+
+        Label WorkloadGroup object  # noqa: E501
+        """
+        pass
+
+    def test_label_workload_group1(self):
+        """Test case for label_workload_group1
+
+        Label WorkloadGroup object  # noqa: E501
         """
         pass
 
@@ -163,6 +219,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """
         pass
 
+    def test_list_workload_group(self):
+        """Test case for list_workload_group
+
+        List WorkloadGroup objects  # noqa: E501
+        """
+        pass
+
+    def test_list_workload_group1(self):
+        """Test case for list_workload_group1
+
+        List WorkloadGroup objects  # noqa: E501
+        """
+        pass
+
     def test_start_migration(self):
         """Test case for start_migration
 
@@ -191,6 +261,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """
         pass
 
+    def test_update_workload_group(self):
+        """Test case for update_workload_group
+
+        Update WorkloadGroup object  # noqa: E501
+        """
+        pass
+
+    def test_update_workload_group1(self):
+        """Test case for update_workload_group1
+
+        Update WorkloadGroup object  # noqa: E501
+        """
+        pass
+
     def test_watch_endpoint(self):
         """Test case for watch_endpoint
 
@@ -216,6 +300,20 @@ class TestWorkloadV1Api(unittest.TestCase):
         """Test case for watch_workload1
 
         Watch Workload objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_workload_group(self):
+        """Test case for watch_workload_group
+
+        Watch WorkloadGroup objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_workload_group1(self):
+        """Test case for watch_workload_group1
+
+        Watch WorkloadGroup objects. Supports WebSockets or HTTP long poll  # noqa: E501
         """
         pass
 

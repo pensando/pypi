@@ -10,16 +10,12 @@ Method | HTTP request | Description
 [**add_ip_sec_policy1**](SecurityV1Api.md#add_ip_sec_policy1) | **POST** /configs/security/v1/ipsecpolicies | Create IPSecPolicy object
 [**add_network_security_policy**](SecurityV1Api.md#add_network_security_policy) | **POST** /configs/security/v1/tenant/{O.Tenant}/networksecuritypolicies | Create NetworkSecurityPolicy object
 [**add_network_security_policy1**](SecurityV1Api.md#add_network_security_policy1) | **POST** /configs/security/v1/networksecuritypolicies | Create NetworkSecurityPolicy object
-[**add_security_group**](SecurityV1Api.md#add_security_group) | **POST** /configs/security/v1/tenant/{O.Tenant}/security-groups | Create SecurityGroup object
-[**add_security_group1**](SecurityV1Api.md#add_security_group1) | **POST** /configs/security/v1/security-groups | Create SecurityGroup object
 [**delete_app**](SecurityV1Api.md#delete_app) | **DELETE** /configs/security/v1/tenant/{O.Tenant}/apps/{O.Name} | Delete App object
 [**delete_app1**](SecurityV1Api.md#delete_app1) | **DELETE** /configs/security/v1/apps/{O.Name} | Delete App object
 [**delete_ip_sec_policy**](SecurityV1Api.md#delete_ip_sec_policy) | **DELETE** /configs/security/v1/tenant/{O.Tenant}/ipsecpolicies/{O.Name} | Delete IPSecPolicy object
 [**delete_ip_sec_policy1**](SecurityV1Api.md#delete_ip_sec_policy1) | **DELETE** /configs/security/v1/ipsecpolicies/{O.Name} | Delete IPSecPolicy object
 [**delete_network_security_policy**](SecurityV1Api.md#delete_network_security_policy) | **DELETE** /configs/security/v1/tenant/{O.Tenant}/networksecuritypolicies/{O.Name} | Delete NetworkSecurityPolicy object
 [**delete_network_security_policy1**](SecurityV1Api.md#delete_network_security_policy1) | **DELETE** /configs/security/v1/networksecuritypolicies/{O.Name} | Delete NetworkSecurityPolicy object
-[**delete_security_group**](SecurityV1Api.md#delete_security_group) | **DELETE** /configs/security/v1/tenant/{O.Tenant}/security-groups/{O.Name} | Delete SecurityGroup object
-[**delete_security_group1**](SecurityV1Api.md#delete_security_group1) | **DELETE** /configs/security/v1/security-groups/{O.Name} | Delete SecurityGroup object
 [**get_app**](SecurityV1Api.md#get_app) | **GET** /configs/security/v1/tenant/{O.Tenant}/apps/{O.Name} | Get App object
 [**get_app1**](SecurityV1Api.md#get_app1) | **GET** /configs/security/v1/apps/{O.Name} | Get App object
 [**get_firewall_profile**](SecurityV1Api.md#get_firewall_profile) | **GET** /configs/security/v1/tenant/{O.Tenant}/firewallprofiles/{O.Name} | Get FirewallProfile object
@@ -28,8 +24,6 @@ Method | HTTP request | Description
 [**get_ip_sec_policy1**](SecurityV1Api.md#get_ip_sec_policy1) | **GET** /configs/security/v1/ipsecpolicies/{O.Name} | Get IPSecPolicy object
 [**get_network_security_policy**](SecurityV1Api.md#get_network_security_policy) | **GET** /configs/security/v1/tenant/{O.Tenant}/networksecuritypolicies/{O.Name} | Get NetworkSecurityPolicy object
 [**get_network_security_policy1**](SecurityV1Api.md#get_network_security_policy1) | **GET** /configs/security/v1/networksecuritypolicies/{O.Name} | Get NetworkSecurityPolicy object
-[**get_security_group**](SecurityV1Api.md#get_security_group) | **GET** /configs/security/v1/tenant/{O.Tenant}/security-groups/{O.Name} | Get SecurityGroup object
-[**get_security_group1**](SecurityV1Api.md#get_security_group1) | **GET** /configs/security/v1/security-groups/{O.Name} | Get SecurityGroup object
 [**label_app**](SecurityV1Api.md#label_app) | **POST** /configs/security/v1/tenant/{O.Tenant}/apps/{O.Name}/label | Label App object
 [**label_app1**](SecurityV1Api.md#label_app1) | **POST** /configs/security/v1/apps/{O.Name}/label | Label App object
 [**label_firewall_profile**](SecurityV1Api.md#label_firewall_profile) | **POST** /configs/security/v1/tenant/{O.Tenant}/firewallprofiles/{O.Name}/label | Label FirewallProfile object
@@ -38,8 +32,6 @@ Method | HTTP request | Description
 [**label_ip_sec_policy1**](SecurityV1Api.md#label_ip_sec_policy1) | **POST** /configs/security/v1/ipsecpolicies/{O.Name}/label | Label IPSecPolicy object
 [**label_network_security_policy**](SecurityV1Api.md#label_network_security_policy) | **POST** /configs/security/v1/tenant/{O.Tenant}/networksecuritypolicies/{O.Name}/label | Label NetworkSecurityPolicy object
 [**label_network_security_policy1**](SecurityV1Api.md#label_network_security_policy1) | **POST** /configs/security/v1/networksecuritypolicies/{O.Name}/label | Label NetworkSecurityPolicy object
-[**label_security_group**](SecurityV1Api.md#label_security_group) | **POST** /configs/security/v1/tenant/{O.Tenant}/security-groups/{O.Name}/label | Label SecurityGroup object
-[**label_security_group1**](SecurityV1Api.md#label_security_group1) | **POST** /configs/security/v1/security-groups/{O.Name}/label | Label SecurityGroup object
 [**list_app**](SecurityV1Api.md#list_app) | **GET** /configs/security/v1/tenant/{O.Tenant}/apps | List App objects
 [**list_app1**](SecurityV1Api.md#list_app1) | **GET** /configs/security/v1/apps | List App objects
 [**list_firewall_profile**](SecurityV1Api.md#list_firewall_profile) | **GET** /configs/security/v1/tenant/{O.Tenant}/firewallprofiles | List FirewallProfile objects
@@ -48,8 +40,6 @@ Method | HTTP request | Description
 [**list_ip_sec_policy1**](SecurityV1Api.md#list_ip_sec_policy1) | **GET** /configs/security/v1/ipsecpolicies | List IPSecPolicy objects
 [**list_network_security_policy**](SecurityV1Api.md#list_network_security_policy) | **GET** /configs/security/v1/tenant/{O.Tenant}/networksecuritypolicies | List NetworkSecurityPolicy objects
 [**list_network_security_policy1**](SecurityV1Api.md#list_network_security_policy1) | **GET** /configs/security/v1/networksecuritypolicies | List NetworkSecurityPolicy objects
-[**list_security_group**](SecurityV1Api.md#list_security_group) | **GET** /configs/security/v1/tenant/{O.Tenant}/security-groups | List SecurityGroup objects
-[**list_security_group1**](SecurityV1Api.md#list_security_group1) | **GET** /configs/security/v1/security-groups | List SecurityGroup objects
 [**update_app**](SecurityV1Api.md#update_app) | **PUT** /configs/security/v1/tenant/{O.Tenant}/apps/{O.Name} | Update App object
 [**update_app1**](SecurityV1Api.md#update_app1) | **PUT** /configs/security/v1/apps/{O.Name} | Update App object
 [**update_firewall_profile**](SecurityV1Api.md#update_firewall_profile) | **PUT** /configs/security/v1/tenant/{O.Tenant}/firewallprofiles/{O.Name} | Update FirewallProfile object
@@ -58,8 +48,6 @@ Method | HTTP request | Description
 [**update_ip_sec_policy1**](SecurityV1Api.md#update_ip_sec_policy1) | **PUT** /configs/security/v1/ipsecpolicies/{O.Name} | Update IPSecPolicy object
 [**update_network_security_policy**](SecurityV1Api.md#update_network_security_policy) | **PUT** /configs/security/v1/tenant/{O.Tenant}/networksecuritypolicies/{O.Name} | Update NetworkSecurityPolicy object
 [**update_network_security_policy1**](SecurityV1Api.md#update_network_security_policy1) | **PUT** /configs/security/v1/networksecuritypolicies/{O.Name} | Update NetworkSecurityPolicy object
-[**update_security_group**](SecurityV1Api.md#update_security_group) | **PUT** /configs/security/v1/tenant/{O.Tenant}/security-groups/{O.Name} | Update SecurityGroup object
-[**update_security_group1**](SecurityV1Api.md#update_security_group1) | **PUT** /configs/security/v1/security-groups/{O.Name} | Update SecurityGroup object
 [**watch_app**](SecurityV1Api.md#watch_app) | **GET** /configs/security/v1/watch/tenant/{O.Tenant}/apps | Watch App objects. Supports WebSockets or HTTP long poll
 [**watch_app1**](SecurityV1Api.md#watch_app1) | **GET** /configs/security/v1/watch/apps | Watch App objects. Supports WebSockets or HTTP long poll
 [**watch_firewall_profile**](SecurityV1Api.md#watch_firewall_profile) | **GET** /configs/security/v1/watch/tenant/{O.Tenant}/firewallprofiles | Watch FirewallProfile objects. Supports WebSockets or HTTP long poll
@@ -68,8 +56,6 @@ Method | HTTP request | Description
 [**watch_ip_sec_policy1**](SecurityV1Api.md#watch_ip_sec_policy1) | **GET** /configs/security/v1/watch/ipsecpolicies | Watch IPSecPolicy objects. Supports WebSockets or HTTP long poll
 [**watch_network_security_policy**](SecurityV1Api.md#watch_network_security_policy) | **GET** /configs/security/v1/watch/tenant/{O.Tenant}/networksecuritypolicies | Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
 [**watch_network_security_policy1**](SecurityV1Api.md#watch_network_security_policy1) | **GET** /configs/security/v1/watch/networksecuritypolicies | Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll
-[**watch_security_group**](SecurityV1Api.md#watch_security_group) | **GET** /configs/security/v1/watch/tenant/{O.Tenant}/security-groups | Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
-[**watch_security_group1**](SecurityV1Api.md#watch_security_group1) | **GET** /configs/security/v1/watch/security-groups | Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
 
 
 # **add_app**
@@ -398,8 +384,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityIPSecPolicySpec(
             config=SecurityIPSecConfig(
-                ike_lifetime="60s",
-                sa_lifetime="60s",
+                ike_lifetime="1h",
+                sa_lifetime="1h",
             ),
             rules=[
                 SecurityIPSecPolicyRule(
@@ -547,8 +533,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityIPSecPolicySpec(
             config=SecurityIPSecConfig(
-                ike_lifetime="60s",
-                sa_lifetime="60s",
+                ike_lifetime="1h",
+                sa_lifetime="1h",
             ),
             rules=[
                 SecurityIPSecPolicyRule(
@@ -695,9 +681,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=SecurityNetworkSecurityPolicySpec(
-            attach_groups=[
-                "attach_groups_example",
-            ],
             attach_tenant=True,
             priority=1,
             rules=[
@@ -707,11 +690,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         "apps_example",
                     ],
                     description="description_example",
+                    disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
                     ],
-                    from_security_groups=[
-                        "from_security_groups_example",
+                    from_workload_groups=[
+                        "from_workload_groups_example",
                     ],
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                     proto_ports=[
@@ -723,8 +707,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     to_ip_addresses=[
                         "to_ip_addresses_example",
                     ],
-                    to_security_groups=[
-                        "to_security_groups_example",
+                    to_workload_groups=[
+                        "to_workload_groups_example",
                     ],
                 ),
             ],
@@ -746,6 +730,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 status="status_example",
                 updated=1,
             ),
+            rule_metrics_status=[
+                SecurityRuleMetricsStatus(
+                    dsc_id="dsc_id_example",
+                    policy_entries_consumed="policy_entries_consumed_example",
+                    rule_entries_consumed="rule_entries_consumed_example",
+                ),
+            ],
             rule_status=[
                 SecuritySGRuleStatus(
                     rule_hash="rule_hash_example",
@@ -847,9 +838,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=SecurityNetworkSecurityPolicySpec(
-            attach_groups=[
-                "attach_groups_example",
-            ],
             attach_tenant=True,
             priority=1,
             rules=[
@@ -859,11 +847,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         "apps_example",
                     ],
                     description="description_example",
+                    disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
                     ],
-                    from_security_groups=[
-                        "from_security_groups_example",
+                    from_workload_groups=[
+                        "from_workload_groups_example",
                     ],
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                     proto_ports=[
@@ -875,8 +864,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     to_ip_addresses=[
                         "to_ip_addresses_example",
                     ],
-                    to_security_groups=[
-                        "to_security_groups_example",
+                    to_workload_groups=[
+                        "to_workload_groups_example",
                     ],
                 ),
             ],
@@ -898,6 +887,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 status="status_example",
                 updated=1,
             ),
+            rule_metrics_status=[
+                SecurityRuleMetricsStatus(
+                    dsc_id="dsc_id_example",
+                    policy_entries_consumed="policy_entries_consumed_example",
+                    rule_entries_consumed="rule_entries_consumed_example",
+                ),
+            ],
             rule_status=[
                 SecuritySGRuleStatus(
                     rule_hash="rule_hash_example",
@@ -925,248 +921,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityNetworkSecurityPolicy**](SecurityNetworkSecurityPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **add_security_group**
-> SecuritySecurityGroup add_security_group(o_tenant, body)
-
-Create SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-    body = SecuritySecurityGroup(
-        api_version="api_version_example",
-        kind="kind_example",
-        meta=ApiObjectMeta(
-            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            generation_id="generation_id_example",
-            labels={
-                "key": "key_example",
-            },
-            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            name="name_example",
-            namespace="namespace_example",
-            resource_version="resource_version_example",
-            self_link="self_link_example",
-            tenant="tenant_example",
-            uuid="uuid_example",
-        ),
-        spec=SecuritySecurityGroupSpec(
-            match_prefixes=[
-                "match_prefixes_example",
-            ],
-            service_labels=[
-                "service_labels_example",
-            ],
-            workload_selector=LabelsSelector(
-                requirements=[
-                    LabelsRequirement(
-                        key="key_example",
-                        operator="equals",
-                        values=[
-                            "values_example",
-                        ],
-                    ),
-                ],
-            ),
-        ),
-        status=SecuritySecurityGroupStatus(
-            policies=[
-                "policies_example",
-            ],
-            workloads=[
-                "workloads_example",
-            ],
-        ),
-    ) # SecuritySecurityGroup | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Create SecurityGroup object
-        api_response = api_instance.add_security_group(o_tenant, body)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->add_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
- **body** | [**SecuritySecurityGroup**](SecuritySecurityGroup.md)|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **add_security_group1**
-> SecuritySecurityGroup add_security_group1(body)
-
-Create SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    body = SecuritySecurityGroup(
-        api_version="api_version_example",
-        kind="kind_example",
-        meta=ApiObjectMeta(
-            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            generation_id="generation_id_example",
-            labels={
-                "key": "key_example",
-            },
-            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            name="name_example",
-            namespace="namespace_example",
-            resource_version="resource_version_example",
-            self_link="self_link_example",
-            tenant="tenant_example",
-            uuid="uuid_example",
-        ),
-        spec=SecuritySecurityGroupSpec(
-            match_prefixes=[
-                "match_prefixes_example",
-            ],
-            service_labels=[
-                "service_labels_example",
-            ],
-            workload_selector=LabelsSelector(
-                requirements=[
-                    LabelsRequirement(
-                        key="key_example",
-                        operator="equals",
-                        values=[
-                            "values_example",
-                        ],
-                    ),
-                ],
-            ),
-        ),
-        status=SecuritySecurityGroupStatus(
-            policies=[
-                "policies_example",
-            ],
-            workloads=[
-                "workloads_example",
-            ],
-        ),
-    ) # SecuritySecurityGroup | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Create SecurityGroup object
-        api_response = api_instance.add_security_group1(body)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->add_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**SecuritySecurityGroup**](SecuritySecurityGroup.md)|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
 
 ### Authorization
 
@@ -1623,158 +1377,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityNetworkSecurityPolicy**](SecurityNetworkSecurityPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_security_group**
-> SecuritySecurityGroup delete_security_group(o_tenant)
-
-Delete SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Delete SecurityGroup object
-        api_response = api_instance.delete_security_group(o_tenant)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->delete_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_security_group1**
-> SecuritySecurityGroup delete_security_group1(o_name)
-
-Delete SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_name = "O.Name_example" # str | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Delete SecurityGroup object
-        api_response = api_instance.delete_security_group1(o_name)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->delete_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_name** | **str**|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
 
 ### Authorization
 
@@ -2341,9 +1943,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_tenant = "O.Tenant_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    spec_attach_groups = [
-        "spec.attach-groups_example",
-    ] # [str] | list of security groups this policy is attached to. (optional)
+    propagation_status_pending_dscs = [
+        "propagation-status.pending-dscs_example",
+    ] # [str] | list of DSCs where propagation did not complete. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2362,7 +1964,7 @@ Name | Type | Description  | Notes
  **o_tenant** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **spec_attach_groups** | **[str]**| list of security groups this policy is attached to. | [optional]
+ **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
 
 ### Return type
 
@@ -2425,9 +2027,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    spec_attach_groups = [
-        "spec.attach-groups_example",
-    ] # [str] | list of security groups this policy is attached to. (optional)
+    propagation_status_pending_dscs = [
+        "propagation-status.pending-dscs_example",
+    ] # [str] | list of DSCs where propagation did not complete. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2446,179 +2048,11 @@ Name | Type | Description  | Notes
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **spec_attach_groups** | **[str]**| list of security groups this policy is attached to. | [optional]
+ **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
 
 ### Return type
 
 [**SecurityNetworkSecurityPolicy**](SecurityNetworkSecurityPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_security_group**
-> SecuritySecurityGroup get_security_group(o_tenant)
-
-Get SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-    t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    spec_service_labels = [
-        "spec.service-labels_example",
-    ] # [str] | Service object selector. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Get SecurityGroup object
-        api_response = api_instance.get_security_group(o_tenant)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->get_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
- **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **spec_service_labels** | **[str]**| Service object selector. | [optional]
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_security_group1**
-> SecuritySecurityGroup get_security_group1(o_name)
-
-Get SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_name = "O.Name_example" # str | 
-    t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
-    meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    spec_service_labels = [
-        "spec.service-labels_example",
-    ] # [str] | Service object selector. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Get SecurityGroup object
-        api_response = api_instance.get_security_group1(o_name)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->get_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_name** | **str**|  |
- **t_kind** | **str**| Kind represents the type of the API object. | [optional]
- **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **spec_service_labels** | **[str]**| Service object selector. | [optional]
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
 
 ### Authorization
 
@@ -3394,194 +2828,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **label_security_group**
-> SecuritySecurityGroup label_security_group(o_tenant, body)
-
-Label SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_label import ApiLabel
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-    body = ApiLabel(
-        api_version="api_version_example",
-        creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        generation_id="generation_id_example",
-        kind="kind_example",
-        labels={
-            "key": "key_example",
-        },
-        mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
-        namespace="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
-        resource_version="resource_version_example",
-        self_link="self_link_example",
-        tenant="C",
-        uuid="uuid_example",
-    ) # ApiLabel | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Label SecurityGroup object
-        api_response = api_instance.label_security_group(o_tenant, body)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->label_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
- **body** | [**ApiLabel**](ApiLabel.md)|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **label_security_group1**
-> SecuritySecurityGroup label_security_group1(o_name, body)
-
-Label SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_label import ApiLabel
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_name = "O.Name_example" # str | 
-    body = ApiLabel(
-        api_version="api_version_example",
-        creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        generation_id="generation_id_example",
-        kind="kind_example",
-        labels={
-            "key": "key_example",
-        },
-        mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
-        namespace="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
-        resource_version="resource_version_example",
-        self_link="self_link_example",
-        tenant="C",
-        uuid="uuid_example",
-    ) # ApiLabel | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Label SecurityGroup object
-        api_response = api_instance.label_security_group1(o_name, body)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->label_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_name** | **str**|  |
- **body** | [**ApiLabel**](ApiLabel.md)|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **list_app**
 > SecurityAppList list_app(o_tenant)
 
@@ -4246,172 +3492,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_security_group**
-> SecuritySecurityGroupList list_security_group(o_tenant)
-
-List SecurityGroup objects
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group_list import SecuritySecurityGroupList
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    field_change_selector = [
-        "field-change-selector_example",
-    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # List SecurityGroup objects
-        api_response = api_instance.list_security_group(o_tenant)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->list_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
- **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
-
-### Return type
-
-[**SecuritySecurityGroupList**](SecuritySecurityGroupList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **list_security_group1**
-> SecuritySecurityGroupList list_security_group1()
-
-List SecurityGroup objects
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group_list import SecuritySecurityGroupList
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    field_change_selector = [
-        "field-change-selector_example",
-    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # List SecurityGroup objects
-        api_response = api_instance.list_security_group1()
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->list_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
-
-### Return type
-
-[**SecuritySecurityGroupList**](SecuritySecurityGroupList.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **update_app**
 > SecurityApp update_app(o_tenant, body)
 
@@ -5002,8 +4082,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityIPSecPolicySpec(
             config=SecurityIPSecConfig(
-                ike_lifetime="60s",
-                sa_lifetime="60s",
+                ike_lifetime="1h",
+                sa_lifetime="1h",
             ),
             rules=[
                 SecurityIPSecPolicyRule(
@@ -5152,8 +4232,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityIPSecPolicySpec(
             config=SecurityIPSecConfig(
-                ike_lifetime="60s",
-                sa_lifetime="60s",
+                ike_lifetime="1h",
+                sa_lifetime="1h",
             ),
             rules=[
                 SecurityIPSecPolicyRule(
@@ -5301,9 +4381,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=SecurityNetworkSecurityPolicySpec(
-            attach_groups=[
-                "attach_groups_example",
-            ],
             attach_tenant=True,
             priority=1,
             rules=[
@@ -5313,11 +4390,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         "apps_example",
                     ],
                     description="description_example",
+                    disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
                     ],
-                    from_security_groups=[
-                        "from_security_groups_example",
+                    from_workload_groups=[
+                        "from_workload_groups_example",
                     ],
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                     proto_ports=[
@@ -5329,8 +4407,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     to_ip_addresses=[
                         "to_ip_addresses_example",
                     ],
-                    to_security_groups=[
-                        "to_security_groups_example",
+                    to_workload_groups=[
+                        "to_workload_groups_example",
                     ],
                 ),
             ],
@@ -5352,6 +4430,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 status="status_example",
                 updated=1,
             ),
+            rule_metrics_status=[
+                SecurityRuleMetricsStatus(
+                    dsc_id="dsc_id_example",
+                    policy_entries_consumed="policy_entries_consumed_example",
+                    rule_entries_consumed="rule_entries_consumed_example",
+                ),
+            ],
             rule_status=[
                 SecuritySGRuleStatus(
                     rule_hash="rule_hash_example",
@@ -5454,9 +4539,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=SecurityNetworkSecurityPolicySpec(
-            attach_groups=[
-                "attach_groups_example",
-            ],
             attach_tenant=True,
             priority=1,
             rules=[
@@ -5466,11 +4548,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         "apps_example",
                     ],
                     description="description_example",
+                    disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
                     ],
-                    from_security_groups=[
-                        "from_security_groups_example",
+                    from_workload_groups=[
+                        "from_workload_groups_example",
                     ],
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                     proto_ports=[
@@ -5482,8 +4565,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     to_ip_addresses=[
                         "to_ip_addresses_example",
                     ],
-                    to_security_groups=[
-                        "to_security_groups_example",
+                    to_workload_groups=[
+                        "to_workload_groups_example",
                     ],
                 ),
             ],
@@ -5505,6 +4588,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 status="status_example",
                 updated=1,
             ),
+            rule_metrics_status=[
+                SecurityRuleMetricsStatus(
+                    dsc_id="dsc_id_example",
+                    policy_entries_consumed="policy_entries_consumed_example",
+                    rule_entries_consumed="rule_entries_consumed_example",
+                ),
+            ],
             rule_status=[
                 SecuritySGRuleStatus(
                     rule_hash="rule_hash_example",
@@ -5533,250 +4623,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityNetworkSecurityPolicy**](SecurityNetworkSecurityPolicy.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_security_group**
-> SecuritySecurityGroup update_security_group(o_tenant, body)
-
-Update SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-    body = SecuritySecurityGroup(
-        api_version="api_version_example",
-        kind="kind_example",
-        meta=ApiObjectMeta(
-            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            generation_id="generation_id_example",
-            labels={
-                "key": "key_example",
-            },
-            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            name="name_example",
-            namespace="namespace_example",
-            resource_version="resource_version_example",
-            self_link="self_link_example",
-            tenant="tenant_example",
-            uuid="uuid_example",
-        ),
-        spec=SecuritySecurityGroupSpec(
-            match_prefixes=[
-                "match_prefixes_example",
-            ],
-            service_labels=[
-                "service_labels_example",
-            ],
-            workload_selector=LabelsSelector(
-                requirements=[
-                    LabelsRequirement(
-                        key="key_example",
-                        operator="equals",
-                        values=[
-                            "values_example",
-                        ],
-                    ),
-                ],
-            ),
-        ),
-        status=SecuritySecurityGroupStatus(
-            policies=[
-                "policies_example",
-            ],
-            workloads=[
-                "workloads_example",
-            ],
-        ),
-    ) # SecuritySecurityGroup | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Update SecurityGroup object
-        api_response = api_instance.update_security_group(o_tenant, body)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->update_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
- **body** | [**SecuritySecurityGroup**](SecuritySecurityGroup.md)|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (empty) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_security_group1**
-> SecuritySecurityGroup update_security_group1(o_name, body)
-
-Update SecurityGroup object
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_security_group import SecuritySecurityGroup
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_name = "O.Name_example" # str | 
-    body = SecuritySecurityGroup(
-        api_version="api_version_example",
-        kind="kind_example",
-        meta=ApiObjectMeta(
-            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            generation_id="generation_id_example",
-            labels={
-                "key": "key_example",
-            },
-            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
-            name="name_example",
-            namespace="namespace_example",
-            resource_version="resource_version_example",
-            self_link="self_link_example",
-            tenant="tenant_example",
-            uuid="uuid_example",
-        ),
-        spec=SecuritySecurityGroupSpec(
-            match_prefixes=[
-                "match_prefixes_example",
-            ],
-            service_labels=[
-                "service_labels_example",
-            ],
-            workload_selector=LabelsSelector(
-                requirements=[
-                    LabelsRequirement(
-                        key="key_example",
-                        operator="equals",
-                        values=[
-                            "values_example",
-                        ],
-                    ),
-                ],
-            ),
-        ),
-        status=SecuritySecurityGroupStatus(
-            policies=[
-                "policies_example",
-            ],
-            workloads=[
-                "workloads_example",
-            ],
-        ),
-    ) # SecuritySecurityGroup | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Update SecurityGroup object
-        api_response = api_instance.update_security_group1(o_name, body)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->update_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_name** | **str**|  |
- **body** | [**SecuritySecurityGroup**](SecuritySecurityGroup.md)|  |
-
-### Return type
-
-[**SecuritySecurityGroup**](SecuritySecurityGroup.md)
 
 ### Authorization
 
@@ -6441,172 +5287,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityAutoMsgNetworkSecurityPolicyWatchHelper**](SecurityAutoMsgNetworkSecurityPolicyWatchHelper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (streaming responses) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_security_group**
-> SecurityAutoMsgSecurityGroupWatchHelper watch_security_group(o_tenant)
-
-Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_tenant = "O.Tenant_example" # str | 
-    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    field_change_selector = [
-        "field-change-selector_example",
-    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
-        api_response = api_instance.watch_security_group(o_tenant)
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->watch_security_group: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_tenant** | **str**|  |
- **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
-
-### Return type
-
-[**SecurityAutoMsgSecurityGroupWatchHelper**](SecurityAutoMsgSecurityGroupWatchHelper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | (streaming responses) |  -  |
-**400** | Bad request parameters |  -  |
-**401** | Unauthorized request |  -  |
-**409** | Conflict while processing request |  -  |
-**412** | Pre-condition failed |  -  |
-**500** | Internal server error |  -  |
-**501** | Request not implemented |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **watch_security_group1**
-> SecurityAutoMsgSecurityGroupWatchHelper watch_security_group1()
-
-Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
-
-### Example
-
-Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
-
-```python
-import time
-import os
-import pensando_dss
-import pensando_dss.psm
-from pensando_dss.psm.api import security_v1_api
-from pensando_dss.psm.models.security import *
-from pensando_dss.psm.model.security_auto_msg_security_group_watch_helper import SecurityAutoMsgSecurityGroupWatchHelper
-from pensando_dss.psm.model.api_status import ApiStatus
-from pprint import pprint
-from dateutil.parser import parse as dateutil_parser
-# Defining the host is optional and defaults to http://localhost
-# See configuration.py for a list of all supported configuration parameters.
-configuration = pensando_dss.psm.Configuration(
-    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
-)
-configuration.verify_ssl = False
-
-
-# Enter a context with an instance of the API client
-with pensando_dss.psm.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = security_v1_api.SecurityV1Api(api_client)
-    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
-    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    field_change_selector = [
-        "field-change-selector_example",
-    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        # Watch SecurityGroup objects. Supports WebSockets or HTTP long poll
-        api_response = api_instance.watch_security_group1()
-        pprint(api_response)
-    except pensando_dss.psm.ApiException as e:
-        print("Exception when calling SecurityV1Api->watch_security_group1: %s\n" % e)
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
- **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
-
-### Return type
-
-[**SecurityAutoMsgSecurityGroupWatchHelper**](SecurityAutoMsgSecurityGroupWatchHelper.md)
 
 ### Authorization
 

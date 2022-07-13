@@ -13,7 +13,9 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.cluster_distributed_service_card_id import ClusterDistributedServiceCardID
+from pensando_dss.psm.model.cluster_pnic_info import ClusterPnicInfo
 globals()['ClusterDistributedServiceCardID'] = ClusterDistributedServiceCardID
+globals()['ClusterPnicInfo'] = ClusterPnicInfo
 from pensando_dss.psm.psm.model.cluster_host_spec import ClusterHostSpec
 
 

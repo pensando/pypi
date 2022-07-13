@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **package_type** | **str** | Type of DSC. | [optional]  if omitted the server will use the default value of "dsc"
 **primary_mac** | **str** | PrimaryMAC is the MAC address of the primary PF exposed by DistributedServiceCard. Should be a valid MAC address. | [optional] 
 **secure_booted** | **bool** | SecureBooted a true value indicates, secure boot is enabled. | [optional] 
+**security_policy_rule_scale_profile** | **str** | SecurityPolicyRuleScaleProfile is the active security policy rule scale profile in the DSE. | [optional] 
 **serial_num** | **str** | Serial number. | [optional] 
 **system_info** | [**ClusterDSCInfo**](ClusterDSCInfo.md) |  | [optional] 
 **unhealthy_services** | **[str]** | Lists the unhealthy services of a distributed service card. | [optional] 

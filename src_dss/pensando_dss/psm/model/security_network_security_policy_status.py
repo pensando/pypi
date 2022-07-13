@@ -30,8 +30,10 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+    from pensando_dss.psm.model.security_rule_metrics_status import SecurityRuleMetricsStatus
     from pensando_dss.psm.model.security_sg_rule_status import SecuritySGRuleStatus
     globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
+    globals()['SecurityRuleMetricsStatus'] = SecurityRuleMetricsStatus
     globals()['SecuritySGRuleStatus'] = SecuritySGRuleStatus
 
 
@@ -82,6 +84,7 @@ class SecurityNetworkSecurityPolicyStatus(ModelNormal):
         lazy_import()
         return {
             'propagation_status': (SecurityPropagationStatus,),  # noqa: E501
+            'rule_metrics_status': ([SecurityRuleMetricsStatus],),  # noqa: E501
             'rule_status': ([SecuritySGRuleStatus],),  # noqa: E501
         }
 
@@ -92,6 +95,7 @@ class SecurityNetworkSecurityPolicyStatus(ModelNormal):
 
     attribute_map = {
         'propagation_status': 'propagation-status',  # noqa: E501
+        'rule_metrics_status': 'rule-metrics-status',  # noqa: E501
         'rule_status': 'rule-status',  # noqa: E501
     }
 
@@ -142,6 +146,7 @@ class SecurityNetworkSecurityPolicyStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             propagation_status (SecurityPropagationStatus): [optional]  # noqa: E501
+            rule_metrics_status ([SecurityRuleMetricsStatus]): [optional]  # noqa: E501
             rule_status ([SecuritySGRuleStatus]): [optional]  # noqa: E501
         """
 

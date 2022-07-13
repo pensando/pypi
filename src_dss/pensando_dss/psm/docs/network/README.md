@@ -12,6 +12,8 @@ Class | Method | HTTP request | Description
 *NetworkV1Api* | [**add_policer_profile**](../../../../pensando_dss/docs/NetworkV1Api.md#add_policer_profile) | **POST** /configs/network/v1/tenant/{O.Tenant}/policer-profile | Create PolicerProfile object
 *NetworkV1Api* | [**add_policer_profile1**](../../../../pensando_dss/docs/NetworkV1Api.md#add_policer_profile1) | **POST** /configs/network/v1/policer-profile | Create PolicerProfile object
 *NetworkV1Api* | [**add_routing_config**](../../../../pensando_dss/docs/NetworkV1Api.md#add_routing_config) | **POST** /configs/network/v1/routing-config | Create RoutingConfig object
+*NetworkV1Api* | [**add_static_bindings**](../../../../pensando_dss/docs/NetworkV1Api.md#add_static_bindings) | **POST** /configs/network/v1/tenant/{O.Tenant}/ipam-policies/{O.Name}/AddStaticBindings | Add static bindings
+*NetworkV1Api* | [**add_static_bindings1**](../../../../pensando_dss/docs/NetworkV1Api.md#add_static_bindings1) | **POST** /configs/network/v1/ipam-policies/{O.Name}/AddStaticBindings | Add static bindings
 *NetworkV1Api* | [**add_virtual_router**](../../../../pensando_dss/docs/NetworkV1Api.md#add_virtual_router) | **POST** /configs/network/v1/tenant/{O.Tenant}/virtualrouters | Create VirtualRouter object
 *NetworkV1Api* | [**add_virtual_router1**](../../../../pensando_dss/docs/NetworkV1Api.md#add_virtual_router1) | **POST** /configs/network/v1/virtualrouters | Create VirtualRouter object
 *NetworkV1Api* | [**add_virtual_router_peering_group**](../../../../pensando_dss/docs/NetworkV1Api.md#add_virtual_router_peering_group) | **POST** /configs/network/v1/tenant/{O.Tenant}/virtual-router-peering-groups | Create VirtualRouterPeeringGroup object
@@ -115,6 +117,7 @@ Class | Method | HTTP request | Description
  - [ApiWatchEventList](../../../docs/ApiWatchEventList.md)
  - [ClusterIPConfig](../../../docs/ClusterIPConfig.md)
  - [GoogleprotobufAny](../../../docs/GoogleprotobufAny.md)
+ - [NetworkAddStaticBindingsRequest](../../../docs/NetworkAddStaticBindingsRequest.md)
  - [NetworkAutoMsgIPAMPolicyWatchHelper](../../../docs/NetworkAutoMsgIPAMPolicyWatchHelper.md)
  - [NetworkAutoMsgIPAMPolicyWatchHelperWatchEvent](../../../docs/NetworkAutoMsgIPAMPolicyWatchHelperWatchEvent.md)
  - [NetworkAutoMsgLbPolicyWatchHelper](../../../docs/NetworkAutoMsgLbPolicyWatchHelper.md)
@@ -138,21 +141,27 @@ Class | Method | HTTP request | Description
  - [NetworkBGPAuthStatus](../../../docs/NetworkBGPAuthStatus.md)
  - [NetworkBGPConfig](../../../docs/NetworkBGPConfig.md)
  - [NetworkBGPNeighbor](../../../docs/NetworkBGPNeighbor.md)
+ - [NetworkBootstrapIPAMOptions](../../../docs/NetworkBootstrapIPAMOptions.md)
+ - [NetworkClasslessStaticRoute](../../../docs/NetworkClasslessStaticRoute.md)
  - [NetworkDHCPRelayPolicy](../../../docs/NetworkDHCPRelayPolicy.md)
  - [NetworkDHCPServer](../../../docs/NetworkDHCPServer.md)
  - [NetworkHealthCheckSpec](../../../docs/NetworkHealthCheckSpec.md)
+ - [NetworkIPAMBinding](../../../docs/NetworkIPAMBinding.md)
  - [NetworkIPAMConfig](../../../docs/NetworkIPAMConfig.md)
+ - [NetworkIPAMOptions](../../../docs/NetworkIPAMOptions.md)
  - [NetworkIPAMPolicy](../../../docs/NetworkIPAMPolicy.md)
  - [NetworkIPAMPolicyList](../../../docs/NetworkIPAMPolicyList.md)
  - [NetworkIPAMPolicySpec](../../../docs/NetworkIPAMPolicySpec.md)
  - [NetworkIPAMPolicyStatus](../../../docs/NetworkIPAMPolicyStatus.md)
  - [NetworkIPAMPoolInfo](../../../docs/NetworkIPAMPoolInfo.md)
+ - [NetworkInterfaceIP](../../../docs/NetworkInterfaceIP.md)
  - [NetworkLLDPNeighbor](../../../docs/NetworkLLDPNeighbor.md)
  - [NetworkLbPolicy](../../../docs/NetworkLbPolicy.md)
  - [NetworkLbPolicyList](../../../docs/NetworkLbPolicyList.md)
  - [NetworkLbPolicySpec](../../../docs/NetworkLbPolicySpec.md)
  - [NetworkLbPolicyStatus](../../../docs/NetworkLbPolicyStatus.md)
  - [NetworkNetwork](../../../docs/NetworkNetwork.md)
+ - [NetworkNetworkFirewallProfile](../../../docs/NetworkNetworkFirewallProfile.md)
  - [NetworkNetworkInterface](../../../docs/NetworkNetworkInterface.md)
  - [NetworkNetworkInterfaceHostStatus](../../../docs/NetworkNetworkInterfaceHostStatus.md)
  - [NetworkNetworkInterfaceList](../../../docs/NetworkNetworkInterfaceList.md)
@@ -170,6 +179,7 @@ Class | Method | HTTP request | Description
  - [NetworkPolicerProfileList](../../../docs/NetworkPolicerProfileList.md)
  - [NetworkPolicerProfileSpec](../../../docs/NetworkPolicerProfileSpec.md)
  - [NetworkPolicerProfileStatus](../../../docs/NetworkPolicerProfileStatus.md)
+ - [NetworkPolicyReference](../../../docs/NetworkPolicyReference.md)
  - [NetworkRDSpec](../../../docs/NetworkRDSpec.md)
  - [NetworkRoute](../../../docs/NetworkRoute.md)
  - [NetworkRouteDistinguisher](../../../docs/NetworkRouteDistinguisher.md)
@@ -180,6 +190,7 @@ Class | Method | HTTP request | Description
  - [NetworkRoutingConfigList](../../../docs/NetworkRoutingConfigList.md)
  - [NetworkRoutingConfigSpec](../../../docs/NetworkRoutingConfigSpec.md)
  - [NetworkRoutingConfigStatus](../../../docs/NetworkRoutingConfigStatus.md)
+ - [NetworkSecurityPolicyStatus](../../../docs/NetworkSecurityPolicyStatus.md)
  - [NetworkService](../../../docs/NetworkService.md)
  - [NetworkServiceList](../../../docs/NetworkServiceList.md)
  - [NetworkServiceSpec](../../../docs/NetworkServiceSpec.md)

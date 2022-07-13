@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **completed_at** | **datetime** | migration completion time. | [optional] 
+**migration_id** | **str** | ID of the endpoints migration object. | [optional] 
 **stage** | **str** | Controller&#39;s migration stage. | [optional]  if omitted the server will use the default value of "migration-none"
 **started_at** | **datetime** | migration start time. | [optional] 
 **status** | **str** | The status from the dataplane performing migration. | [optional]  if omitted the server will use the default value of "none"

@@ -24,6 +24,7 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 import pensando_dss.psm as psm
 from pensando_dss.psm.model.api_label import ApiLabel
 from pensando_dss.psm.model.api_status import ApiStatus
+from pensando_dss.psm.model.network_add_static_bindings_request import NetworkAddStaticBindingsRequest
 from pensando_dss.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
 from pensando_dss.psm.model.network_auto_msg_network_interface_watch_helper import NetworkAutoMsgNetworkInterfaceWatchHelper
 from pensando_dss.psm.model.network_auto_msg_network_watch_helper import NetworkAutoMsgNetworkWatchHelper
@@ -909,6 +910,260 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__add_routing_config
+        )
+
+        def __add_static_bindings(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Add static bindings  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_static_bindings(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (NetworkAddStaticBindingsRequest):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPAMPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_static_bindings = _Endpoint(
+            settings={
+                'response_type': (NetworkIPAMPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipam-policies/{O.Name}/AddStaticBindings',
+                'operation_id': 'add_static_bindings',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (NetworkAddStaticBindingsRequest,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_static_bindings
+        )
+
+        def __add_static_bindings1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Add static bindings  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_static_bindings1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (NetworkAddStaticBindingsRequest):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPAMPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_static_bindings1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPAMPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipam-policies/{O.Name}/AddStaticBindings',
+                'operation_id': 'add_static_bindings1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (NetworkAddStaticBindingsRequest,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_static_bindings1
         )
 
         def __add_virtual_router(
@@ -2695,6 +2950,8 @@ class NetworkV1Api(object):
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
                 spec_type (str): [optional]
+                ipam_options_lease (int): [optional]
+                ipam_options_routers ([str]): [optional]
                 propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
@@ -2759,6 +3016,8 @@ class NetworkV1Api(object):
                     't_kind',
                     'meta_creation_time',
                     'spec_type',
+                    'ipam_options_lease',
+                    'ipam_options_routers',
                     'propagation_status_pending_dscs',
                 ],
                 'required': [
@@ -2785,6 +3044,10 @@ class NetworkV1Api(object):
                         (datetime,),
                     'spec_type':
                         (str,),
+                    'ipam_options_lease':
+                        (int,),
+                    'ipam_options_routers':
+                        ([str],),
                     'propagation_status_pending_dscs':
                         ([str],),
                 },
@@ -2793,6 +3056,8 @@ class NetworkV1Api(object):
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
                     'spec_type': 'spec.type',
+                    'ipam_options_lease': 'ipam-options.lease',
+                    'ipam_options_routers': 'ipam-options.routers',
                     'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
                 },
                 'location_map': {
@@ -2800,9 +3065,12 @@ class NetworkV1Api(object):
                     't_kind': 'query',
                     'meta_creation_time': 'query',
                     'spec_type': 'query',
+                    'ipam_options_lease': 'query',
+                    'ipam_options_routers': 'query',
                     'propagation_status_pending_dscs': 'query',
                 },
                 'collection_format_map': {
+                    'ipam_options_routers': 'csv',
                     'propagation_status_pending_dscs': 'csv',
                 }
             },
@@ -2836,6 +3104,8 @@ class NetworkV1Api(object):
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
                 spec_type (str): [optional]
+                ipam_options_lease (int): [optional]
+                ipam_options_routers ([str]): [optional]
                 propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
@@ -2900,6 +3170,8 @@ class NetworkV1Api(object):
                     't_kind',
                     'meta_creation_time',
                     'spec_type',
+                    'ipam_options_lease',
+                    'ipam_options_routers',
                     'propagation_status_pending_dscs',
                 ],
                 'required': [
@@ -2926,6 +3198,10 @@ class NetworkV1Api(object):
                         (datetime,),
                     'spec_type':
                         (str,),
+                    'ipam_options_lease':
+                        (int,),
+                    'ipam_options_routers':
+                        ([str],),
                     'propagation_status_pending_dscs':
                         ([str],),
                 },
@@ -2934,6 +3210,8 @@ class NetworkV1Api(object):
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
                     'spec_type': 'spec.type',
+                    'ipam_options_lease': 'ipam-options.lease',
+                    'ipam_options_routers': 'ipam-options.routers',
                     'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
                 },
                 'location_map': {
@@ -2941,9 +3219,12 @@ class NetworkV1Api(object):
                     't_kind': 'query',
                     'meta_creation_time': 'query',
                     'spec_type': 'query',
+                    'ipam_options_lease': 'query',
+                    'ipam_options_routers': 'query',
                     'propagation_status_pending_dscs': 'query',
                 },
                 'collection_format_map': {
+                    'ipam_options_routers': 'csv',
                     'propagation_status_pending_dscs': 'csv',
                 }
             },
@@ -4099,7 +4380,7 @@ class NetworkV1Api(object):
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
                 spec_type (str): [optional]
                 admin_value_value (int): [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                spec_ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4164,7 +4445,7 @@ class NetworkV1Api(object):
                     'meta_creation_time',
                     'spec_type',
                     'admin_value_value',
-                    'propagation_status_pending_dscs',
+                    'spec_ingress_security_policy',
                 ],
                 'required': [
                     'o_tenant',
@@ -4192,7 +4473,7 @@ class NetworkV1Api(object):
                         (str,),
                     'admin_value_value':
                         (int,),
-                    'propagation_status_pending_dscs':
+                    'spec_ingress_security_policy':
                         ([str],),
                 },
                 'attribute_map': {
@@ -4201,7 +4482,7 @@ class NetworkV1Api(object):
                     'meta_creation_time': 'meta.creation-time',
                     'spec_type': 'spec.type',
                     'admin_value_value': 'admin-value.Value',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'spec_ingress_security_policy': 'spec.ingress-security-policy',
                 },
                 'location_map': {
                     'o_tenant': 'path',
@@ -4209,10 +4490,10 @@ class NetworkV1Api(object):
                     'meta_creation_time': 'query',
                     'spec_type': 'query',
                     'admin_value_value': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'spec_ingress_security_policy': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'spec_ingress_security_policy': 'csv',
                 }
             },
             headers_map={
@@ -4246,7 +4527,7 @@ class NetworkV1Api(object):
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
                 spec_type (str): [optional]
                 admin_value_value (int): [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                spec_ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4311,7 +4592,7 @@ class NetworkV1Api(object):
                     'meta_creation_time',
                     'spec_type',
                     'admin_value_value',
-                    'propagation_status_pending_dscs',
+                    'spec_ingress_security_policy',
                 ],
                 'required': [
                     'o_name',
@@ -4339,7 +4620,7 @@ class NetworkV1Api(object):
                         (str,),
                     'admin_value_value':
                         (int,),
-                    'propagation_status_pending_dscs':
+                    'spec_ingress_security_policy':
                         ([str],),
                 },
                 'attribute_map': {
@@ -4348,7 +4629,7 @@ class NetworkV1Api(object):
                     'meta_creation_time': 'meta.creation-time',
                     'spec_type': 'spec.type',
                     'admin_value_value': 'admin-value.Value',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'spec_ingress_security_policy': 'spec.ingress-security-policy',
                 },
                 'location_map': {
                     'o_name': 'path',
@@ -4356,10 +4637,10 @@ class NetworkV1Api(object):
                     'meta_creation_time': 'query',
                     'spec_type': 'query',
                     'admin_value_value': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'spec_ingress_security_policy': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'spec_ingress_security_policy': 'csv',
                 }
             },
             headers_map={

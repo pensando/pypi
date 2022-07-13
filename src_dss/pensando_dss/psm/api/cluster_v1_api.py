@@ -29,6 +29,7 @@ from pensando_dss.psm.model.cluster_auto_msg_cluster_watch_helper import Cluster
 from pensando_dss.psm.model.cluster_auto_msg_configuration_snapshot_watch_helper import ClusterAutoMsgConfigurationSnapshotWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_dsc_profile_watch_helper import ClusterAutoMsgDSCProfileWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_distributed_service_card_watch_helper import ClusterAutoMsgDistributedServiceCardWatchHelper
+from pensando_dss.psm.model.cluster_auto_msg_distributed_service_entity_watch_helper import ClusterAutoMsgDistributedServiceEntityWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_host_watch_helper import ClusterAutoMsgHostWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_node_watch_helper import ClusterAutoMsgNodeWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_tenant_watch_helper import ClusterAutoMsgTenantWatchHelper
@@ -42,6 +43,8 @@ from pensando_dss.psm.model.cluster_dsc_profile import ClusterDSCProfile
 from pensando_dss.psm.model.cluster_dsc_profile_list import ClusterDSCProfileList
 from pensando_dss.psm.model.cluster_distributed_service_card import ClusterDistributedServiceCard
 from pensando_dss.psm.model.cluster_distributed_service_card_list import ClusterDistributedServiceCardList
+from pensando_dss.psm.model.cluster_distributed_service_entity import ClusterDistributedServiceEntity
+from pensando_dss.psm.model.cluster_distributed_service_entity_list import ClusterDistributedServiceEntityList
 from pensando_dss.psm.model.cluster_host import ClusterHost
 from pensando_dss.psm.model.cluster_host_list import ClusterHostList
 from pensando_dss.psm.model.cluster_license import ClusterLicense
@@ -181,6 +184,240 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__add_configuration_snapshot
+        )
+
+        def __add_distributed_service_card(
+            self,
+            body,
+            **kwargs
+        ):
+            """Create DistributedServiceCard object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_distributed_service_card(body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                body (ClusterDistributedServiceCard):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceCard
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_distributed_service_card = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceCard,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedservicecards',
+                'operation_id': 'add_distributed_service_card',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'body',
+                ],
+                'required': [
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'body':
+                        (ClusterDistributedServiceCard,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_distributed_service_card
+        )
+
+        def __add_distributed_service_entity(
+            self,
+            body,
+            **kwargs
+        ):
+            """Create DistributedServiceEntity object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_distributed_service_entity(body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                body (ClusterDistributedServiceEntity):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceEntity
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceEntity,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedserviceentities',
+                'operation_id': 'add_distributed_service_entity',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'body',
+                ],
+                'required': [
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'body':
+                        (ClusterDistributedServiceEntity,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_distributed_service_entity
         )
 
         def __add_dsc_profile(
@@ -1105,6 +1342,122 @@ class ClusterV1Api(object):
             callable=__delete_distributed_service_card
         )
 
+        def __delete_distributed_service_entity(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Delete DistributedServiceEntity object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_distributed_service_entity(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceEntity
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceEntity,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedserviceentities/{O.Name}',
+                'operation_id': 'delete_distributed_service_entity',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_distributed_service_entity
+        )
+
         def __delete_dsc_profile(
             self,
             o_name,
@@ -1708,6 +2061,7 @@ class ClusterV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                overlay_forwarding_symmetric_irb (str): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -1767,6 +2121,7 @@ class ClusterV1Api(object):
                 'all': [
                     't_kind',
                     'meta_creation_time',
+                    'overlay_forwarding_symmetric_irb',
                 ],
                 'required': [],
                 'nullable': [
@@ -1786,14 +2141,18 @@ class ClusterV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
+                    'overlay_forwarding_symmetric_irb':
+                        (str,),
                 },
                 'attribute_map': {
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
+                    'overlay_forwarding_symmetric_irb': 'overlay-forwarding.symmetric-irb',
                 },
                 'location_map': {
                     't_kind': 'query',
                     'meta_creation_time': 'query',
+                    'overlay_forwarding_symmetric_irb': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -2069,6 +2428,160 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__get_distributed_service_card
+        )
+
+        def __get_distributed_service_entity(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Get DistributedServiceEntity object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_distributed_service_entity(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_admit (bool): [optional]
+                spec_id (str): [optional]
+                ip_config_dns_servers ([str]): DNSServers contains a list of DNS Servers that can be used on DistributedServiceCard.. [optional]
+                spec_controllers ([str]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceEntity
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.get_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceEntity,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedserviceentities/{O.Name}',
+                'operation_id': 'get_distributed_service_entity',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_admit',
+                    'spec_id',
+                    'ip_config_dns_servers',
+                    'spec_controllers',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_admit':
+                        (bool,),
+                    'spec_id':
+                        (str,),
+                    'ip_config_dns_servers':
+                        ([str],),
+                    'spec_controllers':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_admit': 'spec.admit',
+                    'spec_id': 'spec.id',
+                    'ip_config_dns_servers': 'ip-config.dns-servers',
+                    'spec_controllers': 'spec.controllers',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_admit': 'query',
+                    'spec_id': 'query',
+                    'ip_config_dns_servers': 'query',
+                    'spec_controllers': 'query',
+                },
+                'collection_format_map': {
+                    'ip_config_dns_servers': 'csv',
+                    'spec_controllers': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_distributed_service_entity
         )
 
         def __get_dsc_profile(
@@ -3454,6 +3967,133 @@ class ClusterV1Api(object):
             callable=__label_distributed_service_card
         )
 
+        def __label_distributed_service_entity(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Label DistributedServiceEntity object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_distributed_service_entity(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceEntity
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceEntity,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedserviceentities/{O.Name}/label',
+                'operation_id': 'label_distributed_service_entity',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_distributed_service_entity
+        )
+
         def __label_dsc_profile(
             self,
             o_name,
@@ -4200,6 +4840,129 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__list_distributed_service_card
+        )
+
+        def __list_distributed_service_entity(
+            self,
+            **kwargs
+        ):
+            """List DistributedServiceEntity objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_distributed_service_entity(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceEntityList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.list_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceEntityList,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedserviceentities',
+                'operation_id': 'list_distributed_service_entity',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_distributed_service_entity
         )
 
         def __list_dsc_profile(
@@ -5404,6 +6167,133 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__update_distributed_service_card
+        )
+
+        def __update_distributed_service_entity(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Update DistributedServiceEntity object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_distributed_service_entity(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (ClusterDistributedServiceEntity):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterDistributedServiceEntity
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterDistributedServiceEntity,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/distributedserviceentities/{O.Name}',
+                'operation_id': 'update_distributed_service_entity',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (ClusterDistributedServiceEntity,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_distributed_service_entity
         )
 
         def __update_dsc_profile(
@@ -6755,6 +7645,129 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__watch_distributed_service_card
+        )
+
+        def __watch_distributed_service_entity(
+            self,
+            **kwargs
+        ):
+            """Watch DistributedServiceEntity objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_distributed_service_entity(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterAutoMsgDistributedServiceEntityWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_distributed_service_entity = _Endpoint(
+            settings={
+                'response_type': (ClusterAutoMsgDistributedServiceEntityWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/watch/distributedserviceentities',
+                'operation_id': 'watch_distributed_service_entity',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_distributed_service_entity
         )
 
         def __watch_dsc_profile(

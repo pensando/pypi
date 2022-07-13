@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **controllers** | **[str]** | Controllers contains the list of remote controllers IP addresses or hostnames. | [optional] 
 **dscprofile** | **str** |  | [optional] 
 **enable_secure_boot** | **bool** | EnableSecureBoot a true value indicates, set lifecycle fuse to enable secure boot. | [optional]  if omitted the server will use the default value of False
+**flow_export_policy** | [**[ClusterFlowExportPolicyRef]**](ClusterFlowExportPolicyRef.md) | FlowExportPolicy is the configuration for flow export policy. | [optional] 
 **fwlog_policy** | [**ClusterFwlogPolicyRef**](ClusterFwlogPolicyRef.md) |  | [optional] 
 **id** | **str** | ID is used as a user friendly identifier in logs/events. | [optional] 
 **ip_config** | [**ClusterIPConfig**](ClusterIPConfig.md) |  | [optional] 

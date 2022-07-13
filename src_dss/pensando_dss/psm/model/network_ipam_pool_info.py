@@ -76,6 +76,7 @@ class NetworkIPAMPoolInfo(ModelNormal):
         return {
             'ip_address_end': (str,),  # noqa: E501
             'ip_address_start': (str,),  # noqa: E501
+            'subnet': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -86,6 +87,7 @@ class NetworkIPAMPoolInfo(ModelNormal):
     attribute_map = {
         'ip_address_end': 'ip-address-end',  # noqa: E501
         'ip_address_start': 'ip-address-start',  # noqa: E501
+        'subnet': 'subnet',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -136,6 +138,7 @@ class NetworkIPAMPoolInfo(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             ip_address_end (str): ending IP address of the address pool range.. [optional]  # noqa: E501
             ip_address_start (str): starting IP address of the address pool range.. [optional]  # noqa: E501
+            subnet (str): subnet, in CIDR format, to which the pool belongs.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -30,7 +30,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.network_dhcp_relay_policy import NetworkDHCPRelayPolicy
+    from pensando_dss.psm.model.network_ipam_config import NetworkIPAMConfig
     globals()['NetworkDHCPRelayPolicy'] = NetworkDHCPRelayPolicy
+    globals()['NetworkIPAMConfig'] = NetworkIPAMConfig
 
 
 class NetworkIPAMPolicySpec(ModelNormal):
@@ -60,6 +62,8 @@ class NetworkIPAMPolicySpec(ModelNormal):
     allowed_values = {
         ('type',): {
             'DHCP-RELAY': "dhcp-relay",
+            'PSM-IPAM': "psm-ipam",
+            'BOOTSTRAP-IPAM': "bootstrap-ipam",
         },
     }
 
@@ -83,6 +87,7 @@ class NetworkIPAMPolicySpec(ModelNormal):
         lazy_import()
         return {
             'dhcp_relay': (NetworkDHCPRelayPolicy,),  # noqa: E501
+            'psm_ipam_config': (NetworkIPAMConfig,),  # noqa: E501
             'type': (str,),  # noqa: E501
         }
 
@@ -93,6 +98,7 @@ class NetworkIPAMPolicySpec(ModelNormal):
 
     attribute_map = {
         'dhcp_relay': 'dhcp-relay',  # noqa: E501
+        'psm_ipam_config': 'psm-ipam-config',  # noqa: E501
         'type': 'type',  # noqa: E501
     }
 
@@ -143,6 +149,7 @@ class NetworkIPAMPolicySpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             dhcp_relay (NetworkDHCPRelayPolicy): [optional]  # noqa: E501
+            psm_ipam_config (NetworkIPAMConfig): [optional]  # noqa: E501
             type (str): [optional] if omitted the server will use the default value of "dhcp-relay"  # noqa: E501
         """
 

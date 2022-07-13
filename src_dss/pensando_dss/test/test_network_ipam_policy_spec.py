@@ -13,7 +13,9 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.network_dhcp_relay_policy import NetworkDHCPRelayPolicy
+from pensando_dss.psm.model.network_ipam_config import NetworkIPAMConfig
 globals()['NetworkDHCPRelayPolicy'] = NetworkDHCPRelayPolicy
+globals()['NetworkIPAMConfig'] = NetworkIPAMConfig
 from pensando_dss.psm.psm.model.network_ipam_policy_spec import NetworkIPAMPolicySpec
 
 

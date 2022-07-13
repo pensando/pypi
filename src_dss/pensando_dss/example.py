@@ -22,10 +22,13 @@ from api import workload_v1_api
 from pensando_dss.psm.model.api_label import ApiLabel
 from pensando_dss.psm.model.api_status import ApiStatus
 from pensando_dss.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
+from pensando_dss.psm.model.workload_auto_msg_workload_group_watch_helper import WorkloadAutoMsgWorkloadGroupWatchHelper
 from pensando_dss.psm.model.workload_auto_msg_workload_watch_helper import WorkloadAutoMsgWorkloadWatchHelper
 from pensando_dss.psm.model.workload_endpoint import WorkloadEndpoint
 from pensando_dss.psm.model.workload_endpoint_list import WorkloadEndpointList
 from pensando_dss.psm.model.workload_workload import WorkloadWorkload
+from pensando_dss.psm.model.workload_workload_group import WorkloadWorkloadGroup
+from pensando_dss.psm.model.workload_workload_group_list import WorkloadWorkloadGroupList
 from pensando_dss.psm.model.workload_workload_list import WorkloadWorkloadList
 
 HOME = os.environ["HOME"]
@@ -88,6 +91,11 @@ body = WorkloadWorkload(
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
+                    interface_migration_status=WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -99,6 +107,7 @@ body = WorkloadWorkload(
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
@@ -122,6 +131,9 @@ body = WorkloadWorkload(
                 status="status_example",
                 updated=1,
             ),
+            workload_groups=[
+                "workload_groups_example",
+            ],
         ),
     ) # WorkloadWorkload | 
 

@@ -61,6 +61,10 @@ class PreferencesUIGlobalSettingsSpec(ModelNormal):
     }
 
     validations = {
+        ('netsec_policies_batch_size',): {
+            'inclusive_maximum': 1000,
+            'inclusive_minimum': 1,
+        },
     }
 
     additional_properties_type = None
@@ -80,6 +84,7 @@ class PreferencesUIGlobalSettingsSpec(ModelNormal):
         lazy_import()
         return {
             'idle_timeout': (PreferencesIdleTimeout,),  # noqa: E501
+            'netsec_policies_batch_size': (int,),  # noqa: E501
             'style_options': (str,),  # noqa: E501
         }
 
@@ -90,6 +95,7 @@ class PreferencesUIGlobalSettingsSpec(ModelNormal):
 
     attribute_map = {
         'idle_timeout': 'idle-timeout',  # noqa: E501
+        'netsec_policies_batch_size': 'netsec-policies-batch-size',  # noqa: E501
         'style_options': 'style-options',  # noqa: E501
     }
 
@@ -140,6 +146,7 @@ class PreferencesUIGlobalSettingsSpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             idle_timeout (PreferencesIdleTimeout): [optional]  # noqa: E501
+            netsec_policies_batch_size (int): Network Security Policies Batch Size. Value should be between 1 and 1000.. [optional] if omitted the server will use the default value of 8  # noqa: E501
             style_options (str): Can contain any UI style preferences. Provide typing through UI code.. [optional]  # noqa: E501
         """
 

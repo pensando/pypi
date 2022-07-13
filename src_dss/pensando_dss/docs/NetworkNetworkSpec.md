@@ -5,8 +5,8 @@ spec part of network object.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **egress_security_policy** | **[str]** | Security Policy to apply in the egress direction. | [optional] 
+**firewall_profile** | [**NetworkNetworkFirewallProfile**](NetworkNetworkFirewallProfile.md) |  | [optional] 
 **ingress_security_policy** | **[str]** | Security Policy to apply in the ingress direction. | [optional] 
-**ipam_config** | [**NetworkIPAMConfig**](NetworkIPAMConfig.md) |  | [optional] 
 **ipam_policy** | **str** | Relay Configuration if any. | [optional] 
 **ipv4_gateway** | **str** | IPv4 gateway for this subnet. Should be a valid v4 or v6 IP address. | [optional] 
 **ipv4_subnet** | **str** | IPv4 subnet CIDR. Should be a valid v4 or v6 CIDR block. | [optional] 

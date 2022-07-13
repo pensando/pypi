@@ -90,7 +90,6 @@ class MonitoringFlowExportPolicySpec(ModelNormal):
             'interval': (str,),  # noqa: E501
             'match_rules': ([MonitoringMatchRule],),  # noqa: E501
             'template_interval': (str,),  # noqa: E501
-            'vrf_name': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -105,7 +104,6 @@ class MonitoringFlowExportPolicySpec(ModelNormal):
         'interval': 'interval',  # noqa: E501
         'match_rules': 'match-rules',  # noqa: E501
         'template_interval': 'template-interval',  # noqa: E501
-        'vrf_name': 'vrf-name',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -160,7 +158,6 @@ class MonitoringFlowExportPolicySpec(ModelNormal):
             interval (str): Interval defines how often to push the records to an external collector The value is specified as a string format, '10s', '20m'. Should be a valid time duration between 1s and 24h0m0s.. [optional] if omitted the server will use the default value of "10s"  # noqa: E501
             match_rules ([MonitoringMatchRule]): [optional]  # noqa: E501
             template_interval (str): TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, '1m', '10m'. Should be a valid time duration between 1m0s and 30m0s.. [optional] if omitted the server will use the default value of "5m"  # noqa: E501
-            vrf_name (str): VrfName specifies the name of the VRF that the current flow export Policy belongs to.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

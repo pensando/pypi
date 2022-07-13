@@ -13,8 +13,10 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+from pensando_dss.psm.model.security_rule_metrics_status import SecurityRuleMetricsStatus
 from pensando_dss.psm.model.security_sg_rule_status import SecuritySGRuleStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
+globals()['SecurityRuleMetricsStatus'] = SecurityRuleMetricsStatus
 globals()['SecuritySGRuleStatus'] = SecuritySGRuleStatus
 from pensando_dss.psm.psm.model.security_network_security_policy_status import SecurityNetworkSecurityPolicyStatus
 

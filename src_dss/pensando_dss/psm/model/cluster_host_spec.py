@@ -30,7 +30,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.cluster_distributed_service_card_id import ClusterDistributedServiceCardID
+    from pensando_dss.psm.model.cluster_pnic_info import ClusterPnicInfo
     globals()['ClusterDistributedServiceCardID'] = ClusterDistributedServiceCardID
+    globals()['ClusterPnicInfo'] = ClusterPnicInfo
 
 
 class ClusterHostSpec(ModelNormal):
@@ -80,6 +82,7 @@ class ClusterHostSpec(ModelNormal):
         lazy_import()
         return {
             'dscs': ([ClusterDistributedServiceCardID],),  # noqa: E501
+            'pnic_info': ([ClusterPnicInfo],),  # noqa: E501
         }
 
     @cached_property
@@ -89,6 +92,7 @@ class ClusterHostSpec(ModelNormal):
 
     attribute_map = {
         'dscs': 'dscs',  # noqa: E501
+        'pnic_info': 'pnic-info',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -138,6 +142,7 @@ class ClusterHostSpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             dscs ([ClusterDistributedServiceCardID]): DSCs contains the information about all DistributedServiceCards on a host.. [optional]  # noqa: E501
+            pnic_info ([ClusterPnicInfo]): information of the pnics associated with this host.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

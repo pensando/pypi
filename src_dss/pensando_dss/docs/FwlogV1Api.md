@@ -361,6 +361,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         encryption_status="all",
         end_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         max_results=50,
+        policy_names=[
+            "policy_names_example",
+        ],
         protocols=[
             "protocols_example",
         ],
@@ -380,6 +383,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         start_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         tenants=[
             "tenants_example",
+        ],
+        vlans=[
+            "vlans_example",
         ],
         vpc_names=[
             "vpc_names_example",

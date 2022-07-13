@@ -80,6 +80,7 @@ class ClusterClusterSpec(ModelNormal):
         lazy_import()
         return {
             'auto_admit_dscs': (bool,),  # noqa: E501
+            'bootstrap_ipam_policy': (str,),  # noqa: E501
             'certs': (str,),  # noqa: E501
             'key': (str,),  # noqa: E501
             'ntp_servers': ([str],),  # noqa: E501
@@ -95,6 +96,7 @@ class ClusterClusterSpec(ModelNormal):
 
     attribute_map = {
         'auto_admit_dscs': 'auto-admit-dscs',  # noqa: E501
+        'bootstrap_ipam_policy': 'bootstrap-ipam-policy',  # noqa: E501
         'certs': 'certs',  # noqa: E501
         'key': 'key',  # noqa: E501
         'ntp_servers': 'ntp-servers',  # noqa: E501
@@ -150,6 +152,7 @@ class ClusterClusterSpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             auto_admit_dscs (bool): AutoAdmitDSCs when enabled auto-admits DSCs that are validated into Venice Cluster. When it is disabled, DSCs validated by CMD are set to Pending state and it requires Manual approval to be admitted into the cluster.. [optional]  # noqa: E501
+            bootstrap_ipam_policy (str): BootstrapIPAMPolicy is the ipam policy to configure the DSCs for bootstrap.. [optional]  # noqa: E501
             certs (str): Certs is the pem encoded certificate bundle used for API Gateway TLS.. [optional]  # noqa: E501
             key (str): Key is the pem encoded private key used for API Gateway TLS. We support RSA or ECDSA.. [optional]  # noqa: E501
             ntp_servers ([str]): NTPServers contains the list of NTP servers for the cluster.. [optional]  # noqa: E501

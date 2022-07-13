@@ -13,8 +13,10 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.auth_ldap import AuthLdap
+from pensando_dss.psm.model.auth_local import AuthLocal
 from pensando_dss.psm.model.auth_radius import AuthRadius
 globals()['AuthLdap'] = AuthLdap
+globals()['AuthLocal'] = AuthLocal
 globals()['AuthRadius'] = AuthRadius
 from pensando_dss.psm.psm.model.auth_authenticators import AuthAuthenticators
 

@@ -29,7 +29,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.network_security_policy_status import NetworkSecurityPolicyStatus
     from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+    globals()['NetworkSecurityPolicyStatus'] = NetworkSecurityPolicyStatus
     globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
 
 
@@ -92,6 +94,7 @@ class NetworkNetworkStatus(ModelNormal):
             'id': (str,),  # noqa: E501
             'oper_state': (str,),  # noqa: E501
             'propagation_status': (SecurityPropagationStatus,),  # noqa: E501
+            'security_policy_status': (NetworkSecurityPolicyStatus,),  # noqa: E501
             'workloads': ([str],),  # noqa: E501
         }
 
@@ -105,6 +108,7 @@ class NetworkNetworkStatus(ModelNormal):
         'id': 'id',  # noqa: E501
         'oper_state': 'oper-state',  # noqa: E501
         'propagation_status': 'propagation-status',  # noqa: E501
+        'security_policy_status': 'security-policy-status',  # noqa: E501
         'workloads': 'workloads',  # noqa: E501
     }
 
@@ -158,6 +162,7 @@ class NetworkNetworkStatus(ModelNormal):
             id (str): Handle is the internal Handle allocated to this network.. [optional]  # noqa: E501
             oper_state (str): [optional] if omitted the server will use the default value of "active"  # noqa: E501
             propagation_status (SecurityPropagationStatus): [optional]  # noqa: E501
+            security_policy_status (NetworkSecurityPolicyStatus): [optional]  # noqa: E501
             workloads ([str]): list of all workloads in this network.. [optional]  # noqa: E501
         """
 

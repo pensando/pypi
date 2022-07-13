@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**add_policer_profile**](NetworkV1Api.md#add_policer_profile) | **POST** /configs/network/v1/tenant/{O.Tenant}/policer-profile | Create PolicerProfile object
 [**add_policer_profile1**](NetworkV1Api.md#add_policer_profile1) | **POST** /configs/network/v1/policer-profile | Create PolicerProfile object
 [**add_routing_config**](NetworkV1Api.md#add_routing_config) | **POST** /configs/network/v1/routing-config | Create RoutingConfig object
+[**add_static_bindings**](NetworkV1Api.md#add_static_bindings) | **POST** /configs/network/v1/tenant/{O.Tenant}/ipam-policies/{O.Name}/AddStaticBindings | Add static bindings
+[**add_static_bindings1**](NetworkV1Api.md#add_static_bindings1) | **POST** /configs/network/v1/ipam-policies/{O.Name}/AddStaticBindings | Add static bindings
 [**add_virtual_router**](NetworkV1Api.md#add_virtual_router) | **POST** /configs/network/v1/tenant/{O.Tenant}/virtualrouters | Create VirtualRouter object
 [**add_virtual_router1**](NetworkV1Api.md#add_virtual_router1) | **POST** /configs/network/v1/virtualrouters | Create VirtualRouter object
 [**add_virtual_router_peering_group**](NetworkV1Api.md#add_virtual_router_peering_group) | **POST** /configs/network/v1/tenant/{O.Tenant}/virtual-router-peering-groups | Create VirtualRouterPeeringGroup object
@@ -153,6 +155,54 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ),
                 ],
             ),
+            psm_ipam_config=NetworkIPAMConfig(
+                bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                    controllers=[
+                        "controllers_example",
+                    ],
+                    interface_ips=[
+                        NetworkInterfaceIP(
+                            gateway_ip="gateway_ip_example",
+                            interface_id=1,
+                            ip_address="ip_address_example",
+                        ),
+                    ],
+                ),
+                ipam_options=NetworkIPAMOptions(
+                    classless_static_routes=[
+                        NetworkClasslessStaticRoute(
+                            gateway_ip="gateway_ip_example",
+                            subnet="subnet_example",
+                        ),
+                    ],
+                    lease=1,
+                    routers=[
+                        "routers_example",
+                    ],
+                ),
+                ipv4_ipam_pool=[
+                    NetworkIPAMPoolInfo(
+                        ip_address_end="ip_address_end_example",
+                        ip_address_start="ip_address_start_example",
+                        subnet="subnet_example",
+                    ),
+                ],
+                ipv4_static_bindings=[
+                    NetworkIPAMBinding(
+                        bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                            controllers=[],
+                            interface_ips=[],
+                        ),
+                        ip_address="ip_address_example",
+                        ipam_options=NetworkIPAMOptions(
+                            classless_static_routes=[],
+                            lease=1,
+                            routers=[],
+                        ),
+                        mac_address="mac_address_example",
+                    ),
+                ],
+            ),
             type="dhcp-relay",
         ),
         status=NetworkIPAMPolicyStatus(
@@ -276,6 +326,54 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ),
                 ],
             ),
+            psm_ipam_config=NetworkIPAMConfig(
+                bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                    controllers=[
+                        "controllers_example",
+                    ],
+                    interface_ips=[
+                        NetworkInterfaceIP(
+                            gateway_ip="gateway_ip_example",
+                            interface_id=1,
+                            ip_address="ip_address_example",
+                        ),
+                    ],
+                ),
+                ipam_options=NetworkIPAMOptions(
+                    classless_static_routes=[
+                        NetworkClasslessStaticRoute(
+                            gateway_ip="gateway_ip_example",
+                            subnet="subnet_example",
+                        ),
+                    ],
+                    lease=1,
+                    routers=[
+                        "routers_example",
+                    ],
+                ),
+                ipv4_ipam_pool=[
+                    NetworkIPAMPoolInfo(
+                        ip_address_end="ip_address_end_example",
+                        ip_address_start="ip_address_start_example",
+                        subnet="subnet_example",
+                    ),
+                ],
+                ipv4_static_bindings=[
+                    NetworkIPAMBinding(
+                        bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                            controllers=[],
+                            interface_ips=[],
+                        ),
+                        ip_address="ip_address_example",
+                        ipam_options=NetworkIPAMOptions(
+                            classless_static_routes=[],
+                            lease=1,
+                            routers=[],
+                        ),
+                        mac_address="mac_address_example",
+                    ),
+                ],
+            ),
             type="dhcp-relay",
         ),
         status=NetworkIPAMPolicyStatus(
@@ -394,17 +492,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
+            firewall_profile=NetworkNetworkFirewallProfile(
+                maximum_cps_per_distributed_services_entity=-1,
+                maximum_sessions_per_distributed_services_entity=-1,
+            ),
             ingress_security_policy=[
                 "ingress_security_policy_example",
             ],
-            ipam_config=NetworkIPAMConfig(
-                ipv4_ipam_pool=[
-                    NetworkIPAMPoolInfo(
-                        ip_address_end="ip_address_end_example",
-                        ip_address_start="ip_address_start_example",
-                    ),
-                ],
-            ),
             ipam_policy="ipam_policy_example",
             ipv4_gateway="10.1.1.1, ff02::5 ",
             ipv4_subnet="10.1.1.1/24, ff02::5/32 ",
@@ -463,6 +557,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 status="status_example",
                 updated=1,
+            ),
+            security_policy_status=NetworkSecurityPolicyStatus(
+                epoch_id=1,
+                policy_references=[
+                    NetworkPolicyReference(
+                        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+                        uuid="uuid_example",
+                    ),
+                ],
             ),
             workloads=[
                 "workloads_example",
@@ -566,17 +669,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
+            firewall_profile=NetworkNetworkFirewallProfile(
+                maximum_cps_per_distributed_services_entity=-1,
+                maximum_sessions_per_distributed_services_entity=-1,
+            ),
             ingress_security_policy=[
                 "ingress_security_policy_example",
             ],
-            ipam_config=NetworkIPAMConfig(
-                ipv4_ipam_pool=[
-                    NetworkIPAMPoolInfo(
-                        ip_address_end="ip_address_end_example",
-                        ip_address_start="ip_address_start_example",
-                    ),
-                ],
-            ),
             ipam_policy="ipam_policy_example",
             ipv4_gateway="10.1.1.1, ff02::5 ",
             ipv4_subnet="10.1.1.1/24, ff02::5/32 ",
@@ -635,6 +734,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 status="status_example",
                 updated=1,
+            ),
+            security_policy_status=NetworkSecurityPolicyStatus(
+                epoch_id=1,
+                policy_references=[
+                    NetworkPolicyReference(
+                        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+                        uuid="uuid_example",
+                    ),
+                ],
             ),
             workloads=[
                 "workloads_example",
@@ -1078,6 +1186,258 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **add_static_bindings**
+> NetworkIPAMPolicy add_static_bindings(o_tenant, body)
+
+Add static bindings
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import network_v1_api
+from pensando_dss.psm.models.network import *
+from pensando_dss.psm.model.network_add_static_bindings_request import NetworkAddStaticBindingsRequest
+from pensando_dss.psm.model.api_status import ApiStatus
+from pensando_dss.psm.model.network_ipam_policy import NetworkIPAMPolicy
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = network_v1_api.NetworkV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    body = NetworkAddStaticBindingsRequest(
+        api_version="api_version_example",
+        ipv4_static_bindings=[
+            NetworkIPAMBinding(
+                bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                    controllers=[
+                        "controllers_example",
+                    ],
+                    interface_ips=[
+                        NetworkInterfaceIP(
+                            gateway_ip="gateway_ip_example",
+                            interface_id=1,
+                            ip_address="ip_address_example",
+                        ),
+                    ],
+                ),
+                ip_address="ip_address_example",
+                ipam_options=NetworkIPAMOptions(
+                    classless_static_routes=[
+                        NetworkClasslessStaticRoute(
+                            gateway_ip="gateway_ip_example",
+                            subnet="subnet_example",
+                        ),
+                    ],
+                    lease=1,
+                    routers=[
+                        "routers_example",
+                    ],
+                ),
+                mac_address="mac_address_example",
+            ),
+        ],
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+    ) # NetworkAddStaticBindingsRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Add static bindings
+        api_response = api_instance.add_static_bindings(o_tenant, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling NetworkV1Api->add_static_bindings: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **body** | [**NetworkAddStaticBindingsRequest**](NetworkAddStaticBindingsRequest.md)|  |
+
+### Return type
+
+[**NetworkIPAMPolicy**](NetworkIPAMPolicy.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_static_bindings1**
+> NetworkIPAMPolicy add_static_bindings1(o_name, body)
+
+Add static bindings
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import network_v1_api
+from pensando_dss.psm.models.network import *
+from pensando_dss.psm.model.network_add_static_bindings_request import NetworkAddStaticBindingsRequest
+from pensando_dss.psm.model.api_status import ApiStatus
+from pensando_dss.psm.model.network_ipam_policy import NetworkIPAMPolicy
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = network_v1_api.NetworkV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    body = NetworkAddStaticBindingsRequest(
+        api_version="api_version_example",
+        ipv4_static_bindings=[
+            NetworkIPAMBinding(
+                bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                    controllers=[
+                        "controllers_example",
+                    ],
+                    interface_ips=[
+                        NetworkInterfaceIP(
+                            gateway_ip="gateway_ip_example",
+                            interface_id=1,
+                            ip_address="ip_address_example",
+                        ),
+                    ],
+                ),
+                ip_address="ip_address_example",
+                ipam_options=NetworkIPAMOptions(
+                    classless_static_routes=[
+                        NetworkClasslessStaticRoute(
+                            gateway_ip="gateway_ip_example",
+                            subnet="subnet_example",
+                        ),
+                    ],
+                    lease=1,
+                    routers=[
+                        "routers_example",
+                    ],
+                ),
+                mac_address="mac_address_example",
+            ),
+        ],
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+    ) # NetworkAddStaticBindingsRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Add static bindings
+        api_response = api_instance.add_static_bindings1(o_name, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling NetworkV1Api->add_static_bindings1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **body** | [**NetworkAddStaticBindingsRequest**](NetworkAddStaticBindingsRequest.md)|  |
+
+### Return type
+
+[**NetworkIPAMPolicy**](NetworkIPAMPolicy.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **add_virtual_router**
 > NetworkVirtualRouter add_virtual_router(o_tenant, body)
 
@@ -1130,6 +1490,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=NetworkVirtualRouterSpec(
             default_ipam_policy="default_ipam_policy_example",
+            egress_security_policy=[
+                "egress_security_policy_example",
+            ],
+            flow_export_policy=[
+                "flow_export_policy_example",
+            ],
+            ingress_security_policy=[
+                "ingress_security_policy_example",
+            ],
+            maximum_cps_per_network_per_distributed_services_entity=0,
+            maximum_sessions_per_network_per_distributed_services_entity=0,
             route_import_export=NetworkRDSpec(
                 address_family="ipv4-unicast",
                 rd=NetworkRouteDistinguisher(
@@ -1278,6 +1649,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=NetworkVirtualRouterSpec(
             default_ipam_policy="default_ipam_policy_example",
+            egress_security_policy=[
+                "egress_security_policy_example",
+            ],
+            flow_export_policy=[
+                "flow_export_policy_example",
+            ],
+            ingress_security_policy=[
+                "ingress_security_policy_example",
+            ],
+            maximum_cps_per_network_per_distributed_services_entity=0,
+            maximum_sessions_per_network_per_distributed_services_entity=0,
             route_import_export=NetworkRDSpec(
                 address_family="ipv4-unicast",
                 rd=NetworkRouteDistinguisher(
@@ -2510,6 +2892,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
     spec_type = "spec.type_example" # str |  (optional)
+    ipam_options_lease = 1 # int |  (optional)
+    ipam_options_routers = [
+        "ipam-options.routers_example",
+    ] # [str] |  (optional)
     propagation_status_pending_dscs = [
         "propagation-status.pending-dscs_example",
     ] # [str] | list of DSCs where propagation did not complete. (optional)
@@ -2532,6 +2918,8 @@ Name | Type | Description  | Notes
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
  **spec_type** | **str**|  | [optional]
+ **ipam_options_lease** | **int**|  | [optional]
+ **ipam_options_routers** | **[str]**|  | [optional]
  **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
 
 ### Return type
@@ -2596,6 +2984,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
     spec_type = "spec.type_example" # str |  (optional)
+    ipam_options_lease = 1 # int |  (optional)
+    ipam_options_routers = [
+        "ipam-options.routers_example",
+    ] # [str] |  (optional)
     propagation_status_pending_dscs = [
         "propagation-status.pending-dscs_example",
     ] # [str] | list of DSCs where propagation did not complete. (optional)
@@ -2618,6 +3010,8 @@ Name | Type | Description  | Notes
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
  **spec_type** | **str**|  | [optional]
+ **ipam_options_lease** | **int**|  | [optional]
+ **ipam_options_routers** | **[str]**|  | [optional]
  **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
 
 ### Return type
@@ -3367,9 +3761,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
     spec_type = "spec.type_example" # str |  (optional)
     admin_value_value = 1 # int |  (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    spec_ingress_security_policy = [
+        "spec.ingress-security-policy_example",
+    ] # [str] | Security Policy to apply in the ingress direction. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -3390,7 +3784,7 @@ Name | Type | Description  | Notes
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
  **spec_type** | **str**|  | [optional]
  **admin_value_value** | **int**|  | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **spec_ingress_security_policy** | **[str]**| Security Policy to apply in the ingress direction. | [optional]
 
 ### Return type
 
@@ -3455,9 +3849,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
     spec_type = "spec.type_example" # str |  (optional)
     admin_value_value = 1 # int |  (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    spec_ingress_security_policy = [
+        "spec.ingress-security-policy_example",
+    ] # [str] | Security Policy to apply in the ingress direction. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -3478,7 +3872,7 @@ Name | Type | Description  | Notes
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
  **spec_type** | **str**|  | [optional]
  **admin_value_value** | **int**|  | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **spec_ingress_security_policy** | **[str]**| Security Policy to apply in the ingress direction. | [optional]
 
 ### Return type
 
@@ -6021,6 +6415,54 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ),
                 ],
             ),
+            psm_ipam_config=NetworkIPAMConfig(
+                bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                    controllers=[
+                        "controllers_example",
+                    ],
+                    interface_ips=[
+                        NetworkInterfaceIP(
+                            gateway_ip="gateway_ip_example",
+                            interface_id=1,
+                            ip_address="ip_address_example",
+                        ),
+                    ],
+                ),
+                ipam_options=NetworkIPAMOptions(
+                    classless_static_routes=[
+                        NetworkClasslessStaticRoute(
+                            gateway_ip="gateway_ip_example",
+                            subnet="subnet_example",
+                        ),
+                    ],
+                    lease=1,
+                    routers=[
+                        "routers_example",
+                    ],
+                ),
+                ipv4_ipam_pool=[
+                    NetworkIPAMPoolInfo(
+                        ip_address_end="ip_address_end_example",
+                        ip_address_start="ip_address_start_example",
+                        subnet="subnet_example",
+                    ),
+                ],
+                ipv4_static_bindings=[
+                    NetworkIPAMBinding(
+                        bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                            controllers=[],
+                            interface_ips=[],
+                        ),
+                        ip_address="ip_address_example",
+                        ipam_options=NetworkIPAMOptions(
+                            classless_static_routes=[],
+                            lease=1,
+                            routers=[],
+                        ),
+                        mac_address="mac_address_example",
+                    ),
+                ],
+            ),
             type="dhcp-relay",
         ),
         status=NetworkIPAMPolicyStatus(
@@ -6145,6 +6587,54 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ),
                 ],
             ),
+            psm_ipam_config=NetworkIPAMConfig(
+                bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                    controllers=[
+                        "controllers_example",
+                    ],
+                    interface_ips=[
+                        NetworkInterfaceIP(
+                            gateway_ip="gateway_ip_example",
+                            interface_id=1,
+                            ip_address="ip_address_example",
+                        ),
+                    ],
+                ),
+                ipam_options=NetworkIPAMOptions(
+                    classless_static_routes=[
+                        NetworkClasslessStaticRoute(
+                            gateway_ip="gateway_ip_example",
+                            subnet="subnet_example",
+                        ),
+                    ],
+                    lease=1,
+                    routers=[
+                        "routers_example",
+                    ],
+                ),
+                ipv4_ipam_pool=[
+                    NetworkIPAMPoolInfo(
+                        ip_address_end="ip_address_end_example",
+                        ip_address_start="ip_address_start_example",
+                        subnet="subnet_example",
+                    ),
+                ],
+                ipv4_static_bindings=[
+                    NetworkIPAMBinding(
+                        bootstrap_ipam_options=NetworkBootstrapIPAMOptions(
+                            controllers=[],
+                            interface_ips=[],
+                        ),
+                        ip_address="ip_address_example",
+                        ipam_options=NetworkIPAMOptions(
+                            classless_static_routes=[],
+                            lease=1,
+                            routers=[],
+                        ),
+                        mac_address="mac_address_example",
+                    ),
+                ],
+            ),
             type="dhcp-relay",
         ),
         status=NetworkIPAMPolicyStatus(
@@ -6264,17 +6754,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
+            firewall_profile=NetworkNetworkFirewallProfile(
+                maximum_cps_per_distributed_services_entity=-1,
+                maximum_sessions_per_distributed_services_entity=-1,
+            ),
             ingress_security_policy=[
                 "ingress_security_policy_example",
             ],
-            ipam_config=NetworkIPAMConfig(
-                ipv4_ipam_pool=[
-                    NetworkIPAMPoolInfo(
-                        ip_address_end="ip_address_end_example",
-                        ip_address_start="ip_address_start_example",
-                    ),
-                ],
-            ),
             ipam_policy="ipam_policy_example",
             ipv4_gateway="10.1.1.1, ff02::5 ",
             ipv4_subnet="10.1.1.1/24, ff02::5/32 ",
@@ -6333,6 +6819,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 status="status_example",
                 updated=1,
+            ),
+            security_policy_status=NetworkSecurityPolicyStatus(
+                epoch_id=1,
+                policy_references=[
+                    NetworkPolicyReference(
+                        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+                        uuid="uuid_example",
+                    ),
+                ],
             ),
             workloads=[
                 "workloads_example",
@@ -6437,17 +6932,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
+            firewall_profile=NetworkNetworkFirewallProfile(
+                maximum_cps_per_distributed_services_entity=-1,
+                maximum_sessions_per_distributed_services_entity=-1,
+            ),
             ingress_security_policy=[
                 "ingress_security_policy_example",
             ],
-            ipam_config=NetworkIPAMConfig(
-                ipv4_ipam_pool=[
-                    NetworkIPAMPoolInfo(
-                        ip_address_end="ip_address_end_example",
-                        ip_address_start="ip_address_start_example",
-                    ),
-                ],
-            ),
             ipam_policy="ipam_policy_example",
             ipv4_gateway="10.1.1.1, ff02::5 ",
             ipv4_subnet="10.1.1.1/24, ff02::5/32 ",
@@ -6506,6 +6997,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 status="status_example",
                 updated=1,
+            ),
+            security_policy_status=NetworkSecurityPolicyStatus(
+                epoch_id=1,
+                policy_references=[
+                    NetworkPolicyReference(
+                        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+                        uuid="uuid_example",
+                    ),
+                ],
             ),
             workloads=[
                 "workloads_example",
@@ -7181,6 +7681,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=NetworkVirtualRouterSpec(
             default_ipam_policy="default_ipam_policy_example",
+            egress_security_policy=[
+                "egress_security_policy_example",
+            ],
+            flow_export_policy=[
+                "flow_export_policy_example",
+            ],
+            ingress_security_policy=[
+                "ingress_security_policy_example",
+            ],
+            maximum_cps_per_network_per_distributed_services_entity=0,
+            maximum_sessions_per_network_per_distributed_services_entity=0,
             route_import_export=NetworkRDSpec(
                 address_family="ipv4-unicast",
                 rd=NetworkRouteDistinguisher(
@@ -7330,6 +7841,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=NetworkVirtualRouterSpec(
             default_ipam_policy="default_ipam_policy_example",
+            egress_security_policy=[
+                "egress_security_policy_example",
+            ],
+            flow_export_policy=[
+                "flow_export_policy_example",
+            ],
+            ingress_security_policy=[
+                "ingress_security_policy_example",
+            ],
+            maximum_cps_per_network_per_distributed_services_entity=0,
+            maximum_sessions_per_network_per_distributed_services_entity=0,
             route_import_export=NetworkRDSpec(
                 address_family="ipv4-unicast",
                 rd=NetworkRouteDistinguisher(

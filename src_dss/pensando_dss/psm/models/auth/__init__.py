@@ -43,6 +43,7 @@ from pensando_dss.psm.model.auth_ldap_attribute_mapping import AuthLdapAttribute
 from pensando_dss.psm.model.auth_ldap_domain import AuthLdapDomain
 from pensando_dss.psm.model.auth_ldap_server import AuthLdapServer
 from pensando_dss.psm.model.auth_ldap_server_status import AuthLdapServerStatus
+from pensando_dss.psm.model.auth_local import AuthLocal
 from pensando_dss.psm.model.auth_operation import AuthOperation
 from pensando_dss.psm.model.auth_operation_status import AuthOperationStatus
 from pensando_dss.psm.model.auth_password_change_request import AuthPasswordChangeRequest
@@ -69,4 +70,5 @@ from pensando_dss.psm.model.auth_user_preference_list import AuthUserPreferenceL
 from pensando_dss.psm.model.auth_user_preference_spec import AuthUserPreferenceSpec
 from pensando_dss.psm.model.auth_user_spec import AuthUserSpec
 from pensando_dss.psm.model.auth_user_status import AuthUserStatus
+from pensando_dss.psm.model.auth_user_unlock_request import AuthUserUnlockRequest
 from pensando_dss.psm.model.googleprotobuf_any import GoogleprotobufAny

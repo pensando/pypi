@@ -66,6 +66,14 @@ class NetworkVirtualRouterSpec(ModelNormal):
     }
 
     validations = {
+        ('maximum_cps_per_network_per_distributed_services_entity',): {
+            'inclusive_maximum': 1000000,
+            'inclusive_minimum': 0,
+        },
+        ('maximum_sessions_per_network_per_distributed_services_entity',): {
+            'inclusive_maximum': 5000000,
+            'inclusive_minimum': 0,
+        },
         ('vxlan_vni',): {
             'inclusive_maximum': 16777215,
             'inclusive_minimum': 0,
@@ -89,6 +97,11 @@ class NetworkVirtualRouterSpec(ModelNormal):
         lazy_import()
         return {
             'default_ipam_policy': (str,),  # noqa: E501
+            'egress_security_policy': ([str],),  # noqa: E501
+            'flow_export_policy': ([str],),  # noqa: E501
+            'ingress_security_policy': ([str],),  # noqa: E501
+            'maximum_cps_per_network_per_distributed_services_entity': (int,),  # noqa: E501
+            'maximum_sessions_per_network_per_distributed_services_entity': (int,),  # noqa: E501
             'route_import_export': (NetworkRDSpec,),  # noqa: E501
             'router_mac_address': (str,),  # noqa: E501
             'type': (str,),  # noqa: E501
@@ -102,6 +115,11 @@ class NetworkVirtualRouterSpec(ModelNormal):
 
     attribute_map = {
         'default_ipam_policy': 'default-ipam-policy',  # noqa: E501
+        'egress_security_policy': 'egress-security-policy',  # noqa: E501
+        'flow_export_policy': 'flow-export-policy',  # noqa: E501
+        'ingress_security_policy': 'ingress-security-policy',  # noqa: E501
+        'maximum_cps_per_network_per_distributed_services_entity': 'maximum-cps-per-network-per-distributed-services-entity',  # noqa: E501
+        'maximum_sessions_per_network_per_distributed_services_entity': 'maximum-sessions-per-network-per-distributed-services-entity',  # noqa: E501
         'route_import_export': 'route-import-export',  # noqa: E501
         'router_mac_address': 'router-mac-address',  # noqa: E501
         'type': 'type',  # noqa: E501
@@ -155,6 +173,11 @@ class NetworkVirtualRouterSpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             default_ipam_policy (str): Default IPAM policy for networks belonging to this Virtual Router. Any IPAM Policy specified in the Network overrides this.. [optional]  # noqa: E501
+            egress_security_policy ([str]): Security Policy to apply in the egress direction.. [optional]  # noqa: E501
+            flow_export_policy ([str]): FlowExportPolicy is the flow export policy associated to this virtual router.. [optional]  # noqa: E501
+            ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]  # noqa: E501
+            maximum_cps_per_network_per_distributed_services_entity (int): Maximum Connections Per Second supported for any Network belonging to the Virtual Router within a Distributed Services Entity. Valid values 0 no limit and 1000 <= maxcps  <= 1000000 The value configured here is the CPS limit enforced per Network within a Distributed Services Entity and is the same for all Networks within the Virtual Router. However the value can be overriden at Network level. Value 0 means the CPS limit is not enforced and the CPS is limited only by the system capacity. All new connections exceeding the CPS limit are dropped. Value should be between 0 and 1000000.. [optional]  # noqa: E501
+            maximum_sessions_per_network_per_distributed_services_entity (int): Maximum sessions supported in any Network belonging to the Virtual Router within a Distributed Services Entity. Valid values 0 (no limit) and 10000  <= maxsessions <= 5000000 The value configured here is the sessions limit enforced per Network within a Distributed Services Entity and is the same for all Networks within the Virtual Router. However the value can be overriden at Network level. Value 0 means the sessions limit is not enforced and the number of sessions is limited only by the system capacity. Sessions exceeding the sessions limit are dropped. NOTE: no active sessions will be pruned if the value changes, but until the session count comes down to a value below this limit, new sessions won't be installed in h/w (packet will be dropped) 1 session = forward flow + reverse flow. Value should be between 0 and 5000000.. [optional]  # noqa: E501
             route_import_export (NetworkRDSpec): [optional]  # noqa: E501
             router_mac_address (str): Default Router MAC Address to use for this Virtual Router. Should be a valid MAC address.. [optional]  # noqa: E501
             type (str): [optional] if omitted the server will use the default value of "unknown"  # noqa: E501

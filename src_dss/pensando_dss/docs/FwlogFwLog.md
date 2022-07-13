@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **policy_name** | **str** | policy name. | [optional] 
 **protocol** | **str** | Protocol,. | [optional] 
 **reporter_id** | **str** | Reporter ID. | [optional] 
+**reporter_name** | **str** | ReporterName represents the name or hostname of the DSM that generated the log. | [optional] 
 **rule_id** | **str** | Rule ID. | [optional] 
 **rule_name** | **str** | Rule Name represents the name of the firewall rule that was hit by this session. | [optional] 
 **security_policy_id** | **str** | SecurityPolicyID represents the UUID of the security policy. | [optional] 

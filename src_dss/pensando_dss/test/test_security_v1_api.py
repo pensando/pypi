@@ -65,20 +65,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """
         pass
 
-    def test_add_security_group(self):
-        """Test case for add_security_group
-
-        Create SecurityGroup object  # noqa: E501
-        """
-        pass
-
-    def test_add_security_group1(self):
-        """Test case for add_security_group1
-
-        Create SecurityGroup object  # noqa: E501
-        """
-        pass
-
     def test_delete_app(self):
         """Test case for delete_app
 
@@ -118,20 +104,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """Test case for delete_network_security_policy1
 
         Delete NetworkSecurityPolicy object  # noqa: E501
-        """
-        pass
-
-    def test_delete_security_group(self):
-        """Test case for delete_security_group
-
-        Delete SecurityGroup object  # noqa: E501
-        """
-        pass
-
-    def test_delete_security_group1(self):
-        """Test case for delete_security_group1
-
-        Delete SecurityGroup object  # noqa: E501
         """
         pass
 
@@ -191,20 +163,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """
         pass
 
-    def test_get_security_group(self):
-        """Test case for get_security_group
-
-        Get SecurityGroup object  # noqa: E501
-        """
-        pass
-
-    def test_get_security_group1(self):
-        """Test case for get_security_group1
-
-        Get SecurityGroup object  # noqa: E501
-        """
-        pass
-
     def test_label_app(self):
         """Test case for label_app
 
@@ -258,20 +216,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """Test case for label_network_security_policy1
 
         Label NetworkSecurityPolicy object  # noqa: E501
-        """
-        pass
-
-    def test_label_security_group(self):
-        """Test case for label_security_group
-
-        Label SecurityGroup object  # noqa: E501
-        """
-        pass
-
-    def test_label_security_group1(self):
-        """Test case for label_security_group1
-
-        Label SecurityGroup object  # noqa: E501
         """
         pass
 
@@ -331,20 +275,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """
         pass
 
-    def test_list_security_group(self):
-        """Test case for list_security_group
-
-        List SecurityGroup objects  # noqa: E501
-        """
-        pass
-
-    def test_list_security_group1(self):
-        """Test case for list_security_group1
-
-        List SecurityGroup objects  # noqa: E501
-        """
-        pass
-
     def test_update_app(self):
         """Test case for update_app
 
@@ -401,20 +331,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """
         pass
 
-    def test_update_security_group(self):
-        """Test case for update_security_group
-
-        Update SecurityGroup object  # noqa: E501
-        """
-        pass
-
-    def test_update_security_group1(self):
-        """Test case for update_security_group1
-
-        Update SecurityGroup object  # noqa: E501
-        """
-        pass
-
     def test_watch_app(self):
         """Test case for watch_app
 
@@ -468,20 +384,6 @@ class TestSecurityV1Api(unittest.TestCase):
         """Test case for watch_network_security_policy1
 
         Watch NetworkSecurityPolicy objects. Supports WebSockets or HTTP long poll  # noqa: E501
-        """
-        pass
-
-    def test_watch_security_group(self):
-        """Test case for watch_security_group
-
-        Watch SecurityGroup objects. Supports WebSockets or HTTP long poll  # noqa: E501
-        """
-        pass
-
-    def test_watch_security_group1(self):
-        """Test case for watch_security_group1
-
-        Watch SecurityGroup objects. Supports WebSockets or HTTP long poll  # noqa: E501
         """
         pass
 

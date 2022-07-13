@@ -71,6 +71,7 @@ class EventsEvent(ModelNormal):
             'RESOURCE': "resource",
             'ORCHESTRATION': "orchestration",
             'INTERRUPT': "interrupt",
+            'HA': "ha",
         },
         ('severity',): {
             'INFO': "info",

@@ -77,6 +77,7 @@ class MonitoringExportConfig(ModelNormal):
             'destination': (str,),  # noqa: E501
             'gateway': (str,),  # noqa: E501
             'transport': (str,),  # noqa: E501
+            'virtual_router': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -88,6 +89,7 @@ class MonitoringExportConfig(ModelNormal):
         'destination': 'destination',  # noqa: E501
         'gateway': 'gateway',  # noqa: E501
         'transport': 'transport',  # noqa: E501
+        'virtual_router': 'virtual-router',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -139,6 +141,7 @@ class MonitoringExportConfig(ModelNormal):
             destination (str): IP address of the collector/entity to which the data is to be exported. Should be a valid IPv4 address.. [optional]  # noqa: E501
             gateway (str): Gateway of the dest IP address to which the data is to be exported. Should be a valid IPv4 address.. [optional]  # noqa: E501
             transport (str): protocol and Port number where an external collector is gathering the data example \"UDP/2055\". Should be a valid layer 3 or layer 4 protocol and port/type (only support UDP currently).. [optional]  # noqa: E501
+            virtual_router (str): Destination Virtual Router.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
