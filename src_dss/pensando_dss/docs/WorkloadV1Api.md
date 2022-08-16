@@ -126,11 +126,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -142,6 +137,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -293,11 +297,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -309,6 +308,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -460,11 +468,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -476,6 +479,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -626,11 +638,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -642,6 +649,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -1330,11 +1346,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -1346,6 +1357,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -1497,11 +1517,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -1513,6 +1528,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -1664,11 +1688,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -1680,6 +1699,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -1831,11 +1859,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -1847,6 +1870,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -3368,11 +3400,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -3384,6 +3411,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -3535,11 +3571,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -3551,6 +3582,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -3702,11 +3742,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -3718,6 +3753,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
@@ -3869,11 +3913,6 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     endpoint="endpoint_example",
                     external_vlan=1,
-                    interface_migration_status=WorkloadInterfaceMigrationStatus(
-                        errors=[
-                            "errors_example",
-                        ],
-                    ),
                     ip_addresses=[
                         "ip_addresses_example",
                     ],
@@ -3885,6 +3924,15 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
                 completed_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+                flow_migration_status=[
+                    WorkloadInterfaceMigrationStatus(
+                        errors=[
+                            "errors_example",
+                        ],
+                        ip_addresses="ip_addresses_example",
+                        mac_address="mac_address_example",
+                    ),
+                ],
                 migration_id="migration_id_example",
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),

@@ -75,6 +75,8 @@ class WorkloadInterfaceMigrationStatus(ModelNormal):
         """
         return {
             'errors': ([str],),  # noqa: E501
+            'ip_addresses': (str,),  # noqa: E501
+            'mac_address': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -84,6 +86,8 @@ class WorkloadInterfaceMigrationStatus(ModelNormal):
 
     attribute_map = {
         'errors': 'errors',  # noqa: E501
+        'ip_addresses': 'ip-addresses',  # noqa: E501
+        'mac_address': 'mac-address',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -133,6 +137,8 @@ class WorkloadInterfaceMigrationStatus(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             errors ([str]): The status from the dataplane performing migration.. [optional]  # noqa: E501
+            ip_addresses (str): [optional]  # noqa: E501
+            mac_address (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

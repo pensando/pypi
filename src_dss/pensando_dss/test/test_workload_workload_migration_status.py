@@ -12,6 +12,8 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.workload_interface_migration_status import WorkloadInterfaceMigrationStatus
+globals()['WorkloadInterfaceMigrationStatus'] = WorkloadInterfaceMigrationStatus
 from pensando_dss.psm.psm.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
 
 
