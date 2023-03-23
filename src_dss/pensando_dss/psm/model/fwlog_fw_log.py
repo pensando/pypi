@@ -111,6 +111,7 @@ class FwlogFwLog(ModelNormal):
             'meta': (ApiObjectMeta,),  # noqa: E501
             'packets_received': (str,),  # noqa: E501
             'packets_sent': (str,),  # noqa: E501
+            'policy_display_name': (str,),  # noqa: E501
             'policy_name': (str,),  # noqa: E501
             'protocol': (str,),  # noqa: E501
             'reporter_id': (str,),  # noqa: E501
@@ -152,6 +153,7 @@ class FwlogFwLog(ModelNormal):
         'meta': 'meta',  # noqa: E501
         'packets_received': 'packets-received',  # noqa: E501
         'packets_sent': 'packets-sent',  # noqa: E501
+        'policy_display_name': 'policy-display-name',  # noqa: E501
         'policy_name': 'policy-name',  # noqa: E501
         'protocol': 'protocol',  # noqa: E501
         'reporter_id': 'reporter-id',  # noqa: E501
@@ -233,6 +235,7 @@ class FwlogFwLog(ModelNormal):
             meta (ApiObjectMeta): [optional]  # noqa: E501
             packets_received (str): Packets received represents the number of packets received at the source from the destination.. [optional]  # noqa: E501
             packets_sent (str): Packets sent represents the number of packets sent from the source to the destination.. [optional]  # noqa: E501
+            policy_display_name (str): ReporterName represents the display name of the security policy.. [optional]  # noqa: E501
             policy_name (str): policy name.. [optional]  # noqa: E501
             protocol (str): Protocol,.. [optional]  # noqa: E501
             reporter_id (str): Reporter ID.. [optional]  # noqa: E501

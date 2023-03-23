@@ -61,10 +61,10 @@ class RolloutRolloutPhase(ModelNormal):
             'PROGRESSING': "progressing",
             'COMPLETE': "complete",
             'FAIL': "fail",
-            'ETCD-DOWNGRADE': "etcd-downgrade",
-            'ELASTIC-DOWNGRADE': "elastic-downgrade",
-            'ETCD-DOWNGRADE-COMPLETED': "etcd-downgrade-completed",
-            'ELASTIC-DOWNGRADE-COMPLETED': "elastic-downgrade-completed",
+            'ETCD-ROLLOUT': "etcd-rollout",
+            'ELASTIC-ROLLOUT': "elastic-rollout",
+            'ETCD-ROLLOUT-COMPLETED': "etcd-rollout-completed",
+            'ELASTIC-ROLLOUT-COMPLETED': "elastic-rollout-completed",
         },
     }
 

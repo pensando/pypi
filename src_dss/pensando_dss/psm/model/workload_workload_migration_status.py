@@ -72,6 +72,7 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
             'DONE': "done",
             'FAILED': "failed",
             'TIMED-OUT': "timed-out",
+            'ABORTED': "aborted",
         },
     }
 
@@ -96,10 +97,13 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
         return {
             'completed_at': (datetime,),  # noqa: E501
             'flow_migration_status': ([WorkloadInterfaceMigrationStatus],),  # noqa: E501
+            'from_host_name': (str,),  # noqa: E501
             'migration_id': (str,),  # noqa: E501
+            'migration_transaction_id': (int,),  # noqa: E501
             'stage': (str,),  # noqa: E501
             'started_at': (datetime,),  # noqa: E501
             'status': (str,),  # noqa: E501
+            'to_host_name': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -110,10 +114,13 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
     attribute_map = {
         'completed_at': 'completed-at',  # noqa: E501
         'flow_migration_status': 'flow-migration-status',  # noqa: E501
+        'from_host_name': 'from-host-name',  # noqa: E501
         'migration_id': 'migration-id',  # noqa: E501
+        'migration_transaction_id': 'migration-transaction-id',  # noqa: E501
         'stage': 'stage',  # noqa: E501
         'started_at': 'started-at',  # noqa: E501
         'status': 'status',  # noqa: E501
+        'to_host_name': 'to-host-name',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -164,10 +171,13 @@ class WorkloadWorkloadMigrationStatus(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             completed_at (datetime): migration completion time.. [optional]  # noqa: E501
             flow_migration_status ([WorkloadInterfaceMigrationStatus]): Interface migration status.. [optional]  # noqa: E501
+            from_host_name (str): from host.. [optional]  # noqa: E501
             migration_id (str): ID of the endpoints migration object.. [optional]  # noqa: E501
+            migration_transaction_id (int): Controller's migration transaction.. [optional]  # noqa: E501
             stage (str): Controller's migration stage.. [optional] if omitted the server will use the default value of "migration-none"  # noqa: E501
             started_at (datetime): migration start time.. [optional]  # noqa: E501
             status (str): The status from the dataplane performing migration.. [optional] if omitted the server will use the default value of "none"  # noqa: E501
+            to_host_name (str): to host.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

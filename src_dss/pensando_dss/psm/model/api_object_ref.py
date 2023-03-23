@@ -74,6 +74,7 @@ class ApiObjectRef(ModelNormal):
                 and the value is attribute type.
         """
         return {
+            'display_name': (str,),  # noqa: E501
             'kind': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'namespace': (str,),  # noqa: E501
@@ -87,6 +88,7 @@ class ApiObjectRef(ModelNormal):
 
 
     attribute_map = {
+        'display_name': 'display-name',  # noqa: E501
         'kind': 'kind',  # noqa: E501
         'name': 'name',  # noqa: E501
         'namespace': 'namespace',  # noqa: E501
@@ -140,6 +142,7 @@ class ApiObjectRef(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            display_name (str): DisplayName of the object, unique within a Namespace for scoped objects.. [optional]  # noqa: E501
             kind (str): Kind represents the type of the API object.. [optional]  # noqa: E501
             name (str): Name of the object, unique within a Namespace for scoped objects.. [optional]  # noqa: E501
             namespace (str): Namespace of the object, for scoped objects.. [optional]  # noqa: E501

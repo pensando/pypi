@@ -29,10 +29,10 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+    from pensando_dss.psm.model.workload_propagation_status import WorkloadPropagationStatus
     from pensando_dss.psm.model.workload_workload_intf_status import WorkloadWorkloadIntfStatus
     from pensando_dss.psm.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
-    globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
+    globals()['WorkloadPropagationStatus'] = WorkloadPropagationStatus
     globals()['WorkloadWorkloadIntfStatus'] = WorkloadWorkloadIntfStatus
     globals()['WorkloadWorkloadMigrationStatus'] = WorkloadWorkloadMigrationStatus
 
@@ -87,7 +87,7 @@ class WorkloadWorkloadStatus(ModelNormal):
             'interfaces': ([WorkloadWorkloadIntfStatus],),  # noqa: E501
             'migration_status': (WorkloadWorkloadMigrationStatus,),  # noqa: E501
             'mirror_sessions': ([str],),  # noqa: E501
-            'propagation_status': (SecurityPropagationStatus,),  # noqa: E501
+            'propagation_status': (WorkloadPropagationStatus,),  # noqa: E501
             'workload_groups': ([str],),  # noqa: E501
         }
 
@@ -155,7 +155,7 @@ class WorkloadWorkloadStatus(ModelNormal):
             interfaces ([WorkloadWorkloadIntfStatus]): Status of all interfaces in the Workload identified by Primary MAC.. [optional]  # noqa: E501
             migration_status (WorkloadWorkloadMigrationStatus): [optional]  # noqa: E501
             mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this workload.. [optional]  # noqa: E501
-            propagation_status (SecurityPropagationStatus): [optional]  # noqa: E501
+            propagation_status (WorkloadPropagationStatus): [optional]  # noqa: E501
             workload_groups ([str]): WorkloadGroups list of workload groups associated with this workload.. [optional]  # noqa: E501
         """
 

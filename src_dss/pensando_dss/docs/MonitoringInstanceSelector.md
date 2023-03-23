@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **kind** | **str** | Kind of the instances to be selected using names/label. | [optional] 
 **labels** | [**LabelsSelector**](LabelsSelector.md) |  | [optional] 
 **names** | **[str]** | List of names/reporter IDs. | [optional] 
+**rule_names** | **[str]** | List of rule-names that the policy applies to when given. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

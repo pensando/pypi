@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **api_version** | **str** |  | [optional] 
 **creation_time** | **datetime** |  | [optional] 
+**display_name** | **str** | Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional] 
 **generation_id** | **str** |  | [optional] 
 **kind** | **str** |  | [optional] 
 **labels** | **{str: (str,)}** |  | [optional] 

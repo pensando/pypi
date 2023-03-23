@@ -57,6 +57,13 @@ class ApiObjectMeta(ModelNormal):
     }
 
     validations = {
+        ('display_name',): {
+            'max_length': 64,
+            'min_length': 2,
+            'regex': {
+                'pattern': r'^[a-zA-Z0-9][\w\-\.]*[a-zA-Z0-9]$',  # noqa: E501
+            },
+        },
         ('name',): {
             'max_length': 64,
         },
@@ -84,6 +91,7 @@ class ApiObjectMeta(ModelNormal):
         """
         return {
             'creation_time': (datetime,),  # noqa: E501
+            'display_name': (str,),  # noqa: E501
             'generation_id': (str,),  # noqa: E501
             'labels': ({str: (str,)},),  # noqa: E501
             'mod_time': (datetime,),  # noqa: E501
@@ -102,6 +110,7 @@ class ApiObjectMeta(ModelNormal):
 
     attribute_map = {
         'creation_time': 'creation-time',  # noqa: E501
+        'display_name': 'display-name',  # noqa: E501
         'generation_id': 'generation-id',  # noqa: E501
         'labels': 'labels',  # noqa: E501
         'mod_time': 'mod-time',  # noqa: E501
@@ -160,6 +169,7 @@ class ApiObjectMeta(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             creation_time (datetime): System generated and updated, not updatable by user.. [optional]  # noqa: E501
+            display_name (str): If setting the DisplayName, please leave the Name field empty. The Name field will be set to the Object UUID if the DisplayName is set If the Name field is set, the DisplayName is expected to be empty, both fields are mutually exclusive The DisplayName is expected to be unique among Objects of the same (kind, tenant). Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]  # noqa: E501
             generation_id (str): This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user.. [optional]  # noqa: E501
             labels ({str: (str,)}): [optional]  # noqa: E501
             mod_time (datetime): System generated and updated, not updatable by user.. [optional]  # noqa: E501

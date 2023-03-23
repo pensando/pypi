@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **mac_address** | **str** | MACAddress contains the MAC address of the interface as seen by the workload. | [optional] 
 **micro_seg_vlan** | **int** | Micro-segmentation vlan used by this interface. | [optional] 
 **network** | **str** | Network this interface belongs to. | [optional] 
+**pending_workload_groups** | **[str]** | WorkloadGroups list of workload groups unassociated with this workload. | [optional] 
 **vni** | **int** | vni is network identifier when the interface uses tunneling protocols, 0 &#x3D; not used. | [optional] 
+**workload_groups** | **[str]** | WorkloadGroups list of workload groups associated with this workload. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

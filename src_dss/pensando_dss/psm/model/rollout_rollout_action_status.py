@@ -64,8 +64,8 @@ class RolloutRolloutActionStatus(ModelNormal):
             'DEADLINE-EXCEEDED': "deadline-exceeded",
             'PRECHECK-IN-PROGRESS': "precheck-in-progress",
             'SCHEDULED-FOR-RETRY': "scheduled-for-retry",
-            'ETCD-DOWNGRADE-IN-PROGRESS': "etcd-downgrade-in-progress",
-            'ELASTIC-DOWNGRADE-IN-PROGRESS': "elastic-downgrade-in-progress",
+            'ETCD-ROLLOUT-IN-PROGRESS': "etcd-rollout-in-progress",
+            'ELASTIC-ROLLOUT-IN-PROGRESS': "elastic-rollout-in-progress",
         },
     }
 

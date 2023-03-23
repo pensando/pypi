@@ -58,6 +58,16 @@ class FwlogFwLogQuery(ModelNormal):
             'ALL': "all",
             'IPSECPROTECTED': "ipsecprotected",
         },
+        ('filter_out_duplicates',): {
+            'DO-NOT-FILTER': "do-not-filter",
+            'SRCIP-DESTIP-DESTPORT-PROTO': "srcip-destip-destport-proto",
+        },
+        ('flow_action',): {
+            'ANY': "any",
+            'FLOW_CREATE': "flow_create",
+            'FLOW_DELETE': "flow_delete",
+            'FLOW_UPDATE': "flow_update",
+        },
         ('scroll_action',): {
             'NONE': "none",
             'REFRESH': "refresh",
@@ -71,7 +81,7 @@ class FwlogFwLogQuery(ModelNormal):
 
     validations = {
         ('max_results',): {
-            'inclusive_maximum': 8192,
+            'inclusive_maximum': 16000,
             'inclusive_minimum': 0,
         },
     }
@@ -98,6 +108,8 @@ class FwlogFwLogQuery(ModelNormal):
             'destination_ports': ([int],),  # noqa: E501
             'encryption_status': (str,),  # noqa: E501
             'end_time': (datetime,),  # noqa: E501
+            'filter_out_duplicates': (str,),  # noqa: E501
+            'flow_action': (str,),  # noqa: E501
             'max_results': (int,),  # noqa: E501
             'policy_names': ([str],),  # noqa: E501
             'protocols': ([str],),  # noqa: E501
@@ -127,6 +139,8 @@ class FwlogFwLogQuery(ModelNormal):
         'destination_ports': 'destination-ports',  # noqa: E501
         'encryption_status': 'encryption-status',  # noqa: E501
         'end_time': 'end-time',  # noqa: E501
+        'filter_out_duplicates': 'filter-out-duplicates',  # noqa: E501
+        'flow_action': 'flow-action',  # noqa: E501
         'max_results': 'max-results',  # noqa: E501
         'policy_names': 'policy-names',  # noqa: E501
         'protocols': 'protocols',  # noqa: E501
@@ -196,7 +210,9 @@ class FwlogFwLogQuery(ModelNormal):
             destination_ports ([int]): OR of destination ports to be matched. Only one port can be specified and if present, destination IP must also be specified. Value should be between 0 and 65535.. [optional]  # noqa: E501
             encryption_status (str): if set, search logs that match the specified encryption status.. [optional] if omitted the server will use the default value of "all"  # noqa: E501
             end_time (datetime): EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z.. [optional]  # noqa: E501
-            max_results (int): MaxResults is the max-count of search results Default value is 50 and valid range is 0..8192. Value should be between 0 and 8192.. [optional] if omitted the server will use the default value of 50  # noqa: E501
+            filter_out_duplicates (str): if set, flows in query response will be de-duplicated based on FilterOutDuplicatesType.. [optional] if omitted the server will use the default value of "do-not-filter"  # noqa: E501
+            flow_action (str): if set, search logs that match the specified flow action.. [optional] if omitted the server will use the default value of "any"  # noqa: E501
+            max_results (int): MaxResults is the max-count of search results Default value is 50 and valid range is 0..16000. Value should be between 0 and 16000.. [optional] if omitted the server will use the default value of 50  # noqa: E501
             policy_names ([str]): OR of policy names to be matched. Only one policy name is allowed.. [optional]  # noqa: E501
             protocols ([str]): OR of protocols to be matched. Only one protocol can be specified and can only be specified if either source IP or destination IP is present.. [optional]  # noqa: E501
             reporter_ids ([str]): OR of reporter names to be matched. Only one reporter ID can be specified.. [optional]  # noqa: E501

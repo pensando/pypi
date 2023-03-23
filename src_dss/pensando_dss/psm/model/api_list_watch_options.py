@@ -64,10 +64,19 @@ class ApiListWatchOptions(ModelNormal):
             'BY-CREATION-TIME-REVERSE': "by-creation-time-reverse",
             'BY-MOD-TIME': "by-mod-time",
             'BY-MOD-TIME-REVERSE': "by-mod-time-reverse",
+            'BY-DISPLAY-NAME': "by-display-name",
+            'BY-DISPLAY-NAME-REVERSE': "by-display-name-reverse",
         },
     }
 
     validations = {
+        ('display_name',): {
+            'max_length': 64,
+            'min_length': 2,
+            'regex': {
+                'pattern': r'^[a-zA-Z0-9][\w\-\.]*[a-zA-Z0-9]$',  # noqa: E501
+            },
+        },
         ('name',): {
             'max_length': 64,
         },
@@ -95,6 +104,7 @@ class ApiListWatchOptions(ModelNormal):
         """
         return {
             'creation_time': (datetime,),  # noqa: E501
+            'display_name': (str,),  # noqa: E501
             'field_change_selector': ([str],),  # noqa: E501
             'field_selector': (str,),  # noqa: E501
             '_from': (int,),  # noqa: E501
@@ -120,6 +130,7 @@ class ApiListWatchOptions(ModelNormal):
 
     attribute_map = {
         'creation_time': 'creation-time',  # noqa: E501
+        'display_name': 'display-name',  # noqa: E501
         'field_change_selector': 'field-change-selector',  # noqa: E501
         'field_selector': 'field-selector',  # noqa: E501
         '_from': 'from',  # noqa: E501
@@ -185,6 +196,7 @@ class ApiListWatchOptions(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             creation_time (datetime): [optional]  # noqa: E501
+            display_name (str): Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]  # noqa: E501
             field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]  # noqa: E501
             field_selector (str): FieldSelector to select on field values in list or watch results.. [optional]  # noqa: E501
             _from (int): From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From = 0, the server will attempt to return all the results in the list without pagination.. [optional]  # noqa: E501

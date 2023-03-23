@@ -10,12 +10,14 @@
 # sys.setrecursionlimit(n)
 
 from pensando_dss.psm.model.api_agg_watch_options import ApiAggWatchOptions
+from pensando_dss.psm.model.api_dse_status import ApiDSEStatus
 from pensando_dss.psm.model.api_kind_watch_options import ApiKindWatchOptions
 from pensando_dss.psm.model.api_label import ApiLabel
 from pensando_dss.psm.model.api_list_meta import ApiListMeta
 from pensando_dss.psm.model.api_list_watch_options import ApiListWatchOptions
 from pensando_dss.psm.model.api_object_meta import ApiObjectMeta
 from pensando_dss.psm.model.api_object_ref import ApiObjectRef
+from pensando_dss.psm.model.api_propagation_status import ApiPropagationStatus
 from pensando_dss.psm.model.api_status import ApiStatus
 from pensando_dss.psm.model.api_status_result import ApiStatusResult
 from pensando_dss.psm.model.api_timestamp import ApiTimestamp
@@ -27,8 +29,6 @@ from pensando_dss.psm.model.cluster_ip_config import ClusterIPConfig
 from pensando_dss.psm.model.googleprotobuf_any import GoogleprotobufAny
 from pensando_dss.psm.model.labels_requirement import LabelsRequirement
 from pensando_dss.psm.model.labels_selector import LabelsSelector
-from pensando_dss.psm.model.security_dsc_status import SecurityDSCStatus
-from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
 from pensando_dss.psm.model.workload_auto_msg_endpoint_watch_helper import WorkloadAutoMsgEndpointWatchHelper
 from pensando_dss.psm.model.workload_auto_msg_endpoint_watch_helper_watch_event import WorkloadAutoMsgEndpointWatchHelperWatchEvent
 from pensando_dss.psm.model.workload_auto_msg_workload_group_watch_helper import WorkloadAutoMsgWorkloadGroupWatchHelper
@@ -38,11 +38,13 @@ from pensando_dss.psm.model.workload_auto_msg_workload_watch_helper_watch_event 
 from pensando_dss.psm.model.workload_endpoint import WorkloadEndpoint
 from pensando_dss.psm.model.workload_endpoint_list import WorkloadEndpointList
 from pensando_dss.psm.model.workload_endpoint_migration_status import WorkloadEndpointMigrationStatus
+from pensando_dss.psm.model.workload_endpoint_prop_status import WorkloadEndpointPropStatus
 from pensando_dss.psm.model.workload_endpoint_spec import WorkloadEndpointSpec
 from pensando_dss.psm.model.workload_endpoint_status import WorkloadEndpointStatus
 from pensando_dss.psm.model.workload_ip_block import WorkloadIPBlock
 from pensando_dss.psm.model.workload_interface_migration_status import WorkloadInterfaceMigrationStatus
 from pensando_dss.psm.model.workload_migration_source import WorkloadMigrationSource
+from pensando_dss.psm.model.workload_propagation_status import WorkloadPropagationStatus
 from pensando_dss.psm.model.workload_workload import WorkloadWorkload
 from pensando_dss.psm.model.workload_workload_group import WorkloadWorkloadGroup
 from pensando_dss.psm.model.workload_workload_group_list import WorkloadWorkloadGroupList

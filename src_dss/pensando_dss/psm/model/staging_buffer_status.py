@@ -85,6 +85,7 @@ class StagingBufferStatus(ModelNormal):
         """
         lazy_import()
         return {
+            'buffer_size': (int,),  # noqa: E501
             'errors': ([StagingValidationError],),  # noqa: E501
             'items': ([StagingItem],),  # noqa: E501
             'validation_result': (str,),  # noqa: E501
@@ -96,6 +97,7 @@ class StagingBufferStatus(ModelNormal):
 
 
     attribute_map = {
+        'buffer_size': 'buffer-size',  # noqa: E501
         'errors': 'errors',  # noqa: E501
         'items': 'items',  # noqa: E501
         'validation_result': 'validation-result',  # noqa: E501
@@ -147,6 +149,7 @@ class StagingBufferStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            buffer_size (int): BufferSize is the current size of all the items in the buffer in bytes.. [optional]  # noqa: E501
             errors ([StagingValidationError]): [optional]  # noqa: E501
             items ([StagingItem]): [optional]  # noqa: E501
             validation_result (str): [optional] if omitted the server will use the default value of "success"  # noqa: E501

@@ -59,6 +59,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         list=ApiListWatchOptions(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             field_change_selector=[
                 "field_change_selector_example",
             ],

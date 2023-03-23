@@ -86,6 +86,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -132,7 +133,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -146,33 +153,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -257,6 +271,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -303,7 +318,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -317,33 +338,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -428,6 +456,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -474,7 +503,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -488,33 +523,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -598,6 +640,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -644,7 +687,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -658,33 +707,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -768,6 +824,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -801,7 +858,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
         ),
         status=WorkloadWorkloadGroupStatus(
-            id="id_example",
+            id=1,
         ),
     ) # WorkloadWorkloadGroup | 
 
@@ -885,6 +942,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -918,7 +976,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
         ),
         status=WorkloadWorkloadGroupStatus(
-            id="id_example",
+            id=1,
         ),
     ) # WorkloadWorkloadGroup | 
 
@@ -1306,6 +1364,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1352,7 +1411,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -1366,33 +1431,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -1477,6 +1549,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1523,7 +1596,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -1537,33 +1616,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -1648,6 +1734,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1694,7 +1781,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -1708,33 +1801,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -1819,6 +1919,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1865,7 +1966,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -1879,33 +1986,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -2155,9 +2269,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_tenant = "O.Tenant_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    status_mirror_sessions = [
+        "status.mirror-sessions_example",
+    ] # [str] | MirrorSessions list of mirror sessions enabled on this workload. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2176,7 +2290,7 @@ Name | Type | Description  | Notes
  **o_tenant** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **status_mirror_sessions** | **[str]**| MirrorSessions list of mirror sessions enabled on this workload. | [optional]
 
 ### Return type
 
@@ -2239,9 +2353,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    status_mirror_sessions = [
+        "status.mirror-sessions_example",
+    ] # [str] | MirrorSessions list of mirror sessions enabled on this workload. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2260,7 +2374,7 @@ Name | Type | Description  | Notes
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **status_mirror_sessions** | **[str]**| MirrorSessions list of mirror sessions enabled on this workload. | [optional]
 
 ### Return type
 
@@ -2485,6 +2599,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -2579,6 +2694,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -2673,6 +2789,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -2767,6 +2884,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -3360,6 +3478,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -3406,7 +3525,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -3420,33 +3545,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -3531,6 +3663,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -3577,7 +3710,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -3591,33 +3730,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -3702,6 +3848,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -3748,7 +3895,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -3762,33 +3915,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -3873,6 +4033,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -3919,7 +4080,13 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mac_address="mac_address_example",
                     micro_seg_vlan=1,
                     network="network_example",
+                    pending_workload_groups=[
+                        "pending_workload_groups_example",
+                    ],
                     vni=1,
+                    workload_groups=[
+                        "workload_groups_example",
+                    ],
                 ),
             ],
             migration_status=WorkloadWorkloadMigrationStatus(
@@ -3933,33 +4100,40 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         mac_address="mac_address_example",
                     ),
                 ],
+                from_host_name="from_host_name_example",
                 migration_id="migration_id_example",
+                migration_transaction_id=1,
                 stage="migration-none",
                 started_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
                 status="none",
+                to_host_name="to_host_name_example",
             ),
             mirror_sessions=[
                 "mirror_sessions_example",
             ],
-            propagation_status=SecurityPropagationStatus(
-                dsc_status=[
-                    SecurityDSCStatus(
-                        dsc_id="dsc_id_example",
-                        dsc_info_status="dsc_info_status_example",
+            propagation_status=WorkloadPropagationStatus(
+                endpoint_prop_status=[
+                    WorkloadEndpointPropStatus(
+                        dse_status=[
+                            ApiDSEStatus(
+                                dse_id="dse_id_example",
+                                dse_info_status="dse_info_status_example",
+                            ),
+                        ],
+                        generation_id="generation_id_example",
+                        mac_address="mac_address_example",
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
                     ),
                 ],
-                generation_id="generation_id_example",
-                min_version="min_version_example",
-                pending=1,
-                pending_dscs=[
-                    "pending_dscs_example",
-                ],
                 status="status_example",
-                updated=1,
             ),
-            workload_groups=[
-                "workload_groups_example",
-            ],
+            workload_groups=[],
         ),
     ) # WorkloadWorkload | 
 
@@ -4044,6 +4218,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -4077,7 +4252,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
         ),
         status=WorkloadWorkloadGroupStatus(
-            id="id_example",
+            id=1,
         ),
     ) # WorkloadWorkloadGroup | 
 
@@ -4162,6 +4337,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -4195,7 +4371,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             ],
         ),
         status=WorkloadWorkloadGroupStatus(
-            id="id_example",
+            id=1,
         ),
     ) # WorkloadWorkloadGroup | 
 

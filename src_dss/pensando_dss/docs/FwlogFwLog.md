@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **meta** | [**ApiObjectMeta**](ApiObjectMeta.md) |  | [optional] 
 **packets_received** | **str** | Packets received represents the number of packets received at the source from the destination. | [optional] 
 **packets_sent** | **str** | Packets sent represents the number of packets sent from the source to the destination. | [optional] 
+**policy_display_name** | **str** | ReporterName represents the display name of the security policy. | [optional] 
 **policy_name** | **str** | policy name. | [optional] 
 **protocol** | **str** | Protocol,. | [optional] 
 **reporter_id** | **str** | Reporter ID. | [optional] 

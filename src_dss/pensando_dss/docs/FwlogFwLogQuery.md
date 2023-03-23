@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **destination_ports** | **[int]** | OR of destination ports to be matched. Only one port can be specified and if present, destination IP must also be specified. Value should be between 0 and 65535. | [optional] 
 **encryption_status** | **str** | if set, search logs that match the specified encryption status. | [optional]  if omitted the server will use the default value of "all"
 **end_time** | **datetime** | EndTime selects all logs with timestamp less than the EndTime, example 2018-09-18T00:12:00Z. | [optional] 
-**max_results** | **int** | MaxResults is the max-count of search results Default value is 50 and valid range is 0..8192. Value should be between 0 and 8192. | [optional]  if omitted the server will use the default value of 50
+**filter_out_duplicates** | **str** | if set, flows in query response will be de-duplicated based on FilterOutDuplicatesType. | [optional]  if omitted the server will use the default value of "do-not-filter"
+**flow_action** | **str** | if set, search logs that match the specified flow action. | [optional]  if omitted the server will use the default value of "any"
+**max_results** | **int** | MaxResults is the max-count of search results Default value is 50 and valid range is 0..16000. Value should be between 0 and 16000. | [optional]  if omitted the server will use the default value of 50
 **policy_names** | **[str]** | OR of policy names to be matched. Only one policy name is allowed. | [optional] 
 **protocols** | **[str]** | OR of protocols to be matched. Only one protocol can be specified and can only be specified if either source IP or destination IP is present. | [optional] 
 **reporter_ids** | **[str]** | OR of reporter names to be matched. Only one reporter ID can be specified. | [optional] 

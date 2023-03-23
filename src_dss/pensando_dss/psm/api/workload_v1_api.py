@@ -2050,7 +2050,7 @@ class WorkloadV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this workload.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2113,7 +2113,7 @@ class WorkloadV1Api(object):
                     'o_tenant',
                     't_kind',
                     'meta_creation_time',
-                    'propagation_status_pending_dscs',
+                    'status_mirror_sessions',
                 ],
                 'required': [
                     'o_tenant',
@@ -2137,23 +2137,23 @@ class WorkloadV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'propagation_status_pending_dscs':
+                    'status_mirror_sessions':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'status_mirror_sessions': 'status.mirror-sessions',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'status_mirror_sessions': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'status_mirror_sessions': 'csv',
                 }
             },
             headers_map={
@@ -2185,7 +2185,7 @@ class WorkloadV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                status_mirror_sessions ([str]): MirrorSessions list of mirror sessions enabled on this workload.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2248,7 +2248,7 @@ class WorkloadV1Api(object):
                     'o_name',
                     't_kind',
                     'meta_creation_time',
-                    'propagation_status_pending_dscs',
+                    'status_mirror_sessions',
                 ],
                 'required': [
                     'o_name',
@@ -2272,23 +2272,23 @@ class WorkloadV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'propagation_status_pending_dscs':
+                    'status_mirror_sessions':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'status_mirror_sessions': 'status.mirror-sessions',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'status_mirror_sessions': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'status_mirror_sessions': 'csv',
                 }
             },
             headers_map={

@@ -57,6 +57,13 @@ class ApiLabel(ModelNormal):
     }
 
     validations = {
+        ('display_name',): {
+            'max_length': 64,
+            'min_length': 2,
+            'regex': {
+                'pattern': r'^[a-zA-Z0-9][\w\-\.]*[a-zA-Z0-9]$',  # noqa: E501
+            },
+        },
         ('name',): {
             'max_length': 64,
             'min_length': 2,
@@ -97,6 +104,7 @@ class ApiLabel(ModelNormal):
         return {
             'api_version': (str,),  # noqa: E501
             'creation_time': (datetime,),  # noqa: E501
+            'display_name': (str,),  # noqa: E501
             'generation_id': (str,),  # noqa: E501
             'kind': (str,),  # noqa: E501
             'labels': ({str: (str,)},),  # noqa: E501
@@ -117,6 +125,7 @@ class ApiLabel(ModelNormal):
     attribute_map = {
         'api_version': 'api-version',  # noqa: E501
         'creation_time': 'creation-time',  # noqa: E501
+        'display_name': 'display-name',  # noqa: E501
         'generation_id': 'generation-id',  # noqa: E501
         'kind': 'kind',  # noqa: E501
         'labels': 'labels',  # noqa: E501
@@ -177,6 +186,7 @@ class ApiLabel(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             api_version (str): [optional]  # noqa: E501
             creation_time (datetime): [optional]  # noqa: E501
+            display_name (str): Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]  # noqa: E501
             generation_id (str): [optional]  # noqa: E501
             kind (str): [optional]  # noqa: E501
             labels ({str: (str,)}): [optional]  # noqa: E501

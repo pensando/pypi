@@ -134,6 +134,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -305,6 +306,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -476,6 +478,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -653,6 +656,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -830,6 +834,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -952,6 +957,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1073,6 +1079,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1255,6 +1262,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1381,6 +1389,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1476,6 +1485,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1635,6 +1645,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1794,6 +1805,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -1926,6 +1938,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -4105,6 +4118,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4199,6 +4213,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4293,6 +4308,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4387,6 +4403,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4481,6 +4498,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4575,6 +4593,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4669,6 +4688,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4763,6 +4783,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4857,6 +4878,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -4951,6 +4973,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -5045,6 +5068,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -5139,6 +5163,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = ApiLabel(
         api_version="api_version_example",
         creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
         generation_id="generation_id_example",
         kind="kind_example",
         labels={
@@ -6394,6 +6419,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -6566,6 +6592,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -6738,6 +6765,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -6916,6 +6944,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7094,6 +7123,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7269,6 +7299,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7392,6 +7423,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7515,6 +7547,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7667,6 +7700,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7827,6 +7861,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -7987,6 +8022,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",
@@ -8120,6 +8156,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         kind="kind_example",
         meta=ApiObjectMeta(
             creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
             generation_id="generation_id_example",
             labels={
                 "key": "key_example",

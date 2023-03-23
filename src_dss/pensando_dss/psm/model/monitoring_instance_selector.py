@@ -82,6 +82,7 @@ class MonitoringInstanceSelector(ModelNormal):
             'kind': (str,),  # noqa: E501
             'labels': (LabelsSelector,),  # noqa: E501
             'names': ([str],),  # noqa: E501
+            'rule_names': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -93,6 +94,7 @@ class MonitoringInstanceSelector(ModelNormal):
         'kind': 'kind',  # noqa: E501
         'labels': 'labels',  # noqa: E501
         'names': 'names',  # noqa: E501
+        'rule_names': 'rule-names',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -144,6 +146,7 @@ class MonitoringInstanceSelector(ModelNormal):
             kind (str): Kind of the instances to be selected using names/label.. [optional]  # noqa: E501
             labels (LabelsSelector): [optional]  # noqa: E501
             names ([str]): List of names/reporter IDs.. [optional]  # noqa: E501
+            rule_names ([str]): List of rule-names that the policy applies to when given.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **interfaces** | [**[WorkloadWorkloadIntfStatus]**](WorkloadWorkloadIntfStatus.md) | Status of all interfaces in the Workload identified by Primary MAC. | [optional] 
 **migration_status** | [**WorkloadWorkloadMigrationStatus**](WorkloadWorkloadMigrationStatus.md) |  | [optional] 
 **mirror_sessions** | **[str]** | MirrorSessions list of mirror sessions enabled on this workload. | [optional] 
-**propagation_status** | [**SecurityPropagationStatus**](SecurityPropagationStatus.md) |  | [optional] 
+**propagation_status** | [**WorkloadPropagationStatus**](WorkloadPropagationStatus.md) |  | [optional] 
 **workload_groups** | **[str]** | WorkloadGroups list of workload groups associated with this workload. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

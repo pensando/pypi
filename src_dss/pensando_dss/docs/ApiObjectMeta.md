@@ -5,6 +5,7 @@ ObjectMeta contains metadata that all objects stored in kvstore must have.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **creation_time** | **datetime** | System generated and updated, not updatable by user. | [optional] 
+**display_name** | **str** | If setting the DisplayName, please leave the Name field empty. The Name field will be set to the Object UUID if the DisplayName is set If the Name field is set, the DisplayName is expected to be empty, both fields are mutually exclusive The DisplayName is expected to be unique among Objects of the same (kind, tenant). Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional] 
 **generation_id** | **str** | This is incremented anytime there is an update to the user intent, including Spec update and any update to ObjectMeta. System generated and updated, not updatable by user. | [optional] 
 **labels** | **{str: (str,)}** |  | [optional] 
 **mod_time** | **datetime** | System generated and updated, not updatable by user. | [optional] 

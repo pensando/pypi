@@ -4,6 +4,7 @@ ObjectRef contains identifying information about an object.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**display_name** | **str** | DisplayName of the object, unique within a Namespace for scoped objects. | [optional] 
 **kind** | **str** | Kind represents the type of the API object. | [optional] 
 **name** | **str** | Name of the object, unique within a Namespace for scoped objects. | [optional] 
 **namespace** | **str** | Namespace of the object, for scoped objects. | [optional] 

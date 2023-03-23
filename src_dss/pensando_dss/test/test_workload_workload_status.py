@@ -12,10 +12,10 @@ import sys
 import unittest
 
 import psm
-from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+from pensando_dss.psm.model.workload_propagation_status import WorkloadPropagationStatus
 from pensando_dss.psm.model.workload_workload_intf_status import WorkloadWorkloadIntfStatus
 from pensando_dss.psm.model.workload_workload_migration_status import WorkloadWorkloadMigrationStatus
-globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
+globals()['WorkloadPropagationStatus'] = WorkloadPropagationStatus
 globals()['WorkloadWorkloadIntfStatus'] = WorkloadWorkloadIntfStatus
 globals()['WorkloadWorkloadMigrationStatus'] = WorkloadWorkloadMigrationStatus
 from pensando_dss.psm.psm.model.workload_workload_status import WorkloadWorkloadStatus

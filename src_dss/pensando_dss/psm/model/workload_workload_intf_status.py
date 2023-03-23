@@ -81,7 +81,9 @@ class WorkloadWorkloadIntfStatus(ModelNormal):
             'mac_address': (str,),  # noqa: E501
             'micro_seg_vlan': (int,),  # noqa: E501
             'network': (str,),  # noqa: E501
+            'pending_workload_groups': ([str],),  # noqa: E501
             'vni': (int,),  # noqa: E501
+            'workload_groups': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -97,7 +99,9 @@ class WorkloadWorkloadIntfStatus(ModelNormal):
         'mac_address': 'mac-address',  # noqa: E501
         'micro_seg_vlan': 'micro-seg-vlan',  # noqa: E501
         'network': 'network',  # noqa: E501
+        'pending_workload_groups': 'pending-workload-groups',  # noqa: E501
         'vni': 'vni',  # noqa: E501
+        'workload_groups': 'workload-groups',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -153,7 +157,9 @@ class WorkloadWorkloadIntfStatus(ModelNormal):
             mac_address (str): MACAddress contains the MAC address of the interface as seen by the workload.. [optional]  # noqa: E501
             micro_seg_vlan (int): Micro-segmentation vlan used by this interface.. [optional]  # noqa: E501
             network (str): Network this interface belongs to.. [optional]  # noqa: E501
+            pending_workload_groups ([str]): WorkloadGroups list of workload groups unassociated with this workload.. [optional]  # noqa: E501
             vni (int): vni is network identifier when the interface uses tunneling protocols, 0 = not used.. [optional]  # noqa: E501
+            workload_groups ([str]): WorkloadGroups list of workload groups associated with this workload.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

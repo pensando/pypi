@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **creation_time** | **datetime** |  | [optional] 
+**display_name** | **str** | Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional] 
 **field_change_selector** | **[str]** | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional] 
 **field_selector** | **str** | FieldSelector to select on field values in list or watch results. | [optional] 
 **_from** | **int** | From represents the start index number (1 based - first object starts from index 1), of the results list. The results returned would be in the range [from ... (from + (max-results - 1))]. If From &#x3D; 0, the server will attempt to return all the results in the list without pagination. | [optional] 
