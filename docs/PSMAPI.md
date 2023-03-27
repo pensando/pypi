@@ -1,18 +1,18 @@
 # AMD Pensando PSM API Overview
-The AMD Pensando PSM is the central management component of the AMD Pensando Distributed Services Platform. 
-It provides a programmable, secure microservice-based infrastructure to control global policies and distributed services in a data center, such as Network, Security and  Storage services.
-The PSM platform consists of an odd number of quorum controller nodes (e.g. 3, 5, 7) that provide consistent services to thousands of physical devices utilizing AMD Pensando Distributed Services Cards (DSCs).  
+The AMD Pensando Policy and Services Manager (PSM) is the central management component of the AMD Pensando Distributed Services Platform. 
+It provides a programmable, secure microservices-based infrastructure to control global policies and distributed services in a data center, such as network, security and storage services.
+The PSM platform consists of either one or three quorum controller nodes that provide consistent services to a number of physical devices utilizing AMD Pensando data processing units (DPUs).  
 The following figure is an architectural diagram of the PSM platform. 
 ![](../img/PSM_Architecture.png)
 
 PSM nodes run as virtual appliances, deployed as OVA or QCOW2 images.  
 However, the physical nodes hosting the VMs should run on separate physical servers for greater fault tolerance. 
-The key-value (KV) store is based on etcd and distributed across all PSM nodes.  Maintaining low latency between the nodes is critical to cluster performance.  
-All PSM components use gRPC with TLS to communicate with DSCs and other PSM nodes.
+The key-value (KV) store is based on `etcd` and distributed across all PSM nodes.  Maintaining low latency between the nodes is critical to cluster performance.  
+All PSM components use gRPC with TLS to communicate with DPU-based devices and other PSM nodes.
 In the PSM, the API gateways are distributed and run on all PSM nodes.  
 At any point, there is a single instance of the API Server running.  
 The API Server is highly available and will be restarted elsewhere by Kubernetes in case of a node failure.  
-All cluster services such as Network, Storage, and Controllers, including the API Server, are distributed on the PSM Nodes, 
+All cluster services such as network, storage, and controllers, including the API Server, are distributed on the PSM nodes, 
 and are managed and scheduled by the Kubernetes Controller. 
 
 The PSM REST API is asynchronous in nature.  
