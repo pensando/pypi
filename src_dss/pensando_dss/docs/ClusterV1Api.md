@@ -11,6 +11,8 @@ Method | HTTP request | Description
 [**add_host**](ClusterV1Api.md#add_host) | **POST** /configs/cluster/v1/hosts | Create Host object
 [**add_license**](ClusterV1Api.md#add_license) | **POST** /configs/cluster/v1/licenses | Create License object
 [**add_node**](ClusterV1Api.md#add_node) | **POST** /configs/cluster/v1/nodes | Create Node object
+[**add_policy_distribution_target**](ClusterV1Api.md#add_policy_distribution_target) | **POST** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets | Create PolicyDistributionTarget object
+[**add_policy_distribution_target1**](ClusterV1Api.md#add_policy_distribution_target1) | **POST** /configs/cluster/v1/policydistributiontargets | Create PolicyDistributionTarget object
 [**add_tenant**](ClusterV1Api.md#add_tenant) | **POST** /configs/cluster/v1/tenants | Create Tenant object
 [**auth_bootstrap_complete**](ClusterV1Api.md#auth_bootstrap_complete) | **POST** /configs/cluster/v1/cluster/AuthBootstrapComplete | Mark bootstrapping as complete for the cluster
 [**delete_configuration_snapshot**](ClusterV1Api.md#delete_configuration_snapshot) | **DELETE** /configs/cluster/v1/config-snapshot | Delete ConfigurationSnapshot object
@@ -19,6 +21,8 @@ Method | HTTP request | Description
 [**delete_dsc_profile**](ClusterV1Api.md#delete_dsc_profile) | **DELETE** /configs/cluster/v1/dscprofiles/{O.Name} | Delete DSCProfile object
 [**delete_host**](ClusterV1Api.md#delete_host) | **DELETE** /configs/cluster/v1/hosts/{O.Name} | Delete Host object
 [**delete_node**](ClusterV1Api.md#delete_node) | **DELETE** /configs/cluster/v1/nodes/{O.Name} | Delete Node object
+[**delete_policy_distribution_target**](ClusterV1Api.md#delete_policy_distribution_target) | **DELETE** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name} | Delete PolicyDistributionTarget object
+[**delete_policy_distribution_target1**](ClusterV1Api.md#delete_policy_distribution_target1) | **DELETE** /configs/cluster/v1/policydistributiontargets/{O.Name} | Delete PolicyDistributionTarget object
 [**delete_tenant**](ClusterV1Api.md#delete_tenant) | **DELETE** /configs/cluster/v1/tenants/{O.Name} | Delete Tenant object
 [**get_cluster**](ClusterV1Api.md#get_cluster) | **GET** /configs/cluster/v1/cluster | Get Cluster object
 [**get_cluster_profile**](ClusterV1Api.md#get_cluster_profile) | **GET** /configs/cluster/v1/clusterprofile | Get ClusterProfile object
@@ -29,6 +33,8 @@ Method | HTTP request | Description
 [**get_host**](ClusterV1Api.md#get_host) | **GET** /configs/cluster/v1/hosts/{O.Name} | Get Host object
 [**get_license**](ClusterV1Api.md#get_license) | **GET** /configs/cluster/v1/licenses | Get License object
 [**get_node**](ClusterV1Api.md#get_node) | **GET** /configs/cluster/v1/nodes/{O.Name} | Get Node object
+[**get_policy_distribution_target**](ClusterV1Api.md#get_policy_distribution_target) | **GET** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name} | Get PolicyDistributionTarget object
+[**get_policy_distribution_target1**](ClusterV1Api.md#get_policy_distribution_target1) | **GET** /configs/cluster/v1/policydistributiontargets/{O.Name} | Get PolicyDistributionTarget object
 [**get_snapshot_restore**](ClusterV1Api.md#get_snapshot_restore) | **GET** /configs/cluster/v1/config-restore | Get SnapshotRestore object
 [**get_tenant**](ClusterV1Api.md#get_tenant) | **GET** /configs/cluster/v1/tenants/{O.Name} | Get Tenant object
 [**get_version**](ClusterV1Api.md#get_version) | **GET** /configs/cluster/v1/version | Get Version object
@@ -41,12 +47,16 @@ Method | HTTP request | Description
 [**label_host**](ClusterV1Api.md#label_host) | **POST** /configs/cluster/v1/hosts/{O.Name}/label | Label Host object
 [**label_license**](ClusterV1Api.md#label_license) | **POST** /configs/cluster/v1/licenses/label | Label License object
 [**label_node**](ClusterV1Api.md#label_node) | **POST** /configs/cluster/v1/nodes/{O.Name}/label | Label Node object
+[**label_policy_distribution_target**](ClusterV1Api.md#label_policy_distribution_target) | **POST** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name}/label | Label PolicyDistributionTarget object
+[**label_policy_distribution_target1**](ClusterV1Api.md#label_policy_distribution_target1) | **POST** /configs/cluster/v1/policydistributiontargets/{O.Name}/label | Label PolicyDistributionTarget object
 [**label_tenant**](ClusterV1Api.md#label_tenant) | **POST** /configs/cluster/v1/tenants/{O.Name}/label | Label Tenant object
 [**list_distributed_service_card**](ClusterV1Api.md#list_distributed_service_card) | **GET** /configs/cluster/v1/distributedservicecards | List DistributedServiceCard objects
 [**list_distributed_service_entity**](ClusterV1Api.md#list_distributed_service_entity) | **GET** /configs/cluster/v1/distributedserviceentities | List DistributedServiceEntity objects
 [**list_dsc_profile**](ClusterV1Api.md#list_dsc_profile) | **GET** /configs/cluster/v1/dscprofiles | List DSCProfile objects
 [**list_host**](ClusterV1Api.md#list_host) | **GET** /configs/cluster/v1/hosts | List Host objects
 [**list_node**](ClusterV1Api.md#list_node) | **GET** /configs/cluster/v1/nodes | List Node objects
+[**list_policy_distribution_target**](ClusterV1Api.md#list_policy_distribution_target) | **GET** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets | List PolicyDistributionTarget objects
+[**list_policy_distribution_target1**](ClusterV1Api.md#list_policy_distribution_target1) | **GET** /configs/cluster/v1/policydistributiontargets | List PolicyDistributionTarget objects
 [**list_tenant**](ClusterV1Api.md#list_tenant) | **GET** /configs/cluster/v1/tenants | List Tenant objects
 [**restore**](ClusterV1Api.md#restore) | **POST** /configs/cluster/v1/config-restore/restore | Restore Configuration
 [**save**](ClusterV1Api.md#save) | **POST** /configs/cluster/v1/config-snapshot/save | Perform a Configuation Snapshot
@@ -59,6 +69,8 @@ Method | HTTP request | Description
 [**update_host**](ClusterV1Api.md#update_host) | **PUT** /configs/cluster/v1/hosts/{O.Name} | Update Host object
 [**update_license**](ClusterV1Api.md#update_license) | **PUT** /configs/cluster/v1/licenses | Update License object
 [**update_node**](ClusterV1Api.md#update_node) | **PUT** /configs/cluster/v1/nodes/{O.Name} | Update Node object
+[**update_policy_distribution_target**](ClusterV1Api.md#update_policy_distribution_target) | **PUT** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name} | Update PolicyDistributionTarget object
+[**update_policy_distribution_target1**](ClusterV1Api.md#update_policy_distribution_target1) | **PUT** /configs/cluster/v1/policydistributiontargets/{O.Name} | Update PolicyDistributionTarget object
 [**update_tenant**](ClusterV1Api.md#update_tenant) | **PUT** /configs/cluster/v1/tenants/{O.Name} | Update Tenant object
 [**update_tls_config**](ClusterV1Api.md#update_tls_config) | **POST** /configs/cluster/v1/cluster/UpdateTLSConfig | Update TLS Configuration for cluster
 [**update_version**](ClusterV1Api.md#update_version) | **PUT** /configs/cluster/v1/version | Update Version object
@@ -70,6 +82,8 @@ Method | HTTP request | Description
 [**watch_dsc_profile**](ClusterV1Api.md#watch_dsc_profile) | **GET** /configs/cluster/v1/watch/dscprofiles | Watch DSCProfile objects. Supports WebSockets or HTTP long poll
 [**watch_host**](ClusterV1Api.md#watch_host) | **GET** /configs/cluster/v1/watch/hosts | Watch Host objects. Supports WebSockets or HTTP long poll
 [**watch_node**](ClusterV1Api.md#watch_node) | **GET** /configs/cluster/v1/watch/nodes | Watch Node objects. Supports WebSockets or HTTP long poll
+[**watch_policy_distribution_target**](ClusterV1Api.md#watch_policy_distribution_target) | **GET** /configs/cluster/v1/watch/tenant/{O.Tenant}/policydistributiontargets | Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
+[**watch_policy_distribution_target1**](ClusterV1Api.md#watch_policy_distribution_target1) | **GET** /configs/cluster/v1/watch/policydistributiontargets | Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
 [**watch_tenant**](ClusterV1Api.md#watch_tenant) | **GET** /configs/cluster/v1/watch/tenants | Watch Tenant objects. Supports WebSockets or HTTP long poll
 [**watch_version**](ClusterV1Api.md#watch_version) | **GET** /configs/cluster/v1/watch/version | Watch Version objects. Supports WebSockets or HTTP long poll
 
@@ -296,6 +310,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 dsms=[
                     ClusterDSM(
                         mac_address="mac_address_example",
+                        nsp_count=1,
+                        nsp_rule_count=1,
                         unit_id=1,
                     ),
                 ],
@@ -305,6 +321,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mitigation="system-reboot",
                     severity="info",
                 ),
+                forwarding_profile="forwarding_profile_example",
                 ha_peer=ClusterPeer(
                     ip_config=ClusterIPConfig(
                         default_gw="10.1.1.1, ff02::5 ",
@@ -546,6 +563,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 dsms=[
                     ClusterDSM(
                         mac_address="mac_address_example",
+                        nsp_count=1,
+                        nsp_rule_count=1,
                         unit_id=1,
                     ),
                 ],
@@ -555,6 +574,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mitigation="system-reboot",
                     severity="info",
                 ),
+                forwarding_profile="forwarding_profile_example",
                 ha_peer=ClusterPeer(
                     ip_config=ClusterIPConfig(
                         default_gw="10.1.1.1, ff02::5 ",
@@ -1111,6 +1131,208 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterNode**](ClusterNode.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_policy_distribution_target**
+> ClusterPolicyDistributionTarget add_policy_distribution_target(o_tenant, body)
+
+Create PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    body = ClusterPolicyDistributionTarget(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterPolicyDistributionTargetSpec(
+            dses=[
+                "dses_example",
+            ],
+        ),
+        status={},
+    ) # ClusterPolicyDistributionTarget | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create PolicyDistributionTarget object
+        api_response = api_instance.add_policy_distribution_target(o_tenant, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->add_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **body** | [**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_policy_distribution_target1**
+> ClusterPolicyDistributionTarget add_policy_distribution_target1(body)
+
+Create PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    body = ClusterPolicyDistributionTarget(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterPolicyDistributionTargetSpec(
+            dses=[
+                "dses_example",
+            ],
+        ),
+        status={},
+    ) # ClusterPolicyDistributionTarget | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create PolicyDistributionTarget object
+        api_response = api_instance.add_policy_distribution_target1(body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->add_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
 
 ### Authorization
 
@@ -1756,6 +1978,158 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterNode**](ClusterNode.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_policy_distribution_target**
+> ClusterPolicyDistributionTarget delete_policy_distribution_target(o_tenant)
+
+Delete PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete PolicyDistributionTarget object
+        api_response = api_instance.delete_policy_distribution_target(o_tenant)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->delete_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_policy_distribution_target1**
+> ClusterPolicyDistributionTarget delete_policy_distribution_target1(o_name)
+
+Delete PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete PolicyDistributionTarget object
+        api_response = api_instance.delete_policy_distribution_target1(o_name)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->delete_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
 
 ### Authorization
 
@@ -2586,6 +2960,174 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterNode**](ClusterNode.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_policy_distribution_target**
+> ClusterPolicyDistributionTarget get_policy_distribution_target(o_tenant)
+
+Get PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
+    meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    spec_dses = [
+        "spec.dses_example",
+    ] # [str] |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get PolicyDistributionTarget object
+        api_response = api_instance.get_policy_distribution_target(o_tenant)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->get_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **t_kind** | **str**| Kind represents the type of the API object. | [optional]
+ **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **spec_dses** | **[str]**|  | [optional]
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_policy_distribution_target1**
+> ClusterPolicyDistributionTarget get_policy_distribution_target1(o_name)
+
+Get PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
+    meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    spec_dses = [
+        "spec.dses_example",
+    ] # [str] |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Get PolicyDistributionTarget object
+        api_response = api_instance.get_policy_distribution_target1(o_name)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->get_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **t_kind** | **str**| Kind represents the type of the API object. | [optional]
+ **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **spec_dses** | **[str]**|  | [optional]
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
 
 ### Authorization
 
@@ -3696,6 +4238,196 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **label_policy_distribution_target**
+> ClusterPolicyDistributionTarget label_policy_distribution_target(o_tenant, body)
+
+Label PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_label import ApiLabel
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    body = ApiLabel(
+        api_version="api_version_example",
+        creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        generation_id="generation_id_example",
+        kind="kind_example",
+        labels={
+            "key": "key_example",
+        },
+        mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        namespace="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        resource_version="resource_version_example",
+        self_link="self_link_example",
+        tenant="C",
+        uuid="uuid_example",
+    ) # ApiLabel | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Label PolicyDistributionTarget object
+        api_response = api_instance.label_policy_distribution_target(o_tenant, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->label_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **body** | [**ApiLabel**](ApiLabel.md)|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **label_policy_distribution_target1**
+> ClusterPolicyDistributionTarget label_policy_distribution_target1(o_name, body)
+
+Label PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_label import ApiLabel
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    body = ApiLabel(
+        api_version="api_version_example",
+        creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        generation_id="generation_id_example",
+        kind="kind_example",
+        labels={
+            "key": "key_example",
+        },
+        mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+        name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        namespace="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+        resource_version="resource_version_example",
+        self_link="self_link_example",
+        tenant="C",
+        uuid="uuid_example",
+    ) # ApiLabel | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Label PolicyDistributionTarget object
+        api_response = api_instance.label_policy_distribution_target1(o_name, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->label_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **body** | [**ApiLabel**](ApiLabel.md)|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **label_tenant**
 > ClusterTenant label_tenant(o_name, body)
 
@@ -4201,6 +4933,172 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_policy_distribution_target**
+> ClusterPolicyDistributionTargetList list_policy_distribution_target(o_tenant)
+
+List PolicyDistributionTarget objects
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target_list import ClusterPolicyDistributionTargetList
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    field_change_selector = [
+        "field-change-selector_example",
+    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # List PolicyDistributionTarget objects
+        api_response = api_instance.list_policy_distribution_target(o_tenant)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->list_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
+ **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
+
+### Return type
+
+[**ClusterPolicyDistributionTargetList**](ClusterPolicyDistributionTargetList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_policy_distribution_target1**
+> ClusterPolicyDistributionTargetList list_policy_distribution_target1()
+
+List PolicyDistributionTarget objects
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target_list import ClusterPolicyDistributionTargetList
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    field_change_selector = [
+        "field-change-selector_example",
+    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # List PolicyDistributionTarget objects
+        api_response = api_instance.list_policy_distribution_target1()
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->list_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
+ **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
+
+### Return type
+
+[**ClusterPolicyDistributionTargetList**](ClusterPolicyDistributionTargetList.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_tenant**
 > ClusterTenantList list_tenant()
 
@@ -4568,6 +5466,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             current_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
             last_leader_transition_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
             leader="leader_example",
+            public_key="public_key_example",
             quorum_status=ClusterQuorumStatus(
                 members=[
                     ClusterQuorumMemberStatus(
@@ -4958,6 +5857,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 dsms=[
                     ClusterDSM(
                         mac_address="mac_address_example",
+                        nsp_count=1,
+                        nsp_rule_count=1,
                         unit_id=1,
                     ),
                 ],
@@ -4967,6 +5868,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mitigation="system-reboot",
                     severity="info",
                 ),
+                forwarding_profile="forwarding_profile_example",
                 ha_peer=ClusterPeer(
                     ip_config=ClusterIPConfig(
                         default_gw="10.1.1.1, ff02::5 ",
@@ -5210,6 +6112,8 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 dsms=[
                     ClusterDSM(
                         mac_address="mac_address_example",
+                        nsp_count=1,
+                        nsp_rule_count=1,
                         unit_id=1,
                     ),
                 ],
@@ -5219,6 +6123,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     mitigation="system-reboot",
                     severity="info",
                 ),
+                forwarding_profile="forwarding_profile_example",
                 ha_peer=ClusterPeer(
                     ip_config=ClusterIPConfig(
                         default_gw="10.1.1.1, ff02::5 ",
@@ -5782,6 +6687,210 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterNode**](ClusterNode.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_policy_distribution_target**
+> ClusterPolicyDistributionTarget update_policy_distribution_target(o_tenant, body)
+
+Update PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    body = ClusterPolicyDistributionTarget(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterPolicyDistributionTargetSpec(
+            dses=[
+                "dses_example",
+            ],
+        ),
+        status={},
+    ) # ClusterPolicyDistributionTarget | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update PolicyDistributionTarget object
+        api_response = api_instance.update_policy_distribution_target(o_tenant, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->update_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **body** | [**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_policy_distribution_target1**
+> ClusterPolicyDistributionTarget update_policy_distribution_target1(o_name, body)
+
+Update PolicyDistributionTarget object
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.Name_example" # str | 
+    body = ClusterPolicyDistributionTarget(
+        api_version="api_version_example",
+        kind="kind_example",
+        meta=ApiObjectMeta(
+            creation_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            display_name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
+            generation_id="generation_id_example",
+            labels={
+                "key": "key_example",
+            },
+            mod_time=dateutil_parser('1970-01-01T00:00:00.00Z'),
+            name="name_example",
+            namespace="namespace_example",
+            resource_version="resource_version_example",
+            self_link="self_link_example",
+            tenant="tenant_example",
+            uuid="uuid_example",
+        ),
+        spec=ClusterPolicyDistributionTargetSpec(
+            dses=[
+                "dses_example",
+            ],
+        ),
+        status={},
+    ) # ClusterPolicyDistributionTarget | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update PolicyDistributionTarget object
+        api_response = api_instance.update_policy_distribution_target1(o_name, body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->update_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**|  |
+ **body** | [**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)|  |
+
+### Return type
+
+[**ClusterPolicyDistributionTarget**](ClusterPolicyDistributionTarget.md)
 
 ### Authorization
 
@@ -6738,6 +7847,172 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterAutoMsgNodeWatchHelper**](ClusterAutoMsgNodeWatchHelper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (streaming responses) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **watch_policy_distribution_target**
+> ClusterAutoMsgPolicyDistributionTargetWatchHelper watch_policy_distribution_target(o_tenant)
+
+Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_auto_msg_policy_distribution_target_watch_helper import ClusterAutoMsgPolicyDistributionTargetWatchHelper
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_tenant = "O.Tenant_example" # str | 
+    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    field_change_selector = [
+        "field-change-selector_example",
+    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
+        api_response = api_instance.watch_policy_distribution_target(o_tenant)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->watch_policy_distribution_target: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_tenant** | **str**|  |
+ **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
+ **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
+
+### Return type
+
+[**ClusterAutoMsgPolicyDistributionTargetWatchHelper**](ClusterAutoMsgPolicyDistributionTargetWatchHelper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (streaming responses) |  -  |
+**400** | Bad request parameters |  -  |
+**401** | Unauthorized request |  -  |
+**409** | Conflict while processing request |  -  |
+**412** | Pre-condition failed |  -  |
+**500** | Internal server error |  -  |
+**501** | Request not implemented |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **watch_policy_distribution_target1**
+> ClusterAutoMsgPolicyDistributionTargetWatchHelper watch_policy_distribution_target1()
+
+Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import cluster_v1_api
+from pensando_dss.psm.models.cluster import *
+from pensando_dss.psm.model.cluster_auto_msg_policy_distribution_target_watch_helper import ClusterAutoMsgPolicyDistributionTargetWatchHelper
+from pensando_dss.psm.model.api_status import ApiStatus
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = cluster_v1_api.ClusterV1Api(api_client)
+    o_name = "O.name_example" # str | Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. (optional)
+    o_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
+    field_change_selector = [
+        "field-change-selector_example",
+    ] # [str] | FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
+        api_response = api_instance.watch_policy_distribution_target1()
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling ClusterV1Api->watch_policy_distribution_target1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **o_name** | **str**| Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64. | [optional]
+ **o_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
+ **field_change_selector** | **[str]**| FieldChangeSelector specifies to generate a watch notification on change in field(s) specified. | [optional]
+
+### Return type
+
+[**ClusterAutoMsgPolicyDistributionTargetWatchHelper**](ClusterAutoMsgPolicyDistributionTargetWatchHelper.md)
 
 ### Authorization
 

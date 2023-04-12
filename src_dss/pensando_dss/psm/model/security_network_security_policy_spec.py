@@ -80,6 +80,7 @@ class SecurityNetworkSecurityPolicySpec(ModelNormal):
         lazy_import()
         return {
             'attach_tenant': (bool,),  # noqa: E501
+            'policy_distribution_targets': ([str],),  # noqa: E501
             'priority': (int,),  # noqa: E501
             'rules': ([SecuritySGRule],),  # noqa: E501
         }
@@ -91,6 +92,7 @@ class SecurityNetworkSecurityPolicySpec(ModelNormal):
 
     attribute_map = {
         'attach_tenant': 'attach-tenant',  # noqa: E501
+        'policy_distribution_targets': 'policy-distribution-targets',  # noqa: E501
         'priority': 'priority',  # noqa: E501
         'rules': 'rules',  # noqa: E501
     }
@@ -142,6 +144,7 @@ class SecurityNetworkSecurityPolicySpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             attach_tenant (bool): specifies if the set of rules need to be attached globally to a tenant.. [optional] if omitted the server will use the default value of True  # noqa: E501
+            policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]  # noqa: E501
             priority (int): Policy priority. If not specified, it will be assigned automatically in increments of 1000.. [optional]  # noqa: E501
             rules ([SecuritySGRule]): list of rules.. [optional]  # noqa: E501
         """

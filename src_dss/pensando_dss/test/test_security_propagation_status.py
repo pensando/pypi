@@ -12,7 +12,9 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
 from pensando_dss.psm.model.security_dsc_status import SecurityDSCStatus
+globals()['ApiPDTStatus'] = ApiPDTStatus
 globals()['SecurityDSCStatus'] = SecurityDSCStatus
 from pensando_dss.psm.psm.model.security_propagation_status import SecurityPropagationStatus
 

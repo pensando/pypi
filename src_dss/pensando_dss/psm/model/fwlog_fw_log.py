@@ -97,6 +97,7 @@ class FwlogFwLog(ModelNormal):
             'app_id': (str,),  # noqa: E501
             'bytes_received': (str,),  # noqa: E501
             'bytes_sent': (str,),  # noqa: E501
+            'create_reason': (str,),  # noqa: E501
             'destination_ip': (str,),  # noqa: E501
             'destination_port': (int,),  # noqa: E501
             'destination_vrf': (str,),  # noqa: E501
@@ -109,6 +110,9 @@ class FwlogFwLog(ModelNormal):
             'ipsec_rule_id': (str,),  # noqa: E501
             'kind': (str,),  # noqa: E501
             'meta': (ApiObjectMeta,),  # noqa: E501
+            'nat_translated_destination_ip': (str,),  # noqa: E501
+            'nat_translated_destination_port': (int,),  # noqa: E501
+            'nat_translated_source_ip': (str,),  # noqa: E501
             'packets_received': (str,),  # noqa: E501
             'packets_sent': (str,),  # noqa: E501
             'policy_display_name': (str,),  # noqa: E501
@@ -139,6 +143,7 @@ class FwlogFwLog(ModelNormal):
         'app_id': 'app-id',  # noqa: E501
         'bytes_received': 'bytes-received',  # noqa: E501
         'bytes_sent': 'bytes-sent',  # noqa: E501
+        'create_reason': 'create-reason',  # noqa: E501
         'destination_ip': 'destination-ip',  # noqa: E501
         'destination_port': 'destination-port',  # noqa: E501
         'destination_vrf': 'destination-vrf',  # noqa: E501
@@ -151,6 +156,9 @@ class FwlogFwLog(ModelNormal):
         'ipsec_rule_id': 'ipsec-rule-id',  # noqa: E501
         'kind': 'kind',  # noqa: E501
         'meta': 'meta',  # noqa: E501
+        'nat_translated_destination_ip': 'nat-translated-destination-ip',  # noqa: E501
+        'nat_translated_destination_port': 'nat-translated-destination-port',  # noqa: E501
+        'nat_translated_source_ip': 'nat-translated-source-ip',  # noqa: E501
         'packets_received': 'packets-received',  # noqa: E501
         'packets_sent': 'packets-sent',  # noqa: E501
         'policy_display_name': 'policy-display-name',  # noqa: E501
@@ -221,6 +229,7 @@ class FwlogFwLog(ModelNormal):
             app_id (str): Application ID.. [optional]  # noqa: E501
             bytes_received (str): Bytes received represents the number of bytes received at the source from the destination.. [optional]  # noqa: E501
             bytes_sent (str): Bytes sent represents the number of bytes sent from the source to the destination.. [optional]  # noqa: E501
+            create_reason (str): CreateReason represents the specific reason of flow's creation.. [optional]  # noqa: E501
             destination_ip (str): Destination IP.. [optional]  # noqa: E501
             destination_port (int): Destination Port.. [optional]  # noqa: E501
             destination_vrf (str): Destination VRF,.. [optional]  # noqa: E501
@@ -233,9 +242,12 @@ class FwlogFwLog(ModelNormal):
             ipsec_rule_id (str): IPsec policy rule ID.. [optional]  # noqa: E501
             kind (str): [optional]  # noqa: E501
             meta (ApiObjectMeta): [optional]  # noqa: E501
+            nat_translated_destination_ip (str): NATTranslatedDestIP represents the destination ip post NAT translation.. [optional]  # noqa: E501
+            nat_translated_destination_port (int): NATTranslatedDestPort represents the destination port post NAT translation.. [optional]  # noqa: E501
+            nat_translated_source_ip (str): NATTranslatedSrcIP represents the source ip post NAT translation.. [optional]  # noqa: E501
             packets_received (str): Packets received represents the number of packets received at the source from the destination.. [optional]  # noqa: E501
             packets_sent (str): Packets sent represents the number of packets sent from the source to the destination.. [optional]  # noqa: E501
-            policy_display_name (str): ReporterName represents the display name of the security policy.. [optional]  # noqa: E501
+            policy_display_name (str): PolicyDisplayName represents the display name of the security policy.. [optional]  # noqa: E501
             policy_name (str): policy name.. [optional]  # noqa: E501
             protocol (str): Protocol,.. [optional]  # noqa: E501
             reporter_id (str): Reporter ID.. [optional]  # noqa: E501

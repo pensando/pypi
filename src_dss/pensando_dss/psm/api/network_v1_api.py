@@ -26,6 +26,8 @@ from pensando_dss.psm.model.api_label import ApiLabel
 from pensando_dss.psm.model.api_status import ApiStatus
 from pensando_dss.psm.model.network_add_static_bindings_request import NetworkAddStaticBindingsRequest
 from pensando_dss.psm.model.network_auto_msg_ipam_policy_watch_helper import NetworkAutoMsgIPAMPolicyWatchHelper
+from pensando_dss.psm.model.network_auto_msg_ip_collection_watch_helper import NetworkAutoMsgIPCollectionWatchHelper
+from pensando_dss.psm.model.network_auto_msg_nat_policy_watch_helper import NetworkAutoMsgNATPolicyWatchHelper
 from pensando_dss.psm.model.network_auto_msg_network_interface_watch_helper import NetworkAutoMsgNetworkInterfaceWatchHelper
 from pensando_dss.psm.model.network_auto_msg_network_watch_helper import NetworkAutoMsgNetworkWatchHelper
 from pensando_dss.psm.model.network_auto_msg_policer_profile_watch_helper import NetworkAutoMsgPolicerProfileWatchHelper
@@ -35,6 +37,10 @@ from pensando_dss.psm.model.network_auto_msg_virtual_router_peering_group_watch_
 from pensando_dss.psm.model.network_auto_msg_virtual_router_watch_helper import NetworkAutoMsgVirtualRouterWatchHelper
 from pensando_dss.psm.model.network_ipam_policy import NetworkIPAMPolicy
 from pensando_dss.psm.model.network_ipam_policy_list import NetworkIPAMPolicyList
+from pensando_dss.psm.model.network_ip_collection import NetworkIPCollection
+from pensando_dss.psm.model.network_ip_collection_list import NetworkIPCollectionList
+from pensando_dss.psm.model.network_nat_policy import NetworkNATPolicy
+from pensando_dss.psm.model.network_nat_policy_list import NetworkNATPolicyList
 from pensando_dss.psm.model.network_network import NetworkNetwork
 from pensando_dss.psm.model.network_network_interface import NetworkNetworkInterface
 from pensando_dss.psm.model.network_network_interface_list import NetworkNetworkInterfaceList
@@ -62,6 +68,250 @@ class NetworkV1Api(object):
         if api_client is None:
             api_client = ApiClient()
         self.api_client = api_client
+
+        def __add_ip_collection(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Create IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_ip_collection(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (NetworkIPCollection):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipcollections',
+                'operation_id': 'add_ip_collection',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (NetworkIPCollection,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_ip_collection
+        )
+
+        def __add_ip_collection1(
+            self,
+            body,
+            **kwargs
+        ):
+            """Create IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_ip_collection1(body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                body (NetworkIPCollection):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipcollections',
+                'operation_id': 'add_ip_collection1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'body',
+                ],
+                'required': [
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'body':
+                        (NetworkIPCollection,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_ip_collection1
+        )
 
         def __add_ipam_policy(
             self,
@@ -305,6 +555,250 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__add_ipam_policy1
+        )
+
+        def __add_nat_policy(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Create NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_nat_policy(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (NetworkNATPolicy):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/natpolicies',
+                'operation_id': 'add_nat_policy',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (NetworkNATPolicy,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_nat_policy
+        )
+
+        def __add_nat_policy1(
+            self,
+            body,
+            **kwargs
+        ):
+            """Create NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_nat_policy1(body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                body (NetworkNATPolicy):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/natpolicies',
+                'operation_id': 'add_nat_policy1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'body',
+                ],
+                'required': [
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'body':
+                        (NetworkNATPolicy,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_nat_policy1
         )
 
         def __add_network(
@@ -1654,6 +2148,238 @@ class NetworkV1Api(object):
             callable=__add_virtual_router_peering_group1
         )
 
+        def __delete_ip_collection(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Delete IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_ip_collection(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipcollections/{O.Name}',
+                'operation_id': 'delete_ip_collection',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_ip_collection
+        )
+
+        def __delete_ip_collection1(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Delete IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_ip_collection1(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipcollections/{O.Name}',
+                'operation_id': 'delete_ip_collection1',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_ip_collection1
+        )
+
         def __delete_ipam_policy(
             self,
             o_tenant,
@@ -1884,6 +2610,238 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__delete_ipam_policy1
+        )
+
+        def __delete_nat_policy(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Delete NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_nat_policy(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/natpolicies/{O.Name}',
+                'operation_id': 'delete_nat_policy',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_nat_policy
+        )
+
+        def __delete_nat_policy1(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Delete NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_nat_policy1(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/natpolicies/{O.Name}',
+                'operation_id': 'delete_nat_policy1',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_nat_policy1
         )
 
         def __delete_network(
@@ -2930,6 +3888,276 @@ class NetworkV1Api(object):
             callable=__delete_virtual_router_peering_group1
         )
 
+        def __get_ip_collection(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Get IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_ip_collection(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_addresses ([str]): Address can be a host ip, subnet or an ip range.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.get_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipcollections/{O.Name}',
+                'operation_id': 'get_ip_collection',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_addresses',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_addresses':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_addresses': 'spec.addresses',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_addresses': 'query',
+                },
+                'collection_format_map': {
+                    'spec_addresses': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_ip_collection
+        )
+
+        def __get_ip_collection1(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Get IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_ip_collection1(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_addresses ([str]): Address can be a host ip, subnet or an ip range.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.get_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipcollections/{O.Name}',
+                'operation_id': 'get_ip_collection1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_addresses',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_addresses':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_addresses': 'spec.addresses',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_addresses': 'query',
+                },
+                'collection_format_map': {
+                    'spec_addresses': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_ip_collection1
+        )
+
         def __get_ipam_policy(
             self,
             o_tenant,
@@ -3236,6 +4464,276 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__get_ipam_policy1
+        )
+
+        def __get_nat_policy(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Get NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_nat_policy(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.get_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/natpolicies/{O.Name}',
+                'operation_id': 'get_nat_policy',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_policy_distribution_targets',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_policy_distribution_targets':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_policy_distribution_targets': 'spec.policy-distribution-targets',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_policy_distribution_targets': 'query',
+                },
+                'collection_format_map': {
+                    'spec_policy_distribution_targets': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_nat_policy
+        )
+
+        def __get_nat_policy1(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Get NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_nat_policy1(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.get_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/natpolicies/{O.Name}',
+                'operation_id': 'get_nat_policy1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_policy_distribution_targets',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_policy_distribution_targets':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_policy_distribution_targets': 'spec.policy-distribution-targets',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_policy_distribution_targets': 'query',
+                },
+                'collection_format_map': {
+                    'spec_policy_distribution_targets': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_nat_policy1
         )
 
         def __get_network(
@@ -4378,7 +5876,7 @@ class NetworkV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                spec_type (str): [optional]
+                admin_value_format (str): [optional]
                 admin_value_value (int): [optional]
                 spec_ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]
                 _return_http_data_only (bool): response data without head status
@@ -4443,7 +5941,7 @@ class NetworkV1Api(object):
                     'o_tenant',
                     't_kind',
                     'meta_creation_time',
-                    'spec_type',
+                    'admin_value_format',
                     'admin_value_value',
                     'spec_ingress_security_policy',
                 ],
@@ -4469,7 +5967,7 @@ class NetworkV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'spec_type':
+                    'admin_value_format':
                         (str,),
                     'admin_value_value':
                         (int,),
@@ -4480,7 +5978,7 @@ class NetworkV1Api(object):
                     'o_tenant': 'O.Tenant',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'spec_type': 'spec.type',
+                    'admin_value_format': 'admin-value.Format',
                     'admin_value_value': 'admin-value.Value',
                     'spec_ingress_security_policy': 'spec.ingress-security-policy',
                 },
@@ -4488,7 +5986,7 @@ class NetworkV1Api(object):
                     'o_tenant': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'spec_type': 'query',
+                    'admin_value_format': 'query',
                     'admin_value_value': 'query',
                     'spec_ingress_security_policy': 'query',
                 },
@@ -4525,7 +6023,7 @@ class NetworkV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                spec_type (str): [optional]
+                admin_value_format (str): [optional]
                 admin_value_value (int): [optional]
                 spec_ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]
                 _return_http_data_only (bool): response data without head status
@@ -4590,7 +6088,7 @@ class NetworkV1Api(object):
                     'o_name',
                     't_kind',
                     'meta_creation_time',
-                    'spec_type',
+                    'admin_value_format',
                     'admin_value_value',
                     'spec_ingress_security_policy',
                 ],
@@ -4616,7 +6114,7 @@ class NetworkV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'spec_type':
+                    'admin_value_format':
                         (str,),
                     'admin_value_value':
                         (int,),
@@ -4627,7 +6125,7 @@ class NetworkV1Api(object):
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'spec_type': 'spec.type',
+                    'admin_value_format': 'admin-value.Format',
                     'admin_value_value': 'admin-value.Value',
                     'spec_ingress_security_policy': 'spec.ingress-security-policy',
                 },
@@ -4635,7 +6133,7 @@ class NetworkV1Api(object):
                     'o_name': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'spec_type': 'query',
+                    'admin_value_format': 'query',
                     'admin_value_value': 'query',
                     'spec_ingress_security_policy': 'query',
                 },
@@ -4923,6 +6421,260 @@ class NetworkV1Api(object):
             callable=__get_virtual_router_peering_group1
         )
 
+        def __label_ip_collection(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Label IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_ip_collection(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipcollections/{O.Name}/label',
+                'operation_id': 'label_ip_collection',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_ip_collection
+        )
+
+        def __label_ip_collection1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Label IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_ip_collection1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipcollections/{O.Name}/label',
+                'operation_id': 'label_ip_collection1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_ip_collection1
+        )
+
         def __label_ipam_policy(
             self,
             o_tenant,
@@ -5175,6 +6927,260 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__label_ipam_policy1
+        )
+
+        def __label_nat_policy(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Label NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_nat_policy(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/natpolicies/{O.Name}/label',
+                'operation_id': 'label_nat_policy',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_nat_policy
+        )
+
+        def __label_nat_policy1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Label NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_nat_policy1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/natpolicies/{O.Name}/label',
+                'operation_id': 'label_nat_policy1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_nat_policy1
         )
 
         def __label_network(
@@ -6447,6 +8453,264 @@ class NetworkV1Api(object):
             callable=__label_virtual_router_peering_group1
         )
 
+        def __list_ip_collection(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """List IPCollection objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_ip_collection(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollectionList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.list_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollectionList,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipcollections',
+                'operation_id': 'list_ip_collection',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_ip_collection
+        )
+
+        def __list_ip_collection1(
+            self,
+            **kwargs
+        ):
+            """List IPCollection objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_ip_collection1(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollectionList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.list_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollectionList,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipcollections',
+                'operation_id': 'list_ip_collection1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_ip_collection1
+        )
+
         def __list_ipam_policy(
             self,
             o_tenant,
@@ -6703,6 +8967,264 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__list_ipam_policy1
+        )
+
+        def __list_nat_policy(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """List NATPolicy objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_nat_policy(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicyList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.list_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicyList,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/natpolicies',
+                'operation_id': 'list_nat_policy',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_nat_policy
+        )
+
+        def __list_nat_policy1(
+            self,
+            **kwargs
+        ):
+            """List NATPolicy objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_nat_policy1(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicyList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.list_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicyList,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/natpolicies',
+                'operation_id': 'list_nat_policy1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_nat_policy1
         )
 
         def __list_network(
@@ -8241,6 +10763,260 @@ class NetworkV1Api(object):
             callable=__list_virtual_router_peering_group1
         )
 
+        def __update_ip_collection(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Update IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_ip_collection(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (NetworkIPCollection):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/ipcollections/{O.Name}',
+                'operation_id': 'update_ip_collection',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (NetworkIPCollection,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_ip_collection
+        )
+
+        def __update_ip_collection1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Update IPCollection object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_ip_collection1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (NetworkIPCollection):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkIPCollection
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkIPCollection,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/ipcollections/{O.Name}',
+                'operation_id': 'update_ip_collection1',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (NetworkIPCollection,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_ip_collection1
+        )
+
         def __update_ipam_policy(
             self,
             o_tenant,
@@ -8493,6 +11269,260 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__update_ipam_policy1
+        )
+
+        def __update_nat_policy(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Update NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_nat_policy(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (NetworkNATPolicy):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/tenant/{O.Tenant}/natpolicies/{O.Name}',
+                'operation_id': 'update_nat_policy',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (NetworkNATPolicy,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_nat_policy
+        )
+
+        def __update_nat_policy1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Update NATPolicy object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_nat_policy1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (NetworkNATPolicy):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkNATPolicy
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkNATPolicy,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/natpolicies/{O.Name}',
+                'operation_id': 'update_nat_policy1',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (NetworkNATPolicy,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_nat_policy1
         )
 
         def __update_network(
@@ -9765,6 +12795,264 @@ class NetworkV1Api(object):
             callable=__update_virtual_router_peering_group1
         )
 
+        def __watch_ip_collection(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Watch IPCollection objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_ip_collection(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkAutoMsgIPCollectionWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_ip_collection = _Endpoint(
+            settings={
+                'response_type': (NetworkAutoMsgIPCollectionWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/watch/tenant/{O.Tenant}/ipcollections',
+                'operation_id': 'watch_ip_collection',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_ip_collection
+        )
+
+        def __watch_ip_collection1(
+            self,
+            **kwargs
+        ):
+            """Watch IPCollection objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_ip_collection1(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkAutoMsgIPCollectionWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_ip_collection1 = _Endpoint(
+            settings={
+                'response_type': (NetworkAutoMsgIPCollectionWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/watch/ipcollections',
+                'operation_id': 'watch_ip_collection1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_ip_collection1
+        )
+
         def __watch_ipam_policy(
             self,
             o_tenant,
@@ -10021,6 +13309,264 @@ class NetworkV1Api(object):
             },
             api_client=api_client,
             callable=__watch_ipam_policy1
+        )
+
+        def __watch_nat_policy(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Watch NATPolicy objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_nat_policy(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkAutoMsgNATPolicyWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_nat_policy = _Endpoint(
+            settings={
+                'response_type': (NetworkAutoMsgNATPolicyWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/watch/tenant/{O.Tenant}/natpolicies',
+                'operation_id': 'watch_nat_policy',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_nat_policy
+        )
+
+        def __watch_nat_policy1(
+            self,
+            **kwargs
+        ):
+            """Watch NATPolicy objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_nat_policy1(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                NetworkAutoMsgNATPolicyWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_nat_policy1 = _Endpoint(
+            settings={
+                'response_type': (NetworkAutoMsgNATPolicyWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/network/v1/watch/natpolicies',
+                'operation_id': 'watch_nat_policy1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_nat_policy1
         )
 
         def __watch_network(

@@ -64,6 +64,7 @@ class FieldsRequirement(ModelNormal):
             'LT': "lt",
             'LTE': "lte",
             'INFIELD': "infield",
+            'CONTAINS': "contains",
         },
     }
 

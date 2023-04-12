@@ -12,8 +12,10 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.network_nat_rule import NetworkNATRule
 from pensando_dss.psm.model.security_ip_sec_policy_rule import SecurityIPSecPolicyRule
 from pensando_dss.psm.model.security_sg_rule import SecuritySGRule
+globals()['NetworkNATRule'] = NetworkNATRule
 globals()['SecurityIPSecPolicyRule'] = SecurityIPSecPolicyRule
 globals()['SecuritySGRule'] = SecuritySGRule
 from pensando_dss.psm.psm.model.search_policy_match_entry import SearchPolicyMatchEntry

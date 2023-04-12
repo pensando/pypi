@@ -390,6 +390,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ike_lifetime="1h",
                 sa_lifetime="1h",
             ),
+            ha_mode="no_ha",
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             rules=[
                 SecurityIPSecPolicyRule(
                     action="clear",
@@ -414,8 +418,53 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                 ),
             ],
+            tunnel_endpoints=[
+                SecurityTunnelEndpoint(
+                    dse="dse_example",
+                    ike_sa=SecurityIKESAParameters(
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
+                        dpd_delay="60s",
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        hash_algorithms=[
+                            "hash_algorithms_example",
+                        ],
+                        ike_initiator=False,
+                        ikev1_dpd_timeout="60s",
+                        ikev1_mode="main",
+                        pre_shared_key="pre_shared_key_example",
+                        reauth_lifetime="1h",
+                        rekey_lifetime="900s",
+                    ),
+                    ike_version="IKEv2",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAParameters(
+                        dh_groups=[],
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        rekey_lifetime="900s",
+                    ),
+                    local_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                    remote_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                ),
+            ],
         ),
         status=SecurityIPSecPolicyStatus(
+            configuration_issues=ApiConfigurationIssues(
+                issues=[
+                    "issues_example",
+                ],
+            ),
             esp_params="esp_params_example",
             ike_params="ike_params_example",
             propagation_status=SecurityPropagationStatus(
@@ -427,6 +476,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -437,6 +497,29 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             rule_status=[
                 SecurityIPSecRuleStatus(
                     rule_hash="rule_hash_example",
+                ),
+            ],
+            tunnel_endpoint_status=[
+                SecurityTunnelEndpointStatus(
+                    dse_id="dse_id_example",
+                    extended_seq_num_enabled=True,
+                    ike_sa=SecurityIKESAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                        hash_algorithm="sha_256",
+                    ),
+                    ike_version="prefer_ikev2_support_ikev1",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                    ),
+                    local_address="local_address_example",
+                    oper_state="up",
+                    oper_state_info=[
+                        "oper_state_info_example",
+                    ],
+                    remote_address="remote_address_example",
                 ),
             ],
         ),
@@ -540,6 +623,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ike_lifetime="1h",
                 sa_lifetime="1h",
             ),
+            ha_mode="no_ha",
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             rules=[
                 SecurityIPSecPolicyRule(
                     action="clear",
@@ -564,8 +651,53 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                 ),
             ],
+            tunnel_endpoints=[
+                SecurityTunnelEndpoint(
+                    dse="dse_example",
+                    ike_sa=SecurityIKESAParameters(
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
+                        dpd_delay="60s",
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        hash_algorithms=[
+                            "hash_algorithms_example",
+                        ],
+                        ike_initiator=False,
+                        ikev1_dpd_timeout="60s",
+                        ikev1_mode="main",
+                        pre_shared_key="pre_shared_key_example",
+                        reauth_lifetime="1h",
+                        rekey_lifetime="900s",
+                    ),
+                    ike_version="IKEv2",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAParameters(
+                        dh_groups=[],
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        rekey_lifetime="900s",
+                    ),
+                    local_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                    remote_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                ),
+            ],
         ),
         status=SecurityIPSecPolicyStatus(
+            configuration_issues=ApiConfigurationIssues(
+                issues=[
+                    "issues_example",
+                ],
+            ),
             esp_params="esp_params_example",
             ike_params="ike_params_example",
             propagation_status=SecurityPropagationStatus(
@@ -577,6 +709,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -587,6 +730,29 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             rule_status=[
                 SecurityIPSecRuleStatus(
                     rule_hash="rule_hash_example",
+                ),
+            ],
+            tunnel_endpoint_status=[
+                SecurityTunnelEndpointStatus(
+                    dse_id="dse_id_example",
+                    extended_seq_num_enabled=True,
+                    ike_sa=SecurityIKESAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                        hash_algorithm="sha_256",
+                    ),
+                    ike_version="prefer_ikev2_support_ikev1",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                    ),
+                    local_address="local_address_example",
+                    oper_state="up",
+                    oper_state_info=[
+                        "oper_state_info_example",
+                    ],
+                    remote_address="remote_address_example",
                 ),
             ],
         ),
@@ -687,6 +853,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityNetworkSecurityPolicySpec(
             attach_tenant=True,
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             priority=1,
             rules=[
                 SecuritySGRule(
@@ -698,6 +867,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
+                    ],
+                    from_ipcollections=[
+                        "from_ipcollections_example",
                     ],
                     from_workload_groups=[
                         "from_workload_groups_example",
@@ -711,6 +883,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     to_ip_addresses=[
                         "to_ip_addresses_example",
+                    ],
+                    to_ipcollections=[
+                        "to_ipcollections_example",
                     ],
                     to_workload_groups=[
                         "to_workload_groups_example",
@@ -728,6 +903,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -845,6 +1031,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityNetworkSecurityPolicySpec(
             attach_tenant=True,
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             priority=1,
             rules=[
                 SecuritySGRule(
@@ -856,6 +1045,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
+                    ],
+                    from_ipcollections=[
+                        "from_ipcollections_example",
                     ],
                     from_workload_groups=[
                         "from_workload_groups_example",
@@ -869,6 +1061,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     to_ip_addresses=[
                         "to_ip_addresses_example",
+                    ],
+                    to_ipcollections=[
+                        "to_ipcollections_example",
                     ],
                     to_workload_groups=[
                         "to_workload_groups_example",
@@ -886,6 +1081,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -1781,9 +1987,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_tenant = "O.Tenant_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    spec_policy_distribution_targets = [
+        "spec.policy-distribution-targets_example",
+    ] # [str] | PolicyDistributionTargets on which this policy should get deployed. (optional)
+    configuration_issues_issues = [
+        "configuration-issues.issues_example",
+    ] # [str] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1802,7 +2011,8 @@ Name | Type | Description  | Notes
  **o_tenant** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **spec_policy_distribution_targets** | **[str]**| PolicyDistributionTargets on which this policy should get deployed. | [optional]
+ **configuration_issues_issues** | **[str]**|  | [optional]
 
 ### Return type
 
@@ -1865,9 +2075,12 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    spec_policy_distribution_targets = [
+        "spec.policy-distribution-targets_example",
+    ] # [str] | PolicyDistributionTargets on which this policy should get deployed. (optional)
+    configuration_issues_issues = [
+        "configuration-issues.issues_example",
+    ] # [str] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1886,7 +2099,8 @@ Name | Type | Description  | Notes
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **spec_policy_distribution_targets** | **[str]**| PolicyDistributionTargets on which this policy should get deployed. | [optional]
+ **configuration_issues_issues** | **[str]**|  | [optional]
 
 ### Return type
 
@@ -1949,9 +2163,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_tenant = "O.Tenant_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    spec_policy_distribution_targets = [
+        "spec.policy-distribution-targets_example",
+    ] # [str] | PolicyDistributionTargets on which this policy should get deployed. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1970,7 +2184,7 @@ Name | Type | Description  | Notes
  **o_tenant** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **spec_policy_distribution_targets** | **[str]**| PolicyDistributionTargets on which this policy should get deployed. | [optional]
 
 ### Return type
 
@@ -2033,9 +2247,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     o_name = "O.Name_example" # str | 
     t_kind = "T.kind_example" # str | Kind represents the type of the API object. (optional)
     meta_creation_time = dateutil_parser('1970-01-01T00:00:00.00Z') # datetime | CreationTime is the creation time of the object. System generated and updated, not updatable by user. (optional)
-    propagation_status_pending_dscs = [
-        "propagation-status.pending-dscs_example",
-    ] # [str] | list of DSCs where propagation did not complete. (optional)
+    spec_policy_distribution_targets = [
+        "spec.policy-distribution-targets_example",
+    ] # [str] | PolicyDistributionTargets on which this policy should get deployed. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2054,7 +2268,7 @@ Name | Type | Description  | Notes
  **o_name** | **str**|  |
  **t_kind** | **str**| Kind represents the type of the API object. | [optional]
  **meta_creation_time** | **datetime**| CreationTime is the creation time of the object. System generated and updated, not updatable by user. | [optional]
- **propagation_status_pending_dscs** | **[str]**| list of DSCs where propagation did not complete. | [optional]
+ **spec_policy_distribution_targets** | **[str]**| PolicyDistributionTargets on which this policy should get deployed. | [optional]
 
 ### Return type
 
@@ -3863,6 +4077,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -3995,6 +4220,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -4104,6 +4340,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ike_lifetime="1h",
                 sa_lifetime="1h",
             ),
+            ha_mode="no_ha",
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             rules=[
                 SecurityIPSecPolicyRule(
                     action="clear",
@@ -4128,8 +4368,53 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                 ),
             ],
+            tunnel_endpoints=[
+                SecurityTunnelEndpoint(
+                    dse="dse_example",
+                    ike_sa=SecurityIKESAParameters(
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
+                        dpd_delay="60s",
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        hash_algorithms=[
+                            "hash_algorithms_example",
+                        ],
+                        ike_initiator=False,
+                        ikev1_dpd_timeout="60s",
+                        ikev1_mode="main",
+                        pre_shared_key="pre_shared_key_example",
+                        reauth_lifetime="1h",
+                        rekey_lifetime="900s",
+                    ),
+                    ike_version="IKEv2",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAParameters(
+                        dh_groups=[],
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        rekey_lifetime="900s",
+                    ),
+                    local_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                    remote_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                ),
+            ],
         ),
         status=SecurityIPSecPolicyStatus(
+            configuration_issues=ApiConfigurationIssues(
+                issues=[
+                    "issues_example",
+                ],
+            ),
             esp_params="esp_params_example",
             ike_params="ike_params_example",
             propagation_status=SecurityPropagationStatus(
@@ -4141,6 +4426,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -4151,6 +4447,29 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             rule_status=[
                 SecurityIPSecRuleStatus(
                     rule_hash="rule_hash_example",
+                ),
+            ],
+            tunnel_endpoint_status=[
+                SecurityTunnelEndpointStatus(
+                    dse_id="dse_id_example",
+                    extended_seq_num_enabled=True,
+                    ike_sa=SecurityIKESAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                        hash_algorithm="sha_256",
+                    ),
+                    ike_version="prefer_ikev2_support_ikev1",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                    ),
+                    local_address="local_address_example",
+                    oper_state="up",
+                    oper_state_info=[
+                        "oper_state_info_example",
+                    ],
+                    remote_address="remote_address_example",
                 ),
             ],
         ),
@@ -4255,6 +4574,10 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ike_lifetime="1h",
                 sa_lifetime="1h",
             ),
+            ha_mode="no_ha",
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             rules=[
                 SecurityIPSecPolicyRule(
                     action="clear",
@@ -4279,8 +4602,53 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     name="g6bUUGjjNSwg0_bs9ZayIMrKdgNvb",
                 ),
             ],
+            tunnel_endpoints=[
+                SecurityTunnelEndpoint(
+                    dse="dse_example",
+                    ike_sa=SecurityIKESAParameters(
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
+                        dpd_delay="60s",
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        hash_algorithms=[
+                            "hash_algorithms_example",
+                        ],
+                        ike_initiator=False,
+                        ikev1_dpd_timeout="60s",
+                        ikev1_mode="main",
+                        pre_shared_key="pre_shared_key_example",
+                        reauth_lifetime="1h",
+                        rekey_lifetime="900s",
+                    ),
+                    ike_version="IKEv2",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAParameters(
+                        dh_groups=[],
+                        encryption_algorithms=[
+                            "encryption_algorithms_example",
+                        ],
+                        rekey_lifetime="900s",
+                    ),
+                    local_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                    remote_identifier=IKEParametersIdentifier(
+                        type="ip",
+                        value="value_example",
+                    ),
+                ),
+            ],
         ),
         status=SecurityIPSecPolicyStatus(
+            configuration_issues=ApiConfigurationIssues(
+                issues=[
+                    "issues_example",
+                ],
+            ),
             esp_params="esp_params_example",
             ike_params="ike_params_example",
             propagation_status=SecurityPropagationStatus(
@@ -4292,6 +4660,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -4302,6 +4681,29 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             rule_status=[
                 SecurityIPSecRuleStatus(
                     rule_hash="rule_hash_example",
+                ),
+            ],
+            tunnel_endpoint_status=[
+                SecurityTunnelEndpointStatus(
+                    dse_id="dse_id_example",
+                    extended_seq_num_enabled=True,
+                    ike_sa=SecurityIKESAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                        hash_algorithm="sha_256",
+                    ),
+                    ike_version="prefer_ikev2_support_ikev1",
+                    interface_name="interface_name_example",
+                    ipsec_sa=SecurityIPsecSAStatus(
+                        dh_group="group1",
+                        encryption_algorithm="aes_128",
+                    ),
+                    local_address="local_address_example",
+                    oper_state="up",
+                    oper_state_info=[
+                        "oper_state_info_example",
+                    ],
+                    remote_address="remote_address_example",
                 ),
             ],
         ),
@@ -4403,6 +4805,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityNetworkSecurityPolicySpec(
             attach_tenant=True,
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             priority=1,
             rules=[
                 SecuritySGRule(
@@ -4414,6 +4819,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
+                    ],
+                    from_ipcollections=[
+                        "from_ipcollections_example",
                     ],
                     from_workload_groups=[
                         "from_workload_groups_example",
@@ -4427,6 +4835,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     to_ip_addresses=[
                         "to_ip_addresses_example",
+                    ],
+                    to_ipcollections=[
+                        "to_ipcollections_example",
                     ],
                     to_workload_groups=[
                         "to_workload_groups_example",
@@ -4444,6 +4855,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",
@@ -4562,6 +4984,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         ),
         spec=SecurityNetworkSecurityPolicySpec(
             attach_tenant=True,
+            policy_distribution_targets=[
+                "policy_distribution_targets_example",
+            ],
             priority=1,
             rules=[
                 SecuritySGRule(
@@ -4573,6 +4998,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     disable=True,
                     from_ip_addresses=[
                         "from_ip_addresses_example",
+                    ],
+                    from_ipcollections=[
+                        "from_ipcollections_example",
                     ],
                     from_workload_groups=[
                         "from_workload_groups_example",
@@ -4586,6 +5014,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ],
                     to_ip_addresses=[
                         "to_ip_addresses_example",
+                    ],
+                    to_ipcollections=[
+                        "to_ipcollections_example",
                     ],
                     to_workload_groups=[
                         "to_workload_groups_example",
@@ -4603,6 +5034,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                 ],
                 generation_id="generation_id_example",
                 min_version="min_version_example",
+                pdt_status=[
+                    ApiPDTStatus(
+                        name="name_example",
+                        pending=1,
+                        pending_dses=[
+                            "pending_dses_example",
+                        ],
+                        status="status_example",
+                        updated=1,
+                    ),
+                ],
                 pending=1,
                 pending_dscs=[
                     "pending_dscs_example",

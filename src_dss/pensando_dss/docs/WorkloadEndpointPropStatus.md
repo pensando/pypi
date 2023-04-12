@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **generation_id** | **str** |  | [optional] 
 **mac_address** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
+**pdt_status** | [**[ApiPDTStatus]**](ApiPDTStatus.md) |  | [optional] 
 **pending** | **int** |  | [optional] 
 **pending_dses** | **[str]** |  | [optional] 
 **status** | **str** |  | [optional] 

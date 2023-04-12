@@ -12,6 +12,8 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**add_host**](../../../../pensando_dss/docs/ClusterV1Api.md#add_host) | **POST** /configs/cluster/v1/hosts | Create Host object
 *ClusterV1Api* | [**add_license**](../../../../pensando_dss/docs/ClusterV1Api.md#add_license) | **POST** /configs/cluster/v1/licenses | Create License object
 *ClusterV1Api* | [**add_node**](../../../../pensando_dss/docs/ClusterV1Api.md#add_node) | **POST** /configs/cluster/v1/nodes | Create Node object
+*ClusterV1Api* | [**add_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#add_policy_distribution_target) | **POST** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets | Create PolicyDistributionTarget object
+*ClusterV1Api* | [**add_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#add_policy_distribution_target1) | **POST** /configs/cluster/v1/policydistributiontargets | Create PolicyDistributionTarget object
 *ClusterV1Api* | [**add_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#add_tenant) | **POST** /configs/cluster/v1/tenants | Create Tenant object
 *ClusterV1Api* | [**auth_bootstrap_complete**](../../../../pensando_dss/docs/ClusterV1Api.md#auth_bootstrap_complete) | **POST** /configs/cluster/v1/cluster/AuthBootstrapComplete | Mark bootstrapping as complete for the cluster
 *ClusterV1Api* | [**delete_configuration_snapshot**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_configuration_snapshot) | **DELETE** /configs/cluster/v1/config-snapshot | Delete ConfigurationSnapshot object
@@ -20,6 +22,8 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**delete_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_dsc_profile) | **DELETE** /configs/cluster/v1/dscprofiles/{O.Name} | Delete DSCProfile object
 *ClusterV1Api* | [**delete_host**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_host) | **DELETE** /configs/cluster/v1/hosts/{O.Name} | Delete Host object
 *ClusterV1Api* | [**delete_node**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_node) | **DELETE** /configs/cluster/v1/nodes/{O.Name} | Delete Node object
+*ClusterV1Api* | [**delete_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_policy_distribution_target) | **DELETE** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name} | Delete PolicyDistributionTarget object
+*ClusterV1Api* | [**delete_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_policy_distribution_target1) | **DELETE** /configs/cluster/v1/policydistributiontargets/{O.Name} | Delete PolicyDistributionTarget object
 *ClusterV1Api* | [**delete_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#delete_tenant) | **DELETE** /configs/cluster/v1/tenants/{O.Name} | Delete Tenant object
 *ClusterV1Api* | [**get_cluster**](../../../../pensando_dss/docs/ClusterV1Api.md#get_cluster) | **GET** /configs/cluster/v1/cluster | Get Cluster object
 *ClusterV1Api* | [**get_cluster_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#get_cluster_profile) | **GET** /configs/cluster/v1/clusterprofile | Get ClusterProfile object
@@ -30,6 +34,8 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**get_host**](../../../../pensando_dss/docs/ClusterV1Api.md#get_host) | **GET** /configs/cluster/v1/hosts/{O.Name} | Get Host object
 *ClusterV1Api* | [**get_license**](../../../../pensando_dss/docs/ClusterV1Api.md#get_license) | **GET** /configs/cluster/v1/licenses | Get License object
 *ClusterV1Api* | [**get_node**](../../../../pensando_dss/docs/ClusterV1Api.md#get_node) | **GET** /configs/cluster/v1/nodes/{O.Name} | Get Node object
+*ClusterV1Api* | [**get_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#get_policy_distribution_target) | **GET** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name} | Get PolicyDistributionTarget object
+*ClusterV1Api* | [**get_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#get_policy_distribution_target1) | **GET** /configs/cluster/v1/policydistributiontargets/{O.Name} | Get PolicyDistributionTarget object
 *ClusterV1Api* | [**get_snapshot_restore**](../../../../pensando_dss/docs/ClusterV1Api.md#get_snapshot_restore) | **GET** /configs/cluster/v1/config-restore | Get SnapshotRestore object
 *ClusterV1Api* | [**get_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#get_tenant) | **GET** /configs/cluster/v1/tenants/{O.Name} | Get Tenant object
 *ClusterV1Api* | [**get_version**](../../../../pensando_dss/docs/ClusterV1Api.md#get_version) | **GET** /configs/cluster/v1/version | Get Version object
@@ -42,12 +48,16 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**label_host**](../../../../pensando_dss/docs/ClusterV1Api.md#label_host) | **POST** /configs/cluster/v1/hosts/{O.Name}/label | Label Host object
 *ClusterV1Api* | [**label_license**](../../../../pensando_dss/docs/ClusterV1Api.md#label_license) | **POST** /configs/cluster/v1/licenses/label | Label License object
 *ClusterV1Api* | [**label_node**](../../../../pensando_dss/docs/ClusterV1Api.md#label_node) | **POST** /configs/cluster/v1/nodes/{O.Name}/label | Label Node object
+*ClusterV1Api* | [**label_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#label_policy_distribution_target) | **POST** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name}/label | Label PolicyDistributionTarget object
+*ClusterV1Api* | [**label_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#label_policy_distribution_target1) | **POST** /configs/cluster/v1/policydistributiontargets/{O.Name}/label | Label PolicyDistributionTarget object
 *ClusterV1Api* | [**label_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#label_tenant) | **POST** /configs/cluster/v1/tenants/{O.Name}/label | Label Tenant object
 *ClusterV1Api* | [**list_distributed_service_card**](../../../../pensando_dss/docs/ClusterV1Api.md#list_distributed_service_card) | **GET** /configs/cluster/v1/distributedservicecards | List DistributedServiceCard objects
 *ClusterV1Api* | [**list_distributed_service_entity**](../../../../pensando_dss/docs/ClusterV1Api.md#list_distributed_service_entity) | **GET** /configs/cluster/v1/distributedserviceentities | List DistributedServiceEntity objects
 *ClusterV1Api* | [**list_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#list_dsc_profile) | **GET** /configs/cluster/v1/dscprofiles | List DSCProfile objects
 *ClusterV1Api* | [**list_host**](../../../../pensando_dss/docs/ClusterV1Api.md#list_host) | **GET** /configs/cluster/v1/hosts | List Host objects
 *ClusterV1Api* | [**list_node**](../../../../pensando_dss/docs/ClusterV1Api.md#list_node) | **GET** /configs/cluster/v1/nodes | List Node objects
+*ClusterV1Api* | [**list_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#list_policy_distribution_target) | **GET** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets | List PolicyDistributionTarget objects
+*ClusterV1Api* | [**list_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#list_policy_distribution_target1) | **GET** /configs/cluster/v1/policydistributiontargets | List PolicyDistributionTarget objects
 *ClusterV1Api* | [**list_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#list_tenant) | **GET** /configs/cluster/v1/tenants | List Tenant objects
 *ClusterV1Api* | [**restore**](../../../../pensando_dss/docs/ClusterV1Api.md#restore) | **POST** /configs/cluster/v1/config-restore/restore | Restore Configuration
 *ClusterV1Api* | [**save**](../../../../pensando_dss/docs/ClusterV1Api.md#save) | **POST** /configs/cluster/v1/config-snapshot/save | Perform a Configuation Snapshot
@@ -60,6 +70,8 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**update_host**](../../../../pensando_dss/docs/ClusterV1Api.md#update_host) | **PUT** /configs/cluster/v1/hosts/{O.Name} | Update Host object
 *ClusterV1Api* | [**update_license**](../../../../pensando_dss/docs/ClusterV1Api.md#update_license) | **PUT** /configs/cluster/v1/licenses | Update License object
 *ClusterV1Api* | [**update_node**](../../../../pensando_dss/docs/ClusterV1Api.md#update_node) | **PUT** /configs/cluster/v1/nodes/{O.Name} | Update Node object
+*ClusterV1Api* | [**update_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#update_policy_distribution_target) | **PUT** /configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name} | Update PolicyDistributionTarget object
+*ClusterV1Api* | [**update_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#update_policy_distribution_target1) | **PUT** /configs/cluster/v1/policydistributiontargets/{O.Name} | Update PolicyDistributionTarget object
 *ClusterV1Api* | [**update_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#update_tenant) | **PUT** /configs/cluster/v1/tenants/{O.Name} | Update Tenant object
 *ClusterV1Api* | [**update_tls_config**](../../../../pensando_dss/docs/ClusterV1Api.md#update_tls_config) | **POST** /configs/cluster/v1/cluster/UpdateTLSConfig | Update TLS Configuration for cluster
 *ClusterV1Api* | [**update_version**](../../../../pensando_dss/docs/ClusterV1Api.md#update_version) | **PUT** /configs/cluster/v1/version | Update Version object
@@ -71,6 +83,8 @@ Class | Method | HTTP request | Description
 *ClusterV1Api* | [**watch_dsc_profile**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_dsc_profile) | **GET** /configs/cluster/v1/watch/dscprofiles | Watch DSCProfile objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_host**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_host) | **GET** /configs/cluster/v1/watch/hosts | Watch Host objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_node**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_node) | **GET** /configs/cluster/v1/watch/nodes | Watch Node objects. Supports WebSockets or HTTP long poll
+*ClusterV1Api* | [**watch_policy_distribution_target**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_policy_distribution_target) | **GET** /configs/cluster/v1/watch/tenant/{O.Tenant}/policydistributiontargets | Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
+*ClusterV1Api* | [**watch_policy_distribution_target1**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_policy_distribution_target1) | **GET** /configs/cluster/v1/watch/policydistributiontargets | Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_tenant**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_tenant) | **GET** /configs/cluster/v1/watch/tenants | Watch Tenant objects. Supports WebSockets or HTTP long poll
 *ClusterV1Api* | [**watch_version**](../../../../pensando_dss/docs/ClusterV1Api.md#watch_version) | **GET** /configs/cluster/v1/watch/version | Watch Version objects. Supports WebSockets or HTTP long poll
 
@@ -111,6 +125,8 @@ Class | Method | HTTP request | Description
  - [ClusterAutoMsgLicenseWatchHelperWatchEvent](../../../docs/ClusterAutoMsgLicenseWatchHelperWatchEvent.md)
  - [ClusterAutoMsgNodeWatchHelper](../../../docs/ClusterAutoMsgNodeWatchHelper.md)
  - [ClusterAutoMsgNodeWatchHelperWatchEvent](../../../docs/ClusterAutoMsgNodeWatchHelperWatchEvent.md)
+ - [ClusterAutoMsgPolicyDistributionTargetWatchHelper](../../../docs/ClusterAutoMsgPolicyDistributionTargetWatchHelper.md)
+ - [ClusterAutoMsgPolicyDistributionTargetWatchHelperWatchEvent](../../../docs/ClusterAutoMsgPolicyDistributionTargetWatchHelperWatchEvent.md)
  - [ClusterAutoMsgSnapshotRestoreWatchHelper](../../../docs/ClusterAutoMsgSnapshotRestoreWatchHelper.md)
  - [ClusterAutoMsgSnapshotRestoreWatchHelperWatchEvent](../../../docs/ClusterAutoMsgSnapshotRestoreWatchHelperWatchEvent.md)
  - [ClusterAutoMsgTenantWatchHelper](../../../docs/ClusterAutoMsgTenantWatchHelper.md)
@@ -182,6 +198,9 @@ Class | Method | HTTP request | Description
  - [ClusterPeerStatus](../../../docs/ClusterPeerStatus.md)
  - [ClusterPnicInfo](../../../docs/ClusterPnicInfo.md)
  - [ClusterPolicerRef](../../../docs/ClusterPolicerRef.md)
+ - [ClusterPolicyDistributionTarget](../../../docs/ClusterPolicyDistributionTarget.md)
+ - [ClusterPolicyDistributionTargetList](../../../docs/ClusterPolicyDistributionTargetList.md)
+ - [ClusterPolicyDistributionTargetSpec](../../../docs/ClusterPolicyDistributionTargetSpec.md)
  - [ClusterPropagationStatus](../../../docs/ClusterPropagationStatus.md)
  - [ClusterQuorumMemberCondition](../../../docs/ClusterQuorumMemberCondition.md)
  - [ClusterQuorumMemberStatus](../../../docs/ClusterQuorumMemberStatus.md)

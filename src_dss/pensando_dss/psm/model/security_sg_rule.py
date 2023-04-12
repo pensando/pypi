@@ -98,10 +98,12 @@ class SecuritySGRule(ModelNormal):
             'description': (str,),  # noqa: E501
             'disable': (bool,),  # noqa: E501
             'from_ip_addresses': ([str],),  # noqa: E501
+            'from_ipcollections': ([str],),  # noqa: E501
             'from_workload_groups': ([str],),  # noqa: E501
             'name': (str,),  # noqa: E501
             'proto_ports': ([SecurityProtoPort],),  # noqa: E501
             'to_ip_addresses': ([str],),  # noqa: E501
+            'to_ipcollections': ([str],),  # noqa: E501
             'to_workload_groups': ([str],),  # noqa: E501
         }
 
@@ -116,10 +118,12 @@ class SecuritySGRule(ModelNormal):
         'description': 'description',  # noqa: E501
         'disable': 'disable',  # noqa: E501
         'from_ip_addresses': 'from-ip-addresses',  # noqa: E501
+        'from_ipcollections': 'from-ipcollections',  # noqa: E501
         'from_workload_groups': 'from-workload-groups',  # noqa: E501
         'name': 'name',  # noqa: E501
         'proto_ports': 'proto-ports',  # noqa: E501
         'to_ip_addresses': 'to-ip-addresses',  # noqa: E501
+        'to_ipcollections': 'to-ipcollections',  # noqa: E501
         'to_workload_groups': 'to-workload-groups',  # noqa: E501
     }
 
@@ -174,10 +178,12 @@ class SecuritySGRule(ModelNormal):
             description (str): describes rule. Length of string should be between 0 and 256.. [optional]  # noqa: E501
             disable (bool): is rule disabled.. [optional]  # noqa: E501
             from_ip_addresses ([str]): inbound rule from a given ip-address/ip-mask/ip-range. Use any to refer to all ipaddresses cli-tags: id=from-ip.. [optional]  # noqa: E501
+            from_ipcollections ([str]): inbound rule from a given ipcollection.. [optional]  # noqa: E501
             from_workload_groups ([str]): inbound rule from a given workload group.. [optional]  # noqa: E501
             name (str): rule name. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 0 and 64.. [optional]  # noqa: E501
             proto_ports ([SecurityProtoPort]): list of (protocol, ports) pairs to which the rule applies to, in addition to apps.. [optional]  # noqa: E501
             to_ip_addresses ([str]): outbound rule from a given ip-address/ip-mask/ip-range. Use any to refer to all ipaddresses cli-tags: id=to-ip.. [optional]  # noqa: E501
+            to_ipcollections ([str]): outbound rule from a given ipcollection.. [optional]  # noqa: E501
             to_workload_groups ([str]): outbound rule from a given workload group.. [optional]  # noqa: E501
         """
 

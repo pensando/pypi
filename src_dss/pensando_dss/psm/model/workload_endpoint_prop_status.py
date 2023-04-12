@@ -30,7 +30,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.api_dse_status import ApiDSEStatus
+    from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
     globals()['ApiDSEStatus'] = ApiDSEStatus
+    globals()['ApiPDTStatus'] = ApiPDTStatus
 
 
 class WorkloadEndpointPropStatus(ModelNormal):
@@ -83,6 +85,7 @@ class WorkloadEndpointPropStatus(ModelNormal):
             'generation_id': (str,),  # noqa: E501
             'mac_address': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
+            'pdt_status': ([ApiPDTStatus],),  # noqa: E501
             'pending': (int,),  # noqa: E501
             'pending_dses': ([str],),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -99,6 +102,7 @@ class WorkloadEndpointPropStatus(ModelNormal):
         'generation_id': 'generation-id',  # noqa: E501
         'mac_address': 'mac-address',  # noqa: E501
         'name': 'name',  # noqa: E501
+        'pdt_status': 'pdt-status',  # noqa: E501
         'pending': 'pending',  # noqa: E501
         'pending_dses': 'pending-dses',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -155,6 +159,7 @@ class WorkloadEndpointPropStatus(ModelNormal):
             generation_id (str): [optional]  # noqa: E501
             mac_address (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
+            pdt_status ([ApiPDTStatus]): [optional]  # noqa: E501
             pending (int): [optional]  # noqa: E501
             pending_dses ([str]): [optional]  # noqa: E501
             status (str): [optional]  # noqa: E501

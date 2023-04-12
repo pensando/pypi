@@ -17,6 +17,7 @@ from pensando_dss.psm.model.api_list_meta import ApiListMeta
 from pensando_dss.psm.model.api_list_watch_options import ApiListWatchOptions
 from pensando_dss.psm.model.api_object_meta import ApiObjectMeta
 from pensando_dss.psm.model.api_object_ref import ApiObjectRef
+from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
 from pensando_dss.psm.model.api_propagation_status import ApiPropagationStatus
 from pensando_dss.psm.model.api_status import ApiStatus
 from pensando_dss.psm.model.api_status_result import ApiStatusResult

@@ -76,6 +76,7 @@ class SearchPolicySearchRequest(ModelNormal):
         return {
             'action': (str,),  # noqa: E501
             'app': (str,),  # noqa: E501
+            'destination_address': (str,),  # noqa: E501
             'from_ip_address': (str,),  # noqa: E501
             'from_workload_group': (str,),  # noqa: E501
             'kinds': ([str],),  # noqa: E501
@@ -83,9 +84,14 @@ class SearchPolicySearchRequest(ModelNormal):
             'namespace': (str,),  # noqa: E501
             'port': (str,),  # noqa: E501
             'protocol': (str,),  # noqa: E501
+            'source_address': (str,),  # noqa: E501
             'tenant': (str,),  # noqa: E501
             'to_ip_address': (str,),  # noqa: E501
             'to_workload_group': (str,),  # noqa: E501
+            'translated_destination_address': (str,),  # noqa: E501
+            'translated_destination_port': (str,),  # noqa: E501
+            'translated_source_address': (str,),  # noqa: E501
+            'virtual_routers': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -96,6 +102,7 @@ class SearchPolicySearchRequest(ModelNormal):
     attribute_map = {
         'action': 'action',  # noqa: E501
         'app': 'app',  # noqa: E501
+        'destination_address': 'destination-address',  # noqa: E501
         'from_ip_address': 'from-ip-address',  # noqa: E501
         'from_workload_group': 'from-workload-group',  # noqa: E501
         'kinds': 'kinds',  # noqa: E501
@@ -103,9 +110,14 @@ class SearchPolicySearchRequest(ModelNormal):
         'namespace': 'namespace',  # noqa: E501
         'port': 'port',  # noqa: E501
         'protocol': 'protocol',  # noqa: E501
+        'source_address': 'source-address',  # noqa: E501
         'tenant': 'tenant',  # noqa: E501
         'to_ip_address': 'to-ip-address',  # noqa: E501
         'to_workload_group': 'to-workload-group',  # noqa: E501
+        'translated_destination_address': 'translated-destination-address',  # noqa: E501
+        'translated_destination_port': 'translated-destination-port',  # noqa: E501
+        'translated_source_address': 'translated-source-address',  # noqa: E501
+        'virtual_routers': 'virtual-routers',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -156,16 +168,22 @@ class SearchPolicySearchRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             action (str): Action, e.g. PERMIT, DENY or REJECT/CLEAR, PROTECT_PERMISSIVE or PROTECT_STRICT.. [optional]  # noqa: E501
             app (str): App specification,  predefined apps and alg config.. [optional]  # noqa: E501
+            destination_address (str): Destination Address to be used for NAT policy search, can be either an IP address or IP collection name.. [optional]  # noqa: E501
             from_ip_address (str): Inbound ip-address, use any to refer to all ipaddresses eg: 10.1.1.1, any.. [optional]  # noqa: E501
             from_workload_group (str): Inbound workload group.. [optional]  # noqa: E501
-            kinds ([str]): Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy.. [optional]  # noqa: E501
+            kinds ([str]): Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy, IPSecPolicy or NATPolicy.. [optional]  # noqa: E501
             name (str): Name is optional. If provided policy-search will be limited to the specified policy of the given name on the given kind. If empty, then all the policies of the given kind will be searched.. [optional]  # noqa: E501
             namespace (str): Namespace is optional. If provided policy-search will be limited to the specified namespace.. [optional] if omitted the server will use the default value of "default"  # noqa: E501
             port (str): TCP or UDP Port number.. [optional]  # noqa: E501
             protocol (str): Protocol eg: tcp, udp, icmp.. [optional]  # noqa: E501
+            source_address (str): NAT policy related fields Source Address to be used for NAT policy search, can be either an IP address or IP collection name.. [optional]  # noqa: E501
             tenant (str): Tenant Name, to perform query within a Tenant's scope. The default tenant is \"default\". In the backend this field gets auto-filled & validated by apigw-hook based on user login context.. [optional] if omitted the server will use the default value of "default"  # noqa: E501
             to_ip_address (str): Outbound ip-address, use any to refer to all ipaddresses eg: 20.1.1.1, any.. [optional]  # noqa: E501
             to_workload_group (str): Outbound workload group.. [optional]  # noqa: E501
+            translated_destination_address (str): Translated Destination Address to be used for NAT policy search, can be either an IP address or IP collection name.. [optional]  # noqa: E501
+            translated_destination_port (str): Translated Destination Port to be use for NAT policy search.. [optional]  # noqa: E501
+            translated_source_address (str): Translated Source Address to be used for NAT policy search, can be either an IP address or IP collection name.. [optional]  # noqa: E501
+            virtual_routers ([str]): VirtualRouters to be use for searching Security Policy / IPSec Policy / NAT Policy based on VRF association.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

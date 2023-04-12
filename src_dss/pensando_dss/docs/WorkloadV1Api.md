@@ -176,6 +176,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -361,6 +372,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -546,6 +568,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -730,6 +763,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -1454,6 +1498,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -1639,6 +1694,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -1824,6 +1890,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -2009,6 +2086,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -3568,6 +3656,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -3753,6 +3852,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -3938,6 +4048,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",
@@ -4123,6 +4244,17 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                         generation_id="generation_id_example",
                         mac_address="mac_address_example",
                         name="name_example",
+                        pdt_status=[
+                            ApiPDTStatus(
+                                name="name_example",
+                                pending=1,
+                                pending_dses=[
+                                    "pending_dses_example",
+                                ],
+                                status="status_example",
+                                updated=1,
+                            ),
+                        ],
                         pending=1,
                         pending_dses=[
                             "pending_dses_example",

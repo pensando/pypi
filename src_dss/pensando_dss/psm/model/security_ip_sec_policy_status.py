@@ -29,10 +29,14 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.api_configuration_issues import ApiConfigurationIssues
     from pensando_dss.psm.model.security_ip_sec_rule_status import SecurityIPSecRuleStatus
     from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+    from pensando_dss.psm.model.security_tunnel_endpoint_status import SecurityTunnelEndpointStatus
+    globals()['ApiConfigurationIssues'] = ApiConfigurationIssues
     globals()['SecurityIPSecRuleStatus'] = SecurityIPSecRuleStatus
     globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
+    globals()['SecurityTunnelEndpointStatus'] = SecurityTunnelEndpointStatus
 
 
 class SecurityIPSecPolicyStatus(ModelNormal):
@@ -81,10 +85,12 @@ class SecurityIPSecPolicyStatus(ModelNormal):
         """
         lazy_import()
         return {
+            'configuration_issues': (ApiConfigurationIssues,),  # noqa: E501
             'esp_params': (str,),  # noqa: E501
             'ike_params': (str,),  # noqa: E501
             'propagation_status': (SecurityPropagationStatus,),  # noqa: E501
             'rule_status': ([SecurityIPSecRuleStatus],),  # noqa: E501
+            'tunnel_endpoint_status': ([SecurityTunnelEndpointStatus],),  # noqa: E501
         }
 
     @cached_property
@@ -93,10 +99,12 @@ class SecurityIPSecPolicyStatus(ModelNormal):
 
 
     attribute_map = {
+        'configuration_issues': 'configuration-issues',  # noqa: E501
         'esp_params': 'esp-params',  # noqa: E501
         'ike_params': 'ike-params',  # noqa: E501
         'propagation_status': 'propagation-status',  # noqa: E501
         'rule_status': 'rule-status',  # noqa: E501
+        'tunnel_endpoint_status': 'tunnel-endpoint-status',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -145,10 +153,12 @@ class SecurityIPSecPolicyStatus(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            configuration_issues (ApiConfigurationIssues): [optional]  # noqa: E501
             esp_params (str): Encryption and Algorithm details used for encrypting data traffic (ESP).. [optional]  # noqa: E501
             ike_params (str): Encryption and Algorithm details used for IKEv2 key exchange.. [optional]  # noqa: E501
             propagation_status (SecurityPropagationStatus): [optional]  # noqa: E501
             rule_status ([SecurityIPSecRuleStatus]): [optional]  # noqa: E501
+            tunnel_endpoint_status ([SecurityTunnelEndpointStatus]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

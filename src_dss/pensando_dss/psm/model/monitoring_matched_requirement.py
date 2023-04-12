@@ -64,6 +64,7 @@ class MonitoringMatchedRequirement(ModelNormal):
             'LT': "lt",
             'LTE': "lte",
             'INFIELD': "infield",
+            'CONTAINS': "contains",
         },
     }
 

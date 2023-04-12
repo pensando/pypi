@@ -152,12 +152,12 @@ class MonitoringFlowExportPolicySpec(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            disabled (bool): Enable/disable flow export.. [optional]  # noqa: E501
+            disabled (bool): Enable/disable flow export. Not supported for DSS.. [optional]  # noqa: E501
             exports ([MonitoringExportConfig]): Export contains export parameters.. [optional]  # noqa: E501
             format (str): [optional] if omitted the server will use the default value of "ipfix"  # noqa: E501
             interval (str): Interval defines how often to push the records to an external collector The value is specified as a string format, '10s', '20m'. Should be a valid time duration between 1s and 24h0m0s.. [optional] if omitted the server will use the default value of "10s"  # noqa: E501
             match_rules ([MonitoringMatchRule]): [optional]  # noqa: E501
-            template_interval (str): TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, '1m', '10m'. Should be a valid time duration between 1m0s and 30m0s.. [optional] if omitted the server will use the default value of "5m"  # noqa: E501
+            template_interval (str): TemplateInterval defines how often to send ipfix templates to an external collector The value is specified as a string format, '1m', '10m'. Should be a valid time duration between 1m0s and 30m0s.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -1,6 +1,6 @@
 # SecurityIPSecMatchRule
 
-IPSecMatchRule : This is used to select packets to match the IPSec Rule.
+IPSecMatchRule : This is used to select packets to match the IPSec Rule; Applies to East-West Traffic only.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

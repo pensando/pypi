@@ -86,6 +86,7 @@ class ClusterClusterStatus(ModelNormal):
             'current_time': (datetime,),  # noqa: E501
             'last_leader_transition_time': (datetime,),  # noqa: E501
             'leader': (str,),  # noqa: E501
+            'public_key': (str,),  # noqa: E501
             'quorum_status': (ClusterQuorumStatus,),  # noqa: E501
             'recovery_keys_downloaded': (bool,),  # noqa: E501
         }
@@ -101,6 +102,7 @@ class ClusterClusterStatus(ModelNormal):
         'current_time': 'current-time',  # noqa: E501
         'last_leader_transition_time': 'last-leader-transition-time',  # noqa: E501
         'leader': 'leader',  # noqa: E501
+        'public_key': 'public-key',  # noqa: E501
         'quorum_status': 'quorum-status',  # noqa: E501
         'recovery_keys_downloaded': 'recovery-keys-downloaded',  # noqa: E501
     }
@@ -156,6 +158,7 @@ class ClusterClusterStatus(ModelNormal):
             current_time (datetime): CurrentTime is current time of a cluster.. [optional]  # noqa: E501
             last_leader_transition_time (datetime): LastLeaderTransitionTime is when the leadership changed last time.. [optional]  # noqa: E501
             leader (str): Leader contains the node name of the cluster leader.. [optional]  # noqa: E501
+            public_key (str): PublicKey is the pem encoded public key created by CMD during cluster creation.. [optional]  # noqa: E501
             quorum_status (ClusterQuorumStatus): [optional]  # noqa: E501
             recovery_keys_downloaded (bool): RecoveryKeysDownloaded indicates whether keys have been downloaded since the cluster has been bootstrapped.. [optional]  # noqa: E501
         """

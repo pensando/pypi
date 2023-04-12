@@ -30,7 +30,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 
 def lazy_import():
     from pensando_dss.psm.model.api_dse_status import ApiDSEStatus
+    from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
     globals()['ApiDSEStatus'] = ApiDSEStatus
+    globals()['ApiPDTStatus'] = ApiPDTStatus
 
 
 class ApiPropagationStatus(ModelNormal):
@@ -81,6 +83,7 @@ class ApiPropagationStatus(ModelNormal):
         return {
             'dse_status': ([ApiDSEStatus],),  # noqa: E501
             'generation_id': (str,),  # noqa: E501
+            'pdt_status': ([ApiPDTStatus],),  # noqa: E501
             'pending': (int,),  # noqa: E501
             'pending_dses': ([str],),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -95,6 +98,7 @@ class ApiPropagationStatus(ModelNormal):
     attribute_map = {
         'dse_status': 'dse-status',  # noqa: E501
         'generation_id': 'generation-id',  # noqa: E501
+        'pdt_status': 'pdt-status',  # noqa: E501
         'pending': 'pending',  # noqa: E501
         'pending_dses': 'pending-dses',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -149,6 +153,7 @@ class ApiPropagationStatus(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             dse_status ([ApiDSEStatus]): list of DSEs status.. [optional]  # noqa: E501
             generation_id (str): The Generation ID this status is for.. [optional]  # noqa: E501
+            pdt_status ([ApiPDTStatus]): list of PDT status.. [optional]  # noqa: E501
             pending (int): Number of DSEs pending. If this is 0 it can be assumed that everything is up to date.. [optional]  # noqa: E501
             pending_dses ([str]): list of DSEs where propagation did not complete.. [optional]  # noqa: E501
             status (str): Textual description of propagation status.. [optional]  # noqa: E501

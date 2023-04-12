@@ -29,7 +29,9 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
     from pensando_dss.psm.model.security_dsc_status import SecurityDSCStatus
+    globals()['ApiPDTStatus'] = ApiPDTStatus
     globals()['SecurityDSCStatus'] = SecurityDSCStatus
 
 
@@ -82,6 +84,7 @@ class SecurityPropagationStatus(ModelNormal):
             'dsc_status': ([SecurityDSCStatus],),  # noqa: E501
             'generation_id': (str,),  # noqa: E501
             'min_version': (str,),  # noqa: E501
+            'pdt_status': ([ApiPDTStatus],),  # noqa: E501
             'pending': (int,),  # noqa: E501
             'pending_dscs': ([str],),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -97,6 +100,7 @@ class SecurityPropagationStatus(ModelNormal):
         'dsc_status': 'dsc-status',  # noqa: E501
         'generation_id': 'generation-id',  # noqa: E501
         'min_version': 'min-version',  # noqa: E501
+        'pdt_status': 'pdt-status',  # noqa: E501
         'pending': 'pending',  # noqa: E501
         'pending_dscs': 'pending-dscs',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -152,6 +156,7 @@ class SecurityPropagationStatus(ModelNormal):
             dsc_status ([SecurityDSCStatus]): list of DSCs status.. [optional]  # noqa: E501
             generation_id (str): The Generation ID this status is for.. [optional]  # noqa: E501
             min_version (str): The Version running on the slowest Naples.. [optional]  # noqa: E501
+            pdt_status ([ApiPDTStatus]): PDT propagation status.. [optional]  # noqa: E501
             pending (int): Number of Naples pending. If this is 0 it can be assumed that everything is up to date.. [optional]  # noqa: E501
             pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]  # noqa: E501
             status (str): Textual description of propagation status.. [optional]  # noqa: E501

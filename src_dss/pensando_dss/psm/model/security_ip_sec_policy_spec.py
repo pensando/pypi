@@ -31,8 +31,10 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 def lazy_import():
     from pensando_dss.psm.model.security_ip_sec_config import SecurityIPSecConfig
     from pensando_dss.psm.model.security_ip_sec_policy_rule import SecurityIPSecPolicyRule
+    from pensando_dss.psm.model.security_tunnel_endpoint import SecurityTunnelEndpoint
     globals()['SecurityIPSecConfig'] = SecurityIPSecConfig
     globals()['SecurityIPSecPolicyRule'] = SecurityIPSecPolicyRule
+    globals()['SecurityTunnelEndpoint'] = SecurityTunnelEndpoint
 
 
 class SecurityIPSecPolicySpec(ModelNormal):
@@ -60,6 +62,11 @@ class SecurityIPSecPolicySpec(ModelNormal):
     """
 
     allowed_values = {
+        ('ha_mode',): {
+            'NO_HA': "no_ha",
+            'ACTIVE_ACTIVE': "active_active",
+            'ACTIVE_PASSIVE': "active_passive",
+        },
     }
 
     validations = {
@@ -82,7 +89,10 @@ class SecurityIPSecPolicySpec(ModelNormal):
         lazy_import()
         return {
             'config': (SecurityIPSecConfig,),  # noqa: E501
+            'ha_mode': (str,),  # noqa: E501
+            'policy_distribution_targets': ([str],),  # noqa: E501
             'rules': ([SecurityIPSecPolicyRule],),  # noqa: E501
+            'tunnel_endpoints': ([SecurityTunnelEndpoint],),  # noqa: E501
         }
 
     @cached_property
@@ -92,7 +102,10 @@ class SecurityIPSecPolicySpec(ModelNormal):
 
     attribute_map = {
         'config': 'config',  # noqa: E501
+        'ha_mode': 'ha-mode',  # noqa: E501
+        'policy_distribution_targets': 'policy-distribution-targets',  # noqa: E501
         'rules': 'rules',  # noqa: E501
+        'tunnel_endpoints': 'tunnel-endpoints',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -142,7 +155,10 @@ class SecurityIPSecPolicySpec(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             config (SecurityIPSecConfig): [optional]  # noqa: E501
-            rules ([SecurityIPSecPolicyRule]): list of rules.. [optional]  # noqa: E501
+            ha_mode (str): Applies to North-South Traffic only.. [optional] if omitted the server will use the default value of "no_ha"  # noqa: E501
+            policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]  # noqa: E501
+            rules ([SecurityIPSecPolicyRule]): list of rules; Applies to East-West Traffic only.. [optional]  # noqa: E501
+            tunnel_endpoints ([SecurityTunnelEndpoint]): TunnelEndpoints applies to North-South Traffic only.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

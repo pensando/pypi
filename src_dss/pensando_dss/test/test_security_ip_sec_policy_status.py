@@ -12,10 +12,14 @@ import sys
 import unittest
 
 import psm
+from pensando_dss.psm.model.api_configuration_issues import ApiConfigurationIssues
 from pensando_dss.psm.model.security_ip_sec_rule_status import SecurityIPSecRuleStatus
 from pensando_dss.psm.model.security_propagation_status import SecurityPropagationStatus
+from pensando_dss.psm.model.security_tunnel_endpoint_status import SecurityTunnelEndpointStatus
+globals()['ApiConfigurationIssues'] = ApiConfigurationIssues
 globals()['SecurityIPSecRuleStatus'] = SecurityIPSecRuleStatus
 globals()['SecurityPropagationStatus'] = SecurityPropagationStatus
+globals()['SecurityTunnelEndpointStatus'] = SecurityTunnelEndpointStatus
 from pensando_dss.psm.psm.model.security_ip_sec_policy_status import SecurityIPSecPolicyStatus
 
 

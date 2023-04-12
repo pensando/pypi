@@ -75,6 +75,8 @@ class ClusterDSM(ModelNormal):
         """
         return {
             'mac_address': (str,),  # noqa: E501
+            'nsp_count': (int,),  # noqa: E501
+            'nsp_rule_count': (int,),  # noqa: E501
             'unit_id': (int,),  # noqa: E501
         }
 
@@ -85,6 +87,8 @@ class ClusterDSM(ModelNormal):
 
     attribute_map = {
         'mac_address': 'mac-address',  # noqa: E501
+        'nsp_count': 'nsp-count',  # noqa: E501
+        'nsp_rule_count': 'nsp-rule-count',  # noqa: E501
         'unit_id': 'unit-id',  # noqa: E501
     }
 
@@ -134,7 +138,9 @@ class ClusterDSM(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            mac_address (str): Base MAC address of.. [optional]  # noqa: E501
+            mac_address (str): Base MAC address.. [optional]  # noqa: E501
+            nsp_count (int): NSPCount is the number of network security policies.. [optional]  # noqa: E501
+            nsp_rule_count (int): NSPRuleCount is the cumulative count of rules in network security policies.. [optional]  # noqa: E501
             unit_id (int): unit id of the dsm.. [optional]  # noqa: E501
         """
 

@@ -80,6 +80,7 @@ class SearchPolicyMatchEntries(ModelNormal):
         lazy_import()
         return {
             'entries': ([SearchPolicyMatchEntry],),  # noqa: E501
+            'virtual_routers': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -89,6 +90,7 @@ class SearchPolicyMatchEntries(ModelNormal):
 
     attribute_map = {
         'entries': 'entries',  # noqa: E501
+        'virtual_routers': 'virtual-routers',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -138,6 +140,7 @@ class SearchPolicyMatchEntries(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             entries ([SearchPolicyMatchEntry]): [optional]  # noqa: E501
+            virtual_routers ([str]): policy associates with the VRF If the same policy is associated with multiple VRFs, which are also present in the query request, then the response will have all those VRFs populated in the response.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -55,7 +55,7 @@ class SearchV1Api(object):
 
             Keyword Args:
                 tenant (str): Tenant Name, to perform query within a Tenant's scope. The default tenant is \"default\". In the backend this field gets auto-filled & validated by apigw-hook based on user login context.. [optional]
-                kinds ([str]): Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy.. [optional]
+                kinds ([str]): Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy, IPSecPolicy or NATPolicy.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object

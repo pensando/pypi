@@ -2049,7 +2049,8 @@ class SecurityV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                spec_policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]
+                configuration_issues_issues ([str]): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2112,7 +2113,8 @@ class SecurityV1Api(object):
                     'o_tenant',
                     't_kind',
                     'meta_creation_time',
-                    'propagation_status_pending_dscs',
+                    'spec_policy_distribution_targets',
+                    'configuration_issues_issues',
                 ],
                 'required': [
                     'o_tenant',
@@ -2136,23 +2138,28 @@ class SecurityV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'propagation_status_pending_dscs':
+                    'spec_policy_distribution_targets':
+                        ([str],),
+                    'configuration_issues_issues':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'spec_policy_distribution_targets': 'spec.policy-distribution-targets',
+                    'configuration_issues_issues': 'configuration-issues.issues',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'spec_policy_distribution_targets': 'query',
+                    'configuration_issues_issues': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'spec_policy_distribution_targets': 'csv',
+                    'configuration_issues_issues': 'csv',
                 }
             },
             headers_map={
@@ -2184,7 +2191,8 @@ class SecurityV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                spec_policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]
+                configuration_issues_issues ([str]): [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2247,7 +2255,8 @@ class SecurityV1Api(object):
                     'o_name',
                     't_kind',
                     'meta_creation_time',
-                    'propagation_status_pending_dscs',
+                    'spec_policy_distribution_targets',
+                    'configuration_issues_issues',
                 ],
                 'required': [
                     'o_name',
@@ -2271,23 +2280,28 @@ class SecurityV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'propagation_status_pending_dscs':
+                    'spec_policy_distribution_targets':
+                        ([str],),
+                    'configuration_issues_issues':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'spec_policy_distribution_targets': 'spec.policy-distribution-targets',
+                    'configuration_issues_issues': 'configuration-issues.issues',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'spec_policy_distribution_targets': 'query',
+                    'configuration_issues_issues': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'spec_policy_distribution_targets': 'csv',
+                    'configuration_issues_issues': 'csv',
                 }
             },
             headers_map={
@@ -2319,7 +2333,7 @@ class SecurityV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                spec_policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2382,7 +2396,7 @@ class SecurityV1Api(object):
                     'o_tenant',
                     't_kind',
                     'meta_creation_time',
-                    'propagation_status_pending_dscs',
+                    'spec_policy_distribution_targets',
                 ],
                 'required': [
                     'o_tenant',
@@ -2406,23 +2420,23 @@ class SecurityV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'propagation_status_pending_dscs':
+                    'spec_policy_distribution_targets':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_tenant': 'O.Tenant',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'spec_policy_distribution_targets': 'spec.policy-distribution-targets',
                 },
                 'location_map': {
                     'o_tenant': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'spec_policy_distribution_targets': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'spec_policy_distribution_targets': 'csv',
                 }
             },
             headers_map={
@@ -2454,7 +2468,7 @@ class SecurityV1Api(object):
             Keyword Args:
                 t_kind (str): Kind represents the type of the API object.. [optional]
                 meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
-                propagation_status_pending_dscs ([str]): list of DSCs where propagation did not complete.. [optional]
+                spec_policy_distribution_targets ([str]): PolicyDistributionTargets on which this policy should get deployed.. [optional]
                 _return_http_data_only (bool): response data without head status
                     code and headers. Default is True.
                 _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -2517,7 +2531,7 @@ class SecurityV1Api(object):
                     'o_name',
                     't_kind',
                     'meta_creation_time',
-                    'propagation_status_pending_dscs',
+                    'spec_policy_distribution_targets',
                 ],
                 'required': [
                     'o_name',
@@ -2541,23 +2555,23 @@ class SecurityV1Api(object):
                         (str,),
                     'meta_creation_time':
                         (datetime,),
-                    'propagation_status_pending_dscs':
+                    'spec_policy_distribution_targets':
                         ([str],),
                 },
                 'attribute_map': {
                     'o_name': 'O.Name',
                     't_kind': 'T.kind',
                     'meta_creation_time': 'meta.creation-time',
-                    'propagation_status_pending_dscs': 'propagation-status.pending-dscs',
+                    'spec_policy_distribution_targets': 'spec.policy-distribution-targets',
                 },
                 'location_map': {
                     'o_name': 'path',
                     't_kind': 'query',
                     'meta_creation_time': 'query',
-                    'propagation_status_pending_dscs': 'query',
+                    'spec_policy_distribution_targets': 'query',
                 },
                 'collection_format_map': {
-                    'propagation_status_pending_dscs': 'csv',
+                    'spec_policy_distribution_targets': 'csv',
                 }
             },
             headers_map={

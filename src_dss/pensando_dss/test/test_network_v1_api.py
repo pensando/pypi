@@ -23,6 +23,20 @@ class TestNetworkV1Api(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_add_ip_collection(self):
+        """Test case for add_ip_collection
+
+        Create IPCollection object  # noqa: E501
+        """
+        pass
+
+    def test_add_ip_collection1(self):
+        """Test case for add_ip_collection1
+
+        Create IPCollection object  # noqa: E501
+        """
+        pass
+
     def test_add_ipam_policy(self):
         """Test case for add_ipam_policy
 
@@ -34,6 +48,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for add_ipam_policy1
 
         Create IPAMPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_add_nat_policy(self):
+        """Test case for add_nat_policy
+
+        Create NATPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_add_nat_policy1(self):
+        """Test case for add_nat_policy1
+
+        Create NATPolicy object  # noqa: E501
         """
         pass
 
@@ -114,6 +142,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_delete_ip_collection(self):
+        """Test case for delete_ip_collection
+
+        Delete IPCollection object  # noqa: E501
+        """
+        pass
+
+    def test_delete_ip_collection1(self):
+        """Test case for delete_ip_collection1
+
+        Delete IPCollection object  # noqa: E501
+        """
+        pass
+
     def test_delete_ipam_policy(self):
         """Test case for delete_ipam_policy
 
@@ -125,6 +167,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for delete_ipam_policy1
 
         Delete IPAMPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_delete_nat_policy(self):
+        """Test case for delete_nat_policy
+
+        Delete NATPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_delete_nat_policy1(self):
+        """Test case for delete_nat_policy1
+
+        Delete NATPolicy object  # noqa: E501
         """
         pass
 
@@ -191,6 +247,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_get_ip_collection(self):
+        """Test case for get_ip_collection
+
+        Get IPCollection object  # noqa: E501
+        """
+        pass
+
+    def test_get_ip_collection1(self):
+        """Test case for get_ip_collection1
+
+        Get IPCollection object  # noqa: E501
+        """
+        pass
+
     def test_get_ipam_policy(self):
         """Test case for get_ipam_policy
 
@@ -202,6 +272,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for get_ipam_policy1
 
         Get IPAMPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_get_nat_policy(self):
+        """Test case for get_nat_policy
+
+        Get NATPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_get_nat_policy1(self):
+        """Test case for get_nat_policy1
+
+        Get NATPolicy object  # noqa: E501
         """
         pass
 
@@ -289,6 +373,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_label_ip_collection(self):
+        """Test case for label_ip_collection
+
+        Label IPCollection object  # noqa: E501
+        """
+        pass
+
+    def test_label_ip_collection1(self):
+        """Test case for label_ip_collection1
+
+        Label IPCollection object  # noqa: E501
+        """
+        pass
+
     def test_label_ipam_policy(self):
         """Test case for label_ipam_policy
 
@@ -300,6 +398,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for label_ipam_policy1
 
         Label IPAMPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_label_nat_policy(self):
+        """Test case for label_nat_policy
+
+        Label NATPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_label_nat_policy1(self):
+        """Test case for label_nat_policy1
+
+        Label NATPolicy object  # noqa: E501
         """
         pass
 
@@ -373,6 +485,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_list_ip_collection(self):
+        """Test case for list_ip_collection
+
+        List IPCollection objects  # noqa: E501
+        """
+        pass
+
+    def test_list_ip_collection1(self):
+        """Test case for list_ip_collection1
+
+        List IPCollection objects  # noqa: E501
+        """
+        pass
+
     def test_list_ipam_policy(self):
         """Test case for list_ipam_policy
 
@@ -384,6 +510,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for list_ipam_policy1
 
         List IPAMPolicy objects  # noqa: E501
+        """
+        pass
+
+    def test_list_nat_policy(self):
+        """Test case for list_nat_policy
+
+        List NATPolicy objects  # noqa: E501
+        """
+        pass
+
+    def test_list_nat_policy1(self):
+        """Test case for list_nat_policy1
+
+        List NATPolicy objects  # noqa: E501
         """
         pass
 
@@ -471,6 +611,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_update_ip_collection(self):
+        """Test case for update_ip_collection
+
+        Update IPCollection object  # noqa: E501
+        """
+        pass
+
+    def test_update_ip_collection1(self):
+        """Test case for update_ip_collection1
+
+        Update IPCollection object  # noqa: E501
+        """
+        pass
+
     def test_update_ipam_policy(self):
         """Test case for update_ipam_policy
 
@@ -482,6 +636,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for update_ipam_policy1
 
         Update IPAMPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_update_nat_policy(self):
+        """Test case for update_nat_policy
+
+        Update NATPolicy object  # noqa: E501
+        """
+        pass
+
+    def test_update_nat_policy1(self):
+        """Test case for update_nat_policy1
+
+        Update NATPolicy object  # noqa: E501
         """
         pass
 
@@ -555,6 +723,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """
         pass
 
+    def test_watch_ip_collection(self):
+        """Test case for watch_ip_collection
+
+        Watch IPCollection objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_ip_collection1(self):
+        """Test case for watch_ip_collection1
+
+        Watch IPCollection objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
     def test_watch_ipam_policy(self):
         """Test case for watch_ipam_policy
 
@@ -566,6 +748,20 @@ class TestNetworkV1Api(unittest.TestCase):
         """Test case for watch_ipam_policy1
 
         Watch IPAMPolicy objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_nat_policy(self):
+        """Test case for watch_nat_policy
+
+        Watch NATPolicy objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_nat_policy1(self):
+        """Test case for watch_nat_policy1
+
+        Watch NATPolicy objects. Supports WebSockets or HTTP long poll  # noqa: E501
         """
         pass
 

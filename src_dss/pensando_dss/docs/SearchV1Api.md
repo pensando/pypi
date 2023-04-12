@@ -44,7 +44,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     tenant = "tenant_example" # str | Tenant Name, to perform query within a Tenant's scope. The default tenant is \"default\". In the backend this field gets auto-filled & validated by apigw-hook based on user login context. (optional)
     kinds = [
         "kinds_example",
-    ] # [str] | Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy. (optional)
+    ] # [str] | Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy, IPSecPolicy or NATPolicy. (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -61,7 +61,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant** | **str**| Tenant Name, to perform query within a Tenant&#39;s scope. The default tenant is \&quot;default\&quot;. In the backend this field gets auto-filled &amp; validated by apigw-hook based on user login context. | [optional]
- **kinds** | **[str]**| Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy or IPSecPolicy. | [optional]
+ **kinds** | **[str]**| Kind of the policy that this request should act on. It should be either NetworkSecurityPolicy, IPSecPolicy or NATPolicy. | [optional]
 
 ### Return type
 
@@ -193,6 +193,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
     body = SearchPolicySearchRequest(
         action="action_example",
         app="app_example",
+        destination_address="destination_address_example",
         from_ip_address="from_ip_address_example",
         from_workload_group="from_workload_group_example",
         kinds=[
@@ -202,9 +203,16 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         namespace="default",
         port="port_example",
         protocol="protocol_example",
+        source_address="source_address_example",
         tenant="default",
         to_ip_address="to_ip_address_example",
         to_workload_group="to_workload_group_example",
+        translated_destination_address="translated_destination_address_example",
+        translated_destination_port="translated_destination_port_example",
+        translated_source_address="translated_source_address_example",
+        virtual_routers=[
+            "virtual_routers_example",
+        ],
     ) # SearchPolicySearchRequest | 
 
     # example passing only required values which don't have defaults set

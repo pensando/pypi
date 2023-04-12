@@ -15,6 +15,7 @@ from pensando_dss.psm.model.api_kind_watch_options import ApiKindWatchOptions
 from pensando_dss.psm.model.api_list_watch_options import ApiListWatchOptions
 from pensando_dss.psm.model.api_object_meta import ApiObjectMeta
 from pensando_dss.psm.model.api_object_ref import ApiObjectRef
+from pensando_dss.psm.model.api_proto_port import ApiProtoPort
 from pensando_dss.psm.model.api_status import ApiStatus
 from pensando_dss.psm.model.api_status_result import ApiStatusResult
 from pensando_dss.psm.model.api_timestamp import ApiTimestamp
@@ -26,6 +27,8 @@ from pensando_dss.psm.model.fields_selector import FieldsSelector
 from pensando_dss.psm.model.googleprotobuf_any import GoogleprotobufAny
 from pensando_dss.psm.model.labels_requirement import LabelsRequirement
 from pensando_dss.psm.model.labels_selector import LabelsSelector
+from pensando_dss.psm.model.network_nat_address import NetworkNATAddress
+from pensando_dss.psm.model.network_nat_rule import NetworkNATRule
 from pensando_dss.psm.model.search_category_aggregation import SearchCategoryAggregation
 from pensando_dss.psm.model.search_category_preview import SearchCategoryPreview
 from pensando_dss.psm.model.search_entry import SearchEntry

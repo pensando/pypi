@@ -13,7 +13,9 @@ import unittest
 
 import psm
 from pensando_dss.psm.model.api_dse_status import ApiDSEStatus
+from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
 globals()['ApiDSEStatus'] = ApiDSEStatus
+globals()['ApiPDTStatus'] = ApiPDTStatus
 from pensando_dss.psm.psm.model.workload_endpoint_prop_status import WorkloadEndpointPropStatus
 
 

@@ -1,5 +1,6 @@
 # SecurityIPSecRuleStatus
 
+Applies to East-West Traffic only.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

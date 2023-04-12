@@ -5,7 +5,9 @@ All URIs are relative to *https://PSM-IP-addr*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_metrics1**](TelemetryQueryV1Api.md#get_metrics1) | **GET** /telemetry/v1/metrics | telemetry metrics query
+[**get_sql_query1**](TelemetryQueryV1Api.md#get_sql_query1) | **GET** /telemetry/v1/sqlmetrics | 
 [**post_metrics**](TelemetryQueryV1Api.md#post_metrics) | **POST** /telemetry/v1/metrics | telemetry metrics query
+[**post_sql_query**](TelemetryQueryV1Api.md#post_sql_query) | **POST** /telemetry/v1/sqlmetrics | 
 
 
 # **get_metrics1**
@@ -48,6 +50,74 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
         pprint(api_response)
     except pensando_dss.psm.ApiException as e:
         print("Exception when calling TelemetryQueryV1Api->get_metrics1: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant** | **str**| Tenant for the request. | [optional]
+
+### Return type
+
+[**TelemetryQueryMetricsQueryResponse**](TelemetryQueryMetricsQueryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_sql_query1**
+> TelemetryQueryMetricsQueryResponse get_sql_query1()
+
+
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import telemetry_query_v1_api
+from pensando_dss.psm.models.telemetry_query import *
+from pensando_dss.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = telemetry_query_v1_api.TelemetryQueryV1Api(api_client)
+    tenant = "tenant_example" # str | Tenant for the request. (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_sql_query1()
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling TelemetryQueryV1Api->get_sql_query1: %s\n" % e)
 
 ```
 
@@ -167,6 +237,79 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**TelemetryQueryMetricsQueryList**](TelemetryQueryMetricsQueryList.md)|  |
+
+### Return type
+
+[**TelemetryQueryMetricsQueryResponse**](TelemetryQueryMetricsQueryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | (empty) |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_sql_query**
+> TelemetryQueryMetricsQueryResponse post_sql_query(body)
+
+
+
+### Example
+
+Ensure that `PSM_USER` and `PSM_PASSWORD` are set in your environment
+
+```python
+import time
+import os
+import pensando_dss
+import pensando_dss.psm
+from pensando_dss.psm.api import telemetry_query_v1_api
+from pensando_dss.psm.models.telemetry_query import *
+from pensando_dss.psm.model.telemetry_query_metrics_query_response import TelemetryQueryMetricsQueryResponse
+from pensando_dss.psm.model.telemetry_query_metrics_sql_query import TelemetryQueryMetricsSQLQuery
+from pprint import pprint
+from dateutil.parser import parse as dateutil_parser
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = pensando_dss.psm.Configuration(
+    psm_config_path = os.environ["HOME"] + "/.psm/config.json"
+)
+configuration.verify_ssl = False
+
+
+# Enter a context with an instance of the API client
+with pensando_dss.psm.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = telemetry_query_v1_api.TelemetryQueryV1Api(api_client)
+    body = TelemetryQueryMetricsSQLQuery(
+        namespace="namespace_example",
+        query="query_example",
+        tenant="tenant_example",
+    ) # TelemetryQueryMetricsSQLQuery | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.post_sql_query(body)
+        pprint(api_response)
+    except pensando_dss.psm.ApiException as e:
+        print("Exception when calling TelemetryQueryV1Api->post_sql_query: %s\n" % e)
+
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TelemetryQueryMetricsSQLQuery**](TelemetryQueryMetricsSQLQuery.md)|  |
 
 ### Return type
 

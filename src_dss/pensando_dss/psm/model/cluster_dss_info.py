@@ -87,6 +87,7 @@ class ClusterDSSInfo(ModelNormal):
         return {
             'dsms': ([ClusterDSM],),  # noqa: E501
             'fault_info': (ClusterFault,),  # noqa: E501
+            'forwarding_profile': (str,),  # noqa: E501
             'ha_peer': (ClusterPeer,),  # noqa: E501
             'host_name': (str,),  # noqa: E501
             'link_info': ([ClusterNeighborPortInfo],),  # noqa: E501
@@ -101,6 +102,7 @@ class ClusterDSSInfo(ModelNormal):
     attribute_map = {
         'dsms': 'dsms',  # noqa: E501
         'fault_info': 'fault-info',  # noqa: E501
+        'forwarding_profile': 'forwarding-profile',  # noqa: E501
         'ha_peer': 'ha-peer',  # noqa: E501
         'host_name': 'host-name',  # noqa: E501
         'link_info': 'link-info',  # noqa: E501
@@ -155,6 +157,7 @@ class ClusterDSSInfo(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             dsms ([ClusterDSM]): Distributed service module information.. [optional]  # noqa: E501
             fault_info (ClusterFault): [optional]  # noqa: E501
+            forwarding_profile (str): ForwardingProfile is the active forwarding profile on the DSS. Supported forwarding profiles on the DSS platform are Leaf, Spine, Border-Leaf, L3-Core & L3-Agg. It cannot be changed from PSM, it's reported to PSM for display purposes.. [optional]  # noqa: E501
             ha_peer (ClusterPeer): [optional]  # noqa: E501
             host_name (str): Hostname of the switch.. [optional]  # noqa: E501
             link_info ([ClusterNeighborPortInfo]): Information of the remote port mac amd local port of a link.. [optional]  # noqa: E501

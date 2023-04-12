@@ -14,8 +14,10 @@ import unittest
 import psm
 from pensando_dss.psm.model.security_ip_sec_config import SecurityIPSecConfig
 from pensando_dss.psm.model.security_ip_sec_policy_rule import SecurityIPSecPolicyRule
+from pensando_dss.psm.model.security_tunnel_endpoint import SecurityTunnelEndpoint
 globals()['SecurityIPSecConfig'] = SecurityIPSecConfig
 globals()['SecurityIPSecPolicyRule'] = SecurityIPSecPolicyRule
+globals()['SecurityTunnelEndpoint'] = SecurityTunnelEndpoint
 from pensando_dss.psm.psm.model.security_ip_sec_policy_spec import SecurityIPSecPolicySpec
 
 

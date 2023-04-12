@@ -72,6 +72,20 @@ class TestClusterV1Api(unittest.TestCase):
         """
         pass
 
+    def test_add_policy_distribution_target(self):
+        """Test case for add_policy_distribution_target
+
+        Create PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
+    def test_add_policy_distribution_target1(self):
+        """Test case for add_policy_distribution_target1
+
+        Create PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
     def test_add_tenant(self):
         """Test case for add_tenant
 
@@ -125,6 +139,20 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for delete_node
 
         Delete Node object  # noqa: E501
+        """
+        pass
+
+    def test_delete_policy_distribution_target(self):
+        """Test case for delete_policy_distribution_target
+
+        Delete PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
+    def test_delete_policy_distribution_target1(self):
+        """Test case for delete_policy_distribution_target1
+
+        Delete PolicyDistributionTarget object  # noqa: E501
         """
         pass
 
@@ -195,6 +223,20 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for get_node
 
         Get Node object  # noqa: E501
+        """
+        pass
+
+    def test_get_policy_distribution_target(self):
+        """Test case for get_policy_distribution_target
+
+        Get PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
+    def test_get_policy_distribution_target1(self):
+        """Test case for get_policy_distribution_target1
+
+        Get PolicyDistributionTarget object  # noqa: E501
         """
         pass
 
@@ -282,6 +324,20 @@ class TestClusterV1Api(unittest.TestCase):
         """
         pass
 
+    def test_label_policy_distribution_target(self):
+        """Test case for label_policy_distribution_target
+
+        Label PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
+    def test_label_policy_distribution_target1(self):
+        """Test case for label_policy_distribution_target1
+
+        Label PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
     def test_label_tenant(self):
         """Test case for label_tenant
 
@@ -321,6 +377,20 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for list_node
 
         List Node objects  # noqa: E501
+        """
+        pass
+
+    def test_list_policy_distribution_target(self):
+        """Test case for list_policy_distribution_target
+
+        List PolicyDistributionTarget objects  # noqa: E501
+        """
+        pass
+
+    def test_list_policy_distribution_target1(self):
+        """Test case for list_policy_distribution_target1
+
+        List PolicyDistributionTarget objects  # noqa: E501
         """
         pass
 
@@ -408,6 +478,20 @@ class TestClusterV1Api(unittest.TestCase):
         """
         pass
 
+    def test_update_policy_distribution_target(self):
+        """Test case for update_policy_distribution_target
+
+        Update PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
+    def test_update_policy_distribution_target1(self):
+        """Test case for update_policy_distribution_target1
+
+        Update PolicyDistributionTarget object  # noqa: E501
+        """
+        pass
+
     def test_update_tenant(self):
         """Test case for update_tenant
 
@@ -482,6 +566,20 @@ class TestClusterV1Api(unittest.TestCase):
         """Test case for watch_node
 
         Watch Node objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_policy_distribution_target(self):
+        """Test case for watch_policy_distribution_target
+
+        Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll  # noqa: E501
+        """
+        pass
+
+    def test_watch_policy_distribution_target1(self):
+        """Test case for watch_policy_distribution_target1
+
+        Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll  # noqa: E501
         """
         pass
 

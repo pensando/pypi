@@ -32,6 +32,7 @@ from pensando_dss.psm.model.cluster_auto_msg_distributed_service_card_watch_help
 from pensando_dss.psm.model.cluster_auto_msg_distributed_service_entity_watch_helper import ClusterAutoMsgDistributedServiceEntityWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_host_watch_helper import ClusterAutoMsgHostWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_node_watch_helper import ClusterAutoMsgNodeWatchHelper
+from pensando_dss.psm.model.cluster_auto_msg_policy_distribution_target_watch_helper import ClusterAutoMsgPolicyDistributionTargetWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_tenant_watch_helper import ClusterAutoMsgTenantWatchHelper
 from pensando_dss.psm.model.cluster_auto_msg_version_watch_helper import ClusterAutoMsgVersionWatchHelper
 from pensando_dss.psm.model.cluster_cluster import ClusterCluster
@@ -50,6 +51,8 @@ from pensando_dss.psm.model.cluster_host_list import ClusterHostList
 from pensando_dss.psm.model.cluster_license import ClusterLicense
 from pensando_dss.psm.model.cluster_node import ClusterNode
 from pensando_dss.psm.model.cluster_node_list import ClusterNodeList
+from pensando_dss.psm.model.cluster_policy_distribution_target import ClusterPolicyDistributionTarget
+from pensando_dss.psm.model.cluster_policy_distribution_target_list import ClusterPolicyDistributionTargetList
 from pensando_dss.psm.model.cluster_snapshot_restore import ClusterSnapshotRestore
 from pensando_dss.psm.model.cluster_tenant import ClusterTenant
 from pensando_dss.psm.model.cluster_tenant_list import ClusterTenantList
@@ -886,6 +889,250 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__add_node
+        )
+
+        def __add_policy_distribution_target(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Create PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_policy_distribution_target(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (ClusterPolicyDistributionTarget):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets',
+                'operation_id': 'add_policy_distribution_target',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (ClusterPolicyDistributionTarget,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_policy_distribution_target
+        )
+
+        def __add_policy_distribution_target1(
+            self,
+            body,
+            **kwargs
+        ):
+            """Create PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.add_policy_distribution_target1(body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                body (ClusterPolicyDistributionTarget):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.add_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/policydistributiontargets',
+                'operation_id': 'add_policy_distribution_target1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'body',
+                ],
+                'required': [
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'body':
+                        (ClusterPolicyDistributionTarget,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__add_policy_distribution_target1
         )
 
         def __add_tenant(
@@ -1804,6 +2051,238 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__delete_node
+        )
+
+        def __delete_policy_distribution_target(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Delete PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_policy_distribution_target(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name}',
+                'operation_id': 'delete_policy_distribution_target',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_policy_distribution_target
+        )
+
+        def __delete_policy_distribution_target1(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Delete PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.delete_policy_distribution_target1(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.delete_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/policydistributiontargets/{O.Name}',
+                'operation_id': 'delete_policy_distribution_target1',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__delete_policy_distribution_target1
         )
 
         def __delete_tenant(
@@ -3115,6 +3594,276 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__get_node
+        )
+
+        def __get_policy_distribution_target(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Get PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_policy_distribution_target(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_dses ([str]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.get_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name}',
+                'operation_id': 'get_policy_distribution_target',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_dses',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_dses':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_dses': 'spec.dses',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_dses': 'query',
+                },
+                'collection_format_map': {
+                    'spec_dses': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_policy_distribution_target
+        )
+
+        def __get_policy_distribution_target1(
+            self,
+            o_name,
+            **kwargs
+        ):
+            """Get PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.get_policy_distribution_target1(o_name, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+
+            Keyword Args:
+                t_kind (str): Kind represents the type of the API object.. [optional]
+                meta_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                spec_dses ([str]): [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            return self.call_with_http_info(**kwargs)
+
+        self.get_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/policydistributiontargets/{O.Name}',
+                'operation_id': 'get_policy_distribution_target1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    't_kind',
+                    'meta_creation_time',
+                    'spec_dses',
+                ],
+                'required': [
+                    'o_name',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    't_kind':
+                        (str,),
+                    'meta_creation_time':
+                        (datetime,),
+                    'spec_dses':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                    't_kind': 'T.kind',
+                    'meta_creation_time': 'meta.creation-time',
+                    'spec_dses': 'spec.dses',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    't_kind': 'query',
+                    'meta_creation_time': 'query',
+                    'spec_dses': 'query',
+                },
+                'collection_format_map': {
+                    'spec_dses': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__get_policy_distribution_target1
         )
 
         def __get_snapshot_restore(
@@ -4592,6 +5341,260 @@ class ClusterV1Api(object):
             callable=__label_node
         )
 
+        def __label_policy_distribution_target(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Label PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_policy_distribution_target(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name}/label',
+                'operation_id': 'label_policy_distribution_target',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_policy_distribution_target
+        )
+
+        def __label_policy_distribution_target1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Label PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.label_policy_distribution_target1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (ApiLabel):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.label_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/policydistributiontargets/{O.Name}/label',
+                'operation_id': 'label_policy_distribution_target1',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (ApiLabel,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__label_policy_distribution_target1
+        )
+
         def __label_tenant(
             self,
             o_name,
@@ -5332,6 +6335,264 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__list_node
+        )
+
+        def __list_policy_distribution_target(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """List PolicyDistributionTarget objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_policy_distribution_target(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTargetList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.list_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTargetList,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets',
+                'operation_id': 'list_policy_distribution_target',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_policy_distribution_target
+        )
+
+        def __list_policy_distribution_target1(
+            self,
+            **kwargs
+        ):
+            """List PolicyDistributionTarget objects  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.list_policy_distribution_target1(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTargetList
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.list_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTargetList,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/policydistributiontargets',
+                'operation_id': 'list_policy_distribution_target1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__list_policy_distribution_target1
         )
 
         def __list_tenant(
@@ -6794,6 +8055,260 @@ class ClusterV1Api(object):
             callable=__update_node
         )
 
+        def __update_policy_distribution_target(
+            self,
+            o_tenant,
+            body,
+            **kwargs
+        ):
+            """Update PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_policy_distribution_target(o_tenant, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+                body (ClusterPolicyDistributionTarget):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/tenant/{O.Tenant}/policydistributiontargets/{O.Name}',
+                'operation_id': 'update_policy_distribution_target',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'body',
+                ],
+                'required': [
+                    'o_tenant',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'body':
+                        (ClusterPolicyDistributionTarget,),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_policy_distribution_target
+        )
+
+        def __update_policy_distribution_target1(
+            self,
+            o_name,
+            body,
+            **kwargs
+        ):
+            """Update PolicyDistributionTarget object  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.update_policy_distribution_target1(o_name, body, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_name (str):
+                body (ClusterPolicyDistributionTarget):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterPolicyDistributionTarget
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_name'] = \
+                o_name
+            kwargs['body'] = \
+                body
+            return self.call_with_http_info(**kwargs)
+
+        self.update_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterPolicyDistributionTarget,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/policydistributiontargets/{O.Name}',
+                'operation_id': 'update_policy_distribution_target1',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'body',
+                ],
+                'required': [
+                    'o_name',
+                    'body',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'body':
+                        (ClusterPolicyDistributionTarget,),
+                },
+                'attribute_map': {
+                    'o_name': 'O.Name',
+                },
+                'location_map': {
+                    'o_name': 'path',
+                    'body': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json'
+                ]
+            },
+            api_client=api_client,
+            callable=__update_policy_distribution_target1
+        )
+
         def __update_tenant(
             self,
             o_name,
@@ -8137,6 +9652,264 @@ class ClusterV1Api(object):
             },
             api_client=api_client,
             callable=__watch_node
+        )
+
+        def __watch_policy_distribution_target(
+            self,
+            o_tenant,
+            **kwargs
+        ):
+            """Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_policy_distribution_target(o_tenant, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                o_tenant (str):
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterAutoMsgPolicyDistributionTargetWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['o_tenant'] = \
+                o_tenant
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_policy_distribution_target = _Endpoint(
+            settings={
+                'response_type': (ClusterAutoMsgPolicyDistributionTargetWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/watch/tenant/{O.Tenant}/policydistributiontargets',
+                'operation_id': 'watch_policy_distribution_target',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_tenant',
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [
+                    'o_tenant',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_tenant':
+                        (str,),
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_tenant': 'O.Tenant',
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_tenant': 'path',
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_policy_distribution_target
+        )
+
+        def __watch_policy_distribution_target1(
+            self,
+            **kwargs
+        ):
+            """Watch PolicyDistributionTarget objects. Supports WebSockets or HTTP long poll  # noqa: E501
+
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.watch_policy_distribution_target1(async_req=True)
+            >>> result = thread.get()
+
+
+            Keyword Args:
+                o_name (str): Name of the object, unique within a Namespace for scoped objects. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 2 and 64.. [optional]
+                o_creation_time (datetime): CreationTime is the creation time of the object. System generated and updated, not updatable by user.. [optional]
+                field_change_selector ([str]): FieldChangeSelector specifies to generate a watch notification on change in field(s) specified.. [optional]
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                ClusterAutoMsgPolicyDistributionTargetWatchHelper
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            return self.call_with_http_info(**kwargs)
+
+        self.watch_policy_distribution_target1 = _Endpoint(
+            settings={
+                'response_type': (ClusterAutoMsgPolicyDistributionTargetWatchHelper,),
+                'auth': [],
+                'endpoint_path': '/configs/cluster/v1/watch/policydistributiontargets',
+                'operation_id': 'watch_policy_distribution_target1',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'o_name',
+                    'o_creation_time',
+                    'field_change_selector',
+                ],
+                'required': [],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'o_name':
+                        (str,),
+                    'o_creation_time':
+                        (datetime,),
+                    'field_change_selector':
+                        ([str],),
+                },
+                'attribute_map': {
+                    'o_name': 'O.name',
+                    'o_creation_time': 'O.creation-time',
+                    'field_change_selector': 'field-change-selector',
+                },
+                'location_map': {
+                    'o_name': 'query',
+                    'o_creation_time': 'query',
+                    'field_change_selector': 'query',
+                },
+                'collection_format_map': {
+                    'field_change_selector': 'csv',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__watch_policy_distribution_target1
         )
 
         def __watch_tenant(

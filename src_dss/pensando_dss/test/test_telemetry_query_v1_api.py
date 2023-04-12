@@ -30,10 +30,22 @@ class TestTelemetryQueryV1Api(unittest.TestCase):
         """
         pass
 
+    def test_get_sql_query1(self):
+        """Test case for get_sql_query1
+
+        """
+        pass
+
     def test_post_metrics(self):
         """Test case for post_metrics
 
         telemetry metrics query  # noqa: E501
+        """
+        pass
+
+    def test_post_sql_query(self):
+        """Test case for post_sql_query
+
         """
         pass
 

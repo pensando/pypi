@@ -1,6 +1,6 @@
 # SecurityIPSecConfig
 
-These are the cluster wide IPSec parameters that are common to all IPSec SecurityAssociations.
+These are the cluster wide IPSec parameters that are common to all IPSec SecurityAssociations; Applies to East-West traffic only.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

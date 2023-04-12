@@ -59,6 +59,7 @@ Class | Method | HTTP request | Description
  - [ApiListWatchOptions](../../../docs/ApiListWatchOptions.md)
  - [ApiObjectMeta](../../../docs/ApiObjectMeta.md)
  - [ApiObjectRef](../../../docs/ApiObjectRef.md)
+ - [ApiPDTStatus](../../../docs/ApiPDTStatus.md)
  - [ApiPropagationStatus](../../../docs/ApiPropagationStatus.md)
  - [ApiStatus](../../../docs/ApiStatus.md)
  - [ApiStatusResult](../../../docs/ApiStatusResult.md)

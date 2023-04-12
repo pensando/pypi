@@ -11,6 +11,7 @@ docs/ApiListMeta.md
 docs/ApiListWatchOptions.md
 docs/ApiObjectMeta.md
 docs/ApiObjectRef.md
+docs/ApiPDTStatus.md
 docs/ApiPropagationStatus.md
 docs/ApiStatus.md
 docs/ApiStatusResult.md
@@ -72,6 +73,7 @@ psm/model/api_list_meta.py
 psm/model/api_list_watch_options.py
 psm/model/api_object_meta.py
 psm/model/api_object_ref.py
+psm/model/api_pdt_status.py
 psm/model/api_propagation_status.py
 psm/model/api_status.py
 psm/model/api_status_result.py
@@ -120,8 +122,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_api_dse_status.py
-test/test_api_propagation_status.py
 test/test_workload_auto_msg_endpoint_watch_helper.py
 test/test_workload_auto_msg_endpoint_watch_helper_watch_event.py
 test/test_workload_auto_msg_workload_group_watch_helper.py

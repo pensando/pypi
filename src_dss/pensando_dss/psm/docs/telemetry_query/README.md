@@ -6,7 +6,9 @@ All URIs are relative to *https://PSM-IP-addr*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *TelemetryQueryV1Api* | [**get_metrics1**](../../../../pensando_dss/docs/TelemetryQueryV1Api.md#get_metrics1) | **GET** /telemetry/v1/metrics | telemetry metrics query
+*TelemetryQueryV1Api* | [**get_sql_query1**](../../../../pensando_dss/docs/TelemetryQueryV1Api.md#get_sql_query1) | **GET** /telemetry/v1/sqlmetrics | 
 *TelemetryQueryV1Api* | [**post_metrics**](../../../../pensando_dss/docs/TelemetryQueryV1Api.md#post_metrics) | **POST** /telemetry/v1/metrics | telemetry metrics query
+*TelemetryQueryV1Api* | [**post_sql_query**](../../../../pensando_dss/docs/TelemetryQueryV1Api.md#post_sql_query) | **POST** /telemetry/v1/sqlmetrics | 
 
 
 ## Documentation For Models

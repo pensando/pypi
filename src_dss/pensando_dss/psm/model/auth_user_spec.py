@@ -61,11 +61,6 @@ class AuthUserSpec(ModelNormal):
     }
 
     validations = {
-        ('email',): {
-            'regex': {
-                'pattern': r'^[a-zA-Z0-9_\+\-\.]+@([a-zA-Z0-9\-]+\.)+[a-zA-Z]{2,64}$',  # noqa: E501
-            },
-        },
     }
 
     additional_properties_type = None
@@ -147,7 +142,7 @@ class AuthUserSpec(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            email (str): Must be a valid email.. [optional]  # noqa: E501
+            email (str): Should be a valid email address.. [optional]  # noqa: E501
             fullname (str): [optional]  # noqa: E501
             password (str): Password should contain atleast 1 digit, 1 uppercase letter and 1 special character from \"~!@#$%^&*()_+`-={}|[]\\\\:\\\"<>?,./\" Required password length by default is 9 characters. It is defined in AuthenticationPolicy.. [optional]  # noqa: E501
             type (str): [optional] if omitted the server will use the default value of "local"  # noqa: E501

@@ -29,8 +29,10 @@ from pensando_dss.psm.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
+    from pensando_dss.psm.model.network_nat_rule import NetworkNATRule
     from pensando_dss.psm.model.security_ip_sec_policy_rule import SecurityIPSecPolicyRule
     from pensando_dss.psm.model.security_sg_rule import SecuritySGRule
+    globals()['NetworkNATRule'] = NetworkNATRule
     globals()['SecurityIPSecPolicyRule'] = SecurityIPSecPolicyRule
     globals()['SecuritySGRule'] = SecuritySGRule
 
@@ -83,6 +85,7 @@ class SearchPolicyMatchEntry(ModelNormal):
         return {
             'index': (int,),  # noqa: E501
             'ip_sec_policy_rule': (SecurityIPSecPolicyRule,),  # noqa: E501
+            'nat_policy_rule': (NetworkNATRule,),  # noqa: E501
             'sg_rule': (SecuritySGRule,),  # noqa: E501
         }
 
@@ -94,6 +97,7 @@ class SearchPolicyMatchEntry(ModelNormal):
     attribute_map = {
         'index': 'index',  # noqa: E501
         'ip_sec_policy_rule': 'ip-sec-policy-rule',  # noqa: E501
+        'nat_policy_rule': 'nat-policy-rule',  # noqa: E501
         'sg_rule': 'sg-rule',  # noqa: E501
     }
 
@@ -145,6 +149,7 @@ class SearchPolicyMatchEntry(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             index (int): Index of the matching SG rule.. [optional]  # noqa: E501
             ip_sec_policy_rule (SecurityIPSecPolicyRule): [optional]  # noqa: E501
+            nat_policy_rule (NetworkNATRule): [optional]  # noqa: E501
             sg_rule (SecuritySGRule): [optional]  # noqa: E501
         """
 

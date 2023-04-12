@@ -10,12 +10,14 @@
 # sys.setrecursionlimit(n)
 
 from pensando_dss.psm.model.api_agg_watch_options import ApiAggWatchOptions
+from pensando_dss.psm.model.api_configuration_issues import ApiConfigurationIssues
 from pensando_dss.psm.model.api_kind_watch_options import ApiKindWatchOptions
 from pensando_dss.psm.model.api_label import ApiLabel
 from pensando_dss.psm.model.api_list_meta import ApiListMeta
 from pensando_dss.psm.model.api_list_watch_options import ApiListWatchOptions
 from pensando_dss.psm.model.api_object_meta import ApiObjectMeta
 from pensando_dss.psm.model.api_object_ref import ApiObjectRef
+from pensando_dss.psm.model.api_pdt_status import ApiPDTStatus
 from pensando_dss.psm.model.api_status import ApiStatus
 from pensando_dss.psm.model.api_status_result import ApiStatusResult
 from pensando_dss.psm.model.api_timestamp import ApiTimestamp
@@ -24,6 +26,7 @@ from pensando_dss.psm.model.api_watch_control import ApiWatchControl
 from pensando_dss.psm.model.api_watch_event import ApiWatchEvent
 from pensando_dss.psm.model.api_watch_event_list import ApiWatchEventList
 from pensando_dss.psm.model.googleprotobuf_any import GoogleprotobufAny
+from pensando_dss.psm.model.ike_parameters_identifier import IKEParametersIdentifier
 from pensando_dss.psm.model.security_alg import SecurityALG
 from pensando_dss.psm.model.security_app import SecurityApp
 from pensando_dss.psm.model.security_app_list import SecurityAppList
@@ -52,6 +55,9 @@ from pensando_dss.psm.model.security_firewall_profile_list import SecurityFirewa
 from pensando_dss.psm.model.security_firewall_profile_spec import SecurityFirewallProfileSpec
 from pensando_dss.psm.model.security_firewall_profile_status import SecurityFirewallProfileStatus
 from pensando_dss.psm.model.security_ftp import SecurityFtp
+from pensando_dss.psm.model.security_ike_parameters import SecurityIKEParameters
+from pensando_dss.psm.model.security_ikesa_parameters import SecurityIKESAParameters
+from pensando_dss.psm.model.security_ikesa_status import SecurityIKESAStatus
 from pensando_dss.psm.model.security_ip_sec_config import SecurityIPSecConfig
 from pensando_dss.psm.model.security_ip_sec_match_rule import SecurityIPSecMatchRule
 from pensando_dss.psm.model.security_ip_sec_policy import SecurityIPSecPolicy
@@ -61,6 +67,8 @@ from pensando_dss.psm.model.security_ip_sec_policy_spec import SecurityIPSecPoli
 from pensando_dss.psm.model.security_ip_sec_policy_status import SecurityIPSecPolicyStatus
 from pensando_dss.psm.model.security_ip_sec_rule_status import SecurityIPSecRuleStatus
 from pensando_dss.psm.model.security_i_psec_protocol_spec import SecurityIPsecProtocolSpec
+from pensando_dss.psm.model.security_i_psec_sa_parameters import SecurityIPsecSAParameters
+from pensando_dss.psm.model.security_i_psec_sa_status import SecurityIPsecSAStatus
 from pensando_dss.psm.model.security_icmp import SecurityIcmp
 from pensando_dss.psm.model.security_msrpc import SecurityMsrpc
 from pensando_dss.psm.model.security_network_security_policy import SecurityNetworkSecurityPolicy
@@ -77,3 +85,5 @@ from pensando_dss.psm.model.security_tls_protocol_spec import SecurityTLSProtoco
 from pensando_dss.psm.model.security_traffic_encryption_policy import SecurityTrafficEncryptionPolicy
 from pensando_dss.psm.model.security_traffic_encryption_policy_list import SecurityTrafficEncryptionPolicyList
 from pensando_dss.psm.model.security_traffic_encryption_policy_spec import SecurityTrafficEncryptionPolicySpec
+from pensando_dss.psm.model.security_tunnel_endpoint import SecurityTunnelEndpoint
+from pensando_dss.psm.model.security_tunnel_endpoint_status import SecurityTunnelEndpointStatus
