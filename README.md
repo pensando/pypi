@@ -22,8 +22,9 @@ pip install pensando-cloud
 
 ```
 import os
-from pensando_cloud.psm.apis import ClusterV1Api
-from pensando_cloud.psm import configuration, api_client
+from pensando_dss.psm.apis import ClusterV1Api
+from pensando_dss.psm import configuration, api_client
+from pprint import pprint
 
 import warnings
 warnings.simplefilter("ignore")
@@ -37,6 +38,7 @@ configuration.verify_ssl = False
 client = api_client.ApiClient(configuration)
 api_instance = ClusterV1Api(client)
 response = api_instance.get_cluster()
+pprint (response)
 [...]
 ```
 
