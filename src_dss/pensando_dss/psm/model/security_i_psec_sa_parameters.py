@@ -136,7 +136,7 @@ class SecurityIPsecSAParameters(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            dh_groups ([str]): [optional]  # noqa: E501
+            dh_groups ([str]): IKEv1 doesn't provide a proper way to reject the proposed DH Group and select a different one during Phase 2 quick mode SA negotiation. Therefore, only proposals with the selected Phase 1 DHGroup will be sent in Phase2. If the DHGroup selected in Phase1 is in atleast one of the ESP proposals, that's the proposal that will be sent. If the Phase1 DHGroup is in NONE of the Phase2 proposals, all proposals with the first DHGroup in the Phase2 proposal list will be sent.. [optional]  # noqa: E501
             encryption_algorithms ([str]): Currently, only AES-GCM-128 and AES-GCM-256 are supported.. [optional]  # noqa: E501
             rekey_lifetime (str): RekeyLifetime is time duration after which fresh cryptographic keys are created for IPsec SA. Default is 1 hour. Empty value disables re-keying. A duration string is a sequence of decimal number and a unit suffix, such as \"1h\" or \"2h45m\". Valid time units are \"s\", \"m\", \"h\". Should be a valid time duration between 15m0s and 24h0m0s.. [optional] if omitted the server will use the default value of "1h"  # noqa: E501
         """

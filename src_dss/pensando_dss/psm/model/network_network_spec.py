@@ -62,6 +62,11 @@ class NetworkNetworkSpec(ModelNormal):
     """
 
     allowed_values = {
+        ('allow_session_reuse',): {
+            'INHERIT_FROM_VRF': "inherit_from_vrf",
+            'DISABLE': "disable",
+            'ENABLE': "enable",
+        },
         ('type',): {
             'BRIDGED': "bridged",
             'ROUTED': "routed",
@@ -95,6 +100,7 @@ class NetworkNetworkSpec(ModelNormal):
         """
         lazy_import()
         return {
+            'allow_session_reuse': (str,),  # noqa: E501
             'egress_security_policy': ([str],),  # noqa: E501
             'firewall_profile': (NetworkNetworkFirewallProfile,),  # noqa: E501
             'ingress_security_policy': ([str],),  # noqa: E501
@@ -117,6 +123,7 @@ class NetworkNetworkSpec(ModelNormal):
 
 
     attribute_map = {
+        'allow_session_reuse': 'allow-session-reuse',  # noqa: E501
         'egress_security_policy': 'egress-security-policy',  # noqa: E501
         'firewall_profile': 'firewall-profile',  # noqa: E501
         'ingress_security_policy': 'ingress-security-policy',  # noqa: E501
@@ -179,6 +186,7 @@ class NetworkNetworkSpec(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            allow_session_reuse (str): AllowSessionReuse helps to handle TCP half open state connections. When there is mismatch in TCP connection state between client, server and DSE, and client tries to establish a new connection with same 5 tuple with source port reuse, typically DSE would drop the new connection attempts without AllowSessionReuse being enabled. With AllowSessionReuse turned ON, DSE will relax the TCP state/sequence number checks to allow the new connection to go through. AllowSessionReuseMode can be INHERIT_FROM_VRF, DISABLE or ENABLE. INHERIT_FROM_VRF is the default value.. [optional] if omitted the server will use the default value of "inherit_from_vrf"  # noqa: E501
             egress_security_policy ([str]): Security Policy to apply in the egress direction.. [optional]  # noqa: E501
             firewall_profile (NetworkNetworkFirewallProfile): [optional]  # noqa: E501
             ingress_security_policy ([str]): Security Policy to apply in the ingress direction.. [optional]  # noqa: E501

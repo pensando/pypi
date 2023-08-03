@@ -70,7 +70,7 @@ class SecuritySGRule(ModelNormal):
             'max_length': 256,
         },
         ('name',): {
-            'max_length': 64,
+            'max_length': 128,
             'regex': {
                 'pattern': r'^[a-zA-Z0-9][\w\-\.]*[a-zA-Z0-9]$',  # noqa: E501
             },
@@ -180,7 +180,7 @@ class SecuritySGRule(ModelNormal):
             from_ip_addresses ([str]): inbound rule from a given ip-address/ip-mask/ip-range. Use any to refer to all ipaddresses cli-tags: id=from-ip.. [optional]  # noqa: E501
             from_ipcollections ([str]): inbound rule from a given ipcollection.. [optional]  # noqa: E501
             from_workload_groups ([str]): inbound rule from a given workload group.. [optional]  # noqa: E501
-            name (str): rule name. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 0 and 64.. [optional]  # noqa: E501
+            name (str): rule name. Must start and end with alpha numeric and can have alphanumeric, -, _, . Length of string should be between 0 and 128.. [optional]  # noqa: E501
             proto_ports ([SecurityProtoPort]): list of (protocol, ports) pairs to which the rule applies to, in addition to apps.. [optional]  # noqa: E501
             to_ip_addresses ([str]): outbound rule from a given ip-address/ip-mask/ip-range. Use any to refer to all ipaddresses cli-tags: id=to-ip.. [optional]  # noqa: E501
             to_ipcollections ([str]): outbound rule from a given ipcollection.. [optional]  # noqa: E501

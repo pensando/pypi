@@ -58,6 +58,10 @@ class NetworkVirtualRouterSpec(ModelNormal):
     """
 
     allowed_values = {
+        ('allow_session_reuse',): {
+            'DISABLE': "disable",
+            'ENABLE': "enable",
+        },
         ('type',): {
             'UNKNOWN': "unknown",
             'TENANT': "tenant",
@@ -96,6 +100,7 @@ class NetworkVirtualRouterSpec(ModelNormal):
         """
         lazy_import()
         return {
+            'allow_session_reuse': (str,),  # noqa: E501
             'default_ipam_policy': (str,),  # noqa: E501
             'egress_nat_policy': ([str],),  # noqa: E501
             'egress_security_policy': ([str],),  # noqa: E501
@@ -117,6 +122,7 @@ class NetworkVirtualRouterSpec(ModelNormal):
 
 
     attribute_map = {
+        'allow_session_reuse': 'allow-session-reuse',  # noqa: E501
         'default_ipam_policy': 'default-ipam-policy',  # noqa: E501
         'egress_nat_policy': 'egress-nat-policy',  # noqa: E501
         'egress_security_policy': 'egress-security-policy',  # noqa: E501
@@ -178,6 +184,7 @@ class NetworkVirtualRouterSpec(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            allow_session_reuse (str): AllowSessionReuse helps to handle TCP half open state connections. When there is mismatch in TCP connection state between client, server and DSE, and client tries to establish a new connection with same 5 tuple with source port reuse, typically DSE would drop the new connection attempts without AllowSessionReuse being enabled. With AllowSessionReuse turned ON, DSE will relax the TCP state/sequence number checks to allow the new connection to go through. AllowSessionReuseMode can be DISABLE or ENABLE. DISABLE is the default value.. [optional] if omitted the server will use the default value of "disable"  # noqa: E501
             default_ipam_policy (str): Default IPAM policy for networks belonging to this Virtual Router. Any IPAM Policy specified in the Network overrides this.. [optional]  # noqa: E501
             egress_nat_policy ([str]): NAT Policy to apply in the egress direction On a DSS, a VPC supports only 1 NAT policy per direction. repeated entry is to allow VPC with different NAT policies per PolicyDistributionTarget.. [optional]  # noqa: E501
             egress_security_policy ([str]): Security Policy to apply in the egress direction.. [optional]  # noqa: E501

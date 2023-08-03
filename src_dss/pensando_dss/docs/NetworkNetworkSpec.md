@@ -4,6 +4,7 @@ spec part of network object.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allow_session_reuse** | **str** | AllowSessionReuse helps to handle TCP half open state connections. When there is mismatch in TCP connection state between client, server and DSE, and client tries to establish a new connection with same 5 tuple with source port reuse, typically DSE would drop the new connection attempts without AllowSessionReuse being enabled. With AllowSessionReuse turned ON, DSE will relax the TCP state/sequence number checks to allow the new connection to go through. AllowSessionReuseMode can be INHERIT_FROM_VRF, DISABLE or ENABLE. INHERIT_FROM_VRF is the default value. | [optional]  if omitted the server will use the default value of "inherit_from_vrf"
 **egress_security_policy** | **[str]** | Security Policy to apply in the egress direction. | [optional] 
 **firewall_profile** | [**NetworkNetworkFirewallProfile**](NetworkNetworkFirewallProfile.md) |  | [optional] 
 **ingress_security_policy** | **[str]** | Security Policy to apply in the ingress direction. | [optional] 

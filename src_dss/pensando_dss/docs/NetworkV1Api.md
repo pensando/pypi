@@ -1074,6 +1074,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkNetworkSpec(
+            allow_session_reuse="inherit_from_vrf",
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
@@ -1263,6 +1264,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkNetworkSpec(
+            allow_session_reuse="inherit_from_vrf",
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
@@ -2136,6 +2138,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkVirtualRouterSpec(
+            allow_session_reuse="disable",
             default_ipam_policy="default_ipam_policy_example",
             egress_nat_policy=[
                 "egress_nat_policy_example",
@@ -2316,6 +2319,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkVirtualRouterSpec(
+            allow_session_reuse="disable",
             default_ipam_policy="default_ipam_policy_example",
             egress_nat_policy=[
                 "egress_nat_policy_example",
@@ -9388,6 +9392,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkNetworkSpec(
+            allow_session_reuse="inherit_from_vrf",
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
@@ -9578,6 +9583,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkNetworkSpec(
+            allow_session_reuse="inherit_from_vrf",
             egress_security_policy=[
                 "egress_security_policy_example",
             ],
@@ -10389,6 +10395,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkVirtualRouterSpec(
+            allow_session_reuse="disable",
             default_ipam_policy="default_ipam_policy_example",
             egress_nat_policy=[
                 "egress_nat_policy_example",
@@ -10570,6 +10577,7 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
             uuid="uuid_example",
         ),
         spec=NetworkVirtualRouterSpec(
+            allow_session_reuse="disable",
             default_ipam_policy="default_ipam_policy_example",
             egress_nat_policy=[
                 "egress_nat_policy_example",

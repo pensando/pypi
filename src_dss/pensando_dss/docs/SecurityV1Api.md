@@ -442,7 +442,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ike_version="IKEv2",
                     interface_name="interface_name_example",
                     ipsec_sa=SecurityIPsecSAParameters(
-                        dh_groups=[],
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
                         encryption_algorithms=[
                             "encryption_algorithms_example",
                         ],
@@ -675,7 +677,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ike_version="IKEv2",
                     interface_name="interface_name_example",
                     ipsec_sa=SecurityIPsecSAParameters(
-                        dh_groups=[],
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
                         encryption_algorithms=[
                             "encryption_algorithms_example",
                         ],
@@ -4392,7 +4396,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ike_version="IKEv2",
                     interface_name="interface_name_example",
                     ipsec_sa=SecurityIPsecSAParameters(
-                        dh_groups=[],
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
                         encryption_algorithms=[
                             "encryption_algorithms_example",
                         ],
@@ -4626,7 +4632,9 @@ with pensando_dss.psm.ApiClient(configuration) as api_client:
                     ike_version="IKEv2",
                     interface_name="interface_name_example",
                     ipsec_sa=SecurityIPsecSAParameters(
-                        dh_groups=[],
+                        dh_groups=[
+                            "dh_groups_example",
+                        ],
                         encryption_algorithms=[
                             "encryption_algorithms_example",
                         ],

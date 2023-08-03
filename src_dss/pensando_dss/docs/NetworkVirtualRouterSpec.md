@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**allow_session_reuse** | **str** | AllowSessionReuse helps to handle TCP half open state connections. When there is mismatch in TCP connection state between client, server and DSE, and client tries to establish a new connection with same 5 tuple with source port reuse, typically DSE would drop the new connection attempts without AllowSessionReuse being enabled. With AllowSessionReuse turned ON, DSE will relax the TCP state/sequence number checks to allow the new connection to go through. AllowSessionReuseMode can be DISABLE or ENABLE. DISABLE is the default value. | [optional]  if omitted the server will use the default value of "disable"
 **default_ipam_policy** | **str** | Default IPAM policy for networks belonging to this Virtual Router. Any IPAM Policy specified in the Network overrides this. | [optional] 
 **egress_nat_policy** | **[str]** | NAT Policy to apply in the egress direction On a DSS, a VPC supports only 1 NAT policy per direction. repeated entry is to allow VPC with different NAT policies per PolicyDistributionTarget. | [optional] 
 **egress_security_policy** | **[str]** | Security Policy to apply in the egress direction. | [optional] 
